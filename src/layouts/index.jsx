@@ -46,7 +46,7 @@ const Nav = (props: LayoutProps) => (
           <Link className="nav-link" href to={`${props.prefix}/features/`}><Trans>Features</Trans></Link>
           <Link className="nav-link" href to={`${props.prefix}/pricing/`}><Trans>Pricing</Trans></Link>
           <Link className="nav-link" href to={`${props.prefix}/about-us/`}><Trans>About us</Trans></Link>
-          <a className="nav-link" href={blogUrl}><Trans>Blog</Trans></a>
+          <a className="nav-link" href={blogUrl} target="_blank" rel="noopener noreferrer"><Trans>Blog</Trans></a>
         </nav>
 
         <span className="navbar-divider" />
@@ -96,7 +96,7 @@ const Footer = (props: LayoutProps) => (
             <h6 className="mb-4 mt-1"><strong><Trans>Company</Trans></strong></h6>
             <div className="nav flex-column">
               <Link className="nav-link" href to={`${props.prefix}/about-us/`}><Trans>About us</Trans></Link>
-              <a className="nav-link" href={blogUrl}><Trans>Blog</Trans></a>
+              <a className="nav-link" href={blogUrl} target="_blank" rel="noopener noreferrer"><Trans>Blog</Trans></a>
               <Link className="nav-link" href to={`${props.prefix}/privacy/`}><Trans>Privacy</Trans></Link>
               <Link className="nav-link" href to={`${props.prefix}/security/`}><Trans>Security</Trans></Link>
               <Link className="nav-link" href to={`${props.prefix}/contact/`}><Trans>Contact & Imprint</Trans></Link>
