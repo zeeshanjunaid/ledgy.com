@@ -57,25 +57,25 @@ const IndexPage = (props: Object) => (
 
             <div className="row">
               <div className="col-md-6">
+                <h6>Ledgy AG</h6>
                 <p>
-                  <h6>Ledgy AG</h6>
                     Forchstrasse 60<br />
                     8008 Zürich<br />
                   <Trans>Switzerland</Trans>
                 </p>
+                <h6><Trans>VAT number</Trans></h6>
                 <p>
-                  <h6><Trans>VAT number</Trans></h6>
                     CHE‑261.454.963 MWST
                 </p>
               </div>
               <div className="col-md-6">
+                <h6><Trans>Contact</Trans></h6>
                 <p>
-                  <h6><Trans>Contact</Trans></h6>
                   <a href="mailto:contact@ledgy.com">contact@ledgy.com</a><br />
                         +41 (0) 44 585 21 23
                 </p>
+                <h6><Trans>Managing directors</Trans></h6>
                 <p>
-                  <h6><Trans>Managing directors</Trans></h6>
                     Yoko Spirig<br />
                     Ben-Elias Brandt<br />
                     Timo Horstschäfer
