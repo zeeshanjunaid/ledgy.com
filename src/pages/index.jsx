@@ -28,7 +28,7 @@ const Header = ({ i18n, data, prefix }: Props) => (
             </p>
             <p><Trans>Try Ledgy now. It’s <Link href to={`${prefix}/pricing/`}>free</Link>.</Trans></p>
           </div>
-          <a className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-outline-light" href={demoUrl} target="_blank"><Trans>See the demo</Trans></a>
+          <a className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-outline-light" href={demoUrl} target="_blank" rel="noopener noreferrer"><Trans>See the demo</Trans></a>
           <a className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-light" href="#try"><Trans>Get Started</Trans></a>
         </div>
 
