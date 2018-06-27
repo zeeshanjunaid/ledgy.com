@@ -76,34 +76,42 @@ const IndexPage = ({ i18n, ...props }: Props) => (
           </PrivacyRow>
 
           <p>
-            We only use this Personal Data to provide you with our Service and improve it.
+            <Trans>
+              We only use this Personal Data to provide you with our Service and improve it.
+            </Trans>
           </p>
 
           <p>
-            From time to time we may send you updates or other information about our Service
-            by email. By signing up, you agree to us sending you these emails. You can always
-            unsubscribe with the link at the bottom of the emails or by contacting us at the
-            details below.
+            <Trans>
+              From time to time we may send you updates or other information about our Service
+              by email. By signing up, you agree to us sending you these emails. You can always
+              unsubscribe with the link at the bottom of the emails or by contacting us at the
+              details below.
+            </Trans>
           </p>
 
           <p>
-            We may evaluate anonymous statistics from the information you provide.
-            For instance, we may monitor the total number of registered companies,
-            their average size, average number of shareholders and other related information.
-            We may display this information publicly or provide it to others.
-            However, Ledgy does not disclose Personal Data other than as described below.
+            <Trans>
+              We may evaluate anonymous statistics from the information you provide.
+              For instance, we may monitor the total number of registered companies,
+              their average size, average number of shareholders and other related information.
+              We may display this information publicly or provide it to others.
+              However, Ledgy does not disclose Personal Data other than as described below.
+            </Trans>
           </p>
 
           <strong><Trans>In case you only visit our website</Trans></strong>
           <p>
-            We use Google Analytics and Google Tag Manager on our Website to evaluate
-            visitors’ use of our Sites. Google Analytics and Tag Manager use cookies
-            to collect standard visitors’ information in an anonymous format and generate
-            aggregated reports. The information generated using cookies about your use of
-            the website (including IP address) is transmitted to Google. It is not used
-            for marketing or advertising by Google. Ledgy will not associate any data
-            gathered from this site with any Personal Data from any source associated with you.
-            This anonymous data is automatically deleted within 26 months.
+            <Trans>
+              We use Google Analytics and Google Tag Manager on our Website to evaluate
+              visitors’ use of our Sites. Google Analytics and Tag Manager use cookies
+              to collect standard visitors’ information in an anonymous format and generate
+              aggregated reports. The information generated using cookies about your use of
+              the website (including IP address) is transmitted to Google. It is not used
+              for marketing or advertising by Google. Ledgy will not associate any data
+              gathered from this site with any Personal Data from any source associated with you.
+              This anonymous data is automatically deleted within 26 months.
+            </Trans>
           </p>
         </Section>
 
@@ -151,70 +159,91 @@ const IndexPage = ({ i18n, ...props }: Props) => (
           </PrivacyRow>
 
           <p>
-            Nobody has any access to the company information you provide.
-            For the purpose of providing you with support, you can choose to
-            explicitly grant Ledgy employees access to the company information.
-            You can do so through your account and can withdraw it at any time.
+            <Trans>
+              Nobody has any access to the company information you provide.
+              For the purpose of providing you with support, you can choose to
+              explicitly grant Ledgy employees access to the company information.
+              You can do so through your account and can withdraw it at any time.
+            </Trans>
           </p>
           <p>
-            Ledgy discloses Personal Data only to those of its employees
-            and third party contractors that (i) need to know that information
-            in order to process it on Ledgy’s behalf or to provide services
-            available at Ledgy’s websites (“Third Party Contractors”),
-            and (ii) that have agreed not to disclose it to others by law.
+            <Trans>
+              Ledgy discloses Personal Data only to those of its employees
+              and third party contractors that (i) need to know that information
+              in order to process it on Ledgy’s behalf or to provide services
+              available at Ledgy’s websites (“Third Party Contractors”),
+              and (ii) that have agreed not to disclose it to others by law.
+            </Trans>
           </p>
           <p>
-            Other than to its employees and Third Party Contractors,
-            as described above, Ledgy discloses Personal Data only in
-            response to a court order or other governmental request,
-            or when Ledgy believes in good faith that disclosure is reasonably
-            necessary to protect the property or rights of Ledgy or third parties.
+            <Trans>
+              Other than to its employees and Third Party Contractors,
+              as described above, Ledgy discloses Personal Data only in
+              response to a court order or other governmental request,
+              or when Ledgy believes in good faith that disclosure is reasonably
+              necessary to protect the property or rights of Ledgy or third parties.
+            </Trans>
           </p>
 
-          <strong>Third Party Contractors used by Ledgy</strong>
+          <strong><Trans>Third Party Contractors used by Ledgy</Trans></strong>
           <p>
-            We do our best to limit the information shared with third party services.
-            Some limited Personal Data is shared with trusted third party services,
-            which we use to run our software and improve our Service for you.
-            This excludes company information.
+            <Trans>
+              We do our best to limit the information shared with third party services.
+              Some limited Personal Data is shared with trusted third party services,
+              which we use to run our software and improve our Service for you.
+              This excludes company information.
+            </Trans>
           </p>
           <p>
-            The data shared with these Third Party Contractors might be stored outside Switzerland.
-            You agree to those data transfers to Third Party Contractors outside of Switzerland,
-            if the data transfer is necessary for providing our Services and under the condition,
-            that these Third Party Contractors are compliant with GDPR
-            (European General Data Protection Regulation).
+            <Trans>
+              The data shared with these Third Party Contractors might be stored
+              outside Switzerland. You agree to those data transfers to Third
+              Party Contractors outside of Switzerland, if the data transfer
+              is necessary for providing our Services and under the condition,
+              that these Third Party Contractors are compliant with GDPR
+              (European General Data Protection Regulation).
+            </Trans>
           </p>
           <ul>
             <li>
-              <a href="https://mailchimp.com/legal/privacy/">Mailchimp</a>:
-              We use Mailchimp to send you updates from time to time, for which Ledgy gives them
-              your name and email address.
+              <Trans>
+                <a href="https://mailchimp.com/legal/privacy/">Mailchimp</a>:
+                We use Mailchimp to send you updates from time to time, for which Ledgy gives them
+                your name and email address.
+              </Trans>
             </li>
             <li>
-              <a href="https://sentry.io/privacy/">Sentry</a>:
-              In case a problem occurs while you use the Service, Sentry will send us a
-              notification. The data shared with Sentry includes the error stack trace
-              and general device information available from your browser like its
-              version and the operating system. If you choose to, you can transmit
-              an explanation of the error through Sentry. Having all this information
-              allows us to fix possible problems as fast as possible.
+              <Trans>
+                <a href="https://sentry.io/privacy/">Sentry</a>:
+                In case a problem occurs while you use the Service, Sentry will send us a
+                notification. The data shared with Sentry includes the error stack trace
+                and general device information available from your browser like its
+                version and the operating system. If you choose to, you can transmit
+                an explanation of the error through Sentry. Having all this information
+                allows us to fix possible problems as fast as possible.
+              </Trans>
             </li>
             <li>
-              <a href="https://mixpanel.com/privacy/">Mixpanel</a>:
-              We monitor the activity log generated when you are logged in using Mixpanel.
-              We do this to understand how our service is used and what can be improved.
-              The processed information includes the name, time and which features you used.
+              <Trans>
+                <a href="https://mixpanel.com/privacy/">Mixpanel</a>:
+                We monitor the activity log generated when you are logged in using Mixpanel.
+                We do this to understand how our service is used and what can be improved.
+                The processed information includes the name, time and which features you used.
+              </Trans>
             </li>
             <li>
-              <a href="https://segment.com/docs/legal/privacy/">Segment</a>:
-              We manage the integrations described above with Segment.
-              Therefore all the information shared with the Third Party Contractors above,
-              are also shared with Segment.
+              <Trans>
+                <a href="https://segment.com/docs/legal/privacy/">Segment</a>:
+                We manage the integrations described above with Segment.
+                Therefore all the information shared with the Third Party Contractors above,
+                are also shared with Segment.
+              </Trans>
             </li>
             <li>
-              <a href="https://www.freshworks.com/privacy/">Freshchat</a>:
-              To offer real-time chat support we use Freshchat.
+              <Trans>
+                <a href="https://www.freshworks.com/privacy/">Freshchat</a>:
+                To offer real-time chat support we use Freshchat.
+              </Trans>
             </li>
           </ul>
         </Section>
@@ -222,48 +251,56 @@ const IndexPage = ({ i18n, ...props }: Props) => (
         <Section>
           <h2><Trans>Business transfers</Trans></h2>
           <p>
-            If Ledgy, or substantially all of its assets, were acquired,
-            or in the unlikely event that Ledgy goes out of business or enters bankruptcy,
-            user information would be one of the assets that is transferred or acquired by a
-            third party. You acknowledge that such transfers may occur, and that any acquirer
-            of Ledgy may continue to use your Personal Data as set forth in this Privacy Policy.
+            <Trans>
+              If Ledgy, or substantially all of its assets, were acquired,
+              or in the unlikely event that Ledgy goes out of business or enters bankruptcy,
+              user information would be one of the assets that is transferred or acquired by a
+              third party. You acknowledge that such transfers may occur, and that any acquirer
+              of Ledgy may continue to use your Personal Data as set forth in this Privacy Policy.
+            </Trans>
           </p>
         </Section>
 
         <Section>
           <h2><Trans>Your choices</Trans></h2>
           <p>
-            You may always refuse to supply Personal Data, with the caveat
-            that it may prevent your from engaging in certain website-related activities.
-            You may correct the Personal Data in your account using our website.
-            You may use the export functionality of our Service to retrieve all
-            the information (including Personal Data) in a machine-readable format.
-            You may always request to delete your Personal Data. To do so, please
-            use the contact details below.
+            <Trans>
+              You may always refuse to supply Personal Data, with the caveat
+              that it may prevent your from engaging in certain website-related activities.
+              You may correct the Personal Data in your account using our website.
+              You may use the export functionality of our Service to retrieve all
+              the information (including Personal Data) in a machine-readable format.
+              You may always request to delete your Personal Data. To do so, please
+              use the contact details below.
+            </Trans>
           </p>
         </Section>
 
         <Section>
           <h2><Trans>Privacy policy changes</Trans></h2>
           <p>
-            Although most changes are likely to be minor, Ledgy may change its
-            Privacy Policy from time to time, and in Ledgy’s sole discretion.
-            Ledgy will notify you of any changes to its Privacy Policy.
+            <Trans>
+              Although most changes are likely to be minor, Ledgy may change its
+              Privacy Policy from time to time, and in Ledgy’s sole discretion.
+              Ledgy will notify you of any changes to its Privacy Policy.
+            </Trans>
           </p>
         </Section>
 
         <Section>
           <h2><Trans>Contact</Trans></h2>
           <p>
-            Please don’t hesitate to contact us if you have any questions about
-            our Privacy Policy, in case you want to delete any Personal Data or
-            regarding any other privacy-related manners. You can reach our
-            Data Security Officer via <a href="mailto:data@ledgy.com">data@ledgy.com</a> or
-            at the following address:
+            <Trans>
+              Please don’t hesitate to contact us if you have any questions about
+              our Privacy Policy, in case you want to delete any Personal Data or
+              regarding any other privacy-related manners. You can reach our
+              Data Security Officer via <a href="mailto:data@ledgy.com">data@ledgy.com</a> or
+              at the following address:
+            </Trans>
           </p>
           <p>
             Ledgy AG<br />
-            Data Security Officer<br />
+            <Trans>Data Security Officer</Trans><br />
             Forchstrasse 60, 8008 Zürich
           </p>
         </Section>
