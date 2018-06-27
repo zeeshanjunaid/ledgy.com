@@ -4,7 +4,7 @@ import * as React from 'react';
 import Link from 'gatsby-link';
 import { withI18n, Trans } from '@lingui/react';
 
-import PrivacyElement from '../components/Privacy';
+import { PrivacyElement } from '../components/Privacy';
 import { Title } from '../layouts/utils';
 
 const Header = ({ i18n }: Props) => (
@@ -52,6 +52,7 @@ const IndexPage = ({ i18n, ...props }: Object) => (
                     Users have to set a <a target="_blank" rel="noopener noreferrer" href="https://blogs.dropbox.com/tech/2012/04/zxcvbn-realistic-password-strength-estimation/">secure password</a>
                   </Trans>
                 }
+                size="6"
               />
 
               <PrivacyElement
@@ -62,24 +63,28 @@ const IndexPage = ({ i18n, ...props }: Object) => (
                     Stored encrypted with the battle-tested <a target="_blank" rel="noopener noreferrer" href="https://codahale.com/how-to-safely-store-a-password/">bcrypt algorithm</a>
                   </Trans>
                 }
+                size="6"
               />
 
               <PrivacyElement
                 icon="fa fa-shield"
                 title={i18n.t`Two-factor authentication`}
                 body={i18n.t`For even better protection of accounts`}
+                size="6"
               />
 
               <PrivacyElement
                 icon="fa fa-user-plus"
                 title={i18n.t`Peer-reviewed code`}
                 body={i18n.t`The code is always reviewed by at least one other engineer`}
+                size="6"
               />
 
               <PrivacyElement
                 icon="fa fa-exchange"
                 title={i18n.t`Server call rate limit`}
                 body={i18n.t`The frequency of server calls is limited to prevent brute-force attacks`}
+                size="6"
               />
 
               <PrivacyElement
@@ -90,6 +95,7 @@ const IndexPage = ({ i18n, ...props }: Object) => (
                     The site is accessible only through HTTPS (<a target="_blank" rel="noopener noreferrer" href="https://www.ssllabs.com/ssltest/analyze?d=app.ledgy.com">A+ rating</a>)
                   </Trans>
                 }
+                size="6"
               />
 
               <PrivacyElement
@@ -100,19 +106,21 @@ const IndexPage = ({ i18n, ...props }: Object) => (
                     HTTP headers prevent cross-site scripting and code injection (<a target="_blank" rel="noopener noreferrer" href="https://observatory.mozilla.org/analyze.html?host=app.ledgy.com">A+ rating</a>)
                   </Trans>
                 }
+                size="6"
               />
 
               <PrivacyElement
                 icon="fa fa-database"
                 title={i18n.t`Backups`}
                 body={i18n.t`Daily backups ensure nothing is ever lost`}
+                size="6"
               />
 
             </div>
 
             <p>
               <Trans>
-                If you have any questions or discover anything suspicious, please <Link href to={`${props.prefix}/contact/`}>get in touch with us</Link>.
+                If you have any questions or discover anything suspicious, please <Link href to={`${props.prefix}/contact/`}>get in touch</Link>.
               </Trans>
             </p>
 
