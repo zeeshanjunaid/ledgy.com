@@ -291,7 +291,8 @@ const IndexPage = ({ i18n, ...props }: Props) => (
             <li>
               <Trans>
                 <a href="https://www.freshworks.com/privacy/">Freshchat</a>:
-                To offer real-time chat support we use Freshchat.
+                To offer real-time chat support we use Freshchat,
+                which stores data GDPR compliant in Europe only.
               </Trans>
             </li>
           </ul>
