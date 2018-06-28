@@ -64,7 +64,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
             <PrivacyElement
               icon="fa fa-pie-chart"
               title={i18n.t`Company information`}
-              body={i18n.t`The company name, and other company details. To really use our Service you may enter the share ledger transactions and other cap table details. `}
+              body={i18n.t`Company name, and other company details. To really use our Service you may enter the share ledger transactions and other cap table details. `}
               size="6"
             />
           </PrivacyRow>
@@ -146,8 +146,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
             (“Personal Data”) as outlined above. In order to use our Service at its best
             you may enter the share ledger transactions and other cap table details.
             But please note: We strictly separate Personal Data from company information.
-            Nobody has any access to company information, except if you explicitly grant
-            access through your account to receive support.
+            Nobody has any access to your company information.
           </p>
           <p>
             <Trans>
@@ -213,10 +212,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
           <h2><Trans>Who we share your information with</Trans></h2>
           <p>
             <Trans>
-              Nobody has any access to the company information you provide.
-              For the purpose of providing you with support, you can choose to
-              explicitly grant Ledgy employees access to the company information.
-              You can do so through your account and can withdraw it at any time.
+              Company information like share ledger transactions are not shared with anyone.
             </Trans>
           </p>
           <p>
