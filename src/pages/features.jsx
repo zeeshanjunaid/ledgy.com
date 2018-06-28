@@ -114,6 +114,11 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </Trans>
           </Feature>
 
+          <div className="mx-auto text-center my-8">
+            <Link href to={`${props.prefix}/featurelist/`} className="btn btn-block d-sm-inline btn-round btn-xl btn-outline-primary mt-6" >
+              <Trans>See the full feature list</Trans>
+            </Link>
+          </div>
 
           <hr className="my-8 w-20" />
 
