@@ -33,10 +33,100 @@ const IndexPage = ({ i18n, ...props }: Props) => (
           <p>
             <Trans>
               We understand how sensitive cap table information is for any business.
-              That’s why your privacy and your data’s security is crucial to us.
+              That’s why your privacy and your data’s security is crucial to us. We also know that
+              long and difficult privacy policies are not cool, so we give an overview up-front.
             </Trans>
           </p>
+        </Section>
 
+        <Section>
+          <h2><Trans>What we may collect and why</Trans></h2>
+
+          <PrivacyRow>
+            <PrivacyElement
+              icon="fa fa-sign-in"
+              title={i18n.t`User information`}
+              body={i18n.t`Name, email, encrypted password and any other details you provide`}
+              size="6"
+            />
+            <PrivacyElement
+              icon="fa fa-bar-chart"
+              title={i18n.t`Usage statistics`}
+              body={i18n.t`Name, time, and which features you use to understand and improve our service`}
+              size="6"
+            />
+            <PrivacyElement
+              icon="fa fa-desktop"
+              title={i18n.t`Browser information`}
+              body={i18n.t`In case a crash happens, which helps us to fix it as fast as possible`}
+              size="6"
+            />
+            <PrivacyElement
+              icon="fa fa-pie-chart"
+              title={i18n.t`Company information`}
+              body={i18n.t`The company name, and other company details. To really use our Service you may enter the share ledger transactions and other cap table details. `}
+              size="6"
+            />
+          </PrivacyRow>
+
+        </Section>
+
+        <Section>
+          <h2><Trans>How we protect your information</Trans></h2>
+          <PrivacyRow>
+            <PrivacyElement
+              icon="fa fa-shield"
+              title={i18n.t`Security`}
+              body={
+                <Trans>
+                  We live up to highest security standards. We improve them continuously.&nbsp;
+                  <Link href to={`${props.prefix}/security/`}>Check out what we do  <i className="ti-angle-right fs-10 ml-1" /></Link>
+                </Trans>
+              }
+              size="9"
+            />
+            <PrivacyElement
+              icon="fa fa-desktop"
+              title={i18n.t`User information, usage statistics and browser information`}
+              body={i18n.t`We limit access and sharing as much as reasonably possible.`}
+              size="6"
+            />
+            <PrivacyElement
+              icon="fa fa-pie-chart"
+              title={i18n.t`Company information`}
+              body={i18n.t`Nobody has any access to the company information you provide. `}
+              size="6"
+            />
+          </PrivacyRow>
+        </Section>
+
+        <Section>
+          <h2><Trans>Who we share your information with</Trans></h2>
+          <PrivacyRow>
+            <PrivacyElement
+              icon="fa fa-plug"
+              title={i18n.t`Third Party Contractors`}
+              body={
+                <Trans>
+                  Which we use to run and improve our Service for you.
+                  This excludes company information.&nbsp;
+                  <Link href to={`${props.prefix}/privacy#third-parties`}>See which ones below <i className="ti-angle-right fs-10 ml-1" /></Link>
+                </Trans>
+              }
+              size="6"
+            />
+            <PrivacyElement
+              icon="fa fa-users"
+              title={i18n.t`Your shareholders`}
+              body={i18n.t`If you add them with their email address and they decide to sign up on Ledgy, shareholders can see their own stake in your company and its latest valuation.`}
+              size="6"
+            />
+          </PrivacyRow>
+          <hr />
+        </Section>
+
+        <Section>
+          <h2><Trans>The details</Trans></h2>
           <p>
             <Trans>
               Ledgy AG (“Ledgy”, “we”) is a technology company that provides software as a
@@ -50,31 +140,15 @@ const IndexPage = ({ i18n, ...props }: Props) => (
 
         <Section>
           <h2><Trans>What we may collect and why</Trans></h2>
-          <strong><Trans>When you decide to sign up on Ledgy, we may collect</Trans></strong>
-
-          <PrivacyRow>
-            <PrivacyElement
-              icon="fa fa-sign-in"
-              title={i18n.t`User information`}
-              body={i18n.t`Name, email, encrypted password and any other details you provide`}
-            />
-            <PrivacyElement
-              icon="fa fa-bar-chart"
-              title={i18n.t`Usage statistics`}
-              body={i18n.t`Name, time, and which features you use to understand and improve our service`}
-            />
-            <PrivacyElement
-              icon="fa fa-desktop"
-              title={i18n.t`Browser information`}
-              body={i18n.t`In case a crash happens, which helps us to fix it as fast as possible`}
-            />
-            <PrivacyElement
-              icon="fa fa-pie-chart"
-              title={i18n.t`Company information`}
-              body={i18n.t`The company name, and other company details. In order to use our Service at its best you may enter the share ledger transactions and other cap table details. But please note: Nobody has any access, except if you explicitly grant access to receive support.`}
-            />
-          </PrivacyRow>
-
+          <strong><Trans>When you decide to sign up on Ledgy</Trans></strong>
+          <p>
+            We may collect user information, usage statistics and browser information
+            (“Personal Data”) as outlined above. In order to use our Service at its best
+            you may enter the share ledger transactions and other cap table details.
+            But please note: We strictly separate Personal Data from company information.
+            Nobody has any access to company information, except if you explicitly grant
+            access through your account to receive support.
+          </p>
           <p>
             <Trans>
               We only use this Personal Data to provide you with our Service and improve it.
@@ -117,47 +191,26 @@ const IndexPage = ({ i18n, ...props }: Props) => (
 
         <Section>
           <h2><Trans>How we protect your information</Trans></h2>
-          <PrivacyRow>
-            <PrivacyElement
-              icon="fa fa-shield"
-              title={i18n.t`Security`}
-              body={
-                <Trans>
-                  We take all technical and organisational measures reasonably necessary to protect
-                  your data against the unauthorized access, use or destruction.
-                  We improve these measures continuously.&nbsp;
-                  <Link href to={`${props.prefix}/security/`}>See what we do  <i className="ti-angle-right fs-10 ml-1" /></Link>
-                </Trans>
-              }
-            />
-            <PrivacyElement
-              icon="fa fa-desktop"
-              title={i18n.t`User information, usage statistics and browser information`}
-              body={i18n.t`We limit access and sharing as much as reasonably possible.`}
-            />
-            <PrivacyElement
-              icon="fa fa-pie-chart"
-              title={i18n.t`Company information`}
-              body={i18n.t`Nobody has any access to the company information you provide. For the purpose of providing you with support, you can choose to explicitly grant Ledgy employees access to the company information. You can do so through your account and can withdraw it at any time. `}
-            />
-          </PrivacyRow>
+          <p>
+            We take all technical and organisational measures reasonably necessary to protect
+            your data against the unauthorized access, use or destruction.
+            We improve these measures continuously.&nbsp;
+            <Link href to={`${props.prefix}/security/`}>
+              See what we do  <i className="ti-angle-right fs-10 ml-1" />
+            </Link>
+          </p>
+          <p>
+            We strictly separate Personal Data and company information.
+            We limit access and sharing of Personal Data as much as reasonably possible.
+            Nobody has any access to the company information you provide.
+            For the purpose of providing you with support, you can choose
+            to explicitly grant Ledgy employees access to the company information.
+            You can do so through your account and can withdraw it at any time.
+          </p>
         </Section>
 
         <Section>
           <h2><Trans>Who we share your information with</Trans></h2>
-          <PrivacyRow>
-            <PrivacyElement
-              icon="fa fa-plug"
-              title={i18n.t`Third Party Contractors`}
-              body={i18n.t`Which we use to run and improve our Service for you. This excludes company information. Read more about this below.`}
-            />
-            <PrivacyElement
-              icon="fa fa-users"
-              title={i18n.t`Your shareholders`}
-              body={i18n.t`If you add them with an email address, shareholders can see their own stake in your company and its latest valuation if they decide to sign up on Ledgy.`}
-            />
-          </PrivacyRow>
-
           <p>
             <Trans>
               Nobody has any access to the company information you provide.
@@ -185,7 +238,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
             </Trans>
           </p>
 
-          <strong><Trans>Third Party Contractors used by Ledgy</Trans></strong>
+          <strong id="third-parties"><Trans>Third Party Contractors used by Ledgy</Trans></strong>
           <p>
             <Trans>
               We do our best to limit the information shared with third party services.
@@ -291,7 +344,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
           <h2><Trans>Contact</Trans></h2>
           <p>
             <Trans>
-              Please don’t hesitate to contact us if you have any questions about
+              Please contact us if you have any questions about
               our Privacy Policy, in case you want to delete any Personal Data or
               regarding any other privacy-related manners. You can reach our
               Data Security Officer via <a href="mailto:data@ledgy.com">data@ledgy.com</a> or
@@ -303,6 +356,10 @@ const IndexPage = ({ i18n, ...props }: Props) => (
             <Trans>Data Security Officer</Trans><br />
             Forchstrasse 60, 8008 Zürich
           </p>
+        </Section>
+
+        <Section>
+          <strong>Date of this policy</strong>: June 28, 2018
         </Section>
 
       </div>

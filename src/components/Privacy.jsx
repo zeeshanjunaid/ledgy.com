@@ -4,16 +4,16 @@ import * as React from 'react';
 
 export const PrivacyElement = ({ icon, title, body, size }: {
   icon: string,
-  title: string | React.Element<any>,
-  body?: string | React.Element<any>,
+  title: string | React.Node,
+  body?: string | React.Node,
   size?: string
 }) => (
-  <div className={`col-12 col-lg-${size}`}>
+  <div className={`col-12 col-lg-${String(size)}`}>
     <div className="media">
       <i className={`${icon} fa-3x fa-fw mr-2 mt-1`} />
       <p className="media-body mb-0">
         <strong className="d-block">{title}</strong>
-        {body && body}
+        {body}
       </p>
     </div>
   </div>
