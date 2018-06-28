@@ -155,14 +155,14 @@ const IndexPage = (props: Props) => {
           </div>
         </section>
 
-        <section className="section bg-gray">
+        <section className="section bg-ledgy text-white">
           <div className="container">
             <header className="section-header mb-0">
               <h2><Trans>We’re hiring!</Trans></h2>
               Would you like to join a motivated team to do great work?
               Are you a full-stack web developer that fixes a bug before breakfast?
               Are you fascinated by cutting-edge tech like React, ES6 and blockchain?
-              Then email us and we’ll have coffee together!
+              Then let’s have coffee together!
             </header>
           </div>
         </section>
