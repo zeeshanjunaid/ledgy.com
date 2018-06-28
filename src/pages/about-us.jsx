@@ -157,12 +157,20 @@ const IndexPage = (props: Props) => {
 
         <section className="section bg-ledgy text-white">
           <div className="container">
-            <header className="section-header mb-0">
+            <header className="section-header mb-0  px-8">
               <h2><Trans>We’re hiring!</Trans></h2>
-              Would you like to join us to have fun doing great work?
-              Are you a web developer that eats bugs for breakfast?
-              Are you fascinated by cutting-edge tech like React, blockchain or space elevators?
-              Then let’s have coffee together!
+              <p>
+                Do you feel working for Google is boring, because they don’t grow by 10×
+                during the next two years? Building a product is awesome, but how about
+                building a whole team around it?
+              </p>
+              <p>
+                Are you a web developer that eats bugs for breakfast?
+                Fascinated by cutting-edge tech like React, blockchain or space elevators?
+              </p>
+              <p>
+                Then let’s have coffee together!
+              </p>
             </header>
           </div>
         </section>
