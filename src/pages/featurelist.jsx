@@ -43,8 +43,8 @@ export default withI18n()(({ i18n }: Props) => (
 
             <div className="col-lg-4">
               <div className="pricing-3 border rounded text-left">
-                <h6><Trans>Cap Table on Steroids</Trans></h6>
-                <ul className="mb-0">
+                <h4><Trans>Cap Table on Steroids</Trans></h4>
+                <ul className="mb-0 mt-5">
                   <li><Trans>Funding Round Modeling</Trans></li>
                   <li><Trans>Full Transaction History</Trans></li>
                   <li><Trans>Consistency Checks</Trans></li>
@@ -60,8 +60,8 @@ export default withI18n()(({ i18n }: Props) => (
 
             <div className="col-lg-4">
               <div className="pricing-3 border rounded text-left">
-                <h6><Trans>Employee Incentives</Trans></h6>
-                <ul className="mb-0">
+                <h4><Trans>Employee Incentives</Trans></h4>
+                <ul className="mb-0 mt-5">
                   <li><Trans>Employee Options</Trans></li>
                   <li><Trans>Approved Capital Pools</Trans></li>
                   <li><Trans>Vesting Schedules</Trans></li>
@@ -77,8 +77,8 @@ export default withI18n()(({ i18n }: Props) => (
 
             <div className="col-lg-4">
               <div className="pricing-3 border rounded text-left">
-                <h6><Trans>Documents and Security</Trans></h6>
-                <ul className="mb-0">
+                <h4><Trans>And Much More</Trans></h4>
+                <ul className="mb-0 mt-5">
                   <li><Trans>Secure Document Storage</Trans></li>
                   <li><Trans>Attach Documents</Trans></li>
                   <li><Trans>Spreadsheet Import</Trans></li>

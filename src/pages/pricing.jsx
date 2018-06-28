@@ -48,7 +48,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <div className="pricing-3 border rounded">
                 <h6><Trans>3 Dude(tte)s in a Garage</Trans></h6>
                 <h2 className="price"><Trans>$0</Trans></h2>
-                <ul className="text-left">
+                <ul className="text-left mb-0">
                   <li><Trans>All cap table features</Trans></li>
                   <li><Trans>Up to 25 shareholders</Trans></li>
                 </ul>
@@ -61,7 +61,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                 <span className="popular-tag"><Trans>coming soon</Trans></span>
                 <h6><Trans>Fast-growing Startup</Trans></h6>
                 <h2 className="price"><Trans>$2</Trans></h2>
-                <ul className="text-left">
+                <h6><Trans>per shareholder per month</Trans></h6>
+                <ul className="text-left mt-6 mb-0">
                   <li><Trans>All cap table features</Trans></li>
                   <li><Trans>Up to 50 shareholders</Trans></li>
                   <li><Trans>Free cap table import</Trans></li>
@@ -75,7 +76,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                 <span className="popular-tag"><Trans>coming soon</Trans></span>
                 <h6><Trans>Unicorn</Trans></h6>
                 <h2 className="price"><Trans>$3</Trans></h2>
-                <ul className="text-left">
+                <h6><Trans>per shareholder per month</Trans></h6>
+                <ul className="text-left mt-6 mb-0">
                   <li><Trans>All cap table features</Trans></li>
                   <li><Trans>Unlimited shareholders</Trans></li>
                   <li><Trans>Free cap table import</Trans></li>
