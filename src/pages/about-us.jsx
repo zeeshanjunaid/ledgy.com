@@ -159,7 +159,7 @@ const IndexPage = (props: Props) => {
           <div className="container">
             <header className="section-header mb-0">
               <h2><Trans>We’re hiring!</Trans></h2>
-              Would you like to join a motivated team to do great work?
+              Would you like to join us to have fun doing great work?
               Are you a web developer that eats bugs for breakfast?
               Are you fascinated by cutting-edge tech like React, blockchain or space elevators?
               Then let’s have coffee together!
