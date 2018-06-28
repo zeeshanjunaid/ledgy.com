@@ -34,7 +34,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
             <Trans>
               We understand how sensitive cap table information is for any business.
               That’s why your privacy and your data’s security is crucial to us. We also know that
-              long and difficult privacy policies are not cool, so we give an overview up-front.
+              long and complicated privacy policies are not nice, so we give an overview up-front.
             </Trans>
           </p>
         </Section>
@@ -64,7 +64,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
             <PrivacyElement
               icon="fa fa-pie-chart"
               title={i18n.t`Company information`}
-              body={i18n.t`Company name, and other company details. To really use our Service you may enter the share ledger transactions and other cap table details. `}
+              body={i18n.t`Company name, and other company details. To properly use our Service you may enter the share ledger transactions and other cap table details.`}
               size="6"
             />
           </PrivacyRow>
@@ -94,7 +94,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
             <PrivacyElement
               icon="fa fa-pie-chart"
               title={i18n.t`Company information`}
-              body={i18n.t`Nobody has any access to the company information you provide. `}
+              body={i18n.t`Nobody has any access to the company information you provide.`}
               size="6"
             />
           </PrivacyRow>
@@ -118,7 +118,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
             <PrivacyElement
               icon="fa fa-users"
               title={i18n.t`Your shareholders`}
-              body={i18n.t`If you add them with their email address and they decide to sign up on Ledgy, shareholders can see their own stake in your company and its latest valuation.`}
+              body={i18n.t`If you add them with their email address and they decide to sign up on Ledgy, shareholders can see their stake in your company and its latest valuation.`}
               size="6"
             />
           </PrivacyRow>
@@ -142,11 +142,13 @@ const IndexPage = ({ i18n, ...props }: Props) => (
           <h2><Trans>What we may collect and why</Trans></h2>
           <strong><Trans>When you decide to sign up on Ledgy</Trans></strong>
           <p>
-            We may collect user information, usage statistics and browser information
-            (“Personal Data”) as outlined above. In order to use our Service at its best
-            you may enter the share ledger transactions and other cap table details.
-            But please note: We strictly separate Personal Data from company information.
-            Nobody has any access to your company information.
+            <Trans>
+              We may collect user information, usage statistics and browser information
+              (“Personal Data”) as outlined above. To use our Service at its best,
+              you may enter the share ledger transactions and other cap table details.
+              Please note: We strictly separate Personal Data from company information.
+              Nobody has any access to your company information.
+            </Trans>
           </p>
           <p>
             <Trans>
@@ -165,7 +167,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
 
           <p>
             <Trans>
-              We may evaluate anonymous statistics from the information you provide.
+              We may evaluate anonymous statistics from the data you provide.
               For instance, we may monitor the total number of registered companies,
               their average size, average number of shareholders and other related information.
               We may display this information publicly or provide it to others.
@@ -191,7 +193,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
         <Section>
           <h2><Trans>How we protect your information</Trans></h2>
           <p>
-            We take all technical and organisational measures reasonably necessary to protect
+            We take all technical and organizational measures reasonably necessary to protect
             your data against the unauthorized access, use or destruction.
             We improve these measures continuously.&nbsp;
             <Link href to={`${props.prefix}/security/`}>
@@ -212,7 +214,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
           <h2><Trans>Who we share your information with</Trans></h2>
           <p>
             <Trans>
-              Company information like share ledger transactions are not shared with anyone.
+              We don’t share company information like share ledger transactions with anyone.
             </Trans>
           </p>
           <p>
@@ -237,8 +239,8 @@ const IndexPage = ({ i18n, ...props }: Props) => (
           <strong id="third-parties"><Trans>Third Party Contractors used by Ledgy</Trans></strong>
           <p>
             <Trans>
-              We do our best to limit the information shared with third party services.
-              Some limited Personal Data is shared with trusted third party services,
+              We do our best to limit the information shared with Third Party Contractors.
+              We share some limited Personal Data with trusted third-party services,
               which we use to run our software and improve our Service for you.
               This excludes company information.
             </Trans>
@@ -256,8 +258,8 @@ const IndexPage = ({ i18n, ...props }: Props) => (
           <ul>
             <li>
               <Trans>
-                <a href="https://mailchimp.com/legal/privacy/">Mailchimp</a>:
-                We use Mailchimp to send you updates from time to time, for which Ledgy gives them
+                <a href="https://mailchimp.com/legal/privacy/">MailChimp</a>:
+                We use MailChimp to send you updates from time to time, for which Ledgy gives them
                 your name and email address.
               </Trans>
             </li>
@@ -276,8 +278,8 @@ const IndexPage = ({ i18n, ...props }: Props) => (
               <Trans>
                 <a href="https://mixpanel.com/privacy/">Mixpanel</a>:
                 We monitor the activity log generated when you are logged in using Mixpanel.
-                We do this to understand how our service is used and what can be improved.
-                The processed information includes the name, time and which features you used.
+                We do this to understand how our service is used and what we can be improve.
+                The processed information includes the name, time and which features you use.
               </Trans>
             </li>
             <li>
@@ -304,9 +306,9 @@ const IndexPage = ({ i18n, ...props }: Props) => (
             <Trans>
               If Ledgy, or substantially all of its assets, were acquired,
               or in the unlikely event that Ledgy goes out of business or enters bankruptcy,
-              user information would be one of the assets that is transferred or acquired by a
-              third party. You acknowledge that such transfers may occur, and that any acquirer
-              of Ledgy may continue to use your Personal Data as set forth in this Privacy Policy.
+              user information would be one of the assets that are transferred or acquired by a
+              third party. You acknowledge that such transfers may occur and that any acquirer
+              of Ledgy may continue to use your data as outlined in this Privacy Policy.
             </Trans>
           </p>
         </Section>
@@ -316,7 +318,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
           <p>
             <Trans>
               You may always refuse to supply Personal Data, with the caveat
-              that it may prevent your from engaging in certain website-related activities.
+              that it may prevent you from using some of the functionality.
               You may correct the Personal Data in your account using our website.
               You may use the export functionality of our Service to retrieve all
               the information (including Personal Data) in a machine-readable format.

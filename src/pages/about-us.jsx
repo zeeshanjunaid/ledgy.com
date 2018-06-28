@@ -160,9 +160,9 @@ const IndexPage = (props: Props) => {
             <header className="section-header mb-0  px-8">
               <h2><Trans>We’re hiring!</Trans></h2>
               <p>
-                Do you feel working for Google is boring, because they don’t grow by 10×
-                during the next two years? Building a product is awesome, but how about
-                building a whole team around it?
+                Do you feel working for Google is boring because they don’t grow by 10×
+                during the next two years? Building a product is fantastic, but how about
+                creating a whole team around it?
               </p>
               <p>
                 Are you a web developer that eats bugs for breakfast?
