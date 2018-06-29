@@ -34,7 +34,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
             <Trans>
               We understand how sensitive cap table information is for any business.
               That’s why your privacy and your data’s security is crucial to us. We also know that
-              long and complicated privacy policies are not nice, so we give an overview up-front.
+              long and complicated privacy policies are not very helpful, so we give an overview up-front.
             </Trans>
           </p>
         </Section>
@@ -306,7 +306,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
             <Trans>
               If Ledgy, or substantially all of its assets, were acquired,
               or in the unlikely event that Ledgy goes out of business or enters bankruptcy,
-              user information would be one of the assets that are transferred or acquired by a
+              user information would be one of the assets that are transferred to or acquired by a
               third party. You acknowledge that such transfers may occur and that any acquirer
               of Ledgy may continue to use your data as outlined in this Privacy Policy.
             </Trans>
@@ -346,7 +346,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
               Please contact us if you have any questions about
               our Privacy Policy, in case you want to delete any Personal Data or
               regarding any other privacy-related manners. You can reach our
-              Data Security Officer via <a href="mailto:data@ledgy.com">data@ledgy.com</a> or
+              Data Security Officer via <a href="mailto:contact@ledgy.com">contact@ledgy.com</a> or
               at the following address:
             </Trans>
           </p>
