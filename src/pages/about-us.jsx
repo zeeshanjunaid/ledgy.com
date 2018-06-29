@@ -155,7 +155,26 @@ const IndexPage = (props: Props) => {
           </div>
         </section>
 
-        <section className="section bg-gray">
+        <section className="section bg-ledgy text-white">
+          <div className="container">
+            <header className="section-header mb-0  px-8">
+              <h2><Trans>We’re hiring!</Trans></h2>
+              <p>
+                <Trans>
+                  Do you feel working for Google is boring because they don’t grow by 100×
+                  during the next four years? Building a product is fantastic, but how about
+                  creating a whole team around it?
+                  Are you a web developer that eats bugs for breakfast?
+                  Fascinated by cutting-edge technology like React, blockchain or space elevators?
+                  <br /><br />
+                  Then let’s have coffee together!
+                </Trans>
+              </p>
+            </header>
+          </div>
+        </section>
+
+        <section className="section">
           <div className="container">
             <header className="section-header">
               <h2><Trans>Board and Advisors</Trans></h2>

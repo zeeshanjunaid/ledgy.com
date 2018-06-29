@@ -16,7 +16,7 @@ export default withI18n()(({ i18n }: Props) => (
         <div className="row">
           <div className="col-12 col-lg-8 offset-lg-2">
 
-            <h1><Trans>Ledgy is free.</Trans></h1>
+            <h1><Trans>Ledgy is free</Trans></h1>
 
           </div>
         </div>
