@@ -2,11 +2,12 @@
 
 import * as React from 'react';
 import { withI18n, Trans } from '@lingui/react';
+import Link from 'gatsby-link';
 
 import { Title } from '../layouts/utils';
 
 
-export default withI18n()(({ i18n }: Props) => (
+export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
     <Title title={i18n.t`Pricing`} />
 
@@ -16,7 +17,7 @@ export default withI18n()(({ i18n }: Props) => (
         <div className="row">
           <div className="col-12 col-lg-8 offset-lg-2">
 
-            <h1><Trans>Ledgy is free</Trans></h1>
+            <h1><Trans>Pricing</Trans></h1>
 
           </div>
         </div>
@@ -31,19 +32,10 @@ export default withI18n()(({ i18n }: Props) => (
           <header className="section-header">
             <p>
               <Trans>
-                Our goal is to truly benefit founders at work. We want to give as
-                many people as possible access to our online cap table solution.
-                At our current stage, we consider it more valuable to really understand
-                our users’ needs than adding a few numbers to our bank account.
-                Nevertheless, we leave it open to introduce paid premium features
-                in the future. But the basic version will always remain free of charge.
-              </Trans>
-            </p>
-            <hr />
-            <p>
-              <Trans>
-                If you came here looking for fancy option
-                plans, we got you covered:
+                Ledgy scales with your needs. Free for startups, powerful for grown-ups.
+                It’s currently free, nevertheless, this probably changes soon.
+                If you sign up now, we’ll make sure, that our loyal first users will
+                get a good deal.
               </Trans>
             </p>
           </header>
@@ -51,63 +43,61 @@ export default withI18n()(({ i18n }: Props) => (
 
           <div className="row gap-y">
 
+
             <div className="col-lg-4">
               <div className="pricing-3 border rounded">
                 <h6><Trans>3 Dude(tte)s in a Garage</Trans></h6>
-                <h2 className="price"><Trans>$0</Trans></h2>
-                <ul className="text-left">
-                  <li><Trans>Full Transaction History</Trans></li>
-                  <li><Trans>Consistency Checks</Trans></li>
-                  <li><Trans>Convertible Loans</Trans></li>
-                  <li><Trans>Customizable PDF Reports</Trans></li>
-                  <li><Trans>Unlimited Share Classes</Trans></li>
-                  <li><Trans>Transaction Filters</Trans></li>
-                  <li><Trans>Numbered shares</Trans></li>
-                  <li><Trans>Up to 20 shareholders</Trans></li>
+                <h2 className="price mb-0"><Trans>Free</Trans></h2>
+                <small className="text-muted">&nbsp;</small>
+                <ul className="text-left mt-6 mb-0">
+                  <li><Trans>Up to 25 shareholders</Trans></li>
+                  <li><Trans>All cap table features</Trans></li>
                 </ul>
-                <a className="btn btn-round btn-outline-primary btn-xl" href="#try"><Trans>Get Started</Trans></a>
               </div>
             </div>
 
 
             <div className="col-lg-4">
               <div className="pricing-3 popular border rounded">
-                <span className="popular-tag"><Trans>Best choice</Trans></span>
+                <span className="popular-tag"><Trans>coming soon</Trans></span>
                 <h6><Trans>Fast-growing Startup</Trans></h6>
-                <h2 className="price"><Trans>$0</Trans></h2>
-                <ul className="text-left">
-                  <li><Trans>Round Modeling</Trans></li>
-                  <li><Trans>Employee Incentives</Trans></li>
-                  <li><Trans>Vesting Schedules</Trans></li>
-                  <li><Trans>Fully-diluted View</Trans></li>
-                  <li><Trans>Investor Dashboard</Trans></li>
-                  <li><Trans>Employee Login</Trans></li>
-                  <li><Trans>Stock Split</Trans></li>
-                  <li><Trans>Unlimited shareholders</Trans></li>
+                <h2 className="price mb-0"><Trans>€2</Trans></h2>
+                <small className="text-muted"><Trans>per shareholder per month</Trans></small>
+                <ul className="text-left mt-6 mb-0">
+                  <li><Trans>Up to 50 shareholders</Trans></li>
+                  <li><Trans>All cap table features</Trans></li>
+                  <li><Trans>Free cap table import</Trans></li>
                 </ul>
-                <a className="btn btn-round btn-primary btn-xl" href="#try"><Trans>Get Started</Trans></a>
               </div>
             </div>
 
 
             <div className="col-lg-4">
-              <div className="pricing-3 border rounded">
+              <div className="pricing-3 popular border rounded">
+                <span className="popular-tag"><Trans>coming soon</Trans></span>
                 <h6><Trans>Unicorn</Trans></h6>
-                <h2 className="price"><Trans>$0</Trans></h2>
-                <ul className="text-left">
-                  <li><Trans>Cap Table Import</Trans></li>
-                  <li><Trans>Document Management</Trans></li>
-                  <li><Trans>Automated Tax Reports</Trans></li>
-                  <li><Trans>Multiple Administrators</Trans></li>
-                  <li><Trans>CSV Export</Trans></li>
-                  <li><Trans>Two-Factor Authentication</Trans></li>
-                  <li><Trans>Audit Trails</Trans></li>
-                  <li><Trans>24/7 Support</Trans></li>
+                <h2 className="price mb-0"><Trans>€5</Trans></h2>
+                <small className="text-muted"><Trans>per shareholder per month</Trans></small>
+                <ul className="text-left mt-6 mb-0">
+                  <li><Trans>Unlimited shareholders</Trans></li>
+                  <li><Trans>All cap table features</Trans></li>
+                  <li><Trans>Free cap table import</Trans></li>
+                  <li><Trans>Premium support</Trans></li>
                 </ul>
-                <a className="btn btn-round btn-outline-primary btn-xl" href="#try"><Trans>Get Started</Trans></a>
               </div>
             </div>
 
+          </div>
+
+          <div className="mx-auto text-center mt-6">
+            <Trans>
+              Unable to find your perfect fit?<br />
+              <a href="mailto:sales@ledgy.com">Contact sales</a> or use the chat right on this page.
+            </Trans>
+            <br /><br />
+            <Link href to={`${props.prefix}/all-features/`} className="btn btn-block d-sm-inline btn-round btn-xl btn-outline-primary mt-6" >
+              <Trans>Discover all cap table features</Trans>
+            </Link>
           </div>
 
         </div>

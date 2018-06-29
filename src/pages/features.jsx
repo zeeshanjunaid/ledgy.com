@@ -53,7 +53,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <Feature
             {...props}
-            name={i18n.t`Financing Round Modeling`}
+            name={i18n.t`Funding Round Modeling`}
             url="round-modeling"
             left
           >
@@ -114,6 +114,11 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </Trans>
           </Feature>
 
+          <div className="mx-auto text-center my-8">
+            <Link href to={`${props.prefix}/all-features/`} className="btn btn-block d-sm-inline btn-round btn-xl btn-outline-primary mt-6" >
+              <Trans>Discover all cap table features</Trans>
+            </Link>
+          </div>
 
           <hr className="my-8 w-20" />
 
