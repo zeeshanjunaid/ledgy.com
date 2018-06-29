@@ -53,7 +53,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <Feature
             {...props}
-            name={i18n.t`Financing Round Modeling`}
+            name={i18n.t`Funding Round Modeling`}
             url="round-modeling"
             left
           >

@@ -33,7 +33,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             <p>
               <Trans>
                 Ledgy scales with your needs. Free for startups, powerful for grown-ups.
-                It’s currently free, nevertheless this probably changes soon.
+                It’s currently free, nevertheless, this probably changes soon.
                 If you sign up now, we’ll make sure, that our loyal first users will
                 get a good deal.
               </Trans>
