@@ -40,12 +40,9 @@ type FounderProps = {
 }
 
 const Founder =
-({ name, func, description, img, twitterlink, fade, linkedinlink, mail }: FounderProps) => (
+({ name, func, description, img, twitterlink, linkedinlink, mail }: FounderProps) => (
   <div className="col-12 col-md-6 col-lg-4 team-1">
-    {img &&
-      <div data-aos={`fade-${fade}`}>
-        <Img {...img} alt={name} />
-      </div>}
+    {img && <Img {...img} alt={name} />}
     <h6>{name}</h6>
     <small>{func}</small>
     <p>{description}</p>
@@ -57,12 +54,9 @@ const Founder =
   </div>
 );
 
-const Investor = ({ name, func, description, img, fade }: ProfileProps) => (
+const Investor = ({ name, func, description, img }: ProfileProps) => (
   <div className="col-12 col-md-4 team-2">
-    {img &&
-      <div data-aos={`fade-${fade}`}>
-        <Img {...img} alt={name} />
-      </div>}
+    {img && <Img {...img} alt={name} />}
     <h6>{name}</h6>
     <small>{func}</small>
     <p>{description}</p>
@@ -115,7 +109,6 @@ const IndexPage = (props: Props) => {
                 linkedinlink="https://www.linkedin.com/in/timohorstschaefer/"
                 mail="timo@ledgy.com"
                 img={data.timo}
-                fade="up-right"
               />
               <Founder
                 name="Ben Brandt"
@@ -125,7 +118,6 @@ const IndexPage = (props: Props) => {
                 linkedinlink="https://www.linkedin.com/in/ben-elias-brandt-680a95110/"
                 mail="ben@ledgy.com"
                 img={data.ben}
-                fade="up"
               />
               <Founder
                 name="Yoko Spirig"
@@ -135,7 +127,6 @@ const IndexPage = (props: Props) => {
                 linkedinlink="https://www.linkedin.com/in/yokospirig/"
                 mail="yoko@ledgy.com"
                 img={data.yoko}
-                fade="up-left"
               />
             </div>
 
@@ -173,21 +164,18 @@ const IndexPage = (props: Props) => {
                 func="Board Member"
                 description={i18n.t`Entrepreneur, Business Angel, Founder of Doodle.com`}
                 img={data.myke}
-                fade="down-right"
               />
               <Investor
                 name="Dr. Paul E. Sevinç"
                 func="Board Member"
                 description={i18n.t`Entrepreneur, Technologist, Founder of Doodle.com`}
                 img={data.paul}
-                fade="down"
               />
               <Investor
                 name="Luzius Meisser"
                 func="Advisor"
                 description={i18n.t`Founder of Meisser Economics, Bitcoin Association Switzerland, and Wuala`}
                 img={data.luzius}
-                fade="down-left"
               />
             </div>
 
@@ -197,14 +185,12 @@ const IndexPage = (props: Props) => {
                 func="Advisor"
                 description={i18n.t`Investor & Consultant (Farmy.ch, Flatfox.ch), Founder of Students.ch`}
                 img={data.adrian}
-                fade="up-right"
               />
               <Investor
                 name="Elena Walder-Schiavone"
                 func="Advisor"
                 description={i18n.t`M&A and Private Equity Lawyer with a focus on start-up legal advise, Smartuplaw.ch`}
                 img={data.elena}
-                fade="up-left"
               />
             </div>
 
