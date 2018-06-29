@@ -31,9 +31,9 @@ export default withI18n()(({ i18n }: Props) => (
           <header className="section-header">
             <p>
               <Trans>
-                Ledgy can do a lot for you – and more features are constantly developed.
+                Ledgy can do a lot for you—and more features are constantly being developed.
                 Most current features are listed below. Get in touch if your favorite
-                feature is missing, we love to hear customer feedback.
+                feature is missing, we love to hear feedback.
               </Trans>
             </p>
           </header>
@@ -80,7 +80,7 @@ export default withI18n()(({ i18n }: Props) => (
                 <h4><Trans>And Much More</Trans></h4>
                 <ul className="mb-0 mt-5">
                   <li><Trans>Secure Document Storage</Trans></li>
-                  <li><Trans>Attach Documents</Trans></li>
+                  <li><Trans>Attach Documents to Transactions</Trans></li>
                   <li><Trans>Spreadsheet Import</Trans></li>
                   <li><Trans>Customizable PDF Reports</Trans></li>
                   <li><Trans>CSV Export</Trans></li>

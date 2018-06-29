@@ -90,8 +90,10 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           </div>
 
           <div className="mx-auto text-center mt-6">
-            Unable to find your perfect fit?<br />
-            <a href="mailto:sales@ledgy.com">Contact sales</a> or use the chat right on this page.
+            <Trans>
+              Unable to find your perfect fit?<br />
+              <a href="mailto:sales@ledgy.com">Contact sales</a> or use the chat right on this page.
+            </Trans>
             <br /><br />
             <Link href to={`${props.prefix}/all-features/`} className="btn btn-block d-sm-inline btn-round btn-xl btn-outline-primary mt-6" >
               <Trans>Discover all cap table features</Trans>
