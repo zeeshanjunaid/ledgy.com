@@ -264,7 +264,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
             <li>
               <a href="https://www.freshworks.com/privacy/">Freshchat</a>:
               To offer real-time chat support we use Freshchat,
-              which stores data GDPR compliant in Europe only.
+              which stores data GDPR-compliant in Europe only.
             </li>
           </ul>
         </Section>
@@ -313,7 +313,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
           </p>
           <p>
             Ledgy AG<br />
-            <Trans>Data Security Officer</Trans><br />
+            Data Security Officer<br />
             Forchstrasse 60, 8008 Zürich
           </p>
         </Section>
