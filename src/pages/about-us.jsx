@@ -63,20 +63,7 @@ const Investor = ({ name, func, description, img, fade }: ProfileProps) => (
       <div data-aos={`fade-${fade}`}>
         <Img {...img} alt={name} />
       </div>}
-    <h5>{name}</h5>
-    <small>{func}</small>
-    <p>{description}</p>
-  </div>
-);
-
-
-const Advisor = ({ name, func, description, img, fade }: ProfileProps) => (
-  <div className="col-12 col-md-6 team-2">
-    {img &&
-      <div data-aos={`fade-${fade}`}>
-        <Img {...img} alt={name} />
-      </div>}
-    <h5>{name}</h5>
+    <h6>{name}</h6>
     <small>{func}</small>
     <p>{description}</p>
   </div>
@@ -157,7 +144,7 @@ const IndexPage = (props: Props) => {
 
         <section className="section bg-ledgy text-white">
           <div className="container">
-            <header className="section-header mb-0  px-8">
+            <header className="section-header mb-0  px-md-8">
               <h2><Trans>We’re hiring!</Trans></h2>
               <p>
                 <Trans>
@@ -204,15 +191,15 @@ const IndexPage = (props: Props) => {
               />
             </div>
 
-            <div className="row gap-y col-12 col-md-10 offset-md-1">
-              <Advisor
+            <div className="row gap-y justify-content-center">
+              <Investor
                 name="Adrian Bührer"
                 func="Advisor"
                 description={i18n.t`Investor & Consultant (Farmy.ch, Flatfox.ch), Founder of Students.ch`}
                 img={data.adrian}
                 fade="up-right"
               />
-              <Advisor
+              <Investor
                 name="Elena Walder-Schiavone"
                 func="Advisor"
                 description={i18n.t`M&A and Private Equity Lawyer with a focus on start-up legal advise, Smartuplaw.ch`}
