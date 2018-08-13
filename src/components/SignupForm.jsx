@@ -41,7 +41,7 @@ export default class extends React.Component<Props, {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: `form-name=signup&email=${email}&referrer=${encodeURIComponent(document.referrer)}&href=${encodeURIComponent(`${window.location.href}+accounting`)}`,
+      body: `form-name=signup&email=${email}&referrer=${encodeURIComponent(document.referrer)}&href=${encodeURIComponent(`${window.location.href}`)}`,
     })
       .then(() => { window.location.href = `${appUrl}/signup?email=${email}`; });
   }
@@ -63,6 +63,7 @@ export default class extends React.Component<Props, {
             value={this.state.email}
             onChange={this.handleChange}
             placeholder={i18n.t`Enter your email…`}
+            disabled={this.state.loading}
           />
           <div className="input-group-append d-none d-sm-block">
             <Submit {...this.state} />
