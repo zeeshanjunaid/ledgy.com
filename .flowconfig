@@ -11,3 +11,4 @@ module.system.node.resolve_dirname=node_modules
 
 [ignore]
 .*/node_modules/config-chain/test/broken.json
+.*/node_modules/@lingui/.*
