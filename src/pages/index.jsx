@@ -6,6 +6,7 @@ import Link from 'gatsby-link';
 import Img from 'gatsby-image';
 
 import { FeatureLinks } from '../components/Features';
+import SecurityRow from '../components/SecurityRow';
 import { demoUrl } from '../layouts/utils';
 
 const Header = ({ i18n, data, prefix }: Props) => (
@@ -86,6 +87,16 @@ const IndexPage = (props: Props) => (
 
 
           <FeatureLinks {...props} page="index" />
+
+          <section className="section py-5">
+            <hr className="my-6" />
+            <header className="section-header mb-7">
+              <h2><Trans>Your data in safe hands</Trans></h2>
+            </header>
+            <div className="row gap-y">
+              <SecurityRow {...props} />
+            </div>
+          </section>
 
         </div>
       </section>

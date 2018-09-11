@@ -35,16 +35,15 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <div>
             <header className="section-header text-left">
-              <h2><Trans>Make your cap table legally binding</Trans></h2>
+              <h2><Trans>Configure your pdf reports</Trans></h2>
               <p>
                 <Trans>
-                  To create a legally binding share register, it
-                  must contain a handwritten signature.
                   With Ledgy you can download a beautiful snapshot
                   of your company’s shares structure.
-                  Print and sign it to have a legally valid document.
+                  You can even configure it to include signature fields for
+                  your board of directors.
                   <br /><br />
-                  It includes the current cap table, including the non-diluted and
+                  It includes the current cap table, with the non-diluted and
                   fully-diluted stake of each shareholder (if you have options or phantom stock),
                   your convertibles and ESOPs, and finally the transaction history,
                   which tracks every change ever made to your cap table since the incorporation.
@@ -94,12 +93,12 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             <header className="section-header text-left">
               <p>
                 <Trans>
-                  The holding confirmation lists all assets that a shareholder owns,
-                  as well as their total value needed for the tax declaration.
+                  The holding confirmation lists all assets that a shareholder owns.
+                  You can optionally include a tax value of the shares.
                   Employees will be able to see their stock ownership plans and
                   how many of their total shares they already have vested.
                   <br />
-                  All documents are ready to be sent to the tax authority!
+                  Make your shareholders feel good, they will reward you.
                 </Trans>
               </p>
             </header>
@@ -119,7 +118,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <h2><Trans>Bring order to your documents</Trans></h2>
               <p>
                 <Trans>
-                  Every transaction in your share register usually comes with a
+                  Every transaction in your cap table usually comes with a
                   pile of additional documents, like contracts.
                   Get rid of complicated folder structures and attach them
                   directly to your transactions.

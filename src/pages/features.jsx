@@ -5,6 +5,7 @@ import { withI18n, Trans } from '@lingui/react';
 import Link from 'gatsby-link';
 
 import { Feature } from '../components/Features';
+import AllFeatures from '../components/AllFeatures';
 import { Title } from '../layouts/utils';
 
 const Hr = () => <hr className="my-3" />;
@@ -40,9 +41,9 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             url="consistency"
           >
             <Trans>
-              Did you know that many share registers are incomplete or
+              Did you know that many cap tables are incomplete or
               contain errors?
-              Building a share register with Excel or Word can quickly lead to
+              Tracking the ownership history with Excel or Word can quickly lead to
               inconsistencies.
               Set up your shares with Ledgy
               and be sure that all data is consistent at any time.
@@ -74,8 +75,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           >
             <Trans>
               Let your employees be part of your company’s success.
-              Ledgy supports vested stock, options, inverse vesting,
-              ESOP pools, and much more.<br />
+              Ledgy supports vested stock, options, phantom options, inverse vesting and
+              ESOP pools.<br />
               Employees can even log in to Ledgy and track their vested shares in real-time.
             </Trans>
           </Feature>
@@ -101,26 +102,22 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <Feature
             {...props}
-            title={i18n.t`Investor Dashboard`}
-            name={i18n.t`the Investor Dashboard`}
+            title={i18n.t`Investor Portfolio`}
+            name={i18n.t`the Investor Portfolio`}
             url="investors"
           >
             <Trans>
               Are you an investor and want to track your portfolio companies?
               The founders are busy and the numbers they give you are different
               from your own records?<br />
-              With their share register on Ledgy, there’s only a single source of truth.
+              With their cap table on Ledgy, there’s only a single source of truth.
               Convince your companies, and you will never miss anything regarding your investments.
             </Trans>
           </Feature>
 
           <div className="mx-auto text-center my-8">
-            <Link href to={`${props.prefix}/all-features/`} className="btn btn-block d-sm-inline btn-round btn-xl btn-outline-primary mt-6" >
-              <Trans>Discover all cap table features</Trans>
-            </Link>
+            <AllFeatures />
           </div>
-
-          <hr className="my-8 w-20" />
 
           <div className="row gap-y text-center">
 

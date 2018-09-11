@@ -50,7 +50,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                 <h2 className="price mb-0"><Trans>Free</Trans></h2>
                 <small className="text-muted">&nbsp;</small>
                 <ul className="text-left mt-6 mb-0">
-                  <li><Trans>Up to 25 shareholders</Trans></li>
+                  <li><Trans>Up to 20 shareholders</Trans></li>
                   <li><Trans>All cap table features</Trans></li>
                 </ul>
               </div>
@@ -76,7 +76,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <div className="pricing-3 popular border rounded">
                 <span className="popular-tag"><Trans>coming soon</Trans></span>
                 <h6><Trans>Unicorn</Trans></h6>
-                <h2 className="price mb-0"><Trans>€5</Trans></h2>
+                <h2 className="price mb-0"><Trans>€4</Trans></h2>
                 <small className="text-muted"><Trans>per shareholder per month</Trans></small>
                 <ul className="text-left mt-6 mb-0">
                   <li><Trans>Unlimited shareholders</Trans></li>
@@ -92,7 +92,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           <div className="mx-auto text-center mt-6">
             <Trans>
               Unable to find your perfect fit?<br />
-              <a href="mailto:sales@ledgy.com">Contact sales</a> or use the chat right on this page.
+              <a href="mailto:contact@ledgy.com">Drop us an email</a> or use the chat right on this page.
             </Trans>
             <br /><br />
             <Link href to={`${props.prefix}/all-features/`} className="btn btn-block d-sm-inline btn-round btn-xl btn-outline-primary mt-6" >

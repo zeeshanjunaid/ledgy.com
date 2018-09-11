@@ -76,7 +76,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   Scroll down, and you will notice that the cap table now
                   indicates the <i>Round Modeling</i> mode.
                   This gives you a detailed overview of who owns how many shares
-                  after applying the new financing round. Cool, eh?
+                  after applying the new financing round.
                 </Trans>
               </p>
             </header>
@@ -121,8 +121,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <p>
                 <Trans>
                   As soon as you’re done with your financing round, hit the <i>Convert</i> button.
-                  This will transform the scenario into real transactions for your
-                  share register and make it visible to all shareholders and investors.
+                  This will transform the scenario into real transactions for your cap table.
                 </Trans>
               </p>
             </div>

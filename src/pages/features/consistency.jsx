@@ -39,14 +39,14 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <h2><Trans>Replace your Excel with Ledgy</Trans></h2>
               <p>
                 <Trans>
-                  Keep all the history of your company’s share register at a single place.
+                  Keep the ownership history of your company at a single place.
                   No more shuffling around with different documents shared via email, Dropbox,
                   Google Drive or Slack.<br />
                   Ledgy will be your single source of truth.
                   And it’s a damn good one!
                   <br /><br />
-                  To get started enter all transactions from your share
-                  register into Ledgy. That’s an excellent opportunity to understand
+                  To get started enter all your ownership transactions into Ledgy.
+                  That’s an excellent opportunity to understand
                   what has been going on in your cap table.<br /><br />
                   Need help? <Link href to={`${props.prefix}/contact/`}>Contact us</Link>, and
                   we will assist you to get started with Ledgy.
@@ -65,10 +65,10 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             <div className="col-md-4">
               <p>
                 <Trans>
-                  Oops, there was an error in your share register?
+                  Oops, there was an error in your cap table?
                   Don’t worry; Ledgy will assist you in getting your cap table straight.<br />
                   Once finished, sit back and relax. Now you can be assured that
-                  your cap table is error-free!
+                  your cap table is error-free.
                 </Trans>
               </p>
             </div>
@@ -125,6 +125,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   At any point in the history of your share register, Ledgy
                   can draw you a helpful diagram that represents the current equity
                   distribution of your company.
+                  If you have numbered shares, you will also see who owns which parts.
                 </Trans>
               </p>
             </header>

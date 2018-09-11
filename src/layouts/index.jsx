@@ -46,7 +46,6 @@ const Nav = (props: LayoutProps) => (
         <nav className="nav nav-navbar ml-auto">
           <Link className="nav-link" href to={`${props.prefix}/features/`}><Trans>Features</Trans></Link>
           <Link className="nav-link" href to={`${props.prefix}/pricing/`}><Trans>Pricing</Trans></Link>
-          <Link className="nav-link" href to={`${props.prefix}/about-us/`}><Trans>About us</Trans></Link>
           <a className="nav-link" href={blogUrl} target="_blank" rel="noopener noreferrer"><Trans>Blog</Trans></a>
         </nav>
 
@@ -111,7 +110,7 @@ const Footer = (props: LayoutProps) => (
               <Link className="nav-link" href to={`${props.prefix}/pricing/`}><Trans>Pricing</Trans></Link>
               <Link className="nav-link" href to={`${props.prefix}/features/consistency/`}><Trans>Consistency</Trans></Link>
               <Link className="nav-link" href to={`${props.prefix}/features/round-modeling/`}><Trans>Round Modeling</Trans></Link>
-              <Link className="nav-link" href to={`${props.prefix}/features/esop/`}><Trans>ESOP</Trans></Link>
+              <Link className="nav-link" href to={`${props.prefix}/features/esop/`}><Trans>Employee Incentives</Trans></Link>
               <Link className="nav-link" href to={`${props.prefix}/features/reporting/`}><Trans>Reporting</Trans></Link>
               <Link className="nav-link" href to={`${props.prefix}/features/investors/`}><Trans>Investors</Trans></Link>
             </div>
