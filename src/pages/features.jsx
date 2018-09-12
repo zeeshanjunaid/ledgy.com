@@ -37,16 +37,14 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           <Feature
             {...props}
             name={i18n.t`Consistency`}
-            title={i18n.t`Guaranteed Error-Free`}
+            title={i18n.t`A Trusted Single Source of Truth`}
             url="consistency"
           >
             <Trans>
-              Did you know that many cap tables are incomplete or
-              contain errors?
-              Tracking the ownership history with Excel or Word can quickly lead to
-              inconsistencies.
-              Set up your shares with Ledgy
-              and be sure that all data is consistent at any time.
+              Did you know that many cap tables are incomplete or contain errors?
+              Tracking the ownership history with Excel or Word can quickly lead to inconsistencies.
+              Set up your shares with Ledgy and be sure that all data is consistent at any time.
+              Give your key stakeholders access and collaborate on a single source of truth.
             </Trans>
           </Feature>
 
@@ -54,15 +52,17 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <Feature
             {...props}
-            name={i18n.t`Funding Round Modeling`}
+            name={i18n.t`Funding Round and Exit Modeling`}
             url="round-modeling"
             left
           >
             <Trans>
               What’s the stake percentage of the founders after a VC
               invests $2,000,000 at a valuation of $7,500,000 taking into account
-              the 2 outstanding convertible loans and increasing the ESOP pool?<br />
-              Honestly, we don’t know. But Ledgy does.
+              the 2 outstanding convertible loans and keeping the ESOP pool at 10%
+              while only diluting existing shareholders?<br />
+              Honestly, we don’t know. But Ledgy does.<br />
+              Exit modeling is coming soon!
             </Trans>
           </Feature>
 
@@ -70,7 +70,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <Feature
             {...props}
-            name={i18n.t`Employee Stock Ownership Plans`}
+            name={i18n.t`Employee Incentive Plans`}
             url="esop"
           >
             <Trans>
@@ -116,6 +116,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           </Feature>
 
           <div className="mx-auto text-center my-8">
+            <hr />
             <AllFeatures />
           </div>
 

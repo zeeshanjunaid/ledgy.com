@@ -47,15 +47,21 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   company to the next level?
                   <br />
                   <br />
-                  Enter a valuation, and you will see how your convertibles apply
-                  to your cap table immediately.
+                  Enter a valuation (pre- or post-money), and you will see how
+                  your convertibles apply to your cap table immediately.
                   If your convertible has a cap, discount or
                   an interest—Ledgy does the math for you.
                   Add an investment and enter the value of the investment.
+                  <br />
+                  <br />
+                  Add a new employee pool with a fixed percentage,
+                  or increase an existing one to that percentage.
+                  You can even choose if it only dilutes existing shareholders
+                  or everyone, including the new ones.
+                  <br />
+                  <br />
                   Watch in real-time how the new investment impacts your current
                   shareholder distribution.
-                  <br />
-                  <br />
                   You can find the round modeling tool directly on
                   the <i>Cap Table</i> page.
                 </Trans>
@@ -68,6 +74,23 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               </div>
             </div>
           </div>
+
+          <header className="section-header text-left">
+            <div className="row gap-y">
+              <div className="col-md-6 ml-auto">
+                <Trans>
+                  Often you will have a couple of new investors and then existing
+                  shareholders will participate pro-rata in the round. You cap table
+                  is in Ledgy, so you can distribute an investment amount pro-rata
+                  with just a single click.
+                </Trans>
+              </div>
+
+              <div className="col-md-6" data-aos="fade-left">
+                <Img {...props.data.roundModelingProRata} alt={i18n.t`Distribute Investment Pro-Rata`} />
+              </div>
+            </div>
+          </header>
 
           <div>
             <header className="section-header text-left">
@@ -152,6 +175,9 @@ export const pageQuery = graphql`
     }
     roundModelingCaptable: imageSharp(id: { regex: "/round-modeling-captable.png/" }) {
       sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    }
+    roundModelingProRata: imageSharp(id: { regex: "/round-modeling-pro-rata.png/" }) {
+      sizes(maxWidth: 500) { ...GatsbyImageSharpSizes }
     }
     roundModelingPdf: imageSharp(id: { regex: "/round-modeling-pdf.png/" }) {
       sizes(maxWidth: 2000) { ...GatsbyImageSharpSizes }

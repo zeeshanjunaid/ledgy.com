@@ -78,7 +78,7 @@ const Footer = (props: LayoutProps) => (
           <p>
             <Trans>
               Or have a quick look at our&nbsp;
-              <a href={`${demoUrl}`} target="_blank" rel="noopener noreferrer">live Demo</a>.
+              <a href={`${demoUrl}`} target="_blank" rel="noopener noreferrer">live demo</a>.
             </Trans>
           </p>
 

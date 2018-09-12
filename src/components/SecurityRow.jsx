@@ -12,8 +12,7 @@ export default (props: Props) => (
       <h5><Trans>Privacy</Trans></h5>
       <p>
         <Trans>
-          Cap table data is sensitive.
-          That’s why we genuinely care about your privacy.
+          Privacy made in Europe. Because your cap table data is not for everyone.
         </Trans>
         <br />
         <Link href to={`${props.prefix}/privacy/`}><Trans>Read more</Trans>  <i className="ti-angle-right fs-10 ml-1" /></Link>

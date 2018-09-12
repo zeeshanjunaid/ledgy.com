@@ -9,7 +9,7 @@ import { FeatureLinks } from '../components/Features';
 import SecurityRow from '../components/SecurityRow';
 import { demoUrl } from '../layouts/utils';
 
-const Header = ({ i18n, data, prefix }: Props) => (
+const Header = ({ i18n, data }: Props) => (
   <header className="header bg-ledgy pb-0">
     <div className="container">
       <div className="row align-items-end gap-y mt-5 pb-7">
@@ -19,7 +19,7 @@ const Header = ({ i18n, data, prefix }: Props) => (
             <h1><Trans>The missing accounting software for your cap table</Trans></h1>
             <p>
               <Trans>
-                Use Ledgy to track all your shares, manage your ESOPs and
+                Use Ledgy to track all your shares, convertibles, options, phantom plans and
                 model detailed financing rounds.
                 <br /><br />
                 Are you an investor or employee? Get a comprehensive overview of
@@ -27,7 +27,6 @@ const Header = ({ i18n, data, prefix }: Props) => (
                 vesting schedule.
               </Trans>
             </p>
-            <p><Trans>Try Ledgy now. It’s <Link href to={`${prefix}/pricing/`}>free</Link>.</Trans></p>
           </div>
           <a className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-outline-light" href={demoUrl} target="_blank" rel="noopener noreferrer"><Trans>See the demo</Trans></a>
           <a className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-light" href="#try"><Trans>Get Started</Trans></a>
@@ -58,8 +57,7 @@ const IndexPage = (props: Props) => (
       <section className="section py-7" id="references">
         <div className="container">
           <header className="section-header mb-3">
-            <h2><Trans>You’re in good company</Trans></h2>
-            <hr className="my-2" />
+            <h2 className="my-4"><Trans>You’re in good company</Trans></h2>
             <p>
               <Trans>
                 Many successful companies already use Ledgy to manage their ownership
@@ -79,7 +77,7 @@ const IndexPage = (props: Props) => (
 
           </div>
 
-          <div className="mx-auto text-center mt-5">
+          <div className="mx-auto text-center pb-5">
             <Link href to={`${props.prefix}/features/`} className="btn btn-block d-sm-inline btn-round btn-xl btn-outline-primary mt-6" >
               <Trans>Find out why they trust us</Trans>
             </Link>
@@ -89,7 +87,7 @@ const IndexPage = (props: Props) => (
           <FeatureLinks {...props} page="index" />
 
           <section className="section py-5">
-            <hr className="my-6" />
+            <hr className="my-7" />
             <header className="section-header mb-7">
               <h2><Trans>Your data in safe hands</Trans></h2>
             </header>

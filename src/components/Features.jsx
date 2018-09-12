@@ -19,7 +19,7 @@ export const Feature = (props: {
   data: Object,
 }) => (
   <div className="row align-items-center">
-    <div className="col-md-5 ml-auto">
+    <div className="col-md-6 ml-auto">
       <h2>{props.title || props.name}</h2>
       <p>{props.children}</p>
       <p>
@@ -75,7 +75,7 @@ export const FeatureLinks = ({ i18n, ...props }: {
 }) => (
   <div>
 
-    <hr className="mt-7 mb-4" />
+    <hr className="my-7" />
 
     <header className="section-header ">
       <h2>{props.page === 'index' ?
