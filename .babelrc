@@ -2,17 +2,5 @@
   "plugins": [
     "@lingui/babel-plugin-transform-js",
     "@lingui/babel-plugin-transform-react",
-  ],
-  "env": {
-    "extract": {
-      "presets": [
-        "react",
-        "flow",
-      ],
-      "plugins": [
-        "transform-object-rest-spread",
-        "transform-class-properties",
-      ]
-    },
-  }
+  ]
 }

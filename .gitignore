@@ -8,3 +8,5 @@ public
 yarn-error.log
 src/locale/de.po
 src/locale/_build/
+src/locale/en/messages.js
+src/locale/de/messages.js

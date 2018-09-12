@@ -4,6 +4,14 @@
   "version": "1.0.0",
   "author": "Ledgy AG <contact@ledgy.com>",
   "repository": "morloy/ledgy-app",
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "build": "lingui compile && gatsby build",
+    "start": "lingui compile && gatsby develop",
+    "test": "eslint . --ext jsx,js && flow",
+    "extract": "lingui extract --clean"
+  },
   "dependencies": {
     "@lingui/react": "2.7.0",
     "aos": "2.3.3",
@@ -39,14 +47,6 @@
   "keywords": [
     "ledgy"
   ],
-  "license": "MIT",
-  "main": "n/a",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "test": "eslint . --ext jsx,js && flow",
-    "extract": "BABEL_ENV=extract lingui extract --clean && i18next-conv -l de -s src/locale/de/messages.json -t src/locale/de.po"
-  },
   "eslintConfig": {
     "extends": [
       "plugin:flowtype/recommended",
@@ -94,6 +94,16 @@
       "src/components",
       "src/layouts"
     ],
-    "format": "minimal"
+    "format": "po",
+    "extractBabelOptions": {
+      "presets": [
+        "react",
+        "flow"
+      ],
+      "plugins": [
+        "transform-object-rest-spread",
+        "transform-class-properties"
+      ]
+    }
   }
 }

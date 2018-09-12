@@ -2,8 +2,8 @@ const { chain, includes } = require('lodash');
 
 const languages = ['en', 'de'];
 const catalogs = {
-  en: { messages: require('./locale/en/messages.json') }, // eslint-disable-line global-require
-  de: { messages: require('./locale/de/messages.json') }, // eslint-disable-line global-require
+  en: require('./locale/en/messages'), // eslint-disable-line global-require
+  de: require('./locale/de/messages'), // eslint-disable-line global-require
 };
 
 const defaultLanguage = 'en';
