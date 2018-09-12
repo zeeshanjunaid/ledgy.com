@@ -6,12 +6,12 @@
   "env": {
     "extract": {
       "presets": [
-        "@babel/preset-react",
-        "@babel/preset-flow",
+        "react",
+        "flow",
       ],
       "plugins": [
-        "@babel/plugin-proposal-object-rest-spread",
-        "@babel/plugin-proposal-class-properties",
+        "transform-object-rest-spread",
+        "transform-class-properties",
       ]
     },
   }
