@@ -10,7 +10,10 @@ import { Title } from '../layouts/utils';
 
 const Header = ({ i18n }: Props) => (
   <header className="header text-white bg-ledgy">
-    <Title title={i18n.t`Privacy`} />
+    <Title
+      title={i18n.t`Privacy`}
+      description={i18n.t`We still need a description for the Privacy page. Please fix.`}
+    />
 
     <div className="container text-center">
       <div className="row">

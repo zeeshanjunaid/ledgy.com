@@ -13,7 +13,10 @@ const Hr = () => <hr className="my-3" />;
 
 export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
-    <Title title={i18n.t`Features`} />
+    <Title
+      title={i18n.t`Features`}
+      description={i18n.t`We still need a description for the Features page. Please fix.`}
+    />
 
     <header className="header text-white bg-ledgy">
       <div className="container text-center">
