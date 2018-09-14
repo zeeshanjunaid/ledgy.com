@@ -6,7 +6,7 @@ import { Trans } from '@lingui/react';
 export default () => (
   <div className="row gap-y">
     <div className="px-7">
-      <h2>And Much More</h2>
+      <h2><Trans>And Much More</Trans></h2>
       <p>
         <Trans>
           Ledgy can do a lot for you—and more features are constantly being developed.

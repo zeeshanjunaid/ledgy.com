@@ -44,11 +44,17 @@ msgstr "Add incentive plan"
 msgid "After you’re finished with modeling your financing round, you can download the scenario as a PDF document and share it with your co-founders, lawyers and investors. The document includes the pre- and post-money valuation of your company, all investments, and convertibles with their resulting share price and the number of shares and, of course, the resulting cap table. At the end of the document, you will also find valuable plots to visualize the new development step of your company."
 msgstr "After you’re finished with modeling your financing round, you can download the scenario as a PDF document and share it with your co-founders, lawyers and investors. The document includes the pre- and post-money valuation of your company, all investments, and convertibles with their resulting share price and the number of shares and, of course, the resulting cap table. At the end of the document, you will also find valuable plots to visualize the new development step of your company."
 
-#: src/pages/pricing.jsx:54
 #: src/pages/pricing.jsx:68
+msgid "All basic features"
+msgstr "All basic features"
+
 #: src/pages/pricing.jsx:83
-msgid "All cap table features"
-msgstr "All cap table features"
+msgid "All premium features"
+msgstr "All premium features"
+
+#: src/components/AllFeatures.jsx:9
+msgid "And Much More"
+msgstr "And Much More"
 
 #: src/components/AllFeatures.jsx:43
 msgid "Approved Capital Pools"
@@ -270,6 +276,10 @@ msgstr "Encrypted connection"
 msgid "Enter your email…"
 msgstr "Enter your email…"
 
+#: src/pages/pricing.jsx:79
+msgid "Enterprise"
+msgstr "Enterprise"
+
 #: src/pages/about-us.jsx:165
 msgid "Entrepreneur, Business Angel, Founder of Doodle.com"
 msgstr "Entrepreneur, Business Angel, Founder of Doodle.com"
@@ -278,17 +288,21 @@ msgstr "Entrepreneur, Business Angel, Founder of Doodle.com"
 msgid "Entrepreneur, Technologist, Founder of Doodle.com"
 msgstr "Entrepreneur, Technologist, Founder of Doodle.com"
 
+#: src/pages/pricing.jsx:54
+msgid "Error-free cap table"
+msgstr "Error-free cap table"
+
 #: src/pages/features/reporting.jsx:120
 msgid "Every transaction in your cap table usually comes with a pile of additional documents, like contracts. Get rid of complicated folder structures and attach them directly to your transactions. Ledgy gives you an overview of all documents that you uploaded and their corresponding transactions. Also in your transaction history, you can select any transaction and see all connected documents at a glance.<0/><1/>You can also share your documents by sending a simple link to your shareholders. This eliminates confusion about different versions of documents, as it is often the case when sending documents via email."
 msgstr "Every transaction in your cap table usually comes with a pile of additional documents, like contracts. Get rid of complicated folder structures and attach them directly to your transactions. Ledgy gives you an overview of all documents that you uploaded and their corresponding transactions. Also in your transaction history, you can select any transaction and see all connected documents at a glance.<0/><1/>You can also share your documents by sending a simple link to your shareholders. This eliminates confusion about different versions of documents, as it is often the case when sending documents via email."
 
+#: src/pages/pricing.jsx:84
+msgid "Exit modeling (coming soon)"
+msgstr "Exit modeling (coming soon)"
+
 #: src/pages/features/round-modeling.jsx:39
 msgid "Explore new scenarios for upcoming financing rounds interactively"
 msgstr "Explore new scenarios for upcoming financing rounds interactively"
-
-#: src/pages/pricing.jsx:63
-msgid "Fast-growing Startup"
-msgstr "Fast-growing Startup"
 
 #: src/components/Features.jsx:82
 #: src/layouts/index.jsx:47
@@ -322,8 +336,7 @@ msgstr "Founder of Meisser Economics, Bitcoin Association Switzerland, and Wuala
 msgid "Free"
 msgstr "Free"
 
-#: src/pages/pricing.jsx:69
-#: src/pages/pricing.jsx:84
+#: src/pages/pricing.jsx:85
 msgid "Free cap table import"
 msgstr "Free cap table import"
 
@@ -389,6 +402,10 @@ msgstr "In case a crash happens, which helps us to fix it as fast as possible"
 #: src/pages/features/esop.jsx:89
 msgid "In the case that your employee shares are implemented as options or phantom options, define a pool of approved capital first. Click the <0>Add pool</0> to create an options or phantom pool of a given share class and a fixed size. Then issue options, phantom options or shares from the approved capital and see key metrics of the pool like the amount still available."
 msgstr "In the case that your employee shares are implemented as options or phantom options, define a pool of approved capital first. Click the <0>Add pool</0> to create an options or phantom pool of a given share class and a fixed size. Then issue options, phantom options or shares from the approved capital and see key metrics of the pool like the amount still available."
+
+#: src/pages/pricing.jsx:70
+msgid "Incentive plan management"
+msgstr "Incentive plan management"
 
 #: src/pages/features/investors.jsx:54
 msgid "Investment overview"
@@ -562,9 +579,9 @@ msgstr "Peer-reviewed code"
 msgid "Phantom Programs"
 msgstr "Phantom Programs"
 
-#: src/pages/pricing.jsx:85
-msgid "Premium support"
-msgstr "Premium support"
+#: src/pages/pricing.jsx:64
+msgid "Premium"
+msgstr "Premium"
 
 #: src/layouts/index.jsx:48
 #: src/layouts/index.jsx:110
@@ -622,6 +639,10 @@ msgstr "Reporting & Documents"
 #: src/pages/features/round-modeling.jsx:73
 msgid "Round Modeling"
 msgstr "Round Modeling"
+
+#: src/pages/pricing.jsx:55
+msgid "Round modeling"
+msgstr "Round modeling"
 
 #: src/pages/features/reporting.jsx:16
 msgid "Save painful work inserting numbers into templates. Automated documents and reports at your fingertips."
@@ -797,25 +818,17 @@ msgstr "Two-factor authentication"
 msgid "Unable to find your perfect fit?<0/><1>Drop us an email</1> or use the chat right on this page."
 msgstr "Unable to find your perfect fit?<0/><1>Drop us an email</1> or use the chat right on this page."
 
-#: src/pages/pricing.jsx:78
-msgid "Unicorn"
-msgstr "Unicorn"
-
 #: src/components/AllFeatures.jsx:28
 msgid "Unlimited Share Classes"
 msgstr "Unlimited Share Classes"
 
-#: src/pages/pricing.jsx:82
+#: src/pages/pricing.jsx:69
 msgid "Unlimited shareholders"
 msgstr "Unlimited shareholders"
 
 #: src/pages/pricing.jsx:53
-msgid "Up to 20 shareholders"
-msgstr "Up to 20 shareholders"
-
-#: src/pages/pricing.jsx:67
-msgid "Up to 50 shareholders"
-msgstr "Up to 50 shareholders"
+msgid "Up to 15 shareholders"
+msgstr "Up to 15 shareholders"
 
 #: src/pages/privacy.jsx:55
 msgid "Usage statistics"
@@ -933,13 +946,13 @@ msgstr "You’re in good company"
 msgid "cap table, stock ledger, share register, startup, round modeling, equity, esop, reporting, investors"
 msgstr "cap table, stock ledger, share register, startup, round modeling, equity, esop, reporting, investors"
 
-#: src/pages/pricing.jsx:62
-#: src/pages/pricing.jsx:77
+#: src/pages/pricing.jsx:63
+#: src/pages/pricing.jsx:78
 msgid "coming soon"
 msgstr "coming soon"
 
-#: src/pages/pricing.jsx:65
-#: src/pages/pricing.jsx:80
+#: src/pages/pricing.jsx:66
+#: src/pages/pricing.jsx:81
 msgid "per shareholder per month"
 msgstr "per shareholder per month"
 
@@ -947,10 +960,10 @@ msgstr "per shareholder per month"
 msgid "the Investor Portfolio"
 msgstr "the Investor Portfolio"
 
-#: src/pages/pricing.jsx:64
+#: src/pages/pricing.jsx:65
 msgid "€2"
 msgstr "€2"
 
-#: src/pages/pricing.jsx:79
+#: src/pages/pricing.jsx:80
 msgid "€4"
 msgstr "€4"
