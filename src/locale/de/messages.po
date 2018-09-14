@@ -4,20 +4,20 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Creation-Date: 2018-09-12T18:40:54.619Z\n"
-"PO-Revision-Date: 2018-09-12T18:40:54.619Z\n"
+"PO-Revision-Date: 2018-09-14 19:13+0200\n"
 "Language: de\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"X-Generator: Poedit 2.0.6\n"
 
 #: src/components/SignupForm.jsx:11
 msgid "<0/> Signing up…"
 msgstr "<0/> Anmelden…"
 
-#: src/pages/features/consistency.jsx:25
-#: src/pages/features.jsx:40
+#: src/pages/features/consistency.jsx:25 src/pages/features.jsx:40
 msgid "A Trusted Single Source of Truth"
 msgstr "Eine einzige vertrauenswürdige Quelle"
 
@@ -25,9 +25,7 @@ msgstr "Eine einzige vertrauenswürdige Quelle"
 msgid "A basic cap table"
 msgstr "Ein einfacher Cap Table"
 
-#: src/layouts/index.jsx:98
-#: src/pages/about-us.jsx:12
-#: src/pages/about-us.jsx:20
+#: src/layouts/index.jsx:98 src/pages/about-us.jsx:12 src/pages/about-us.jsx:20
 msgid "About us"
 msgstr "Über uns"
 
@@ -43,9 +41,7 @@ msgstr "Beteiligungsplan hinzufügen"
 msgid "After you’re finished with modeling your financing round, you can download the scenario as a PDF document and share it with your co-founders, lawyers and investors. The document includes the pre- and post-money valuation of your company, all investments, and convertibles with their resulting share price and the number of shares and, of course, the resulting cap table. At the end of the document, you will also find valuable plots to visualize the new development step of your company."
 msgstr "Nachdem du mit der Modellierung der Finanzierungsrunde fertig bist, kannst du das Szenario als PDF-Dokument herunterladen und mit deinen Mitgründern, Anwälten und Investoren teilen. Das Dokument enthält die Pre- und Post-Money-Valuation deines Startups, alle Investments und Convertibles mit den daraus resultierenden Aktienpreisen, sowie der Anzahl der Aktien und natürlich dem sich daraus ergebendem Cap Table. Am Ende findest du auch wertvolle Plots, um den neuen Entwicklungsschritt deines Unternehmens zu visualisieren."
 
-#: src/pages/pricing.jsx:54
-#: src/pages/pricing.jsx:68
-#: src/pages/pricing.jsx:83
+#: src/pages/pricing.jsx:54 src/pages/pricing.jsx:68 src/pages/pricing.jsx:83
 msgid "All cap table features"
 msgstr "Alle Cap Table-Funktionen"
 
@@ -67,7 +63,7 @@ msgstr "Als Investor kannst du sehr stark von Ledgy profitieren. Alle deine Port
 
 #: src/pages/features/round-modeling.jsx:145
 msgid "As soon as you’re done with your financing round, hit the <0>Convert</0> button. This will transform the scenario into real transactions for your cap table."
-msgstr ""
+msgstr "Nach der Finanzierungsrunde kannst du einfach <0>konvertieren</0> klicken. Das Szenario wird dann in neue Cap Table Transaktionen umgewandelt."
 
 #: src/pages/security.jsx:14
 msgid "At Ledgy we take your security seriously. Strong passwords, robust encryption, two-factor authentication, and permanent code reviews are among our high safety standards. Find out more about why you can have peace-of-mind while managing your cap table with Ledgy."
@@ -91,14 +87,13 @@ msgstr "Backups"
 
 #: src/pages/pricing.jsx:49
 msgid "Basic"
-msgstr ""
+msgstr "Standard"
 
 #: src/pages/about-us.jsx:125
 msgid "Ben has extensive experience in project management and has worked for two years as software-engineer in an ETH research group"
-msgstr ""
+msgstr "Ben hat umfangreiche Erfahrung im Projektmanagement und hat zwei Jahre als Software Engineering in einer ETH Forschungsgruppe gearbeitet"
 
-#: src/layouts/index.jsx:49
-#: src/layouts/index.jsx:99
+#: src/layouts/index.jsx:49 src/layouts/index.jsx:99
 msgid "Blog"
 msgstr "Blog"
 
@@ -132,18 +127,17 @@ msgstr "Cap Table während der während der Finanzierungsrundensimulation"
 
 #: src/pages/features/esop.jsx:129
 msgid "Check back at your <0>Cap Table</0> and select the <1>fully diluted</1> view to see the newly created pool and employee incentives. You can even view your diluted cap table with all options aggregated in their pool, or distributed to each person (detailed view)."
-msgstr ""
+msgstr "Wirf einen Blick auf deinen <0>Cap Table</0> und wähle die <1>Fully-Diluted</1> Ansicht um den neuen Pool und die Mitarbeiterbeteiligungen zu sehen. Du hast sogar die Wahl zwischen einer Ansicht, mit der alle Beteiligungen in ihren Pools aggregiert, oder eine bei der sie auf die jeweiligen Personen verteilt werden."
 
 #: src/pages/about-us.jsx:107
 msgid "Coding since high school, Timo got an award for the best master thesis in computer science and worked one year as computer engineer in robotics"
-msgstr ""
+msgstr "Timo programmiert seit seiner Schulzeit, wurde für die beste Masterarbeit in Computer Science ausgezeichnet und hat ein Jahr als Computer Engineer in der Robotik gearbeitet"
 
 #: src/layouts/index.jsx:96
 msgid "Company"
 msgstr "Firma"
 
-#: src/pages/privacy.jsx:67
-#: src/pages/privacy.jsx:97
+#: src/pages/privacy.jsx:67 src/pages/privacy.jsx:97
 msgid "Company information"
 msgstr "Firmendaten"
 
@@ -153,10 +147,9 @@ msgstr "Firmenname und andere Firmendetails. Um unseren Service ordnungsgemäss 
 
 #: src/pages/features/reporting.jsx:38
 msgid "Configure your pdf reports"
-msgstr ""
+msgstr "Konfiguriere deine pdf Reports"
 
-#: src/components/Features.jsx:90
-#: src/layouts/index.jsx:111
+#: src/components/Features.jsx:90 src/layouts/index.jsx:111
 #: src/pages/features.jsx:39
 msgid "Consistency"
 msgstr "Konsistenz"
@@ -165,8 +158,7 @@ msgstr "Konsistenz"
 msgid "Consistency Checks"
 msgstr "Konsistenz-Checks"
 
-#: src/pages/contact.jsx:10
-#: src/pages/contact.jsx:72
+#: src/pages/contact.jsx:10 src/pages/contact.jsx:72
 msgid "Contact"
 msgstr "Kontakt"
 
@@ -208,7 +200,7 @@ msgstr "Dialog um Besitzbestätigungen zu versenden"
 
 #: src/pages/features.jsx:43
 msgid "Did you know that many cap tables are incomplete or contain errors? Tracking the ownership history with Excel or Word can quickly lead to inconsistencies. Set up your shares with Ledgy and be sure that all data is consistent at any time. Give your key stakeholders access and collaborate on a single source of truth."
-msgstr ""
+msgstr "Wusstest du, dass viele Cap Tables fehlerhaft und unvollständig sind? Es führt schnell zu Inkonsistenzen, wenn man die Beteiligungen mit Excel oder Word nachverfolgt. Mit Ledgy weißt du, dass alle Daten immer richtig sind. Vor allem aber kannst du deinen wichtigen Stakeholdern Zugriff geben und zusammen an einer zentralen Informationsquelle arbeiten."
 
 #: src/pages/features/consistency.jsx:84
 msgid "Did you notice the number in the center bottom? Any time you transfer shares from one shareholder to another, Ledgy will show you how many shares that particular shareholder has <0>available</0> at that given point in time."
@@ -224,7 +216,7 @@ msgstr "Erfahre mehr über Ledgy"
 
 #: src/pages/features/round-modeling.jsx:90
 msgid "Distribute Investment Pro-Rata"
-msgstr ""
+msgstr "Pro-Rata Verteilung eines Investments"
 
 #: src/pages/about-us.jsx:141
 msgid "Do you feel working for Google is boring because they don’t grow by 100× during the next four years? Building a product is fantastic, but how about creating a whole team around it? Are you a web developer that eats bugs for breakfast? Fascinated by cutting-edge technology like React, blockchain or space elevators?<0/><1/>Then let’s have coffee together!"
@@ -234,8 +226,7 @@ msgstr "Du findest, für Google zu arbeiten ist langweilig, weil sie in den näc
 msgid "Document management"
 msgstr "Dokumenten-Management"
 
-#: src/pages/features/reporting.jsx:14
-#: src/pages/features/reporting.jsx:24
+#: src/pages/features/reporting.jsx:14 src/pages/features/reporting.jsx:24
 msgid "Documents & Reporting"
 msgstr "Dokumente und Berichte"
 
@@ -245,15 +236,13 @@ msgstr "Mitarbeiterbeteiligung"
 
 #: src/pages/features/esop.jsx:161
 msgid "ESOPs in the portfolio"
-msgstr ""
+msgstr "ESOPs im Portfolio"
 
-#: src/pages/features/esop.jsx:24
-#: src/pages/features.jsx:73
+#: src/pages/features/esop.jsx:24 src/pages/features.jsx:73
 msgid "Employee Incentive Plans"
-msgstr ""
+msgstr "Mitarbeiterbeteiligungspläne"
 
-#: src/components/Features.jsx:92
-#: src/layouts/index.jsx:113
+#: src/components/Features.jsx:92 src/layouts/index.jsx:113
 msgid "Employee Incentives"
 msgstr "Mitarbeiterbeteiligungen"
 
@@ -289,14 +278,10 @@ msgstr "Erforsche interaktiv neue Szenarien für bevorstehende Finanzierungsrund
 msgid "Fast-growing Startup"
 msgstr "Fast-growing Startup"
 
-#: src/components/Features.jsx:82
-#: src/layouts/index.jsx:47
-#: src/layouts/index.jsx:109
-#: src/pages/features/consistency.jsx:16
-#: src/pages/features/esop.jsx:15
-#: src/pages/features/investors.jsx:15
-#: src/pages/features/reporting.jsx:15
-#: src/pages/features/round-modeling.jsx:15
+#: src/components/Features.jsx:82 src/layouts/index.jsx:47
+#: src/layouts/index.jsx:109 src/pages/features/consistency.jsx:16
+#: src/pages/features/esop.jsx:15 src/pages/features/investors.jsx:15
+#: src/pages/features/reporting.jsx:15 src/pages/features/round-modeling.jsx:15
 #: src/pages/features.jsx:16
 msgid "Features"
 msgstr "Funktionen"
@@ -307,7 +292,7 @@ msgstr "Warum sie uns vertrauen"
 
 #: src/pages/features/consistency.jsx:141
 msgid "Finished? Go back to the <0>Cap Table</0> page and view the result. At any point in the history of your ownership, Ledgy can draw you a helpful chart that represents the current equity distribution of your company. <1/>You have several views on your cap table at your fingertips. You can assign your shareholders to groups and view the distribution among them. Or you can get a comprehensive overview by viewing the distribution between the different securities, like common shares, preferred shares, convertibles and options."
-msgstr ""
+msgstr "Fertig? Zurück auf der <0>Cap Table</0> Seite kannst du das Ergebnis sehen. Zu jedem Zeitpunkt der Historie zeigt dir Ledgy hilfreiche Grafiken mit der aktuellen Verteilung im Unternehmen.</1>Du hast mehrere Ansichtsmöglichkeiten für deinen Cap Table zur Verfügung. Nachdem du deine Gesellschafter zu Gruppen hinzugefügt hast, beispielsweise Gründer, Investoren und Mitarbeiter, kannst du die Verteilung zwischen diesen Gruppen analysieren. Oder mach dir ein umfassendes Bild über die Verteilung der verschiedenen Wertpapierarten wie Stamm- und Vorzugsaktien, Wandeldarlehen und Optionen."
 
 #: src/pages/security.jsx:72
 msgid "For even better protection of accounts"
@@ -321,8 +306,7 @@ msgstr "Gründer von Meisser Economics, Bitcoin Association Schweiz und Wuala"
 msgid "Free"
 msgstr "Gratis"
 
-#: src/pages/pricing.jsx:69
-#: src/pages/pricing.jsx:84
+#: src/pages/pricing.jsx:69 src/pages/pricing.jsx:84
 msgid "Free cap table import"
 msgstr "Gratis Cap Table-Import"
 
@@ -332,26 +316,24 @@ msgstr "Vollständiger Transaktionsverlauf"
 
 #: src/components/AllFeatures.jsx:45
 msgid "Fully-diluted View"
-msgstr "Fully diluted-Ansicht"
+msgstr "Fully-diluted Ansicht"
 
-#: src/components/AllFeatures.jsx:22
-#: src/pages/features/round-modeling.jsx:14
+#: src/components/AllFeatures.jsx:22 src/pages/features/round-modeling.jsx:14
 #: src/pages/features/round-modeling.jsx:24
 msgid "Funding Round Modeling"
 msgstr "Modellierung von Finanzierungsrunden"
 
 #: src/pages/features.jsx:55
 msgid "Funding Round and Exit Modeling"
-msgstr ""
+msgstr "Modellierung von Finanzierungsrunden und Exits"
 
-#: src/components/SignupForm.jsx:12
-#: src/pages/index.jsx:32
+#: src/components/SignupForm.jsx:12 src/pages/index.jsx:32
 msgid "Get Started"
 msgstr "Los geht’s"
 
 #: src/pages/features/consistency.jsx:131
 msgid "Give view or admin access to your stakeholders"
-msgstr ""
+msgstr "Gib deinen Stakeholdern Lese- oder Adminzugriff"
 
 #: src/pages/security.jsx:105
 msgid "HTTP headers prevent cross-site scripting and code injection (<0>A+ rating</0>)"
@@ -387,7 +369,7 @@ msgstr "Falls unsere App abstürzt, damit wir den Fehler so schnell wie möglich
 
 #: src/pages/features/esop.jsx:89
 msgid "In the case that your employee shares are implemented as options or phantom options, define a pool of approved capital first. Click the <0>Add pool</0> to create an options or phantom pool of a given share class and a fixed size. Then issue options, phantom options or shares from the approved capital and see key metrics of the pool like the amount still available."
-msgstr ""
+msgstr "Für Options- oder Phantompläne legst erst einen Pool von bewilligtem Kapital an. Klicke dafür auch <0>Add Pool</0> um einen Optionen- oder Phantompool von einer bestimmten Größe und Aktienklasse anzulegen. Dann kannst du Optionen oder virtuelle Optionen aus diesem bewilligten Kapital vergeben und die zentralen Metriken wie die noch verfügbare Menge verfolgen."
 
 #: src/pages/features/investors.jsx:54
 msgid "Investment overview"
@@ -397,15 +379,12 @@ msgstr "Investment-Übersicht"
 msgid "Investor & Consultant (Farmy.ch, Flatfox.ch), Founder of Students.ch"
 msgstr "Investor & Berater (Farmy.ch, Flatfox.ch), Gründer von Students.ch"
 
-#: src/components/AllFeatures.jsx:47
-#: src/pages/features/investors.jsx:14
-#: src/pages/features/investors.jsx:24
-#: src/pages/features.jsx:105
+#: src/components/AllFeatures.jsx:47 src/pages/features/investors.jsx:14
+#: src/pages/features/investors.jsx:24 src/pages/features.jsx:105
 msgid "Investor Portfolio"
 msgstr "Investoren-Portfolio"
 
-#: src/components/Features.jsx:94
-#: src/layouts/index.jsx:115
+#: src/components/Features.jsx:94 src/layouts/index.jsx:115
 msgid "Investors"
 msgstr "Investoren"
 
@@ -415,15 +394,15 @@ msgstr "Investoren lieben es, den Fortschritt ihrer Unternehmen zu verfolgen. Hi
 
 #: src/pages/features/round-modeling.jsx:44
 msgid "Is your startup running well and you’re already thinking about a new financing round to fuel your growth and take your company to the next level?<0/><1/>Enter a valuation (pre- or post-money), and you will see how your convertibles apply to your cap table immediately. If your convertible has a cap, discount or an interest—Ledgy does the math for you. Add an investment and enter the value of the investment.<2/><3/>Add a new employee pool with a fixed percentage, or increase an existing one to that percentage. You can even choose if it only dilutes existing shareholders or everyone, including the new ones.<4/><5/>Watch in real-time how the new investment impacts your current shareholder distribution. You can find the round modeling tool directly on the <6>Cap Table</6> page."
-msgstr ""
+msgstr "Geht es deinem Startup gut und du spielst mit dem Gedanken einer nächsten Finanzierungsrunde, um zu wachsen und deine Firma aufs nächste Level zu heben?<0/><1/>Gib eine Pre-oder Post-Money Valuation an und wirst sofort sehen, welche Auswirkung deine Wandeldarlehen auf deinen Cap Table haben. Haben diese einen Cap, Discount oder Zinsen—Ledgy kümmert sich um die Mathematik. Füge einen neuen oder bestehenden Investor hinzu und gib an, wie viel dieser in der aktuellen Runde investiert.<2/><3/>Füge einen Beteiligungsplan mit fester Prozentzahl hinzu, oder erhöhe einen existierenden Plan auf diese Höhe.<4/><5/>Beobachte die Veränderung der aktuellen Verteilung mit den neuen Investments in Echtzeit. Du findet das Round Modeling direkt auf der Cap Table Seite."
 
 #: src/pages/features/esop.jsx:122
 msgid "Issue options from a pool"
-msgstr ""
+msgstr "Vergebe Optionen aus einem Pool"
 
 #: src/pages/features/consistency.jsx:41
 msgid "Keep the ownership history of your company at a single place. No more shuffling around with different documents shared via email, Dropbox, Google Drive or Slack.<0/>Ledgy will be your single source of truth. And it’s a damn good one!<1/><2/>To get started enter all your ownership transactions into Ledgy. That’s an excellent opportunity to understand what has been going on in your cap table.<3/><4/>Need help? <5>Contact us</5>, and we will assist you to get started with Ledgy."
-msgstr ""
+msgstr "Behalte die Historie deiner Beteiligungen an einem Ort. Kein hin und her mehr mit verschiedenen Dokumenten, geteilt über Dropbox, Google, Drive oder Slack.<0/>Ledgy wird deine zentrale Informationsquelle für alle Beteiligten. Und eine ziemlich gute noch dazu!<1/></2>Um loszulegen trägst du die Historie der Beteiligungen ein. Unsere Copy-Paste Import Tools werden dir dabei helfen. Das ist eine perfekte Möglichkeit zu verstehen, was in deinem Cap Table so alles passiert ist.<3/><4/>Brauchst du Hilfe? <5>Kontaktiere uns</5> und wir helfen dir dabei mit Ledgy loszulegen."
 
 #: src/pages/features/esop.jsx:147
 msgid "Keep your employees engaged"
@@ -439,7 +418,7 @@ msgstr "Erfahre mehr über"
 
 #: src/components/AllFeatures.jsx:11
 msgid "Ledgy can do a lot for you—and more features are constantly being developed. Most currently available features are listed below. Get in touch if your favorite feature is missing, we love to hear feedback."
-msgstr ""
+msgstr "Ledgy kann Vieles für dich machen—und weitere Features werden die ganze Zeit entwickelt. Die meisten zurzeit verfügbaren Features sind hier aufgelistet. Melde dich, wenn dir etwas Wichtiges fehlt, wir hören liebend gerne Feedback."
 
 #: src/pages/pricing.jsx:34
 msgid "Ledgy scales with your needs. Free for startups, powerful for grown-ups. It’s currently free, nevertheless, this probably changes soon. If you sign up now, we’ll make sure, that our loyal first users will get a good deal."
@@ -447,7 +426,7 @@ msgstr "Ledgy skaliert mit deinen Anforderungen. Kostenlos für Startups, leistu
 
 #: src/pages/features.jsx:76
 msgid "Let your employees be part of your company’s success. Ledgy supports vested stock, options, phantom options, inverse vesting and ESOP pools.<0/>Employees can even log in to Ledgy and track their vested shares in real-time."
-msgstr ""
+msgstr "Beteilige deine Mitarbeiter am Erfolg deiner Firma. Ledgy unterstützt gevestete Aktien, Optionen, virtuelle Unternehmensbeteiligungenen, inverses Vesting und Pools von bewilligten Kapital.<0/>Mitarbeiter können sich sogar einloggen und ihre gevesteten Aktien in Echtzeit verfolgen."
 
 #: src/pages/contact.jsx:15
 msgid "Let’s Get In Touch"
@@ -507,7 +486,7 @@ msgstr "Aktiennummern"
 
 #: src/pages/features/round-modeling.jsx:81
 msgid "Often you will have a couple of new investors and then existing shareholders will participate pro-rata in the round. You cap table is in Ledgy, so you can distribute an investment amount pro-rata with just a single click."
-msgstr ""
+msgstr "Oft wirst du einige neue Investoren haben und existierende ziehen pro-rate in der Runde mit. Mit deinem Cap Table auf Ledgy kannst du ein Investment ganz einfach pro-rate an einige deiner bestehenden Aktionäre verteilen."
 
 #: src/pages/features.jsx:92
 msgid "Oh, it’s tax season again, and 50 holding confirmations are waiting to be sent to your shareholders. This means pasting names into document templates, computing the tax value of all shares… <0/>Don’t worry. Generate and send all relevant documents with a single click on Ledgy."
@@ -515,11 +494,11 @@ msgstr "Oje, es ist wieder Zeit Steuererklärungen auszufüllen und es gibt 50 B
 
 #: src/pages/features/esop.jsx:149
 msgid "Once your incentive plan is on Ledgy, it’s time to engage your employees. They can log in to Ledgy themselves with their email address at any time and see how many shares they have already vested. Invite them with a click on the shareholders page."
-msgstr ""
+msgstr "Jetzt, mit deinem Beteiligungsplan auf Ledgy, ist es an der Zeit deine Mitarbeiter mit an Bord zu holen. Sie können sich bei Ledgy selbst mit ihrer Email einloggen um zu sehen wie viele Aktien sie besitzen und wie viele schon gevestet sind. Lade sie ganz einfach mit einem Klick auf der Aktionärsseite ein."
 
 #: src/pages/features/consistency.jsx:67
 msgid "Oops, there was an error in your cap table? Don’t worry; Ledgy will assist you in getting your cap table straight.<0/>Once finished, sit back and relax. Now you can be assured that your cap table is error-free."
-msgstr ""
+msgstr "Oh, ein Fehler in deinem Cap Table? Keine Sorge, Ledgy hilft dir deinen Cap Table in Ordnung zu bringen.<0/> Sobald du fertig bist, kannst du dich mit dem guten Gewissen zurücklehnen, dass es keine Fehler mehr gibt."
 
 #: src/components/SignupForm.jsx:79
 msgid "Oops. This email address is invalid."
@@ -527,11 +506,11 @@ msgstr "Ups. Diese E-Mail-Adresse ist leider ungültig."
 
 #: src/components/AllFeatures.jsx:42
 msgid "Option Expiration"
-msgstr ""
+msgstr "Verfall von Optionen"
 
 #: src/components/AllFeatures.jsx:41
 msgid "Option Termination"
-msgstr ""
+msgstr "Terminierung von Optionen"
 
 #: src/layouts/index.jsx:79
 msgid "Or have a quick look at our <0>live demo</0>."
@@ -559,39 +538,32 @@ msgstr "Code-Audits"
 
 #: src/components/AllFeatures.jsx:40
 msgid "Phantom Programs"
-msgstr ""
+msgstr "Virtuelle Beteiligungen"
 
 #: src/pages/pricing.jsx:85
 msgid "Premium support"
 msgstr "Premium-Support"
 
-#: src/layouts/index.jsx:48
-#: src/layouts/index.jsx:110
-#: src/pages/pricing.jsx:12
+#: src/layouts/index.jsx:48 src/layouts/index.jsx:110 src/pages/pricing.jsx:12
 #: src/pages/pricing.jsx:20
 msgid "Pricing"
 msgstr "Preise"
 
-#: src/components/SecurityRow.jsx:12
-#: src/layouts/index.jsx:100
-#: src/pages/features.jsx:127
-#: src/pages/privacy.jsx:13
-#: src/pages/privacy.jsx:18
+#: src/components/SecurityRow.jsx:12 src/layouts/index.jsx:100
+#: src/pages/features.jsx:127 src/pages/privacy.jsx:13 src/pages/privacy.jsx:18
 msgid "Privacy"
 msgstr "Datenschutz"
 
 #: src/components/SecurityRow.jsx:14
 msgid "Privacy made in Europe. Because your cap table data is not for everyone."
-msgstr ""
+msgstr "Privatsphäre made in Europe. Weil deine Cap Table Daten nicht für jeden gedacht sind."
 
 #: src/layouts/index.jsx:107
 msgid "Product"
 msgstr "Produkt"
 
-#: src/components/SecurityRow.jsx:18
-#: src/components/SecurityRow.jsx:30
-#: src/pages/features.jsx:134
-#: src/pages/features.jsx:146
+#: src/components/SecurityRow.jsx:18 src/components/SecurityRow.jsx:30
+#: src/pages/features.jsx:134 src/pages/features.jsx:146
 msgid "Read more"
 msgstr "Mehr erfahren"
 
@@ -607,8 +579,7 @@ msgstr "Erinnerst du dich noch an den Tag letztes Jahr als die Steuerbescheinigu
 msgid "Replace your Excel with Ledgy"
 msgstr "Ersetze dein Excel mit Ledgy"
 
-#: src/components/Features.jsx:93
-#: src/layouts/index.jsx:114
+#: src/components/Features.jsx:93 src/layouts/index.jsx:114
 msgid "Reporting"
 msgstr "Reporting"
 
@@ -616,8 +587,7 @@ msgstr "Reporting"
 msgid "Reporting & Documents"
 msgstr "Berichte und Dokumente"
 
-#: src/components/Features.jsx:91
-#: src/layouts/index.jsx:112
+#: src/components/Features.jsx:91 src/layouts/index.jsx:112
 #: src/pages/features/round-modeling.jsx:73
 msgid "Round Modeling"
 msgstr "Round Modeling"
@@ -632,18 +602,15 @@ msgstr "Screenshot der Ledgy-App"
 
 #: src/pages/features/round-modeling.jsx:98
 msgid "Scroll down, and you will notice that the cap table now indicates the <0>Round Modeling</0> mode. This gives you a detailed overview of who owns how many shares after applying the new financing round."
-msgstr ""
+msgstr "Wenn du runterscrollst wirst du sehen, dass der Cap Table im <0>Round Modeling</0> Modus ist. Das gibt dir detaillierte Einblicke in die Verteilung nach der Runde."
 
 #: src/components/AllFeatures.jsx:59
 msgid "Secure Document Storage"
 msgstr "Sichere Dokumentenablage"
 
-#: src/components/SecurityRow.jsx:24
-#: src/layouts/index.jsx:101
-#: src/pages/features.jsx:140
-#: src/pages/privacy.jsx:80
-#: src/pages/security.jsx:13
-#: src/pages/security.jsx:20
+#: src/components/SecurityRow.jsx:24 src/layouts/index.jsx:101
+#: src/pages/features.jsx:140 src/pages/privacy.jsx:80
+#: src/pages/security.jsx:13 src/pages/security.jsx:20
 msgid "Security"
 msgstr "Sicherheit"
 
@@ -677,7 +644,7 @@ msgstr "Teile deine Szenarien"
 
 #: src/pages/features/esop.jsx:139
 msgid "Show cap table fully diluted"
-msgstr ""
+msgstr "Verwässerte Ansicht des Cap Tables"
 
 #: src/layouts/index.jsx:56
 msgid "Sign In"
@@ -689,7 +656,7 @@ msgstr "Simuliere das Ergebnis einer bevorstehenden Finanzierungsrunde. Detailli
 
 #: src/pages/features/consistency.jsx:15
 msgid "Single source of truth"
-msgstr ""
+msgstr "Eine einzige Informationsquelle"
 
 #: src/pages/about-us.jsx:90
 msgid "Space elevator"
@@ -701,7 +668,7 @@ msgstr "Spreadsheet-Import"
 
 #: src/pages/features/consistency.jsx:119
 msgid "Startups do end up with several conflicting spreadsheet-based cap tables, one being with the founders, one with the lawyers, one with the leading investors. Not so with Ledgy. Have one single source of truth and give your key stakeholders access with a single click. Don’t waste money on consolidating several cap table versions, professionaly manage it from the start instead."
-msgstr ""
+msgstr "Startups haben tatsächlich oft verschiedene Cap Table Versionen, die zueinander im Konflikt stehen. Einer von den Founders, einer bei den Anwälten und einer bei den Hauptinvestoren. Mit Ledgy passiert das nicht. Hier hast du eine einzige Informationsquelle und kannst deinen zentralen Stakeholdern mit einem Mausklick Zugriff geben. Verschwende kein Geld damit verschiedene Cap Tables von Anwälten wieder zusammenzuführen. Mach es lieber gleich professionell."
 
 #: src/layouts/index.jsx:73
 msgid "Still hesitating? <0>Learn more about our features</0>."
@@ -733,7 +700,7 @@ msgstr "Jede Zeile Code wir immer von mindestens einem weiteren Entwickler gepr�
 
 #: src/pages/features/investors.jsx:62
 msgid "The detailed investment table gives an overview of the metrics of your investments. Check out what’s your stake in the company, how many shares and options you own and how much you initially invested. Even convertibles, if they’re not converted yet, will appear here.<0/>Each valuation update that the founders enter into their transaction history on Ledgy will be reflected in the current value of your shares and your return."
-msgstr ""
+msgstr "Dein detailliertes Portfolio gibt dir ein Überblick über die wichtigsten Metriken deiner Investitionen. Schau nach wie viel du in einer Firma besitzt, wie viele Optionen und wie viel du ursprünglich investiert hast. Sogar Wandeldarlehen, sofern sie noch nicht konvertiert wurden, erscheinen hier.<0/>Jedes Mal wenn die Firma ihre Bewertung aktualisiert wird der gegenwertige Wert und Return entsprechend aktualisiert."
 
 #: src/pages/security.jsx:86
 msgid "The frequency of server calls is limited to prevent brute-force attacks"
@@ -741,10 +708,9 @@ msgstr "Die Anzahl an Server-Anfragen ist beschränkt, um Brute-Force-Attacken z
 
 #: src/pages/features/reporting.jsx:95
 msgid "The holding confirmation lists all assets that a shareholder owns. You can optionally include a tax value of the shares. Employees will be able to see their stock ownership plans and how many of their total shares they already have vested.<0/>Make your shareholders feel good, they will reward you."
-msgstr ""
+msgstr "Der Beteiligungsauszug zählt alles auf, was ein Gesellschafter besitzt. Zusätzlich kannst du noch den Steuerwert der Aktien angeben. Mitarbeiter können ihre Beteiligungen und das Vesting sehen.</0>Mach deine Gesellschafter glücklich, sie werden sich revanchieren."
 
-#: src/layouts/index.jsx:163
-#: src/pages/index.jsx:19
+#: src/layouts/index.jsx:163 src/pages/index.jsx:19
 msgid "The missing accounting software for your cap table"
 msgstr "Die fehlende Buchhaltung für deinen Cap Table"
 
@@ -754,7 +720,7 @@ msgstr "Unsere Seite ist ausschließlich über HTTPS erreichbar (<0>A+-Rating</0
 
 #: src/pages/features/investors.jsx:84
 msgid "The transaction history will tell you exactly what happened to your ownership at what time. Keep track of when you bought or sold shares and at which price. See which options you are currently holding or how much interest is on your convertible and whether there was a cap or discount."
-msgstr ""
+msgstr "Mit der Transaktionshistorie weißt du genau was sich wann an deinen Beteiligungen geändert hat. Behalte den Überblick darüber wann du Aktien gekauft oder verkauft hast und zu welchem Preis. Schau’ nach welche Optionen du gerade besitzt oder wie viel Zinsen auf deinen Wandeldarlehen inzwischen sind und ob es einen Cap oder Rabatt gab."
 
 #: src/pages/privacy.jsx:109
 msgid "Third Party Contractors"
@@ -762,7 +728,7 @@ msgstr "Drittanbieter"
 
 #: src/pages/features/consistency.jsx:17
 msgid "Track the complete history of your shares. Integrated consistency checks will guarantee that your cap table is error-free. Collaborate on a single source of truth."
-msgstr ""
+msgstr "Behalte den Überblick über die Historie deiner Aktien. Integrierte Konsistenzchecks garantieren einen fehlerfreien Cap Table. Kollaboriere mit anderen an einer einzigen verlässlichen Informationsquelle."
 
 #: src/components/AllFeatures.jsx:25
 msgid "Transaction Filters"
@@ -778,7 +744,7 @@ msgstr "Verlauf der Transaktionen"
 
 #: src/components/AllFeatures.jsx:30
 msgid "Treasury Shares"
-msgstr ""
+msgstr "Von der Firma gehaltene Aktien"
 
 #: src/layouts/index.jsx:68
 msgid "Try Ledgy now. It’s free."
@@ -794,7 +760,7 @@ msgstr "Zwei-Faktor-Authentifizierung"
 
 #: src/pages/pricing.jsx:93
 msgid "Unable to find your perfect fit?<0/><1>Drop us an email</1> or use the chat right on this page."
-msgstr ""
+msgstr "Nichts passendes dabei?<0/><1>Schick’ uns eine Email</1> oder benutze den Chat rechts."
 
 #: src/pages/pricing.jsx:78
 msgid "Unicorn"
@@ -810,7 +776,7 @@ msgstr "Unbegrenzte Anzahl Gesellschafter"
 
 #: src/pages/pricing.jsx:53
 msgid "Up to 20 shareholders"
-msgstr ""
+msgstr "Bis zu 20 Stakeholder"
 
 #: src/pages/pricing.jsx:67
 msgid "Up to 50 shareholders"
@@ -822,7 +788,7 @@ msgstr "Nutzungsstatistiken"
 
 #: src/pages/index.jsx:21
 msgid "Use Ledgy to track all your shares, convertibles, options, phantom plans and model detailed financing rounds.<0/><1/>Are you an investor or employee? Get a comprehensive overview of your investment and check the status of your vesting schedule."
-msgstr ""
+msgstr "Nutze Ledgy für alle deine Aktien, Wandeldarlehen, Optionen, und virtuelle Beteiligungen und um Finanzierungsrunden und Exits zu modellieren.<0/><1/>Bist du ein Investor oder Mitarbeiter? Verschaff dir einen Überblick über deine Investments und verfolge das Vesting."
 
 #: src/pages/privacy.jsx:49
 msgid "User information"
@@ -878,11 +844,11 @@ msgstr "Welche Daten wir sammeln und warum"
 
 #: src/pages/features.jsx:59
 msgid "What’s the stake percentage of the founders after a VC invests $2,000,000 at a valuation of $7,500,000 taking into account the 2 outstanding convertible loans and keeping the ESOP pool at 10% while only diluting existing shareholders?<0/>Honestly, we don’t know. But Ledgy does.<1/>Exit modeling is coming soon!"
-msgstr ""
+msgstr "Wie viel Prozent halten die Gründer noch an der Firma, nachdem ein VC €2m bei einer Bewertung von €7.5m investiert und noch 2 Wandeldarlehen konvertiert und der ESOP Pool bei 10% gehalten wird?<0/> Ehrlich gesagt wissen wir das auch nicht. Aber Ledgy schon.<1/>Exit Modellierung kommt auch bald!"
 
 #: src/pages/features/esop.jsx:108
 msgid "When it’s time to exercise option grants, Ledgy calculates for you the amount that is already vested at a given date and lets you exercise parts or the full option grant.<0/><1/>Did an employee leave the company? Ledgy supports terminating part or the whole option grant.<2/><3/>Filter the transactions by an employee to see all their transactions (option grant, terminations and exercises) at a glance."
-msgstr ""
+msgstr "Wenn es an der Zeit ist Optionen auszuüben, sagt dir Ledgy welcher Teil zu dem Datum schon gevestet ist und lässt dich alles oder nur einen Teil der Option ausüben.<0/><1/>Hat ein Mitarbeiter die Firma verlassen? Ledgy unterstützt natürlich auch das Terminieren von Optionen.<2/><3/>Wenn du die Transaktionen nach einem bestimmten Mitarbeiter filterst, siehst du alle Optionen, Terminierungen und Ausübungen auf einen Blick."
 
 #: src/pages/privacy.jsx:111
 msgid "Which we use to run and improve our Service for you. This excludes company information. <0>See which ones below <1/></0>"
@@ -894,23 +860,23 @@ msgstr "An wen wir Daten weitergeben"
 
 #: src/pages/features/reporting.jsx:40
 msgid "With Ledgy you can download a beautiful snapshot of your company’s shares structure. You can even configure it to include signature fields for your board of directors.<0/><1/>It includes the current cap table, with the non-diluted and fully-diluted stake of each shareholder (if you have options or phantom stock), your convertibles and ESOPs, and finally the transaction history, which tracks every change ever made to your cap table since the incorporation."
-msgstr ""
+msgstr "Ledgy erlaubt das Herunterladen von schön formatierten PDF Berichten des Cap Tables. Darin ist der aktuelle Cap Table mit nicht-verwässerten und verwässerten Prozentzahlen, Wandeldarlehen, Optionen und die ganze Transaktionshistorie, die alle je am Cap Table gemachten Änderungen seit der Gründung nachvollzieht. <0/></1>Man kann diese Berichte sogar nach Belieben konfigurieren."
 
 #: src/pages/about-us.jsx:116
 msgid "Yoko graduated from ETH and Oxford and was president of Swissloop, enabling the team to win the 3rd price at the SpaceX Hyperloop competition"
-msgstr ""
+msgstr "Yoko hat ihren Physik Master an der ETH und in Oxford gemacht und war Präsident von Swissloop, wo sie dem Team zum dritten Platz beim SpaceX Hyperloop Wettbewerb verholfen hat"
 
 #: src/pages/features/esop.jsx:69
 msgid "You can create a detailed vesting schedule by defining over how many months the shares are to be vested, wether there’s a cliff and how often a new batch of shares gets assigned to the employee.<0/>As soon as you enter the first numbers, you will see a visual representation of the current schedule."
-msgstr ""
+msgstr "Du kannst detailliertes Vesting definieren, indem du eine Gesamtdauer festlegst, ob es einen Cliff gibt und alle wie viele Monate die neuen Aktien nach dem Cliff vesten werden."
 
 #: src/pages/index.jsx:92
 msgid "Your data in safe hands"
-msgstr ""
+msgstr "Deine Daten in guten Händen"
 
 #: src/components/SecurityRow.jsx:26
 msgid "Your data is safe with us. Enjoy the highest security standards."
-msgstr ""
+msgstr "Mit den höchsten Sicherheitsstandards sind deine Daten bei uns sicher."
 
 #: src/pages/features.jsx:142
 msgid "Your data is safe with us. Enjoy the highest security standards. No kidding."
@@ -932,13 +898,11 @@ msgstr "Du befindest dich in guter Gesellschaft"
 msgid "cap table, stock ledger, share register, startup, round modeling, equity, esop, reporting, investors"
 msgstr "Cap Table, Aktienregister, Startup, Modellierung von Finanzierungsrunden, Aktien, esop, Reporting, Investoren"
 
-#: src/pages/pricing.jsx:62
-#: src/pages/pricing.jsx:77
+#: src/pages/pricing.jsx:62 src/pages/pricing.jsx:77
 msgid "coming soon"
 msgstr "Demnächst"
 
-#: src/pages/pricing.jsx:65
-#: src/pages/pricing.jsx:80
+#: src/pages/pricing.jsx:65 src/pages/pricing.jsx:80
 msgid "per shareholder per month"
 msgstr "pro Gesellschafter pro Monat"
 
@@ -952,4 +916,4 @@ msgstr "€2"
 
 #: src/pages/pricing.jsx:79
 msgid "€4"
-msgstr ""
+msgstr "€4"

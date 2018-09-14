@@ -53,8 +53,9 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                 <h2 className="price mb-0"><Trans>Free</Trans></h2>
                 <small className="text-muted">&nbsp;</small>
                 <ul className="text-left mt-6 mb-0">
-                  <li><Trans>Up to 20 shareholders</Trans></li>
-                  <li><Trans>All cap table features</Trans></li>
+                  <li><Trans>Up to 15 shareholders</Trans></li>
+                  <li><Trans>Error-free cap table</Trans></li>
+                  <li><Trans>Round modeling</Trans></li>
                 </ul>
               </div>
             </div>
@@ -63,13 +64,13 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             <div className="col-lg-4">
               <div className="pricing-3 popular border rounded">
                 <span className="popular-tag"><Trans>coming soon</Trans></span>
-                <h6><Trans>Fast-growing Startup</Trans></h6>
+                <h6><Trans>Premium</Trans></h6>
                 <h2 className="price mb-0"><Trans>€2</Trans></h2>
                 <small className="text-muted"><Trans>per shareholder per month</Trans></small>
                 <ul className="text-left mt-6 mb-0">
-                  <li><Trans>Up to 50 shareholders</Trans></li>
-                  <li><Trans>All cap table features</Trans></li>
-                  <li><Trans>Free cap table import</Trans></li>
+                  <li><Trans>All basic features</Trans></li>
+                  <li><Trans>Unlimited shareholders</Trans></li>
+                  <li><Trans>Incentive plan management</Trans></li>
                 </ul>
               </div>
             </div>
@@ -78,14 +79,13 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             <div className="col-lg-4">
               <div className="pricing-3 popular border rounded">
                 <span className="popular-tag"><Trans>coming soon</Trans></span>
-                <h6><Trans>Unicorn</Trans></h6>
+                <h6><Trans>Enterprise</Trans></h6>
                 <h2 className="price mb-0"><Trans>€4</Trans></h2>
                 <small className="text-muted"><Trans>per shareholder per month</Trans></small>
                 <ul className="text-left mt-6 mb-0">
-                  <li><Trans>Unlimited shareholders</Trans></li>
-                  <li><Trans>All cap table features</Trans></li>
+                  <li><Trans>All premium features</Trans></li>
+                  <li><Trans>Exit modeling (coming soon)</Trans></li>
                   <li><Trans>Free cap table import</Trans></li>
-                  <li><Trans>Premium support</Trans></li>
                 </ul>
               </div>
             </div>
