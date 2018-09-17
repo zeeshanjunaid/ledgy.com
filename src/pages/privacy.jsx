@@ -10,7 +10,10 @@ import { Title } from '../layouts/utils';
 
 const Header = ({ i18n }: Props) => (
   <header className="header text-white bg-ledgy">
-    <Title title={i18n.t`Privacy`} />
+    <Title
+      title={i18n.t`Privacy`}
+      description={i18n.t`Privacy made in Europe. Because your cap table data is not for everyone.`}
+    />
 
     <div className="container text-center">
       <div className="row">
@@ -32,6 +35,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
         <Section>
           <p>
             <Trans>
+              Privacy made in Europe. Because your cap table data is not for everyone.<br /><br />
               We understand how sensitive cap table information is for any business.
               That’s why your privacy and your data’s security is crucial to us.
               We also know that long and complicated privacy policies are not

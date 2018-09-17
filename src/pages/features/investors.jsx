@@ -11,7 +11,7 @@ import { Title } from '../../layouts/utils';
 export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
     <Title
-      title={i18n.t`Investor Dashboard`}
+      title={i18n.t`Investor Portfolio`}
       section={i18n.t`Features`}
       description={i18n.t`Investors love to track the progress of their companies. Help them to be excited about what you have achieved.`}
     />
@@ -21,7 +21,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
         <div className="row">
           <div className="col-12 col-lg-8 offset-lg-2">
-            <h1><Trans>Investor Dashboard</Trans></h1>
+            <h1><Trans>Investor Portfolio</Trans></h1>
           </div>
         </div>
 
@@ -40,7 +40,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                 <Trans>
                   As an investor, you can profit a lot from Ledgy.
                   Any of your portfolio companies that use the platform will
-                  appear on your investment dashboard.
+                  appear in your portfolio.
                   See your key performance indicators of your investments at a glance.
                   <br /><br />
                   Never lose track of how much you invested in which company and what’s
@@ -62,10 +62,11 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                 <Trans>
                   The detailed investment table gives an overview of the metrics of
                   your investments. Check out what’s your stake in the company,
-                  how many shares you own and how much you initially invested.
+                  how many shares and options you own and how much you initially invested.
+                  Even convertibles, if they’re not converted yet, will appear here.
                   <br />
-                  Each valuation update that the founders enter into their share register on Ledgy
-                  will be reflected in the current value of your shares and your return.
+                  Each valuation update that the founders enter into their transaction history
+                  on Ledgy will be reflected in the current value of your shares and your return.
                 </Trans>
               </p>
             </header>
@@ -82,7 +83,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <p>
                 <Trans>
                   The transaction history will tell you exactly what happened to
-                  your shares at what time.
+                  your ownership at what time.
                   Keep track of when you bought or sold shares and at which price. See which
                   options you are currently holding or how much interest is
                   on your convertible and whether there was a cap or discount.

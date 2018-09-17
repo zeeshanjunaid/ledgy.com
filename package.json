@@ -4,17 +4,21 @@
   "version": "1.0.0",
   "author": "Ledgy AG <contact@ledgy.com>",
   "repository": "morloy/ledgy-app",
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "postinstall": "lingui compile",
+    "start": "lingui compile && gatsby develop",
+    "test": "eslint . --ext jsx,js && flow",
+    "extract": "lingui extract --clean"
+  },
   "dependencies": {
-    "@babel/core": "7.0.0-rc.1",
-    "@babel/preset-env": "7.0.0-rc.1",
-    "@babel/preset-flow": "7.0.0-rc.1",
-    "@babel/preset-react": "7.0.0-rc.1",
-    "@lingui/react": "2.4.1",
+    "@lingui/react": "2.7.0",
     "aos": "2.3.3",
+    "babel-core": "6.26.3",
     "bootstrap": "4.1.2",
     "et-line": "1.0.1",
     "font-awesome": "4.7.0",
-    "freshchat-widget": "1.0.4",
     "gatsby": "1.9.277",
     "gatsby-image": "1.0.55",
     "gatsby-link": "1.6.46",
@@ -34,22 +38,14 @@
     "lity": "2.3.1",
     "lodash": "4.17.10",
     "popper.js": "1.14.4",
-    "react": "16.4.2",
-    "react-dom": "16.4.2",
+    "react": "16.5.0",
+    "react-dom": "16.5.0",
     "react-helmet": "5.2.0",
     "slick-carousel": "1.8.1"
   },
   "keywords": [
     "ledgy"
   ],
-  "license": "MIT",
-  "main": "n/a",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "test": "eslint . --ext jsx,js && flow",
-    "extract": "BABEL_ENV=extract lingui extract --clean && i18next-conv -l de -s src/locale/de/messages.json -t src/locale/de.po"
-  },
   "eslintConfig": {
     "extends": [
       "plugin:flowtype/recommended",
@@ -71,10 +67,14 @@
     }
   },
   "devDependencies": {
-    "@babel/plugin-proposal-class-properties": "7.0.0-rc.1",
-    "@lingui/babel-preset-react": "2.4.1",
-    "@lingui/cli": "2.4.1",
+    "@lingui/babel-preset-react": "2.7.0",
+    "@lingui/cli": "2.7.0",
     "babel-eslint": "8.2.6",
+    "babel-plugin-macros": "2.4.0",
+    "babel-plugin-transform-class-properties": "6.24.1",
+    "babel-plugin-transform-object-rest-spread": "6.26.0",
+    "babel-preset-flow": "6.23.0",
+    "babel-preset-react": "6.24.1",
     "eslint": "4.19.1",
     "eslint-config-airbnb": "16.1.0",
     "eslint-plugin-flowtype": "2.50.0",
@@ -93,6 +93,16 @@
       "src/components",
       "src/layouts"
     ],
-    "format": "minimal"
+    "format": "po",
+    "extractBabelOptions": {
+      "presets": [
+        "react",
+        "flow"
+      ],
+      "plugins": [
+        "transform-object-rest-spread",
+        "transform-class-properties"
+      ]
+    }
   }
 }

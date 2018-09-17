@@ -12,9 +12,9 @@ import { Title } from '../../layouts/utils';
 export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
     <Title
-      title={i18n.t`Consistency`}
+      title={i18n.t`Single source of truth`}
       section={i18n.t`Features`}
-      description={i18n.t`Track the complete history of your shares. Integrated consistency checks will guarantee that your cap table is error-free.`}
+      description={i18n.t`Track the complete history of your shares. Integrated consistency checks will guarantee that your cap table is error-free. Collaborate on a single source of truth.`}
     />
 
     <header className="header text-white bg-ledgy">
@@ -22,7 +22,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
         <div className="row">
           <div className="col-12 col-lg-8 offset-lg-2">
-            <h1><Trans>Guaranteed error-free</Trans></h1>
+            <h1><Trans>A Trusted Single Source of Truth</Trans></h1>
           </div>
         </div>
 
@@ -39,14 +39,14 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <h2><Trans>Replace your Excel with Ledgy</Trans></h2>
               <p>
                 <Trans>
-                  Keep all the history of your company’s share register at a single place.
+                  Keep the ownership history of your company at a single place.
                   No more shuffling around with different documents shared via email, Dropbox,
                   Google Drive or Slack.<br />
                   Ledgy will be your single source of truth.
                   And it’s a damn good one!
                   <br /><br />
-                  To get started enter all transactions from your share
-                  register into Ledgy. That’s an excellent opportunity to understand
+                  To get started enter all your ownership transactions into Ledgy.
+                  That’s an excellent opportunity to understand
                   what has been going on in your cap table.<br /><br />
                   Need help? <Link href to={`${props.prefix}/contact/`}>Contact us</Link>, and
                   we will assist you to get started with Ledgy.
@@ -65,10 +65,10 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             <div className="col-md-4">
               <p>
                 <Trans>
-                  Oops, there was an error in your share register?
+                  Oops, there was an error in your cap table?
                   Don’t worry; Ledgy will assist you in getting your cap table straight.<br />
                   Once finished, sit back and relax. Now you can be assured that
-                  your cap table is error-free!
+                  your cap table is error-free.
                 </Trans>
               </p>
             </div>
@@ -113,6 +113,25 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
           </div>
 
+          <div className="row align-items-center my-8">
+            <div className="col-md-4 ml-auto">
+              <p>
+                <Trans>
+                  Startups do end up with several conflicting spreadsheet-based cap tables,
+                  one being with the founders, one with the lawyers, one with the leading
+                  investors. Not so with Ledgy. Have one single source of truth and give your
+                  key stakeholders access with a single click. Don’t waste money on
+                  consolidating several cap table versions, professionaly manage it
+                  from the start instead.
+                </Trans>
+              </p>
+            </div>
+
+            <div className="col-md-8 order-md-first" data-aos="fade-right">
+              <Img {...props.data.accessRights} alt={i18n.t`Give view or admin access to your stakeholders`} />
+            </div>
+          </div>
+
           <hr className="my-8" />
 
           <div>
@@ -122,9 +141,14 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                 <Trans>
                   Finished? Go back to the <i>Cap Table</i> page
                   and view the result.
-                  At any point in the history of your share register, Ledgy
-                  can draw you a helpful diagram that represents the current equity
-                  distribution of your company.
+                  At any point in the history of your ownership, Ledgy
+                  can draw you a helpful chart that represents the current equity
+                  distribution of your company. <br />
+                  You have several views on your cap table at your fingertips.
+                  You can assign your shareholders to groups and view the distribution
+                  among them. Or you can get a comprehensive overview by viewing
+                  the distribution between the different securities, like common shares,
+                  preferred shares, convertibles and options.
                 </Trans>
               </p>
             </header>
@@ -162,6 +186,9 @@ export const pageQuery = graphql`
       sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
     }
     shareNumberChecking: imageSharp(id: { regex: "/share-number-checking.png/" }) {
+      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    }
+    accessRights: imageSharp(id: { regex: "/access-rights.png/" }) {
       sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
     }
     captableBasic: imageSharp(id: { regex: "/captable-basic.png/" }) {

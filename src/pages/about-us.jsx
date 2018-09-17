@@ -79,8 +79,8 @@ const IndexPage = (props: Props) => {
                     We want to empower entrepreneurs. They
                     should be able to focus on their business,
                     not on bureaucratic paperwork. That’s why we want to
-                    establish a new, state-of-the-art tool to manage,
-                    exchange, and trade securities in private companies. Our
+                    establish a new, state-of-the-art tool to manage and
+                    exchange securities in private companies. Our
                     goal is to make shares management a breeze for both
                     companies and shareholders.
                   </Trans>
@@ -103,30 +103,30 @@ const IndexPage = (props: Props) => {
             <div className="row gap-y">
               <Founder
                 name="Timo Horstschaefer"
-                func="Physics MSc ETH"
-                description={i18n.t`Computer vision background, badminton guy, wants to build a space elevator`}
+                func="Co-Founder & CTO"
+                description={i18n.t`Coding since high school, Timo got an award for the best master thesis in computer science and worked one year as computer engineer in robotics`}
                 twitterlink="https://twitter.com/thrstschfr"
                 linkedinlink="https://www.linkedin.com/in/timohorstschaefer/"
                 mail="timo@ledgy.com"
                 img={data.timo}
               />
               <Founder
-                name="Ben Brandt"
-                func="Physics MSc ETH"
-                description={i18n.t`Battery science background, martial arts, fascinated by electric cars`}
-                twitterlink="https://twitter.com/bebinoy"
-                linkedinlink="https://www.linkedin.com/in/ben-elias-brandt-680a95110/"
-                mail="ben@ledgy.com"
-                img={data.ben}
-              />
-              <Founder
                 name="Yoko Spirig"
-                func="Physics MSc ETH"
-                description={i18n.t`Medical physics background, loves running, wondering about brain-machine interfaces`}
+                func="Co-Founder & CPO"
+                description={i18n.t`Yoko graduated from ETH and Oxford and was president of Swissloop, enabling the team to win the 3rd price at the SpaceX Hyperloop competition`}
                 twitterlink="https://twitter.com/YokoSpirig"
                 linkedinlink="https://www.linkedin.com/in/yokospirig/"
                 mail="yoko@ledgy.com"
                 img={data.yoko}
+              />
+              <Founder
+                name="Ben Brandt"
+                func="Co-Founder & CEO"
+                description={i18n.t`Ben has extensive experience in project management and has worked for two years as software-engineer in an ETH research group`}
+                twitterlink="https://twitter.com/bebinoy"
+                linkedinlink="https://www.linkedin.com/in/ben-elias-brandt-680a95110/"
+                mail="ben@ledgy.com"
+                img={data.ben}
               />
             </div>
 
@@ -135,7 +135,7 @@ const IndexPage = (props: Props) => {
 
         <section className="section bg-ledgy text-white">
           <div className="container">
-            <header className="section-header mb-0  px-md-8">
+            <header className="section-header mb-0  px-md-6">
               <h2><Trans>We’re hiring!</Trans></h2>
               <p>
                 <Trans>
@@ -212,17 +212,17 @@ export const pageQuery = graphql`
       }
     }
     ben: imageSharp(id: { regex: "/ben.jpg/" }) {
-      resolutions(width: 255, height: 255) {
+      resolutions(width: 245, height: 245) {
         ...GatsbyImageSharpResolutions
       }
     }
     yoko: imageSharp(id: { regex: "/yoko.jpg/" }) {
-      resolutions(width: 255, height: 255) {
+      resolutions(width: 245, height: 245) {
         ...GatsbyImageSharpResolutions
       }
     }
     timo: imageSharp(id: { regex: "/timo.jpg/" }) {
-      resolutions(width: 255, height: 255) {
+      resolutions(width: 245, height: 245) {
         ...GatsbyImageSharpResolutions
       }
     }
