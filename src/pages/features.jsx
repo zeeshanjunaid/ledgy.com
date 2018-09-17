@@ -2,7 +2,6 @@
 
 import * as React from 'react';
 import { withI18n, Trans } from '@lingui/react';
-import Link from 'gatsby-link';
 
 import { Feature } from '../components/Features';
 import AllFeatures from '../components/AllFeatures';
