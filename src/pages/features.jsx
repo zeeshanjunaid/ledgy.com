@@ -6,6 +6,7 @@ import Link from 'gatsby-link';
 
 import { Feature } from '../components/Features';
 import AllFeatures from '../components/AllFeatures';
+import SecurityRow from '../components/SecurityRow';
 import { Title } from '../layouts/utils';
 
 const Hr = () => <hr className="my-3" />;
@@ -123,33 +124,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             <AllFeatures />
           </div>
 
-          <div className="row gap-y text-center">
-
-            <div className="col-md-6 offset-xl-2 col-xl-4">
-              <i className="text-primary fa fa-shield fa-3x mb-2" />
-              <h5><Trans>Privacy</Trans></h5>
-              <p>
-                <Trans>
-                  Cap table data is sensitive.
-                  That’s why we genuinely care about your privacy.
-                </Trans>
-                <br />
-                <Link href to={`${props.prefix}/privacy/`}><Trans>Read more</Trans>  <i className="ti-angle-right fs-10 ml-1" /></Link>
-              </p>
-            </div>
-
-            <div className="col-md-6 col-xl-4">
-              <i className="text-success fa fa-lock fa-3x mb-2" />
-              <h5><Trans>Security</Trans></h5>
-              <p>
-                <Trans>
-                  Your data is safe with us. Enjoy the highest security standards. No kidding.
-                </Trans>
-                <br />
-                <Link href to={`${props.prefix}/security/`}><Trans>Read more</Trans>  <i className="ti-angle-right fs-10 ml-1" /></Link>
-              </p>
-            </div>
-          </div>
+          <SecurityRow {...props} />
 
         </div>
       </section>

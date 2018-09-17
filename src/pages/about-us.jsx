@@ -135,7 +135,7 @@ const IndexPage = (props: Props) => {
 
         <section className="section bg-ledgy text-white">
           <div className="container">
-            <header className="section-header mb-0  px-md-8">
+            <header className="section-header mb-0  px-md-6">
               <h2><Trans>We’re hiring!</Trans></h2>
               <p>
                 <Trans>

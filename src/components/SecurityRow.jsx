@@ -7,7 +7,7 @@ import Link from 'gatsby-link';
 export default (props: Props) => (
   <div className="row gap-y text-center">
 
-    <div className="col-md-6 offset-xl-2 col-xl-4">
+    <div className="col-md-6 col-xl-5 offset-xl-1">
       <i className="text-primary fa fa-shield fa-3x mb-2" />
       <h5><Trans>Privacy</Trans></h5>
       <p>
@@ -19,7 +19,7 @@ export default (props: Props) => (
       </p>
     </div>
 
-    <div className="col-md-6 col-xl-4">
+    <div className="col-md-6 col-xl-5">
       <i className="text-success fa fa-lock fa-3x mb-2" />
       <h5><Trans>Security</Trans></h5>
       <p>
