@@ -11,7 +11,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
     <Title
       title={i18n.t`Pricing`}
-      description={i18n.t`We still need a description for the Pricing page. Please fix.`}
+      description={i18n.t`Ledgy scales with your needs. Free for startups, powerful for grown-ups.`}
     />
 
     <header className="header text-white bg-ledgy">
