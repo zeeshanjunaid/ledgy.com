@@ -108,7 +108,7 @@ export default withI18n()(IndexPage);
 
 // eslint-disable-next-line no-undef
 export const pageQuery = graphql`
-  query IndexQuery {
+  query {
     ...FeaturesFragment
 
     laptop: imageSharp(fluid: { originalName: {regex: "/laptop.png/"} }) {

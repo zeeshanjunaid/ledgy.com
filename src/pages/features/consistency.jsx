@@ -174,7 +174,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
 // eslint-disable-next-line no-undef
 export const pageQuery = graphql`
-  query ConsistencyQuery {
+  query {
     ...FeaturesFragment
 
     createCaptable: imageSharp(fluid: { originalName: {regex: "/create-captable.png/"} }) {

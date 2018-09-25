@@ -156,7 +156,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
 // eslint-disable-next-line no-undef
 export const pageQuery = graphql`
-  query ReportingQuery {
+  query {
     ...FeaturesFragment
 
     shareRegisterPdf: imageSharp(fluid: { originalName: {regex: "/share-register-pdf.png/"} }) {

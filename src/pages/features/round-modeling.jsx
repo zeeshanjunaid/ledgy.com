@@ -168,7 +168,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
 // eslint-disable-next-line no-undef
 export const pageQuery = graphql`
-  query RoundModelingQuery {
+  query {
     ...FeaturesFragment
 
     roundModelingSample: imageSharp(fluid: { originalName: {regex: "/round-modeling-sample.png/"} }) {

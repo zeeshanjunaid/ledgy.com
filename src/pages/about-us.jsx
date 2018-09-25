@@ -206,7 +206,7 @@ export default withI18n()(IndexPage);
 
 // eslint-disable-next-line no-undef
 export const pageQuery = graphql`
-  query AboutQuery {
+  query {
     mission: imageSharp(fluid: { originalName: {regex: "/mission/"} }) {
       sizes(maxWidth: 600) {
         ...GatsbyImageSharpSizes

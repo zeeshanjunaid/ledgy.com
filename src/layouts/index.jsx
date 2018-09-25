@@ -5,7 +5,6 @@ import { Link, navigate } from 'gatsby';
 import { I18nProvider, withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
 
-import '../polyfills';
 import { Title, name, siteUrl, appUrl, blogUrl, demoUrl } from './utils';
 import { catalogs, langFromPath, langPrefix, getLocale } from '../i18n-config';
 import SignupForm from '../components/SignupForm';

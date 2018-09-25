@@ -177,7 +177,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
 // eslint-disable-next-line no-undef
 export const pageQuery = graphql`
-  query ESOPQuery {
+  query {
     ...FeaturesFragment
 
     incentivesPage: imageSharp(fluid: { originalName: {regex: "/incentives-overview.png/"} }) {

@@ -112,7 +112,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
 // eslint-disable-next-line no-undef
 export const pageQuery = graphql`
-  query InvestorsQuery {
+  query {
     ...FeaturesFragment
 
     dashboardCards: imageSharp(fluid: { originalName: {regex: "/dashboard-cards.png/"} }) {
