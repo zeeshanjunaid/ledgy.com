@@ -1,7 +1,7 @@
 // @flow
 
 import * as React from 'react';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 import { withI18n, Trans } from '@lingui/react';
 
 import { PrivacyElement } from '../components/Privacy';

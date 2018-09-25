@@ -1,7 +1,7 @@
 // @flow
 
 import * as React from 'react';
-import Link, { navigateTo } from 'gatsby-link';
+import { Link, navigate } from 'gatsby';
 import { I18nProvider, withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
 
@@ -205,7 +205,7 @@ export default class extends React.Component<{ location: { pathname: string } }>
 
     const { pathname } = this.props.location;
     if (getLocale() === 'de' && !pathname.startsWith('/de')) {
-      navigateTo(`/de${this.props.location.pathname}`);
+      navigate(`/de${this.props.location.pathname}`);
     }
 
     window.fcWidget.init({

@@ -2,8 +2,7 @@
 
 import * as React from 'react';
 import { Trans } from '@lingui/react';
-import { graphql } from 'gatsby';
-import Link from 'gatsby-link';
+import { Link, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 
