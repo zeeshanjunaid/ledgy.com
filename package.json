@@ -7,9 +7,9 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "postinstall": "lingui compile",
+    "build": "lingui compile && gatsby build",
     "start": "lingui compile && gatsby develop",
-    "test": "eslint . --ext jsx,js && flow",
+    "test": "lingui compile && eslint . --ext jsx,js && flow",
     "extract": "lingui extract --clean"
   },
   "dependencies": {
@@ -19,7 +19,6 @@
     "bootstrap": "4.1.2",
     "et-line": "1.0.1",
     "font-awesome": "4.7.0",
-    "freshchat-widget": "1.0.4",
     "gatsby": "1.9.277",
     "gatsby-image": "1.0.55",
     "gatsby-link": "1.6.46",

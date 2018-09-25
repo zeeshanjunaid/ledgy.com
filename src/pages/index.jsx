@@ -16,15 +16,15 @@ const Header = ({ i18n, data }: Props) => (
 
         <div className="col-lg-6 ml-auto">
           <div className="mb-4 text-white">
-            <h1><Trans>The missing accounting software for your cap table</Trans></h1>
+            <h1><Trans>The missing accounting<br />software for your equity</Trans></h1>
             <p>
               <Trans>
-                Use Ledgy to track all your shares, convertibles, options, phantom plans and
-                model detailed financing rounds.
+                Stay on top of your vesting schedules, options, phantom plans, and
+                convertible loans. Get fast insights for financing rounds or exit
+                negotiations using our built-in modeling tools.
                 <br /><br />
-                Are you an investor or employee? Get a comprehensive overview of
-                your investment and check the status of your
-                vesting schedule.
+                Are you an investor or employee? With the portfolio you will always have the
+                latest information about your investment and vesting at your fingertips.
               </Trans>
             </p>
           </div>
@@ -60,7 +60,7 @@ const IndexPage = (props: Props) => (
             <h2 className="my-4"><Trans>You’re in good company</Trans></h2>
             <p>
               <Trans>
-                Many successful companies already use Ledgy to manage their ownership
+                Many successful companies already use Ledgy for their equity plans and cap table
               </Trans>
             </p>
           </header>

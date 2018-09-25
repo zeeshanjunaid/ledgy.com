@@ -160,12 +160,12 @@ const TemplateWrapper = withI18n()((props: SiteProps) => {
   return (
     <div>
       <Title
-        title={i18n.t`The missing accounting software for your cap table`}
-        description={i18n.t`Manage your Cap Table, not your Excel! Ledgy is the single place to track the complete history of your shares, manage your ESOPs and model detailed financing rounds. Enjoy a guaranteed error-free cap table and engage your investors and employees. Try Now For Free!`}
+        title={i18n.t`The missing accounting software for your equity`}
+        description={i18n.t`Stay on top of your vesting schedules, options, phantom plans, and convertible loans. Get fast insights for financing rounds or exit negotiations using our built-in modeling tools. With the portfolio you will always have the latest information about your investment and vesting at your fingertips. Try now for free!`}
       />
       <Helmet>
         <html lang={props.lang} />
-        <meta name="keywords" content={i18n.t`cap table, stock ledger, share register, startup, round modeling, equity, esop, reporting, investors`} />
+        <meta name="keywords" content={i18n.t`cap table, stock ledger, share register, startup, modeling, financing round, equity, esop, phantom, option plan, virtual, portfolio, reporting, investors`} />
         <meta name="author" content="Ledgy" />
 
         {/* Facebook social card */}
@@ -212,7 +212,6 @@ export default class extends React.Component<{ location: { pathname: string } }>
       navigateTo(`/de${this.props.location.pathname}`);
     }
 
-    require('freshchat-widget'); // eslint-disable-line global-require
     window.fcWidget.init({
       token: 'e9a5ae2c-ad84-42c8-8786-a893acbca8b3',
       host: 'https://wchat.eu.freshchat.com',

@@ -57,8 +57,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </header>
 
             <div className="row gap-y">
-              <div className="col-md-10 mx-auto mb-7" data-aos="fade-up">
-                <Img {...props.data.addOption} alt={i18n.t`Add incentive plan`} />
+              <div className="col-md-12 mx-auto mb-7" data-aos="fade-up">
+                <Img {...props.data.incentivesPage} alt={i18n.t`Overview over vested, granted, and exercised incentives`} />
               </div>
             </div>
           </div>
@@ -77,7 +77,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
 
             <div className="col-md-8 ml-auto" data-aos="fade-left">
-              <Img {...props.data.vestingSchedule} alt={i18n.t`Vesting schedule for ESOPs`} />
+              <Img {...props.data.addOption} alt={i18n.t`Add options or phantom options with vesting`} />
             </div>
           </div>
 
@@ -179,6 +179,9 @@ export const pageQuery = graphql`
   query ESOPQuery {
     ...FeaturesFragment
 
+    incentivesPage: imageSharp(id: { regex: "/incentives-overview.png/" }) {
+      sizes(maxWidth: 900) { ...GatsbyImageSharpSizes }
+    }
     addOption: imageSharp(id: { regex: "/option-add.png/" }) {
       sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
     }
