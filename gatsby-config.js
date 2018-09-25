@@ -42,7 +42,6 @@ module.exports = {
         ],
       },
     },
-    'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-netlify',
       options: {
