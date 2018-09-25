@@ -190,7 +190,7 @@ const TemplateWrapper = withI18n()((props: SiteProps) => {
         </noscript>
       </Helmet>
       <Nav {...props} prefix={prefix} />
-      {props.children}
+      {React.cloneElement(props.children, { prefix })}
       <Footer {...props} prefix={prefix} />
     </div>
   );
