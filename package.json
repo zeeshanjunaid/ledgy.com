@@ -92,12 +92,8 @@
     "format": "po",
     "extractBabelOptions": {
       "presets": [
-        "react",
-        "flow"
-      ],
-      "plugins": [
-        "transform-object-rest-spread",
-        "transform-class-properties"
+        "@babel/react",
+        "@babel/flow"
       ]
     }
   }
