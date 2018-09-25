@@ -19,8 +19,9 @@ const Header = ({ i18n, data }: Props) => (
             <h1><Trans>The missing accounting<br />software for your equity</Trans></h1>
             <p>
               <Trans>
-                Stay on top of your vesting schedules, options, phantom plans, and convertible loans.
-                Get fast insights for financing rounds or exit negotiations using our built-in modeling tools.
+                Stay on top of your vesting schedules, options, phantom plans, and
+                convertible loans. Get fast insights for financing rounds or exit
+                negotiations using our built-in modeling tools.
                 <br /><br />
                 Are you an investor or employee? With the portfolio you will always have the
                 latest information about your investment and vesting at your fingertips.
