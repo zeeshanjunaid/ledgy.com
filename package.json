@@ -7,9 +7,9 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "postinstall": "lingui compile",
+    "build": "lingui compile && gatsby build",
     "start": "lingui compile && gatsby develop",
-    "test": "eslint . --ext jsx,js && flow",
+    "test": "lingui compile && eslint . --ext jsx,js && flow",
     "extract": "lingui extract --clean"
   },
   "dependencies": {
