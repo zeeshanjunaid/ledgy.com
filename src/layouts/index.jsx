@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import Link, { navigateTo } from 'gatsby-link';
+import { graphql } from 'gatsby'
 import { I18nProvider, withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
 

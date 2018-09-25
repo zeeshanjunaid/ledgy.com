@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import { withI18n, Trans } from '@lingui/react';
+import { graphql } from 'gatsby'
 import Img from 'gatsby-image';
 
 import { FeatureLinks } from '../../components/Features';
@@ -114,13 +115,13 @@ export const pageQuery = graphql`
   query InvestorsQuery {
     ...FeaturesFragment
 
-    dashboardCards: imageSharp(id: { regex: "/dashboard-cards.png/" }) {
+    dashboardCards: imageSharp(fluid: { originalName: {regex: "/dashboard-cards.png/"} }) {
       sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
     }
-    dashboardShares: imageSharp(id: { regex: "/dashboard-shares.png/" }) {
+    dashboardShares: imageSharp(fluid: { originalName: {regex: "/dashboard-shares.png/"} }) {
       sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
     }
-    dashboardHistory: imageSharp(id: { regex: "/dashboard-history.png/" }) {
+    dashboardHistory: imageSharp(fluid: { originalName: {regex: "/dashboard-history.png/"} }) {
       sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
     }
   }

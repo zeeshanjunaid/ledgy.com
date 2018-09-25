@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import Img from 'gatsby-image';
+import { graphql } from 'gatsby'
 import { withI18n, Trans } from '@lingui/react';
 
 import { Title } from '../layouts/utils';
@@ -206,49 +207,49 @@ export default withI18n()(IndexPage);
 // eslint-disable-next-line no-undef
 export const pageQuery = graphql`
   query AboutQuery {
-    mission: imageSharp(id: { regex: "/mission/" }) {
+    mission: imageSharp(fluid: { originalName: {regex: "/mission/"} }) {
       sizes(maxWidth: 600) {
         ...GatsbyImageSharpSizes
       }
     }
-    ben: imageSharp(id: { regex: "/ben.jpg/" }) {
+    ben: imageSharp(fluid: { originalName: {regex: "/ben.jpg/"} }) {
       resolutions(width: 245, height: 245) {
         ...GatsbyImageSharpResolutions
       }
     }
-    yoko: imageSharp(id: { regex: "/yoko.jpg/" }) {
+    yoko: imageSharp(fluid: { originalName: {regex: "/yoko.jpg/"} }) {
       resolutions(width: 245, height: 245) {
         ...GatsbyImageSharpResolutions
       }
     }
-    timo: imageSharp(id: { regex: "/timo.jpg/" }) {
+    timo: imageSharp(fluid: { originalName: {regex: "/timo.jpg/"} }) {
       resolutions(width: 245, height: 245) {
         ...GatsbyImageSharpResolutions
       }
     }
 
 
-    myke: imageSharp(id: { regex: "/myke.jpg/" }) {
+    myke: imageSharp(fluid: { originalName: {regex: "/myke.jpg/"} }) {
       resolutions(width: 128, height: 128) {
         ...GatsbyImageSharpResolutions
       }
     }
-    paul: imageSharp(id: { regex: "/paul.jpg/" }) {
+    paul: imageSharp(fluid: { originalName: {regex: "/paul.jpg/"} }) {
       resolutions(width: 128, height: 128) {
         ...GatsbyImageSharpResolutions
       }
     }
-    luzius: imageSharp(id: { regex: "/luzius.jpg/" }) {
+    luzius: imageSharp(fluid: { originalName: {regex: "/luzius.jpg/"} }) {
       resolutions(width: 128, height: 128) {
         ...GatsbyImageSharpResolutions
       }
     }
-    adrian: imageSharp(id: { regex: "/adrian.jpg/" }) {
+    adrian: imageSharp(fluid: { originalName: {regex: "/adrian.jpg/"} }) {
       resolutions(width: 128, height: 128) {
         ...GatsbyImageSharpResolutions
       }
     }
-    elena: imageSharp(id: { regex: "/elena.jpg/" }) {
+    elena: imageSharp(fluid: { originalName: {regex: "/elena.jpg/"} }) {
       resolutions(width: 128, height: 128) {
         ...GatsbyImageSharpResolutions
       }

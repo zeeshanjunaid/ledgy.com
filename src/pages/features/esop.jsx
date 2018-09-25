@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import { withI18n, Trans } from '@lingui/react';
+import { graphql } from 'gatsby'
 import Img from 'gatsby-image';
 
 import { FeatureLinks } from '../../components/Features';
@@ -179,25 +180,25 @@ export const pageQuery = graphql`
   query ESOPQuery {
     ...FeaturesFragment
 
-    incentivesPage: imageSharp(id: { regex: "/incentives-overview.png/" }) {
+    incentivesPage: imageSharp(fluid: { originalName: {regex: "/incentives-overview.png/"} }) {
       sizes(maxWidth: 900) { ...GatsbyImageSharpSizes }
     }
-    addOption: imageSharp(id: { regex: "/option-add.png/" }) {
+    addOption: imageSharp(fluid: { originalName: {regex: "/option-add.png/"} }) {
       sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
     }
-    vestingSchedule: imageSharp(id: { regex: "/vesting-schedule.png/" }) {
+    vestingSchedule: imageSharp(fluid: { originalName: {regex: "/vesting-schedule.png/"} }) {
       sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
     }
-    addPool: imageSharp(id: { regex: "/add-pool.png/" }) {
+    addPool: imageSharp(fluid: { originalName: {regex: "/add-pool.png/"} }) {
       sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
     }
-    exerciseOption: imageSharp(id: { regex: "/option-exercise.png/" }) {
+    exerciseOption: imageSharp(fluid: { originalName: {regex: "/option-exercise.png/"} }) {
       sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
     }
-    dilutedTable: imageSharp(id: { regex: "/option-diluted-captable.png/" }) {
+    dilutedTable: imageSharp(fluid: { originalName: {regex: "/option-diluted-captable.png/"} }) {
       sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
     }
-    optionInPortfolio: imageSharp(id: { regex: "/incentives-dashboard.png/" }) {
+    optionInPortfolio: imageSharp(fluid: { originalName: {regex: "/incentives-dashboard.png/"} }) {
       sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
     }
   }

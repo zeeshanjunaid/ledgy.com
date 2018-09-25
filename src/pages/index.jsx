@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import { withI18n, Trans } from '@lingui/react';
+import { graphql } from 'gatsby'
 import Link from 'gatsby-link';
 import Img from 'gatsby-image';
 
@@ -110,32 +111,32 @@ export const pageQuery = graphql`
   query IndexQuery {
     ...FeaturesFragment
 
-    laptop: imageSharp(id: { regex: "/laptop.png/" }) {
+    laptop: imageSharp(fluid: { originalName: {regex: "/laptop.png/"} }) {
       sizes(maxWidth: 2000) { ...GatsbyImageSharpSizes_noBase64 }
     }
 
-    viu: imageSharp(id: { regex: "/viu/" }) {
+    viu: imageSharp(fluid: { originalName: {regex: "/viu/"} }) {
       resolutions(width: 120) { ...GatsbyImageSharpResolutions }
     }
-    quitt: imageSharp(id: { regex: "/quitt/" }) {
+    quitt: imageSharp(fluid: { originalName: {regex: "/quitt/"} }) {
       resolutions(width: 80) { ...GatsbyImageSharpResolutions }
     }
-    cryptofund: imageSharp(id: { regex: "/cryptofund/" }) {
+    cryptofund: imageSharp(fluid: {originalName: {regex: "/cryptofund/"} }) {
       resolutions(width: 180) { ...GatsbyImageSharpResolutions }
     }
-    sherpany: imageSharp(id: { regex: "/sherpany/" }) {
+    sherpany: imageSharp(fluid: { originalName: {regex: "/sherpany/"} }) {
       resolutions(width: 150) { ...GatsbyImageSharpResolutions }
     }
-    frontify: imageSharp(id: { regex: "/frontify/" }) {
+    frontify: imageSharp(fluid: { originalName: {regex: "/frontify/"} }) {
       resolutions(width: 150) { ...GatsbyImageSharpResolutions }
     }
-    bexio: imageSharp(id: { regex: "/bexio/" }) {
+    bexio: imageSharp(fluid: { originalName: {regex: "/bexio/"} }) {
       resolutions(width: 110) { ...GatsbyImageSharpResolutions }
     }
-    allthings: imageSharp(id: { regex: "/allthings/" }) {
+    allthings: imageSharp(fluid: { originalName: {regex: "/allthings/"} }) {
       resolutions(width: 150) { ...GatsbyImageSharpResolutions }
     }
-    farmy: imageSharp(id: { regex: "/farmy/" }) {
+    farmy: imageSharp(fluid: { originalName: {regex: "/farmy/"} }) {
       resolutions(width: 130) { ...GatsbyImageSharpResolutions }
     }
   }

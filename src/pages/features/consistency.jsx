@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import { withI18n, Trans } from '@lingui/react';
+import { graphql } from 'gatsby'
 import Link from 'gatsby-link';
 import Img from 'gatsby-image';
 
@@ -176,22 +177,22 @@ export const pageQuery = graphql`
   query ConsistencyQuery {
     ...FeaturesFragment
 
-    createCaptable: imageSharp(id: { regex: "/create-captable.png/" }) {
+    createCaptable: imageSharp(fluid: { originalName: {regex: "/create-captable.png/"} }) {
       sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
     }
-    transactionError: imageSharp(id: { regex: "/transaction-error.png/" }) {
+    transactionError: imageSharp(fluid: { originalName: {regex: "/transaction-error.png/"} }) {
       sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
     }
-    availableShares: imageSharp(id: { regex: "/available-shares.png/" }) {
+    availableShares: imageSharp(fluid: { originalName: {regex: "/available-shares.png/"} }) {
       sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
     }
-    shareNumberChecking: imageSharp(id: { regex: "/share-number-checking.png/" }) {
+    shareNumberChecking: imageSharp(fluid: { originalName: {regex: "/share-number-checking.png/"} }) {
       sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
     }
-    accessRights: imageSharp(id: { regex: "/access-rights.png/" }) {
+    accessRights: imageSharp(fluid: { originalName: {regex: "/access-rights.png/"} }) {
       sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
     }
-    captableBasic: imageSharp(id: { regex: "/captable-basic.png/" }) {
+    captableBasic: imageSharp(fluid: { originalName: {regex: "/captable-basic.png/"} }) {
       sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
     }
   }

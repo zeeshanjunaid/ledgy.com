@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import { withI18n, Trans } from '@lingui/react';
+import { graphql } from 'gatsby'
 import Img from 'gatsby-image';
 
 import { FeatureLinks } from '../../components/Features';
@@ -158,16 +159,16 @@ export const pageQuery = graphql`
   query ReportingQuery {
     ...FeaturesFragment
 
-    shareRegisterPdf: imageSharp(id: { regex: "/share-register-pdf.png/" }) {
+    shareRegisterPdf: imageSharp(fluid: { originalName: {regex: "/share-register-pdf.png/"} }) {
       sizes(maxWidth: 2400) { ...GatsbyImageSharpSizes }
     }
-    sendHoldingConfirmation: imageSharp(id: { regex: "/send-holding-confirmation.png/" }) {
+    sendHoldingConfirmation: imageSharp(fluid: { originalName: {regex: "/send-holding-confirmation.png/"} }) {
       sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
     }
-    holdingConfirmationPdf: imageSharp(id: { regex: "/holding-confirmation-pdf.png/" }) {
+    holdingConfirmationPdf: imageSharp(fluid: { originalName: {regex: "/holding-confirmation-pdf.png/"} }) {
       sizes(maxWidth: 2000) { ...GatsbyImageSharpSizes }
     }
-    documentManagement: imageSharp(id: { regex: "/document-management.png/" }) {
+    documentManagement: imageSharp(fluid: { originalName: {regex: "/document-management.png/"} }) {
       sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
     }
   }
