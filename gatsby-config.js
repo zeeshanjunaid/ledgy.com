@@ -56,6 +56,7 @@ module.exports = {
             "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ https://wchat.eu.freshchat.com/assets/widget/ https://maps.googleapis.com/maps/api/",
             "frame-src 'self' https://wchat.eu.freshchat.com/ https://ledgy.eu.webpush.freshchat.com/",
             "connect-src 'self'",
+            "prefetch-src 'self'",
           ].join('; '),
           'Referrer-Policy: strict-origin-when-cross-origin',
         ],
