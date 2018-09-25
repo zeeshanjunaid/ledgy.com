@@ -58,7 +58,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
             <div className="row gap-y">
               <div className="col-md-12 mx-auto mb-7" data-aos="fade-up">
-                <Img {...props.data.incentivesPage} alt={i18n.t`Overview over vested, granted, exercised incentives`} />
+                <Img {...props.data.incentivesPage} alt={i18n.t`Overview over vested, granted, and exercised incentives`} />
               </div>
             </div>
           </div>
@@ -77,7 +77,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
 
             <div className="col-md-8 ml-auto" data-aos="fade-left">
-              <Img {...props.data.addOption} alt={i18n.t`Add an option or phantom option with vesting`} />
+              <Img {...props.data.addOption} alt={i18n.t`Add options or phantom options with vesting`} />
             </div>
           </div>
 

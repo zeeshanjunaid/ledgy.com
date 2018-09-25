@@ -34,7 +34,7 @@ msgid "Add an incentives pool"
 msgstr "Füge einen Incentives-Pool hinzu"
 
 #: src/pages/features/esop.jsx:80
-msgid "Add an option or phantom option with vesting"
+msgid "Add options or phantom options with vesting"
 msgstr "Füge Optionen oder virtuelle Optionen mit Vesting hinzu"
 
 #: src/pages/features/round-modeling.jsx:118
@@ -537,7 +537,7 @@ msgid "Our mission"
 msgstr "Unsere Mission"
 
 #: src/pages/features/esop.jsx:61
-msgid "Overview over vested, granted, exercised incentives"
+msgid "Overview over vested, granted, and exercised incentives"
 msgstr "Überblick über gevestete, herausgegebene und ausgeübte Optionen"
 
 #: src/pages/features/round-modeling.jsx:133
@@ -701,12 +701,12 @@ msgid "Startups do end up with several conflicting spreadsheet-based cap tables,
 msgstr "Startups haben tatsächlich oft verschiedene Cap Table Versionen, die zueinander im Konflikt stehen. Einer von den Founders, einer bei den Anwälten und einer bei den Hauptinvestoren. Mit Ledgy passiert das nicht. Hier hast du eine einzige Informationsquelle und kannst deinen zentralen Stakeholdern mit einem Mausklick Zugriff geben. Verschwende kein Geld damit verschiedene Cap Tables von Anwälten wieder zusammenzuführen. Mach es lieber gleich professionell."
 
 #: src/layouts/index.jsx:164
-msgid "Stay on top of your vesting schedules, options, phantom plans and convertible loans. Get fast insights for financing rounds or exit negotiations with build-in modeling. With the portfolio you will always have the latest information about your investment and vesting at your fingertips. Try now for free!"
-msgstr "Behalte den Überblick über deine Vestingpläne, Optionen, virtuelle Beteiligungen und Wandeldarlehen. Verschaffe dir schnell Erkenntnisse für Finanzierungsrunden oder Exit Verhandlungen mit integrierter Modellierung. Mit dem Portfolio wirst du immer die aktuellsten Informationen zu deinen Investments und Vestingplänen haben. Probier es jetzt umsonst aus!"
+msgid "Stay on top of your vesting schedules, options, phantom plans, and convertible loans. Get fast insights for financing rounds or exit negotiations using our built-in modeling tools. With the portfolio you will always have the latest information about your investment and vesting at your fingertips. Try now for free!"
+msgstr "Behalte den Überblick über deine Vestingpläne, Optionen, virtuelle Beteiligungen und Wandeldarlehen. Verschaffe dir schnell Erkenntnisse für Finanzierungsrunden oder Exit-Verhandlungen mit integrierter Modellierung. Mit dem Portfolio wirst du immer die aktuellsten Informationen zu deinen Investments und Vestingplänen haben. Probier es jetzt umsonst aus!"
 
 #: src/pages/index.jsx:21
-msgid "Stay on top of your vesting schedules, options, phantom plans and convertible loans. Get fast insights for financing rounds or exit negotiations with build-in modeling.<0/><1/>Are you an investor or employee? With the portfolio you will always have the latest information about your investment and vesting at your fingertips."
-msgstr "Behalte den Überblick über deine Vestingpläne, Optionen, virtuelle Beteiligungen und Wandeldarlehen. Verschaffe dir schnell Erkenntnisse für Finanzierungsrunden oder Exit Verhandlungen mit integrierter Modellierung.<0/><1/>Bist du ein Investor oder Mitarbeiter? Mit dem Portfolio wirst du immer die aktuellsten Informationen zu deinen Investments und Vestingplänen haben."
+msgid "Stay on top of your vesting schedules, options, phantom plans, and convertible loans. Get fast insights for financing rounds or exit negotiations using our built-in modeling tools.<0/><1/>Are you an investor or employee? With the portfolio you will always have the latest information about your investment and vesting at your fingertips."
+msgstr "Behalte den Überblick über deine Vestingpläne, Optionen, virtuelle Beteiligungen und Wandeldarlehen. Verschaffe dir schnell Erkenntnisse für Finanzierungsrunden oder Exit-Verhandlungen mit integrierter Modellierung.<0/><1/>Bist du ein Investor oder Mitarbeiter? Mit dem Portfolio wirst du immer die aktuellsten Informationen zu deinen Investments und Vestingplänen haben."
 
 #: src/layouts/index.jsx:73
 msgid "Still hesitating? <0>Learn more about our features</0>."

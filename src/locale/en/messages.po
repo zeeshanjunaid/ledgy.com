@@ -38,8 +38,8 @@ msgid "Add an incentives pool"
 msgstr "Add an incentives pool"
 
 #: src/pages/features/esop.jsx:80
-msgid "Add an option or phantom option with vesting"
-msgstr "Add an option or phantom option with vesting"
+msgid "Add options or phantom options with vesting"
+msgstr "Add options or phantom options with vesting"
 
 #: src/pages/features/round-modeling.jsx:118
 msgid "After you’re finished with modeling your financing round, you can download the scenario as a PDF document and share it with your co-founders, lawyers and investors. The document includes the pre- and post-money valuation of your company, all investments, and convertibles with their resulting share price and the number of shares and, of course, the resulting cap table. At the end of the document, you will also find valuable plots to visualize the new development step of your company."
@@ -557,8 +557,8 @@ msgid "Our mission"
 msgstr "Our mission"
 
 #: src/pages/features/esop.jsx:61
-msgid "Overview over vested, granted, exercised incentives"
-msgstr "Overview over vested, granted, exercised incentives"
+msgid "Overview over vested, granted, and exercised incentives"
+msgstr "Overview over vested, granted, and exercised incentives"
 
 #: src/pages/features/round-modeling.jsx:133
 msgid "PDF export of the financing round"
@@ -732,12 +732,12 @@ msgid "Startups do end up with several conflicting spreadsheet-based cap tables,
 msgstr "Startups do end up with several conflicting spreadsheet-based cap tables, one being with the founders, one with the lawyers, one with the leading investors. Not so with Ledgy. Have one single source of truth and give your key stakeholders access with a single click. Don’t waste money on consolidating several cap table versions, professionaly manage it from the start instead."
 
 #: src/layouts/index.jsx:164
-msgid "Stay on top of your vesting schedules, options, phantom plans and convertible loans. Get fast insights for financing rounds or exit negotiations with build-in modeling. With the portfolio you will always have the latest information about your investment and vesting at your fingertips. Try now for free!"
-msgstr "Stay on top of your vesting schedules, options, phantom plans and convertible loans. Get fast insights for financing rounds or exit negotiations with build-in modeling. With the portfolio you will always have the latest information about your investment and vesting at your fingertips. Try now for free!"
+msgid "Stay on top of your vesting schedules, options, phantom plans, and convertible loans. Get fast insights for financing rounds or exit negotiations using our built-in modeling tools. With the portfolio you will always have the latest information about your investment and vesting at your fingertips. Try now for free!"
+msgstr "Stay on top of your vesting schedules, options, phantom plans, and convertible loans. Get fast insights for financing rounds or exit negotiations using our built-in modeling tools. With the portfolio you will always have the latest information about your investment and vesting at your fingertips. Try now for free!"
 
 #: src/pages/index.jsx:21
-msgid "Stay on top of your vesting schedules, options, phantom plans and convertible loans. Get fast insights for financing rounds or exit negotiations with build-in modeling.<0/><1/>Are you an investor or employee? With the portfolio you will always have the latest information about your investment and vesting at your fingertips."
-msgstr "Stay on top of your vesting schedules, options, phantom plans and convertible loans. Get fast insights for financing rounds or exit negotiations with build-in modeling.<0/><1/>Are you an investor or employee? With the portfolio you will always have the latest information about your investment and vesting at your fingertips."
+msgid "Stay on top of your vesting schedules, options, phantom plans, and convertible loans. Get fast insights for financing rounds or exit negotiations using our built-in modeling tools.<0/><1/>Are you an investor or employee? With the portfolio you will always have the latest information about your investment and vesting at your fingertips."
+msgstr "Stay on top of your vesting schedules, options, phantom plans, and convertible loans. Get fast insights for financing rounds or exit negotiations using our built-in modeling tools.<0/><1/>Are you an investor or employee? With the portfolio you will always have the latest information about your investment and vesting at your fingertips."
 
 #: src/layouts/index.jsx:73
 msgid "Still hesitating? <0>Learn more about our features</0>."

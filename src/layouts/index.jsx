@@ -161,7 +161,7 @@ const TemplateWrapper = withI18n()((props: SiteProps) => {
     <div>
       <Title
         title={i18n.t`The missing accounting software for your equity`}
-        description={i18n.t`Stay on top of your vesting schedules, options, phantom plans and convertible loans. Get fast insights for financing rounds or exit negotiations with build-in modeling. With the portfolio you will always have the latest information about your investment and vesting at your fingertips. Try now for free!`}
+        description={i18n.t`Stay on top of your vesting schedules, options, phantom plans, and convertible loans. Get fast insights for financing rounds or exit negotiations using our built-in modeling tools. With the portfolio you will always have the latest information about your investment and vesting at your fingertips. Try now for free!`}
       />
       <Helmet>
         <html lang={props.lang} />
