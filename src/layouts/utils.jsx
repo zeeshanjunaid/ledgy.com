@@ -4,6 +4,7 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
 export const name = 'Ledgy';
+export const siteUrl = 'https://www.ledgy.com';
 export const appUrl = 'https://app.ledgy.com';
 export const demoUrl = 'https://demo.ledgy.com';
 export const blogUrl = 'https://blog.ledgy.com';

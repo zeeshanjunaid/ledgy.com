@@ -2,12 +2,11 @@
 
 import * as React from 'react';
 import Link, { navigateTo } from 'gatsby-link';
-import { graphql } from 'gatsby'
 import { I18nProvider, withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
 
 import '../polyfills';
-import { Title, name, appUrl, blogUrl, demoUrl } from './utils';
+import { Title, name, siteUrl, appUrl, blogUrl, demoUrl } from './utils';
 import { catalogs, langFromPath, langPrefix, getLocale } from '../i18n-config';
 import SignupForm from '../components/SignupForm';
 
@@ -144,16 +143,12 @@ const Footer = (props: LayoutProps) => (
 type SiteProps = {
   ...$Exact<Props>,
   lang: string,
-  data: { site: { siteMetadata: {
-    name: string, siteUrl: string,
-  } } },
-  children: (Object) => React.Node,
+  children: React.Node,
   location: { pathname: string },
 }
 
 const TemplateWrapper = withI18n()((props: SiteProps) => {
   const { i18n } = props;
-  const { siteUrl } = props.data.site.siteMetadata;
   const prefix = langPrefix(props.lang);
   const thumbnailUrl = `${siteUrl}/thumbnail.png`;
   const { pathname } = props.location;
@@ -196,7 +191,7 @@ const TemplateWrapper = withI18n()((props: SiteProps) => {
         </noscript>
       </Helmet>
       <Nav {...props} prefix={prefix} />
-      {props.children({ ...props, prefix })}
+      {props.children}
       <Footer {...props} prefix={prefix} />
     </div>
   );
@@ -228,14 +223,3 @@ export default class extends React.Component<{ location: { pathname: string } }>
     );
   }
 }
-
-// eslint-disable-next-line no-undef
-export const pageQuery = graphql`
-  query LayoutQuery {
-    site {
-      siteMetadata {
-        siteUrl
-      }
-    }
-  }
-`;
