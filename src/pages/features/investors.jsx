@@ -116,13 +116,13 @@ export const pageQuery = graphql`
     ...FeaturesFragment
 
     dashboardCards: imageSharp(fluid: { originalName: {regex: "/dashboard-cards.png/"} }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
     dashboardShares: imageSharp(fluid: { originalName: {regex: "/dashboard-shares.png/"} }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
     dashboardHistory: imageSharp(fluid: { originalName: {regex: "/dashboard-history.png/"} }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
   }
 `;

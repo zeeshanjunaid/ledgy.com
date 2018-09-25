@@ -181,25 +181,25 @@ export const pageQuery = graphql`
     ...FeaturesFragment
 
     incentivesPage: imageSharp(fluid: { originalName: {regex: "/incentives-overview.png/"} }) {
-      sizes(maxWidth: 900) { ...GatsbyImageSharpSizes }
+      fluid(maxWidth: 900) { ...GatsbyImageSharpFluid }
     }
     addOption: imageSharp(fluid: { originalName: {regex: "/option-add.png/"} }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
     vestingSchedule: imageSharp(fluid: { originalName: {regex: "/vesting-schedule.png/"} }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
     addPool: imageSharp(fluid: { originalName: {regex: "/add-pool.png/"} }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
     exerciseOption: imageSharp(fluid: { originalName: {regex: "/option-exercise.png/"} }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
     dilutedTable: imageSharp(fluid: { originalName: {regex: "/option-diluted-captable.png/"} }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
     optionInPortfolio: imageSharp(fluid: { originalName: {regex: "/incentives-dashboard.png/"} }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
   }
 `;

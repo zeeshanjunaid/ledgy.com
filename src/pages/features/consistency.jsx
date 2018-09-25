@@ -177,22 +177,22 @@ export const pageQuery = graphql`
     ...FeaturesFragment
 
     createCaptable: imageSharp(fluid: { originalName: {regex: "/create-captable.png/"} }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
     transactionError: imageSharp(fluid: { originalName: {regex: "/transaction-error.png/"} }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
     availableShares: imageSharp(fluid: { originalName: {regex: "/available-shares.png/"} }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
     shareNumberChecking: imageSharp(fluid: { originalName: {regex: "/share-number-checking.png/"} }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
     accessRights: imageSharp(fluid: { originalName: {regex: "/access-rights.png/"} }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
     captableBasic: imageSharp(fluid: { originalName: {regex: "/captable-basic.png/"} }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
   }
 `;

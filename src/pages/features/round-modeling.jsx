@@ -172,19 +172,19 @@ export const pageQuery = graphql`
     ...FeaturesFragment
 
     roundModelingSample: imageSharp(fluid: { originalName: {regex: "/round-modeling-sample.png/"} }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
     roundModelingCaptable: imageSharp(fluid: { originalName: {regex: "/round-modeling-captable.png/"} }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
     roundModelingProRata: imageSharp(fluid: { originalName: {regex: "/round-modeling-pro-rata.png/"} }) {
-      sizes(maxWidth: 500) { ...GatsbyImageSharpSizes }
+      fluid(maxWidth: 500) { ...GatsbyImageSharpFluid }
     }
     roundModelingPdf: imageSharp(fluid: { originalName: {regex: "/round-modeling-pdf.png/"} }) {
-      sizes(maxWidth: 2000) { ...GatsbyImageSharpSizes }
+      fluid(maxWidth: 2000) { ...GatsbyImageSharpFluid }
     }
     roundModelingConvert: imageSharp(fluid: { originalName: {regex: "/round-modeling-convert.png/"} }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
   }
 `;

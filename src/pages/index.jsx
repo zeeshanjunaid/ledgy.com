@@ -111,32 +111,32 @@ export const pageQuery = graphql`
     ...FeaturesFragment
 
     laptop: imageSharp(fluid: { originalName: {regex: "/laptop.png/"} }) {
-      sizes(maxWidth: 2000) { ...GatsbyImageSharpSizes_noBase64 }
+      fluid(maxWidth: 2000) { ...GatsbyImageSharpFluid_noBase64 }
     }
 
     viu: imageSharp(fluid: { originalName: {regex: "/viu/"} }) {
-      resolutions(width: 120) { ...GatsbyImageSharpResolutions }
+      fixed(width: 120) { ...GatsbyImageSharpFixed }
     }
     quitt: imageSharp(fluid: { originalName: {regex: "/quitt/"} }) {
-      resolutions(width: 80) { ...GatsbyImageSharpResolutions }
+      fixed(width: 80) { ...GatsbyImageSharpFixed }
     }
     cryptofund: imageSharp(fluid: {originalName: {regex: "/cryptofund/"} }) {
-      resolutions(width: 180) { ...GatsbyImageSharpResolutions }
+      fixed(width: 180) { ...GatsbyImageSharpFixed }
     }
     sherpany: imageSharp(fluid: { originalName: {regex: "/sherpany/"} }) {
-      resolutions(width: 150) { ...GatsbyImageSharpResolutions }
+      fixed(width: 150) { ...GatsbyImageSharpFixed }
     }
     frontify: imageSharp(fluid: { originalName: {regex: "/frontify/"} }) {
-      resolutions(width: 150) { ...GatsbyImageSharpResolutions }
+      fixed(width: 150) { ...GatsbyImageSharpFixed }
     }
     bexio: imageSharp(fluid: { originalName: {regex: "/bexio/"} }) {
-      resolutions(width: 110) { ...GatsbyImageSharpResolutions }
+      fixed(width: 110) { ...GatsbyImageSharpFixed }
     }
     allthings: imageSharp(fluid: { originalName: {regex: "/allthings/"} }) {
-      resolutions(width: 150) { ...GatsbyImageSharpResolutions }
+      fixed(width: 150) { ...GatsbyImageSharpFixed }
     }
     farmy: imageSharp(fluid: { originalName: {regex: "/farmy/"} }) {
-      resolutions(width: 130) { ...GatsbyImageSharpResolutions }
+      fixed(width: 130) { ...GatsbyImageSharpFixed }
     }
   }
 `;

@@ -160,16 +160,16 @@ export const pageQuery = graphql`
     ...FeaturesFragment
 
     shareRegisterPdf: imageSharp(fluid: { originalName: {regex: "/share-register-pdf.png/"} }) {
-      sizes(maxWidth: 2400) { ...GatsbyImageSharpSizes }
+      fluid(maxWidth: 2400) { ...GatsbyImageSharpFluid }
     }
     sendHoldingConfirmation: imageSharp(fluid: { originalName: {regex: "/send-holding-confirmation.png/"} }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
     holdingConfirmationPdf: imageSharp(fluid: { originalName: {regex: "/holding-confirmation-pdf.png/"} }) {
-      sizes(maxWidth: 2000) { ...GatsbyImageSharpSizes }
+      fluid(maxWidth: 2000) { ...GatsbyImageSharpFluid }
     }
     documentManagement: imageSharp(fluid: { originalName: {regex: "/document-management.png/"} }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
   }
 `;

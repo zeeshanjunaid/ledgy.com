@@ -208,50 +208,50 @@ export default withI18n()(IndexPage);
 export const pageQuery = graphql`
   query {
     mission: imageSharp(fluid: { originalName: {regex: "/mission/"} }) {
-      sizes(maxWidth: 600) {
-        ...GatsbyImageSharpSizes
+      fluid(maxWidth: 600) {
+        ...GatsbyImageSharpFluid
       }
     }
     ben: imageSharp(fluid: { originalName: {regex: "/ben.jpg/"} }) {
-      resolutions(width: 245, height: 245) {
-        ...GatsbyImageSharpResolutions
+      fixed(width: 245, height: 245) {
+        ...GatsbyImageSharpFixed
       }
     }
     yoko: imageSharp(fluid: { originalName: {regex: "/yoko.jpg/"} }) {
-      resolutions(width: 245, height: 245) {
-        ...GatsbyImageSharpResolutions
+      fixed(width: 245, height: 245) {
+        ...GatsbyImageSharpFixed
       }
     }
     timo: imageSharp(fluid: { originalName: {regex: "/timo.jpg/"} }) {
-      resolutions(width: 245, height: 245) {
-        ...GatsbyImageSharpResolutions
+      fixed(width: 245, height: 245) {
+        ...GatsbyImageSharpFixed
       }
     }
 
 
     myke: imageSharp(fluid: { originalName: {regex: "/myke.jpg/"} }) {
-      resolutions(width: 128, height: 128) {
-        ...GatsbyImageSharpResolutions
+      fixed(width: 128, height: 128) {
+        ...GatsbyImageSharpFixed
       }
     }
     paul: imageSharp(fluid: { originalName: {regex: "/paul.jpg/"} }) {
-      resolutions(width: 128, height: 128) {
-        ...GatsbyImageSharpResolutions
+      fixed(width: 128, height: 128) {
+        ...GatsbyImageSharpFixed
       }
     }
     luzius: imageSharp(fluid: { originalName: {regex: "/luzius.jpg/"} }) {
-      resolutions(width: 128, height: 128) {
-        ...GatsbyImageSharpResolutions
+      fixed(width: 128, height: 128) {
+        ...GatsbyImageSharpFixed
       }
     }
     adrian: imageSharp(fluid: { originalName: {regex: "/adrian.jpg/"} }) {
-      resolutions(width: 128, height: 128) {
-        ...GatsbyImageSharpResolutions
+      fixed(width: 128, height: 128) {
+        ...GatsbyImageSharpFixed
       }
     }
     elena: imageSharp(fluid: { originalName: {regex: "/elena.jpg/"} }) {
-      resolutions(width: 128, height: 128) {
-        ...GatsbyImageSharpResolutions
+      fixed(width: 128, height: 128) {
+        ...GatsbyImageSharpFixed
       }
     }
   }

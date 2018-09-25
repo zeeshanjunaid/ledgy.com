@@ -101,19 +101,19 @@ export const FeatureLinks = ({ i18n, ...props }: {
 export const FeaturesFragment = graphql`
   fragment FeaturesFragment on Query {
     consistency: imageSharp(fluid: { originalName: {regex: "/consistency.png/"} }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
     roundModeling: imageSharp(fluid: { originalName: {regex: "/round-modeling.png/"} }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
     esop: imageSharp(fluid: { originalName: {regex: "/esop.png/"} }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
     reporting: imageSharp(fluid: { originalName: {regex: "/reporting.png/"} }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
     investors: imageSharp(fluid: { originalName: {regex: "/investors.png/"} }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
   }
 `;
