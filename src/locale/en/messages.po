@@ -480,10 +480,6 @@ msgstr "M&A and Private Equity Lawyer with a focus on start-up legal advise, Sma
 msgid "Make your employees happy"
 msgstr "Make your employees happy"
 
-#: src/layouts/index.jsx:164
-msgid "Manage your Cap Table, not your Excel! Ledgy is the single place to track the complete history of your shares, manage your ESOPs and model detailed financing rounds. Enjoy a guaranteed error-free cap table and engage your investors and employees. Try Now For Free!"
-msgstr "Manage your Cap Table, not your Excel! Ledgy is the single place to track the complete history of your shares, manage your ESOPs and model detailed financing rounds. Enjoy a guaranteed error-free cap table and engage your investors and employees. Try Now For Free!"
-
 #: src/pages/features.jsx:27
 msgid "Manage your shares.<0/>Not your Excel."
 msgstr "Manage your shares.<0/>Not your Excel."
@@ -735,6 +731,10 @@ msgstr "Spreadsheet Import"
 msgid "Startups do end up with several conflicting spreadsheet-based cap tables, one being with the founders, one with the lawyers, one with the leading investors. Not so with Ledgy. Have one single source of truth and give your key stakeholders access with a single click. Don’t waste money on consolidating several cap table versions, professionaly manage it from the start instead."
 msgstr "Startups do end up with several conflicting spreadsheet-based cap tables, one being with the founders, one with the lawyers, one with the leading investors. Not so with Ledgy. Have one single source of truth and give your key stakeholders access with a single click. Don’t waste money on consolidating several cap table versions, professionaly manage it from the start instead."
 
+#: src/layouts/index.jsx:164
+msgid "Stay on top of your vesting schedules, options, phantom plans and convertible loans. Get fast insights for financing rounds or exit negotiations with build-in modeling. With the portfolio you will always have the latest information about your investment and vesting at your fingertips. Try now for free!"
+msgstr "Stay on top of your vesting schedules, options, phantom plans and convertible loans. Get fast insights for financing rounds or exit negotiations with build-in modeling. With the portfolio you will always have the latest information about your investment and vesting at your fingertips. Try now for free!"
+
 #: src/pages/index.jsx:21
 msgid "Stay on top of your vesting schedules, options, phantom plans and convertible loans. Get fast insights for financing rounds or exit negotiations with build-in modeling.<0/><1/>Are you an investor or employee? With the portfolio you will always have the latest information about your investment and vesting at your fingertips."
 msgstr "Stay on top of your vesting schedules, options, phantom plans and convertible loans. Get fast insights for financing rounds or exit negotiations with build-in modeling.<0/><1/>Are you an investor or employee? With the portfolio you will always have the latest information about your investment and vesting at your fingertips."
@@ -780,8 +780,8 @@ msgid "The holding confirmation lists all assets that a shareholder owns. You ca
 msgstr "The holding confirmation lists all assets that a shareholder owns. You can optionally include a tax value of the shares. Employees will be able to see their stock ownership plans and how many of their total shares they already have vested.<0/>Make your shareholders feel good, they will reward you."
 
 #: src/layouts/index.jsx:163
-msgid "The missing accounting software for your cap table"
-msgstr "The missing accounting software for your cap table"
+msgid "The missing accounting software for your equity"
+msgstr "The missing accounting software for your equity"
 
 #: src/pages/index.jsx:19
 msgid "The missing accounting<0/>software for your equity"
@@ -944,8 +944,8 @@ msgid "You’re in good company"
 msgstr "You’re in good company"
 
 #: src/layouts/index.jsx:168
-msgid "cap table, stock ledger, share register, startup, round modeling, equity, esop, reporting, investors"
-msgstr "cap table, stock ledger, share register, startup, round modeling, equity, esop, reporting, investors"
+msgid "cap table, stock ledger, share register, startup, modeling, financing round, equity, esop, phantom, option plan, virtual, portfolio, reporting, investors"
+msgstr "cap table, stock ledger, share register, startup, modeling, financing round, equity, esop, phantom, option plan, virtual, portfolio, reporting, investors"
 
 #: src/pages/pricing.jsx:66
 #: src/pages/pricing.jsx:81

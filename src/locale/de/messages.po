@@ -6,7 +6,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Creation-Date: 2018-09-12T18:40:54.619Z\n"
-"PO-Revision-Date: 2018-09-25 16:29+0200\n"
+"PO-Revision-Date: 2018-09-25 16:49+0200\n"
 "Language: de\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
@@ -460,10 +460,6 @@ msgstr "M&A- und Private-Equity-Anwältin mit Schwerpunkt auf Start-up Beratung,
 msgid "Make your employees happy"
 msgstr "Mach deine Mitarbeiter glücklich"
 
-#: src/layouts/index.jsx:164
-msgid "Manage your Cap Table, not your Excel! Ledgy is the single place to track the complete history of your shares, manage your ESOPs and model detailed financing rounds. Enjoy a guaranteed error-free cap table and engage your investors and employees. Try Now For Free!"
-msgstr "Verwalte deinen Cap Table, nicht dein Excel. Ledgy ist der perfekte Ort, an dem du den Verlauf deiner Aktien verfolgen, deine ESOPs verwalten, und die nächste Finanzierungsrunde simulieren kannst. Genieße ein garantiert fehlerloses Aktienregister und motiviere deine Mitarbeiter und Investoren. Jetzt Gratis Testen!"
-
 #: src/pages/features.jsx:27
 msgid "Manage your shares.<0/>Not your Excel."
 msgstr "Verwalte deine Aktien. <0/> Nicht dein Excel."
@@ -704,6 +700,10 @@ msgstr "Spreadsheet-Import"
 msgid "Startups do end up with several conflicting spreadsheet-based cap tables, one being with the founders, one with the lawyers, one with the leading investors. Not so with Ledgy. Have one single source of truth and give your key stakeholders access with a single click. Don’t waste money on consolidating several cap table versions, professionaly manage it from the start instead."
 msgstr "Startups haben tatsächlich oft verschiedene Cap Table Versionen, die zueinander im Konflikt stehen. Einer von den Founders, einer bei den Anwälten und einer bei den Hauptinvestoren. Mit Ledgy passiert das nicht. Hier hast du eine einzige Informationsquelle und kannst deinen zentralen Stakeholdern mit einem Mausklick Zugriff geben. Verschwende kein Geld damit verschiedene Cap Tables von Anwälten wieder zusammenzuführen. Mach es lieber gleich professionell."
 
+#: src/layouts/index.jsx:164
+msgid "Stay on top of your vesting schedules, options, phantom plans and convertible loans. Get fast insights for financing rounds or exit negotiations with build-in modeling. With the portfolio you will always have the latest information about your investment and vesting at your fingertips. Try now for free!"
+msgstr "Behalte den Überblick über deine Vestingpläne, Optionen, virtuelle Beteiligungen und Wandeldarlehen. Verschaffe dir schnell Erkenntnisse für Finanzierungsrunden oder Exit Verhandlungen mit integrierter Modellierung. Mit dem Portfolio wirst du immer die aktuellsten Informationen zu deinen Investments und Vestingplänen haben. Probier es jetzt umsonst aus!"
+
 #: src/pages/index.jsx:21
 msgid "Stay on top of your vesting schedules, options, phantom plans and convertible loans. Get fast insights for financing rounds or exit negotiations with build-in modeling.<0/><1/>Are you an investor or employee? With the portfolio you will always have the latest information about your investment and vesting at your fingertips."
 msgstr "Behalte den Überblick über deine Vestingpläne, Optionen, virtuelle Beteiligungen und Wandeldarlehen. Verschaffe dir schnell Erkenntnisse für Finanzierungsrunden oder Exit Verhandlungen mit integrierter Modellierung.<0/><1/>Bist du ein Investor oder Mitarbeiter? Mit dem Portfolio wirst du immer die aktuellsten Informationen zu deinen Investments und Vestingplänen haben."
@@ -749,8 +749,8 @@ msgid "The holding confirmation lists all assets that a shareholder owns. You ca
 msgstr "Der Beteiligungsauszug zählt alles auf, was ein Gesellschafter besitzt. Zusätzlich kannst du noch den Steuerwert der Aktien angeben. Mitarbeiter können ihre Beteiligungen und das Vesting sehen.<0/>Mach deine Gesellschafter glücklich, sie werden sich revanchieren."
 
 #: src/layouts/index.jsx:163
-msgid "The missing accounting software for your cap table"
-msgstr "Die fehlende Buchhaltung für deinen Cap Table"
+msgid "The missing accounting software for your equity"
+msgstr "Die fehlende Buchhaltung für deine Beteiligungen"
 
 #: src/pages/index.jsx:19
 msgid "The missing accounting<0/>software for your equity"
@@ -913,8 +913,8 @@ msgid "You’re in good company"
 msgstr "Du befindest dich in guter Gesellschaft"
 
 #: src/layouts/index.jsx:168
-msgid "cap table, stock ledger, share register, startup, round modeling, equity, esop, reporting, investors"
-msgstr "Cap Table, Aktienregister, Startup, Modellierung von Finanzierungsrunden, Aktien, esop, Reporting, Investoren"
+msgid "cap table, stock ledger, share register, startup, modeling, financing round, equity, esop, phantom, option plan, virtual, portfolio, reporting, investors"
+msgstr "cap table, Aktienbuch, Aktienregister, Startup, Modellierung, Finanzierungsrunde, Exit, ESOP, VSOP, Beteiligungsplan, Unternehmensbeteiligung, Mitarbeiterbeteiligung, Optionspläne, virtuelle Beteiligung, Reporting, Investor, Portfolio"
 
 #: src/pages/pricing.jsx:66 src/pages/pricing.jsx:81
 msgid "coming soon"
