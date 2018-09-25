@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: { siteUrl: 'https://www.ledgy.com' },
   plugins: [
+    'gatsby-plugin-flow',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-react-next',
     'gatsby-plugin-sass',
     'gatsby-transformer-sharp',
     'gatsby-plugin-nprogress',
