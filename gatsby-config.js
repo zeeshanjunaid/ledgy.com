@@ -42,10 +42,7 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: 'gatsby-plugin-offline',
-      options: { navigateFallbackWhitelist: [] },
-    },
+    'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-netlify',
       options: {
