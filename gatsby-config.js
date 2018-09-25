@@ -53,14 +53,13 @@ module.exports = {
       options: {
         allPageHeaders: [
           [
-            'Content-Security-Policy:',
-            "default-src 'none'",
-            "img-src 'self' data: https://csi.gstatic.com https://www.google-analytics.com https://maps.gstatic.com https://maps.googleapis.com https://stats.g.doubleclick.net;",
-            "object-src 'none';",
-            "font-src 'self' data: https://fonts.gstatic.com;",
+            "Content-Security-Policy: default-src 'none'",
+            "img-src 'self' data: https://csi.gstatic.com https://www.google-analytics.com https://maps.gstatic.com https://maps.googleapis.com https://stats.g.doubleclick.net",
+            "object-src 'none'",
+            "font-src 'self' data: https://fonts.gstatic.com",
             "script-src 'self' 'unsafe-inline' https://wchat.eu.freshchat.com/js/",
             "style-src 'self' 'unsafe-inline'",
-          ].join(' '),
+          ].join('; '),
           'Referrer-Policy: strict-origin-when-cross-origin',
         ],
       },
