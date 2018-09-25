@@ -61,5 +61,9 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: 'gatsby-plugin-sri',
+      options: { hash: 'sha512' },
+    },
   ],
 };
