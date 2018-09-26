@@ -91,9 +91,8 @@ const IndexPage = (props: Props) => (
             <header className="section-header mb-7">
               <h2><Trans>Your data in safe hands</Trans></h2>
             </header>
-            <div className="row gap-y">
-              <SecurityRow {...props} />
-            </div>
+
+            <SecurityRow {...props} />
           </section>
 
         </div>
