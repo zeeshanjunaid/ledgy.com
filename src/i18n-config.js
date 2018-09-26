@@ -1,4 +1,8 @@
-const { chain, includes } = require('lodash');
+const compose = require('lodash/fp/compose');
+const pick = require('lodash/fp/pick');
+const flatten = require('lodash/fp/flatten');
+const values = require('lodash/fp/values');
+const compact = require('lodash/fp/compact');
 
 const languages = ['en', 'de'];
 const catalogs = {
@@ -14,14 +18,14 @@ const langFromPath = pathname => (pathname.startsWith('/de/') ? 'de' : 'en');
 
 const browserLanguagePropertyKeys = ['languages', 'language', 'browserLanguage', 'userLanguage', 'systemLanguage'];
 const availableLanguages = ['de', 'en'];
-const getLocale = () => chain(window.navigator)
-  .pick(browserLanguagePropertyKeys)
-  .values()
-  .flatten()
-  .compact()
+const getLocale = () => compose(
+  compact,
+  flatten,
+  values,
+  pick(browserLanguagePropertyKeys),
+)(window.navigator)
   .map(s => s.substr(0, 2))
-  .find(s => includes(availableLanguages, s))
-  .value() || 'en';
+  .find(s => availableLanguages.includes(s)) || 'en';
 
 exports.defaultLanguage = defaultLanguage;
 exports.languages = languages;

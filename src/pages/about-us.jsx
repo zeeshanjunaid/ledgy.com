@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import Img from 'gatsby-image';
+import { graphql } from 'gatsby';
 import { withI18n, Trans } from '@lingui/react';
 
 import { Title } from '../layouts/utils';
@@ -205,52 +206,52 @@ export default withI18n()(IndexPage);
 
 // eslint-disable-next-line no-undef
 export const pageQuery = graphql`
-  query AboutQuery {
-    mission: imageSharp(id: { regex: "/mission/" }) {
-      sizes(maxWidth: 600) {
-        ...GatsbyImageSharpSizes
+  query {
+    mission: imageSharp(fluid: { originalName: {regex: "/mission/"} }) {
+      fluid(maxWidth: 600) {
+        ...GatsbyImageSharpFluid
       }
     }
-    ben: imageSharp(id: { regex: "/ben.jpg/" }) {
-      resolutions(width: 245, height: 245) {
-        ...GatsbyImageSharpResolutions
+    ben: imageSharp(fluid: { originalName: {regex: "/ben.jpg/"} }) {
+      fixed(width: 245, height: 245) {
+        ...GatsbyImageSharpFixed
       }
     }
-    yoko: imageSharp(id: { regex: "/yoko.jpg/" }) {
-      resolutions(width: 245, height: 245) {
-        ...GatsbyImageSharpResolutions
+    yoko: imageSharp(fluid: { originalName: {regex: "/yoko.jpg/"} }) {
+      fixed(width: 245, height: 245) {
+        ...GatsbyImageSharpFixed
       }
     }
-    timo: imageSharp(id: { regex: "/timo.jpg/" }) {
-      resolutions(width: 245, height: 245) {
-        ...GatsbyImageSharpResolutions
+    timo: imageSharp(fluid: { originalName: {regex: "/timo.jpg/"} }) {
+      fixed(width: 245, height: 245) {
+        ...GatsbyImageSharpFixed
       }
     }
 
 
-    myke: imageSharp(id: { regex: "/myke.jpg/" }) {
-      resolutions(width: 128, height: 128) {
-        ...GatsbyImageSharpResolutions
+    myke: imageSharp(fluid: { originalName: {regex: "/myke.jpg/"} }) {
+      fixed(width: 128, height: 128) {
+        ...GatsbyImageSharpFixed
       }
     }
-    paul: imageSharp(id: { regex: "/paul.jpg/" }) {
-      resolutions(width: 128, height: 128) {
-        ...GatsbyImageSharpResolutions
+    paul: imageSharp(fluid: { originalName: {regex: "/paul.jpg/"} }) {
+      fixed(width: 128, height: 128) {
+        ...GatsbyImageSharpFixed
       }
     }
-    luzius: imageSharp(id: { regex: "/luzius.jpg/" }) {
-      resolutions(width: 128, height: 128) {
-        ...GatsbyImageSharpResolutions
+    luzius: imageSharp(fluid: { originalName: {regex: "/luzius.jpg/"} }) {
+      fixed(width: 128, height: 128) {
+        ...GatsbyImageSharpFixed
       }
     }
-    adrian: imageSharp(id: { regex: "/adrian.jpg/" }) {
-      resolutions(width: 128, height: 128) {
-        ...GatsbyImageSharpResolutions
+    adrian: imageSharp(fluid: { originalName: {regex: "/adrian.jpg/"} }) {
+      fixed(width: 128, height: 128) {
+        ...GatsbyImageSharpFixed
       }
     }
-    elena: imageSharp(id: { regex: "/elena.jpg/" }) {
-      resolutions(width: 128, height: 128) {
-        ...GatsbyImageSharpResolutions
+    elena: imageSharp(fluid: { originalName: {regex: "/elena.jpg/"} }) {
+      fixed(width: 128, height: 128) {
+        ...GatsbyImageSharpFixed
       }
     }
   }

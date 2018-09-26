@@ -2,6 +2,8 @@
 
 import * as React from 'react';
 import { Trans } from '@lingui/react';
+import 'isomorphic-fetch';
+
 
 import { appUrl } from '../layouts/utils';
 

@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import { withI18n, Trans } from '@lingui/react';
+import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 import { FeatureLinks } from '../../components/Features';
@@ -176,29 +177,29 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
 // eslint-disable-next-line no-undef
 export const pageQuery = graphql`
-  query ESOPQuery {
+  query {
     ...FeaturesFragment
 
-    incentivesPage: imageSharp(id: { regex: "/incentives-overview.png/" }) {
-      sizes(maxWidth: 900) { ...GatsbyImageSharpSizes }
+    incentivesPage: imageSharp(fluid: { originalName: {regex: "/incentives-overview.png/"} }) {
+      fluid(maxWidth: 900) { ...GatsbyImageSharpFluid }
     }
-    addOption: imageSharp(id: { regex: "/option-add.png/" }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    addOption: imageSharp(fluid: { originalName: {regex: "/option-add.png/"} }) {
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
-    vestingSchedule: imageSharp(id: { regex: "/vesting-schedule.png/" }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    vestingSchedule: imageSharp(fluid: { originalName: {regex: "/vesting-schedule.png/"} }) {
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
-    addPool: imageSharp(id: { regex: "/add-pool.png/" }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    addPool: imageSharp(fluid: { originalName: {regex: "/add-pool.png/"} }) {
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
-    exerciseOption: imageSharp(id: { regex: "/option-exercise.png/" }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    exerciseOption: imageSharp(fluid: { originalName: {regex: "/option-exercise.png/"} }) {
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
-    dilutedTable: imageSharp(id: { regex: "/option-diluted-captable.png/" }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    dilutedTable: imageSharp(fluid: { originalName: {regex: "/option-diluted-captable.png/"} }) {
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
-    optionInPortfolio: imageSharp(id: { regex: "/incentives-dashboard.png/" }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    optionInPortfolio: imageSharp(fluid: { originalName: {regex: "/incentives-dashboard.png/"} }) {
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
   }
 `;

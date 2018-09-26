@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: { siteUrl: 'https://www.ledgy.com' },
   plugins: [
+    'gatsby-plugin-layout',
+    'gatsby-plugin-flow',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-react-next',
     'gatsby-plugin-sass',
     'gatsby-transformer-sharp',
     'gatsby-plugin-nprogress',
@@ -42,13 +43,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-offline',
-      options: {
-        navigateFallback: null,
-        navigateFallbackWhitelist: [],
-      },
-    },
-    {
       resolve: 'gatsby-plugin-netlify',
       options: {
         allPageHeaders: [
@@ -61,10 +55,15 @@ module.exports = {
             "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ https://wchat.eu.freshchat.com/assets/widget/ https://maps.googleapis.com/maps/api/",
             "frame-src 'self' https://wchat.eu.freshchat.com/ https://ledgy.eu.webpush.freshchat.com/",
             "connect-src 'self'",
+            "prefetch-src 'self'",
           ].join('; '),
           'Referrer-Policy: strict-origin-when-cross-origin',
         ],
       },
+    },
+    {
+      resolve: 'gatsby-plugin-sri',
+      options: { hash: 'sha512' },
     },
   ],
 };

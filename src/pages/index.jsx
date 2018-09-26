@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import { withI18n, Trans } from '@lingui/react';
-import Link from 'gatsby-link';
+import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 
 import { FeatureLinks } from '../components/Features';
@@ -91,9 +91,8 @@ const IndexPage = (props: Props) => (
             <header className="section-header mb-7">
               <h2><Trans>Your data in safe hands</Trans></h2>
             </header>
-            <div className="row gap-y">
-              <SecurityRow {...props} />
-            </div>
+
+            <SecurityRow {...props} />
           </section>
 
         </div>
@@ -107,36 +106,36 @@ export default withI18n()(IndexPage);
 
 // eslint-disable-next-line no-undef
 export const pageQuery = graphql`
-  query IndexQuery {
+  query {
     ...FeaturesFragment
 
-    laptop: imageSharp(id: { regex: "/laptop.png/" }) {
-      sizes(maxWidth: 2000) { ...GatsbyImageSharpSizes_noBase64 }
+    laptop: imageSharp(fluid: { originalName: {regex: "/laptop.png/"} }) {
+      fluid(maxWidth: 2000) { ...GatsbyImageSharpFluid_noBase64 }
     }
 
-    viu: imageSharp(id: { regex: "/viu/" }) {
-      resolutions(width: 120) { ...GatsbyImageSharpResolutions }
+    viu: imageSharp(fluid: { originalName: {regex: "/viu/"} }) {
+      fixed(width: 120) { ...GatsbyImageSharpFixed }
     }
-    quitt: imageSharp(id: { regex: "/quitt/" }) {
-      resolutions(width: 80) { ...GatsbyImageSharpResolutions }
+    quitt: imageSharp(fluid: { originalName: {regex: "/quitt/"} }) {
+      fixed(width: 80) { ...GatsbyImageSharpFixed }
     }
-    cryptofund: imageSharp(id: { regex: "/cryptofund/" }) {
-      resolutions(width: 180) { ...GatsbyImageSharpResolutions }
+    cryptofund: imageSharp(fluid: {originalName: {regex: "/cryptofund/"} }) {
+      fixed(width: 180) { ...GatsbyImageSharpFixed }
     }
-    sherpany: imageSharp(id: { regex: "/sherpany/" }) {
-      resolutions(width: 150) { ...GatsbyImageSharpResolutions }
+    sherpany: imageSharp(fluid: { originalName: {regex: "/sherpany/"} }) {
+      fixed(width: 150) { ...GatsbyImageSharpFixed }
     }
-    frontify: imageSharp(id: { regex: "/frontify/" }) {
-      resolutions(width: 150) { ...GatsbyImageSharpResolutions }
+    frontify: imageSharp(fluid: { originalName: {regex: "/frontify/"} }) {
+      fixed(width: 150) { ...GatsbyImageSharpFixed }
     }
-    bexio: imageSharp(id: { regex: "/bexio/" }) {
-      resolutions(width: 110) { ...GatsbyImageSharpResolutions }
+    bexio: imageSharp(fluid: { originalName: {regex: "/bexio/"} }) {
+      fixed(width: 110) { ...GatsbyImageSharpFixed }
     }
-    allthings: imageSharp(id: { regex: "/allthings/" }) {
-      resolutions(width: 150) { ...GatsbyImageSharpResolutions }
+    allthings: imageSharp(fluid: { originalName: {regex: "/allthings/"} }) {
+      fixed(width: 150) { ...GatsbyImageSharpFixed }
     }
-    farmy: imageSharp(id: { regex: "/farmy/" }) {
-      resolutions(width: 130) { ...GatsbyImageSharpResolutions }
+    farmy: imageSharp(fluid: { originalName: {regex: "/farmy/"} }) {
+      fixed(width: 130) { ...GatsbyImageSharpFixed }
     }
   }
 `;

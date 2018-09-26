@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import { withI18n, Trans } from '@lingui/react';
-import Link from 'gatsby-link';
+import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 
 import { FeatureLinks } from '../../components/Features';
@@ -173,26 +173,26 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
 // eslint-disable-next-line no-undef
 export const pageQuery = graphql`
-  query ConsistencyQuery {
+  query {
     ...FeaturesFragment
 
-    createCaptable: imageSharp(id: { regex: "/create-captable.png/" }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    createCaptable: imageSharp(fluid: { originalName: {regex: "/create-captable.png/"} }) {
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
-    transactionError: imageSharp(id: { regex: "/transaction-error.png/" }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    transactionError: imageSharp(fluid: { originalName: {regex: "/transaction-error.png/"} }) {
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
-    availableShares: imageSharp(id: { regex: "/available-shares.png/" }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    availableShares: imageSharp(fluid: { originalName: {regex: "/available-shares.png/"} }) {
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
-    shareNumberChecking: imageSharp(id: { regex: "/share-number-checking.png/" }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    shareNumberChecking: imageSharp(fluid: { originalName: {regex: "/share-number-checking.png/"} }) {
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
-    accessRights: imageSharp(id: { regex: "/access-rights.png/" }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    accessRights: imageSharp(fluid: { originalName: {regex: "/access-rights.png/"} }) {
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
-    captableBasic: imageSharp(id: { regex: "/captable-basic.png/" }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    captableBasic: imageSharp(fluid: { originalName: {regex: "/captable-basic.png/"} }) {
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
   }
 `;

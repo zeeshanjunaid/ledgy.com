@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import { withI18n, Trans } from '@lingui/react';
+import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 import { FeatureLinks } from '../../components/Features';
@@ -155,20 +156,20 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
 // eslint-disable-next-line no-undef
 export const pageQuery = graphql`
-  query ReportingQuery {
+  query {
     ...FeaturesFragment
 
-    shareRegisterPdf: imageSharp(id: { regex: "/share-register-pdf.png/" }) {
-      sizes(maxWidth: 2400) { ...GatsbyImageSharpSizes }
+    shareRegisterPdf: imageSharp(fluid: { originalName: {regex: "/share-register-pdf.png/"} }) {
+      fluid(maxWidth: 2400) { ...GatsbyImageSharpFluid }
     }
-    sendHoldingConfirmation: imageSharp(id: { regex: "/send-holding-confirmation.png/" }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    sendHoldingConfirmation: imageSharp(fluid: { originalName: {regex: "/send-holding-confirmation.png/"} }) {
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
-    holdingConfirmationPdf: imageSharp(id: { regex: "/holding-confirmation-pdf.png/" }) {
-      sizes(maxWidth: 2000) { ...GatsbyImageSharpSizes }
+    holdingConfirmationPdf: imageSharp(fluid: { originalName: {regex: "/holding-confirmation-pdf.png/"} }) {
+      fluid(maxWidth: 2000) { ...GatsbyImageSharpFluid }
     }
-    documentManagement: imageSharp(id: { regex: "/document-management.png/" }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    documentManagement: imageSharp(fluid: { originalName: {regex: "/document-management.png/"} }) {
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
   }
 `;

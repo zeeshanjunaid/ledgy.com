@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import { Trans } from '@lingui/react';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 
 export default (props: Props) => (
   <div className="row gap-y text-center">

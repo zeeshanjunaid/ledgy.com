@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import { withI18n, Trans } from '@lingui/react';
+import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 import { FeatureLinks } from '../../components/Features';
@@ -167,23 +168,23 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
 // eslint-disable-next-line no-undef
 export const pageQuery = graphql`
-  query RoundModelingQuery {
+  query {
     ...FeaturesFragment
 
-    roundModelingSample: imageSharp(id: { regex: "/round-modeling-sample.png/" }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    roundModelingSample: imageSharp(fluid: { originalName: {regex: "/round-modeling-sample.png/"} }) {
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
-    roundModelingCaptable: imageSharp(id: { regex: "/round-modeling-captable.png/" }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    roundModelingCaptable: imageSharp(fluid: { originalName: {regex: "/round-modeling-captable.png/"} }) {
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
-    roundModelingProRata: imageSharp(id: { regex: "/round-modeling-pro-rata.png/" }) {
-      sizes(maxWidth: 500) { ...GatsbyImageSharpSizes }
+    roundModelingProRata: imageSharp(fluid: { originalName: {regex: "/round-modeling-pro-rata.png/"} }) {
+      fluid(maxWidth: 500) { ...GatsbyImageSharpFluid }
     }
-    roundModelingPdf: imageSharp(id: { regex: "/round-modeling-pdf.png/" }) {
-      sizes(maxWidth: 2000) { ...GatsbyImageSharpSizes }
+    roundModelingPdf: imageSharp(fluid: { originalName: {regex: "/round-modeling-pdf.png/"} }) {
+      fluid(maxWidth: 2000) { ...GatsbyImageSharpFluid }
     }
-    roundModelingConvert: imageSharp(id: { regex: "/round-modeling-convert.png/" }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    roundModelingConvert: imageSharp(fluid: { originalName: {regex: "/round-modeling-convert.png/"} }) {
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
   }
 `;

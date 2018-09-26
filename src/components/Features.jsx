@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import { Trans } from '@lingui/react';
-import Link from 'gatsby-link';
+import { Link, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 
@@ -99,21 +99,21 @@ export const FeatureLinks = ({ i18n, ...props }: {
 
 // eslint-disable-next-line no-undef
 export const FeaturesFragment = graphql`
-  fragment FeaturesFragment on RootQueryType {
-    consistency: imageSharp(id: { regex: "/consistency.png/" }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+  fragment FeaturesFragment on Query {
+    consistency: imageSharp(fluid: { originalName: {regex: "/consistency.png/"} }) {
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
-    roundModeling: imageSharp(id: { regex: "/round-modeling.png/" }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    roundModeling: imageSharp(fluid: { originalName: {regex: "/round-modeling.png/"} }) {
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
-    esop: imageSharp(id: { regex: "/esop.png/" }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    esop: imageSharp(fluid: { originalName: {regex: "/esop.png/"} }) {
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
-    reporting: imageSharp(id: { regex: "/reporting.png/" }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    reporting: imageSharp(fluid: { originalName: {regex: "/reporting.png/"} }) {
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
-    investors: imageSharp(id: { regex: "/investors.png/" }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    investors: imageSharp(fluid: { originalName: {regex: "/investors.png/"} }) {
+      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
     }
   }
 `;

@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import { withI18n, Trans } from '@lingui/react';
+import { graphql } from 'gatsby';
 
 import { Feature } from '../components/Features';
 import AllFeatures from '../components/AllFeatures';
@@ -140,7 +141,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
 // eslint-disable-next-line no-undef
 export const pageQuery = graphql`
-  query FeaturesPageQuery {
+  query {
     ...FeaturesFragment
   }
 `;

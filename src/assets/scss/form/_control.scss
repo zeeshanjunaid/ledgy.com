@@ -48,9 +48,9 @@
 .custom-radio {
 
   .custom-control-label::after {
-    $size: $custom-control-indicator-size - 2px;
+    $size: $custom-control-indicator-size - 0.11rem;
     top: 12px - 4px;
-    left: $size/4 + 1px;
+    left: $size/4 + 0.05rem;
     //margin-top: -$size/4 - 2px;
     border-radius: 50%;
     width: $size/2;
