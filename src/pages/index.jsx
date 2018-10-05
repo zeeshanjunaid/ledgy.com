@@ -67,7 +67,7 @@ const IndexPage = (props: Props) => (
 
           <div className="partner">
             <Reference img={props.data.bexio} name="Bexio" />
-            <Reference img={props.data.cryptofund} name="CryptoFund" />
+            <Reference img={props.data.cryptofinance} name="Crypto Finance AG" />
             <Reference img={props.data.viu} name="VIU Eyeware" />
             <Reference img={props.data.allthings} name="Allthings Technologies" />
             <Reference img={props.data.farmy} name="Farmy" />
@@ -119,7 +119,7 @@ export const pageQuery = graphql`
     quitt: imageSharp(fluid: { originalName: {regex: "/quitt/"} }) {
       fixed(width: 80) { ...GatsbyImageSharpFixed }
     }
-    cryptofund: imageSharp(fluid: {originalName: {regex: "/cryptofund/"} }) {
+    cryptofinance: imageSharp(fluid: {originalName: {regex: "/cryptofinance/"} }) {
       fixed(width: 180) { ...GatsbyImageSharpFixed }
     }
     sherpany: imageSharp(fluid: { originalName: {regex: "/sherpany/"} }) {
