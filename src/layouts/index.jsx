@@ -10,6 +10,8 @@ import { catalogs, langFromPath, langPrefix, getLocale } from '../i18n-config';
 import SignupForm from '../components/SignupForm';
 
 import '../assets/scss/page.scss';
+import 'typeface-slabo-27px';
+import 'typeface-work-sans';
 
 import logoDefault from '../img/logo_black.png';
 import logoInverse from '../img/logo_white.png';
