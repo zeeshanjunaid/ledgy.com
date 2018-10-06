@@ -4,14 +4,14 @@ import * as React from 'react';
 import { Link, navigate } from 'gatsby';
 import { I18nProvider, withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
+import 'typeface-slabo-27px';
+import 'typeface-work-sans';
 
 import { Title, name, siteUrl, appUrl, blogUrl, demoUrl, loadScript } from './utils';
 import { catalogs, langFromPath, langPrefix, getLocale } from '../i18n-config';
 import SignupForm from '../components/SignupForm';
 
 import '../assets/scss/page.scss';
-import 'typeface-slabo-27px';
-import 'typeface-work-sans';
 
 import logoDefault from '../img/logo_black.png';
 import logoInverse from '../img/logo_white.png';
