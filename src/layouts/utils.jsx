@@ -9,6 +9,15 @@ export const appUrl = 'https://app.ledgy.com';
 export const demoUrl = 'https://demo.ledgy.com';
 export const blogUrl = 'https://blog.ledgy.com';
 
+export const loadScript = (path: string): Promise<*> => new Promise((resolve, reject) => {
+  const script = document.createElement('script');
+  script.src = path;
+  script.async = true;
+  script.onload = resolve;
+  return (document.body && document.body.appendChild(script)) || reject();
+});
+
+
 export const Title = (props: {
   title: string,
   section?: string,

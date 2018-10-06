@@ -5,7 +5,7 @@ import { Link, navigate } from 'gatsby';
 import { I18nProvider, withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
 
-import { Title, name, siteUrl, appUrl, blogUrl, demoUrl } from './utils';
+import { Title, name, siteUrl, appUrl, blogUrl, demoUrl, loadScript } from './utils';
 import { catalogs, langFromPath, langPrefix, getLocale } from '../i18n-config';
 import SignupForm from '../components/SignupForm';
 
@@ -15,7 +15,6 @@ import logoDefault from '../img/logo_black.png';
 import logoInverse from '../img/logo_white.png';
 
 const hasFooter = (pathname: string) => !pathname.match(/contact/);
-
 
 type LayoutProps = {
   ...$Exact<Props>,
@@ -198,7 +197,7 @@ const TemplateWrapper = withI18n()((props: SiteProps) => {
 
 
 export default class extends React.Component<{ location: { pathname: string } }> {
-  componentDidMount = () => {
+  componentDidMount = () => setTimeout(async () => {
     require('../assets/js/page'); // eslint-disable-line global-require
     require('../assets/js/script'); // eslint-disable-line global-require
 
@@ -207,12 +206,13 @@ export default class extends React.Component<{ location: { pathname: string } }>
       navigate(`/de${this.props.location.pathname}`);
     }
 
+    await loadScript('https://wchat.eu.freshchat.com/js/widget.js');
     window.fcWidget.init({
       token: 'e9a5ae2c-ad84-42c8-8786-a893acbca8b3',
       host: 'https://wchat.eu.freshchat.com',
       siteId: 'landing-page',
     });
-  }
+  }, 2000);
   render = () => {
     const lang = langFromPath(this.props.location.pathname);
     return (
