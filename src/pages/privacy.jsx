@@ -49,25 +49,25 @@ const IndexPage = ({ i18n, ...props }: Props) => (
 
           <PrivacyRow>
             <PrivacyElement
-              icon="fa fa-sign-in"
+              icon="fas fa-sign-in-alt"
               title={i18n.t`User information`}
               body={i18n.t`Name, email, encrypted password and any other details you provide`}
               size="6"
             />
             <PrivacyElement
-              icon="fa fa-bar-chart"
+              icon="far fa-chart-bar"
               title={i18n.t`Usage statistics`}
               body={i18n.t`Name, time, and which features you use to understand and improve our service`}
               size="6"
             />
             <PrivacyElement
-              icon="fa fa-desktop"
+              icon="fas fa-desktop"
               title={i18n.t`Browser information`}
               body={i18n.t`In case a crash happens, which helps us to fix it as fast as possible`}
               size="6"
             />
             <PrivacyElement
-              icon="fa fa-pie-chart"
+              icon="fas fa-chart-pie"
               title={i18n.t`Company information`}
               body={i18n.t`Company name, and other company details. To properly use our Service you may enter the share ledger transactions and other cap table details.`}
               size="6"
@@ -80,24 +80,24 @@ const IndexPage = ({ i18n, ...props }: Props) => (
           <h2><Trans>How we protect your information</Trans></h2>
           <PrivacyRow>
             <PrivacyElement
-              icon="fa fa-shield"
+              icon="fas fa-shield-alt"
               title={i18n.t`Security`}
               body={
                 <Trans>
                   We live up to highest security standards. We improve them continuously.&nbsp;
-                  <Link href to={`${props.prefix}/security/`}>Check out what we do<i className="fa fa-chevron-right fs-12 ml-2" /></Link>
+                  <Link href to={`${props.prefix}/security/`}>Check out what we do<i className="fas fa-chevron-right fs-12 ml-2" /></Link>
                 </Trans>
               }
               size="9"
             />
             <PrivacyElement
-              icon="fa fa-desktop"
+              icon="fas fa-desktop"
               title={i18n.t`User information, usage statistics and browser information`}
               body={i18n.t`We limit access and sharing as much as reasonably possible.`}
               size="6"
             />
             <PrivacyElement
-              icon="fa fa-pie-chart"
+              icon="fas fa-chart-pie"
               title={i18n.t`Company information`}
               body={i18n.t`Nobody has any access to the company information you provide.`}
               size="6"
@@ -109,19 +109,19 @@ const IndexPage = ({ i18n, ...props }: Props) => (
           <h2><Trans>Who we share your information with</Trans></h2>
           <PrivacyRow>
             <PrivacyElement
-              icon="fa fa-plug"
+              icon="fas fa-plug"
               title={i18n.t`Third Party Contractors`}
               body={
                 <Trans>
                   Which we use to run and improve our Service for you.
                   This excludes company information.&nbsp;
-                  <Link href to={`${props.prefix}/privacy#third-parties`}>See which ones below<i className="fa fa-chevron-right fs-12 ml-2" /></Link>
+                  <Link href to={`${props.prefix}/privacy#third-parties`}>See which ones below<i className="fas fa-chevron-right fs-12 ml-2" /></Link>
                 </Trans>
               }
               size="6"
             />
             <PrivacyElement
-              icon="fa fa-users"
+              icon="fas fa-users"
               title={i18n.t`Your shareholders`}
               body={i18n.t`If you add them with their email address and they decide to sign up on Ledgy, shareholders can see their stake in your company and its latest valuation.`}
               size="6"
@@ -190,7 +190,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
             your data against the unauthorized access, use or destruction.
             We improve these measures continuously.&nbsp;
             <Link href to={`${props.prefix}/security/`}>
-              See what we do<i className="fa fa-chevron-right fs-12 ml-2" />
+              See what we do<i className="fas fa-chevron-right fs-12 ml-2" />
             </Link>
           </p>
           <p>

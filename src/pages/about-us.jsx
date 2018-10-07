@@ -48,9 +48,9 @@ const Founder =
     <small>{func}</small>
     <p>{description}</p>
     <div className="social social-boxed social-rounded social-gray">
-      <a className="social-mail" href={`mailto:${mail}`}><i className="fa fa-envelope" /></a>
-      <a className="social-twitter" href={twitterlink}><i className="fa fa-twitter" /></a>
-      <a className="social-linkedin" href={linkedinlink}><i className="fa fa-linkedin" /></a>
+      <a className="social-mail" href={`mailto:${mail}`}><i className="fas fa-envelope" /></a>
+      <a className="social-twitter" href={twitterlink}><i className="fab fa-twitter" /></a>
+      <a className="social-linkedin" href={linkedinlink}><i className="fab fa-linkedin" /></a>
     </div>
   </div>
 );

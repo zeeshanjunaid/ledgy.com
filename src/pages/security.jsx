@@ -45,7 +45,7 @@ const IndexPage = ({ i18n, ...props }: Object) => (
             <div className="row gap-y my-5">
 
               <PrivacyElement
-                icon="fa fa-key"
+                icon="fas fa-key"
                 title={i18n.t`Strong passwords`}
                 body={
                   <Trans>
@@ -56,7 +56,7 @@ const IndexPage = ({ i18n, ...props }: Object) => (
               />
 
               <PrivacyElement
-                icon="fa fa-lock"
+                icon="fas fa-lock"
                 title={i18n.t`Password encryption`}
                 body={
                   <Trans>
@@ -67,28 +67,28 @@ const IndexPage = ({ i18n, ...props }: Object) => (
               />
 
               <PrivacyElement
-                icon="fa fa-shield"
+                icon="fas fa-shield-alt"
                 title={i18n.t`Two-factor authentication`}
                 body={i18n.t`For even better protection of accounts`}
                 size="6"
               />
 
               <PrivacyElement
-                icon="fa fa-user-plus"
+                icon="fas fa-user-plus"
                 title={i18n.t`Peer-reviewed code`}
                 body={i18n.t`The code is always reviewed by at least one other engineer`}
                 size="6"
               />
 
               <PrivacyElement
-                icon="fa fa-exchange"
+                icon="fas fa-exchange-alt"
                 title={i18n.t`Server call rate limit`}
                 body={i18n.t`The frequency of server calls is limited to prevent brute-force attacks`}
                 size="6"
               />
 
               <PrivacyElement
-                icon="fa fa-user-secret"
+                icon="fas fa-user-secret"
                 title={i18n.t`Encrypted connection`}
                 body={
                   <Trans>
@@ -99,7 +99,7 @@ const IndexPage = ({ i18n, ...props }: Object) => (
               />
 
               <PrivacyElement
-                icon="fa fa-desktop"
+                icon="fas fa-desktop"
                 title={i18n.t`Content-Security-Policy`}
                 body={
                   <Trans>
@@ -110,7 +110,7 @@ const IndexPage = ({ i18n, ...props }: Object) => (
               />
 
               <PrivacyElement
-                icon="fa fa-database"
+                icon="fas fa-database"
                 title={i18n.t`Backups`}
                 body={i18n.t`Daily backups ensure nothing is ever lost`}
                 size="6"

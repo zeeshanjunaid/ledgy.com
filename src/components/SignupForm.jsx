@@ -10,7 +10,7 @@ import { appUrl } from '../layouts/utils';
 const Submit = ({ className, loading }: { className?: string, loading: boolean }) => (
   <button type="submit" disabled={loading} className={`btn btn-primary btn-round btn-xl ${className || ''}`}>
     {loading ?
-      <Trans><i className="fa fa-spin fa-spinner" aria-hidden="true" /> Signing up…</Trans> :
+      <Trans><i className="fas fa-spin fa-spinner" aria-hidden="true" /> Signing up…</Trans> :
       <Trans>Get Started</Trans>}
   </button>
 );

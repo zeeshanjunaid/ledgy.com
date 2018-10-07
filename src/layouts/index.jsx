@@ -118,11 +118,11 @@ const Footer = (props: LayoutProps) => (
 
           <div className="col-6 col-md-6 col-xl-2 text-center px-1">
             <div className="social social-bordered">
-              <a className="social-twitter" href="https://twitter.com/Ledgy"><i className="fa fa-twitter" title="Twitter" /></a>
-              <a className="social-linkedin" href="https://www.linkedin.com/company/ledgy"><i className="fa fa-linkedin" title="LinkedIn" /></a>
-              <a className="social-facebook" href="https://www.facebook.com/LedgyCom/"><i className="fa fa-facebook" title="Facebook" /></a>
-              <a className="social-angellist" href="https://angel.co/ledgy"><i className="fa fa-angellist" title="AngelList" /></a>
-              <a className="social-xing" href="https://www.xing.com/companies/ledgy"><i className="fa fa-xing" title="Xing" /></a>
+              <a className="social-twitter" href="https://twitter.com/Ledgy"><i className="fab fa-twitter" title="Twitter" /></a>
+              <a className="social-linkedin" href="https://www.linkedin.com/company/ledgy"><i className="fab fa-linkedin" title="LinkedIn" /></a>
+              <a className="social-facebook" href="https://www.facebook.com/LedgyCom/"><i className="fab fa-facebook" title="Facebook" /></a>
+              <a className="social-angellist" href="https://angel.co/ledgy"><i className="fab fa-angellist" title="AngelList" /></a>
+              <a className="social-xing" href="https://www.xing.com/companies/ledgy"><i className="fab fa-xing" title="Xing" /></a>
             </div>
           </div>
 
