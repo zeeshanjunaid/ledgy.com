@@ -214,7 +214,7 @@ export default class extends React.Component<{ location: { pathname: string } }>
       host: 'https://wchat.eu.freshchat.com',
       siteId: 'landing-page',
     });
-  }, 3141);
+  }, 2718);
   render = () => {
     const lang = langFromPath(this.props.location.pathname);
     return (
