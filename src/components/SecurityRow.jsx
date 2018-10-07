@@ -15,7 +15,7 @@ export default (props: Props) => (
           Privacy made in Europe. Because your cap table data is not for everyone.
         </Trans>
         <br />
-        <Link href to={`${props.prefix}/privacy/`}><Trans>Read more</Trans>  <i className="ti-angle-right fs-10 ml-1" /></Link>
+        <Link href to={`${props.prefix}/privacy/`}><Trans>Read more</Trans><i className="fa fa-chevron-right fs-12 ml-2" /></Link>
       </p>
     </div>
 
@@ -27,7 +27,7 @@ export default (props: Props) => (
           Your data is safe with us. Enjoy the highest security standards.
         </Trans>
         <br />
-        <Link href to={`${props.prefix}/security/`}><Trans>Read more</Trans>  <i className="ti-angle-right fs-10 ml-1" /></Link>
+        <Link href to={`${props.prefix}/security/`}><Trans>Read more</Trans><i className="fa fa-chevron-right fs-12 ml-2" /></Link>
       </p>
     </div>
   </div>

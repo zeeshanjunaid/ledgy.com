@@ -85,7 +85,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
               body={
                 <Trans>
                   We live up to highest security standards. We improve them continuously.&nbsp;
-                  <Link href to={`${props.prefix}/security/`}>Check out what we do  <i className="ti-angle-right fs-10 ml-1" /></Link>
+                  <Link href to={`${props.prefix}/security/`}>Check out what we do<i className="fa fa-chevron-right fs-12 ml-2" /></Link>
                 </Trans>
               }
               size="9"
@@ -115,7 +115,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
                 <Trans>
                   Which we use to run and improve our Service for you.
                   This excludes company information.&nbsp;
-                  <Link href to={`${props.prefix}/privacy#third-parties`}>See which ones below <i className="ti-angle-right fs-10 ml-1" /></Link>
+                  <Link href to={`${props.prefix}/privacy#third-parties`}>See which ones below<i className="fa fa-chevron-right fs-12 ml-2" /></Link>
                 </Trans>
               }
               size="6"
@@ -190,7 +190,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
             your data against the unauthorized access, use or destruction.
             We improve these measures continuously.&nbsp;
             <Link href to={`${props.prefix}/security/`}>
-              See what we do  <i className="ti-angle-right fs-10 ml-1" />
+              See what we do<i className="fa fa-chevron-right fs-12 ml-2" />
             </Link>
           </p>
           <p>

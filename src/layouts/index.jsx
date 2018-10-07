@@ -4,8 +4,8 @@ import * as React from 'react';
 import { Link, navigate } from 'gatsby';
 import { I18nProvider, withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
-import 'typeface-slabo-27px';
-import 'typeface-work-sans';
+import 'typeface-slabo-27px'; // eslint-disable-line import/extensions
+import 'typeface-work-sans'; // eslint-disable-line import/extensions
 
 import { Title, name, siteUrl, appUrl, blogUrl, demoUrl, loadScript } from './utils';
 import { catalogs, langFromPath, langPrefix, getLocale } from '../i18n-config';
