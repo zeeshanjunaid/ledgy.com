@@ -61,6 +61,7 @@ export default class extends React.Component<Props, {
           <input
             type="text"
             name="email"
+            aria-label="E-mail"
             className="form-control form-control"
             value={this.state.email}
             onChange={this.handleChange}
