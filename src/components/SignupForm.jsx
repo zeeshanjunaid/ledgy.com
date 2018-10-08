@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { Trans } from '@lingui/react';
 import 'isomorphic-fetch';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 
 import { appUrl } from '../layouts/utils';
@@ -10,7 +12,7 @@ import { appUrl } from '../layouts/utils';
 const Submit = ({ className, loading }: { className?: string, loading: boolean }) => (
   <button type="submit" disabled={loading} className={`btn btn-primary btn-round btn-xl ${className || ''}`}>
     {loading ?
-      <Trans><i className="fa fa-spin fa-spinner" aria-hidden="true" /> Signing up…</Trans> :
+      <Trans><FontAwesomeIcon icon={faSpinner} spin aria-hidden="true" /> Signing up…</Trans> :
       <Trans>Get Started</Trans>}
   </button>
 );
@@ -61,6 +63,7 @@ export default class extends React.Component<Props, {
           <input
             type="text"
             name="email"
+            aria-label="E-mail"
             className="form-control form-control"
             value={this.state.email}
             onChange={this.handleChange}

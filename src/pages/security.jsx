@@ -3,6 +3,7 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
 import { withI18n, Trans } from '@lingui/react';
+import { faDesktop, faShieldAlt, faDatabase, faUserSecret, faExchangeAlt, faUserPlus, faLock, faKey } from '@fortawesome/free-solid-svg-icons';
 
 import { PrivacyElement } from '../components/Privacy';
 import { Title } from '../layouts/utils';
@@ -45,7 +46,7 @@ const IndexPage = ({ i18n, ...props }: Object) => (
             <div className="row gap-y my-5">
 
               <PrivacyElement
-                icon="fa fa-key"
+                icon={faKey}
                 title={i18n.t`Strong passwords`}
                 body={
                   <Trans>
@@ -56,7 +57,7 @@ const IndexPage = ({ i18n, ...props }: Object) => (
               />
 
               <PrivacyElement
-                icon="fa fa-lock"
+                icon={faLock}
                 title={i18n.t`Password encryption`}
                 body={
                   <Trans>
@@ -67,28 +68,28 @@ const IndexPage = ({ i18n, ...props }: Object) => (
               />
 
               <PrivacyElement
-                icon="fa fa-shield"
+                icon={faShieldAlt}
                 title={i18n.t`Two-factor authentication`}
                 body={i18n.t`For even better protection of accounts`}
                 size="6"
               />
 
               <PrivacyElement
-                icon="fa fa-user-plus"
+                icon={faUserPlus}
                 title={i18n.t`Peer-reviewed code`}
                 body={i18n.t`The code is always reviewed by at least one other engineer`}
                 size="6"
               />
 
               <PrivacyElement
-                icon="fa fa-exchange"
+                icon={faExchangeAlt}
                 title={i18n.t`Server call rate limit`}
                 body={i18n.t`The frequency of server calls is limited to prevent brute-force attacks`}
                 size="6"
               />
 
               <PrivacyElement
-                icon="fa fa-user-secret"
+                icon={faUserSecret}
                 title={i18n.t`Encrypted connection`}
                 body={
                   <Trans>
@@ -99,7 +100,7 @@ const IndexPage = ({ i18n, ...props }: Object) => (
               />
 
               <PrivacyElement
-                icon="fa fa-desktop"
+                icon={faDesktop}
                 title={i18n.t`Content-Security-Policy`}
                 body={
                   <Trans>
@@ -110,7 +111,7 @@ const IndexPage = ({ i18n, ...props }: Object) => (
               />
 
               <PrivacyElement
-                icon="fa fa-database"
+                icon={faDatabase}
                 title={i18n.t`Backups`}
                 body={i18n.t`Daily backups ensure nothing is ever lost`}
                 size="6"

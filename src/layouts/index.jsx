@@ -4,8 +4,12 @@ import * as React from 'react';
 import { Link, navigate } from 'gatsby';
 import { I18nProvider, withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTwitter, faFacebook, faLinkedin, faAngellist, faXing } from '@fortawesome/free-brands-svg-icons';
+import 'typeface-slabo-27px'; // eslint-disable-line import/extensions
+import 'typeface-work-sans'; // eslint-disable-line import/extensions
 
-import { Title, name, siteUrl, appUrl, blogUrl, demoUrl } from './utils';
+import { Title, name, siteUrl, appUrl, blogUrl, demoUrl, loadScript } from './utils';
 import { catalogs, langFromPath, langPrefix, getLocale } from '../i18n-config';
 import SignupForm from '../components/SignupForm';
 
@@ -15,7 +19,6 @@ import logoDefault from '../img/logo_black.png';
 import logoInverse from '../img/logo_white.png';
 
 const hasFooter = (pathname: string) => !pathname.match(/contact/);
-
 
 type LayoutProps = {
   ...$Exact<Props>,
@@ -117,11 +120,11 @@ const Footer = (props: LayoutProps) => (
 
           <div className="col-6 col-md-6 col-xl-2 text-center px-1">
             <div className="social social-bordered">
-              <a className="social-twitter" href="https://twitter.com/Ledgy"><i className="fa fa-twitter" /></a>
-              <a className="social-linkedin" href="https://www.linkedin.com/company/ledgy"><i className="fa fa-linkedin" /></a>
-              <a className="social-facebook" href="https://www.facebook.com/LedgyCom/"><i className="fa fa-facebook" /></a>
-              <a className="social-angellist" href="https://angel.co/ledgy"><i className="fa fa-angellist" /></a>
-              <a className="social-xing" href="https://www.xing.com/companies/ledgy"><i className="fa fa-xing" /></a>
+              <a className="social-twitter" href="https://twitter.com/Ledgy"><FontAwesomeIcon icon={faTwitter} title="Twitter" /></a>
+              <a className="social-linkedin" href="https://www.linkedin.com/company/ledgy"><FontAwesomeIcon icon={faLinkedin} title="LinkedIn" /></a>
+              <a className="social-facebook" href="https://www.facebook.com/LedgyCom/"><FontAwesomeIcon icon={faFacebook} title="Facebook" /></a>
+              <a className="social-angellist" href="https://angel.co/ledgy"><FontAwesomeIcon icon={faAngellist} title="AngelList" /></a>
+              <a className="social-xing" href="https://www.xing.com/companies/ledgy"><FontAwesomeIcon icon={faXing} title="Xing" /></a>
             </div>
           </div>
 
@@ -198,7 +201,7 @@ const TemplateWrapper = withI18n()((props: SiteProps) => {
 
 
 export default class extends React.Component<{ location: { pathname: string } }> {
-  componentDidMount = () => {
+  componentDidMount = () => setTimeout(async () => {
     require('../assets/js/page'); // eslint-disable-line global-require
     require('../assets/js/script'); // eslint-disable-line global-require
 
@@ -207,12 +210,13 @@ export default class extends React.Component<{ location: { pathname: string } }>
       navigate(`/de${this.props.location.pathname}`);
     }
 
+    await loadScript('https://wchat.eu.freshchat.com/js/widget.js');
     window.fcWidget.init({
       token: 'e9a5ae2c-ad84-42c8-8786-a893acbca8b3',
       host: 'https://wchat.eu.freshchat.com',
       siteId: 'landing-page',
     });
-  }
+  }, 1414);
   render = () => {
     const lang = langFromPath(this.props.location.pathname);
     return (

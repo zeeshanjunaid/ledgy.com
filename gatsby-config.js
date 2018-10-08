@@ -59,6 +59,7 @@ module.exports = {
         ],
       },
     },
+    'gatsby-plugin-netlify-cache',
     {
       resolve: 'gatsby-plugin-sri',
       options: { hash: 'sha512' },

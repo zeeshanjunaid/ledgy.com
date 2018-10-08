@@ -1,6 +1,7 @@
 // @flow
 
 import * as React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const PrivacyElement = ({ icon, title, body, size }: {
   icon: string,
@@ -10,7 +11,7 @@ export const PrivacyElement = ({ icon, title, body, size }: {
 }) => (
   <div className={`col-12 col-lg-${String(size)}`}>
     <div className="media">
-      <i className={`${icon} fa-3x fa-fw mr-2 mt-1`} />
+      <FontAwesomeIcon icon={icon} size="3x" fixedWidth className="mr-2 mt-1" />
       <p className="media-body mb-0">
         <strong className="d-block">{title}</strong>
         {body}
