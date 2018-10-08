@@ -4,6 +4,9 @@ import * as React from 'react';
 import Img from 'gatsby-image';
 import { graphql } from 'gatsby';
 import { withI18n, Trans } from '@lingui/react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 import { Title } from '../layouts/utils';
 
@@ -48,9 +51,9 @@ const Founder =
     <small>{func}</small>
     <p>{description}</p>
     <div className="social social-boxed social-rounded social-gray">
-      <a className="social-mail" href={`mailto:${mail}`}><i className="fas fa-envelope" /></a>
-      <a className="social-twitter" href={twitterlink}><i className="fab fa-twitter" /></a>
-      <a className="social-linkedin" href={linkedinlink}><i className="fab fa-linkedin" /></a>
+      <a className="social-mail" href={`mailto:${mail}`}><FontAwesomeIcon icon={faEnvelope} title="Email" /></a>
+      <a className="social-twitter" href={twitterlink}><FontAwesomeIcon icon={faTwitter} title="Twitter" /></a>
+      <a className="social-linkedin" href={linkedinlink}><FontAwesomeIcon icon={faLinkedin} title="LinkedIn" /></a>
     </div>
   </div>
 );

@@ -4,6 +4,8 @@ import * as React from 'react';
 import { Link, navigate } from 'gatsby';
 import { I18nProvider, withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTwitter, faFacebook, faLinkedin, faAngellist, faXing } from '@fortawesome/free-brands-svg-icons';
 import 'typeface-slabo-27px'; // eslint-disable-line import/extensions
 import 'typeface-work-sans'; // eslint-disable-line import/extensions
 
@@ -118,11 +120,11 @@ const Footer = (props: LayoutProps) => (
 
           <div className="col-6 col-md-6 col-xl-2 text-center px-1">
             <div className="social social-bordered">
-              <a className="social-twitter" href="https://twitter.com/Ledgy"><i className="fab fa-twitter" title="Twitter" /></a>
-              <a className="social-linkedin" href="https://www.linkedin.com/company/ledgy"><i className="fab fa-linkedin" title="LinkedIn" /></a>
-              <a className="social-facebook" href="https://www.facebook.com/LedgyCom/"><i className="fab fa-facebook" title="Facebook" /></a>
-              <a className="social-angellist" href="https://angel.co/ledgy"><i className="fab fa-angellist" title="AngelList" /></a>
-              <a className="social-xing" href="https://www.xing.com/companies/ledgy"><i className="fab fa-xing" title="Xing" /></a>
+              <a className="social-twitter" href="https://twitter.com/Ledgy"><FontAwesomeIcon icon={faTwitter} title="Twitter" /></a>
+              <a className="social-linkedin" href="https://www.linkedin.com/company/ledgy"><FontAwesomeIcon icon={faLinkedin} title="LinkedIn" /></a>
+              <a className="social-facebook" href="https://www.facebook.com/LedgyCom/"><FontAwesomeIcon icon={faFacebook} title="Facebook" /></a>
+              <a className="social-angellist" href="https://angel.co/ledgy"><FontAwesomeIcon icon={faAngellist} title="AngelList" /></a>
+              <a className="social-xing" href="https://www.xing.com/companies/ledgy"><FontAwesomeIcon icon={faXing} title="Xing" /></a>
             </div>
           </div>
 
