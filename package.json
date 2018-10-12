@@ -9,7 +9,7 @@
   "scripts": {
     "build": "lingui compile && gatsby build",
     "start": "lingui compile && gatsby develop",
-    "test": "lingui compile && eslint . --ext jsx,js && flow",
+    "test": "lingui compile --strict && eslint . --ext jsx,js && flow",
     "extract": "lingui extract --clean"
   },
   "dependencies": {
@@ -86,7 +86,6 @@
     "flow-bin": "0.83.0"
   },
   "lingui": {
-    "fallbackLocale": "en",
     "sourceLocale": "en",
     "localeDir": "src/locale",
     "srcPathDirs": [
