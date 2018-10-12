@@ -2,6 +2,17 @@
 
 import * as React from 'react';
 import { Trans } from '@lingui/react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
+
+const Feature = ({ children }: { children: React.Node }) => (
+  <li className="media">
+    <FontAwesomeIcon icon={faCheck} className="text-success mr-3" />
+    <div className="media-body">
+      {children}
+    </div>
+  </li>
+);
 
 export default () => (
   <div className="row gap-y">
@@ -19,15 +30,15 @@ export default () => (
     <div className="col-lg-4">
       <div className="pricing-3 border rounded text-left">
         <ul className="mb-0 mt-5">
-          <li><Trans>Funding Round Modeling</Trans></li>
-          <li><Trans>Full Transaction History</Trans></li>
-          <li><Trans>Consistency Checks</Trans></li>
-          <li><Trans>Transaction Filters</Trans></li>
-          <li><Trans>Convertible Loans</Trans></li>
-          <li><Trans>Stock Split</Trans></li>
-          <li><Trans>Unlimited Share Classes</Trans></li>
-          <li><Trans>Numbered Shares</Trans></li>
-          <li><Trans>Treasury Shares</Trans></li>
+          <Feature><Trans>Funding Round Modeling</Trans></Feature>
+          <Feature><Trans>Full Transaction History</Trans></Feature>
+          <Feature><Trans>Consistency Checks</Trans></Feature>
+          <Feature><Trans>Transaction Filters</Trans></Feature>
+          <Feature><Trans>Convertible Loans</Trans></Feature>
+          <Feature><Trans>Stock Split</Trans></Feature>
+          <Feature><Trans>Unlimited Share Classes</Trans></Feature>
+          <Feature><Trans>Numbered Shares</Trans></Feature>
+          <Feature><Trans>Treasury Shares</Trans></Feature>
         </ul>
       </div>
     </div>
@@ -36,15 +47,15 @@ export default () => (
     <div className="col-lg-4">
       <div className="pricing-3 border rounded text-left">
         <ul className="mb-0 mt-5">
-          <li><Trans>Employee Options</Trans></li>
-          <li><Trans>Phantom Programs</Trans></li>
-          <li><Trans>Option Termination</Trans></li>
-          <li><Trans>Option Expiration</Trans></li>
-          <li><Trans>Approved Capital Pools</Trans></li>
-          <li><Trans>Vesting Schedules</Trans></li>
-          <li><Trans>Fully-diluted View</Trans></li>
-          <li><Trans>Read-only Access</Trans></li>
-          <li><Trans>Investor Portfolio</Trans></li>
+          <Feature><Trans>Employee Options</Trans></Feature>
+          <Feature><Trans>Phantom Programs</Trans></Feature>
+          <Feature><Trans>Option Termination</Trans></Feature>
+          <Feature><Trans>Option Expiration</Trans></Feature>
+          <Feature><Trans>Approved Capital Pools</Trans></Feature>
+          <Feature><Trans>Vesting Schedules</Trans></Feature>
+          <Feature><Trans>Fully-diluted View</Trans></Feature>
+          <Feature><Trans>Read-only Access</Trans></Feature>
+          <Feature><Trans>Investor Portfolio</Trans></Feature>
         </ul>
       </div>
     </div>
@@ -53,15 +64,15 @@ export default () => (
     <div className="col-lg-4">
       <div className="pricing-3 border rounded text-left">
         <ul className="mb-0 mt-5">
-          <li><Trans>Spreadsheet Import</Trans></li>
-          <li><Trans>Customizable PDF Reports</Trans></li>
-          <li><Trans>CSV Export</Trans></li>
-          <li><Trans>Secure Document Storage</Trans></li>
-          <li><Trans>Attach Documents to Transactions</Trans></li>
-          <li><Trans>Multiple Administrators</Trans></li>
-          <li><Trans>Audit Trails</Trans></li>
-          <li><Trans>Two-Factor Authentication</Trans></li>
-          <li><Trans>Send Holding Confirmations</Trans></li>
+          <Feature><Trans>Spreadsheet Import</Trans></Feature>
+          <Feature><Trans>Customizable PDF Reports</Trans></Feature>
+          <Feature><Trans>CSV Export</Trans></Feature>
+          <Feature><Trans>Secure Document Storage</Trans></Feature>
+          <Feature><Trans>Attach Documents to Transactions</Trans></Feature>
+          <Feature><Trans>Multiple Administrators</Trans></Feature>
+          <Feature><Trans>Audit Trails</Trans></Feature>
+          <Feature><Trans>Two-Factor Authentication</Trans></Feature>
+          <Feature><Trans>Send Holding Confirmations</Trans></Feature>
         </ul>
       </div>
     </div>
