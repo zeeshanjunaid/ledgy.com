@@ -44,7 +44,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   Ledgy offers you a powerful module to manage your
                   employee incentive plans.
                   No matter if you transfer real stock from your company to an employee,
-                  options from a fixed-size pool of approved capital or even phantom stock.
+                  options from a fixed-size pool of approved capital,
+                  warrants or even phantom stock.
                   <br /><br />
                   Terminate or exercise the options and keep track of the amount
                   which is still available.
