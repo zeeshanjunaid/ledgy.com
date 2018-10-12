@@ -2,6 +2,8 @@
 
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 export const name = 'Ledgy';
 export const siteUrl = 'https://www.ledgy.com';
@@ -35,3 +37,12 @@ export const Title = (props: {
   </Helmet>
 );
 Title.defaultProps = { section: '', description: '' };
+
+export const Li = ({ children }: { children: React.Node }) => (
+  <li className="media">
+    <FontAwesomeIcon icon={faCheck} className="text-success mr-3" />
+    <div className="media-body">
+      {children}
+    </div>
+  </li>
+);

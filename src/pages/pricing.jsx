@@ -4,7 +4,7 @@ import * as React from 'react';
 import { withI18n, Trans } from '@lingui/react';
 import { Link } from 'gatsby';
 
-import { Title } from '../layouts/utils';
+import { Title, Li } from '../layouts/utils';
 
 
 export default withI18n()(({ i18n, ...props }: Props) => (
@@ -53,9 +53,9 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                 <h2 className="price mb-0"><Trans>Free</Trans></h2>
                 <small className="text-muted">&nbsp;</small>
                 <ul className="text-left mt-6 mb-0">
-                  <li><Trans>Up to 15 shareholders</Trans></li>
-                  <li><Trans>Error-free cap table</Trans></li>
-                  <li><Trans>Round modeling</Trans></li>
+                  <Li><Trans>Up to 15 shareholders</Trans></Li>
+                  <Li><Trans>Error-free cap table</Trans></Li>
+                  <Li><Trans>Round modeling</Trans></Li>
                 </ul>
               </div>
             </div>
@@ -68,9 +68,9 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                 <h2 className="price mb-0"><Trans>€2</Trans></h2>
                 <small className="text-muted"><Trans>per shareholder per month</Trans></small>
                 <ul className="text-left mt-6 mb-0">
-                  <li><Trans>All basic features</Trans></li>
-                  <li><Trans>Unlimited shareholders</Trans></li>
-                  <li><Trans>Incentive plan management</Trans></li>
+                  <Li><Trans>All basic features</Trans></Li>
+                  <Li><Trans>Unlimited shareholders</Trans></Li>
+                  <Li><Trans>Incentive plan management</Trans></Li>
                 </ul>
               </div>
             </div>
@@ -83,9 +83,9 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                 <h2 className="price mb-0"><Trans>€4</Trans></h2>
                 <small className="text-muted"><Trans>per shareholder per month</Trans></small>
                 <ul className="text-left mt-6 mb-0">
-                  <li><Trans>All premium features</Trans></li>
-                  <li><Trans>Exit modeling (coming soon)</Trans></li>
-                  <li><Trans>Free cap table import</Trans></li>
+                  <Li><Trans>All premium features</Trans></Li>
+                  <Li><Trans>Exit modeling (coming soon)</Trans></Li>
+                  <Li><Trans>Free cap table import</Trans></Li>
                 </ul>
               </div>
             </div>
