@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import { Trans } from '@lingui/react';
+import { Li } from '../layouts/utils';
 
 export default () => (
   <div className="row gap-y">
@@ -19,15 +20,15 @@ export default () => (
     <div className="col-lg-4">
       <div className="pricing-3 border rounded text-left">
         <ul className="mb-0 mt-5">
-          <li><Trans>Funding Round Modeling</Trans></li>
-          <li><Trans>Full Transaction History</Trans></li>
-          <li><Trans>Consistency Checks</Trans></li>
-          <li><Trans>Transaction Filters</Trans></li>
-          <li><Trans>Convertible Loans</Trans></li>
-          <li><Trans>Stock Split</Trans></li>
-          <li><Trans>Unlimited Share Classes</Trans></li>
-          <li><Trans>Numbered Shares</Trans></li>
-          <li><Trans>Treasury Shares</Trans></li>
+          <Li><Trans>Funding Round Modeling</Trans></Li>
+          <Li><Trans>Full Transaction History</Trans></Li>
+          <Li><Trans>Consistency Checks</Trans></Li>
+          <Li><Trans>Transaction Filters</Trans></Li>
+          <Li><Trans>Convertible Loans</Trans></Li>
+          <Li><Trans>Stock Split</Trans></Li>
+          <Li><Trans>Unlimited Share Classes</Trans></Li>
+          <Li><Trans>Numbered Shares</Trans></Li>
+          <Li><Trans>Treasury Shares</Trans></Li>
         </ul>
       </div>
     </div>
@@ -36,15 +37,15 @@ export default () => (
     <div className="col-lg-4">
       <div className="pricing-3 border rounded text-left">
         <ul className="mb-0 mt-5">
-          <li><Trans>Employee Options</Trans></li>
-          <li><Trans>Phantom Programs</Trans></li>
-          <li><Trans>Option Termination</Trans></li>
-          <li><Trans>Option Expiration</Trans></li>
-          <li><Trans>Approved Capital Pools</Trans></li>
-          <li><Trans>Vesting Schedules</Trans></li>
-          <li><Trans>Fully-diluted View</Trans></li>
-          <li><Trans>Read-only Access</Trans></li>
-          <li><Trans>Investor Portfolio</Trans></li>
+          <Li><Trans>Employee Options</Trans></Li>
+          <Li><Trans>Phantom Programs</Trans></Li>
+          <Li><Trans>Option Termination</Trans></Li>
+          <Li><Trans>Option Expiration</Trans></Li>
+          <Li><Trans>Approved Capital Pools</Trans></Li>
+          <Li><Trans>Vesting Schedules</Trans></Li>
+          <Li><Trans>Fully-diluted View</Trans></Li>
+          <Li><Trans>Read-only Access</Trans></Li>
+          <Li><Trans>Investor Portfolio</Trans></Li>
         </ul>
       </div>
     </div>
@@ -53,15 +54,15 @@ export default () => (
     <div className="col-lg-4">
       <div className="pricing-3 border rounded text-left">
         <ul className="mb-0 mt-5">
-          <li><Trans>Spreadsheet Import</Trans></li>
-          <li><Trans>Customizable PDF Reports</Trans></li>
-          <li><Trans>CSV Export</Trans></li>
-          <li><Trans>Secure Document Storage</Trans></li>
-          <li><Trans>Attach Documents to Transactions</Trans></li>
-          <li><Trans>Multiple Administrators</Trans></li>
-          <li><Trans>Audit Trails</Trans></li>
-          <li><Trans>Two-Factor Authentication</Trans></li>
-          <li><Trans>Send Holding Confirmations</Trans></li>
+          <Li><Trans>Spreadsheet Import</Trans></Li>
+          <Li><Trans>Customizable PDF Reports</Trans></Li>
+          <Li><Trans>CSV Export</Trans></Li>
+          <Li><Trans>Secure Document Storage</Trans></Li>
+          <Li><Trans>Attach Documents to Transactions</Trans></Li>
+          <Li><Trans>Multiple Administrators</Trans></Li>
+          <Li><Trans>Audit Trails</Trans></Li>
+          <Li><Trans>Two-Factor Authentication</Trans></Li>
+          <Li><Trans>Send Holding Confirmations</Trans></Li>
         </ul>
       </div>
     </div>
