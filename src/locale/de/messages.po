@@ -760,7 +760,7 @@ msgstr "Schweiz"
 
 #: src/layouts/index.jsx:75
 msgid "Takes too long to import your data? <0>We’ll do it for you!</0>"
-msgstr "Der Import der Daten ist mühsam? <0>Wir machen’s für dich!</0>"
+msgstr "Der Import der Daten ist mühsam? <0>Wir erledigen das für dich!</0>"
 
 #: src/pages/about-us.jsx:103
 msgid "Team"
