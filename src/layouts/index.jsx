@@ -73,6 +73,14 @@ const Footer = (props: LayoutProps) => (
 
           <p>
             <Trans>
+              Takes too long to import your data?&nbsp;
+              <a href={`mailto:contact@ledgy.com?subject=${'Request for cap table import'}`}>
+              We’ll do it for you!
+              </a>
+            </Trans>
+          </p>
+          <p>
+            <Trans>
               Still hesitating?&nbsp;
               <Link href to={`${props.prefix}/features/`}>Learn more about our features</Link>.
             </Trans>
