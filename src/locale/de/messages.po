@@ -900,7 +900,7 @@ msgstr "Welche Daten wir sammeln und warum"
 
 #: src/pages/features.jsx:63
 msgid "What’s the stake percentage of the founders after a VC invests $2,000,000 at a valuation of $7,500,000 taking into account the 2 outstanding convertible loans and keeping the ESOP pool at 10% while only diluting existing shareholders?<0/>How does the capped participating liquidation preference that comes with this investment influence my exit strategy?<1/>Honestly, we don’t know. But Ledgy does."
-msgstr "Wie viel Prozent halten die Gründer noch an der Firma, nachdem ein VC €2m bei einer Bewertung von €7.5m investiert und noch 2 Wandeldarlehen konvertiert und der ESOP Pool bei 10% gehalten wird?<0/>Wie beeinflusst die partizipierende zweifache Liquidationspräferenz mit Cap, die mit diesem Investment einhergeht, meine Exit-Planung?<1/>Ehrlich gesagt wissen wir das auch nicht. Ledgy schon."
+msgstr "Wie viel Prozent halten die Gründer noch an der Firma, nachdem ein VC €2m bei einer Bewertung von €7.5m investiert und noch 2 Wandeldarlehen konvertiert und der ESOP Pool bei 10% gehalten wird?<0/>Wie beeinflusst die nicht-anrechenbare zweifache Liquidationspräferenz mit Cap, die mit diesem Investment einhergeht, meine Exit-Planung?<1/>Ehrlich gesagt wissen wir das auch nicht. Ledgy schon."
 
 #: src/pages/features/esop.jsx:110
 msgid "When it’s time to exercise option grants, Ledgy calculates for you the amount that is already vested at a given date and lets you exercise parts or the full option grant.<0/><1/>Did an employee leave the company? Ledgy supports terminating part or the whole option grant.<2/><3/>Filter the transactions by an employee to see all their transactions (option grant, terminations and exercises) at a glance."
