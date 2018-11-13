@@ -81,9 +81,9 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                 <h2 className="price mb-0"><Trans>€4</Trans></h2>
                 <small className="text-muted"><Trans>per shareholder per month</Trans></small>
                 <ul className="text-left mt-6 mb-0">
-                  <li><Trans>All premium features</Trans></li>
-                  <li><Trans>Exit modeling</Trans></li>
-                  <li><Trans>Free cap table import</Trans></li>
+                  <Li><Trans>All premium features</Trans></Li>
+                  <Li><Trans>Exit modeling</Trans></Li>
+                  <Li><Trans>Free cap table import</Trans></Li>
                 </ul>
               </div>
             </div>
