@@ -293,8 +293,8 @@ msgid "Every transaction in your cap table usually comes with a pile of addition
 msgstr "Jede Transaktion in deinem Aktienregister enthält normalerweise einen Stapel zusätzlicher Dokumente, wie zum Beispiel Verträge. Befreie dich von komplizierten Ordnerstrukturen und verknüpfe sie einfach direkt mit deinen Transaktionen. Ledgy gibt dir einen Überblick über alle von dir hochgeladenen Dokumente und deren verknüpften Transaktionen. Außerdem kannst du im Transaktionsverlauf beliebige Transaktionen auswählen und alle damit verknüpften Dokumente auf einen Blick einsehen. <0/> <1/> Du kannst Dokumente auch einfach per Link mit deinen Gesellschaftern teilen. Auf diese Weise werden Verwechslungen bei verschiedenen Versionen von Dokumenten vermieden, was häufig beim Senden von Dokumenten per E-Mail der Fall ist."
 
 #: src/pages/pricing.jsx:87
-msgid "Exit modeling (coming soon)"
-msgstr "Exit Modellierung (bald)"
+msgid "Exit modeling"
+msgstr "Exit Modellierung"
 
 #: src/pages/features/round-modeling.jsx:40
 msgid "Explore new scenarios for upcoming financing rounds interactively"
