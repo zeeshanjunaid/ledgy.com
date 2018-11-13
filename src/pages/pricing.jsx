@@ -49,7 +49,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
             <div className="col-lg-4">
               <div className="pricing-3 border rounded">
-                <h6><Trans>Basic</Trans></h6>
+                <h6><Trans>Startup</Trans></h6>
                 <h2 className="price mb-0"><Trans>Free</Trans></h2>
                 <small className="text-muted">&nbsp;</small>
                 <ul className="text-left mt-6 mb-0">
@@ -62,9 +62,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
 
             <div className="col-lg-4">
-              <div className="pricing-3 popular border rounded">
-                <span className="popular-tag"><Trans>coming soon</Trans></span>
-                <h6><Trans>Premium</Trans></h6>
+              <div className="pricing-3 border rounded">
+                <h6><Trans>Business</Trans></h6>
                 <h2 className="price mb-0"><Trans>€2</Trans></h2>
                 <small className="text-muted"><Trans>per shareholder per month</Trans></small>
                 <ul className="text-left mt-6 mb-0">
@@ -77,14 +76,13 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
 
             <div className="col-lg-4">
-              <div className="pricing-3 popular border rounded">
-                <span className="popular-tag"><Trans>coming soon</Trans></span>
+              <div className="pricing-3 border rounded">
                 <h6><Trans>Enterprise</Trans></h6>
                 <h2 className="price mb-0"><Trans>€4</Trans></h2>
                 <small className="text-muted"><Trans>per shareholder per month</Trans></small>
                 <ul className="text-left mt-6 mb-0">
                   <Li><Trans>All premium features</Trans></Li>
-                  <Li><Trans>Exit modeling (coming soon)</Trans></Li>
+                  <Li><Trans>Exit modeling</Trans></Li>
                   <Li><Trans>Free cap table import</Trans></Li>
                 </ul>
               </div>
