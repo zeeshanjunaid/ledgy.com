@@ -219,11 +219,40 @@ export default class extends React.Component<{ location: { pathname: string } }>
     }
 
     await loadScript('https://wchat.eu.freshchat.com/js/widget.js');
-    window.fcWidget.init({
+    window.fcSettings = {
       token: 'e9a5ae2c-ad84-42c8-8786-a893acbca8b3',
       host: 'https://wchat.eu.freshchat.com',
       siteId: 'landing-page',
+      config: {
+        cssNames: {
+          widget: 'custom_fc_frame',
+          expanded: 'custom_fc_expanded',
+        },
+      },
+    };
+    await loadScript('https://snippets.freshchat.com/js/fc-pre-chat-form-v2.js');
+    window.fcPreChatform.fcWidgetInit({
+      heading: 'Ledgy',
+      textBanner: 'Please tell us a bit about yourself.',
+      SubmitLabel: 'Go',
+      fields: {
+        field1: {
+          type: 'name',
+          label: 'Name',
+          fieldId: 'name',
+          required: 'yes',
+          error: 'Please enter your name',
+        },
+        field2: {
+          type: 'email',
+          label: 'Email',
+          fieldId: 'email',
+          required: 'yes',
+          error: 'Please enter a valid email',
+        },
+      },
     });
+    window.fcWidget.init(window.fcSettings);
   }, 1414);
   render = () => {
     const lang = langFromPath(this.props.location.pathname);
