@@ -52,7 +52,7 @@ module.exports = {
             "object-src 'none'",
             "font-src 'self' data: https://fonts.gstatic.com",
             "script-src 'self' 'unsafe-inline' https://wchat.eu.freshchat.com/js/ https://snippets.freshchat.com/js/ https://www.googletagmanager.com/ https://www.google-analytics.com/ https://sjs.bizographics.com/ https://maps.googleapis.com/ https://www.linkedin.com/px/ https://px.ads.linkedin.com/",
-            "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ https://wchat.eu.freshchat.com/assets/widget/ https://snippets.freshchat.com/css/ https://maps.googleapis.com/maps/api/",
+            "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ https://wchat.eu.freshchat.com/css/ https://snippets.freshchat.com/css/ https://maps.googleapis.com/maps/api/",
             "frame-src 'self' https://wchat.eu.freshchat.com/ https://ledgy.eu.webpush.freshchat.com/",
           ].join('; '),
           'Referrer-Policy: strict-origin-when-cross-origin',
