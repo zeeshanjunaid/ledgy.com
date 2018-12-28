@@ -110,6 +110,7 @@ const Footer = (props: LayoutProps) => (
               <Link className="nav-link" href to={`${props.prefix}/privacy/`}><Trans>Privacy</Trans></Link>
               <Link className="nav-link" href to={`${props.prefix}/security/`}><Trans>Security</Trans></Link>
               <Link className="nav-link" href to={`${props.prefix}/contact/`}><Trans>Contact & Imprint</Trans></Link>
+              <small><Link className="badge badge-pill badge-success mx-auto px-5" href to="/jobs/"><Trans>Work with us</Trans></Link></small>
             </div>
           </div>
 
@@ -263,3 +264,21 @@ export default class extends React.Component<{ location: { pathname: string } }>
     );
   }
 }
+
+
+// eslint-disable-next-line
+console.log(`
+██╗     ███████╗██████╗  ██████╗██╗   ██╗
+██║     ██╔════╝██╔══██╗██╔════╝╚██╗ ██╔╝
+██║     █████╗  ██║  ██║██║  ███╗╚████╔╝
+██║     ██╔══╝  ██║  ██║██║   ██║ ╚██╔╝
+███████╗███████╗██████╔╝╚██████╔╝  ██║
+╚══════╝╚══════╝╚═════╝  ╚═════╝   ╚═╝
+
+==========================
+
+Looking for a job?
+https://www.ledgy.com/jobs
+
+==========================
+`);

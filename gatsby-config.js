@@ -16,6 +16,11 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-transformer-remark',
+      options: { plugins: ['gatsby-remark-copy-linked-files'] },
+    },
+    'gatsby-plugin-catch-links',
+    {
       resolve: 'gatsby-plugin-google-tagmanager',
       options: { id: 'GTM-P48JT9B' },
     },

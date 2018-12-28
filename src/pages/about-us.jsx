@@ -2,11 +2,11 @@
 
 import * as React from 'react';
 import Img from 'gatsby-image';
-import { graphql } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 import { withI18n, Trans } from '@lingui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 import { Title } from '../layouts/utils';
 
@@ -149,7 +149,7 @@ const IndexPage = (props: Props) => {
                   Are you a web developer that eats bugs for breakfast?
                   Fascinated by cutting-edge technology like React, blockchain or space elevators?
                   <br /><br />
-                  Then let’s have coffee together!
+                  <Link href to="/jobs/">Learn more<FontAwesomeIcon icon={faChevronRight} className="fs-12 ml-2" /></Link>
                 </Trans>
               </p>
             </header>
