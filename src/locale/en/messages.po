@@ -803,6 +803,10 @@ msgstr "The transaction history will tell you exactly what happened to your owne
 msgid "Third Party Contractors"
 msgstr "Third Party Contractors"
 
+#: src/layouts/markdown.jsx:26
+msgid "This page is only available in English."
+msgstr "This page is only available in English."
+
 #: src/pages/features/consistency.jsx:17
 msgid "Track the complete history of your shares. Integrated consistency checks will guarantee that your cap table is error-free. Collaborate on a single source of truth."
 msgstr "Track the complete history of your shares. Integrated consistency checks will guarantee that your cap table is error-free. Collaborate on a single source of truth."

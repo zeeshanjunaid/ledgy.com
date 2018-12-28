@@ -149,7 +149,7 @@ const IndexPage = (props: Props) => {
                   Are you a web developer that eats bugs for breakfast?
                   Fascinated by cutting-edge technology like React, blockchain or space elevators?
                   <br /><br />
-                  <Link href to="/jobs/">Learn more<FontAwesomeIcon icon={faChevronRight} className="fs-12 ml-2" /></Link>
+                  <Link href to={`${props.prefix}/jobs/`}>Learn more<FontAwesomeIcon icon={faChevronRight} className="fs-12 ml-2" /></Link>
                 </Trans>
               </p>
             </header>

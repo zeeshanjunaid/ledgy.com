@@ -1,4 +1,7 @@
 const path = require('path');
+
+const { createFilePath } = require('gatsby-source-filesystem');
+
 const { languages, defaultLanguage } = require('./src/i18n-config');
 
 exports.onCreatePage = async ({ page, actions }) => {
@@ -19,36 +22,50 @@ exports.onCreatePage = async ({ page, actions }) => {
   });
 };
 
-exports.createPages = ({ actions, graphql }) => {
+
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions;
+  if (node.internal.type === 'MarkdownRemark') {
+    const slug = createFilePath({ node, getNode, basePath: 'markdown' });
+    createNodeField({
+      node,
+      name: 'slug',
+      value: slug,
+    });
+  }
+};
+
+exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
-
-  const template = path.resolve('src/layouts/markdown.jsx');
-
-  return graphql(`
-    {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 1000
-      ) {
-        edges {
-          node {
-            frontmatter {
-              path
+  const component = path.resolve('./src/layouts/markdown.jsx');
+  return new Promise((resolve) => {
+    graphql(`
+      {
+        allMarkdownRemark {
+          edges {
+            node {
+              fields {
+                slug
+              }
             }
           }
         }
       }
-    }
-  `).then((result) => {
-    if (result.errors) return Promise.reject(result.errors);
-
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      createPage({
-        path: node.frontmatter.path,
-        component: template,
-        context: {},
+    `).then((result) => {
+      result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+        const { slug } = node.fields;
+        createPage({
+          path: slug,
+          component,
+          context: { slug },
+        });
+        createPage({
+          path: `/de${slug}`,
+          component,
+          context: { slug, notLocalized: true },
+        });
       });
+      resolve();
     });
-    return Promise.resolve();
   });
 };

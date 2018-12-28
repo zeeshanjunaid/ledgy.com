@@ -6,7 +6,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Creation-Date: 2018-09-12T18:40:54.619Z\n"
-"PO-Revision-Date: 2018-12-28 22:04+0100\n"
+"PO-Revision-Date: 2018-12-28 22:46+0100\n"
 "Language: de\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
@@ -772,6 +772,10 @@ msgstr "Mit der Transaktionshistorie weißt du genau was sich wann an deinen Bet
 #: src/pages/privacy.jsx:115
 msgid "Third Party Contractors"
 msgstr "Drittanbieter"
+
+#: src/layouts/markdown.jsx:26
+msgid "This page is only available in English."
+msgstr "Diese Seite ist nur auf Englisch verfügbar."
 
 #: src/pages/features/consistency.jsx:17
 msgid "Track the complete history of your shares. Integrated consistency checks will guarantee that your cap table is error-free. Collaborate on a single source of truth."
