@@ -1,18 +1,18 @@
 ---
 path: "/jobs"
 date: "2018-12-28"
-title: "Become a Web Developer at Ledgy"
-description: "Ledgy is looking for a full-stack web developer to grow it’s team. Join us to work with React, Node.js, Flow, and Meteor."
+title: "Lead Web Developer"
+description: "Ledgy is looking for a full-stack lead web developer to grow it’s team. Join us to work on React, Node.js, Flow, and Meteor."
 ---
 
-We are Ledgy, an 18-month-old SaaS startup from Zurich, looking for a Web Developer to grow our team.
+We are Ledgy, a 16-month-old SaaS startup from Zurich, looking for a Web Developer to grow our team.
 
 Ledgy is a SaaS tool to manage the equity of private companies. It helps to democratize ownership in startups by assisting founders to grant equity to their employees. We’ve also developed a first concept to bring shares of startups on the Ethereum blockchain.
 
 Our [customers](/) are successful companies from Switzerland and other European countries, like VIU, Farmy, or the Crypto Finance AG.
 
 As a full-stack Web Developer at Ledgy, you can
-* Crunch financial data in isomorphic JavaScript (Browser & Node.js)
+* Crunch financial data in isomorphic JavaScript (browser & Node.js)
 * Become a master of functional programming
 * Build a modern API on GraphQL
 * Learn to type a large project in TypeScript
