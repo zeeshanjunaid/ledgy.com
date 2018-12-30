@@ -169,6 +169,7 @@ const TemplateWrapper = withI18n()((props: SiteProps) => {
       <Title
         title={i18n.t`The missing accounting software for your equity`}
         description={i18n.t`Stay on top of your vesting schedules, options, phantom plans, and convertible loans. Get fast insights for financing rounds or exit negotiations using our built-in modeling tools. With the portfolio you will always have the latest information about your investment and vesting at your fingertips. Try now for free!`}
+        thumbnailUrl={thumbnailUrl}
       />
       <Helmet>
         <html lang={props.lang} />
@@ -178,11 +179,9 @@ const TemplateWrapper = withI18n()((props: SiteProps) => {
         {/* Facebook social card */}
         <meta property="og:site_name" content={name} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={thumbnailUrl} />
 
         {/* Twitter social card */}
         <meta name="twitter:site" content="@LedgyCom" />
-        <meta name="twitter:image" content={thumbnailUrl} />
 
         <link rel="alternate" href={EnPathname} hrefLang="x-default" />
         <link rel="alternate" href={EnPathname} hrefLang="en" />

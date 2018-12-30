@@ -1,8 +1,8 @@
 ---
-path: "/jobs"
 date: "2018-12-28"
 title: "Lead Web Developer"
 description: "Ledgy is looking for a full-stack lead web developer to grow it’s team. Join us to work on React, Node.js, Flow, and Meteor."
+thumbnailUrl: ""
 ---
 
 We are Ledgy, a 16-month-old SaaS startup from Zurich, looking for a Web Developer to grow our team.

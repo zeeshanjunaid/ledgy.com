@@ -15,7 +15,11 @@ export default function Template({ data, pageContext }: {
   const { notLocalized } = pageContext;
   return (
     <div>
-      <Title title={frontmatter.title} description={frontmatter.description} />
+      <Title
+        title={frontmatter.title}
+        description={frontmatter.description}
+        thumbnailUrl={frontmatter.thumbnailUrl}
+      />
       <header className="header text-white bg-ledgy">
         <div className="container text-center">
           <div className="row">
@@ -51,6 +55,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
+        thumbnailUrl
       }
     }
   }
