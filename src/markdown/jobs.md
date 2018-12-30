@@ -2,7 +2,7 @@
 date: "2018-12-28"
 title: "Lead Web Developer"
 description: "Ledgy is looking for a full-stack lead web developer to grow it’s team. Join us to work on React, Node.js, Flow, and Meteor."
-thumbnailUrl: ""
+thumbnailUrl: "https://www.ledgy.com/img/code.png"
 ---
 
 We are Ledgy, a SaaS startup from Zurich, looking for a Web Developer to grow our team.
