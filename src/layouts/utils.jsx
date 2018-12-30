@@ -6,7 +6,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 export const name = 'Ledgy';
-export const siteUrl = 'https://www.ledgy.com';
 export const appUrl = 'https://app.ledgy.com';
 export const demoUrl = 'https://demo.ledgy.com';
 export const blogUrl = 'https://blog.ledgy.com';

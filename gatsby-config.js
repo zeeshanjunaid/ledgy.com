@@ -1,5 +1,7 @@
+const { CONTEXT, URL, DEPLOY_PRIME_URL, NODE_ENV } = process.env;
+
 module.exports = {
-  siteMetadata: { siteUrl: 'https://www.ledgy.com' },
+  siteMetadata: { siteUrl: (CONTEXT === 'production' && URL) || DEPLOY_PRIME_URL || `http://localhost:${NODE_ENV === 'production' ? 9 : 8}000` },
   plugins: [
     'gatsby-plugin-layout',
     'gatsby-plugin-flow',
