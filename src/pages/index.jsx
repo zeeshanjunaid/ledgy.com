@@ -10,13 +10,15 @@ import SecurityRow from '../components/SecurityRow';
 import { demoUrl } from '../layouts/utils';
 
 const Header = ({ i18n, data }: Props) => (
-  <header className="header bg-ledgy pb-0">
+  <header className="header bg-ledgy">
     <div className="container">
-      <div className="row align-items-end gap-y mt-5 pb-7">
+      <div className="text-white text-center mb-7">
+        <h1><Trans>The missing accounting software for your equity and ESOPs</Trans></h1>
+      </div>
+      <div className="row gap-y mt-5 pb-7">
 
         <div className="col-lg-6 ml-auto">
-          <div className="mb-4 text-white">
-            <h1><Trans>The missing accounting<br />software for your equity</Trans></h1>
+          <div className="text-white">
             <p>
               <Trans>
                 Stay on top of your vesting schedules, options, phantom plans, and

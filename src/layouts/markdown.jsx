@@ -13,12 +13,13 @@ export default function Template({ data, pageContext }: {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
   const { notLocalized } = pageContext;
+  const { siteUrl } = data.site.siteMetadata;
   return (
     <div>
       <Title
         title={frontmatter.title}
         description={frontmatter.description}
-        thumbnailUrl={frontmatter.thumbnailUrl}
+        thumbnailUrl={`${siteUrl}${frontmatter.thumbnailUrl}`}
       />
       <header className="header text-white bg-ledgy">
         <div className="container text-center">
@@ -56,6 +57,11 @@ export const pageQuery = graphql`
         title
         description
         thumbnailUrl
+      }
+    }
+    site {
+      siteMetadata {
+        siteUrl
       }
     }
   }

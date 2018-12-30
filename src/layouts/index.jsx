@@ -1,7 +1,7 @@
 // @flow
 
 import * as React from 'react';
-import { Link, navigate } from 'gatsby';
+import { StaticQuery, graphql, Link, navigate } from 'gatsby';
 import { I18nProvider, withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,7 +9,7 @@ import { faTwitter, faFacebook, faLinkedin, faAngellist, faXing } from '@fortawe
 import 'typeface-slabo-27px'; // eslint-disable-line import/extensions
 import 'typeface-work-sans'; // eslint-disable-line import/extensions
 
-import { Title, name, siteUrl, appUrl, blogUrl, demoUrl, loadScript } from './utils';
+import { Title, name, appUrl, blogUrl, demoUrl, loadScript } from './utils';
 import { catalogs, langFromPath, langPrefix, getLocale } from '../i18n-config';
 import SignupForm from '../components/SignupForm';
 
@@ -158,53 +158,69 @@ type SiteProps = {
   location: { pathname: string },
 }
 
-const TemplateWrapper = withI18n()((props: SiteProps) => {
-  const { i18n } = props;
-  const prefix = langPrefix(props.lang);
-  const thumbnailUrl = `${siteUrl}/thumbnail.png`;
-  const { pathname } = props.location;
-  const EnPathname = `${siteUrl}${pathname.startsWith('/de') ? pathname.substr(3) : pathname}`;
-  return (
-    <div>
-      <Title
-        title={i18n.t`The missing accounting software for your equity`}
-        description={i18n.t`Stay on top of your vesting schedules, options, phantom plans, and convertible loans. Get fast insights for financing rounds or exit negotiations using our built-in modeling tools. With the portfolio you will always have the latest information about your investment and vesting at your fingertips. Try now for free!`}
-        thumbnailUrl={thumbnailUrl}
-      />
-      <Helmet>
-        <html lang={props.lang} />
-        <meta name="keywords" content={i18n.t`cap table, stock ledger, share register, startup, modeling, financing round, equity, esop, phantom, option plan, virtual, portfolio, reporting, investors`} />
-        <meta name="author" content="Ledgy" />
+const TemplateWrapper = withI18n()((props: SiteProps) => (
+  <StaticQuery
+    query={graphql`
+       query {
+         site {
+           siteMetadata {
+             siteUrl
+           }
+         }
+       }
+     `
+   }
+    render={(data) => {
+      const { i18n } = props;
+      const prefix = langPrefix(props.lang);
+      const { siteUrl } = data.site.siteMetadata;
+      const thumbnailUrl = `${siteUrl}/thumbnail.png`;
+      const { pathname } = props.location;
+      const EnPathname = `${siteUrl}${pathname.startsWith('/de') ? pathname.substr(3) : pathname}`;
+      return (
+        <div>
+          <Title
+            title={i18n.t`The missing accounting software for your equity and ESOPs`}
+            description={i18n.t`Stay on top of your vesting schedules, options, phantom plans, and convertible loans. Get fast insights for financing rounds or exit negotiations using our built-in modeling tools. With the portfolio you will always have the latest information about your investment and vesting at your fingertips. Try now for free!`}
+            thumbnailUrl={thumbnailUrl}
+          />
+          <Helmet>
+            <html lang={props.lang} />
+            <meta name="keywords" content={i18n.t`cap table, stock ledger, share register, startup, modeling, financing round, equity, esop, phantom, option plan, virtual, portfolio, reporting, investors`} />
+            <meta name="author" content="Ledgy" />
 
-        {/* Facebook social card */}
-        <meta property="og:site_name" content={name} />
-        <meta property="og:type" content="website" />
+            {/* Facebook social card */}
+            <meta property="og:site_name" content={name} />
+            <meta property="og:type" content="website" />
 
-        {/* Twitter social card */}
-        <meta name="twitter:site" content="@LedgyCom" />
+            {/* Twitter social card */}
+            <meta name="twitter:site" content="@Ledgy" />
+            <meta name="twitter:card" content="summary_large_image" />
 
-        <link rel="alternate" href={EnPathname} hrefLang="x-default" />
-        <link rel="alternate" href={EnPathname} hrefLang="en" />
-        <link rel="alternate" href={`${siteUrl}${pathname.startsWith('/de') ? '' : '/de'}${pathname}`} hrefLang="de" />
+            <link rel="alternate" href={EnPathname} hrefLang="x-default" />
+            <link rel="alternate" href={EnPathname} hrefLang="en" />
+            <link rel="alternate" href={`${siteUrl}${pathname.startsWith('/de') ? '' : '/de'}${pathname}`} hrefLang="de" />
 
-        {/* Disable AOS for Google */}
-        <noscript>
-          {`
-            <style>
-              [data-aos] {
-                  opacity: 1 !important;
-                  transform: translate(0) scale(1) !important;
-              }
-            </style>
-          `}
-        </noscript>
-      </Helmet>
-      <Nav {...props} prefix={prefix} />
-      {React.cloneElement(props.children, { prefix })}
-      <Footer {...props} prefix={prefix} />
-    </div>
-  );
-});
+            {/* Disable AOS for Google */}
+            <noscript>
+              {`
+                <style>
+                  [data-aos] {
+                      opacity: 1 !important;
+                      transform: translate(0) scale(1) !important;
+                  }
+                </style>
+              `}
+            </noscript>
+          </Helmet>
+          <Nav {...props} prefix={prefix} />
+          {React.cloneElement(props.children, { prefix })}
+          <Footer {...props} prefix={prefix} />
+        </div>
+      );
+    }}
+  />
+));
 
 
 export default class extends React.Component<{ location: { pathname: string } }> {
