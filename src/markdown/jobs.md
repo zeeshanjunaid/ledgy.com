@@ -5,7 +5,7 @@ description: "Ledgy is looking for a full-stack lead web developer to grow it’
 thumbnailUrl: ""
 ---
 
-We are Ledgy, a 16-month-old SaaS startup from Zurich, looking for a Web Developer to grow our team.
+We are Ledgy, a SaaS startup from Zurich, looking for a Web Developer to grow our team.
 
 Ledgy is a SaaS tool to manage the equity of private companies. It helps to democratize ownership in startups by assisting founders to grant equity to their employees. We’ve also developed a first concept to bring shares of startups on the Ethereum blockchain.
 
