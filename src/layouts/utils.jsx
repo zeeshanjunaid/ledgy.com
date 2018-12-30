@@ -24,6 +24,7 @@ export const Title = (props: {
   title: string,
   section?: string,
   description?: string,
+  thumbnailUrl?: string,
 }) => (
   <Helmet>
     <title>{props.title} {props.section && `| ${props.section}`} | {name}</title>
@@ -31,12 +32,14 @@ export const Title = (props: {
 
     <meta property="og:title" content={props.title} />
     {props.description && <meta property="og:description" content={props.description} />}
+    {props.thumbnailUrl && <meta property="og:image" content={props.thumbnailUrl} />}
 
     <meta name="twitter:title" content={props.title} />
     {props.description && <meta name="twitter:description" content={props.description} />}
+    {props.thumbnailUrl && <meta name="twitter:image" content={props.thumbnailUrl} />}
   </Helmet>
 );
-Title.defaultProps = { section: '', description: '' };
+Title.defaultProps = { section: '', description: '', thumbnailUrl: '' };
 
 export const Li = ({ children }: { children: React.Node }) => (
   <li className="media">

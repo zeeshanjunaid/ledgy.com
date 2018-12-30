@@ -110,6 +110,7 @@ const Footer = (props: LayoutProps) => (
               <Link className="nav-link" href to={`${props.prefix}/privacy/`}><Trans>Privacy</Trans></Link>
               <Link className="nav-link" href to={`${props.prefix}/security/`}><Trans>Security</Trans></Link>
               <Link className="nav-link" href to={`${props.prefix}/contact/`}><Trans>Contact & Imprint</Trans></Link>
+              <small><Link className="badge badge-pill badge-success mx-auto px-5" href to={`${props.prefix}/jobs/`}><Trans>Work with us</Trans></Link></small>
             </div>
           </div>
 
@@ -168,6 +169,7 @@ const TemplateWrapper = withI18n()((props: SiteProps) => {
       <Title
         title={i18n.t`The missing accounting software for your equity`}
         description={i18n.t`Stay on top of your vesting schedules, options, phantom plans, and convertible loans. Get fast insights for financing rounds or exit negotiations using our built-in modeling tools. With the portfolio you will always have the latest information about your investment and vesting at your fingertips. Try now for free!`}
+        thumbnailUrl={thumbnailUrl}
       />
       <Helmet>
         <html lang={props.lang} />
@@ -177,12 +179,9 @@ const TemplateWrapper = withI18n()((props: SiteProps) => {
         {/* Facebook social card */}
         <meta property="og:site_name" content={name} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={thumbnailUrl} />
 
         {/* Twitter social card */}
         <meta name="twitter:site" content="@LedgyCom" />
-        <meta name="twitter:image" content={thumbnailUrl} />
-        <meta name="twitter:card" content="summary_large_image" />
 
         <link rel="alternate" href={EnPathname} hrefLang="x-default" />
         <link rel="alternate" href={EnPathname} hrefLang="en" />
@@ -263,3 +262,21 @@ export default class extends React.Component<{ location: { pathname: string } }>
     );
   }
 }
+
+
+// eslint-disable-next-line
+console.log(`
+██╗     ███████╗██████╗  ██████╗██╗   ██╗
+██║     ██╔════╝██╔══██╗██╔════╝╚██╗ ██╔╝
+██║     █████╗  ██║  ██║██║  ███╗╚████╔╝
+██║     ██╔══╝  ██║  ██║██║   ██║ ╚██╔╝
+███████╗███████╗██████╔╝╚██████╔╝  ██║
+╚══════╝╚══════╝╚═════╝  ╚═════╝   ╚═╝
+
+==========================
+
+Looking for a job?
+https://www.ledgy.com/jobs
+
+==========================
+`);
