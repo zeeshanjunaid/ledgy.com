@@ -731,7 +731,7 @@ msgstr "Startup"
 msgid "Startups do end up with several conflicting spreadsheet-based cap tables, one being with the founders, one with the lawyers, one with the leading investors. Not so with Ledgy. Have one single source of truth and give your key stakeholders access with a single click. Don’t waste money on consolidating several cap table versions, professionaly manage it from the start instead."
 msgstr "Startups do end up with several conflicting spreadsheet-based cap tables, one being with the founders, one with the lawyers, one with the leading investors. Not so with Ledgy. Have one single source of truth and give your key stakeholders access with a single click. Don’t waste money on consolidating several cap table versions, professionaly manage it from the start instead."
 
-#: src/layouts/index.jsx:171
+#: src/layouts/index.jsx:184
 msgid "Stay on top of your vesting schedules, options, phantom plans, and convertible loans. Get fast insights for financing rounds or exit negotiations using our built-in modeling tools. With the portfolio you will always have the latest information about your investment and vesting at your fingertips. Try now for free!"
 msgstr "Stay on top of your vesting schedules, options, phantom plans, and convertible loans. Get fast insights for financing rounds or exit negotiations using our built-in modeling tools. With the portfolio you will always have the latest information about your investment and vesting at your fingertips. Try now for free!"
 
@@ -783,9 +783,9 @@ msgstr "The frequency of server calls is limited to prevent brute-force attacks"
 msgid "The holding confirmation lists all assets that a shareholder owns. You can optionally include a tax value of the shares. Employees will be able to see their stock ownership plans and how many of their total shares they already have vested.<0/>Make your shareholders feel good, they will reward you."
 msgstr "The holding confirmation lists all assets that a shareholder owns. You can optionally include a tax value of the shares. Employees will be able to see their stock ownership plans and how many of their total shares they already have vested.<0/>Make your shareholders feel good, they will reward you."
 
-#: src/layouts/index.jsx:170
-msgid "The missing accounting software for your equity"
-msgstr "The missing accounting software for your equity"
+#: src/layouts/index.jsx:183
+msgid "The missing accounting software for your equity and ESOPs"
+msgstr "The missing accounting software for your equity and ESOPs"
 
 #: src/pages/index.jsx:19
 msgid "The missing accounting<0/>software for your equity"
@@ -803,7 +803,7 @@ msgstr "The transaction history will tell you exactly what happened to your owne
 msgid "Third Party Contractors"
 msgstr "Third Party Contractors"
 
-#: src/layouts/markdown.jsx:26
+#: src/layouts/markdown.jsx:31
 msgid "This page is only available in English."
 msgstr "This page is only available in English."
 
@@ -955,7 +955,7 @@ msgstr "Your shareholders"
 msgid "You’re in good company"
 msgstr "You’re in good company"
 
-#: src/layouts/index.jsx:175
+#: src/layouts/index.jsx:189
 msgid "cap table, stock ledger, share register, startup, modeling, financing round, equity, esop, phantom, option plan, virtual, portfolio, reporting, investors"
 msgstr "cap table, stock ledger, share register, startup, modeling, financing round, equity, esop, phantom, option plan, virtual, portfolio, reporting, investors"
 

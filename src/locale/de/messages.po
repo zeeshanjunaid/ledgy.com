@@ -6,7 +6,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Creation-Date: 2018-09-12T18:40:54.619Z\n"
-"PO-Revision-Date: 2018-12-28 22:46+0100\n"
+"PO-Revision-Date: 2018-12-30 14:12+0100\n"
 "Language: de\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
@@ -701,7 +701,7 @@ msgstr "Startup"
 msgid "Startups do end up with several conflicting spreadsheet-based cap tables, one being with the founders, one with the lawyers, one with the leading investors. Not so with Ledgy. Have one single source of truth and give your key stakeholders access with a single click. Don’t waste money on consolidating several cap table versions, professionaly manage it from the start instead."
 msgstr "Startups haben tatsächlich oft verschiedene Cap Table Versionen, die zueinander im Konflikt stehen. Einer von den Founders, einer bei den Anwälten und einer bei den Hauptinvestoren. Mit Ledgy passiert das nicht. Hier hast du eine einzige Informationsquelle und kannst deinen zentralen Stakeholdern mit einem Mausklick Zugriff geben. Verschwende kein Geld damit verschiedene Cap Tables von Anwälten wieder zusammenzuführen. Mach es lieber gleich professionell."
 
-#: src/layouts/index.jsx:171
+#: src/layouts/index.jsx:184
 msgid "Stay on top of your vesting schedules, options, phantom plans, and convertible loans. Get fast insights for financing rounds or exit negotiations using our built-in modeling tools. With the portfolio you will always have the latest information about your investment and vesting at your fingertips. Try now for free!"
 msgstr "Behalte den Überblick über deine Vestingpläne, Optionen, virtuelle Beteiligungen und Wandeldarlehen. Verschaffe dir schnell Erkenntnisse für Finanzierungsrunden oder Exit-Verhandlungen mit integrierter Modellierung. Mit dem Portfolio wirst du immer die aktuellsten Informationen zu deinen Investments und Vestingplänen haben. Probier es jetzt umsonst aus!"
 
@@ -753,9 +753,9 @@ msgstr "Die Anzahl an Server-Anfragen ist beschränkt, um Brute-Force-Attacken z
 msgid "The holding confirmation lists all assets that a shareholder owns. You can optionally include a tax value of the shares. Employees will be able to see their stock ownership plans and how many of their total shares they already have vested.<0/>Make your shareholders feel good, they will reward you."
 msgstr "Der Beteiligungsauszug zählt alles auf, was ein Gesellschafter besitzt. Zusätzlich kannst du noch den Steuerwert der Aktien angeben. Mitarbeiter können ihre Beteiligungen und das Vesting sehen.<0/>Mach deine Gesellschafter glücklich, sie werden sich revanchieren."
 
-#: src/layouts/index.jsx:170
-msgid "The missing accounting software for your equity"
-msgstr "Die fehlende Buchhaltung für deine Beteiligungen"
+#: src/layouts/index.jsx:183
+msgid "The missing accounting software for your equity and ESOPs"
+msgstr "Die fehlende Buchhaltung für deine Beteiligungen und ESOPs"
 
 #: src/pages/index.jsx:19
 msgid "The missing accounting<0/>software for your equity"
@@ -773,7 +773,7 @@ msgstr "Mit der Transaktionshistorie weißt du genau was sich wann an deinen Bet
 msgid "Third Party Contractors"
 msgstr "Drittanbieter"
 
-#: src/layouts/markdown.jsx:26
+#: src/layouts/markdown.jsx:31
 msgid "This page is only available in English."
 msgstr "Diese Seite ist nur auf Englisch verfügbar."
 
@@ -925,7 +925,7 @@ msgstr "Deine Gesellschafter"
 msgid "You’re in good company"
 msgstr "Du befindest dich in guter Gesellschaft"
 
-#: src/layouts/index.jsx:175
+#: src/layouts/index.jsx:189
 msgid "cap table, stock ledger, share register, startup, modeling, financing round, equity, esop, phantom, option plan, virtual, portfolio, reporting, investors"
 msgstr "cap table, Aktienbuch, Aktienregister, Startup, Modellierung, Finanzierungsrunde, Exit, ESOP, VSOP, Beteiligungsplan, Unternehmensbeteiligung, Mitarbeiterbeteiligung, Optionspläne, virtuelle Beteiligung, Reporting, Investor, Portfolio"
 
