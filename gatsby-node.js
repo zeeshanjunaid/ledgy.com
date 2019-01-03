@@ -36,7 +36,9 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 };
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions;
+  const { createPage, createRedirect } = actions;
+  createRedirect({ fromPath: '/jobs/', toPath: '/jobs/software-engineer/' });
+
   const component = path.resolve('./src/layouts/markdown.jsx');
   return new Promise((resolve) => {
     graphql(`
