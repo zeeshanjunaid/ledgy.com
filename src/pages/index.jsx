@@ -67,7 +67,7 @@ const IndexPage = (props: Props) => (
             </p>
           </header>
 
-          <div className="partner">
+          <div className="partner mx-auto">
             <Reference img={props.data.bexio} name="Bexio" />
             <Reference img={props.data.cryptofinance} name="Crypto Finance AG" />
             <Reference img={props.data.viu} name="VIU Eyeware" />

@@ -9,6 +9,7 @@ export const name = 'Ledgy';
 export const appUrl = 'https://app.ledgy.com';
 export const demoUrl = 'https://demo.ledgy.com';
 export const blogUrl = 'https://blog.ledgy.com';
+export const githubUrl = 'https://github.com/morloy/ledgy.com/';
 
 export const loadScript = (path: string): Promise<*> => new Promise((resolve, reject) => {
   const script = document.createElement('script');

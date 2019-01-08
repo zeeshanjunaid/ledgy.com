@@ -231,8 +231,8 @@ msgid "Distribute Investment Pro-Rata"
 msgstr "Distribute Investment Pro-Rata"
 
 #: src/pages/about-us.jsx:145
-msgid "Do you feel working for Google is boring because they don’t grow by 100× during the next four years? Building a product is fantastic, but how about creating a whole team around it? Are you a web developer that eats bugs for breakfast? Fascinated by cutting-edge technology like React, blockchain or space elevators?<0/><1/><2>Learn more<3/></2>"
-msgstr "Do you feel working for Google is boring because they don’t grow by 100× during the next four years? Building a product is fantastic, but how about creating a whole team around it? Are you a web developer that eats bugs for breakfast? Fascinated by cutting-edge technology like React, blockchain or space elevators?<0/><1/><2>Learn more<3/></2>"
+msgid "Do you feel working for Google is boring because they don’t grow by 1,000× during the next four years? Building a product is fantastic, but how about creating a whole team around it? Are you a web developer that eats bugs for breakfast? Fascinated by cutting-edge technology like React, blockchain or space elevators?<0/><1/><2>Learn more<3/></2>"
+msgstr "Do you feel working for Google is boring because they don’t grow by 1,000× during the next four years? Building a product is fantastic, but how about creating a whole team around it? Are you a web developer that eats bugs for breakfast? Fascinated by cutting-edge technology like React, blockchain or space elevators?<0/><1/><2>Learn more<3/></2>"
 
 #: src/pages/features/reporting.jsx:141
 msgid "Document management"

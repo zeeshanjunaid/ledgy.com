@@ -224,8 +224,8 @@ msgid "Distribute Investment Pro-Rata"
 msgstr "Pro-Rata Verteilung eines Investments"
 
 #: src/pages/about-us.jsx:145
-msgid "Do you feel working for Google is boring because they don’t grow by 100× during the next four years? Building a product is fantastic, but how about creating a whole team around it? Are you a web developer that eats bugs for breakfast? Fascinated by cutting-edge technology like React, blockchain or space elevators?<0/><1/><2>Learn more<3/></2>"
-msgstr "Du findest, für Google zu arbeiten ist langweilig, weil sie in den nächsten 4 Jahren nicht um das 100-fache wachsen werden? Eine Software zu entwickeln ist cool, aber wie wäre es ein ganzes Team darum aufzubauen? Du bist ein Web-Entwickler, der noch beim Frühstücken die letzten Bugs fixt? Du bist fasziniert von modernster Technologie wie React, Blockchain und Weltraumaufzügen?<0/><1/><2>Mehr erfahren<3/></2>"
+msgid "Do you feel working for Google is boring because they don’t grow by 1,000× during the next four years? Building a product is fantastic, but how about creating a whole team around it? Are you a web developer that eats bugs for breakfast? Fascinated by cutting-edge technology like React, blockchain or space elevators?<0/><1/><2>Learn more<3/></2>"
+msgstr "Du findest, für Google zu arbeiten ist langweilig, weil sie in den nächsten 4 Jahren nicht um das 1.000-fache wachsen werden? Eine Software zu entwickeln ist cool, aber wie wäre es ein ganzes Team darum aufzubauen? Du bist ein Web-Entwickler, der noch beim Frühstücken die letzten Bugs fixt? Du bist fasziniert von modernster Technologie wie React, Blockchain und Weltraumaufzügen?<0/><1/><2>Mehr erfahren<3/></2>"
 
 #: src/pages/features/reporting.jsx:141
 msgid "Document management"
@@ -573,11 +573,11 @@ msgstr "Datenschutz"
 
 #: src/components/SecurityRow.jsx:16 src/pages/privacy.jsx:17
 msgid "Privacy made in Europe. Because your cap table data is not for everyone."
-msgstr "Privatsphäre made in Europe. Weil deine Cap Table Daten nicht für jeden gedacht sind."
+msgstr "Privacy made in Europe. Weil deine Cap Table Daten nicht für jeden gedacht sind."
 
 #: src/pages/privacy.jsx:39
 msgid "Privacy made in Europe. Because your cap table data is not for everyone.<0/><1/>We understand how sensitive cap table information is for any business. That’s why your privacy and your data’s security is crucial to us. We also know that long and complicated privacy policies are not very helpful, so we give an overview up-front."
-msgstr "Privatsphäre made in Europe. Weil deine Cap Table Daten nicht für jeden gedacht sind.<0/><1/>Uns ist bewusst, wie wichtig und vertraulich Cap Table Daten für jede Firma sind. Deshalb nehmen wir deine Privatsphäre und die Sicherheit deiner Daten sehr ernst."
+msgstr "Privacy made in Europe. Weil deine Cap Table Daten nicht für jeden gedacht sind.<0/><1/>Uns ist bewusst, wie wichtig und vertraulich Cap Table Daten für jede Firma sind. Deshalb nehmen wir deine Privatsphäre und die Sicherheit deiner Daten sehr ernst."
 
 #: src/layouts/index.jsx:118
 msgid "Product"
