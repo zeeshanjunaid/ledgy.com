@@ -9,7 +9,7 @@ import { faTwitter, faFacebook, faLinkedin, faAngellist, faXing } from '@fortawe
 import 'typeface-slabo-27px'; // eslint-disable-line import/extensions
 import 'typeface-work-sans'; // eslint-disable-line import/extensions
 
-import { Title, name, appUrl, blogUrl, demoUrl, loadScript } from './utils';
+import { Title, name, appUrl, blogUrl, demoUrl, loadScript, targetBlank } from './utils';
 import { catalogs, langFromPath, langPrefix, getLocale } from '../i18n-config';
 import SignupForm from '../components/SignupForm';
 
@@ -48,7 +48,7 @@ const Nav = (props: LayoutProps) => (
         <nav className="nav nav-navbar ml-auto">
           <Link className="nav-link" href to={`${props.prefix}/features/`}><Trans>Features</Trans></Link>
           <Link className="nav-link" href to={`${props.prefix}/pricing/`}><Trans>Pricing</Trans></Link>
-          <a className="nav-link" href={blogUrl} target="_blank" rel="noopener noreferrer"><Trans>Blog</Trans></a>
+          <a className="nav-link" href={blogUrl} {...targetBlank}><Trans>Blog</Trans></a>
         </nav>
 
         <span className="navbar-divider" />
@@ -88,7 +88,7 @@ const Footer = (props: LayoutProps) => (
           <p>
             <Trans>
               Or have a quick look at our&nbsp;
-              <a href={`${demoUrl}`} target="_blank" rel="noopener noreferrer">live demo</a>.
+              <a href={`${demoUrl}`} {...targetBlank}>live demo</a>.
             </Trans>
           </p>
 
@@ -106,7 +106,7 @@ const Footer = (props: LayoutProps) => (
             <h6 className="mb-4 mt-1"><strong><Trans>Company</Trans></strong></h6>
             <div className="nav flex-column">
               <Link className="nav-link" href to={`${props.prefix}/about-us/`}><Trans>About us</Trans></Link>
-              <a className="nav-link" href={blogUrl} target="_blank" rel="noopener noreferrer"><Trans>Blog</Trans></a>
+              <a className="nav-link" href={blogUrl} {...targetBlank}><Trans>Blog</Trans></a>
               <Link className="nav-link" href to={`${props.prefix}/privacy/`}><Trans>Privacy</Trans></Link>
               <Link className="nav-link" href to={`${props.prefix}/security/`}><Trans>Security</Trans></Link>
               <Link className="nav-link" href to={`${props.prefix}/contact/`}><Trans>Contact & Imprint</Trans></Link>

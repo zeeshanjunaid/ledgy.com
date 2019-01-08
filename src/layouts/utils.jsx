@@ -11,6 +11,8 @@ export const demoUrl = 'https://demo.ledgy.com';
 export const blogUrl = 'https://blog.ledgy.com';
 export const githubUrl = 'https://github.com/morloy/ledgy.com/';
 
+export const targetBlank = { target: '_blank', rel: 'noopener noreferrer' };
+
 export const loadScript = (path: string): Promise<*> => new Promise((resolve, reject) => {
   const script = document.createElement('script');
   script.src = path;

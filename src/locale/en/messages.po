@@ -159,7 +159,7 @@ msgstr "Company name, and other company details. To properly use our Service you
 msgid "Configure your pdf reports"
 msgstr "Configure your pdf reports"
 
-#: src/components/Features.jsx:90
+#: src/components/Features.jsx:92
 #: src/layouts/index.jsx:122
 #: src/pages/features.jsx:43
 msgid "Consistency"
@@ -222,7 +222,7 @@ msgstr "Did you notice the number in the center bottom? Any time you transfer sh
 msgid "Discover all cap table features"
 msgstr "Discover all cap table features"
 
-#: src/components/Features.jsx:83
+#: src/components/Features.jsx:85
 msgid "Discover more about Ledgy"
 msgstr "Discover more about Ledgy"
 
@@ -256,7 +256,7 @@ msgstr "ESOPs in the portfolio"
 msgid "Employee Incentive Plans"
 msgstr "Employee Incentive Plans"
 
-#: src/components/Features.jsx:92
+#: src/components/Features.jsx:94
 #: src/layouts/index.jsx:124
 msgid "Employee Incentives"
 msgstr "Employee Incentives"
@@ -301,7 +301,7 @@ msgstr "Exit modeling"
 msgid "Explore new scenarios for upcoming financing rounds interactively"
 msgstr "Explore new scenarios for upcoming financing rounds interactively"
 
-#: src/components/Features.jsx:82
+#: src/components/Features.jsx:84
 #: src/layouts/index.jsx:49
 #: src/layouts/index.jsx:120
 #: src/pages/features/consistency.jsx:16
@@ -313,7 +313,7 @@ msgstr "Explore new scenarios for upcoming financing rounds interactively"
 msgid "Features"
 msgstr "Features"
 
-#: src/pages/index.jsx:82
+#: src/pages/index.jsx:84
 msgid "Find out why they trust us"
 msgstr "Find out why they trust us"
 
@@ -356,7 +356,7 @@ msgid "Funding Round and Exit Modeling"
 msgstr "Funding Round and Exit Modeling"
 
 #: src/components/SignupForm.jsx:16
-#: src/pages/index.jsx:32
+#: src/pages/index.jsx:34
 msgid "Get Started"
 msgstr "Get Started"
 
@@ -419,7 +419,7 @@ msgstr "Investor & Consultant (Farmy.ch, Flatfox.ch), Founder of Students.ch"
 msgid "Investor Portfolio"
 msgstr "Investor Portfolio"
 
-#: src/components/Features.jsx:94
+#: src/components/Features.jsx:96
 #: src/layouts/index.jsx:126
 msgid "Investors"
 msgstr "Investors"
@@ -448,7 +448,7 @@ msgstr "Keep your employees engaged"
 msgid "Keep your employees motivated at work. They deserve it. Ledgy's ESOP module will help you to make it happen."
 msgstr "Keep your employees motivated at work. They deserve it. Ledgy's ESOP module will help you to make it happen."
 
-#: src/components/Features.jsx:27
+#: src/components/Features.jsx:29
 msgid "Learn more about"
 msgstr "Learn more about"
 
@@ -488,7 +488,7 @@ msgstr "Manage your shares.<0/>Not your Excel."
 msgid "Managing directors"
 msgstr "Managing directors"
 
-#: src/pages/index.jsx:62
+#: src/pages/index.jsx:64
 msgid "Many successful companies already use Ledgy for their equity plans and cap table"
 msgstr "Many successful companies already use Ledgy for their equity plans and cap table"
 
@@ -624,7 +624,7 @@ msgstr "Remember that day last year during tax season when you had to send holdi
 msgid "Replace your Excel with Ledgy"
 msgstr "Replace your Excel with Ledgy"
 
-#: src/components/Features.jsx:93
+#: src/components/Features.jsx:95
 #: src/layouts/index.jsx:125
 msgid "Reporting"
 msgstr "Reporting"
@@ -633,7 +633,7 @@ msgstr "Reporting"
 msgid "Reporting & Documents"
 msgstr "Reporting & Documents"
 
-#: src/components/Features.jsx:91
+#: src/components/Features.jsx:93
 #: src/layouts/index.jsx:123
 #: src/pages/features/round-modeling.jsx:74
 msgid "Round Modeling"
@@ -651,7 +651,7 @@ msgstr "Round modeling"
 msgid "Save painful work inserting numbers into templates. Automated documents and reports at your fingertips."
 msgstr "Save painful work inserting numbers into templates. Automated documents and reports at your fingertips."
 
-#: src/pages/index.jsx:36
+#: src/pages/index.jsx:38
 msgid "Screenshot of the Ledgy app"
 msgstr "Screenshot of the Ledgy app"
 
@@ -671,7 +671,7 @@ msgstr "Secure Document Storage"
 msgid "Security"
 msgstr "Security"
 
-#: src/pages/index.jsx:31
+#: src/pages/index.jsx:33
 msgid "See the demo"
 msgstr "See the demo"
 
@@ -735,7 +735,7 @@ msgstr "Startups do end up with several conflicting spreadsheet-based cap tables
 msgid "Stay on top of your vesting schedules, options, phantom plans, and convertible loans. Get fast insights for financing rounds or exit negotiations using our built-in modeling tools. With the portfolio you will always have the latest information about your investment and vesting at your fingertips. Try now for free!"
 msgstr "Stay on top of your vesting schedules, options, phantom plans, and convertible loans. Get fast insights for financing rounds or exit negotiations using our built-in modeling tools. With the portfolio you will always have the latest information about your investment and vesting at your fingertips. Try now for free!"
 
-#: src/pages/index.jsx:21
+#: src/pages/index.jsx:23
 msgid "Stay on top of your vesting schedules, options, phantom plans, and convertible loans. Get fast insights for financing rounds or exit negotiations using our built-in modeling tools.<0/><1/>Are you an investor or employee? With the portfolio you will always have the latest information about your investment and vesting at your fingertips."
 msgstr "Stay on top of your vesting schedules, options, phantom plans, and convertible loans. Get fast insights for financing rounds or exit negotiations using our built-in modeling tools.<0/><1/>Are you an investor or employee? With the portfolio you will always have the latest information about your investment and vesting at your fingertips."
 
@@ -754,6 +754,10 @@ msgstr "Stored encrypted with the battle-tested <0>bcrypt algorithm</0>"
 #: src/pages/security.jsx:50
 msgid "Strong passwords"
 msgstr "Strong passwords"
+
+#: src/layouts/markdown.jsx:54
+msgid "Suggest changes"
+msgstr "Suggest changes"
 
 #: src/pages/contact.jsx:64
 msgid "Switzerland"
@@ -784,12 +788,9 @@ msgid "The holding confirmation lists all assets that a shareholder owns. You ca
 msgstr "The holding confirmation lists all assets that a shareholder owns. You can optionally include a tax value of the shares. Employees will be able to see their stock ownership plans and how many of their total shares they already have vested.<0/>Make your shareholders feel good, they will reward you."
 
 #: src/layouts/index.jsx:183
+#: src/pages/index.jsx:16
 msgid "The missing accounting software for your equity and ESOPs"
 msgstr "The missing accounting software for your equity and ESOPs"
-
-#: src/pages/index.jsx:19
-msgid "The missing accounting<0/>software for your equity"
-msgstr "The missing accounting<0/>software for your equity"
 
 #: src/pages/security.jsx:95
 msgid "The site is accessible only through HTTPS (<0>A+ rating</0>)"
@@ -803,7 +804,7 @@ msgstr "The transaction history will tell you exactly what happened to your owne
 msgid "Third Party Contractors"
 msgstr "Third Party Contractors"
 
-#: src/layouts/markdown.jsx:31
+#: src/layouts/markdown.jsx:33
 msgid "This page is only available in English."
 msgstr "This page is only available in English."
 
@@ -935,7 +936,7 @@ msgstr "Yoko graduated from ETH and Oxford and was president of Swissloop, enabl
 msgid "You can create a detailed vesting schedule by defining over how many months the shares are to be vested, wether there’s a cliff and how often a new batch of shares gets assigned to the employee.<0/>As soon as you enter the first numbers, you will see a visual representation of the current schedule."
 msgstr "You can create a detailed vesting schedule by defining over how many months the shares are to be vested, wether there’s a cliff and how often a new batch of shares gets assigned to the employee.<0/>As soon as you enter the first numbers, you will see a visual representation of the current schedule."
 
-#: src/pages/index.jsx:92
+#: src/pages/index.jsx:94
 msgid "Your data in safe hands"
 msgstr "Your data in safe hands"
 
@@ -951,7 +952,7 @@ msgstr "Your portfolio at a glance"
 msgid "Your shareholders"
 msgstr "Your shareholders"
 
-#: src/pages/index.jsx:60
+#: src/pages/index.jsx:62
 msgid "You’re in good company"
 msgstr "You’re in good company"
 

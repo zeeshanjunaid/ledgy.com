@@ -7,7 +7,7 @@ import Img from 'gatsby-image';
 
 import { FeatureLinks } from '../components/Features';
 import SecurityRow from '../components/SecurityRow';
-import { demoUrl } from '../layouts/utils';
+import { demoUrl, targetBlank } from '../layouts/utils';
 
 const Header = ({ i18n, data }: Props) => (
   <header className="header bg-ledgy">
@@ -30,7 +30,7 @@ const Header = ({ i18n, data }: Props) => (
               </Trans>
             </p>
           </div>
-          <a className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-outline-light" href={demoUrl} target="_blank" rel="noopener noreferrer"><Trans>See the demo</Trans></a>
+          <a className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-outline-light" href={demoUrl} {...targetBlank}><Trans>See the demo</Trans></a>
           <a className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-light" href="#try"><Trans>Get Started</Trans></a>
         </div>
 

@@ -6,13 +6,12 @@ import { Trans } from '@lingui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen } from '@fortawesome/free-solid-svg-icons';
 
-import { Title, githubUrl } from '../layouts/utils';
+import { Title, githubUrl, targetBlank } from '../layouts/utils';
 
 export default function Template({ data, pageContext }: {
   data: Object,
   pageContext: { notLocalized?: boolean }
 }) {
-  console.log(data);
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
   const { notLocalized } = pageContext;
@@ -49,6 +48,7 @@ export default function Template({ data, pageContext }: {
               <small>
                 <a
                   href={`${githubUrl}edit/master/src/markdown/${markdownRemark.fields.slug.slice(0, -1)}.md`}
+                  {...targetBlank}
                 >
                   <FontAwesomeIcon icon={faPen} className="fs-12 mr-2" />
                   <Trans>Suggest changes</Trans>
