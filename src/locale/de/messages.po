@@ -6,7 +6,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Creation-Date: 2018-09-12T18:40:54.619Z\n"
-"PO-Revision-Date: 2018-12-30 14:12+0100\n"
+"PO-Revision-Date: 2019-01-08 13:45+0100\n"
 "Language: de\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
@@ -154,7 +154,7 @@ msgstr "Firmenname und andere Firmendetails. Um unseren Service ordnungsgemäss 
 msgid "Configure your pdf reports"
 msgstr "Konfiguriere deine pdf Reports"
 
-#: src/components/Features.jsx:90 src/layouts/index.jsx:122
+#: src/components/Features.jsx:92 src/layouts/index.jsx:122
 #: src/pages/features.jsx:43
 msgid "Consistency"
 msgstr "Konsistenz"
@@ -215,7 +215,7 @@ msgstr "Hast du die Nummer in der Mitte unten bemerkt? Jedes Mal, wenn du Aktien
 msgid "Discover all cap table features"
 msgstr "Entdecke alle Cap Table-Features"
 
-#: src/components/Features.jsx:83
+#: src/components/Features.jsx:85
 msgid "Discover more about Ledgy"
 msgstr "Erfahre mehr über Ledgy"
 
@@ -224,8 +224,8 @@ msgid "Distribute Investment Pro-Rata"
 msgstr "Pro-Rata Verteilung eines Investments"
 
 #: src/pages/about-us.jsx:145
-msgid "Do you feel working for Google is boring because they don’t grow by 100× during the next four years? Building a product is fantastic, but how about creating a whole team around it? Are you a web developer that eats bugs for breakfast? Fascinated by cutting-edge technology like React, blockchain or space elevators?<0/><1/><2>Learn more<3/></2>"
-msgstr "Du findest, für Google zu arbeiten ist langweilig, weil sie in den nächsten 4 Jahren nicht um das 100-fache wachsen werden? Eine Software zu entwickeln ist cool, aber wie wäre es ein ganzes Team darum aufzubauen? Du bist ein Web-Entwickler, der noch beim Frühstücken die letzten Bugs fixt? Du bist fasziniert von modernster Technologie wie React, Blockchain und Weltraumaufzügen?<0/><1/><2>Mehr erfahren<3/></2>"
+msgid "Do you feel working for Google is boring because they don’t grow by 1,000× during the next four years? Building a product is fantastic, but how about creating a whole team around it? Are you a web developer that eats bugs for breakfast? Fascinated by cutting-edge technology like React, blockchain or space elevators?<0/><1/><2>Learn more<3/></2>"
+msgstr "Du findest, für Google zu arbeiten ist langweilig, weil sie in den nächsten 4 Jahren nicht um das 1.000-fache wachsen werden? Eine Software zu entwickeln ist cool, aber wie wäre es ein ganzes Team darum aufzubauen? Du bist ein Web-Entwickler, der noch beim Frühstücken die letzten Bugs fixt? Du bist fasziniert von modernster Technologie wie React, Blockchain und Weltraumaufzügen?<0/><1/><2>Mehr erfahren<3/></2>"
 
 #: src/pages/features/reporting.jsx:141
 msgid "Document management"
@@ -247,7 +247,7 @@ msgstr "ESOPs im Portfolio"
 msgid "Employee Incentive Plans"
 msgstr "Mitarbeiterbeteiligungspläne"
 
-#: src/components/Features.jsx:92 src/layouts/index.jsx:124
+#: src/components/Features.jsx:94 src/layouts/index.jsx:124
 msgid "Employee Incentives"
 msgstr "Mitarbeiterbeteiligungen"
 
@@ -291,7 +291,7 @@ msgstr "Exit Modellierung"
 msgid "Explore new scenarios for upcoming financing rounds interactively"
 msgstr "Entwerfe interaktiv neue Szenarien für bevorstehende Finanzierungsrunden"
 
-#: src/components/Features.jsx:82 src/layouts/index.jsx:49
+#: src/components/Features.jsx:84 src/layouts/index.jsx:49
 #: src/layouts/index.jsx:120 src/pages/features/consistency.jsx:16
 #: src/pages/features/esop.jsx:16 src/pages/features/investors.jsx:16
 #: src/pages/features/reporting.jsx:16 src/pages/features/round-modeling.jsx:16
@@ -299,7 +299,7 @@ msgstr "Entwerfe interaktiv neue Szenarien für bevorstehende Finanzierungsrunde
 msgid "Features"
 msgstr "Funktionen"
 
-#: src/pages/index.jsx:82
+#: src/pages/index.jsx:84
 msgid "Find out why they trust us"
 msgstr "Warum sie uns vertrauen"
 
@@ -340,7 +340,7 @@ msgstr "Modellierung von Finanzierungsrunden"
 msgid "Funding Round and Exit Modeling"
 msgstr "Modellierung von Finanzierungsrunden und Exits"
 
-#: src/components/SignupForm.jsx:16 src/pages/index.jsx:32
+#: src/components/SignupForm.jsx:16 src/pages/index.jsx:34
 msgid "Get Started"
 msgstr "Los geht’s"
 
@@ -401,7 +401,7 @@ msgstr "Investor & Berater (Farmy.ch, Flatfox.ch), Gründer von Students.ch"
 msgid "Investor Portfolio"
 msgstr "Investoren-Portfolio"
 
-#: src/components/Features.jsx:94 src/layouts/index.jsx:126
+#: src/components/Features.jsx:96 src/layouts/index.jsx:126
 msgid "Investors"
 msgstr "Investoren"
 
@@ -429,7 +429,7 @@ msgstr "Motiviere deine Mitarbeiter"
 msgid "Keep your employees motivated at work. They deserve it. Ledgy's ESOP module will help you to make it happen."
 msgstr "Motiviere deine Mitarbeiter bei der Arbeit. Sie verdienen es. Das ESOP-Modul von Ledgy wird dir dabei helfen."
 
-#: src/components/Features.jsx:27
+#: src/components/Features.jsx:29
 msgid "Learn more about"
 msgstr "Erfahre mehr über"
 
@@ -469,7 +469,7 @@ msgstr "Verwalte deine Aktien. <0/> Nicht dein Excel."
 msgid "Managing directors"
 msgstr "Geschäftsleitung"
 
-#: src/pages/index.jsx:62
+#: src/pages/index.jsx:64
 msgid "Many successful companies already use Ledgy for their equity plans and cap table"
 msgstr "Viele erfolgreiche Unternehmen nutzen Ledgy schon für ihre Beteiligungspläne und ihren Cap Table"
 
@@ -573,11 +573,11 @@ msgstr "Datenschutz"
 
 #: src/components/SecurityRow.jsx:16 src/pages/privacy.jsx:17
 msgid "Privacy made in Europe. Because your cap table data is not for everyone."
-msgstr "Privatsphäre made in Europe. Weil deine Cap Table Daten nicht für jeden gedacht sind."
+msgstr "Privacy made in Europe. Weil deine Cap Table Daten nicht für jeden gedacht sind."
 
 #: src/pages/privacy.jsx:39
 msgid "Privacy made in Europe. Because your cap table data is not for everyone.<0/><1/>We understand how sensitive cap table information is for any business. That’s why your privacy and your data’s security is crucial to us. We also know that long and complicated privacy policies are not very helpful, so we give an overview up-front."
-msgstr "Privatsphäre made in Europe. Weil deine Cap Table Daten nicht für jeden gedacht sind.<0/><1/>Uns ist bewusst, wie wichtig und vertraulich Cap Table Daten für jede Firma sind. Deshalb nehmen wir deine Privatsphäre und die Sicherheit deiner Daten sehr ernst."
+msgstr "Privacy made in Europe. Weil deine Cap Table Daten nicht für jeden gedacht sind.<0/><1/>Uns ist bewusst, wie wichtig und vertraulich Cap Table Daten für jede Firma sind. Deshalb nehmen wir deine Privatsphäre und die Sicherheit deiner Daten sehr ernst."
 
 #: src/layouts/index.jsx:118
 msgid "Product"
@@ -599,7 +599,7 @@ msgstr "Erinnerst du dich noch an den Tag letztes Jahr als die Steuerbescheinigu
 msgid "Replace your Excel with Ledgy"
 msgstr "Ersetze dein Excel mit Ledgy"
 
-#: src/components/Features.jsx:93 src/layouts/index.jsx:125
+#: src/components/Features.jsx:95 src/layouts/index.jsx:125
 msgid "Reporting"
 msgstr "Reporting"
 
@@ -607,7 +607,7 @@ msgstr "Reporting"
 msgid "Reporting & Documents"
 msgstr "Berichte und Dokumente"
 
-#: src/components/Features.jsx:91 src/layouts/index.jsx:123
+#: src/components/Features.jsx:93 src/layouts/index.jsx:123
 #: src/pages/features/round-modeling.jsx:74
 msgid "Round Modeling"
 msgstr "Round Modeling"
@@ -624,7 +624,7 @@ msgstr "Rundenmodellierung"
 msgid "Save painful work inserting numbers into templates. Automated documents and reports at your fingertips."
 msgstr "Erspare dir die mühsame Arbeit beim Einfügen von Zahlen in Vorlagen. Automatisierte Dokumente und Berichte mit einem einzigen Klick."
 
-#: src/pages/index.jsx:36
+#: src/pages/index.jsx:38
 msgid "Screenshot of the Ledgy app"
 msgstr "Screenshot der Ledgy-App"
 
@@ -641,7 +641,7 @@ msgstr "Sichere Dokumentenablage"
 msgid "Security"
 msgstr "Sicherheit"
 
-#: src/pages/index.jsx:31
+#: src/pages/index.jsx:33
 msgid "See the demo"
 msgstr "Teste die Demo"
 
@@ -705,7 +705,7 @@ msgstr "Startups haben tatsächlich oft verschiedene Cap Table Versionen, die zu
 msgid "Stay on top of your vesting schedules, options, phantom plans, and convertible loans. Get fast insights for financing rounds or exit negotiations using our built-in modeling tools. With the portfolio you will always have the latest information about your investment and vesting at your fingertips. Try now for free!"
 msgstr "Behalte den Überblick über deine Vestingpläne, Optionen, virtuelle Beteiligungen und Wandeldarlehen. Verschaffe dir schnell Erkenntnisse für Finanzierungsrunden oder Exit-Verhandlungen mit integrierter Modellierung. Mit dem Portfolio wirst du immer die aktuellsten Informationen zu deinen Investments und Vestingplänen haben. Probier es jetzt umsonst aus!"
 
-#: src/pages/index.jsx:21
+#: src/pages/index.jsx:23
 msgid "Stay on top of your vesting schedules, options, phantom plans, and convertible loans. Get fast insights for financing rounds or exit negotiations using our built-in modeling tools.<0/><1/>Are you an investor or employee? With the portfolio you will always have the latest information about your investment and vesting at your fingertips."
 msgstr "Behalte den Überblick über deine Vestingpläne, Optionen, virtuelle Beteiligungen und Wandeldarlehen. Verschaffe dir schnell Erkenntnisse für Finanzierungsrunden oder Exit-Verhandlungen mit integrierter Modellierung.<0/><1/>Bist du ein Investor oder Mitarbeiter? Mit dem Portfolio wirst du immer die aktuellsten Informationen zu deinen Investments und Vestingplänen haben."
 
@@ -724,6 +724,10 @@ msgstr "Verschlüsselt mit dem bewährten <0>bcrypt-Algorithmus</0>"
 #: src/pages/security.jsx:50
 msgid "Strong passwords"
 msgstr "Sichere Passwörter"
+
+#: src/layouts/markdown.jsx:54
+msgid "Suggest changes"
+msgstr "Änderungen vorschlagen"
 
 #: src/pages/contact.jsx:64
 msgid "Switzerland"
@@ -753,13 +757,9 @@ msgstr "Die Anzahl an Server-Anfragen ist beschränkt, um Brute-Force-Attacken z
 msgid "The holding confirmation lists all assets that a shareholder owns. You can optionally include a tax value of the shares. Employees will be able to see their stock ownership plans and how many of their total shares they already have vested.<0/>Make your shareholders feel good, they will reward you."
 msgstr "Der Beteiligungsauszug zählt alles auf, was ein Gesellschafter besitzt. Zusätzlich kannst du noch den Steuerwert der Aktien angeben. Mitarbeiter können ihre Beteiligungen und das Vesting sehen.<0/>Mach deine Gesellschafter glücklich, sie werden sich revanchieren."
 
-#: src/layouts/index.jsx:183
+#: src/layouts/index.jsx:183 src/pages/index.jsx:16
 msgid "The missing accounting software for your equity and ESOPs"
 msgstr "Die fehlende Buchhaltung für deine Beteiligungen und ESOPs"
-
-#: src/pages/index.jsx:19
-msgid "The missing accounting<0/>software for your equity"
-msgstr "Die fehlende Buchhaltung für deine Beteiligungen"
 
 #: src/pages/security.jsx:95
 msgid "The site is accessible only through HTTPS (<0>A+ rating</0>)"
@@ -773,7 +773,7 @@ msgstr "Mit der Transaktionshistorie weißt du genau was sich wann an deinen Bet
 msgid "Third Party Contractors"
 msgstr "Drittanbieter"
 
-#: src/layouts/markdown.jsx:31
+#: src/layouts/markdown.jsx:33
 msgid "This page is only available in English."
 msgstr "Diese Seite ist nur auf Englisch verfügbar."
 
@@ -905,7 +905,7 @@ msgstr "Yoko hat ihren Physik Master an der ETH und in Oxford gemacht und war Pr
 msgid "You can create a detailed vesting schedule by defining over how many months the shares are to be vested, wether there’s a cliff and how often a new batch of shares gets assigned to the employee.<0/>As soon as you enter the first numbers, you will see a visual representation of the current schedule."
 msgstr "Du kannst detailliertes Vesting definieren, indem du eine Gesamtdauer festlegst, ob es einen Cliff gibt und alle wie viele Monate die neuen Aktien nach dem Cliff vesten werden."
 
-#: src/pages/index.jsx:92
+#: src/pages/index.jsx:94
 msgid "Your data in safe hands"
 msgstr "Deine Daten in guten Händen"
 
@@ -921,7 +921,7 @@ msgstr "Dein Portfolio auf einen Blick"
 msgid "Your shareholders"
 msgstr "Deine Gesellschafter"
 
-#: src/pages/index.jsx:60
+#: src/pages/index.jsx:62
 msgid "You’re in good company"
 msgstr "Du befindest dich in guter Gesellschaft"
 

@@ -7,7 +7,7 @@
   }
 }
 
-p > a {
+p > a, li > a {
   border-bottom: 1px solid $color-primary;
   padding-bottom: 1px;
 }
@@ -46,7 +46,7 @@ h1 {
   line-height: 1.9;
 }
 .partner {
-  max-width: 1200px;
+  max-width: 960px;
 
   img {
     margin: 0

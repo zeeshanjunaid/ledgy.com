@@ -143,7 +143,7 @@ const IndexPage = (props: Props) => {
               <h2><Trans>We’re hiring!</Trans></h2>
               <p>
                 <Trans>
-                  Do you feel working for Google is boring because they don’t grow by 100×
+                  Do you feel working for Google is boring because they don’t grow by 1,000×
                   during the next four years? Building a product is fantastic, but how about
                   creating a whole team around it?
                   Are you a web developer that eats bugs for breakfast?

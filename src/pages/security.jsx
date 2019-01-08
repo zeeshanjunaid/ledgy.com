@@ -6,7 +6,7 @@ import { withI18n, Trans } from '@lingui/react';
 import { faDesktop, faShieldAlt, faDatabase, faUserSecret, faExchangeAlt, faUserPlus, faLock, faKey } from '@fortawesome/free-solid-svg-icons';
 
 import { PrivacyElement } from '../components/Privacy';
-import { Title } from '../layouts/utils';
+import { Title, targetBlank } from '../layouts/utils';
 
 const Header = ({ i18n }: Props) => (
   <header className="header text-white bg-ledgy">
@@ -50,7 +50,7 @@ const IndexPage = ({ i18n, ...props }: Object) => (
                 title={i18n.t`Strong passwords`}
                 body={
                   <Trans>
-                    Users have to set a <a target="_blank" rel="noopener noreferrer" href="https://blogs.dropbox.com/tech/2012/04/zxcvbn-realistic-password-strength-estimation/">secure password</a>
+                    Users have to set a <a {...targetBlank} href="https://blogs.dropbox.com/tech/2012/04/zxcvbn-realistic-password-strength-estimation/">secure password</a>
                   </Trans>
                 }
                 size="6"
@@ -61,7 +61,7 @@ const IndexPage = ({ i18n, ...props }: Object) => (
                 title={i18n.t`Password encryption`}
                 body={
                   <Trans>
-                    Stored encrypted with the battle-tested <a target="_blank" rel="noopener noreferrer" href="https://codahale.com/how-to-safely-store-a-password/">bcrypt algorithm</a>
+                    Stored encrypted with the battle-tested <a {...targetBlank} href="https://codahale.com/how-to-safely-store-a-password/">bcrypt algorithm</a>
                   </Trans>
                 }
                 size="6"
@@ -93,7 +93,7 @@ const IndexPage = ({ i18n, ...props }: Object) => (
                 title={i18n.t`Encrypted connection`}
                 body={
                   <Trans>
-                    The site is accessible only through HTTPS (<a target="_blank" rel="noopener noreferrer" href="https://www.ssllabs.com/ssltest/analyze?d=app.ledgy.com">A+ rating</a>)
+                    The site is accessible only through HTTPS (<a {...targetBlank} href="https://www.ssllabs.com/ssltest/analyze?d=app.ledgy.com">A+ rating</a>)
                   </Trans>
                 }
                 size="6"
@@ -104,7 +104,7 @@ const IndexPage = ({ i18n, ...props }: Object) => (
                 title={i18n.t`Content-Security-Policy`}
                 body={
                   <Trans>
-                    HTTP headers prevent cross-site scripting and code injection (<a target="_blank" rel="noopener noreferrer" href="https://observatory.mozilla.org/analyze.html?host=app.ledgy.com">A+ rating</a>)
+                    HTTP headers prevent cross-site scripting and code injection (<a {...targetBlank} href="https://observatory.mozilla.org/analyze.html?host=app.ledgy.com">A+ rating</a>)
                   </Trans>
                 }
                 size="6"

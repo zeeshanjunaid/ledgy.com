@@ -3,8 +3,10 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { Trans } from '@lingui/react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPen } from '@fortawesome/free-solid-svg-icons';
 
-import { Title } from '../layouts/utils';
+import { Title, githubUrl, targetBlank } from '../layouts/utils';
 
 export default function Template({ data, pageContext }: {
   data: Object,
@@ -42,6 +44,17 @@ export default function Template({ data, pageContext }: {
             <div
               dangerouslySetInnerHTML={{ __html: html }} // eslint-disable-line react/no-danger
             />
+            <div className="text-right pt-4">
+              <small>
+                <a
+                  href={`${githubUrl}edit/master/src/markdown/${markdownRemark.fields.slug.slice(0, -1)}.md`}
+                  {...targetBlank}
+                >
+                  <FontAwesomeIcon icon={faPen} className="fs-12 mr-2" />
+                  <Trans>Suggest changes</Trans>
+                </a>
+              </small>
+            </div>
           </div>
         </section>
       </main>
@@ -53,6 +66,9 @@ export const pageQuery = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      fields {
+        slug
+      }
       frontmatter {
         title
         description
