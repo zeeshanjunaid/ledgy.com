@@ -119,7 +119,7 @@ const IndexPage = ({ i18n, ...props }: Object) => (
 
               <PrivacyElement
                 icon={faGlobeEurope}
-                title={i18n.t`EU privacy`}
+                title={i18n.t`EU data protection`}
                 body={<Trans>All data is stored at an <a {...targetBlank} href="https://www.clever-cloud.com/en/security">independent provider</a> in France</Trans>}
                 size="6"
               />
