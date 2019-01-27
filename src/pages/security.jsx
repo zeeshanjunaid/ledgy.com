@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
 import { withI18n, Trans } from '@lingui/react';
-import { faDesktop, faShieldAlt, faDatabase, faUserSecret, faExchangeAlt, faUserPlus, faLock, faKey } from '@fortawesome/free-solid-svg-icons';
+import { faDesktop, faShieldAlt, faDatabase, faUserSecret, faExchangeAlt, faUserPlus, faLock, faKey, faGlobeEurope } from '@fortawesome/free-solid-svg-icons';
 
 import { PrivacyElement } from '../components/Privacy';
 import { Title, targetBlank } from '../layouts/utils';
@@ -61,7 +61,7 @@ const IndexPage = ({ i18n, ...props }: Object) => (
                 title={i18n.t`Password encryption`}
                 body={
                   <Trans>
-                    Stored encrypted with the battle-tested <a {...targetBlank} href="https://codahale.com/how-to-safely-store-a-password/">bcrypt algorithm</a>
+                    Stored encrypted with the battle-tested <a {...targetBlank} href="https://codahale.com/how-to-safely-store-a-password/">bcrypt algorithm</a> at 13 rounds
                   </Trans>
                 }
                 size="6"
@@ -70,7 +70,7 @@ const IndexPage = ({ i18n, ...props }: Object) => (
               <PrivacyElement
                 icon={faShieldAlt}
                 title={i18n.t`Two-factor authentication`}
-                body={i18n.t`For even better protection of accounts`}
+                body={<Trans>For even better protection of accounts. And our implementation is <a {...targetBlank} href="https://blog.meteor.com/tutorial-two-factor-authentication-with-meteor-and-totp-21d4a2f9ee51">open source</a>!</Trans>}
                 size="6"
               />
 
@@ -114,6 +114,13 @@ const IndexPage = ({ i18n, ...props }: Object) => (
                 icon={faDatabase}
                 title={i18n.t`Backups`}
                 body={i18n.t`Daily backups ensure nothing is ever lost`}
+                size="6"
+              />
+
+              <PrivacyElement
+                icon={faGlobeEurope}
+                title={i18n.t`EU data protection`}
+                body={<Trans>All data is stored at an <a {...targetBlank} href="https://www.clever-cloud.com/en/security">independent provider</a> in France</Trans>}
                 size="6"
               />
 

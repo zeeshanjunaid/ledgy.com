@@ -49,6 +49,10 @@ msgstr "After you’re finished with modeling your financing round, you can down
 msgid "All basic features"
 msgstr "All basic features"
 
+#: src/pages/security.jsx:123
+msgid "All data is stored at an <0>independent provider</0> in France"
+msgstr "All data is stored at an <0>independent provider</0> in France"
+
 #: src/pages/pricing.jsx:84
 msgid "All premium features"
 msgstr "All premium features"
@@ -251,6 +255,10 @@ msgstr "ESOP"
 msgid "ESOPs in the portfolio"
 msgstr "ESOPs in the portfolio"
 
+#: src/pages/security.jsx:122
+msgid "EU data protection"
+msgstr "EU data protection"
+
 #: src/pages/features/esop.jsx:25
 #: src/pages/features.jsx:78
 msgid "Employee Incentive Plans"
@@ -322,8 +330,8 @@ msgid "Finished? Go back to the <0>Cap Table</0> page and view the result. At an
 msgstr "Finished? Go back to the <0>Cap Table</0> page and view the result. At any point in the history of your ownership, Ledgy can draw you a helpful chart that represents the current equity distribution of your company. <1/>You have several views on your cap table at your fingertips. You can assign your shareholders to groups and view the distribution among them. Or you can get a comprehensive overview by viewing the distribution between the different securities, like common shares, preferred shares, convertibles and options."
 
 #: src/pages/security.jsx:73
-msgid "For even better protection of accounts"
-msgstr "For even better protection of accounts"
+msgid "For even better protection of accounts. And our implementation is <0>open source</0>!"
+msgstr "For even better protection of accounts. And our implementation is <0>open source</0>!"
 
 #: src/pages/about-us.jsx:181
 msgid "Founder of Meisser Economics, Bitcoin Association Switzerland, and Wuala"
@@ -384,7 +392,7 @@ msgstr "How we protect your information"
 msgid "If you add them with their email address and they decide to sign up on Ledgy, shareholders can see their stake in your company and its latest valuation."
 msgstr "If you add them with their email address and they decide to sign up on Ledgy, shareholders can see their stake in your company and its latest valuation."
 
-#: src/pages/security.jsx:123
+#: src/pages/security.jsx:130
 msgid "If you have any questions or discover anything suspicious, please <0>get in touch</0>."
 msgstr "If you have any questions or discover anything suspicious, please <0>get in touch</0>."
 
@@ -748,8 +756,8 @@ msgid "Stock Split"
 msgstr "Stock Split"
 
 #: src/pages/security.jsx:63
-msgid "Stored encrypted with the battle-tested <0>bcrypt algorithm</0>"
-msgstr "Stored encrypted with the battle-tested <0>bcrypt algorithm</0>"
+msgid "Stored encrypted with the battle-tested <0>bcrypt algorithm</0> at 13 rounds"
+msgstr "Stored encrypted with the battle-tested <0>bcrypt algorithm</0> at 13 rounds"
 
 #: src/pages/security.jsx:50
 msgid "Strong passwords"
