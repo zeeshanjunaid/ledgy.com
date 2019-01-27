@@ -61,7 +61,7 @@ const IndexPage = ({ i18n, ...props }: Object) => (
                 title={i18n.t`Password encryption`}
                 body={
                   <Trans>
-                    Stored encrypted with the battle-tested <a {...targetBlank} href="https://codahale.com/how-to-safely-store-a-password/">bcrypt algorithm</a>
+                    Stored encrypted with the battle-tested <a {...targetBlank} href="https://codahale.com/how-to-safely-store-a-password/">bcrypt algorithm</a> at 13 rounds
                   </Trans>
                 }
                 size="6"

@@ -756,8 +756,8 @@ msgid "Stock Split"
 msgstr "Stock Split"
 
 #: src/pages/security.jsx:63
-msgid "Stored encrypted with the battle-tested <0>bcrypt algorithm</0>"
-msgstr "Stored encrypted with the battle-tested <0>bcrypt algorithm</0>"
+msgid "Stored encrypted with the battle-tested <0>bcrypt algorithm</0> at 13 rounds"
+msgstr "Stored encrypted with the battle-tested <0>bcrypt algorithm</0> at 13 rounds"
 
 #: src/pages/security.jsx:50
 msgid "Strong passwords"
