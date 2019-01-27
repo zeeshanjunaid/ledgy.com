@@ -70,7 +70,7 @@ const IndexPage = ({ i18n, ...props }: Object) => (
               <PrivacyElement
                 icon={faShieldAlt}
                 title={i18n.t`Two-factor authentication`}
-                body={<Trans>For even better protection of accounts. Our implementation is <a {...targetBlank} href="https://blog.meteor.com/tutorial-two-factor-authentication-with-meteor-and-totp-21d4a2f9ee51">open source</a></Trans>}
+                body={<Trans>For even better protection of accounts. And our implementation is <a {...targetBlank} href="https://blog.meteor.com/tutorial-two-factor-authentication-with-meteor-and-totp-21d4a2f9ee51">open source</a>!</Trans>}
                 size="6"
               />
 

@@ -6,7 +6,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Creation-Date: 2018-09-12T18:40:54.619Z\n"
-"PO-Revision-Date: 2019-01-08 13:45+0100\n"
+"PO-Revision-Date: 2019-01-27 13:18+0100\n"
 "Language: de\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
@@ -50,7 +50,7 @@ msgstr "Alles im Standard Paket"
 
 #: src/pages/security.jsx:123
 msgid "All data is stored at an <0>independent provider</0> in France"
-msgstr ""
+msgstr "Alle Daten werden bei einem <0>unabhängigen Anbieter</0> in Frankreich gespeichert"
 
 #: src/pages/pricing.jsx:84
 msgid "All premium features"
@@ -256,7 +256,7 @@ msgstr "ESOPs im Portfolio"
 
 #: src/pages/security.jsx:122
 msgid "EU data protection"
-msgstr ""
+msgstr "EU-Datenschutz"
 
 #: src/pages/features/esop.jsx:25
 #: src/pages/features.jsx:78
@@ -329,8 +329,8 @@ msgid "Finished? Go back to the <0>Cap Table</0> page and view the result. At an
 msgstr "Fertig? Zurück auf der <0>Cap Table</0> Seite kannst du das Ergebnis sehen. Zu jedem Zeitpunkt der Historie zeigt dir Ledgy hilfreiche Grafiken mit der aktuellen Verteilung im Unternehmen.<1/>Du hast mehrere Ansichtsmöglichkeiten für deinen Cap Table zur Verfügung. Nachdem du deine Gesellschafter zu Gruppen hinzugefügt hast, beispielsweise Gründer, Investoren und Mitarbeiter, kannst du die Verteilung zwischen diesen Gruppen analysieren. Oder mach dir ein umfassendes Bild über die Verteilung der verschiedenen Wertpapierarten wie Stamm- und Vorzugsaktien, Wandeldarlehen und Optionen."
 
 #: src/pages/security.jsx:73
-msgid "For even better protection of accounts. Our implementation is <0>open source</0>"
-msgstr ""
+msgid "For even better protection of accounts. And our implementation is <0>open source</0>!"
+msgstr "Für noch mehr Sicherheit der Nutzerkonten. Übrigens, unsere Implementierung ist <0>Open Source</0>!"
 
 #: src/pages/about-us.jsx:181
 msgid "Founder of Meisser Economics, Bitcoin Association Switzerland, and Wuala"
