@@ -123,7 +123,7 @@ msgstr "Blog"
 
 #: src/pages/pricing.jsx:82
 msgid "Breakpoint analysis"
-msgstr "Breakpoint Analyse"
+msgstr "Breakpoint-Analyse"
 
 #: src/pages/features/reporting.jsx:119
 msgid "Bring order to your documents"
@@ -318,7 +318,7 @@ msgstr "Jede Transaktion in deinem Aktienregister enthält normalerweise einen S
 
 #: src/pages/pricing.jsx:81
 msgid "Exit modeling"
-msgstr "Exit Modellierung"
+msgstr "Exit-Modellierung"
 
 #: src/pages/features/round-modeling.jsx:40
 msgid "Explore new scenarios for upcoming financing rounds interactively"
@@ -514,7 +514,7 @@ msgstr "Wir sind für dich da"
 
 #: src/pages/pricing.jsx:80
 msgid "Liquidation preferences"
-msgstr "Liquidationsvorzug"
+msgstr "Liquidationspräferenzen"
 
 #: src/pages/about-us.jsx:217
 msgid "M&A and Private Equity Lawyer with a focus on start-up legal advise, Smartuplaw.ch"
@@ -602,7 +602,7 @@ msgstr "Terminierung von Optionen"
 
 #: src/pages/pricing.jsx:75
 msgid "Option programs"
-msgstr "Option-Programme"
+msgstr "Options-Programme"
 
 #: src/layouts/index.jsx:89
 msgid "Or have a quick look at our <0>live demo</0>."
@@ -896,14 +896,11 @@ msgstr "Von der Firma gehaltene Aktien"
 msgid "Try Ledgy now for free."
 msgstr "Jetzt kostenlos auf Ledgy loslegen."
 
-#: src/pages/pricing.jsx:59
-msgid "Two factor authentication"
-msgstr "Zwei-Faktor-Authentisierung"
-
 #: src/components/AllFeatures.jsx:64
 msgid "Two-Factor Authentication"
 msgstr "Zwei-Faktor-Authentifizierung"
 
+#: src/pages/pricing.jsx:59
 #: src/pages/security.jsx:72
 msgid "Two-factor authentication"
 msgstr "Zwei-Faktor-Authentifizierung"
@@ -934,7 +931,7 @@ msgstr "VAT-Nummer"
 
 #: src/components/AllFeatures.jsx:45
 msgid "Vesting Schedules"
-msgstr "Vesting-Pläne"
+msgstr "Vestingpläne"
 
 #: src/pages/pricing.jsx:79
 msgid "Vesting email notifications"
@@ -942,7 +939,7 @@ msgstr "Vesting Email-Benachrichtigung"
 
 #: src/pages/pricing.jsx:78
 msgid "Vesting plans"
-msgstr "Vesting Pläne"
+msgstr "Vestingpläne"
 
 #: src/pages/pricing.jsx:76
 msgid "Virtual option programs"

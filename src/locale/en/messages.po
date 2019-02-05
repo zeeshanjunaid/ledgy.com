@@ -897,14 +897,11 @@ msgstr "Treasury Shares"
 msgid "Try Ledgy now for free."
 msgstr "Try Ledgy now for free."
 
-#: src/pages/pricing.jsx:59
-msgid "Two factor authentication"
-msgstr "Two factor authentication"
-
 #: src/components/AllFeatures.jsx:64
 msgid "Two-Factor Authentication"
 msgstr "Two-Factor Authentication"
 
+#: src/pages/pricing.jsx:59
 #: src/pages/security.jsx:72
 msgid "Two-factor authentication"
 msgstr "Two-factor authentication"

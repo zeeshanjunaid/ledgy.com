@@ -56,7 +56,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   <Li><Trans>Pooled investments</Trans></Li>
                   <Li><Trans>Import & export</Trans></Li>
                   <Li><Trans>Access rights</Trans></Li>
-                  <Li><Trans>Two factor authentication</Trans></Li>
+                  <Li><Trans>Two-factor authentication</Trans></Li>
                   <Li><Trans>Document storage</Trans></Li>
                   <Li><Trans>Holding confirmations</Trans></Li>
                 </ul>
