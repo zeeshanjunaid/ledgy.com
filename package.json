@@ -10,7 +10,7 @@
     "build": "lingui compile && gatsby build",
     "serve": "npm run build && gatsby serve",
     "start": "lingui compile && gatsby develop",
-    "test": "lingui compile --strict && eslint . --ext jsx,js && flow",
+    "test": "npm run extract && lingui compile --strict && eslint . --ext jsx,js && flow",
     "extract": "lingui extract --clean"
   },
   "dependencies": {
