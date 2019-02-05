@@ -159,16 +159,52 @@ const IndexPage = (props: Props) => {
         <section className="section">
           <div className="container">
             <header className="section-header">
-              <h2><Trans>Board and Advisors</Trans></h2>
+              <h2><Trans>Supporters</Trans></h2>
             </header>
 
             <div className="row gap-y">
               <Investor
+                name="btov Partners"
+                func="Lead Investor & Board Member"
+                description={i18n.t`One of Europe's oldest and largest early-stage VC funds`}
+                img={data.btov}
+              />
+              <Investor
+                name="Creathor Ventures"
+                func="Investor & Board Member"
+                description={i18n.t`Backing the creators of our future`}
+                img={data.creathor}
+              />
+              <Investor
+                name="VI Partners"
+                func="Investor"
+                description={i18n.t`Healthcare & Technology Venture Capital since 2001`}
+                img={data.vipartners}
+              />
+            </div>
+
+            <div className="row gap-y justify-content-center">
+              <Investor
+                name="Daniel Gutenberg"
+                func="Investor"
+                description={i18n.t`One of the most active Swiss early-stage angel investors`}
+                img={data.daniel}
+              />
+              <Investor
+                name="Luis Cabiedes"
+                func="Investor"
+                description={i18n.t`Specialized in investments in early-stage technology startups`}
+                img={data.luis}
+              />
+              <Investor
                 name="Dr. Paul E. Sevinç"
-                func="Board Member"
+                func="Advisor & Board Member"
                 description={i18n.t`Entrepreneur, Technologist, Founder of Doodle.com`}
                 img={data.paul}
               />
+            </div>
+
+            <div className="row gap-y justify-content-center">
               <Investor
                 name="Myke Näf"
                 func="Advisor"
@@ -181,9 +217,6 @@ const IndexPage = (props: Props) => {
                 description={i18n.t`Founder of Meisser Economics, Bitcoin Association Switzerland, and Wuala`}
                 img={data.luzius}
               />
-            </div>
-
-            <div className="row gap-y justify-content-center">
               <Investor
                 name="Adrian Bührer"
                 func="Advisor"
@@ -231,6 +264,31 @@ export const pageQuery = graphql`
       }
     }
 
+    btov: imageSharp(fluid: { originalName: {regex: "/btov.png/"} }) {
+      fixed(width: 128, height: 128) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+    creathor: imageSharp(fluid: { originalName: {regex: "/creathor.jpg/"} }) {
+      fixed(width: 128, height: 128) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+    vipartners: imageSharp(fluid: { originalName: {regex: "/vipartners.jpg/"} }) {
+      fixed(width: 128, height: 128) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+    daniel: imageSharp(fluid: { originalName: {regex: "/daniel.jpg/"} }) {
+      fixed(width: 128, height: 128) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+    luis: imageSharp(fluid: { originalName: {regex: "/luis.jpg/"} }) {
+      fixed(width: 128, height: 128) {
+        ...GatsbyImageSharpFixed
+      }
+    }
 
     myke: imageSharp(fluid: { originalName: {regex: "/myke.jpg/"} }) {
       fixed(width: 128, height: 128) {

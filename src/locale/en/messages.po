@@ -97,6 +97,10 @@ msgstr "Audit Trails"
 msgid "Available shares for transfer"
 msgstr "Available shares for transfer"
 
+#: src/pages/about-us.jsx:175
+msgid "Backing the creators of our future"
+msgstr "Backing the creators of our future"
+
 #: src/pages/security.jsx:115
 msgid "Backups"
 msgstr "Backups"
@@ -109,10 +113,6 @@ msgstr "Ben has extensive experience in project management and has worked for tw
 #: src/layouts/index.jsx:117
 msgid "Blog"
 msgstr "Blog"
-
-#: src/pages/about-us.jsx:162
-msgid "Board and Advisors"
-msgstr "Board and Advisors"
 
 #: src/pages/features/reporting.jsx:119
 msgid "Bring order to your documents"
@@ -285,11 +285,11 @@ msgstr "Enter your email…"
 msgid "Enterprise"
 msgstr "Enterprise"
 
-#: src/pages/about-us.jsx:175
+#: src/pages/about-us.jsx:211
 msgid "Entrepreneur, Business Angel, Founder of Doodle.com"
 msgstr "Entrepreneur, Business Angel, Founder of Doodle.com"
 
-#: src/pages/about-us.jsx:169
+#: src/pages/about-us.jsx:202
 msgid "Entrepreneur, Technologist, Founder of Doodle.com"
 msgstr "Entrepreneur, Technologist, Founder of Doodle.com"
 
@@ -337,7 +337,7 @@ msgstr "Finished? Go back to the <0>Cap Table</0> page and view the result. At a
 msgid "For even better protection of accounts. And our implementation is <0>open source</0>!"
 msgstr "For even better protection of accounts. And our implementation is <0>open source</0>!"
 
-#: src/pages/about-us.jsx:181
+#: src/pages/about-us.jsx:217
 msgid "Founder of Meisser Economics, Bitcoin Association Switzerland, and Wuala"
 msgstr "Founder of Meisser Economics, Bitcoin Association Switzerland, and Wuala"
 
@@ -388,6 +388,10 @@ msgstr "HTTP headers prevent cross-site scripting and code injection (<0>A+ rati
 msgid "Help"
 msgstr "Help"
 
+#: src/pages/about-us.jsx:181
+msgid "Healthcare & Technology Venture Capital since 2001"
+msgstr "Healthcare & Technology Venture Capital since 2001"
+
 #: src/pages/contact.jsx:17
 msgid "Here are the ways you can contact us with any questions you have"
 msgstr "Here are the ways you can contact us with any questions you have"
@@ -428,7 +432,7 @@ msgstr "Incentive plan management"
 msgid "Investment overview"
 msgstr "Investment overview"
 
-#: src/pages/about-us.jsx:190
+#: src/pages/about-us.jsx:223
 msgid "Investor & Consultant (Farmy.ch, Flatfox.ch), Founder of Students.ch"
 msgstr "Investor & Consultant (Farmy.ch, Flatfox.ch), Founder of Students.ch"
 
@@ -492,7 +496,7 @@ msgstr "Let your employees be part of your company’s success. Ledgy supports v
 msgid "Let’s Get In Touch"
 msgstr "Let’s Get In Touch"
 
-#: src/pages/about-us.jsx:196
+#: src/pages/about-us.jsx:229
 msgid "M&A and Private Equity Lawyer with a focus on start-up legal advise, Smartuplaw.ch"
 msgstr "M&A and Private Equity Lawyer with a focus on start-up legal advise, Smartuplaw.ch"
 
@@ -551,6 +555,14 @@ msgstr "Oh, it’s tax season again, and 50 holding confirmations are waiting to
 #: src/pages/features/esop.jsx:151
 msgid "Once your incentive plan is on Ledgy, it’s time to engage your employees. They can log in to Ledgy themselves with their email address at any time and see how many shares they have already vested. Invite them with a click on the shareholders page."
 msgstr "Once your incentive plan is on Ledgy, it’s time to engage your employees. They can log in to Ledgy themselves with their email address at any time and see how many shares they have already vested. Invite them with a click on the shareholders page."
+
+#: src/pages/about-us.jsx:169
+msgid "One of Europe's oldest and largest early-stage VC funds"
+msgstr "One of Europe's oldest and largest early-stage VC funds"
+
+#: src/pages/about-us.jsx:190
+msgid "One of the most active Swiss early-stage angel investors"
+msgstr "One of the most active Swiss early-stage angel investors"
 
 #: src/pages/features/consistency.jsx:67
 msgid "Oops, there was an error in your cap table? Don’t worry; Ledgy will assist you in getting your cap table straight.<0/>Once finished, sit back and relax. Now you can be assured that your cap table is error-free."
@@ -739,6 +751,10 @@ msgstr "Single source of truth"
 msgid "Space elevator"
 msgstr "Space elevator"
 
+#: src/pages/about-us.jsx:196
+msgid "Specialized in investments in early-stage technology startups"
+msgstr "Specialized in investments in early-stage technology startups"
+
 #: src/components/AllFeatures.jsx:57
 msgid "Spreadsheet Import"
 msgstr "Spreadsheet Import"
@@ -778,6 +794,10 @@ msgstr "Strong passwords"
 #: src/layouts/markdown.jsx:55
 msgid "Suggest changes"
 msgstr "Suggest changes"
+
+#: src/pages/about-us.jsx:162
+msgid "Supporters"
+msgstr "Supporters"
 
 #: src/pages/contact.jsx:64
 msgid "Switzerland"
