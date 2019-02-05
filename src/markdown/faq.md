@@ -53,7 +53,7 @@ The app works best in Google Chrome and Mozilla Firefox. If don’t use one of t
 
 ##### How can I create shareholder groups?
 
-Go to the *Stakeholders* page. Hover over the shareholder and you’ll see the edit field for the shareholder’s group. By default the groups *Founders*, *Employees* and *Investors* already exist. To add a new group, simply start typing a name in the field and click on *Create new group*.
+Go to the *Stakeholders* page, click the three dots next to one, click *Edit* and type the group in the respective field. By default, the groups *Founders*, *Employees* and *Investors* already exist. To add a new group, simply start typing a name in the field and click on *Create new group*.
 
 ##### How can I see who made which changes to my cap table?
 
