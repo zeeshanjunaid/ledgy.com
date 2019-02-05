@@ -44,7 +44,7 @@ Or open the *Round Modeling* on the *Cap Table* page, click *Add* and *Re
 
 There are two ways of converting convertible loans:
 
-1.  Through the round modeling tool, which also [calculates for you](https://blog.ledgy.com/convertible-loans-7948385a5d66) how many shares should be issued for the convertible, taking cap, discount and interest into account. Go to the *Cap Table* page and click on *Round Modeling*. Existing convertibles should already be displayed. If not, add them by clicking on *Add *and then *Remaining Convertibles.*
+1.  Through the round modeling tool, which also [calculates for you](https://blog.ledgy.com/convertible-loans-7948385a5d66) how many shares should be issued for the convertible, taking cap, discount and interest into account. Go to the *Cap Table* page and click on *Round Modeling*. Existing convertibles should already be displayed. If not, add them by clicking on *Add* and then *Remaining Convertibles.*
 2.  Find your convertible loan on the *Transactions* page. Then click on the menu (dots) in the transaction itself and select *Convert*. You need to calculate the number of shares yourself.
 
 ##### In which browser does the app work best?
