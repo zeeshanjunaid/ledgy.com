@@ -86,7 +86,7 @@ msgstr "Nach der Finanzierungsrunde kannst du einfach <0>konvertieren</0> klicke
 
 #: src/pages/security.jsx:15
 msgid "At Ledgy we take your security seriously. Strong passwords, robust encryption, two-factor authentication, and permanent code reviews are among our high safety standards. Find out more about why you can have peace-of-mind while managing your cap table with Ledgy."
-msgstr "Wir bei Ledgy nehmen deine Sicherheit ernst. Sichere Passwörter, solide Verschlüsselung, Zwei-Factor-Authentifizierung, und permanente Code-Reviews gehören zu unserern hohen Sicherheitsstandards. Erfahre mehr darüber, warum du mit gutem Gewissen deinen Cap Table mit Ledgy verwalten kannst."
+msgstr "Wir bei Ledgy nehmen deine Sicherheit ernst. Sichere Passwörter, solide Verschlüsselung, Zwei-Faktor-Authentisierung, und permanente Code-Reviews gehören zu unserern hohen Sicherheitsstandards. Erfahre mehr darüber, warum du mit gutem Gewissen deinen Cap Table mit Ledgy verwalten kannst."
 
 #: src/components/AllFeatures.jsx:61
 msgid "Attach Documents to Transactions"
@@ -898,12 +898,12 @@ msgstr "Jetzt kostenlos auf Ledgy loslegen."
 
 #: src/components/AllFeatures.jsx:64
 msgid "Two-Factor Authentication"
-msgstr "Zwei-Faktor-Authentifizierung"
+msgstr "Zwei-Faktor-Authentisierung"
 
 #: src/pages/pricing.jsx:59
 #: src/pages/security.jsx:72
 msgid "Two-factor authentication"
-msgstr "Zwei-Faktor-Authentifizierung"
+msgstr "Zwei-Faktor-Authentisierung"
 
 #: src/components/AllFeatures.jsx:29
 msgid "Unlimited Share Classes"
