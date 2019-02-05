@@ -23,7 +23,7 @@ Go on the *Shareholders* page, add you investor’s email address (at this poin
 
 ##### How can I enable share numbers?
 
-Go to your company’s *Settings* page, click on the edit icon in the *Company Profile* box, then activate the *Share Numbers* toggle. You can also check out our opinionated [blog post](https://blog.ledgy.com/are-numbered-shares-necessary-15c27f3457a8) about the necessity of numbered shares.
+Go to your company’s *Settings* page and under your company details activate the *Share Numbers* toggle. Nice side-effect: This automatically adds consistent share numbers to your current transactions. It always takes the lowest available range of numbers for the next transaction.
 
 ##### Can I stack several rounds on top of each other in the round modeling tool?
 
