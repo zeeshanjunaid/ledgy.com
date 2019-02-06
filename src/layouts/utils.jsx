@@ -45,8 +45,8 @@ Title.defaultProps = { section: '', description: '', thumbnailUrl: '' };
 
 export const Li = ({ children }: { children: React.Node }) => (
   <li className="media">
-    <FontAwesomeIcon icon={faCheck} className="text-success mr-3" />
-    <div className="media-body">
+    <FontAwesomeIcon icon={faCheck} className="text-success mr-1 mt-1" />
+    <div className="media-body ml-3">
       {children}
     </div>
   </li>
