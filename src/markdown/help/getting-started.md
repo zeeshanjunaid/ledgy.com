@@ -23,7 +23,7 @@ If you choose not to use the onboarding steps above, here are the basics of how 
 ##### Add new shareholders
 
 - Go to the _Stakeholders_ page and add shareholders with or without an email address. If you add them with an email, they won’t be notified yet: you need to invite them explicitly to Ledgy (see next paragraph). However, if they already have an account on Ledgy with this email address, they will be able to see their stake in their portfolio.
-- Change access level: If the shareholder has an email address, they can see their investment in their portfolio. You can easily give them view-only or admin rights with a single click. If they’re already on Ledgy they’ll be notified. If they’re not, you have to click _Invite_, see next point.
+- Change access level: If the shareholder has an email address, they can see their investment in their portfolio. You can easily give them view-only or admin rights with a single click. If they’re already on Ledgy, they’ll be notified. If they’re not, you have to click _Invite_, see next point.
 - Invite stakeholders: You can invite the shareholders that you’ve added with an email address to join Ledgy. Simply click on the invite button. You can see who already registered on Ledgy if they have a check mark instead of the invite button.
 
 ![](stakeholders.png)
@@ -36,11 +36,11 @@ If you choose not to use the onboarding steps above, here are the basics of how 
 
 ![](attach-documents.png)
 
-- Once you are done with adding all new transactions click on the _Commit_ button (read on to find out why).
+- Once you are done with adding all new transactions, click on the _Commit_ button (read on to find out why).
 
 ##### Commit your draft
 
-All the new transactions you’ve added will be saved as your new draft. Once you are done with adding them and are happy with it, you can hit the _Commit_ button to save your draft as your official transactions list. Don’t worry, you will be prompted to review your changes before confirming.
+All the new transactions you’ve added will be saved as your new draft. Once you are done with adding them and are happy with it, you can hit the _Commit_ button to save your draft as your official transactions list. Don’t worry; you will be prompted to review your changes before confirming.
 
 ###### What does the _Commit_ button do?
 
@@ -51,7 +51,7 @@ All the new transactions you’ve added will be saved as your new draft. Once yo
 ##### Have a look at your portfolio
 
 - All users on Ledgy, including you if you own shares in a company on Ledgy, have a portfolio which shows your investments.
-- In order to see your investments, the company has to add you as a shareholder with an email address and committed the transactions.
+- To see your investments, the company has to add you as a shareholder with an email address and committed the transactions.
 - To see your portfolio click on your name at the top right corner and select _Portfolio_.
 
 Happy cap tabling!

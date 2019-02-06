@@ -17,7 +17,7 @@ Read our [Getting Started](/help/getting-started/) guide.
 
 Go on the *Shareholders* page, add you investor’s email address (at this point the shareholder does NOT receive any email). Then just click the invite button on the right-hand side. You can choose three access right levels.
 
-1. **Personal** The investor will be able see her own stake in her [portfolio](https://blog.ledgy.com/ledgy-launches-investor-dashboard-a1ad1a95df07).
+1. **Personal** The investor will be able to see her stake in her [portfolio](https://blog.ledgy.com/ledgy-launches-investor-dashboard-a1ad1a95df07).
 2. **View-only** View everything, but not able to edit.
 3. **Admin** Full access.
 
@@ -27,7 +27,7 @@ Go to your company’s *Settings* page and under your company details activate t
 
 ##### Can I stack several rounds on top of each other in the round modeling tool?
 
-Yes that’s possible thanks to the Draft mode! Here’s how: Let’s say you would like to see how your cap table will look like after your upcoming series A and B.
+Yes, that’s possible thanks to the Draft mode! Here’s how: Let’s say you would like to see how your cap table will look like after your upcoming series A and B.
 
 1.  Go to the *Cap table* page, click on *Round modeling* at the upper-right corner and simulate your series A. Then click on apply. The new transactions will be created as a draft. You can have a look at them on the *Transactions* page.
 2.  Now your cap table status is post series A. Repeat the process above for your series B in the *Round modeling*.
@@ -44,12 +44,12 @@ Or open the *Round Modeling* on the *Cap Table* page, click *Add* and *Re
 
 There are two ways of converting convertible loans:
 
-1.  Through the round modeling tool, which also [calculates for you](https://blog.ledgy.com/convertible-loans-7948385a5d66) how many shares should be issued for the convertible, taking cap, discount and interest into account. Go to the *Cap Table* page and click on *Round Modeling*. Existing convertibles should already be displayed. If not, add them by clicking on *Add* and then *Remaining Convertibles.*
+1.  Through the round modeling tool, which also [calculates for you](https://blog.ledgy.com/convertible-loans-7948385a5d66) how many shares should be issued for the convertible, taking the cap, discount and interest into account. Go to the *Cap Table* page and click on *Round Modeling*. Existing convertibles should already be displayed. If not, add them by clicking on *Add* and then *Remaining Convertibles.*
 2.  Find your convertible loan on the *Transactions* page. Then click on the menu (dots) in the transaction itself and select *Convert*. You need to calculate the number of shares yourself.
 
 ##### In which browser does the app work best?
 
-The app works best in Google Chrome and Mozilla Firefox. If don’t use one of these browsers and notice a weird behavior, please let us know.
+The app works best in Google Chrome and Mozilla Firefox. If you don’t use one of these browsers and notice a weird behavior, please let us know.
 
 ##### How can I create shareholder groups?
 
@@ -81,7 +81,7 @@ Every user on Ledgy has a portfolio where she can see her investments.
 There are three ways:
 
 1.  Grant view-only access to your shareholder (see above).
-2.  On the *Documents* page you can upload your cap table export and activate link sharing. When you hover with your mouse on the link sharing toggle, you will see the possibility of copying the link, which you can then share. At anytime you can deactivate link sharing which will make the link invalid.
+2.  On the *Documents* page you can upload your cap table export and activate link sharing. When you hover with your mouse on the link-sharing toggle, you will see the possibility of copying the link, which you can then share. At any time you can deactivate link sharing which will make the link invalid.
 3.  Download the cap table as pdf on the *Cap Table* page and share it via email.
 
 ##### What is the blue badge next to the documents? What is the blockchain notary?
@@ -92,11 +92,11 @@ Only a certificate (the hash in more technical terms) is stored on the blockchai
 
 When committing new changes to your cap table, a pdf report is automatically generated and saved to your documents. This creates a bullet-proof due diligence chain which you can later use to impress potential investors or buyers.
 
-Looking for a more technical description of the blockchain notary? [Have a look here](https://blog.ledgy.com/the-ledgy-blockchain-notary-3fb3dc423aae).
+Are you looking for a more technical description of the blockchain notary? [Have a look here](https://blog.ledgy.com/the-ledgy-blockchain-notary-3fb3dc423aae).
 
 ##### How do I define a custom vesting?
 
-Let’s take an example: You have 80 options that vest over 48 months with 12 months cliff. After the first 12 months in which 20 options vest, each month 1 option vests for the remaining 36 months. Headache? Not with Ledgy. Choose custom vesting and define 3 periods:
+Let’s take an example: You have 80 options that vest over 48 months with 12 months cliff. After the first 12 months in which 20 options vest, each month 1 option vests for the remaining 36 months. A headache? Not with Ledgy. Choose custom vesting and define 3 periods:
 
 1.  Percentage: 25, Duration: 12, Vest every: 12 months
 2.  Percentage: 45, Duration: 36, Vest every: 1 month
@@ -104,7 +104,7 @@ Let’s take an example: You have 80 options that vest over 48 months with 12 mo
 
 ### Legal
 
-##### What are common employee incentive (ESOP) models?
+##### What are the common employee incentive (ESOP) models?
 
 -   Switzerland, Germany, Spain: Phantom Stock Options (aka Virtual or Shadow)
 -   France, Sweden, Denmark, Netherlands: Warrants
@@ -114,11 +114,11 @@ Source: [Index Ventures](https://www.indexventures.com/optionplan#employee_coun
 
 ##### Do I really need share numbers?
 
-That’s a tricky legal question. Some lawyers say yes, some no. In any case they are cumbersome to manage, but Ledgy helps you as much as possible with that. Our opinionated answer [here](https://blog.ledgy.com/are-numbered-shares-necessary-15c27f3457a8).
+That’s a tricky legal question. Some lawyers say yes, some no. In any case, they are cumbersome to manage, but Ledgy helps you as much as possible with that. Our opinionated answer [here](https://blog.ledgy.com/are-numbered-shares-necessary-15c27f3457a8).
 
 ##### Why do I need to specify a beneficiary for institutional investors who hold more than 25% of the company in Switzerland (Meldepflicht)?
 
-In 2015, a law to avoid money laundering has been created. It states that if a shareholder (person or institution) holds 25% or more of the company, he must disclose his name and address to the company.
+In 2015, a law to avoid money laundering had been created. It states that if a shareholder (person or institution) holds 25% or more of the company, he must disclose his name and address to the company.
 
 Source: [WalderWyss](https://www.walderwyss.com/publications/2065.pdf)
 
