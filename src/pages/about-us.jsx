@@ -159,10 +159,10 @@ const IndexPage = (props: Props) => {
         <section className="section">
           <div className="container">
             <header className="section-header">
-              <h2><Trans>Supporters</Trans></h2>
+              <h2><Trans>Backed by</Trans></h2>
             </header>
 
-            <div className="row gap-y">
+            <div className="row gap-y justify-content-center">
               <Investor
                 name="btov Partners"
                 func="Lead Investor & Board Member"
@@ -181,9 +181,12 @@ const IndexPage = (props: Props) => {
                 description={i18n.t`Healthcare & Technology Venture Capital since 2001`}
                 img={data.vipartners}
               />
-            </div>
-
-            <div className="row gap-y justify-content-center">
+              <Investor
+                name="Dr. Paul E. Sevinç"
+                func="Investor & Board Member"
+                description={i18n.t`Entrepreneur, Technologist, Founder of Doodle.com`}
+                img={data.paul}
+              />
               <Investor
                 name="Daniel Gutenberg"
                 func="Investor"
@@ -197,35 +200,32 @@ const IndexPage = (props: Props) => {
                 img={data.luis}
               />
               <Investor
-                name="Dr. Paul E. Sevinç"
-                func="Advisor & Board Member"
-                description={i18n.t`Entrepreneur, Technologist, Founder of Doodle.com`}
-                img={data.paul}
-              />
-            </div>
-
-            <div className="row gap-y justify-content-center">
-              <Investor
                 name="Myke Näf"
-                func="Advisor"
+                func="Investor"
                 description={i18n.t`Entrepreneur, Business Angel, Founder of Doodle.com`}
                 img={data.myke}
               />
               <Investor
+                name="Cyrill Osterwalder"
+                func="Investor"
+                description={i18n.t`Digital Entrepreneur and Investor. Security, Crypto & Privacy Expert`}
+                img={data.cyrill}
+              />
+              <Investor
                 name="Luzius Meisser"
-                func="Advisor"
+                func="Investor"
                 description={i18n.t`Founder of Meisser Economics, Bitcoin Association Switzerland, and Wuala`}
                 img={data.luzius}
               />
               <Investor
                 name="Adrian Bührer"
-                func="Advisor"
+                func="Investor"
                 description={i18n.t`Investor & Consultant (Farmy.ch, Flatfox.ch), Founder of Students.ch`}
                 img={data.adrian}
               />
               <Investor
                 name="Elena Walder-Schiavone"
-                func="Advisor"
+                func="Investor"
                 description={i18n.t`M&A and Private Equity Lawyer with a focus on start-up legal advise, Smartuplaw.ch`}
                 img={data.elena}
               />
@@ -285,6 +285,11 @@ export const pageQuery = graphql`
       }
     }
     luis: imageSharp(fluid: { originalName: {regex: "/luis.jpg/"} }) {
+      fixed(width: 128, height: 128) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+    cyrill: imageSharp(fluid: { originalName: {regex: "/cyrill.jpg/"} }) {
       fixed(width: 128, height: 128) {
         ...GatsbyImageSharpFixed
       }
