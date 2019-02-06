@@ -6,7 +6,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Creation-Date: 2018-09-12T18:40:54.619Z\n"
-"PO-Revision-Date: 2019-02-06 14:19+0100\n"
+"PO-Revision-Date: 2019-02-06 15:26+0100\n"
 "Language: de\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
@@ -65,7 +65,7 @@ msgid "And Much More"
 msgstr "Und Vieles Mehr"
 
 #: src/components/AllFeatures.jsx:44
-msgid "Approved Capital Pools"
+msgid "Approved capital pools"
 msgstr "Bewilligtes Kapital"
 
 #: src/pages/features.jsx:114
@@ -89,11 +89,11 @@ msgid "At Ledgy we take your security seriously. Strong passwords, robust encryp
 msgstr "Wir bei Ledgy nehmen deine Sicherheit ernst. Sichere Passwörter, solide Verschlüsselung, Zwei-Faktor-Authentisierung, und permanente Code-Reviews gehören zu unserern hohen Sicherheitsstandards. Erfahre mehr darüber, warum du mit gutem Gewissen deinen Cap Table mit Ledgy verwalten kannst."
 
 #: src/components/AllFeatures.jsx:61
-msgid "Attach Documents to Transactions"
+msgid "Attach documents to transactions"
 msgstr "Dokumente an Transaktionen anhängen"
 
 #: src/components/AllFeatures.jsx:63
-msgid "Audit Trails"
+msgid "Audit trails"
 msgstr "Audit-Trails"
 
 #: src/pages/features/consistency.jsx:94
@@ -138,7 +138,7 @@ msgid "By the way, if you decide to number your shares, we also got you covered.
 msgstr "Übrigens, falls du dich entscheiden solltest, deine Aktien zu nummerieren, das geht bei uns auch. Ledgy kann für jede Transaktion nachverfolgen, wer welche Aktien besitzt und dir bei der Eingabe gültiger Aktiennummern helfen. <0/> Mit Ledgy kannst du dir sicher sein, dass keine einzelne Aktie verloren oder doppelt vergeben wird."
 
 #: src/components/AllFeatures.jsx:59
-msgid "CSV Export"
+msgid "CSV export"
 msgstr "CSV-Export"
 
 #: src/pages/features/round-modeling.jsx:110
@@ -177,7 +177,7 @@ msgid "Consistency"
 msgstr "Konsistenz"
 
 #: src/components/AllFeatures.jsx:25
-msgid "Consistency Checks"
+msgid "Consistency checks"
 msgstr "Konsistenz-Checks"
 
 #: src/pages/contact.jsx:10
@@ -202,9 +202,6 @@ msgid "Convert to transactions"
 msgstr "In Transaktionen umwandeln"
 
 #: src/components/AllFeatures.jsx:27
-msgid "Convertible Loans"
-msgstr "Wandeldarlehen"
-
 #: src/pages/pricing.jsx:55
 msgid "Convertible loans"
 msgstr "Wandeldarlehen"
@@ -214,7 +211,7 @@ msgid "Create a cap table"
 msgstr "Erstelle einen Cap Table"
 
 #: src/components/AllFeatures.jsx:58
-msgid "Customizable PDF Reports"
+msgid "Customizable PDF reports"
 msgstr "Anpassbare PDF-Reports"
 
 #: src/pages/security.jsx:116
@@ -289,7 +286,7 @@ msgid "Employee Incentives"
 msgstr "Mitarbeiterbeteiligungen"
 
 #: src/components/AllFeatures.jsx:40
-msgid "Employee Options"
+msgid "Employee options"
 msgstr "Mitarbeiterbeteiligungen"
 
 #: src/pages/security.jsx:93
@@ -361,14 +358,13 @@ msgid "Free"
 msgstr "Gratis"
 
 #: src/components/AllFeatures.jsx:24
-msgid "Full Transaction History"
+msgid "Full transaction history"
 msgstr "Vollständiger Transaktionsverlauf"
 
 #: src/components/AllFeatures.jsx:46
-msgid "Fully-diluted View"
+msgid "Fully-diluted view"
 msgstr "Fully-diluted Ansicht"
 
-#: src/components/AllFeatures.jsx:23
 #: src/pages/features/round-modeling.jsx:15
 #: src/pages/features/round-modeling.jsx:25
 msgid "Funding Round Modeling"
@@ -377,6 +373,10 @@ msgstr "Modellierung von Finanzierungsrunden"
 #: src/pages/features.jsx:59
 msgid "Funding Round and Exit Modeling"
 msgstr "Modellierung von Finanzierungsrunden und Exits"
+
+#: src/components/AllFeatures.jsx:23
+msgid "Funding round modeling"
+msgstr "Modellierung von Finanzierungsrunden"
 
 #: src/components/SignupForm.jsx:16
 #: src/pages/index.jsx:34
@@ -455,11 +455,14 @@ msgstr "Investment-Übersicht"
 msgid "Investor & Consultant (Farmy.ch, Flatfox.ch), Founder of Students.ch"
 msgstr "Investor & Berater (Farmy.ch, Flatfox.ch), Gründer von Students.ch"
 
-#: src/components/AllFeatures.jsx:48
 #: src/pages/features/investors.jsx:15
 #: src/pages/features/investors.jsx:25
 #: src/pages/features.jsx:110
 msgid "Investor Portfolio"
+msgstr "Investoren-Portfolio"
+
+#: src/components/AllFeatures.jsx:48
+msgid "Investor portfolio"
 msgstr "Investoren-Portfolio"
 
 #: src/components/Features.jsx:96
@@ -541,7 +544,7 @@ msgid "Meet the team behind Ledgy that went out to build a genuinely great produ
 msgstr "Lerne das Team hinter Ledgy kennen, welches dieses geniale Produkt entwickelt hat. Erfahre mehr über die Leute, die uns Vertrauen."
 
 #: src/components/AllFeatures.jsx:62
-msgid "Multiple Administrators"
+msgid "Multiple administrators"
 msgstr "Mehrere Administratoren"
 
 #: src/pages/privacy.jsx:56
@@ -561,7 +564,7 @@ msgid "Nobody has any access to the company information you provide."
 msgstr "Niemand hat Zugriff auf die Unternehmensinformationen."
 
 #: src/components/AllFeatures.jsx:30
-msgid "Numbered Shares"
+msgid "Numbered shares"
 msgstr "Aktiennummern"
 
 #: src/pages/features/round-modeling.jsx:82
@@ -593,16 +596,16 @@ msgid "Oops. This email address is invalid."
 msgstr "Ups. Diese E-Mail-Adresse ist leider ungültig."
 
 #: src/components/AllFeatures.jsx:43
-msgid "Option Expiration"
+msgid "Option expiration"
 msgstr "Verfall von Optionen"
-
-#: src/components/AllFeatures.jsx:42
-msgid "Option Termination"
-msgstr "Terminierung von Optionen"
 
 #: src/pages/pricing.jsx:75
 msgid "Option programs"
 msgstr "Options-Programme"
+
+#: src/components/AllFeatures.jsx:42
+msgid "Option termination"
+msgstr "Terminierung von Optionen"
 
 #: src/layouts/index.jsx:89
 msgid "Or have a quick look at our <0>live demo</0>."
@@ -633,7 +636,7 @@ msgid "Peer-reviewed code"
 msgstr "Code-Audits"
 
 #: src/components/AllFeatures.jsx:41
-msgid "Phantom Programs"
+msgid "Phantom programs"
 msgstr "Virtuelle Beteiligungen"
 
 #: src/pages/pricing.jsx:56
@@ -677,7 +680,7 @@ msgid "Read more"
 msgstr "Mehr erfahren"
 
 #: src/components/AllFeatures.jsx:47
-msgid "Read-only Access"
+msgid "Read-only access"
 msgstr "Lese-Zugriff"
 
 #: src/pages/features/reporting.jsx:73
@@ -724,7 +727,7 @@ msgid "Scroll down, and you will notice that the cap table now indicates the <0>
 msgstr "Wenn du runterscrollst wirst du sehen, dass der Cap Table im <0>Round Modeling</0> Modus ist. Das gibt dir detaillierte Einblicke in die Verteilung nach der Runde."
 
 #: src/components/AllFeatures.jsx:60
-msgid "Secure Document Storage"
+msgid "Secure document storage"
 msgstr "Sichere Dokumentenablage"
 
 #: src/components/SecurityRow.jsx:26
@@ -740,7 +743,7 @@ msgid "See the demo"
 msgstr "Teste die Demo"
 
 #: src/components/AllFeatures.jsx:65
-msgid "Send Holding Confirmations"
+msgid "Send holding confirmations"
 msgstr "Besitzbestätigungen versenden"
 
 #: src/pages/features/reporting.jsx:67
@@ -808,7 +811,7 @@ msgid "Still hesitating? <0>Learn more about our features</0>."
 msgstr "Noch am zögern? <0>Erfahre mehr über unsere Funktionen</0>."
 
 #: src/components/AllFeatures.jsx:28
-msgid "Stock Split"
+msgid "Stock split"
 msgstr "Aktiensplit"
 
 #: src/pages/security.jsx:63
@@ -876,20 +879,20 @@ msgstr "Diese Seite ist nur auf Englisch verfügbar."
 msgid "Track the complete history of your shares. Integrated consistency checks will guarantee that your cap table is error-free. Collaborate on a single source of truth."
 msgstr "Behalte den Überblick über die Historie deiner Aktien. Integrierte Konsistenzchecks garantieren einen fehlerfreien Cap Table. Kollaboriere mit anderen an einer einzigen verlässlichen Informationsquelle."
 
-#: src/components/AllFeatures.jsx:26
-msgid "Transaction Filters"
-msgstr "Filter für Transaktionen"
-
 #: src/pages/features/consistency.jsx:77
 msgid "Transaction error checking"
 msgstr "Überprüfung der Transaktionen"
+
+#: src/components/AllFeatures.jsx:26
+msgid "Transaction filters"
+msgstr "Filter für Transaktionen"
 
 #: src/pages/features/investors.jsx:97
 msgid "Transaction history"
 msgstr "Verlauf der Transaktionen"
 
 #: src/components/AllFeatures.jsx:31
-msgid "Treasury Shares"
+msgid "Treasury shares"
 msgstr "Von der Firma gehaltene Aktien"
 
 #: src/layouts/index.jsx:70
@@ -897,7 +900,7 @@ msgid "Try Ledgy now for free."
 msgstr "Jetzt kostenlos auf Ledgy loslegen."
 
 #: src/components/AllFeatures.jsx:64
-msgid "Two-Factor Authentication"
+msgid "Two-Factor authentication"
 msgstr "Zwei-Faktor-Authentisierung"
 
 #: src/pages/pricing.jsx:59
@@ -906,7 +909,7 @@ msgid "Two-factor authentication"
 msgstr "Zwei-Faktor-Authentisierung"
 
 #: src/components/AllFeatures.jsx:29
-msgid "Unlimited Share Classes"
+msgid "Unlimited share classes"
 msgstr "Unbegrenzte Anzahl Aktienklassen"
 
 #: src/pages/privacy.jsx:61
@@ -929,16 +932,16 @@ msgstr "Alle Nutzer müssen ein <0>extrem sicheres Passwort</0> wählen"
 msgid "VAT number"
 msgstr "VAT-Nummer"
 
-#: src/components/AllFeatures.jsx:45
-msgid "Vesting Schedules"
-msgstr "Vestingpläne"
-
 #: src/pages/pricing.jsx:79
 msgid "Vesting email notifications"
 msgstr "Vesting Email-Benachrichtigung"
 
 #: src/pages/pricing.jsx:78
 msgid "Vesting plans"
+msgstr "Vestingpläne"
+
+#: src/components/AllFeatures.jsx:45
+msgid "Vesting schedules"
 msgstr "Vestingpläne"
 
 #: src/pages/pricing.jsx:76

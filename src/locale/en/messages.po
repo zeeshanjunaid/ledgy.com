@@ -66,8 +66,8 @@ msgid "And Much More"
 msgstr "And Much More"
 
 #: src/components/AllFeatures.jsx:44
-msgid "Approved Capital Pools"
-msgstr "Approved Capital Pools"
+msgid "Approved capital pools"
+msgstr "Approved capital pools"
 
 #: src/pages/features.jsx:114
 msgid "Are you an investor and want to track your portfolio companies? The founders are busy and the numbers they give you are different from your own records?<0/>With their cap table on Ledgy, there’s only a single source of truth. Convince your companies, and you will never miss anything regarding your investments."
@@ -90,12 +90,12 @@ msgid "At Ledgy we take your security seriously. Strong passwords, robust encryp
 msgstr "At Ledgy we take your security seriously. Strong passwords, robust encryption, two-factor authentication, and permanent code reviews are among our high safety standards. Find out more about why you can have peace-of-mind while managing your cap table with Ledgy."
 
 #: src/components/AllFeatures.jsx:61
-msgid "Attach Documents to Transactions"
-msgstr "Attach Documents to Transactions"
+msgid "Attach documents to transactions"
+msgstr "Attach documents to transactions"
 
 #: src/components/AllFeatures.jsx:63
-msgid "Audit Trails"
-msgstr "Audit Trails"
+msgid "Audit trails"
+msgstr "Audit trails"
 
 #: src/pages/features/consistency.jsx:94
 msgid "Available shares for transfer"
@@ -139,8 +139,8 @@ msgid "By the way, if you decide to number your shares, we also got you covered.
 msgstr "By the way, if you decide to number your shares, we also got you covered. Ledgy will track who owns which shares for each transaction and assist you in entering valid share numbers.<0/>With Ledgy you can be sure that no single share number goes missing or is assigned twice."
 
 #: src/components/AllFeatures.jsx:59
-msgid "CSV Export"
-msgstr "CSV Export"
+msgid "CSV export"
+msgstr "CSV export"
 
 #: src/pages/features/round-modeling.jsx:110
 msgid "Cap table during round modeling"
@@ -178,8 +178,8 @@ msgid "Consistency"
 msgstr "Consistency"
 
 #: src/components/AllFeatures.jsx:25
-msgid "Consistency Checks"
-msgstr "Consistency Checks"
+msgid "Consistency checks"
+msgstr "Consistency checks"
 
 #: src/pages/contact.jsx:10
 #: src/pages/contact.jsx:72
@@ -203,9 +203,6 @@ msgid "Convert to transactions"
 msgstr "Convert to transactions"
 
 #: src/components/AllFeatures.jsx:27
-msgid "Convertible Loans"
-msgstr "Convertible Loans"
-
 #: src/pages/pricing.jsx:55
 msgid "Convertible loans"
 msgstr "Convertible loans"
@@ -215,8 +212,8 @@ msgid "Create a cap table"
 msgstr "Create a cap table"
 
 #: src/components/AllFeatures.jsx:58
-msgid "Customizable PDF Reports"
-msgstr "Customizable PDF Reports"
+msgid "Customizable PDF reports"
+msgstr "Customizable PDF reports"
 
 #: src/pages/security.jsx:116
 msgid "Daily backups ensure nothing is ever lost"
@@ -290,8 +287,8 @@ msgid "Employee Incentives"
 msgstr "Employee Incentives"
 
 #: src/components/AllFeatures.jsx:40
-msgid "Employee Options"
-msgstr "Employee Options"
+msgid "Employee options"
+msgstr "Employee options"
 
 #: src/pages/security.jsx:93
 msgid "Encrypted connection"
@@ -362,14 +359,13 @@ msgid "Free"
 msgstr "Free"
 
 #: src/components/AllFeatures.jsx:24
-msgid "Full Transaction History"
-msgstr "Full Transaction History"
+msgid "Full transaction history"
+msgstr "Full transaction history"
 
 #: src/components/AllFeatures.jsx:46
-msgid "Fully-diluted View"
-msgstr "Fully-diluted View"
+msgid "Fully-diluted view"
+msgstr "Fully-diluted view"
 
-#: src/components/AllFeatures.jsx:23
 #: src/pages/features/round-modeling.jsx:15
 #: src/pages/features/round-modeling.jsx:25
 msgid "Funding Round Modeling"
@@ -378,6 +374,10 @@ msgstr "Funding Round Modeling"
 #: src/pages/features.jsx:59
 msgid "Funding Round and Exit Modeling"
 msgstr "Funding Round and Exit Modeling"
+
+#: src/components/AllFeatures.jsx:23
+msgid "Funding round modeling"
+msgstr "Funding round modeling"
 
 #: src/components/SignupForm.jsx:16
 #: src/pages/index.jsx:34
@@ -456,12 +456,15 @@ msgstr "Investment overview"
 msgid "Investor & Consultant (Farmy.ch, Flatfox.ch), Founder of Students.ch"
 msgstr "Investor & Consultant (Farmy.ch, Flatfox.ch), Founder of Students.ch"
 
-#: src/components/AllFeatures.jsx:48
 #: src/pages/features/investors.jsx:15
 #: src/pages/features/investors.jsx:25
 #: src/pages/features.jsx:110
 msgid "Investor Portfolio"
 msgstr "Investor Portfolio"
+
+#: src/components/AllFeatures.jsx:48
+msgid "Investor portfolio"
+msgstr "Investor portfolio"
 
 #: src/components/Features.jsx:96
 #: src/layouts/index.jsx:134
@@ -542,8 +545,8 @@ msgid "Meet the team behind Ledgy that went out to build a genuinely great produ
 msgstr "Meet the team behind Ledgy that went out to build a genuinely great product. Learn more about the people who trust in us."
 
 #: src/components/AllFeatures.jsx:62
-msgid "Multiple Administrators"
-msgstr "Multiple Administrators"
+msgid "Multiple administrators"
+msgstr "Multiple administrators"
 
 #: src/pages/privacy.jsx:56
 msgid "Name, email, encrypted password and any other details you provide"
@@ -562,8 +565,8 @@ msgid "Nobody has any access to the company information you provide."
 msgstr "Nobody has any access to the company information you provide."
 
 #: src/components/AllFeatures.jsx:30
-msgid "Numbered Shares"
-msgstr "Numbered Shares"
+msgid "Numbered shares"
+msgstr "Numbered shares"
 
 #: src/pages/features/round-modeling.jsx:82
 msgid "Often you will have a couple of new investors and then existing shareholders will participate pro-rata in the round. You cap table is in Ledgy, so you can distribute an investment amount pro-rata with just a single click."
@@ -594,16 +597,16 @@ msgid "Oops. This email address is invalid."
 msgstr "Oops. This email address is invalid."
 
 #: src/components/AllFeatures.jsx:43
-msgid "Option Expiration"
-msgstr "Option Expiration"
-
-#: src/components/AllFeatures.jsx:42
-msgid "Option Termination"
-msgstr "Option Termination"
+msgid "Option expiration"
+msgstr "Option expiration"
 
 #: src/pages/pricing.jsx:75
 msgid "Option programs"
 msgstr "Option programs"
+
+#: src/components/AllFeatures.jsx:42
+msgid "Option termination"
+msgstr "Option termination"
 
 #: src/layouts/index.jsx:89
 msgid "Or have a quick look at our <0>live demo</0>."
@@ -634,8 +637,8 @@ msgid "Peer-reviewed code"
 msgstr "Peer-reviewed code"
 
 #: src/components/AllFeatures.jsx:41
-msgid "Phantom Programs"
-msgstr "Phantom Programs"
+msgid "Phantom programs"
+msgstr "Phantom programs"
 
 #: src/pages/pricing.jsx:56
 msgid "Pooled investments"
@@ -678,8 +681,8 @@ msgid "Read more"
 msgstr "Read more"
 
 #: src/components/AllFeatures.jsx:47
-msgid "Read-only Access"
-msgstr "Read-only Access"
+msgid "Read-only access"
+msgstr "Read-only access"
 
 #: src/pages/features/reporting.jsx:73
 msgid "Remember that day last year during tax season when you had to send holding confirmations to each shareholder, filling out boring Word templates by hand?<0/><1/>We’ve got the solution for you. With a single click, Ledgy creates nicely formatted holding confirmations for all of your shareholders and send them directly via email.<2/><3/>Reduce hours of tedious work to just a few seconds. Hurray!"
@@ -725,8 +728,8 @@ msgid "Scroll down, and you will notice that the cap table now indicates the <0>
 msgstr "Scroll down, and you will notice that the cap table now indicates the <0>Round Modeling</0> mode. This gives you a detailed overview of who owns how many shares after applying the new financing round."
 
 #: src/components/AllFeatures.jsx:60
-msgid "Secure Document Storage"
-msgstr "Secure Document Storage"
+msgid "Secure document storage"
+msgstr "Secure document storage"
 
 #: src/components/SecurityRow.jsx:26
 #: src/layouts/index.jsx:119
@@ -741,8 +744,8 @@ msgid "See the demo"
 msgstr "See the demo"
 
 #: src/components/AllFeatures.jsx:65
-msgid "Send Holding Confirmations"
-msgstr "Send Holding Confirmations"
+msgid "Send holding confirmations"
+msgstr "Send holding confirmations"
 
 #: src/pages/features/reporting.jsx:67
 msgid "Send holding confirmations with ease"
@@ -809,8 +812,8 @@ msgid "Still hesitating? <0>Learn more about our features</0>."
 msgstr "Still hesitating? <0>Learn more about our features</0>."
 
 #: src/components/AllFeatures.jsx:28
-msgid "Stock Split"
-msgstr "Stock Split"
+msgid "Stock split"
+msgstr "Stock split"
 
 #: src/pages/security.jsx:63
 msgid "Stored encrypted with the battle-tested <0>bcrypt algorithm</0> at 13 rounds"
@@ -877,29 +880,29 @@ msgstr "This page is only available in English."
 msgid "Track the complete history of your shares. Integrated consistency checks will guarantee that your cap table is error-free. Collaborate on a single source of truth."
 msgstr "Track the complete history of your shares. Integrated consistency checks will guarantee that your cap table is error-free. Collaborate on a single source of truth."
 
-#: src/components/AllFeatures.jsx:26
-msgid "Transaction Filters"
-msgstr "Transaction Filters"
-
 #: src/pages/features/consistency.jsx:77
 msgid "Transaction error checking"
 msgstr "Transaction error checking"
+
+#: src/components/AllFeatures.jsx:26
+msgid "Transaction filters"
+msgstr "Transaction filters"
 
 #: src/pages/features/investors.jsx:97
 msgid "Transaction history"
 msgstr "Transaction history"
 
 #: src/components/AllFeatures.jsx:31
-msgid "Treasury Shares"
-msgstr "Treasury Shares"
+msgid "Treasury shares"
+msgstr "Treasury shares"
 
 #: src/layouts/index.jsx:70
 msgid "Try Ledgy now for free."
 msgstr "Try Ledgy now for free."
 
 #: src/components/AllFeatures.jsx:64
-msgid "Two-Factor Authentication"
-msgstr "Two-Factor Authentication"
+msgid "Two-Factor authentication"
+msgstr "Two-Factor authentication"
 
 #: src/pages/pricing.jsx:59
 #: src/pages/security.jsx:72
@@ -907,8 +910,8 @@ msgid "Two-factor authentication"
 msgstr "Two-factor authentication"
 
 #: src/components/AllFeatures.jsx:29
-msgid "Unlimited Share Classes"
-msgstr "Unlimited Share Classes"
+msgid "Unlimited share classes"
+msgstr "Unlimited share classes"
 
 #: src/pages/privacy.jsx:61
 msgid "Usage statistics"
@@ -930,10 +933,6 @@ msgstr "Users have to set a <0>secure password</0>"
 msgid "VAT number"
 msgstr "VAT number"
 
-#: src/components/AllFeatures.jsx:45
-msgid "Vesting Schedules"
-msgstr "Vesting Schedules"
-
 #: src/pages/pricing.jsx:79
 msgid "Vesting email notifications"
 msgstr "Vesting email notifications"
@@ -941,6 +940,10 @@ msgstr "Vesting email notifications"
 #: src/pages/pricing.jsx:78
 msgid "Vesting plans"
 msgstr "Vesting plans"
+
+#: src/components/AllFeatures.jsx:45
+msgid "Vesting schedules"
+msgstr "Vesting schedules"
 
 #: src/pages/pricing.jsx:76
 msgid "Virtual option programs"

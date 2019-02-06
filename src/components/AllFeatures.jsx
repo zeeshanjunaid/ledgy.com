@@ -20,15 +20,15 @@ export default () => (
     <div className="col-lg-4">
       <div className="pricing-3 border rounded text-left">
         <ul className="mb-0 mt-5">
-          <Li><Trans>Funding Round Modeling</Trans></Li>
-          <Li><Trans>Full Transaction History</Trans></Li>
-          <Li><Trans>Consistency Checks</Trans></Li>
-          <Li><Trans>Transaction Filters</Trans></Li>
-          <Li><Trans>Convertible Loans</Trans></Li>
-          <Li><Trans>Stock Split</Trans></Li>
-          <Li><Trans>Unlimited Share Classes</Trans></Li>
-          <Li><Trans>Numbered Shares</Trans></Li>
-          <Li><Trans>Treasury Shares</Trans></Li>
+          <Li><Trans>Funding round modeling</Trans></Li>
+          <Li><Trans>Full transaction history</Trans></Li>
+          <Li><Trans>Consistency checks</Trans></Li>
+          <Li><Trans>Transaction filters</Trans></Li>
+          <Li><Trans>Convertible loans</Trans></Li>
+          <Li><Trans>Stock split</Trans></Li>
+          <Li><Trans>Unlimited share classes</Trans></Li>
+          <Li><Trans>Numbered shares</Trans></Li>
+          <Li><Trans>Treasury shares</Trans></Li>
         </ul>
       </div>
     </div>
@@ -37,15 +37,15 @@ export default () => (
     <div className="col-lg-4">
       <div className="pricing-3 border rounded text-left">
         <ul className="mb-0 mt-5">
-          <Li><Trans>Employee Options</Trans></Li>
-          <Li><Trans>Phantom Programs</Trans></Li>
-          <Li><Trans>Option Termination</Trans></Li>
-          <Li><Trans>Option Expiration</Trans></Li>
-          <Li><Trans>Approved Capital Pools</Trans></Li>
-          <Li><Trans>Vesting Schedules</Trans></Li>
-          <Li><Trans>Fully-diluted View</Trans></Li>
-          <Li><Trans>Read-only Access</Trans></Li>
-          <Li><Trans>Investor Portfolio</Trans></Li>
+          <Li><Trans>Employee options</Trans></Li>
+          <Li><Trans>Phantom programs</Trans></Li>
+          <Li><Trans>Option termination</Trans></Li>
+          <Li><Trans>Option expiration</Trans></Li>
+          <Li><Trans>Approved capital pools</Trans></Li>
+          <Li><Trans>Vesting schedules</Trans></Li>
+          <Li><Trans>Fully-diluted view</Trans></Li>
+          <Li><Trans>Read-only access</Trans></Li>
+          <Li><Trans>Investor portfolio</Trans></Li>
         </ul>
       </div>
     </div>
@@ -55,14 +55,14 @@ export default () => (
       <div className="pricing-3 border rounded text-left">
         <ul className="mb-0 mt-5">
           <Li><Trans>Spreadsheet Import</Trans></Li>
-          <Li><Trans>Customizable PDF Reports</Trans></Li>
-          <Li><Trans>CSV Export</Trans></Li>
-          <Li><Trans>Secure Document Storage</Trans></Li>
-          <Li><Trans>Attach Documents to Transactions</Trans></Li>
-          <Li><Trans>Multiple Administrators</Trans></Li>
-          <Li><Trans>Audit Trails</Trans></Li>
-          <Li><Trans>Two-Factor Authentication</Trans></Li>
-          <Li><Trans>Send Holding Confirmations</Trans></Li>
+          <Li><Trans>Customizable PDF reports</Trans></Li>
+          <Li><Trans>CSV export</Trans></Li>
+          <Li><Trans>Secure document storage</Trans></Li>
+          <Li><Trans>Attach documents to transactions</Trans></Li>
+          <Li><Trans>Multiple administrators</Trans></Li>
+          <Li><Trans>Audit trails</Trans></Li>
+          <Li><Trans>Two-Factor authentication</Trans></Li>
+          <Li><Trans>Send holding confirmations</Trans></Li>
         </ul>
       </div>
     </div>
