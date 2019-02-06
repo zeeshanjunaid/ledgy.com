@@ -23,7 +23,7 @@ Go on the *Shareholders* page, add you investor’s email address (at this poin
 
 ##### How can I enable share numbers?
 
-Go to your company’s *Settings* page, click on the edit icon in the *Company Profile* box, then activate the *Share Numbers* toggle. You can also check out our opinionated [blog post](https://blog.ledgy.com/are-numbered-shares-necessary-15c27f3457a8) about the necessity of numbered shares.
+Go to your company’s *Settings* page and under your company details activate the *Share Numbers* toggle. Nice side-effect: This automatically adds consistent share numbers to your current transactions. It always takes the lowest available range of numbers for the next transaction.
 
 ##### Can I stack several rounds on top of each other in the round modeling tool?
 
@@ -44,7 +44,7 @@ Or open the *Round Modeling* on the *Cap Table* page, click *Add* and *Re
 
 There are two ways of converting convertible loans:
 
-1.  Through the round modeling tool, which also [calculates for you](https://blog.ledgy.com/convertible-loans-7948385a5d66) how many shares should be issued for the convertible, taking cap, discount and interest into account. Go to the *Cap Table* page and click on *Round Modeling*. Existing convertibles should already be displayed. If not, add them by clicking on *Add* and then *Remaining Convertibles.*
+1.  Through the round modeling tool, which also [calculates for you](https://blog.ledgy.com/convertible-loans-7948385a5d66) how many shares should be issued for the convertible, taking cap, discount and interest into account. Go to the *Cap Table* page and click on *Round Modeling*. Existing convertibles should already be displayed. If not, add them by clicking on *Add* and then *Remaining Convertibles.*
 2.  Find your convertible loan on the *Transactions* page. Then click on the menu (dots) in the transaction itself and select *Convert*. You need to calculate the number of shares yourself.
 
 ##### In which browser does the app work best?
@@ -53,7 +53,7 @@ The app works best in Google Chrome and Mozilla Firefox. If don’t use one of t
 
 ##### How can I create shareholder groups?
 
-Go to the *Stakeholders* page. Hover over the shareholder and you’ll see the edit field for the shareholder’s group. By default the groups *Founders*, *Employees* and *Investors* already exist. To add a new group, simply start typing a name in the field and click on *Create new group*.
+Go to the *Stakeholders* page, click the three dots next to one, click *Edit* and type the group in the respective field. By default, the groups *Founders*, *Employees* and *Investors* already exist. To add a new group, simply start typing a name in the field and click on *Create new group*.
 
 ##### How can I see who made which changes to my cap table?
 
