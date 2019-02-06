@@ -17,7 +17,7 @@ Read our [Getting Started](/help/getting-started/) guide.
 
 Go on the *Shareholders* page, add you investor’s email address (at this point the shareholder does NOT receive any email). Then just click the invite button on the right-hand side. You can choose three access right levels.
 
-1. **Personal** The investor will be able to see her stake in her [portfolio](https://blog.ledgy.com/ledgy-launches-investor-dashboard-a1ad1a95df07).
+1. **Personal** The investor will be able to see her stake in her [portfolio](/features/investors/).
 2. **View-only** View everything, but not able to edit.
 3. **Admin** Full access.
 
