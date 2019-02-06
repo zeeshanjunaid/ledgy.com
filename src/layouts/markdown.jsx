@@ -21,7 +21,7 @@ export default function Template({ data, pageContext }: {
       <Title
         title={frontmatter.title}
         description={frontmatter.description}
-        thumbnailUrl={`${siteUrl}${frontmatter.thumbnailUrl}`}
+        thumbnailUrl={frontmatter.thumbnailUrl ? `${siteUrl}${frontmatter.thumbnailUrl}` : ''}
       />
       <header className="header text-white bg-ledgy">
         <div className="container text-center">
@@ -42,6 +42,7 @@ export default function Template({ data, pageContext }: {
 
           <div className="container container-small">
             <div
+              className="markdown"
               dangerouslySetInnerHTML={{ __html: html }} // eslint-disable-line react/no-danger
             />
             <div className="text-right pt-4">

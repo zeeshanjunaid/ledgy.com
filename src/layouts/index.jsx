@@ -100,6 +100,14 @@ const Footer = (props: LayoutProps) => (
 
           <div className="col-md-6 col-xl-3">
             <Logo {...props} inverse={false} />
+
+            <div className="social social-bordered mt-3">
+              <a className="social-twitter" href="https://twitter.com/Ledgy"><FontAwesomeIcon icon={faTwitter} title="Twitter" /></a>
+              <a className="social-linkedin" href="https://www.linkedin.com/company/ledgy"><FontAwesomeIcon icon={faLinkedin} title="LinkedIn" /></a>
+              <a className="social-facebook" href="https://www.facebook.com/LedgyCom/"><FontAwesomeIcon icon={faFacebook} title="Facebook" /></a>
+              <a className="social-angellist" href="https://angel.co/ledgy"><FontAwesomeIcon icon={faAngellist} title="AngelList" /></a>
+              <a className="social-xing" href="https://www.xing.com/companies/ledgy"><FontAwesomeIcon icon={faXing} title="Xing" /></a>
+            </div>
           </div>
 
           <div className="col-6 col-md-3 col-xl-2">
@@ -114,7 +122,7 @@ const Footer = (props: LayoutProps) => (
             </div>
           </div>
 
-          <div className="col-6 col-md-3 col-xl-3">
+          <div className="col-6 col-md-3 col-xl-2">
             <h6 className="mb-4 mt-1"><strong><Trans>Product</Trans></strong></h6>
             <div className="nav flex-column">
               <Link className="nav-link" href to={`${props.prefix}/features/`}><Trans>Features</Trans></Link>
@@ -127,20 +135,20 @@ const Footer = (props: LayoutProps) => (
             </div>
           </div>
 
-          <div className="col-6 col-md-6 col-xl-2 text-center px-1">
-            <div className="social social-bordered">
-              <a className="social-twitter" href="https://twitter.com/Ledgy"><FontAwesomeIcon icon={faTwitter} title="Twitter" /></a>
-              <a className="social-linkedin" href="https://www.linkedin.com/company/ledgy"><FontAwesomeIcon icon={faLinkedin} title="LinkedIn" /></a>
-              <a className="social-facebook" href="https://www.facebook.com/LedgyCom/"><FontAwesomeIcon icon={faFacebook} title="Facebook" /></a>
-              <a className="social-angellist" href="https://angel.co/ledgy"><FontAwesomeIcon icon={faAngellist} title="AngelList" /></a>
-              <a className="social-xing" href="https://www.xing.com/companies/ledgy"><FontAwesomeIcon icon={faXing} title="Xing" /></a>
+          <div className="col-6 col-md-3 col-xl-2">
+            <h6 className="mb-4 mt-1"><strong><Trans>Help</Trans></strong></h6>
+            <div className="nav flex-column">
+              <Link className="nav-link" href to={`${props.prefix}/help/getting-started/`}><Trans>Getting Started</Trans></Link>
+              <Link className="nav-link" href to={`${props.prefix}/help/faq/`}><Trans>FAQ</Trans></Link>
             </div>
           </div>
 
-          <div className="col-6 col-md-6 col-xl-2">
-            {props.lang === 'de' ?
-              <Link href to={props.location.pathname.substr(3)} className="btn btn-round btn-outline-primary">English</Link> :
-              <Link href to={`/de${props.location.pathname}`} className="btn btn-round btn-outline-primary">Deutsch</Link>}
+          <div className="col-6 col-md-6 col-xl-2 px-1">
+            <div>
+              {props.lang === 'de' ?
+                <Link href to={props.location.pathname.substr(3)} className="btn btn-round btn-outline-primary">English</Link> :
+                <Link href to={`/de${props.location.pathname}`} className="btn btn-round btn-outline-primary">Deutsch</Link>}
+            </div>
           </div>
 
         </div>
