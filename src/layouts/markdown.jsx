@@ -42,6 +42,7 @@ export default function Template({ data, pageContext }: {
 
           <div className="container container-small">
             <div
+              className="markdown"
               dangerouslySetInnerHTML={{ __html: html }} // eslint-disable-line react/no-danger
             />
             <div className="text-right pt-4">
