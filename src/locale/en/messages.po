@@ -97,6 +97,10 @@ msgstr "Audit Trails"
 msgid "Available shares for transfer"
 msgstr "Available shares for transfer"
 
+#: src/pages/about-us.jsx:162
+msgid "Backed by"
+msgstr "Backed by"
+
 #: src/pages/about-us.jsx:175
 msgid "Backing the creators of our future"
 msgstr "Backing the creators of our future"
@@ -222,6 +226,10 @@ msgstr "Did you know that many cap tables are incomplete or contain errors? Trac
 msgid "Did you notice the number in the center bottom? Any time you transfer shares from one shareholder to another, Ledgy will show you how many shares that particular shareholder has <0>available</0> at that given point in time."
 msgstr "Did you notice the number in the center bottom? Any time you transfer shares from one shareholder to another, Ledgy will show you how many shares that particular shareholder has <0>available</0> at that given point in time."
 
+#: src/pages/about-us.jsx:211
+msgid "Digital Entrepreneur and Investor. Security, Crypto & Privacy Expert"
+msgstr "Digital Entrepreneur and Investor. Security, Crypto & Privacy Expert"
+
 #: src/pages/pricing.jsx:100
 msgid "Discover all cap table features"
 msgstr "Discover all cap table features"
@@ -285,11 +293,11 @@ msgstr "Enter your email…"
 msgid "Enterprise"
 msgstr "Enterprise"
 
-#: src/pages/about-us.jsx:211
+#: src/pages/about-us.jsx:205
 msgid "Entrepreneur, Business Angel, Founder of Doodle.com"
 msgstr "Entrepreneur, Business Angel, Founder of Doodle.com"
 
-#: src/pages/about-us.jsx:202
+#: src/pages/about-us.jsx:187
 msgid "Entrepreneur, Technologist, Founder of Doodle.com"
 msgstr "Entrepreneur, Technologist, Founder of Doodle.com"
 
@@ -560,7 +568,7 @@ msgstr "Once your incentive plan is on Ledgy, it’s time to engage your employe
 msgid "One of Europe's oldest and largest early-stage VC funds"
 msgstr "One of Europe's oldest and largest early-stage VC funds"
 
-#: src/pages/about-us.jsx:190
+#: src/pages/about-us.jsx:193
 msgid "One of the most active Swiss early-stage angel investors"
 msgstr "One of the most active Swiss early-stage angel investors"
 
@@ -751,7 +759,7 @@ msgstr "Single source of truth"
 msgid "Space elevator"
 msgstr "Space elevator"
 
-#: src/pages/about-us.jsx:196
+#: src/pages/about-us.jsx:199
 msgid "Specialized in investments in early-stage technology startups"
 msgstr "Specialized in investments in early-stage technology startups"
 
@@ -794,10 +802,6 @@ msgstr "Strong passwords"
 #: src/layouts/markdown.jsx:55
 msgid "Suggest changes"
 msgstr "Suggest changes"
-
-#: src/pages/about-us.jsx:162
-msgid "Supporters"
-msgstr "Supporters"
 
 #: src/pages/contact.jsx:64
 msgid "Switzerland"

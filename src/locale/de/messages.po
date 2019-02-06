@@ -96,9 +96,13 @@ msgstr "Audit-Trails"
 msgid "Available shares for transfer"
 msgstr "Verfügbare Aktien für die Übertragung"
 
+#: src/pages/about-us.jsx:162
+msgid "Backed by"
+msgstr "Unterstützt von"
+
 #: src/pages/about-us.jsx:175
 msgid "Backing the creators of our future"
-msgstr ""
+msgstr "Backing the creators of our future"
 
 #: src/pages/security.jsx:115
 msgid "Backups"
@@ -221,6 +225,10 @@ msgstr "Wusstest du, dass viele Cap Tables fehlerhaft und unvollständig sind? E
 msgid "Did you notice the number in the center bottom? Any time you transfer shares from one shareholder to another, Ledgy will show you how many shares that particular shareholder has <0>available</0> at that given point in time."
 msgstr "Hast du die Nummer in der Mitte unten bemerkt? Jedes Mal, wenn du Aktien von einem Aktionär auf einen anderen übertragen, wird Ledgy dir zeigen, wie viele Aktien der Aktionär zu diesem Zeitpunkt gerade zur Verfügung hat."
 
+#: src/pages/about-us.jsx:211
+msgid "Digital Entrepreneur and Investor. Security, Crypto & Privacy Expert"
+msgstr "Digital Entrepreneur und Investor. Security-, Crypto- & Privacy-Experte"
+
 #: src/pages/pricing.jsx:100
 msgid "Discover all cap table features"
 msgstr "Entdecke alle Cap Table-Features"
@@ -284,11 +292,11 @@ msgstr "E-Mail-Adresse eingeben…"
 msgid "Enterprise"
 msgstr "Enterprise"
 
-#: src/pages/about-us.jsx:211
+#: src/pages/about-us.jsx:205
 msgid "Entrepreneur, Business Angel, Founder of Doodle.com"
 msgstr "Unternehmer, Business Angel, Gründer von Doodle.com"
 
-#: src/pages/about-us.jsx:202
+#: src/pages/about-us.jsx:187
 msgid "Entrepreneur, Technologist, Founder of Doodle.com"
 msgstr "Unternehmer, Technologe, Gründer von Doodle.com"
 
@@ -388,7 +396,7 @@ msgid "Help"
 msgstr "Hilfe"
 #: src/pages/about-us.jsx:181
 msgid "Healthcare & Technology Venture Capital since 2001"
-msgstr ""
+msgstr "Healthcare & Technology Venture Capital seit 2001"
 
 #: src/pages/contact.jsx:17
 msgid "Here are the ways you can contact us with any questions you have"
@@ -556,11 +564,11 @@ msgstr "Jetzt, mit deinem Beteiligungsplan auf Ledgy, ist es an der Zeit deine M
 
 #: src/pages/about-us.jsx:169
 msgid "One of Europe's oldest and largest early-stage VC funds"
-msgstr ""
+msgstr "Einer von Europas ältesten und grössten Early Stage VC Funds"
 
-#: src/pages/about-us.jsx:190
+#: src/pages/about-us.jsx:193
 msgid "One of the most active Swiss early-stage angel investors"
-msgstr ""
+msgstr "Einer der aktivsten Schweizer Angel-Investoren für Early Stage"
 
 #: src/pages/features/consistency.jsx:67
 msgid "Oops, there was an error in your cap table? Don’t worry; Ledgy will assist you in getting your cap table straight.<0/>Once finished, sit back and relax. Now you can be assured that your cap table is error-free."
@@ -749,9 +757,9 @@ msgstr "Eine einzige Informationsquelle"
 msgid "Space elevator"
 msgstr "Weltraumlift"
 
-#: src/pages/about-us.jsx:196
+#: src/pages/about-us.jsx:199
 msgid "Specialized in investments in early-stage technology startups"
-msgstr ""
+msgstr "Spezialisiert auf Investments in Early Stage Technologie-Startups"
 
 #: src/components/AllFeatures.jsx:57
 msgid "Spreadsheet Import"
@@ -792,10 +800,6 @@ msgstr "Sichere Passwörter"
 #: src/layouts/markdown.jsx:55
 msgid "Suggest changes"
 msgstr "Änderungen vorschlagen"
-
-#: src/pages/about-us.jsx:162
-msgid "Supporters"
-msgstr ""
 
 #: src/pages/contact.jsx:64
 msgid "Switzerland"
