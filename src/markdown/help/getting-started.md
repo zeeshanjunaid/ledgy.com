@@ -14,7 +14,7 @@ To create a cap table click on _Create company_. This will then lead you to a 
 
 The easiest way is to follow our onboarding by clicking on the _Guide me_ button (you can still return to the welcome screen at any time). Is anything unclear to you? Check our [FAQ](/help/faq/) and if you can’t find an answer there, just [let us know](/contact/)!
 
-Alternatively, you can enter shareholders and transaction on the respective pages to setup your cap table or use the import tools.
+Alternatively, you can enter shareholders and transaction on the respective pages to set up your cap table or use the import tools.
 
 #### The basics
 
@@ -36,7 +36,7 @@ If you choose not to use the onboarding steps above, here are the basics of how 
 
 ![](attach-documents.png)
 
-- Once you are done with adding all new transactions click on the _Apply_ button (read on to find out why).
+- Once you are done with adding all new transactions click on the _Commit_ button (read on to find out why).
 
 ##### Commit your draft
 
@@ -44,10 +44,9 @@ All the new transactions you’ve added will be saved as your new draft. Once yo
 
 ###### What does the _Commit_ button do?
 
-Two things:
-
 1. Check if there are no errors and save the new transactions as the updated ownership history. Now you can do changes again and see the differences.
 2. It makes the new information available for all your company’s shareholders who have an account on Ledgy. In other words, if your shareholders have an account on Ledgy and see your company in their portfolio (see next paragraph), they will see the up-to-date information about their stake as soon as you click on the _Commit_ button. They will not see any notes or documents added to the transactions.
+3. Saving a PDF snapshot of your new cap table and transactions. This creates an audit trail for you for future due diligence. The snapshot is also certified by the [blockchain notary](/help/faq). Of course, you can delete this document if you don’t want it.
 
 ##### Have a look at your portfolio
 

@@ -4,7 +4,7 @@ title: "Frequently Asked Questions"
 description: "Frequently asked questions about Ledgy"
 ---
 
-Welcome to Ledgy’s FAQ! Hit *command+F* to look for key words to find your question. **Can’t find the answer to your question below?** [Let us know](/contact/)! We’ll get right back to you and might add your question here as well.
+Welcome to Ledgy’s FAQ! Hit *command+F* to look for keywords to find your question. **Can’t find the answer to your question below?** [Let us know](/contact/)! We’ll get right back to you and might add your question here as well.
 
 
 ### App
@@ -67,7 +67,7 @@ Read our [quick guide](https://blog.ledgy.com/csv-export-96215c180194) to smoo
 
 Yes, the exit scenario modeling even takes liquidation preferences with a multiple, whether it’s participating with or without cap and interest into account.
 
-On the *Cap Table* page click on *Scenarios* at the top right and then on *Exit*. Enter an exit price at the top, then you will see your cap table with return and multiple for each stakeholder, by groups or by classes. It also helps you understand what happens with a breakpoint plot. Click on a different point on the plot, to see the exit scenario at that valuation.
+On the *Cap Table* page, click on *Scenarios* at the top right and then on *Exit*. Enter an exit price at the top, then you will see your cap table with return and multiple for each stakeholder, by groups or by classes. It also helps you understand what happens with a breakpoint plot. Click on a different point on the plot, to see the exit scenario at that valuation.
 
 ##### Can investors also log in to see their stake?
 
