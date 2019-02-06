@@ -96,11 +96,19 @@ msgstr "Audit-Trails"
 msgid "Available shares for transfer"
 msgstr "Verfügbare Aktien für die Übertragung"
 
+#: src/pages/about-us.jsx:161
+msgid "Backed by"
+msgstr "Unterstützt von"
+
+#: src/pages/about-us.jsx:172
+msgid "Backing the creators of our future"
+msgstr "Backing the creators of our future"
+
 #: src/pages/security.jsx:115
 msgid "Backups"
 msgstr "Backups"
 
-#: src/pages/about-us.jsx:129
+#: src/pages/about-us.jsx:128
 msgid "Ben has extensive experience in project management and has worked for two years as software-engineer in an ETH research group"
 msgstr "Ben hat umfangreiche Erfahrung im Projektmanagement und hat zwei Jahre als Software Engineer in einer ETH Forschungsgruppe gearbeitet"
 
@@ -108,10 +116,6 @@ msgstr "Ben hat umfangreiche Erfahrung im Projektmanagement und hat zwei Jahre a
 #: src/layouts/index.jsx:117
 msgid "Blog"
 msgstr "Blog"
-
-#: src/pages/about-us.jsx:162
-msgid "Board and Advisors"
-msgstr "Board und Advisors"
 
 #: src/pages/features/reporting.jsx:119
 msgid "Bring order to your documents"
@@ -141,7 +145,7 @@ msgstr "Cap Table während der während der Finanzierungsrundensimulation"
 msgid "Check back at your <0>Cap Table</0> and select the <1>fully diluted</1> view to see the newly created pool and employee incentives. You can even view your diluted cap table with all options aggregated in their pool, or distributed to each person (detailed view)."
 msgstr "Wirf einen Blick auf deinen <0>Cap Table</0> und wähle die <1>Fully-Diluted</1> Ansicht um den neuen Pool und die Mitarbeiterbeteiligungen zu sehen. Du hast sogar die Wahl zwischen einer Ansicht, mit der alle Beteiligungen in ihren Pools aggregiert, oder eine bei der sie auf die jeweiligen Personen verteilt werden."
 
-#: src/pages/about-us.jsx:111
+#: src/pages/about-us.jsx:110
 msgid "Coding since high school, Timo got an award for the best master thesis in computer science and worked one year as computer engineer in robotics"
 msgstr "Timo programmiert seit seiner Schulzeit, wurde für die beste Masterarbeit in Computer Science ausgezeichnet und hat ein Jahr als Computer Engineer in der Robotik gearbeitet"
 
@@ -221,6 +225,10 @@ msgstr "Wusstest du, dass viele Cap Tables fehlerhaft und unvollständig sind? E
 msgid "Did you notice the number in the center bottom? Any time you transfer shares from one shareholder to another, Ledgy will show you how many shares that particular shareholder has <0>available</0> at that given point in time."
 msgstr "Hast du die Nummer in der Mitte unten bemerkt? Jedes Mal, wenn du Aktien von einem Aktionär auf einen anderen übertragen, wird Ledgy dir zeigen, wie viele Aktien der Aktionär zu diesem Zeitpunkt gerade zur Verfügung hat."
 
+#: src/pages/about-us.jsx:202
+msgid "Digital Entrepreneur and Investor. Security, Crypto & Privacy Expert"
+msgstr "Digital Entrepreneur und Investor. Security-, Crypto- & Privacy-Experte"
+
 #: src/pages/pricing.jsx:100
 msgid "Discover all cap table features"
 msgstr "Entdecke alle Cap Table-Features"
@@ -233,7 +241,7 @@ msgstr "Erfahre mehr über Ledgy"
 msgid "Distribute Investment Pro-Rata"
 msgstr "Pro-Rata Verteilung eines Investments"
 
-#: src/pages/about-us.jsx:145
+#: src/pages/about-us.jsx:144
 msgid "Do you feel working for Google is boring because they don’t grow by 1,000× during the next four years? Building a product is fantastic, but how about creating a whole team around it? Are you a web developer that eats bugs for breakfast? Fascinated by cutting-edge technology like React, blockchain or space elevators?<0/><1/><2>Learn more<3/></2>"
 msgstr "Du findest, für Google zu arbeiten ist langweilig, weil sie in den nächsten 4 Jahren nicht um das 1.000-fache wachsen werden? Eine Software zu entwickeln ist cool, aber wie wäre es ein ganzes Team darum aufzubauen? Du bist ein Web-Entwickler, der noch beim Frühstücken die letzten Bugs fixt? Du bist fasziniert von modernster Technologie wie React, Blockchain und Weltraumaufzügen?<0/><1/><2>Mehr erfahren<3/></2>"
 
@@ -284,11 +292,11 @@ msgstr "E-Mail-Adresse eingeben…"
 msgid "Enterprise"
 msgstr "Enterprise"
 
-#: src/pages/about-us.jsx:175
+#: src/pages/about-us.jsx:197
 msgid "Entrepreneur, Business Angel, Founder of Doodle.com"
 msgstr "Unternehmer, Business Angel, Gründer von Doodle.com"
 
-#: src/pages/about-us.jsx:169
+#: src/pages/about-us.jsx:182
 msgid "Entrepreneur, Technologist, Founder of Doodle.com"
 msgstr "Unternehmer, Technologe, Gründer von Doodle.com"
 
@@ -336,7 +344,7 @@ msgstr "Fertig? Zurück auf der <0>Cap Table</0> Seite kannst du das Ergebnis se
 msgid "For even better protection of accounts. And our implementation is <0>open source</0>!"
 msgstr "Für noch mehr Sicherheit der Nutzerkonten. Übrigens, unsere Implementierung ist <0>Open Source</0>!"
 
-#: src/pages/about-us.jsx:181
+#: src/pages/about-us.jsx:207
 msgid "Founder of Meisser Economics, Bitcoin Association Switzerland, and Wuala"
 msgstr "Gründer von Meisser Economics, Bitcoin Association Schweiz und Wuala"
 
@@ -383,6 +391,10 @@ msgstr "Gib deinen Stakeholdern Lese- oder Adminzugriff"
 msgid "HTTP headers prevent cross-site scripting and code injection (<0>A+ rating</0>)"
 msgstr "HTTP-Header verhindern Cross-Site-Scripting und Code-Injection (<0>A+-Rating</0>)"
 
+#: src/pages/about-us.jsx:177
+msgid "Healthcare & Technology Venture Capital since 2001"
+msgstr "Healthcare & Technology Venture Capital seit 2001"
+
 #: src/layouts/index.jsx:139
 msgid "Help"
 msgstr "Hilfe"
@@ -427,7 +439,7 @@ msgstr "Beteiligungspläne"
 msgid "Investment overview"
 msgstr "Investment-Übersicht"
 
-#: src/pages/about-us.jsx:190
+#: src/pages/about-us.jsx:212
 msgid "Investor & Consultant (Farmy.ch, Flatfox.ch), Founder of Students.ch"
 msgstr "Investor & Berater (Farmy.ch, Flatfox.ch), Gründer von Students.ch"
 
@@ -491,7 +503,7 @@ msgstr "Beteilige deine Mitarbeiter am Erfolg deiner Firma. Ledgy unterstützt g
 msgid "Let’s Get In Touch"
 msgstr "Wir sind für dich da"
 
-#: src/pages/about-us.jsx:196
+#: src/pages/about-us.jsx:217
 msgid "M&A and Private Equity Lawyer with a focus on start-up legal advise, Smartuplaw.ch"
 msgstr "M&A- und Private-Equity-Anwältin mit Schwerpunkt auf Start-up Beratung, Smartuplaw.ch"
 
@@ -551,6 +563,14 @@ msgstr "Oje, es ist wieder Zeit Steuererklärungen auszufüllen und es gibt 50 B
 msgid "Once your incentive plan is on Ledgy, it’s time to engage your employees. They can log in to Ledgy themselves with their email address at any time and see how many shares they have already vested. Invite them with a click on the shareholders page."
 msgstr "Jetzt, mit deinem Beteiligungsplan auf Ledgy, ist es an der Zeit deine Mitarbeiter mit an Bord zu holen. Sie können sich bei Ledgy selbst mit ihrer Email einloggen um zu sehen wie viele Aktien sie besitzen und wie viele schon gevestet sind. Lade sie ganz einfach mit einem Klick auf der Aktionärsseite ein."
 
+#: src/pages/about-us.jsx:167
+msgid "One of Europe's oldest and largest early-stage VC funds"
+msgstr "Einer von Europas ältesten und grössten Early Stage VC Funds"
+
+#: src/pages/about-us.jsx:187
+msgid "One of the most active Swiss early-stage angel investors"
+msgstr "Einer der aktivsten Schweizer Angel-Investoren für Early Stage"
+
 #: src/pages/features/consistency.jsx:67
 msgid "Oops, there was an error in your cap table? Don’t worry; Ledgy will assist you in getting your cap table straight.<0/>Once finished, sit back and relax. Now you can be assured that your cap table is error-free."
 msgstr "Oh, ein Fehler in deinem Cap Table? Keine Sorge, Ledgy hilft dir deinen Cap Table in Ordnung zu bringen.<0/> Sobald du fertig bist, kannst du dich mit dem guten Gewissen zurücklehnen, dass es keine Fehler mehr gibt."
@@ -571,7 +591,7 @@ msgstr "Terminierung von Optionen"
 msgid "Or have a quick look at our <0>live demo</0>."
 msgstr "Oder wirf’ einen kurzen Blick auf unsere <0>Live-Demo</0>."
 
-#: src/pages/about-us.jsx:80
+#: src/pages/about-us.jsx:79
 msgid "Our mission"
 msgstr "Unsere Mission"
 
@@ -734,9 +754,13 @@ msgstr "Simuliere das Ergebnis einer bevorstehenden Finanzierungsrunde. Detailli
 msgid "Single source of truth"
 msgstr "Eine einzige Informationsquelle"
 
-#: src/pages/about-us.jsx:94
+#: src/pages/about-us.jsx:93
 msgid "Space elevator"
 msgstr "Weltraumlift"
+
+#: src/pages/about-us.jsx:192
+msgid "Specialized in investments in early-stage technology startups"
+msgstr "Spezialisiert auf Investments in Early Stage Technologie-Startups"
 
 #: src/components/AllFeatures.jsx:57
 msgid "Spreadsheet Import"
@@ -786,7 +810,7 @@ msgstr "Schweiz"
 msgid "Takes too long to import your data? <0>We’ll do it for you!</0>"
 msgstr "Der Import der Daten ist mühsam? <0>Wir erledigen das für dich!</0>"
 
-#: src/pages/about-us.jsx:103
+#: src/pages/about-us.jsx:102
 msgid "Team"
 msgstr "Team"
 
@@ -911,11 +935,11 @@ msgstr "Wir erfüllen die höchsten Sicherheitsstandards. Und verbessern sie kon
 msgid "We understand how sensitive cap table information is for any business. That’s why your privacy and your data’s security is crucial to us. Here is what we do to protect your data."
 msgstr "Uns ist bewusst, wie sensibel und vertraulich der Cap Table für jede Firma ist. Deshalb nehmen wir deine Privatsphäre und die Sicherheit deiner Daten sehr ernst. So schützen wir deine Daten."
 
-#: src/pages/about-us.jsx:82
+#: src/pages/about-us.jsx:81
 msgid "We want to empower entrepreneurs. They should be able to focus on their business, not on bureaucratic paperwork. That’s why we want to establish a new, state-of-the-art tool to manage and exchange securities in private companies. Our goal is to make shares management a breeze for both companies and shareholders."
 msgstr "Wir wollen Unternehmer stärken. Sie sollten sich auf ihr Geschäft konzentrieren können, nicht auf bürokratischen Papierkram. Aus diesem Grund möchten wir ein neues, hochmodernes Tool für die Verwaltung, den Austausch und den Handel von Wertpapieren in privaten Unternehmen schaffen. Unser Ziel ist es, das Aktienmanagement für Unternehmen und Gesellschafter zu einem Kinderspiel zu machen."
 
-#: src/pages/about-us.jsx:143
+#: src/pages/about-us.jsx:142
 msgid "We’re hiring!"
 msgstr "Wir suchen Verstärkung!"
 
@@ -947,7 +971,7 @@ msgstr "Ledgy erlaubt das Herunterladen von schön formatierten PDF Berichten de
 msgid "Work with us"
 msgstr "Arbeite mit uns"
 
-#: src/pages/about-us.jsx:120
+#: src/pages/about-us.jsx:119
 msgid "Yoko graduated from ETH and Oxford and was president of Swissloop, enabling the team to win the 3rd price at the SpaceX Hyperloop competition"
 msgstr "Yoko hat ihren Physik Master an der ETH und in Oxford gemacht und war Präsident von Swissloop, wo sie dem Team zum dritten Platz beim SpaceX Hyperloop Wettbewerb verholfen hat"
 

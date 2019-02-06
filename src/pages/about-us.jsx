@@ -31,13 +31,13 @@ const Header = ({ i18n }: Props) => (
 
 type ProfileProps = {
   name: string,
-  func: string,
   description: string,
   img: Object,
   fade: string,
 }
 type FounderProps = {
   ...$Exact<ProfileProps>,
+  func: string,
   twitterlink: string,
   linkedinlink: string,
   mail: string
@@ -58,11 +58,10 @@ const Founder =
   </div>
 );
 
-const Investor = ({ name, func, description, img }: ProfileProps) => (
+const Investor = ({ name, description, img }: ProfileProps) => (
   <div className="col-12 col-md-4 team-2">
     {img && <Img {...img} alt={name} />}
     <h6>{name}</h6>
-    <small>{func}</small>
     <p>{description}</p>
   </div>
 );
@@ -159,40 +158,62 @@ const IndexPage = (props: Props) => {
         <section className="section">
           <div className="container">
             <header className="section-header">
-              <h2><Trans>Board and Advisors</Trans></h2>
+              <h2><Trans>Backed by</Trans></h2>
             </header>
 
-            <div className="row gap-y">
+            <div className="row gap-y justify-content-center">
+              <Investor
+                name="btov Partners"
+                description={i18n.t`One of Europe's oldest and largest early-stage VC funds`}
+                img={data.btov}
+              />
+              <Investor
+                name="Creathor Ventures"
+                description={i18n.t`Backing the creators of our future`}
+                img={data.creathor}
+              />
+              <Investor
+                name="VI Partners"
+                description={i18n.t`Healthcare & Technology Venture Capital since 2001`}
+                img={data.vipartners}
+              />
               <Investor
                 name="Dr. Paul E. Sevinç"
-                func="Board Member"
                 description={i18n.t`Entrepreneur, Technologist, Founder of Doodle.com`}
                 img={data.paul}
               />
               <Investor
+                name="Daniel Gutenberg"
+                description={i18n.t`One of the most active Swiss early-stage angel investors`}
+                img={data.daniel}
+              />
+              <Investor
+                name="Luis Cabiedes"
+                description={i18n.t`Specialized in investments in early-stage technology startups`}
+                img={data.luis}
+              />
+              <Investor
                 name="Myke Näf"
-                func="Advisor"
                 description={i18n.t`Entrepreneur, Business Angel, Founder of Doodle.com`}
                 img={data.myke}
               />
               <Investor
+                name="Cyrill Osterwalder"
+                description={i18n.t`Digital Entrepreneur and Investor. Security, Crypto & Privacy Expert`}
+                img={data.cyrill}
+              />
+              <Investor
                 name="Luzius Meisser"
-                func="Advisor"
                 description={i18n.t`Founder of Meisser Economics, Bitcoin Association Switzerland, and Wuala`}
                 img={data.luzius}
               />
-            </div>
-
-            <div className="row gap-y justify-content-center">
               <Investor
                 name="Adrian Bührer"
-                func="Advisor"
                 description={i18n.t`Investor & Consultant (Farmy.ch, Flatfox.ch), Founder of Students.ch`}
                 img={data.adrian}
               />
               <Investor
                 name="Elena Walder-Schiavone"
-                func="Advisor"
                 description={i18n.t`M&A and Private Equity Lawyer with a focus on start-up legal advise, Smartuplaw.ch`}
                 img={data.elena}
               />
@@ -231,6 +252,36 @@ export const pageQuery = graphql`
       }
     }
 
+    btov: imageSharp(fluid: { originalName: {regex: "/btov.png/"} }) {
+      fixed(width: 128, height: 128) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+    creathor: imageSharp(fluid: { originalName: {regex: "/creathor.jpg/"} }) {
+      fixed(width: 128, height: 128) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+    vipartners: imageSharp(fluid: { originalName: {regex: "/vipartners.jpg/"} }) {
+      fixed(width: 128, height: 128) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+    daniel: imageSharp(fluid: { originalName: {regex: "/daniel.jpg/"} }) {
+      fixed(width: 128, height: 128) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+    luis: imageSharp(fluid: { originalName: {regex: "/luis.jpg/"} }) {
+      fixed(width: 128, height: 128) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+    cyrill: imageSharp(fluid: { originalName: {regex: "/cyrill.jpg/"} }) {
+      fixed(width: 128, height: 128) {
+        ...GatsbyImageSharpFixed
+      }
+    }
 
     myke: imageSharp(fluid: { originalName: {regex: "/myke.jpg/"} }) {
       fixed(width: 128, height: 128) {
