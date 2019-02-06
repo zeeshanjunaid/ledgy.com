@@ -40,7 +40,9 @@ If you choose not to use the onboarding steps above, here are the basics of how 
 
 ##### Commit your draft
 
-All the new transactions you’ve added will be saved as your new draft. Once you are done with adding them and are happy with it, you can hit the _Commit_ button to save your draft as your official transactions list. Don’t worry; you will be prompted to review your changes before confirming.
+All the new transactions you’ve added will be saved as your new draft. New or modified transactions are marked in gray. The question-mark below the transaction number tells you what has changed. 
+
+Once you are done with adding and editing transactions, you can hit the _Commit_ button to save your draft as your new official transactions list. Don’t worry; you will be prompted to review your changes before confirming and can still make changes to your transactions after committing.
 
 ###### What does the _Commit_ button do?
 
