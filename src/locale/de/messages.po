@@ -15,7 +15,7 @@ msgstr ""
 
 #: src/pages/pricing.jsx:69
 msgid "14 days trial"
-msgstr "14 Tage Probe"
+msgstr "14 Tage testen"
 
 #: src/components/SignupForm.jsx:15
 msgid "<0/> Signing up…"
@@ -1035,8 +1035,8 @@ msgstr "das Investoren-Portfolio"
 
 #: src/pages/pricing.jsx:71
 msgid "€79/month"
-msgstr "€79/Monat"
+msgstr "79 €/Monat"
 
 #: src/pages/pricing.jsx:72
 msgid "€99/month if billed monthly"
-msgstr "jährlich, €99/Monat monatlich"
+msgstr "99 € bei monatl. Abrechnung"
