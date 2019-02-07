@@ -88,11 +88,11 @@
     "babel-eslint": "9.0.0",
     "eslint": "4.19.1",
     "eslint-config-airbnb": "16.1.0",
-    "eslint-plugin-flowtype": "3.2.0",
-    "eslint-plugin-import": "2.14.0",
-    "eslint-plugin-jsx-a11y": "6.1.2",
-    "eslint-plugin-react": "7.11.1",
-    "flow-bin": "0.86.0"
+    "eslint-plugin-flowtype": "3.2.1",
+    "eslint-plugin-import": "2.16.0",
+    "eslint-plugin-jsx-a11y": "6.2.1",
+    "eslint-plugin-react": "7.12.4",
+    "flow-bin": "0.92.1"
   },
   "lingui": {
     "sourceLocale": "en",
