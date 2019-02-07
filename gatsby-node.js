@@ -6,7 +6,6 @@ const { languages, defaultLanguage } = require('./src/i18n-config');
 
 exports.onCreatePage = async ({ page, actions }) => {
   const { createPage, deletePage } = actions;
-  console.log(page.component);
 
   return new Promise((resolve) => {
     if (!page.component.endsWith('.mdx')) {
@@ -73,11 +72,12 @@ exports.createPages = ({ graphql, actions }) => {
         createPage({
           path: slug,
           component,
+          context: { id: node.id },
         });
         createPage({
           path: `/de${slug}`,
           component,
-          context: { notLocalized: true },
+          context: { id: node.id, notLocalized: true },
         });
       });
       resolve();
