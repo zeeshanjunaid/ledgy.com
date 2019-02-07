@@ -9,7 +9,7 @@ export const FAQ = ({ id, question, children }: {|
   question: string,
   children: React.Node
 |}) => {
-  const open = window.top.location.hash === `#${id}`;
+  const open = typeof window !== 'undefined' && window.top.location.hash === `#${id}`;
   return (
     <div className="card mb-0">
       <h6 className="card-title mt-0 bg-white" id={id}>
