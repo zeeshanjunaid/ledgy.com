@@ -6,17 +6,20 @@ const { languages, defaultLanguage } = require('./src/i18n-config');
 
 exports.onCreatePage = async ({ page, actions }) => {
   const { createPage, deletePage } = actions;
+  console.log(page.component);
 
   return new Promise((resolve) => {
-    deletePage(page);
-    languages.forEach((language) => {
-      const newPage = Object.assign({}, page, {
-        originalPath: page.path,
-        path: language === defaultLanguage ? page.path : `/${language}${page.path}`,
-        context: { lang: language },
+    if (!page.component.endsWith('.mdx')) {
+      deletePage(page);
+      languages.forEach((language) => {
+        const newPage = Object.assign({}, page, {
+          originalPath: page.path,
+          path: language === defaultLanguage ? page.path : `/${language}${page.path}`,
+          context: { lang: language },
+        });
+        createPage(newPage);
       });
-      createPage(newPage);
-    });
+    }
 
     resolve();
   });
@@ -25,7 +28,7 @@ exports.onCreatePage = async ({ page, actions }) => {
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
-  if (node.internal.type === 'MarkdownRemark') {
+  if (node.internal.type === 'Mdx') {
     const slug = createFilePath({ node, getNode, basePath: 'markdown' });
     createNodeField({
       node,
@@ -46,12 +49,13 @@ exports.createPages = ({ graphql, actions }) => {
   });
 
   const component = path.resolve('./src/layouts/markdown.jsx');
-  return new Promise((resolve) => {
+  return new Promise((resolve, reject) => {
     graphql(`
       {
-        allMarkdownRemark {
+        allMdx {
           edges {
             node {
+              id
               fields {
                 slug
               }
@@ -60,17 +64,20 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     `).then((result) => {
-      result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+      if (result.errors) {
+        console.error(result.errors); // eslint-disable-line no-console
+        reject(result.errors);
+      }
+      result.data.allMdx.edges.forEach(({ node }) => {
         const { slug } = node.fields;
         createPage({
           path: slug,
           component,
-          context: { slug },
         });
         createPage({
           path: `/de${slug}`,
           component,
-          context: { slug, notLocalized: true },
+          context: { notLocalized: true },
         });
       });
       resolve();
