@@ -45,7 +45,7 @@ export default ({ data, pageContext }: {
             <div className="text-right pt-4">
               <small>
                 <a
-                  href={`${githubUrl}edit/master/src/markdown/${fields.slug.slice(0, -1)}.md`}
+                  href={`${githubUrl}edit/master/src/markdown/${fields.slug.slice(0, -1)}.mdx`}
                   {...targetBlank}
                 >
                   <FontAwesomeIcon icon={faPen} className="fs-12 mr-2" />
