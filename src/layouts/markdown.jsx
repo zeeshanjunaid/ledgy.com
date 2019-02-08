@@ -5,15 +5,15 @@ import { graphql } from 'gatsby';
 import { Trans } from '@lingui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen } from '@fortawesome/free-solid-svg-icons';
+import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 
 import { Title, githubUrl, targetBlank } from '../layouts/utils';
 
-export default function Template({ data, pageContext }: {
+export default ({ data, pageContext }: {
   data: Object,
   pageContext: { notLocalized?: boolean }
-}) {
-  const { markdownRemark } = data;
-  const { frontmatter, html } = markdownRemark;
+}) => {
+  const { frontmatter, code, fields } = data.mdx;
   const { notLocalized } = pageContext;
   const { siteUrl } = data.site.siteMetadata;
   return (
@@ -41,14 +41,11 @@ export default function Template({ data, pageContext }: {
         <section className="section">
 
           <div className="container container-small">
-            <div
-              className="markdown"
-              dangerouslySetInnerHTML={{ __html: html }} // eslint-disable-line react/no-danger
-            />
+            <div className="markdown"><MDXRenderer>{code.body}</MDXRenderer></div>
             <div className="text-right pt-4">
               <small>
                 <a
-                  href={`${githubUrl}edit/master/src/markdown/${markdownRemark.fields.slug.slice(0, -1)}.md`}
+                  href={`${githubUrl}edit/master/src/markdown${fields.slug.slice(0, -1)}.mdx`}
                   {...targetBlank}
                 >
                   <FontAwesomeIcon icon={faPen} className="fs-12 mr-2" />
@@ -61,20 +58,19 @@ export default function Template({ data, pageContext }: {
       </main>
     </div>
   );
-}
+};
 
 export const pageQuery = graphql`
-  query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      fields {
-        slug
-      }
+  query($id: String) {
+    mdx(id: { eq: $id }) {
+      id
+      fields { slug }
       frontmatter {
         title
         description
         thumbnailUrl
       }
+      code { body }
     }
     site {
       siteMetadata {

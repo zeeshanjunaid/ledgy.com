@@ -32,6 +32,9 @@ p > a, li > a {
   text-transform: none;
   font-weight: 400;
 }
+.navbar .btn {
+  white-space: nowrap;
+}
 .stick .btn-outline-light {
   color: $color-primary;
   border-color: $color-primary;

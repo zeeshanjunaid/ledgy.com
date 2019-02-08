@@ -18,13 +18,15 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: 'gatsby-mdx',
       options: {
-        plugins: [
-          'gatsby-remark-copy-linked-files',
+        gatsbyRemarkPlugins: [
           {
             resolve: 'gatsby-remark-images',
-            options: { maxWidth: 760, linkImagesToOriginal: false },
+            options: {
+              maxWidth: 760,
+              linkImagesToOriginal: false,
+            },
           },
         ],
       },

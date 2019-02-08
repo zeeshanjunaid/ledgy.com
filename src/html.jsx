@@ -1,6 +1,8 @@
+// @flow
+
 import React from 'react';
 
-export default props => (
+export default (props: Object) => (
   <html lang="en" {...props.htmlAttributes}>
     <head>
       <meta charSet="utf-8" />
