@@ -27,7 +27,7 @@ Go to your company’s *Settings* page and under your company details activate t
 
 Go to the *Transactions* page and in the *Filter* field, type *Convertible loan*.
 
-Or open the *Round Modeling* on the *Cap Table* page, click *Add* and *Remaining Convertibles*. This also allows you to simulate the conversion of the loans (see next point).
+Or open the *Round Modeling* on the *Cap Table* page, click *Add* and *Outstanding Convertibles*. This also allows you to simulate the conversion of the loans (see [modelling section](https://ledgy.com/help/faq/#convert-convertibles-body)).
 
 </FAQ>
 
@@ -55,6 +55,22 @@ The app works best in Google Chrome and Mozilla Firefox. If you don’t use one 
 
 </FAQ>
 
+<FAQ id="trusts" question="Can I manage pooled investments / trusts in my cap table? Can Ledgy differentiate between legal and economic owner?">
+
+Yes, let’s say Bob holds shares through Alice. Then you can show your cap table both in legal and economic terms. Here’s how to set it up:
+
+1. Go on the *Stakeholder* page, add the economic stakeholder as a new one, edit the legal owner and add the economic owner as its beneficiary.
+2. Go to the *Transactions page, click *Add* and *Issue*. In the *To* field you can now select *Bob (via Alice)*.
+3. Go to the *Cap Table* page, and you’ll see a new button *Legal* at the top left. Clicking it will switch to *Economic* view, showing Bob instead of Alice. Notice the small *via Alice* badge next to his shares.
+
+You can also mix direct and indirect investments. For example Alice can hold some shares, as well as Bob through Alice.
+
+Bob will also see his indirect holdings in his Portfolio, with a *via Alice* badge.
+
+
+</FAQ>
+
+
 </Accordion>
 
 ### Collaboration
@@ -62,7 +78,7 @@ The app works best in Google Chrome and Mozilla Firefox. If you don’t use one 
 
 <FAQ id="invite-investor" question="How can I invite an investor to see my cap table?">
 
-Go on the *Shareholders* page, add you investor’s email address (at this point the shareholder does NOT receive any email). Then just click the invite button on the right-hand side. You can choose three access right levels.
+Go on the *Stakeholder* page, add you investor’s email address (at this point the shareholder does NOT receive any email). Then just click the invite button on the right-hand side. You can choose three access right levels.
 
 1. **Personal** The investor will be able to see her stake in her [portfolio](/features/investors/).
 2. **View-only** View everything, but not able to edit.
@@ -75,8 +91,8 @@ Go on the *Shareholders* page, add you investor’s email address (at this point
 There are three ways:
 
 1.  Grant view-only access to your shareholder (see above).
-2.  On the *Documents* page you can upload your cap table export and activate link sharing. When you hover with your mouse on the link-sharing toggle, you will see the possibility of copying the link, which you can then share. At any time you can deactivate link sharing which will make the link invalid.
-3.  Download the cap table as pdf on the *Cap Table* page and share it via email.
+2.  Download the cap table as pdf on the *Cap Table* page and share it via email.
+3.  On the *Documents* page you can upload your cap table export and activate link sharing. When you hover with your mouse on the link-sharing toggle, you will see the possibility of copying the link, which you can then share. At any time you can deactivate link sharing which will make the link invalid.
 
 </FAQ>
 
@@ -133,6 +149,16 @@ There are two ways of converting convertible loans:
 
 1.  Through the round modeling tool, which also [calculates for you](https://blog.ledgy.com/convertible-loans-7948385a5d66) how many shares should be issued for the convertible, taking the cap, discount and interest into account. Go to the *Cap Table* page and click on *Round Modeling*. Existing convertibles should already be displayed. If not, add them by clicking on *Add* and then *Remaining Convertibles.*
 2.  Find your convertible loan on the *Transactions* page. Then click on the menu (dots) in the transaction itself and select *Convert*. You need to calculate the number of shares yourself.
+
+</FAQ>
+
+<FAQ id="SAFE-convertibles" question="Do you also support SAFE convertibles?">
+
+Yes. The conversion can be a bit tricky, because if an employee pool is created during the round, it is taken into account for the conversion of the SAFE. Ledgy does the math for you, so you're on the safe side ;-)
+
+1. Add your SAFE as a convertible loan on the *Transactions* page.
+2. Add it to the [round modeling](https://ledgy.com/help/faq/#convert-convertibles-body).
+3. Click on *Actions* on the top right and then on *Settings*. Make sure *Include convertibles in share price* and *Include pools in share price* are activated.
 
 </FAQ>
 
