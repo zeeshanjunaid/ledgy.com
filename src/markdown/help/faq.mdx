@@ -7,17 +7,8 @@ thumbnailUrl: ""
 
 import { Accordion, FAQ } from '../../components/FAQ';
 
-
-### App
-
+### Collaboration
 <Accordion>
-
-<FAQ id="getting-started" question="How do I get started?">
-
-Read our [Getting Started](/help/getting-started/) guide.
-
-</FAQ>
-
 
 <FAQ id="invite-investor" question="How can I invite an investor to see my cap table?">
 
@@ -29,80 +20,15 @@ Go on the *Shareholders* page, add you investor’s email address (at this point
 
 </FAQ>
 
+<FAQ id="share-cap-table" question="How can I share my cap table?">
 
-<FAQ id="share-numbers" question="How can I enable share numbers?">
+There are three ways:
 
-Go to your company’s *Settings* page and under your company details activate the *Share Numbers* toggle. Nice side-effect: This automatically adds consistent share numbers to your current transactions. It always takes the lowest available range of numbers for the next transaction.
-
-</FAQ>
-
-
-<FAQ id="stack-rounds" question="Can I stack several rounds on top of each other in the round modeling tool?">
-
-Yes, that’s possible thanks to the Draft mode! Here’s how: Let’s say you would like to see how your cap table will look like after your upcoming series A and B.
-
-1.  Go to the *Cap table* page, click on *Round modeling* at the upper-right corner and simulate your series A. Then click on apply. The new transactions will be created as a draft. You can have a look at them on the *Transactions* page.
-2.  Now your cap table status is post series A. Repeat the process above for your series B in the *Round modeling*.
-
-That’s it! To remove these series A and B transactions from your draft, go to the *Transactions* page and click on the *Reset all* button. But make sure there were no other remaining changes to your transactions before resetting.
+1.  Grant view-only access to your shareholder (see above).
+2.  On the *Documents* page you can upload your cap table export and activate link sharing. When you hover with your mouse on the link-sharing toggle, you will see the possibility of copying the link, which you can then share. At any time you can deactivate link sharing which will make the link invalid.
+3.  Download the cap table as pdf on the *Cap Table* page and share it via email.
 
 </FAQ>
-
-
-<FAQ id="convertible-loans" question="Where can I see my convertible loans?">
-
-Go to the *Transactions* page and in the *Filter* field, type *Convertible loan*.
-
-Or open the *Round Modeling* on the *Cap Table* page, click *Add* and *Remaining Convertibles*. This also allows you to simulate the conversion of the loans (see next point).
-
-</FAQ>
-
-
-<FAQ id="convert-convertibles" question="How do I convert my convertible loans?">
-
-There are two ways of converting convertible loans:
-
-1.  Through the round modeling tool, which also [calculates for you](https://blog.ledgy.com/convertible-loans-7948385a5d66) how many shares should be issued for the convertible, taking the cap, discount and interest into account. Go to the *Cap Table* page and click on *Round Modeling*. Existing convertibles should already be displayed. If not, add them by clicking on *Add* and then *Remaining Convertibles.*
-2.  Find your convertible loan on the *Transactions* page. Then click on the menu (dots) in the transaction itself and select *Convert*. You need to calculate the number of shares yourself.
-
-</FAQ>
-
-
-<FAQ id="browser" question="In which browser does the app work best?">
-
-The app works best in Google Chrome and Mozilla Firefox. If you don’t use one of these browsers and notice a weird behavior, please let us know.
-
-</FAQ>
-
-
-<FAQ id="shareholder-groups" question="How can I create shareholder groups?">
-
-Go to the *Stakeholders* page, click the three dots next to one, click *Edit* and type the group in the respective field. By default, the groups *Founders*, *Employees* and *Investors* already exist. To add a new group, simply start typing a name in the field and click on *Create new group*.
-
-</FAQ>
-
-<FAQ id="cap-table-changes" question="How can I see who made which changes to my cap table?">
-
-Ledgy lets you work with multiple admins on the cap table. You can see a change history in the change log on the *Settings* page.
-
-</FAQ>
-
-
-<FAQ id="cap-table-csv" question="How do I best open my cap table in CSV format?">
-
-Read our [quick guide](https://blog.ledgy.com/csv-export-96215c180194) to smoothly import CSV in Excel or Google sheets with special characters and separation formatting.
-
-</FAQ>
-
-
-<FAQ id="roi" question="How to see the return on investment (ROI) of a shareholder? Is it possible to model exit scenarios?">
-
-Yes, the exit scenario modeling even takes liquidation preferences with a multiple, whether it’s participating with or without cap and interest into account.
-
-On the *Cap Table* page, click on *Scenarios* at the top right and then on *Exit*. Enter an exit price at the top, then you will see your cap table with return and multiple for each stakeholder, by groups or by classes. It also helps you understand what happens with a breakpoint plot. Click on a different point on the plot, to see the exit scenario at that valuation.
-
-</FAQ>
-
 
 <FAQ id="investor-login" question="Can investors also log in to see their stake?">
 
@@ -113,14 +39,54 @@ Every user on Ledgy has a portfolio where she can see her investments.
 
 </FAQ>
 
+<FAQ id="cap-table-changes" question="How can I see who made which changes to my cap table?">
 
-<FAQ id="share-cap-table" question="How can I share my cap table?">
+Ledgy lets you work with multiple admins on the cap table. You can see a change history in the change log on the *Settings* page.
 
-There are three ways:
+</FAQ>
 
-1.  Grant view-only access to your shareholder (see above).
-2.  On the *Documents* page you can upload your cap table export and activate link sharing. When you hover with your mouse on the link-sharing toggle, you will see the possibility of copying the link, which you can then share. At any time you can deactivate link sharing which will make the link invalid.
-3.  Download the cap table as pdf on the *Cap Table* page and share it via email.
+</Accordion>
+
+
+### Scenario Modeling
+<Accordion>
+
+<FAQ id="roi" question="How to see the return on investment (ROI) of a shareholder? Is it possible to model exit scenarios?">
+
+Yes, the exit scenario modeling even takes liquidation preferences with a multiple, whether it’s participating with or without cap and interest into account.
+
+On the *Cap Table* page, click on *Scenarios* at the top right and then on *Exit*. Enter an exit price at the top, then you will see your cap table with return and multiple for each stakeholder, by groups or by classes. It also helps you understand what happens with a breakpoint plot. Click on a different point on the plot, to see the exit scenario at that valuation.
+
+</FAQ>
+
+<FAQ id="stack-rounds" question="Can I stack several rounds on top of each other in the round modeling tool?">
+
+Yes, that’s possible thanks to the Draft mode. Here’s how: Let’s say you would like to see how your cap table will look like after your upcoming series A and B.
+
+1.  Go to the *Cap table* page, click on *Round modeling* at the upper-right corner and simulate your series A. Then click on apply. The new transactions will be created as a draft. You can have a look at them on the *Transactions* page.
+2.  Now your cap table status is post series A. Repeat the process above for your series B in the *Round modeling*.
+
+That’s it! To remove these series A and B transactions from your draft, go to the *Transactions* page and click on the *Reset* button. But make sure there were no other remaining changes to your transactions before resetting.
+
+</FAQ>
+
+<FAQ id="convert-convertibles" question="How do I convert my convertible loans?">
+
+There are two ways of converting convertible loans:
+
+1.  Through the round modeling tool, which also [calculates for you](https://blog.ledgy.com/convertible-loans-7948385a5d66) how many shares should be issued for the convertible, taking the cap, discount and interest into account. Go to the *Cap Table* page and click on *Round Modeling*. Existing convertibles should already be displayed. If not, add them by clicking on *Add* and then *Remaining Convertibles.*
+2.  Find your convertible loan on the *Transactions* page. Then click on the menu (dots) in the transaction itself and select *Convert*. You need to calculate the number of shares yourself.
+
+</FAQ>
+
+</Accordion>
+
+
+### Documents and Reports
+
+<FAQ id="cap-table-csv" question="How do I best open my cap table in CSV format?">
+
+Read our [quick guide](https://blog.ledgy.com/csv-export-96215c180194) to smoothly import CSV in Excel or Google sheets with special characters and separation formatting.
 
 </FAQ>
 
@@ -138,6 +104,38 @@ Are you looking for a more technical description of the blockchain notary? [Have
 </FAQ>
 
 
+### General
+
+<Accordion>
+
+<FAQ id="getting-started" question="How do I get started?">
+
+Read our [Getting Started](/help/getting-started/) guide.
+
+</FAQ>
+
+<FAQ id="share-numbers" question="How can I enable share numbers?">
+
+Go to your company’s *Settings* page and under your company details activate the *Share Numbers* toggle. Nice side-effect: This automatically adds consistent share numbers to your current transactions. It always takes the lowest available range of numbers for the next transaction.
+
+</FAQ>
+
+<FAQ id="convertible-loans" question="Where can I see my convertible loans?">
+
+Go to the *Transactions* page and in the *Filter* field, type *Convertible loan*.
+
+Or open the *Round Modeling* on the *Cap Table* page, click *Add* and *Remaining Convertibles*. This also allows you to simulate the conversion of the loans (see next point).
+
+</FAQ>
+
+
+<FAQ id="shareholder-groups" question="How can I create shareholder groups?">
+
+Go to the *Stakeholders* page, click the three dots next to one, click *Edit* and type the group in the respective field. By default, the groups *Founders*, *Employees* and *Investors* already exist. To add a new group, simply start typing a name in the field and click on *Create new group*.
+
+</FAQ>
+
+
 <FAQ id="custom-vesting" question="How do I define a custom vesting?">
 
 Let’s take an example: You have 80 options that vest over 48 months with 12 months cliff. After the first 12 months in which 20 options vest, each month 1 option vests for the remaining 36 months. A headache? Not with Ledgy. Choose custom vesting and define 3 periods:
@@ -147,7 +145,15 @@ Let’s take an example: You have 80 options that vest over 48 months with 12 mo
 3.  Percentage: 30, Duration: 0, Vest every: 0 month
 
 </FAQ>
+
+<FAQ id="browser" question="In which browser does the app work best?">
+
+The app works best in Google Chrome and Mozilla Firefox. If you don’t use one of these browsers and notice a weird behavior, please let us know.
+
+</FAQ>
+
 </Accordion>
+
 
 ### Legal
 
@@ -163,13 +169,6 @@ Source: [Index Ventures](https://www.indexventures.com/optionplan#employee_count
 </FAQ>
 
 
-<FAQ id="share-numbers-needed" question="Do I really need share numbers?">
-
-That’s a tricky legal question. Some lawyers say yes, some no. In any case, they are cumbersome to manage, but Ledgy helps you as much as possible with that. Our opinionated answer [here](https://blog.ledgy.com/are-numbered-shares-necessary-15c27f3457a8).
-
-</FAQ>
-
-
 <FAQ id="beneficiary" question="Why do I need to specify a beneficiary for institutional investors who hold more than 25% of the company in Switzerland (Meldepflicht)?">
 
 In 2015, a law to avoid money laundering had been created. It states that if a shareholder (person or institution) holds 25% or more of the company, he must disclose his name and address to the company.
@@ -178,6 +177,12 @@ Source: [WalderWyss](https://www.walderwyss.com/publications/2065.pdf)
 
 </FAQ>
 
+
+<FAQ id="share-numbers-needed" question="Do I really need share numbers?">
+
+That’s a tricky legal question. Some lawyers say yes, some no. In any case, they are cumbersome to manage, but Ledgy helps you as much as possible with that. Our opinionated answer [here](https://blog.ledgy.com/are-numbered-shares-necessary-15c27f3457a8).
+
+</FAQ>
 
 <FAQ id="safety" question="Where is my data stored and is it safe?">
 
