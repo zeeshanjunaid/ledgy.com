@@ -39,6 +39,16 @@ p > a, li > a {
   color: $color-primary;
   border-color: $color-primary;
 }
+.stick .btn-light {
+  color: $white;
+  background-color: $color-primary;
+  border-color: $color-primary;
+  &:hover {
+    background-color: #005fd2;
+    border-color: #005fd2;
+    box-shadow: 0 1px 10px rgba(80, 161, 255, 0.4);
+  }
+}
 h1, h2, h3, h4, h5, h6 {
   hyphens: auto;
 }
