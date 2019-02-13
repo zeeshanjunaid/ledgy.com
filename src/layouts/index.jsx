@@ -36,7 +36,7 @@ const Logo = (props: { prefix: string, inverse: boolean }) => (
 
 const Nav = (props: LayoutProps) => (
   <nav className="navbar navbar-expand-lg navbar-light navbar-stick-dark" data-navbar="sticky">
-    <div className="container">
+    <div className="container flex-nowrap">
 
       <div className="navbar-left">
         <button className="navbar-toggler">&#9776;</button>
@@ -55,8 +55,10 @@ const Nav = (props: LayoutProps) => (
 
       </section>
 
-      <a className="btn btn-round btn-outline-light ml-lg-4 mr-2" href={appUrl}><Trans>Log In</Trans></a>
-      <a className="btn btn-round btn-light ml-lg-0 mr-2" href="#try"><Trans>Sign Up</Trans></a>
+      <div className="navbar-right">
+        <a className="btn btn-round btn-outline-light ml-lg-4 mr-2" href={appUrl}><Trans>Log In</Trans></a>
+        <a className="btn btn-round btn-light ml-lg-0 mr-2" href="#try"><Trans>Sign Up</Trans></a>
+      </div>
 
     </div>
   </nav>
