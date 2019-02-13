@@ -55,7 +55,8 @@ const Nav = (props: LayoutProps) => (
 
       </section>
 
-      <a className="btn btn-round btn-outline-light ml-lg-4 mr-2" href={appUrl}><Trans>Sign In</Trans></a>
+      <a className="btn btn-round btn-outline-light ml-lg-4 mr-2" href={appUrl}><Trans>Log In</Trans></a>
+      <a className="btn btn-round btn-light ml-lg-0 mr-2" href="#try"><Trans>Sign Up</Trans></a>
 
     </div>
   </nav>
