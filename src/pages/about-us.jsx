@@ -45,7 +45,7 @@ type FounderProps = {
 
 const Founder =
 ({ name, func, description, img, twitterlink, linkedinlink, mail }: FounderProps) => (
-  <div className="col-12 col-md-6 col-lg-4 team-1">
+  <div className="col-12 col-md-6 team-1">
     {img && <Img {...img} alt={name} />}
     <h6>{name}</h6>
     <small>{func}</small>
@@ -103,7 +103,7 @@ const IndexPage = (props: Props) => {
             </header>
 
 
-            <div className="row gap-y">
+            <div className="row gap-y2">
               <Founder
                 name="Timo Horstschaefer"
                 func="Co-Founder & CTO"
@@ -130,6 +130,15 @@ const IndexPage = (props: Props) => {
                 linkedinlink="https://www.linkedin.com/in/ben-elias-brandt-680a95110/"
                 mail="ben@ledgy.com"
                 img={data.ben}
+              />
+              <Founder
+                name="Oriol Vidal-Cortes"
+                func="Developer & First employee"
+                description={i18n.t`Oriol has a background in biotechnology and is passionate about any code-related matter, especially front-end development`}
+                twitterlink="https://twitter.com/ovcOS89"
+                linkedinlink="https://www.linkedin.com/in/oriol-vidal-cortes-37584080/"
+                mail="oriol@ledgy.com"
+                img={data.uri}
               />
             </div>
 
@@ -247,6 +256,11 @@ export const pageQuery = graphql`
       }
     }
     timo: imageSharp(fluid: { originalName: {regex: "/timo.jpg/"} }) {
+      fixed(width: 245, height: 245) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+    uri: imageSharp(fluid: { originalName: {regex: "/uri.jpg/"} }) {
       fixed(width: 245, height: 245) {
         ...GatsbyImageSharpFixed
       }
