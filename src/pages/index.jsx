@@ -12,12 +12,12 @@ import { demoUrl, targetBlank } from '../layouts/utils';
 const Header = ({ i18n, data }: Props) => (
   <header className="header bg-ledgy">
     <div className="container">
-      <div className="text-white text-center mb-7">
+      <div className="text-white text-center mb-1 mb-sm-3 mb-lg-7">
         <h1><Trans>The missing accounting software for your equity and ESOPs</Trans></h1>
       </div>
-      <div className="row gap-y mt-5 pb-7">
+      <div className="row gap-y mt-5 pb-4 pb-md-7">
 
-        <div className="col-lg-6 ml-auto">
+        <div className="col-lg-6 ml-auto mb-4 mb-lg-0">
           <div className="text-white">
             <p>
               <Trans>
