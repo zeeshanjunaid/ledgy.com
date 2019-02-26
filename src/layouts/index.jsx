@@ -101,19 +101,7 @@ const Footer = (props: LayoutProps) => (
       <div className="container">
         <div className="row gap-y">
 
-          <div className="col-md-6 col-xl-3">
-            <Logo {...props} inverse={false} />
-
-            <div className="social social-bordered mt-3">
-              <a className="social-twitter" href="https://twitter.com/Ledgy"><FontAwesomeIcon icon={faTwitter} title="Twitter" /></a>
-              <a className="social-linkedin" href="https://www.linkedin.com/company/ledgy"><FontAwesomeIcon icon={faLinkedin} title="LinkedIn" /></a>
-              <a className="social-facebook" href="https://www.facebook.com/LedgyCom/"><FontAwesomeIcon icon={faFacebook} title="Facebook" /></a>
-              <a className="social-angellist" href="https://angel.co/ledgy"><FontAwesomeIcon icon={faAngellist} title="AngelList" /></a>
-              <a className="social-xing" href="https://www.xing.com/companies/ledgy"><FontAwesomeIcon icon={faXing} title="Xing" /></a>
-            </div>
-          </div>
-
-          <div className="col-6 col-md-3 col-xl-2">
+          <div className="col-6 col-md-3 pl-6 order-md-2">
             <h6 className="mb-4 mt-1"><strong><Trans>Company</Trans></strong></h6>
             <div className="nav flex-column">
               <Link className="nav-link" href to={`${props.prefix}/about-us/`}><Trans>About us</Trans></Link>
@@ -125,7 +113,7 @@ const Footer = (props: LayoutProps) => (
             </div>
           </div>
 
-          <div className="col-6 col-md-3 col-xl-2">
+          <div className="col-6 col-md-3 pl-6 order-md-3">
             <h6 className="mb-4 mt-1"><strong><Trans>Product</Trans></strong></h6>
             <div className="nav flex-column">
               <Link className="nav-link" href to={`${props.prefix}/features/`}><Trans>Features</Trans></Link>
@@ -138,23 +126,28 @@ const Footer = (props: LayoutProps) => (
             </div>
           </div>
 
-          <div className="col-6 col-md-3 col-xl-2">
+          <div className="col-6 col-md-3 pl-6 order-md-1">
+            <Logo {...props} inverse={false} />
+
+            <div className="row social social-bordered mt-3 mx-0">
+              <a className="col-3 col-lg-2 px-0 social-twitter" href="https://twitter.com/Ledgy"><FontAwesomeIcon icon={faTwitter} title="Twitter" /></a>
+              <a className="col-3 col-lg-2 px-0 social-linkedin" href="https://www.linkedin.com/company/ledgy"><FontAwesomeIcon icon={faLinkedin} title="LinkedIn" /></a>
+              <a className="col-3 col-lg-2 px-0 social-facebook" href="https://www.facebook.com/LedgyCom/"><FontAwesomeIcon icon={faFacebook} title="Facebook" /></a>
+              <a className="col-3 col-lg-2 px-0 social-angellist" href="https://angel.co/ledgy"><FontAwesomeIcon icon={faAngellist} title="AngelList" /></a>
+              <a className="col-3 col-lg-2 px-0 social-xing" href="https://www.xing.com/companies/ledgy"><FontAwesomeIcon icon={faXing} title="Xing" /></a>
+            </div>
+            <div className="mt-4">
+              {props.lang === 'de' ?
+                <Link href to={props.location.pathname.substr(3)} className="btn btn-round btn-outline-primary">English</Link> :
+                <Link href to={`/de${props.location.pathname}`} className="btn btn-round btn-outline-primary">Deutsch</Link>}
+            </div>
+          </div>
+
+          <div className="col-6 col-md-3 pl-6 order-md-4">
             <h6 className="mb-4 mt-1"><strong><Trans>Help</Trans></strong></h6>
             <div className="nav flex-column">
               <Link className="nav-link" href to={`${props.prefix}/help/getting-started/`}><Trans>Getting Started</Trans></Link>
               <Link className="nav-link" href to={`${props.prefix}/help/faq/`}><Trans>FAQ</Trans></Link>
-            </div>
-            <h6 className="mb-4 mt-1"><strong><Trans>Blog</Trans></strong></h6>
-            <div className="nav flex-column">
-              <Link className="nav-link" href to={`${props.prefix}/blog/pre-and-post-money-option-pools/`}>Option Pools</Link>
-            </div>
-          </div>
-
-          <div className="col-6 col-md-6 col-xl-2 px-1">
-            <div>
-              {props.lang === 'de' ?
-                <Link href to={props.location.pathname.substr(3)} className="btn btn-round btn-outline-primary">English</Link> :
-                <Link href to={`/de${props.location.pathname}`} className="btn btn-round btn-outline-primary">Deutsch</Link>}
             </div>
           </div>
 
