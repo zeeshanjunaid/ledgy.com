@@ -6,8 +6,20 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding-top: $padding + $navbar-min-height;
-  padding-bottom: $padding;
+  padding-top: $padding/2 + $navbar-min-height;
+  padding-bottom: $padding/2;
+  text-align: center;
+
+  @include media-breakpoint-up(md) {
+    padding-top: $padding/1.5 + $navbar-min-height;
+    padding-bottom: $padding/1.5;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-top: $padding + $navbar-min-height;
+    padding-bottom: $padding;
+    text-align: left;
+  }
   //background-color: #f1f3f6;
 
   > .container,
