@@ -108,4 +108,10 @@ h1 {
   li {
     margin-bottom: 1rem;
   }
+  blockquote {
+    border-left: map-get($pale-colors, 'info') 0.2em solid;
+    padding-left: map-get($spacers, 3);
+    margin-left: map-get($spacers, 2);
+
+  }
 }
