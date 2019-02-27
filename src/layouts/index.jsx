@@ -98,7 +98,7 @@ const Footer = (props: LayoutProps) => (
         </div>
       </section>}
     <footer className="footer py-7">
-      <div className="container">
+      <div className="container pb-2 pb-md-0">
         <div className="row gap-y">
 
           <div className="col-6 col-md-3 pl-6 order-md-2">
@@ -148,6 +148,10 @@ const Footer = (props: LayoutProps) => (
             <div className="nav flex-column">
               <Link className="nav-link" href to={`${props.prefix}/help/getting-started/`}><Trans>Getting Started</Trans></Link>
               <Link className="nav-link" href to={`${props.prefix}/help/faq/`}><Trans>FAQ</Trans></Link>
+            </div>
+            <h6 className="mb-4 mt-1"><strong><Trans>Blog</Trans></strong></h6>	
+            <div className="nav flex-column">
+              <Link className="nav-link" href to={`${props.prefix}/blog/pre-and-post-money-option-pools/`}>Option Pools</Link>	
             </div>
           </div>
 
