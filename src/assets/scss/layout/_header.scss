@@ -10,12 +10,12 @@
   padding-bottom: $padding/2;
   text-align: center;
 
-  @media screen and (min-width: $breakpoint-md) {
+  @include media-breakpoint-up(md) {
     padding-top: $padding/1.5 + $navbar-min-height;
     padding-bottom: $padding/1.5;
   }
 
-  @media screen and (min-width: $breakpoint-lg) {
+  @include media-breakpoint-up(lg) {
     padding-top: $padding + $navbar-min-height;
     padding-bottom: $padding;
     text-align: left;
