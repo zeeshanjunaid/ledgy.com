@@ -146,7 +146,7 @@ const Footer = (props: LayoutProps) => (
             </div>
             <h6 className="mb-4 mt-1"><strong><Trans>Blog</Trans></strong></h6>
             <div className="nav flex-column">
-              <Link className="nav-link" href to={`${props.prefix}/blog/pre-and-post-money-option-pools/`}>Option pools</Link>
+              <Link className="nav-link" href to={`${props.prefix}/blog/pre-and-post-money-option-pools/`}>Option Pools</Link>
             </div>
           </div>
 
