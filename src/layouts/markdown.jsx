@@ -6,8 +6,12 @@ import { Trans } from '@lingui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen } from '@fortawesome/free-solid-svg-icons';
 import MDXRenderer from 'gatsby-mdx/mdx-renderer';
+import { withMDXScope } from 'gatsby-mdx/context';
+import Img from 'gatsby-image';
+
 
 import { Title, githubUrl, targetBlank } from '../layouts/utils';
+
 
 export default ({ data, pageContext }: {
   data: Object,
@@ -16,6 +20,30 @@ export default ({ data, pageContext }: {
   const { frontmatter, code, fields } = data.mdx;
   const { notLocalized } = pageContext;
   const { siteUrl } = data.site.siteMetadata;
+
+  const img = ({ src, align, ...props }: { src: string, align: string }) => {
+    const image =
+      (frontmatter.images.find(i => i.childImageSharp.fluid.originalName === src) || {})
+        .childImageSharp;
+    if (!image) return <p>Image not found: {src}</p>;
+    return (
+      <Img
+        {...(frontmatter.images.find(i => i.childImageSharp.fluid.originalName === src) || {})
+          .childImageSharp || []}
+        {...props}
+        className={
+        ((align === 'left' || align === 'right') && `float-md-${align} m-3`) ||
+        (align === 'center' && 'mx-auto my-3') ||
+        ''
+      }
+        style={align ? { width: '400px' } : {}}
+      />
+    );
+  };
+
+  const Renderer = withMDXScope(({ scope, ...props }) =>
+    <MDXRenderer scope={{ ...scope, Img: img }} {...props} />);
+
   return (
     <div>
       <Title
@@ -41,7 +69,9 @@ export default ({ data, pageContext }: {
         <section className="section">
 
           <div className="container container-small">
-            <div className="markdown"><MDXRenderer>{code.body}</MDXRenderer></div>
+            <div className="markdown">
+              <Renderer>{code.body}</Renderer>
+            </div>
             <div className="text-right pt-4">
               <small>
                 <a
@@ -69,6 +99,25 @@ export const pageQuery = graphql`
         title
         description
         thumbnailUrl
+        images {
+          publicURL
+          childImageSharp {
+            fluid {
+              base64
+              tracedSVG
+              aspectRatio
+              src
+              srcSet
+              srcWebp
+              srcSetWebp
+              sizes
+              originalImg
+              originalName
+              presentationWidth
+              presentationHeight
+            }
+          }
+        }
       }
       code { body }
     }
