@@ -6,6 +6,7 @@ import { Trans } from '@lingui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen } from '@fortawesome/free-solid-svg-icons';
 import MDXRenderer from 'gatsby-mdx/mdx-renderer';
+import { withMDXScope } from 'gatsby-mdx/context';
 import Img from 'gatsby-image';
 
 
@@ -20,18 +21,22 @@ export default ({ data, pageContext }: {
   const { notLocalized } = pageContext;
   const { siteUrl } = data.site.siteMetadata;
 
-  const img = ({ src, ...props }: { src: string }) => (
+  const img = ({ src, align, ...props }: { src: string, align: string }) => (
     <Img
       {...(frontmatter.images.find(i => i.childImageSharp.fluid.originalName === src) || {})
           .childImageSharp}
       {...props}
+      className={
+        ((align === 'left' || align === 'right') && `float-md-${align} m-3`) ||
+        (align === 'center' && 'mx-auto my-3') ||
+        ''
+      }
+      style={align ? { width: '400px' } : {}}
     />
   );
-  const p = (props: Object) => (
-    (props.children.props || {}).name === 'img' ?
-      <Fragment {...props} /> :
-      <p {...props} />
-  );
+
+  const Renderer = withMDXScope(({ scope, ...props }) =>
+    <MDXRenderer scope={{ ...scope, Img: img }} {...props} />);
 
   return (
     <div>
@@ -59,7 +64,7 @@ export default ({ data, pageContext }: {
 
           <div className="container container-small">
             <div className="markdown">
-              <MDXRenderer components={{ img, p }}>{code.body}</MDXRenderer>
+              <Renderer>{code.body}</Renderer>
             </div>
             <div className="text-right pt-4">
               <small>
