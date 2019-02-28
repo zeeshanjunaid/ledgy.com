@@ -1,6 +1,6 @@
 // @flow
 
-import React, { Fragment } from 'react';
+import React from 'react';
 import { graphql } from 'gatsby';
 import { Trans } from '@lingui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -21,19 +21,25 @@ export default ({ data, pageContext }: {
   const { notLocalized } = pageContext;
   const { siteUrl } = data.site.siteMetadata;
 
-  const img = ({ src, align, ...props }: { src: string, align: string }) => (
-    <Img
-      {...(frontmatter.images.find(i => i.childImageSharp.fluid.originalName === src) || {})
-          .childImageSharp}
-      {...props}
-      className={
+  const img = ({ src, align, ...props }: { src: string, align: string }) => {
+    const image =
+      (frontmatter.images.find(i => i.childImageSharp.fluid.originalName === src) || {})
+        .childImageSharp;
+    if (!image) return <p>Image not found: {src}</p>;
+    return (
+      <Img
+        {...(frontmatter.images.find(i => i.childImageSharp.fluid.originalName === src) || {})
+          .childImageSharp || []}
+        {...props}
+        className={
         ((align === 'left' || align === 'right') && `float-md-${align} m-3`) ||
         (align === 'center' && 'mx-auto my-3') ||
         ''
       }
-      style={align ? { width: '400px' } : {}}
-    />
-  );
+        style={align ? { width: '400px' } : {}}
+      />
+    );
+  };
 
   const Renderer = withMDXScope(({ scope, ...props }) =>
     <MDXRenderer scope={{ ...scope, Img: img }} {...props} />);
