@@ -1,6 +1,6 @@
 // @flow
 
-import React from 'react';
+import React, { Fragment } from 'react';
 import { graphql } from 'gatsby';
 import { Trans } from '@lingui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -29,7 +29,7 @@ export default ({ data, pageContext }: {
   );
   const p = (props: Object) => (
     (props.children.props || {}).name === 'img' ?
-      <div {...props} /> :
+      <Fragment {...props} /> :
       <p {...props} />
   );
 
