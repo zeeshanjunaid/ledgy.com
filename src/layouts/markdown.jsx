@@ -20,19 +20,19 @@ export default ({ data, pageContext }: {
   const { notLocalized } = pageContext;
   const { siteUrl } = data.site.siteMetadata;
 
-  const imgs = {};
-  if (frontmatter.images) {
-    frontmatter.images.forEach((image, i) => {
-      const { childImageSharp } = image;
-      imgs[`Image${i + 1}`] = ({ width, align }: { width: ?string, align: ?string}) => (
-        <Img
-          style={{ width: `${width}px` }}
-          className={`my-4 mx-auto ${align ? `float-md-${align}` : ''}`}
-          {...childImageSharp}
-        />
-      );
-    });
-  }
+  const img = ({ src, ...props }: { src: string }) => (
+    <Img
+      {...(frontmatter.images.find(i => i.childImageSharp.fluid.originalName === src) || {})
+          .childImageSharp}
+      {...props}
+    />
+  );
+  const p = (props: Object) => (
+    (props.children.props || {}).name === 'img' ?
+      <div {...props} /> :
+      <p {...props} />
+  );
+
   return (
     <div>
       <Title
@@ -58,7 +58,9 @@ export default ({ data, pageContext }: {
         <section className="section">
 
           <div className="container container-small">
-            <div className="markdown"><MDXRenderer scope={{ ...imgs }}>{code.body}</MDXRenderer></div>
+            <div className="markdown">
+              <MDXRenderer components={{ img, p }}>{code.body}</MDXRenderer>
+            </div>
             <div className="text-right pt-4">
               <small>
                 <a

@@ -44,7 +44,6 @@
     "gatsby-plugin-sitemap": "2.0.6",
     "gatsby-plugin-sri": "1.0.5",
     "gatsby-remark-copy-linked-files": "2.0.9",
-    "gatsby-remark-images": "3.0.5",
     "gatsby-source-filesystem": "2.0.23",
     "gatsby-transformer-remark": "2.3.0",
     "gatsby-transformer-sharp": "2.1.14",
