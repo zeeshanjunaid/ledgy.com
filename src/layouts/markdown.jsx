@@ -24,8 +24,13 @@ export default ({ data, pageContext }: {
   if (frontmatter.images) {
     frontmatter.images.forEach((image, i) => {
       const { childImageSharp } = image;
-      imgs[`Image${i + 1}`] = ({ width, align }: { width: ?string, align: ?string}) =>
-        <Img style={{ width: `${width}px`, float: align }} {...childImageSharp} />;
+      imgs[`Image${i + 1}`] = ({ width, align }: { width: ?string, align: ?string}) => (
+        <Img
+          style={{ width: `${width}px` }}
+          className={`my-4 mx-auto ${align ? `float-md-${align}` : ''}`}
+          {...childImageSharp}
+        />
+      );
     });
   }
   return (
