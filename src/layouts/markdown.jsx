@@ -9,11 +9,12 @@ import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 import { withMDXScope } from 'gatsby-mdx/context';
 import Img from 'gatsby-image';
 
-
 import { Title, githubUrl, targetBlank } from '../layouts/utils';
 
-
-export default ({ data, pageContext }: {
+export default ({
+  data,
+  pageContext
+}: {
   data: Object,
   pageContext: { notLocalized?: boolean }
 }) => {
@@ -22,9 +23,8 @@ export default ({ data, pageContext }: {
   const { siteUrl } = data.site.siteMetadata;
 
   const img = ({ src, align, ...props }: { src: string, align: string }) => {
-    const image =
-      (frontmatter.images.find(i => i.childImageSharp.fluid.originalName === src) || {})
-        .childImageSharp;
+    const image = (frontmatter.images.find(i => i.childImageSharp.fluid.originalName === src) || {})
+      .childImageSharp;
     if (!image) return <p>Image not found: {src}</p>;
     return (
       <Img
@@ -32,17 +32,18 @@ export default ({ data, pageContext }: {
           .childImageSharp || []}
         {...props}
         className={
-        ((align === 'left' || align === 'right') && `float-md-${align} m-3`) ||
-        (align === 'center' && 'mx-auto my-3') ||
-        ''
-      }
+          ((align === 'left' || align === 'right') && `float-md-${align} m-3`) ||
+          (align === 'center' && 'mx-auto my-3') ||
+          ''
+        }
         style={align ? { width: '400px' } : {}}
       />
     );
   };
 
-  const Renderer = withMDXScope(({ scope, ...props }) =>
-    <MDXRenderer scope={{ ...scope, Img: img }} {...props} />);
+  const Renderer = withMDXScope(({ scope, ...props }) => (
+    <MDXRenderer scope={{ ...scope, Img: img }} {...props} />
+  ));
 
   return (
     <div>
@@ -56,18 +57,17 @@ export default ({ data, pageContext }: {
           <div className="row">
             <div className="col-12 col-lg-8 offset-lg-2">
               <h1>{frontmatter.title}</h1>
-              {notLocalized &&
+              {notLocalized && (
                 <div className="text-center">
                   <Trans>This page is only available in English.</Trans>
                 </div>
-              }
+              )}
             </div>
           </div>
         </div>
       </header>
       <main className="main-content">
         <section className="section">
-
           <div className="container container-small">
             <div className="markdown">
               <Renderer>{code.body}</Renderer>
@@ -94,7 +94,9 @@ export const pageQuery = graphql`
   query($id: String) {
     mdx(id: { eq: $id }) {
       id
-      fields { slug }
+      fields {
+        slug
+      }
       frontmatter {
         title
         description
@@ -119,7 +121,9 @@ export const pageQuery = graphql`
           }
         }
       }
-      code { body }
+      code {
+        body
+      }
     }
     site {
       siteMetadata {

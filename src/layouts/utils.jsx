@@ -13,23 +13,25 @@ export const githubUrl = 'https://github.com/morloy/ledgy.com/';
 
 export const targetBlank = { target: '_blank', rel: 'noopener noreferrer' };
 
-export const loadScript = (path: string): Promise<*> => new Promise((resolve, reject) => {
-  const script = document.createElement('script');
-  script.src = path;
-  script.async = true;
-  script.onload = resolve;
-  return (document.body && document.body.appendChild(script)) || reject();
-});
-
+export const loadScript = (path: string): Promise<*> =>
+  new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.src = path;
+    script.async = true;
+    script.onload = resolve;
+    return (document.body && document.body.appendChild(script)) || reject();
+  });
 
 export const Title = (props: {
   title: string,
   section?: string,
   description?: string,
-  thumbnailUrl?: string,
+  thumbnailUrl?: string
 }) => (
   <Helmet>
-    <title>{props.title} {props.section && `| ${props.section}`} | {name}</title>
+    <title>
+      {props.title} {props.section && `| ${props.section}`} | {name}
+    </title>
     {props.description && <meta name="description" content={props.description} />}
 
     <meta property="og:title" content={props.title} />
@@ -46,8 +48,6 @@ Title.defaultProps = { section: '', description: '', thumbnailUrl: '' };
 export const Li = ({ children }: { children: React.Node }) => (
   <li className="media">
     <FontAwesomeIcon icon={faCheck} className="text-success mr-1 mt-1" />
-    <div className="media-body ml-3">
-      {children}
-    </div>
+    <div className="media-body ml-3">{children}</div>
   </li>
 );

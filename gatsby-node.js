@@ -7,14 +7,14 @@ const { languages, defaultLanguage } = require('./src/i18n-config');
 exports.onCreatePage = async ({ page, actions }) => {
   const { createPage, deletePage } = actions;
 
-  return new Promise((resolve) => {
+  return new Promise(resolve => {
     if (!page.component.endsWith('.mdx')) {
       deletePage(page);
-      languages.forEach((language) => {
+      languages.forEach(language => {
         const newPage = Object.assign({}, page, {
           originalPath: page.path,
           path: language === defaultLanguage ? page.path : `/${language}${page.path}`,
-          context: { lang: language },
+          context: { lang: language }
         });
         createPage(newPage);
       });
@@ -24,7 +24,6 @@ exports.onCreatePage = async ({ page, actions }) => {
   });
 };
 
-
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
   if (node.internal.type === 'Mdx') {
@@ -32,16 +31,14 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       node,
       name: 'slug',
-      value: slug,
+      value: slug
     });
   }
 };
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions;
-  [
-    ['/jobs/', '/jobs/software-engineer/'],
-  ].forEach(([fromPath, toPath]) => {
+  [['/jobs/', '/jobs/software-engineer/']].forEach(([fromPath, toPath]) => {
     const redirectInBrowser = true;
     createRedirect({ fromPath, toPath, redirectInBrowser });
     createRedirect({ fromPath: `/de${fromPath}`, toPath: `/de${toPath}`, redirectInBrowser });
@@ -62,7 +59,7 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
       }
-    `).then((result) => {
+    `).then(result => {
       if (result.errors) {
         console.error(result.errors); // eslint-disable-line no-console
         reject(result.errors);
@@ -72,12 +69,12 @@ exports.createPages = ({ graphql, actions }) => {
         createPage({
           path: slug,
           component,
-          context: { id: node.id },
+          context: { id: node.id }
         });
         createPage({
           path: `/de${slug}`,
           component,
-          context: { id: node.id, notLocalized: true },
+          context: { id: node.id, notLocalized: true }
         });
       });
       resolve();
