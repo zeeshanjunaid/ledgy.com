@@ -61,37 +61,20 @@
   "keywords": [
     "ledgy"
   ],
-  "eslintConfig": {
-    "extends": [
-      "plugin:flowtype/recommended",
-      "airbnb"
-    ],
-    "plugins": [
-      "flowtype"
-    ],
-    "env": {
-      "browser": true
-    },
-    "rules": {
-      "object-curly-newline": [
-        "error",
-        {
-          "multiline": true
-        }
-      ]
-    }
-  },
   "devDependencies": {
     "@lingui/babel-preset-react": "2.7.4",
     "@lingui/cli": "2.7.4",
     "babel-eslint": "9.0.0",
     "eslint": "4.19.1",
     "eslint-config-airbnb": "16.1.0",
+    "eslint-config-prettier": "4.1.0",
     "eslint-plugin-flowtype": "3.4.2",
     "eslint-plugin-import": "2.16.0",
     "eslint-plugin-jsx-a11y": "6.2.1",
+    "eslint-plugin-prettier": "3.0.1",
     "eslint-plugin-react": "7.12.4",
-    "flow-bin": "0.93.0"
+    "flow-bin": "0.93.0",
+    "prettier": "1.16.4"
   },
   "lingui": {
     "sourceLocale": "en",

@@ -3,7 +3,17 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
 import { withI18n, Trans } from '@lingui/react';
-import { faDesktop, faShieldAlt, faDatabase, faUserSecret, faExchangeAlt, faUserPlus, faLock, faKey, faGlobeEurope } from '@fortawesome/free-solid-svg-icons';
+import {
+  faDesktop,
+  faShieldAlt,
+  faDatabase,
+  faUserSecret,
+  faExchangeAlt,
+  faUserPlus,
+  faLock,
+  faKey,
+  faGlobeEurope
+} from '@fortawesome/free-solid-svg-icons';
 
 import { PrivacyElement } from '../components/Privacy';
 import { Title, targetBlank } from '../layouts/utils';
@@ -18,7 +28,9 @@ const Header = ({ i18n }: Props) => (
     <div className="container text-center">
       <div className="row">
         <div className="col-12 col-lg-8 offset-lg-2">
-          <h1><Trans>Security</Trans></h1>
+          <h1>
+            <Trans>Security</Trans>
+          </h1>
         </div>
       </div>
     </div>
@@ -30,27 +42,30 @@ const IndexPage = ({ i18n, ...props }: Object) => (
     <Header i18n={i18n} {...props} />
 
     <main className="main-content">
-
       <div className="section">
         <div className="container">
-
           <header className="section-header text-left">
             <p>
               <Trans>
-                We understand how sensitive cap table information is for any business.
-                That’s why your privacy and your data’s security is crucial to us.
-                Here is what we do to protect your data.
+                We understand how sensitive cap table information is for any business. That’s why
+                your privacy and your data’s security is crucial to us. Here is what we do to
+                protect your data.
               </Trans>
             </p>
 
             <div className="row gap-y my-5">
-
               <PrivacyElement
                 icon={faKey}
                 title={i18n.t`Strong passwords`}
                 body={
                   <Trans>
-                    Users have to set a <a {...targetBlank} href="https://blogs.dropbox.com/tech/2012/04/zxcvbn-realistic-password-strength-estimation/">secure password</a>
+                    Users have to set a{' '}
+                    <a
+                      {...targetBlank}
+                      href="https://blogs.dropbox.com/tech/2012/04/zxcvbn-realistic-password-strength-estimation/"
+                    >
+                      secure password
+                    </a>
                   </Trans>
                 }
                 size="6"
@@ -61,7 +76,11 @@ const IndexPage = ({ i18n, ...props }: Object) => (
                 title={i18n.t`Password encryption`}
                 body={
                   <Trans>
-                    Stored encrypted with the battle-tested <a {...targetBlank} href="https://codahale.com/how-to-safely-store-a-password/">bcrypt algorithm</a> at 13 rounds
+                    Stored encrypted with the battle-tested{' '}
+                    <a {...targetBlank} href="https://codahale.com/how-to-safely-store-a-password/">
+                      bcrypt algorithm
+                    </a>{' '}
+                    at 13 rounds
                   </Trans>
                 }
                 size="6"
@@ -70,7 +89,18 @@ const IndexPage = ({ i18n, ...props }: Object) => (
               <PrivacyElement
                 icon={faShieldAlt}
                 title={i18n.t`Two-factor authentication`}
-                body={<Trans>For even better protection of accounts. And our implementation is <a {...targetBlank} href="https://blog.meteor.com/tutorial-two-factor-authentication-with-meteor-and-totp-21d4a2f9ee51">open source</a>!</Trans>}
+                body={
+                  <Trans>
+                    For even better protection of accounts. And our implementation is{' '}
+                    <a
+                      {...targetBlank}
+                      href="https://blog.meteor.com/tutorial-two-factor-authentication-with-meteor-and-totp-21d4a2f9ee51"
+                    >
+                      open source
+                    </a>
+                    !
+                  </Trans>
+                }
                 size="6"
               />
 
@@ -93,7 +123,14 @@ const IndexPage = ({ i18n, ...props }: Object) => (
                 title={i18n.t`Encrypted connection`}
                 body={
                   <Trans>
-                    The site is accessible only through HTTPS (<a {...targetBlank} href="https://www.ssllabs.com/ssltest/analyze?d=app.ledgy.com">A+ rating</a>)
+                    The site is accessible only through HTTPS (
+                    <a
+                      {...targetBlank}
+                      href="https://www.ssllabs.com/ssltest/analyze?d=app.ledgy.com"
+                    >
+                      A+ rating
+                    </a>
+                    )
                   </Trans>
                 }
                 size="6"
@@ -104,7 +141,14 @@ const IndexPage = ({ i18n, ...props }: Object) => (
                 title={i18n.t`Content-Security-Policy`}
                 body={
                   <Trans>
-                    HTTP headers prevent cross-site scripting and code injection (<a {...targetBlank} href="https://observatory.mozilla.org/analyze.html?host=app.ledgy.com">A+ rating</a>)
+                    HTTP headers prevent cross-site scripting and code injection (
+                    <a
+                      {...targetBlank}
+                      href="https://observatory.mozilla.org/analyze.html?host=app.ledgy.com"
+                    >
+                      A+ rating
+                    </a>
+                    )
                   </Trans>
                 }
                 size="6"
@@ -120,20 +164,29 @@ const IndexPage = ({ i18n, ...props }: Object) => (
               <PrivacyElement
                 icon={faGlobeEurope}
                 title={i18n.t`EU data protection`}
-                body={<Trans>All data is stored at an <a {...targetBlank} href="https://www.clever-cloud.com/en/security">independent provider</a> in France</Trans>}
+                body={
+                  <Trans>
+                    All data is stored at an{' '}
+                    <a {...targetBlank} href="https://www.clever-cloud.com/en/security">
+                      independent provider
+                    </a>{' '}
+                    in France
+                  </Trans>
+                }
                 size="6"
               />
-
             </div>
 
             <p>
               <Trans>
-                If you have any questions or discover anything suspicious, please <Link href to={`${props.prefix}/contact/`}>get in touch</Link>.
+                If you have any questions or discover anything suspicious, please{' '}
+                <Link href to={`${props.prefix}/contact/`}>
+                  get in touch
+                </Link>
+                .
               </Trans>
             </p>
-
           </header>
-
         </div>
       </div>
     </main>

@@ -3,7 +3,12 @@
 import * as React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export const PrivacyElement = ({ icon, title, body, size }: {
+export const PrivacyElement = ({
+  icon,
+  title,
+  body,
+  size
+}: {
   icon: string,
   title: string | React.Node,
   body?: string | React.Node,
@@ -21,6 +26,6 @@ export const PrivacyElement = ({ icon, title, body, size }: {
 );
 PrivacyElement.defaultProps = { body: '', size: '12' };
 
-export const PrivacyRow = ({ children }: {children: React.Element<any>}) => (
+export const PrivacyRow = ({ children }: { children: React.Element<any> }) => (
   <div className="row gap-y my-4">{children}</div>
 );

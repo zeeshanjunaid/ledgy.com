@@ -1,0 +1,29 @@
+{
+  "extends": [
+    "plugin:flowtype/recommended",
+    "airbnb",
+    "plugin:prettier/recommended",
+    "prettier/flowtype",
+    "prettier/react"
+  ],
+  "plugins": [
+    "flowtype"
+  ],
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "object-curly-newline": [
+      "error",
+      {        "multiline": true
+      }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "printWidth": 100
+      }
+    ]
+  }
+}

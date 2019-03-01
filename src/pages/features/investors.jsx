@@ -8,7 +8,6 @@ import Img from 'gatsby-image';
 import { FeatureLinks } from '../../components/Features';
 import { Title } from '../../layouts/utils';
 
-
 export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
     <Title
@@ -19,33 +18,32 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
     <header className="header text-white bg-ledgy">
       <div className="container text-center">
-
         <div className="row">
           <div className="col-12 col-lg-8 offset-lg-2">
-            <h1><Trans>Investor Portfolio</Trans></h1>
+            <h1>
+              <Trans>Investor Portfolio</Trans>
+            </h1>
           </div>
         </div>
-
       </div>
     </header>
     <main className="main-content">
-
-
       <section className="section overflow-hidden">
         <div className="container text-left">
-
           <div>
             <header className="section-header text-left">
-              <h2><Trans>Your portfolio at a glance</Trans></h2>
+              <h2>
+                <Trans>Your portfolio at a glance</Trans>
+              </h2>
               <p>
                 <Trans>
-                  As an investor, you can profit a lot from Ledgy.
-                  Any of your portfolio companies that use the platform will
-                  appear in your portfolio.
-                  See your key performance indicators of your investments at a glance.
-                  <br /><br />
-                  Never lose track of how much you invested in which company and what’s
-                  the approximate value of your investments today.
+                  As an investor, you can profit a lot from Ledgy. Any of your portfolio companies
+                  that use the platform will appear in your portfolio. See your key performance
+                  indicators of your investments at a glance.
+                  <br />
+                  <br />
+                  Never lose track of how much you invested in which company and what’s the
+                  approximate value of your investments today.
                 </Trans>
               </p>
             </header>
@@ -61,13 +59,13 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             <header className="section-header text-left">
               <p>
                 <Trans>
-                  The detailed investment table gives an overview of the metrics of
-                  your investments. Check out what’s your stake in the company,
-                  how many shares and options you own and how much you initially invested.
-                  Even convertibles, if they’re not converted yet, will appear here.
+                  The detailed investment table gives an overview of the metrics of your
+                  investments. Check out what’s your stake in the company, how many shares and
+                  options you own and how much you initially invested. Even convertibles, if they’re
+                  not converted yet, will appear here.
                   <br />
-                  Each valuation update that the founders enter into their transaction history
-                  on Ledgy will be reflected in the current value of your shares and your return.
+                  Each valuation update that the founders enter into their transaction history on
+                  Ledgy will be reflected in the current value of your shares and your return.
                 </Trans>
               </p>
             </header>
@@ -83,11 +81,10 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             <header className="section-header text-left mt-3">
               <p>
                 <Trans>
-                  The transaction history will tell you exactly what happened to
-                  your ownership at what time.
-                  Keep track of when you bought or sold shares and at which price. See which
-                  options you are currently holding or how much interest is
-                  on your convertible and whether there was a cap or discount.
+                  The transaction history will tell you exactly what happened to your ownership at
+                  what time. Keep track of when you bought or sold shares and at which price. See
+                  which options you are currently holding or how much interest is on your
+                  convertible and whether there was a cap or discount.
                 </Trans>
               </p>
             </header>
@@ -100,29 +97,31 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           </div>
 
           <FeatureLinks {...props} i18n={i18n} page="investors" />
-
         </div>
       </section>
-
-
     </main>
   </div>
 ));
-
 
 // eslint-disable-next-line no-undef
 export const pageQuery = graphql`
   query {
     ...FeaturesFragment
 
-    dashboardCards: imageSharp(fluid: { originalName: {regex: "/dashboard-cards.png/"} }) {
-      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
+    dashboardCards: imageSharp(fluid: { originalName: { regex: "/dashboard-cards.png/" } }) {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid
+      }
     }
-    dashboardShares: imageSharp(fluid: { originalName: {regex: "/dashboard-shares.png/"} }) {
-      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
+    dashboardShares: imageSharp(fluid: { originalName: { regex: "/dashboard-shares.png/" } }) {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid
+      }
     }
-    dashboardHistory: imageSharp(fluid: { originalName: {regex: "/dashboard-history.png/"} }) {
-      fluid(maxWidth: 800) { ...GatsbyImageSharpFluid }
+    dashboardHistory: imageSharp(fluid: { originalName: { regex: "/dashboard-history.png/" } }) {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid
+      }
     }
   }
 `;

@@ -1,7 +1,12 @@
 const { CONTEXT, URL, DEPLOY_PRIME_URL, NODE_ENV } = process.env;
 
 module.exports = {
-  siteMetadata: { siteUrl: (CONTEXT === 'production' && URL) || DEPLOY_PRIME_URL || `http://localhost:${NODE_ENV === 'production' ? 9 : 8}000` },
+  siteMetadata: {
+    siteUrl:
+      (CONTEXT === 'production' && URL) ||
+      DEPLOY_PRIME_URL ||
+      `http://localhost:${NODE_ENV === 'production' ? 9 : 8}000`
+  },
   plugins: [
     'gatsby-plugin-layout',
     'gatsby-plugin-flow',
@@ -14,14 +19,14 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'src',
-        path: `${__dirname}/src/`,
-      },
+        path: `${__dirname}/src/`
+      }
     },
     { resolve: 'gatsby-mdx' },
     'gatsby-plugin-catch-links',
     {
       resolve: 'gatsby-plugin-google-tagmanager',
-      options: { id: 'GTM-P48JT9B' },
+      options: { id: 'GTM-P48JT9B' }
     },
     {
       resolve: 'gatsby-plugin-manifest',
@@ -36,15 +41,15 @@ module.exports = {
           {
             src: '/favicons/android-chrome-192x192.png',
             sizes: '192x192',
-            type: 'image/png',
+            type: 'image/png'
           },
           {
             src: '/favicons/android-chrome-512x512.png',
             sizes: '512x512',
-            type: 'image/png',
-          },
-        ],
-      },
+            type: 'image/png'
+          }
+        ]
+      }
     },
     {
       resolve: 'gatsby-plugin-netlify',
@@ -57,17 +62,17 @@ module.exports = {
             "font-src 'self' data: https://fonts.gstatic.com",
             "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://wchat.eu.freshchat.com/js/ https://snippets.freshchat.com/js/ https://www.googletagmanager.com/ https://www.google-analytics.com/ https://sjs.bizographics.com/ https://maps.googleapis.com/ https://www.linkedin.com/px/ https://px.ads.linkedin.com/",
             "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ https://wchat.eu.freshchat.com/css/ https://snippets.freshchat.com/css/ https://maps.googleapis.com/maps/api/",
-            "frame-src 'self' https://wchat.eu.freshchat.com/ https://ledgy.eu.webpush.freshchat.com/",
+            "frame-src 'self' https://wchat.eu.freshchat.com/ https://ledgy.eu.webpush.freshchat.com/"
           ].join('; '),
-          'Referrer-Policy: strict-origin-when-cross-origin',
-        ],
-      },
+          'Referrer-Policy: strict-origin-when-cross-origin'
+        ]
+      }
     },
     'gatsby-plugin-netlify-cache',
     {
       resolve: 'gatsby-plugin-sri',
-      options: { hash: 'sha512' },
+      options: { hash: 'sha512' }
     },
-    'gatsby-plugin-offline',
-  ],
+    'gatsby-plugin-offline'
+  ]
 };

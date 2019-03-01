@@ -1,13 +1,13 @@
 // @flow
 
 declare type I18n = {
-  t: (Array<string>, ...values: Array<any>) => string,
-}
+  t: (Array<string>, ...values: Array<any>) => string
+};
 
 declare type Props = {
   i18n: I18n,
   prefix: string,
-  data: Object,
-}
+  data: Object
+};
 
 declare var graphql: any;
