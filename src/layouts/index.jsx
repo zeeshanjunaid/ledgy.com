@@ -14,13 +14,13 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import 'typeface-slabo-27px'; // eslint-disable-line import/extensions
 import 'typeface-work-sans'; // eslint-disable-line import/extensions
+import 'katex/dist/katex.min.css';
 
 import { Title, name, appUrl, blogUrl, demoUrl, loadScript, targetBlank } from './utils';
 import { catalogs, langFromPath, langPrefix, getLocale } from '../i18n-config';
 import SignupForm from '../components/SignupForm';
 
 import '../assets/scss/page.scss';
-import 'katex/dist/katex.min.css';
 
 import logoDefault from '../img/logo_black.png';
 import logoInverse from '../img/logo_white.png';
