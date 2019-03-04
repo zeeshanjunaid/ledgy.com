@@ -20,6 +20,7 @@ import { catalogs, langFromPath, langPrefix, getLocale } from '../i18n-config';
 import SignupForm from '../components/SignupForm';
 
 import '../assets/scss/page.scss';
+import 'katex/dist/katex.min.css';
 
 import logoDefault from '../img/logo_black.png';
 import logoInverse from '../img/logo_white.png';

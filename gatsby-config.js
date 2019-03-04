@@ -22,7 +22,10 @@ module.exports = {
         path: `${__dirname}/src/`
       }
     },
-    { resolve: 'gatsby-mdx' },
+    {
+      resolve: 'gatsby-mdx',
+      options: { gatsbyRemarkPlugins: [{ resolve: 'gatsby-remark-katex' }] }
+    },
     'gatsby-plugin-catch-links',
     {
       resolve: 'gatsby-plugin-google-tagmanager',
