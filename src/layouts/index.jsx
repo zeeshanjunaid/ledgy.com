@@ -16,7 +16,7 @@ import 'typeface-slabo-27px'; // eslint-disable-line import/extensions
 import 'typeface-work-sans'; // eslint-disable-line import/extensions
 import 'katex/dist/katex.min.css';
 
-import { Title, name, appUrl, blogUrl, demoUrl, loadScript, targetBlank } from './utils';
+import { Title, name, appUrl, demoUrl, loadScript, targetBlank } from './utils';
 import { catalogs, langFromPath, langPrefix, getLocale } from '../i18n-config';
 import SignupForm from '../components/SignupForm';
 
@@ -59,9 +59,9 @@ const Nav = (props: LayoutProps) => (
           <Link className="nav-link" href to={`${props.prefix}/pricing/`}>
             <Trans>Pricing</Trans>
           </Link>
-          <a className="nav-link" href={blogUrl} {...targetBlank}>
+          <Link className="nav-link" href to={`${props.prefix}/blog/`}>
             <Trans>Blog</Trans>
-          </a>
+          </Link>
         </nav>
 
         <span className="navbar-divider" />
@@ -132,9 +132,9 @@ const Footer = (props: LayoutProps) => (
               <Link className="nav-link" href to={`${props.prefix}/about-us/`}>
                 <Trans>About us</Trans>
               </Link>
-              <a className="nav-link" href={blogUrl} {...targetBlank}>
+              <Link className="nav-link" href to={`${props.prefix}/blog/`}>
                 <Trans>Blog</Trans>
-              </a>
+              </Link>
               <Link className="nav-link" href to={`${props.prefix}/privacy/`}>
                 <Trans>Privacy</Trans>
               </Link>
