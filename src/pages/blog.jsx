@@ -14,14 +14,14 @@ type PostProps = {|
 |};
 
 const PostLink = ({ post }: { post: PostProps }) => (
-  <div className="card hover-shadow-7 bg-pale-secondary mb-8 p-5">
+  <div className="card hover-shadow-7 bg-pale-secondary mb-5 p-5">
     <div className="d-flex align-items-center mb-4">
       <Link href to={post.fields.slug}>
         <h4 className="d-inline">{post.frontmatter.title}</h4>
       </Link>
       <span className="ml-auto text-muted">{post.frontmatter.date}</span>
     </div>
-    <p>{post.excerpt}</p>
+    <p className="mb-0">{post.excerpt}</p>
     <Link className="small text-right" href to={post.fields.slug}>
       Read More ⟶
     </Link>
