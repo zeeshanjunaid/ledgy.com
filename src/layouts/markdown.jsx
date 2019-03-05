@@ -40,7 +40,7 @@ export default ({
         className={
           ((align === 'left' || align === 'right') && `float-md-${align} m-3`) || 'mx-auto my-3'
         }
-        style={{ width: `${align ? 400 : 600}px` }}
+        style={{ maxWidth: `${align ? 400 : 600}px` }}
       >
         <Img
           {...(frontmatter.images.find(i => i.childImageSharp.fluid.originalName === src) || {})
