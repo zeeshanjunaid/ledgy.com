@@ -21,8 +21,10 @@ module.exports = {
     {
       resolve: 'gatsby-mdx',
       options: {
-        gatsbyRemarkPlugins: [{ resolve: 'gatsby-remark-katex' }],
-        plugins: ['gatsby-plugin-mdx-prismjs']
+        gatsbyRemarkPlugins: [
+          { resolve: 'gatsby-remark-katex' },
+          { resolve: 'gatsby-remark-prismjs' }
+        ]
       }
     },
     'gatsby-plugin-catch-links',
