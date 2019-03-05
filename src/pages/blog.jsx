@@ -6,17 +6,31 @@ import { graphql, Link } from 'gatsby';
 
 import { Title } from '../layouts/utils';
 
-const PostLink = ({ post }) => (
-  <div>
-    <Link to={post.fields.slug}>
-      {post.frontmatter.title} ({post.frontmatter.date})
+type PostProps = {|
+  id: string,
+  fields: {| slug: string |},
+  excerpt: string,
+  frontmatter: {| date: string, title: string |}
+|};
+
+const PostLink = ({ post }: { post: PostProps }) => (
+  <div className="card hover-shadow-7 bg-pale-secondary mb-8 p-5">
+    <div className="d-flex align-items-center mb-4">
+      <Link href to={post.fields.slug}>
+        <h4 className="d-inline">{post.frontmatter.title}</h4>
+      </Link>
+      <span className="ml-auto text-muted">{post.frontmatter.date}</span>
+    </div>
+    <p>{post.excerpt}</p>
+    <Link className="small text-right" href to={post.fields.slug}>
+      Read More ⟶
     </Link>
   </div>
 );
 
 export default withI18n()(({ i18n, data }: Props) => (
   <div>
-    <Title title={i18n.t`Blog`} description={i18n.t``} />
+    <Title title={i18n.t`Blog`} description={i18n.t`Blog description TODO`} />
 
     <header className="header text-white bg-ledgy">
       <div className="container text-center">
@@ -33,14 +47,6 @@ export default withI18n()(({ i18n, data }: Props) => (
     <main className="main-content">
       <section className="section">
         <div className="container">
-          <header className="section-header">
-            <p>
-              <Trans>Articles</Trans>
-            </p>
-          </header>
-        </div>
-
-        <div className="container container-small">
           {data.allMdx.edges.map(edge => (
             <PostLink key={edge.node.id} post={edge.node} />
           ))}
@@ -52,7 +58,10 @@ export default withI18n()(({ i18n, data }: Props) => (
 
 export const pageQuery = graphql`
   query {
-    allMdx(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMdx(
+      filter: { fields: { slug: { regex: "/^/blog//" } } }
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
       edges {
         node {
           id
@@ -61,7 +70,7 @@ export const pageQuery = graphql`
           }
           excerpt(pruneLength: 250)
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "DD MMM YYYY")
             title
           }
         }
