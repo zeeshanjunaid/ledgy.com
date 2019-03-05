@@ -15,6 +15,7 @@ import {
 import 'typeface-slabo-27px'; // eslint-disable-line import/extensions
 import 'typeface-work-sans'; // eslint-disable-line import/extensions
 import 'katex/dist/katex.min.css';
+import 'prism-themes/themes/prism-ghcolors.css';
 
 import { Title, name, appUrl, demoUrl, loadScript, targetBlank } from './utils';
 import { catalogs, langFromPath, langPrefix, getLocale } from '../i18n-config';

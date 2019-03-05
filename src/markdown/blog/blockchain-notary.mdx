@@ -48,7 +48,7 @@ The stamps need to referenced by a Bitcoin transaction. Thus, attestation can ta
 
 To follow the mantra **code-is-law**, as populated by the smart contract community, we give code samples to describe the implementation of the blockchain notary on Ledgy. We use Base64 encoding for binary assets, like signed JSON and OTS files.
 
-Whenever a document is uploaded to Ledgy, the server generates a signed certificate based on `[tweetnacl-js](https://github.com/dchest/tweetnacl-js)`:
+Whenever a document is uploaded to Ledgy, the server generates a signed certificate based on [tweetnacl-js](https://github.com/dchest/tweetnacl-js):
 
 ```javascript
 import { sign } from 'tweetnacl';
@@ -66,7 +66,7 @@ const generateCertificateForDocument =
 }
 ```
 
-Next, we stamp the certificate on the blockchain using`[javascript-opentimestamps](https://github.com/opentimestamps/javascript-opentimestamps)`:
+Next, we stamp the certificate on the blockchain using [javascript-opentimestamps](https://github.com/opentimestamps/javascript-opentimestamps):
 
 ```javascript
 import OTS from 'javascript-opentimestamps';

@@ -54,6 +54,7 @@
     "lodash": "4.17.11",
     "node-sass": "4.11.0",
     "popper.js": "1.14.7",
+    "prism-themes": "1.0.1",
     "prismjs": "1.15.0",
     "react": "16.8.3",
     "react-dom": "16.8.3",
