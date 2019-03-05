@@ -4,7 +4,7 @@ import React from 'react';
 import { withI18n, Trans } from '@lingui/react';
 import { graphql, Link } from 'gatsby';
 
-import { Title } from '../layouts/utils';
+import { Title, ChevronRight } from '../layouts/utils';
 
 type PostProps = {|
   id: string,
@@ -15,15 +15,18 @@ type PostProps = {|
 
 const PostLink = ({ post }: { post: PostProps }) => (
   <div className="card hover-shadow-7 bg-pale-secondary mb-5 p-5">
-    <div className="d-flex align-items-center mb-4">
-      <Link href to={post.fields.slug}>
-        <h4 className="d-inline">{post.frontmatter.title}</h4>
-      </Link>
-      <span className="ml-auto text-muted">{post.frontmatter.date}</span>
+    <div className="row mb-4">
+      <div className="col-12 col-md-10">
+        <Link href to={post.fields.slug}>
+          <h4 className="d-inline">{post.frontmatter.title}</h4>
+        </Link>
+      </div>
+      <div className="col-12 col-md-2 text-muted">{post.frontmatter.date}</div>
     </div>
     <p className="mb-0">{post.excerpt}</p>
     <Link className="small text-right" href to={post.fields.slug}>
-      Read More ⟶
+      Read more
+      <ChevronRight />
     </Link>
   </div>
 );

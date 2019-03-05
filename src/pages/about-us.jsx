@@ -6,9 +6,9 @@ import { Link, graphql } from 'gatsby';
 import { withI18n, Trans } from '@lingui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
-import { Title } from '../layouts/utils';
+import { Title, ChevronRight } from '../layouts/utils';
 
 const Header = ({ i18n }: Props) => (
   <header className="header text-white bg-ledgy">
@@ -174,7 +174,7 @@ const IndexPage = (props: Props) => {
                   <br />
                   <Link href to={`${props.prefix}/jobs/`}>
                     Learn more
-                    <FontAwesomeIcon icon={faChevronRight} className="fs-12 ml-2" />
+                    <ChevronRight />
                   </Link>
                 </Trans>
               </p>

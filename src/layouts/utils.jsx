@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { faCheck, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 export const name = 'Ledgy';
 export const appUrl = 'https://app.ledgy.com';
@@ -50,3 +50,5 @@ export const Li = ({ children }: { children: React.Node }) => (
     <div className="media-body ml-3">{children}</div>
   </li>
 );
+
+export const ChevronRight = () => <FontAwesomeIcon icon={faChevronRight} className="fs-12 ml-2" />;
