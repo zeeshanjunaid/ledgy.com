@@ -116,4 +116,10 @@ h1 {
   .katex {
     font-size: 1em;
   }
+  @include media-breakpoint-down(sm) {
+    .katex {
+      overflow: scroll;
+      padding-bottom: 0.8em;
+    }
+  }
 }
