@@ -1,4 +1,5 @@
 const { CONTEXT, URL, DEPLOY_PRIME_URL, NODE_ENV } = process.env;
+const src = `${__dirname}/src`;
 
 module.exports = {
   siteMetadata: {
@@ -15,19 +16,14 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-nprogress',
     'gatsby-plugin-sitemap',
+    { resolve: 'gatsby-source-filesystem', options: { name: 'img', path: `${src}/img` } },
+    { resolve: 'gatsby-source-filesystem', options: { name: 'markdown', path: `${src}/markdown` } },
     {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'src',
-        path: `${__dirname}/src/`
-      }
+      resolve: 'gatsby-mdx',
+      options: { gatsbyRemarkPlugins: [{ resolve: 'gatsby-remark-katex' }] }
     },
-    { resolve: 'gatsby-mdx' },
     'gatsby-plugin-catch-links',
-    {
-      resolve: 'gatsby-plugin-google-tagmanager',
-      options: { id: 'GTM-P48JT9B' }
-    },
+    { resolve: 'gatsby-plugin-google-tagmanager', options: { id: 'GTM-P48JT9B' } },
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -69,10 +65,7 @@ module.exports = {
       }
     },
     'gatsby-plugin-netlify-cache',
-    {
-      resolve: 'gatsby-plugin-sri',
-      options: { hash: 'sha512' }
-    },
+    { resolve: 'gatsby-plugin-sri', options: { hash: 'sha512' } },
     'gatsby-plugin-offline'
   ]
 };

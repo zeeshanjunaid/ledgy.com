@@ -6,7 +6,6 @@ images:
   - pre-and-post-money-option-pools.png
 ---
 
-
 If you’ve never understood what’s a pre- and post-money option pool (aka. the option pool shuffle) here’s your chance. Get a piece of paper and a pencil, write down the formulas and don’t give up until the end of this post!
 
 #### How it all started
@@ -22,22 +21,37 @@ They now want to raise a seed round. They manage to get a deal with an investor,
 
 This means that Peter will receive 9.09% of the company. How do we know that?
 
--   We know the price per share = pre-money valuation / total number of shares pre-money = $5 million / 1 million shares = $5
--   Peter will receive the following number of shares: her investment / price per share = 100,000 shares
--   The new total number of shares in the company is 1 million + 100,000 = 1.1 million
--   Peter’s total number of shares / new total number of shares in the company = 9.09%
+-   We know the share price:
+$$
+\text{pricePerShare} = \frac{\text{preMoneyValuation}}{\text{preMoneyShares}} = \frac{\text{\$5 million}}{\text{1 million}} = \$5
+$$
+-   Peter will receive the following number of shares:
+$$
+\frac{\text{Peter’s investment}}{\text{pricePerShare}} = \text{100,000 shares}
+$$
+-   The new total number of shares in the company:
+$$
+\text{postMoneyShares} = \text{preMoneyShares} + \text{100,000} = 1.1\text{ million}
+$$
+-   Peter’s percentage:
+$$
+\frac{\text{preMoneyShares}}{\text{postMoneyShares}} = 9.09\%
+$$
 
 #### Option Pool
 
 Now that Sheryl, Elon, and Peter have agreed on the basic deal, they start talking about reserving shares for employees, i.e. creating a stock option pool. There are basically two possibilities: a pre-money (aka investor friendly) or a post-money (aka founder friendly) option pool. The naming is a little confusing since different people use the naming pre or post for different purposes, so make sure you know if you are talking about an investor or founder friendly pool. I will explain in more details what each of them means below — for now, read on.
 
-Let’s say we want to create an option pool of **10%** (in the fully diluted cap table after the capital increase), i.e. the **№ shares in option pool** has to be equal to 10% of the total number of shares after the investment. In this case, the following equation is true:
-
-(Sheryl + Elon+ Peter)’ shares = **90%** \* ((Sheryl + Elon+ Peter)’ shares + **№ shares in option pool** )
+Let’s say we want to create an option pool of **10%** (in the fully diluted cap table after the capital increase), i.e. the $\textbf{poolShares}$ have to be equal to 10% of the total number of shares after the investment. In this case, the following equation is true:
+$$
+\text{(Sheryl + Elon+ Peter)’ shares} = \textbf{90\%} * (\text{(Sheryl + Elon+ Peter)’ shares} + \textbf{poolShares})
+$$
 
 Simply reshuffling and isolating the terms, we have:
 
-> **№ shares in option pool** = (Sheryl + Elon+ **Peter**’s shares) \* (1/90% -1)
+$$
+\textbf{poolShares} = \text{(Sheryl + Elon+ \textbf{Peter})’ shares} * \left( \frac{1}{90\%} - 1 \right)
+$$
 
 Think thoroughly about this, and once you understand it, just accept it and notice **one important thing we’ll need later on: The *№* shares in the option pool depends on the number of Peter’s shares**.
 
@@ -49,7 +63,14 @@ Very easy to calculate and understand. The round is done as explained above. The
 
 This is tricky to calculate because it involves equations that have to be solved numerically. And it’s founders-unfriendly because only the founders (Sheryl and Elon) get diluted. In which case would Sheryl and Elon go for a pre-money pool? In the event that Peter, for instance, says “A deal is a deal. With or without the option pool, I want to have my 9.09% for my $500,000 investment as agreed before this whole pool story!”
 
-This means, the shares created for the pool have to be created, so to say, **before** Peter invests in the company so that she does not get diluted. In other words, the price per share that Peter will pay will diminish from: pre-money valuation / (Sheryl + Elon’s shares), to: pre-money valuation / (Sheryl+ Elon’s shares + **Option pool shares**). This again means, that if Peter gets a cheaper price per share, then she will get more shares for her $500,000 investment. An important detail to be noticed here: **The number of Peter’s** shares depends on the number of shares in the option pool!
+This means, the shares created for the pool have to be created, so to say, **before** Peter invests in the company so that he does not get diluted. In other words, the price per share that Peter will pay will diminish:
+$$
+\text{pricePerShare} =
+\frac{\text{preMoneyValuation}}{\text{(Sheryl + Elon)’ shares}}
+\Longrightarrow
+\frac{\text{preMoneyValuation}}{\text{(Sheryl + Elon)’ shares} + \textbf{poolShares}}
+$$
+This again means, that if Peter gets a cheaper price per share, then he will get more shares for her $500,000 investment. An important detail to be noticed here: **The number of Peter’s** shares depends on the number of shares in the option pool!
 
 By now, you should see that we have a “problem”: The number of shares in the option pool depends on the number of Peter’s shares because it has to represent exactly 10% of the total shares after the capital increase. On the other hand, the number of Peter’s shares also depends on the number of shares in the option pool because her stake also needs to be exactly 9.09% as agreed during the deal. This is why we need to solve this numerically which is what Ledgy’s round modeling does.
 
