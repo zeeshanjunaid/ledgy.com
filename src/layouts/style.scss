@@ -116,10 +116,14 @@ h1 {
   .katex {
     font-size: 1em;
   }
+  .gatsby-highlight {
+    margin-top: map-get($spacers, 5);
+    margin-bottom: map-get($spacers, 5);
+  }
   @include media-breakpoint-down(sm) {
     .katex {
       overflow: scroll;
-      padding-bottom: 0.8em;
+      padding-bottom: map-get($spacers, 4);
     }
   }
 }
