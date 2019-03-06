@@ -113,6 +113,9 @@ h1 {
     padding-left: map-get($spacers, 3);
     margin-left: map-get($spacers, 2);
   }
+  figure {
+    max-width: 600px;
+  }
   .katex {
     font-size: 1em;
   }
@@ -124,6 +127,11 @@ h1 {
     .katex {
       overflow: scroll;
       padding-bottom: map-get($spacers, 4);
+    }
+  }
+  @include media-breakpoint-up(md) {
+    .size-md-small {
+      width: 400px;
     }
   }
 }

@@ -36,17 +36,8 @@ export default ({
       .childImageSharp;
     if (!image) return <p>Image not found: {src}</p>;
     return (
-      <figure
-        className={
-          ((align === 'left' || align === 'right') && `float-md-${align} m-3`) || 'mx-auto my-3'
-        }
-        style={{ maxWidth: `${align ? 400 : 600}px` }}
-      >
-        <Img
-          {...(frontmatter.images.find(i => i.childImageSharp.fluid.originalName === src) || {})
-            .childImageSharp || []}
-          {...props}
-        />
+      <figure className={align ? `float-md-${align} size-md-small m-3` : 'mx-auto my-3'}>
+        <Img {...image} {...props} />
         {caption && (
           <figcaption className="text-muted small px-3 font-weight-light">{caption}</figcaption>
         )}
