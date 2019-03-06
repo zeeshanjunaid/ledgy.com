@@ -10,7 +10,7 @@ import {
   faFacebook,
   faLinkedin,
   faAngellist,
-  faXing
+  faMedium
 } from '@fortawesome/free-brands-svg-icons';
 import 'typeface-slabo-27px'; // eslint-disable-line import/extensions
 import 'typeface-work-sans'; // eslint-disable-line import/extensions
@@ -210,11 +210,8 @@ const Footer = (props: LayoutProps) => (
               <a className="col-3 col-lg-2 px-0 social-angellist" href="https://angel.co/ledgy">
                 <FontAwesomeIcon icon={faAngellist} title="AngelList" />
               </a>
-              <a
-                className="col-3 col-lg-2 px-0 social-xing"
-                href="https://www.xing.com/companies/ledgy"
-              >
-                <FontAwesomeIcon icon={faXing} title="Xing" />
+              <a className="col-3 col-lg-2 px-0 social-medium" href="https://blog.ledgy.com">
+                <FontAwesomeIcon icon={faMedium} title="Medium" />
               </a>
             </div>
             <div className="mt-4">
