@@ -32,11 +32,12 @@ export default ({
     align: string,
     caption: string
   }) => {
-    const image = (frontmatter.images.find(i => i.childImageSharp.fluid.originalName === src) || {})
-      .childImageSharp;
-    if (!image) return <p>Image not found: {src}</p>;
+    const image = (
+      frontmatter.images.find(i => i && i.childImageSharp.fluid.originalName === src) || {}
+    ).childImageSharp;
+    if (!image) return <strong>Image not found: {src}</strong>;
     return (
-      <figure className={align ? `float-md-${align} size-md-small m-3` : 'mx-auto my-3'}>
+      <figure className={align ? `float-md-${align} size-md-small m-6` : 'mx-auto my-3'}>
         <Img {...image} {...props} />
         {caption && (
           <figcaption className="text-muted small px-3 font-weight-light">{caption}</figcaption>

@@ -116,6 +116,9 @@ h1 {
   figure {
     max-width: 600px;
   }
+  hr {
+    clear: both;
+  }
   .katex {
     font-size: 1em;
   }
@@ -133,5 +136,7 @@ h1 {
     .size-md-small {
       width: 400px;
     }
+    .float-md-left { margin-left: -3em !important; }
+    .float-md-right { margin-right: -3em !important; }
   }
 }

@@ -24,7 +24,7 @@ const PostLink = ({ post }: { post: PostProps }) => (
       <div className="col-12 col-md-2 text-muted">{post.frontmatter.date}</div>
     </div>
     <p className="mb-0">{post.excerpt}</p>
-    <Link className="small text-right" href to={post.fields.slug}>
+    <Link className="small ml-auto" href to={post.fields.slug}>
       Read more
       <ChevronRight />
     </Link>
