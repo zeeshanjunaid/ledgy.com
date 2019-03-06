@@ -12,7 +12,8 @@
     "serve": "npm run build && gatsby serve",
     "start": "lingui compile && gatsby develop",
     "test": "npm run extract && lingui compile --strict && eslint . --ext jsx,js && flow",
-    "extract": "lingui extract --clean"
+    "extract": "lingui extract --clean",
+    "edit": "micro flask_editor.js"
   },
   "dependencies": {
     "@babel/plugin-proposal-object-rest-spread": "7.3.4",
@@ -52,6 +53,7 @@
     "jquery": "3.3.1",
     "katex": "0.10.1",
     "lodash": "4.17.11",
+    "micro": "9.3.3",
     "node-sass": "4.11.0",
     "popper.js": "1.14.7",
     "prism-themes": "1.0.1",
