@@ -26,21 +26,28 @@ export default ({
     src,
     align,
     caption,
+    size,
     ...props
   }: {
     src: string,
     align: string,
-    caption: string
+    caption: string,
+    size: string
   }) => {
     const image = (
       frontmatter.images.find(i => i && i.childImageSharp.fluid.originalName === src) || {}
     ).childImageSharp;
     if (!image) return <strong>Image not found: {src}</strong>;
     return (
-      <figure className={align ? `float-md-${align} size-md-small m-6` : 'mx-auto my-3'}>
+      <figure
+        className={align ? `mx-auto float-md-${align} size-md-small m-6` : 'mx-auto my-6'}
+        style={size ? { width: `${size}px` } : {}}
+      >
         <Img {...image} {...props} />
         {caption && (
-          <figcaption className="text-muted small px-3 font-weight-light">{caption}</figcaption>
+          <figcaption className="text-muted small px-3 font-weight-light mt-1">
+            {caption}
+          </figcaption>
         )}
       </figure>
     );
