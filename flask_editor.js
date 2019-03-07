@@ -39,12 +39,12 @@ const html = (filename, content) => `
 
 const port = process.argv[3].split(':').slice(-1)[0];
 const filename = process.argv[5];
-const content = fs.readFileSync(filename).toString('utf-8');
+const content = fs.readFileSync(filename).toString('utf8');
 
 module.exports = async (req, res) => {
   const data = await text(req);
   if (data) {
-    fs.writeFileSync(filename, data, 'utf-8');
+    fs.writeFileSync(filename, data, 'utf8');
     res.end();
   } else {
     res.end(html(filename, content));
