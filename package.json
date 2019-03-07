@@ -13,7 +13,7 @@
     "start": "lingui compile && gatsby develop",
     "test": "npm run extract && lingui compile --strict && eslint . --ext jsx,js && flow",
     "extract": "lingui extract --clean",
-    "edit": "micro flask_editor.js"
+    "edit": "micro -l tcp://0.0.0.0:$(((RANDOM % 65535)+1025)) flask_editor.js"
   },
   "dependencies": {
     "@babel/plugin-proposal-object-rest-spread": "7.3.4",

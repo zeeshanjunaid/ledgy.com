@@ -3,13 +3,13 @@ const { text } = require('micro');
 const _ = require('lodash');
 const { spawn } = require('child_process');
 
-const html = content => `
+const html = (filename, content) => `
 <!DOCTYPE html>
 <html>
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>${filename} | FlaskEdit</title>
   <meta name="author" content="">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,16 +37,18 @@ const html = content => `
 </html>
 `;
 
-const filename = process.argv[3];
+const port = process.argv[3].split(':').slice(-1)[0];
+const filename = process.argv[5];
 const content = fs.readFileSync(filename).toString('utf-8');
 
 module.exports = async (req, res) => {
   const data = await text(req);
   if (data) {
     fs.writeFileSync(filename, data, 'utf-8');
-    console.log('saved');
-    res.end('');
-  } else res.end(html(content));
+    res.end();
+  } else {
+    res.end(html(filename, content));
+  }
 };
 
-spawn('open', ['http://localhost:3000']);
+spawn('open', [`http://localhost:${port}`]);
