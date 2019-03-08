@@ -69,9 +69,6 @@ export default withI18n()(({ i18n, data, prefix }: Props) => (
             <h1>
               <Trans>The Ledgy Blog</Trans>
             </h1>
-            <div className="text-center">
-              <Trans>This page is only available in English.</Trans>
-            </div>
           </div>
         </div>
       </div>
@@ -80,7 +77,6 @@ export default withI18n()(({ i18n, data, prefix }: Props) => (
     <main className="main-content">
       <section className="section">
         <div className="container">
-          {console.log(data)}
           {data.allMdx.edges.map(edge => (
             <PostLink
               key={edge.node.id}
