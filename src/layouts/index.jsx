@@ -10,13 +10,14 @@ import {
   faFacebook,
   faLinkedin,
   faAngellist,
-  faXing
+  faMedium
 } from '@fortawesome/free-brands-svg-icons';
 import 'typeface-slabo-27px'; // eslint-disable-line import/extensions
 import 'typeface-work-sans'; // eslint-disable-line import/extensions
 import 'katex/dist/katex.min.css';
+import 'prism-themes/themes/prism-ghcolors.css';
 
-import { Title, name, appUrl, blogUrl, demoUrl, loadScript, targetBlank } from './utils';
+import { Title, name, appUrl, demoUrl, loadScript, targetBlank } from './utils';
 import { catalogs, langFromPath, langPrefix, getLocale } from '../i18n-config';
 import SignupForm from '../components/SignupForm';
 
@@ -59,9 +60,9 @@ const Nav = (props: LayoutProps) => (
           <Link className="nav-link" href to={`${props.prefix}/pricing/`}>
             <Trans>Pricing</Trans>
           </Link>
-          <a className="nav-link" href={blogUrl} {...targetBlank}>
+          <Link className="nav-link" href to={`${props.prefix}/blog/`}>
             <Trans>Blog</Trans>
-          </a>
+          </Link>
         </nav>
 
         <span className="navbar-divider" />
@@ -132,9 +133,9 @@ const Footer = (props: LayoutProps) => (
               <Link className="nav-link" href to={`${props.prefix}/about-us/`}>
                 <Trans>About us</Trans>
               </Link>
-              <a className="nav-link" href={blogUrl} {...targetBlank}>
+              <Link className="nav-link" href to={`${props.prefix}/blog/`}>
                 <Trans>Blog</Trans>
-              </a>
+              </Link>
               <Link className="nav-link" href to={`${props.prefix}/privacy/`}>
                 <Trans>Privacy</Trans>
               </Link>
@@ -209,11 +210,8 @@ const Footer = (props: LayoutProps) => (
               <a className="col-3 col-lg-2 px-0 social-angellist" href="https://angel.co/ledgy">
                 <FontAwesomeIcon icon={faAngellist} title="AngelList" />
               </a>
-              <a
-                className="col-3 col-lg-2 px-0 social-xing"
-                href="https://www.xing.com/companies/ledgy"
-              >
-                <FontAwesomeIcon icon={faXing} title="Xing" />
+              <a className="col-3 col-lg-2 px-0 social-medium" href="https://blog.ledgy.com">
+                <FontAwesomeIcon icon={faMedium} title="Medium" />
               </a>
             </div>
             <div className="mt-4">

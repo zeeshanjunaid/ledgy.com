@@ -14,7 +14,7 @@ Sheryl and Elon are two good friends who decided to co-found a company called Sp
 
 <Img src="pre-and-post-money-option-pools.png" align="right" />
 
-They now want to raise a seed round. They manage to get a deal with an investor, Peter:
+Now, they want to raise a seed round. They manage to get a deal with an investor, Peter:
 
 -   Peter invests $500,000
 -   Everyone agrees on a pre-money valuation of $5 million
@@ -23,37 +23,37 @@ This means that Peter will receive 9.09% of the company. How do we know that?
 
 -   We know the share price:
 $$
-\text{pricePerShare} = \frac{\text{preMoneyValuation}}{\text{preMoneyShares}} = \frac{\text{\$5 million}}{\text{1 million}} = \$5
+\text{PricePerShare} = \frac{\text{PreMoneyValuation}}{\text{PreMoneyShares}} = \frac{\text{\$5 million}}{\text{1 million}} = \$5
 $$
 -   Peter will receive the following number of shares:
 $$
-\frac{\text{Peter’s investment}}{\text{pricePerShare}} = \text{100,000 shares}
+\frac{\text{Peter’s investment}}{\text{PricePerShare}} = \text{100,000 shares}
 $$
 -   The new total number of shares in the company:
 $$
-\text{postMoneyShares} = \text{preMoneyShares} + \text{100,000} = 1.1\text{ million}
+\text{PostMoneyShares} = \text{PreMoneyShares} + \text{100,000} = 1.1\text{ million}
 $$
 -   Peter’s percentage:
 $$
-\frac{\text{preMoneyShares}}{\text{postMoneyShares}} = 9.09\%
+\frac{\text{PreMoneyShares}}{\text{PostMoneyShares}} = 9.09\%
 $$
 
 #### Option Pool
 
 Now that Sheryl, Elon, and Peter have agreed on the basic deal, they start talking about reserving shares for employees, i.e. creating a stock option pool. There are basically two possibilities: a pre-money (aka investor friendly) or a post-money (aka founder friendly) option pool. The naming is a little confusing since different people use the naming pre or post for different purposes, so make sure you know if you are talking about an investor or founder friendly pool. I will explain in more details what each of them means below — for now, read on.
 
-Let’s say we want to create an option pool of **10%** (in the fully diluted cap table after the capital increase), i.e. the $\textbf{poolShares}$ have to be equal to 10% of the total number of shares after the investment. In this case, the following equation is true:
+Let’s say we want to create an option pool of **10%** (in the fully diluted cap table after the capital increase), i.e. the $\text{PoolShares}$ have to be equal to 10% of the total number of shares after the investment. In this case, the following equation is true:
 $$
-\text{(Sheryl + Elon+ Peter)’ shares} = \textbf{90\%} * (\text{(Sheryl + Elon+ Peter)’ shares} + \textbf{poolShares})
+\text{(Sheryl + Elon+ Peter)’ shares} = \textbf{90\%} * (\text{(Sheryl + Elon+ Peter)’ shares} + \text{PoolShares})
 $$
 
 Simply reshuffling and isolating the terms, we have:
 
 $$
-\textbf{poolShares} = \text{(Sheryl + Elon+ \textbf{Peter})’ shares} * \left( \frac{1}{90\%} - 1 \right)
+\text{PoolShares} = \text{(Sheryl + Elon+ \textbf{Peter})’ shares} * \left( \frac{1}{90\%} - 1 \right)
 $$
 
-Think thoroughly about this, and once you understand it, just accept it and notice **one important thing we’ll need later on: The *№* shares in the option pool depends on the number of Peter’s shares**.
+Think thoroughly about this, and once you understand it, just accept it and notice **one important thing we’ll need later on: The $\text{PoolShares}$ depend on the number of Peter’s shares**.
 
 #### So, what is a post-money (founder friendly) option pool?
 
@@ -65,10 +65,10 @@ This is tricky to calculate because it involves equations that have to be solved
 
 This means, the shares created for the pool have to be created, so to say, **before** Peter invests in the company so that he does not get diluted. In other words, the price per share that Peter will pay will diminish:
 $$
-\text{pricePerShare} =
-\frac{\text{preMoneyValuation}}{\text{(Sheryl + Elon)’ shares}}
+\text{PricePerShare} =
+\frac{\text{PreMoneyValuation}}{\text{(Sheryl + Elon)’ shares}}
 \Longrightarrow
-\frac{\text{preMoneyValuation}}{\text{(Sheryl + Elon)’ shares} + \textbf{poolShares}}
+\frac{\text{PreMoneyValuation}}{\text{(Sheryl + Elon)’ shares} + \textbf{PoolShares}}
 $$
 This again means, that if Peter gets a cheaper price per share, then he will get more shares for her $500,000 investment. An important detail to be noticed here: **The number of Peter’s** shares depends on the number of shares in the option pool!
 

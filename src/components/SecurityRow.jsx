@@ -4,7 +4,9 @@ import * as React from 'react';
 import { Trans } from '@lingui/react';
 import { Link } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShieldAlt, faLock, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { faShieldAlt, faLock } from '@fortawesome/free-solid-svg-icons';
+
+import { ChevronRight } from '../layouts/utils';
 
 export default (props: Props) => (
   <div className="row gap-y text-center">
@@ -18,7 +20,7 @@ export default (props: Props) => (
         <br />
         <Link href to={`${props.prefix}/privacy/`}>
           <Trans>Read more</Trans>
-          <FontAwesomeIcon icon={faChevronRight} className="fs-12 ml-2" />
+          <ChevronRight />
         </Link>
       </p>
     </div>
@@ -33,7 +35,7 @@ export default (props: Props) => (
         <br />
         <Link href to={`${props.prefix}/security/`}>
           <Trans>Read more</Trans>
-          <FontAwesomeIcon icon={faChevronRight} className="fs-12 ml-2" />
+          <ChevronRight />
         </Link>
       </p>
     </div>

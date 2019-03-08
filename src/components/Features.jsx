@@ -4,8 +4,8 @@ import * as React from 'react';
 import { Trans } from '@lingui/react';
 import { Link, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+
+import { ChevronRight } from '../layouts/utils';
 
 const hyphenToCamelCase = (s: string) => s.replace(/-([a-z])/g, g => g[1].toUpperCase());
 
@@ -25,7 +25,7 @@ export const Feature = (props: {
       <p>
         <Link href to={`${props.prefix}/features/${props.url}/`}>
           <Trans>Learn more about</Trans> {props.name}
-          <FontAwesomeIcon icon={faChevronRight} className="fs-12 ml-2" />
+          <ChevronRight />
         </Link>
       </p>
     </div>

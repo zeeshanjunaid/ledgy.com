@@ -1,0 +1,144 @@
+---
+date: "2018-09-18"
+title: "The Ledgy Blockchain Notary"
+description: "At Ledgy.com we’re building a new way of managing the cap table and equity of private companies in the cloud. What differentiates our approach from others, is that we model the current cap table with transactions. This is inspired by the blockchain, where the current state is derived by applying a set of transactions to a given genesis block."
+---
+
+At Ledgy we’re building a new way of managing the cap table and equity of private companies in the cloud. What differentiates our approach from others, is that we model the current cap table with transactions. This is inspired by the blockchain, where the current state is derived by applying a set of transactions to a given genesis block.
+
+The blockchain notary aims to help startups with their due diligence processes during fundraising or acquisitions. It can attest that a document has been uploaded to our system and since then has not been modified by any party, including us.
+
+> Visit [demo.ledgy.com](https://demo.ledgy.com) to see the blockchain notary live in action. Go to the [Documents](https://demo.ledgy.com/XihSjPeB9BeP86TK2/documents) page and upload a PDF file. That’s it.
+
+> Alternatively, go to [demo.ledgy.com/notary](https://demo.ledgy.com/notary) and select any local file to check if it has previously been uploaded to Ledgy. You can try this [example document](https://demo.ledgy.com/document/8eJ_K64Epos4_TLH6AuXt5).
+
+Anytime, a new set of transactions is published on Ledgy, the system automatically generates a PDF report of the complete history of the share ledger and certifies it by the blockchain notary. Thus, every user of Ledgy will enjoy tamper-proof equity management, even without understanding or even knowing anything about Bitcoin and blockchain technology.
+
+This article gives a technical description of the digital notary on Ledgy. It can prove the integrity and upload date for any document submitted to Ledgy. It also includes metadata, such as the name of the person, who uploaded the document, their email address, and the company, for which it was uploaded.
+
+### How It Works
+
+The blockchain notary is based on [OpenTimestamps](https://opentimestamps.org/) and a server certificate, signed with [TweetNaCl.js](https://tweetnacl.js.org/). OpenTimestamps serves as a proof-of-existence of a document at a given time. The certificate is used to prove that a document was submitted to Ledgy, as well as by whom, and for which company.
+
+#### The Certificate
+
+Although we could stamp the document directly on the blockchain using OpenTimestamps, this would only prove the existence of the document at a given time.
+
+Ledgy instead creates a certificate, which consists of a JSON file, that is signed by our server using the [Ed25519](https://en.wikipedia.org/wiki/EdDSA#Ed25519) variant of the Edwards-curve Digital Signature Algorithm. For each uploaded file, the JSON contains:
+
+-   Filename of the document during upload
+-   Name and email of the person uploading the document
+-   Company name
+-   Document hash (SHA256)
+-   User-ID and Company-ID on the Ledgy platform
+
+The Curve25519 public key for all certificates is represented in Base64 as `gs04X1XPvYqg0zlsXCcRj+ZvxeHjqOBg1Ac8PZB4UR0=`
+
+#### The Stamp
+
+As explained above, we don’t stamp the file directly. Instead, we stamp the certificate. As it includes the hash of the document, this also proves the existence and integrity of the document itself.
+
+The stamps need to referenced by a Bitcoin transaction. Thus, attestation can take [more than 60 minutes](https://blockchain.info/charts/avg-confirmation-time).
+
+> Learn more about [how to verify documents yourself](/blog/verifying-documents-from-ledgy-on-the-blockchain/).
+
+### Implementation
+
+To follow the mantra **code-is-law**, as populated by the smart contract community, we give code samples to describe the implementation of the blockchain notary on Ledgy. We use Base64 encoding for binary assets, like signed JSON and OTS files.
+
+Whenever a document is uploaded to Ledgy, the server generates a signed certificate based on [tweetnacl-js](https://github.com/dchest/tweetnacl-js):
+
+```javascript
+import { sign } from 'tweetnacl';
+import { Buffer } from 'buffer';
+
+const secretKey = Buffer.from('…', 'base64');
+
+const generateCertificateForDocument =
+(filename: string, sha256: string, user: string, email: string, userId: string, companyId: string, createdByLedgy: boolean): string => {
+  const certificate = JSON.stringify({
+    filename, sha256, user, email, company, createdByLedgy, userId, companyId, version: '1.0.0',
+  });
+  const signedCertificate = sign(Buffer.from(certificate), secretKey);
+  return Buffer.from(signedCertificate).toString('base64');
+}
+```
+
+Next, we stamp the certificate on the blockchain using [javascript-opentimestamps](https://github.com/opentimestamps/javascript-opentimestamps):
+
+```javascript
+import OTS from 'javascript-opentimestamps';
+
+import { getOtsFromCertificate, encodeOts } from './helpers.js';
+
+export const stampCertificate = async (certificate: string): Promise<string> => {
+  const ots = getOtsFromCertificate(certificate);
+  await OTS.stamp(ots);
+  return encodeOts(ots);
+};
+```
+
+Finally, to verify a document on the blockchain, we need the *certificate*, *OTS*, the *certificate public key,* and, of course, the *PDF document*.
+
+```javascript
+import OTS from 'javascript-opentimestamps';
+import { SHA256, getOtsFromCertificate, decodeOts } from './helpers.js';
+
+const publicKey = Buffer.from('fTrOd0HG8opCEgb+dXvNUXQmzPQqyMGC/IQinDJof1g=', 'base64');
+
+const verifyDocumentOnBlockchain = async (certificate: string, ots: string, docUrl: string) => {
+  const verifiedCertificate = sign.open(Buffer.from(certificate, 'base64'), publickKey);
+  if (!verifiedCertificate) {
+    throw new Error('WARNING: Certificate is invalid');
+  }
+
+  const metadata = JSON.parse(Buffer.from(verifiedCertificate).toString());
+  const sha256 = await SHA256(await (await fetch(docUrl)).arrayBuffer());
+  if (sha256 !== metadata.sha256) {
+    throw new Error('WARNING: Document has been modified');
+  }
+
+  const detachedOts = decodeOts(ots);
+  const { bitcoin } = await OTS.verify(detachedOts, getOtsFromCertificate(certificate));
+  if (!bitcoin) {
+    throw new Error('WARNING: Verification on Bitcoin blockchain failed');
+  }
+
+  return { otsAttestedAt: new Date(Number(bitcoin.timestamp) * 1000) });
+}
+```
+
+For completeness and better understanding, here are the helpers, that were used in the previous definitions:
+
+```javascript
+const hexToBytes = (hex: string): Array<number> => {
+  const bytes = [];
+  for (let c = 0; c < hex.length; c += 2) {
+    bytes.push(parseInt(hex.substr(c, 2), 16));
+  }
+  return bytes;
+};
+
+export const SHA256 = async (doc: ArrayBuffer): Promise<string> => (
+  crypto ?
+    crypto.createHash('sha256').update(doc).digest('hex') :
+    Buffer.from(await window.crypto.subtle.digest('SHA-256', doc)).toString('hex')
+);
+
+export const getOtsFromCertificate = (certificate: string) =>
+  OTS.DetachedTimestampFile.fromHash(
+    new OTS.Ops.OpSHA256(),
+    hexToBytes(await SHA256(Buffer.from(certificate, 'base64'))),
+  );
+
+export const encodeOts = (ots: Object): string =>
+  Buffer.from(ots.serializeToBytes()).toString('base64');
+export const decodeOts = (ots: string): Object =>
+  OTS.DetachedTimestampFile.deserialize(Buffer.from(ots, 'base64'));
+```
+
+### Final Words
+
+We hope that our implementation of the attesting the integrity and upload date of documents on our platform will help reduce time spent in the fundraising process. We also believe that this straightforward combination of proven systems gives a new insight into the use of blockchain technology, besides the current hype of raising large amounts of cash through ICOs or speculating with alternative coins and tokens.
+
+In the future, we would like to store the raw data and logic of the share ledger on the blockchain. The current system works with the human-readable output at specific points in time. This allows us to modify and develop the internal representation of the data, which is crucial as Ledgy is still evolving to become a highly mature and accepted system for equity management in private companies. Moving the data and logic to the blockchain would finally enable the management of companies independently of any physical institution.

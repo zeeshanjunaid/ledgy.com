@@ -20,7 +20,12 @@ module.exports = {
     { resolve: 'gatsby-source-filesystem', options: { name: 'markdown', path: `${src}/markdown` } },
     {
       resolve: 'gatsby-mdx',
-      options: { gatsbyRemarkPlugins: [{ resolve: 'gatsby-remark-katex' }] }
+      options: {
+        gatsbyRemarkPlugins: [
+          { resolve: 'gatsby-remark-katex' },
+          { resolve: 'gatsby-remark-prismjs' }
+        ]
+      }
     },
     'gatsby-plugin-catch-links',
     { resolve: 'gatsby-plugin-google-tagmanager', options: { id: 'GTM-P48JT9B' } },

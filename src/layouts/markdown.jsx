@@ -22,22 +22,34 @@ export default ({
   const { notLocalized } = pageContext;
   const { siteUrl } = data.site.siteMetadata;
 
-  const img = ({ src, align, ...props }: { src: string, align: string }) => {
-    const image = (frontmatter.images.find(i => i.childImageSharp.fluid.originalName === src) || {})
-      .childImageSharp;
-    if (!image) return <p>Image not found: {src}</p>;
+  const img = ({
+    src,
+    align,
+    caption,
+    size,
+    ...props
+  }: {
+    src: string,
+    align: string,
+    caption: string,
+    size: string
+  }) => {
+    const image = (
+      frontmatter.images.find(i => i && i.childImageSharp.fluid.originalName === src) || {}
+    ).childImageSharp;
+    if (!image) return <strong>Image not found: {src}</strong>;
     return (
-      <Img
-        {...(frontmatter.images.find(i => i.childImageSharp.fluid.originalName === src) || {})
-          .childImageSharp || []}
-        {...props}
-        className={
-          ((align === 'left' || align === 'right') && `float-md-${align} m-3`) ||
-          (align === 'center' && 'mx-auto my-3') ||
-          ''
-        }
-        style={align ? { width: '400px' } : {}}
-      />
+      <figure
+        className={align ? `mx-auto float-md-${align} size-md-small m-6` : 'mx-auto my-6'}
+        style={size ? { width: `${size}px` } : {}}
+      >
+        <Img {...image} {...props} />
+        {caption && (
+          <figcaption className="text-muted small px-3 font-weight-light mt-1">
+            {caption}
+          </figcaption>
+        )}
+      </figure>
     );
   };
 
@@ -69,7 +81,7 @@ export default ({
       <main className="main-content">
         <section className="section">
           <div className="container container-small">
-            <div className="markdown">
+            <div className="markdown clearfix">
               <Renderer>{code.body}</Renderer>
             </div>
             <div className="text-right pt-4">
@@ -105,18 +117,8 @@ export const pageQuery = graphql`
           publicURL
           childImageSharp {
             fluid {
-              base64
-              tracedSVG
-              aspectRatio
-              src
-              srcSet
-              srcWebp
-              srcSetWebp
-              sizes
-              originalImg
+              ...GatsbyImageSharpFluid
               originalName
-              presentationWidth
-              presentationHeight
             }
           }
         }

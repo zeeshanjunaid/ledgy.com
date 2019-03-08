@@ -3,9 +3,7 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
 import { withI18n, Trans } from '@lingui/react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faChevronRight,
   faUsers,
   faPlug,
   faDesktop,
@@ -17,7 +15,7 @@ import {
 
 import { PrivacyElement, PrivacyRow } from '../components/Privacy';
 import Section from '../components/Section';
-import { Title } from '../layouts/utils';
+import { Title, ChevronRight } from '../layouts/utils';
 
 const Header = ({ i18n }: Props) => (
   <header className="header text-white bg-ledgy">
@@ -103,7 +101,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
                   We live up to highest security standards. We improve them continuously.&nbsp;
                   <Link href to={`${props.prefix}/security/`}>
                     Check out what we do
-                    <FontAwesomeIcon icon={faChevronRight} className="fs-12 ml-2" />
+                    <ChevronRight />
                   </Link>
                 </Trans>
               }
@@ -138,7 +136,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
                   information.&nbsp;
                   <Link href to={`${props.prefix}/privacy#third-parties`}>
                     See which ones below
-                    <FontAwesomeIcon icon={faChevronRight} className="fs-12 ml-2" />
+                    <ChevronRight />
                   </Link>
                 </Trans>
               }
@@ -210,7 +208,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
             continuously.&nbsp;
             <Link href to={`${props.prefix}/security/`}>
               See what we do
-              <FontAwesomeIcon icon={faChevronRight} className="fs-12 ml-2" />
+              <ChevronRight />
             </Link>
           </p>
           <p>
