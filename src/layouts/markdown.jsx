@@ -37,7 +37,6 @@ export default ({
     const image = (
       frontmatter.images.find(i => i && i.childImageSharp.fluid.originalName === src) || {}
     ).childImageSharp;
-    if (!image) return <strong>Image not found: {src}</strong>;
     return (
       <figure
         className={align ? `mx-auto float-md-${align} size-md-small m-6` : 'mx-auto my-6'}
