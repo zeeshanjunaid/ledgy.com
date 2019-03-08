@@ -317,7 +317,6 @@ const TemplateWrapper = withI18n()((props: SiteProps) => (
 
             {/* Twitter social card */}
             <meta name="twitter:site" content="@Ledgy" />
-            <meta name="twitter:card" content="summary_large_image" />
 
             <link rel="alternate" href={EnPathname} hrefLang="x-default" />
             <link rel="alternate" href={EnPathname} hrefLang="en" />

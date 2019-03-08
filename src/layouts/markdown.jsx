@@ -103,7 +103,15 @@ export default ({
 };
 
 export const pageQuery = graphql`
+  fragment FeaturedImage on ImageSharp {
+    fluid(maxWidth: 200, maxHeight: 200, cropFocus: CENTER) {
+      ...GatsbyImageSharpFluid
+    }
+  }
   query($id: String) {
+    ledgy: imageSharp(fluid: { originalName: { regex: "/ledgy.png/" } }) {
+      ...FeaturedImage
+    }
     mdx(id: { eq: $id }) {
       id
       fields {

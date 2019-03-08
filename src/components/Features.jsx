@@ -101,7 +101,6 @@ export const FeatureLinks = ({
   </div>
 );
 
-// eslint-disable-next-line no-undef
 export const FeaturesFragment = graphql`
   fragment FeaturesFragment on Query {
     consistency: imageSharp(fluid: { originalName: { regex: "/consistency.png/" } }) {
