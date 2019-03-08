@@ -36,13 +36,13 @@ const PostLink = ({
           </Link>
         </div>
         <div className="col-md-9 p-5">
-          <div className="row mb-4">
-            <div className="col-12 col-md-10">
+          <div className="row mb-4 mr-0">
+            <div className="col-md-10">
               <Link href to={to}>
-                <h4 className="d-inline">{post.frontmatter.title}</h4>
+                <h5>{post.frontmatter.title}</h5>
               </Link>
             </div>
-            <div className="col-12 col-md-2 text-muted">{post.frontmatter.date}</div>
+            <small className="col-md-2 text-md-right text-muted">{post.frontmatter.date}</small>
           </div>
           <p className="mb-0">{post.excerpt}</p>
           <Link className="small ml-auto" href to={to}>
