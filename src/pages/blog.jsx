@@ -96,14 +96,14 @@ export default withI18n()(({ i18n, data, prefix }: Props) => (
 ));
 
 export const pageQuery = graphql`
-  fragment FeaturedImage on ImageSharp {
+  fragment CoverImage on ImageSharp {
     fluid(maxWidth: 200, maxHeight: 200, cropFocus: CENTER) {
       ...GatsbyImageSharpFluid
     }
   }
   query {
     ledgy: imageSharp(fluid: { originalName: { regex: "/ledgy.png/" } }) {
-      ...FeaturedImage
+      ...CoverImage
     }
     allMdx(
       filter: { fields: { slug: { regex: "/^/blog//" } } }
@@ -122,7 +122,7 @@ export const pageQuery = graphql`
             coverImage {
               publicURL
               childImageSharp {
-                ...FeaturedImage
+                ...CoverImage
               }
             }
           }
