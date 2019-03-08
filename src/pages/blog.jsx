@@ -11,7 +11,7 @@ type PostProps = {|
   id: string,
   fields: {| slug: string |},
   excerpt: string,
-  frontmatter: {| date: string, title: string, featuredImage: ?Object |}
+  frontmatter: {| date: string, title: string, coverImage: ?Object |}
 |};
 
 const PostLink = ({
@@ -31,7 +31,7 @@ const PostLink = ({
           <Link href to={to}>
             <Img
               className="fit-cover"
-              {...(post.frontmatter.featuredImage || {}).childImageSharp || defaultImage}
+              {...(post.frontmatter.coverImage || {}).childImageSharp || defaultImage}
             />
           </Link>
         </div>
@@ -119,7 +119,7 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "DD MMM YYYY")
             title
-            featuredImage {
+            coverImage {
               publicURL
               childImageSharp {
                 ...FeaturedImage

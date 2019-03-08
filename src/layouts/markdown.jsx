@@ -62,7 +62,11 @@ export default ({
       <Title
         title={frontmatter.title}
         description={frontmatter.description}
-        thumbnailUrl={frontmatter.thumbnailUrl ? `${siteUrl}${frontmatter.thumbnailUrl}` : ''}
+        thumbnailUrl={
+          frontmatter.coverImage
+            ? `${siteUrl}${frontmatter.coverImage.childImageSharp.fixed.src}`
+            : ''
+        }
       />
       <header className="header text-white bg-ledgy">
         <div className="container text-center">
@@ -103,15 +107,7 @@ export default ({
 };
 
 export const pageQuery = graphql`
-  fragment FeaturedImage on ImageSharp {
-    fluid(maxWidth: 200, maxHeight: 200, cropFocus: CENTER) {
-      ...GatsbyImageSharpFluid
-    }
-  }
   query($id: String) {
-    ledgy: imageSharp(fluid: { originalName: { regex: "/ledgy.png/" } }) {
-      ...FeaturedImage
-    }
     mdx(id: { eq: $id }) {
       id
       fields {
@@ -120,7 +116,13 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
-        thumbnailUrl
+        coverImage {
+          childImageSharp {
+            fixed(width: 876, height: 438) {
+              src
+            }
+          }
+        }
         images {
           publicURL
           childImageSharp {
