@@ -81,7 +81,7 @@ export default ({
       <main className="main-content">
         <section className="section">
           <div className="container container-small">
-            <div className="markdown">
+            <div className="markdown clearfix">
               <Renderer>{code.body}</Renderer>
             </div>
             <div className="text-right pt-4">
