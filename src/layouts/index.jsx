@@ -262,6 +262,9 @@ const Footer = (props: LayoutProps) => (
               >
                 Option Pools
               </Link>
+              <Link className="nav-link" href to={`${props.prefix}/blog/convertible-loans/`}>
+                Convertible Loans
+              </Link>
             </div>
           </div>
         </div>

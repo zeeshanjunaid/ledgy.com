@@ -62,7 +62,11 @@ export default ({
       <Title
         title={frontmatter.title}
         description={frontmatter.description}
-        thumbnailUrl={frontmatter.thumbnailUrl ? `${siteUrl}${frontmatter.thumbnailUrl}` : ''}
+        thumbnailUrl={
+          frontmatter.coverImage
+            ? `${siteUrl}${frontmatter.coverImage.childImageSharp.fixed.src}`
+            : ''
+        }
       />
       <header className="header text-white bg-ledgy">
         <div className="container text-center">
@@ -84,8 +88,9 @@ export default ({
             <div className="markdown clearfix">
               <Renderer>{code.body}</Renderer>
             </div>
-            <div className="text-right pt-4">
-              <small>
+            <div className="d-flex pt-4">
+              {frontmatter.date && <small>{frontmatter.date}</small>}
+              <small className="ml-auto">
                 <a
                   href={`${githubUrl}edit/master/src/markdown${fields.slug.slice(0, -1)}.mdx`}
                   {...targetBlank}
@@ -112,7 +117,14 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
-        thumbnailUrl
+        date(formatString: "DD MMM YYYY")
+        coverImage {
+          childImageSharp {
+            fixed(width: 1024, height: 536) {
+              src
+            }
+          }
+        }
         images {
           publicURL
           childImageSharp {
