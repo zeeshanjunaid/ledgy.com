@@ -46,7 +46,7 @@ const PostLink = ({
           </div>
           <p className="mb-0">{post.excerpt}</p>
           <Link className="small ml-auto" href to={to}>
-            Read more
+            <Trans>Read more</Trans>
             <ChevronRight />
           </Link>
         </div>
