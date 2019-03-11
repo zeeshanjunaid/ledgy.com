@@ -118,18 +118,10 @@ h1 {
 }
 
 .about {
-  display: flex;
-  justify-content: center;
   border-top: 1px solid $gray-200;
 
-  .author-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    h5 {
-      line-height: 0.6;
-    }
+  h5 {
+    line-height: 0.6;
   }
 
   .gatsby-image-wrapper {

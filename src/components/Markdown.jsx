@@ -10,9 +10,9 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { team, type AuthorProps } from '../layouts/team';
 
 const About = ({ about, img }: {| about: AuthorProps, img: Object |}) => (
-  <div className="about pt-3 mt-3">
+  <div className="about d-flex justify-content-center pt-3 mt-3">
     <Img {...img} alt={about.name} className="m-4 rounded-circle float-left" />
-    <div className="author-info">
+    <div className="d-flex flex-column justify-content-center align-items-end">
       <h5 className="pt-3">{about.name}</h5>
       <h5 className="mb-3">
         <small className="text-nowrap">{about.role}</small>
