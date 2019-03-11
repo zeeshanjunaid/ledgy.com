@@ -29,20 +29,16 @@ const About = ({ about, img }: {| about: AuthorProps, img: Object |}) => (
   </div>
 );
 
-export const Author = ({ name }: { name: string }) => {
-  const author = team[name];
-  if (!author) return null;
-  return (
-    <StaticQuery
-      query={graphql`
-        query {
-          ...TeamFragment
-        }
-      `}
-      render={data => <About about={author} img={data[name]} />}
-    />
-  );
-};
+export const Author = ({ name }: { name: string }) => (
+  <StaticQuery
+    query={graphql`
+      query {
+        ...TeamFragment
+      }
+    `}
+    render={data => <About about={team[name]} img={data[name]} />}
+  />
+);
 
 export const Image = ({
   src,
