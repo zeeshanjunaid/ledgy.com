@@ -8,7 +8,7 @@ import { faPen } from '@fortawesome/free-solid-svg-icons';
 import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 import { withMDXScope } from 'gatsby-mdx/context';
 
-import { Author, Image } from '../components/Markdown';
+import { Author, Image, type ImageProps } from '../components/Markdown';
 import { Title, githubUrl, targetBlank } from '../layouts/utils';
 
 export default ({
@@ -22,7 +22,7 @@ export default ({
   const { notLocalized } = pageContext;
   const { siteUrl } = data.site.siteMetadata;
 
-  const img = ({ src, ...props }: { src: string }) => (
+  const img = ({ src, ...props }: {| src: string, ...ImageProps |}) => (
     <Image
       {...props}
       img={

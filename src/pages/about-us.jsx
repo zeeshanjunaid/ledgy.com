@@ -30,13 +30,6 @@ const Header = ({ i18n }: Props) => (
   </header>
 );
 
-type ProfileProps = {
-  name: string,
-  description: string,
-  img: Object,
-  fade: string
-};
-
 const Founder = withI18n()(
   ({
     name,
@@ -70,7 +63,15 @@ const Founder = withI18n()(
   )
 );
 
-const Investor = ({ name, description, img }: ProfileProps) => (
+const Investor = ({
+  name,
+  description,
+  img
+}: {|
+  name: string,
+  description: string,
+  img: Object
+|}) => (
   <div className="col-12 col-md-4 team-2">
     {img && <Img {...img} alt={name} />}
     <h6>{name}</h6>
