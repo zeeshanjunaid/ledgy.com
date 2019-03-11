@@ -32,8 +32,8 @@ msgid "A basic cap table"
 msgstr "A basic cap table"
 
 #: src/layouts/index.jsx:134
-#: src/pages/about-us.jsx:16
-#: src/pages/about-us.jsx:24
+#: src/pages/about-us.jsx:17
+#: src/pages/about-us.jsx:25
 msgid "About us"
 msgstr "About us"
 
@@ -101,11 +101,11 @@ msgstr "Audit trails"
 msgid "Available shares for transfer"
 msgstr "Available shares for transfer"
 
-#: src/pages/about-us.jsx:189
+#: src/pages/about-us.jsx:157
 msgid "Backed by"
 msgstr "Backed by"
 
-#: src/pages/about-us.jsx:201
+#: src/pages/about-us.jsx:169
 msgid "Backing the creators of our future"
 msgstr "Backing the creators of our future"
 
@@ -113,14 +113,14 @@ msgstr "Backing the creators of our future"
 msgid "Backups"
 msgstr "Backups"
 
-#: src/pages/about-us.jsx:142
+#: src/layouts/team.jsx:47
 msgid "Ben has extensive experience in project management and has worked for two years as software-engineer in an ETH research group"
 msgstr "Ben has extensive experience in project management and has worked for two years as software-engineer in an ETH research group"
 
 #: src/layouts/index.jsx:64
 #: src/layouts/index.jsx:137
-#: src/layouts/index.jsx:257
-#: src/pages/blog.jsx:40
+#: src/layouts/index.jsx:254
+#: src/pages/blog.jsx:61
 msgid "Blog"
 msgstr "Blog"
 
@@ -152,7 +152,7 @@ msgstr "Cap table during round modeling"
 msgid "Check back at your <0>Cap Table</0> and select the <1>fully diluted</1> view to see the newly created pool and employee incentives. You can even view your diluted cap table with all options aggregated in their pool, or distributed to each person (detailed view)."
 msgstr "Check back at your <0>Cap Table</0> and select the <1>fully diluted</1> view to see the newly created pool and employee incentives. You can even view your diluted cap table with all options aggregated in their pool, or distributed to each person (detailed view)."
 
-#: src/pages/about-us.jsx:124
+#: src/layouts/team.jsx:21
 msgid "Coding since high school, Timo got an award for the best master thesis in computer science and worked one year as computer engineer in robotics"
 msgstr "Coding since high school, Timo got an award for the best master thesis in computer science and worked one year as computer engineer in robotics"
 
@@ -233,7 +233,7 @@ msgstr "Did you know that many cap tables are incomplete or contain errors? Trac
 msgid "Did you notice the number in the center bottom? Any time you transfer shares from one shareholder to another, Ledgy will show you how many shares that particular shareholder has <0>available</0> at that given point in time."
 msgstr "Did you notice the number in the center bottom? Any time you transfer shares from one shareholder to another, Ledgy will show you how many shares that particular shareholder has <0>available</0> at that given point in time."
 
-#: src/pages/about-us.jsx:231
+#: src/pages/about-us.jsx:199
 msgid "Digital Entrepreneur and Investor. Security, Crypto & Privacy Expert"
 msgstr "Digital Entrepreneur and Investor. Security, Crypto & Privacy Expert"
 
@@ -249,7 +249,7 @@ msgstr "Discover more about Ledgy"
 msgid "Distribute Investment Pro-Rata"
 msgstr "Distribute Investment Pro-Rata"
 
-#: src/pages/about-us.jsx:168
+#: src/pages/about-us.jsx:136
 msgid "Do you feel working for Google is boring because they don’t grow by 1,000× during the next four years? Building a product is fantastic, but how about creating a whole team around it? Are you a web developer that eats bugs for breakfast? Fascinated by cutting-edge technology like React, blockchain or space elevators?<0/><1/><2>Learn more<3/></2>"
 msgstr "Do you feel working for Google is boring because they don’t grow by 1,000× during the next four years? Building a product is fantastic, but how about creating a whole team around it? Are you a web developer that eats bugs for breakfast? Fascinated by cutting-edge technology like React, blockchain or space elevators?<0/><1/><2>Learn more<3/></2>"
 
@@ -300,11 +300,11 @@ msgstr "Encrypted connection"
 msgid "Enter your email…"
 msgstr "Enter your email…"
 
-#: src/pages/about-us.jsx:226
+#: src/pages/about-us.jsx:194
 msgid "Entrepreneur, Business Angel, Founder of Doodle.com"
 msgstr "Entrepreneur, Business Angel, Founder of Doodle.com"
 
-#: src/pages/about-us.jsx:211
+#: src/pages/about-us.jsx:179
 msgid "Entrepreneur, Technologist, Founder of Doodle.com"
 msgstr "Entrepreneur, Technologist, Founder of Doodle.com"
 
@@ -324,7 +324,7 @@ msgstr "Exit modeling"
 msgid "Explore new scenarios for upcoming financing rounds interactively"
 msgstr "Explore new scenarios for upcoming financing rounds interactively"
 
-#: src/layouts/index.jsx:252
+#: src/layouts/index.jsx:249
 msgid "FAQ"
 msgstr "FAQ"
 
@@ -352,7 +352,7 @@ msgstr "Finished? Go back to the <0>Cap Table</0> page and view the result. At a
 msgid "For even better protection of accounts. And our implementation is <0>open source</0>!"
 msgstr "For even better protection of accounts. And our implementation is <0>open source</0>!"
 
-#: src/pages/about-us.jsx:236
+#: src/pages/about-us.jsx:204
 msgid "Founder of Meisser Economics, Bitcoin Association Switzerland, and Wuala"
 msgstr "Founder of Meisser Economics, Bitcoin Association Switzerland, and Wuala"
 
@@ -386,7 +386,7 @@ msgstr "Funding round modeling"
 msgid "Get Started"
 msgstr "Get Started"
 
-#: src/layouts/index.jsx:249
+#: src/layouts/index.jsx:246
 msgid "Getting Started"
 msgstr "Getting Started"
 
@@ -398,11 +398,11 @@ msgstr "Give view or admin access to your stakeholders"
 msgid "HTTP headers prevent cross-site scripting and code injection (<0>A+ rating</0>)"
 msgstr "HTTP headers prevent cross-site scripting and code injection (<0>A+ rating</0>)"
 
-#: src/pages/about-us.jsx:206
+#: src/pages/about-us.jsx:174
 msgid "Healthcare & Technology Venture Capital since 2001"
 msgstr "Healthcare & Technology Venture Capital since 2001"
 
-#: src/layouts/index.jsx:244
+#: src/layouts/index.jsx:241
 msgid "Help"
 msgstr "Help"
 
@@ -454,7 +454,7 @@ msgstr "Interested in our enterprise offer?<0/><1>Drop us an email</1> or use th
 msgid "Investment overview"
 msgstr "Investment overview"
 
-#: src/pages/about-us.jsx:241
+#: src/pages/about-us.jsx:209
 msgid "Investor & Consultant (Farmy.ch, Flatfox.ch), Founder of Students.ch"
 msgstr "Investor & Consultant (Farmy.ch, Flatfox.ch), Founder of Students.ch"
 
@@ -526,7 +526,7 @@ msgstr "Liquidation preferences"
 msgid "Log In"
 msgstr "Log In"
 
-#: src/pages/about-us.jsx:246
+#: src/pages/about-us.jsx:214
 msgid "M&A and Private Equity Lawyer with a focus on start-up legal advise, Smartuplaw.ch"
 msgstr "M&A and Private Equity Lawyer with a focus on start-up legal advise, Smartuplaw.ch"
 
@@ -546,7 +546,7 @@ msgstr "Managing directors"
 msgid "Many successful companies already use Ledgy for their equity plans and cap table"
 msgstr "Many successful companies already use Ledgy for their equity plans and cap table"
 
-#: src/pages/about-us.jsx:17
+#: src/pages/about-us.jsx:18
 msgid "Meet the team behind Ledgy that went out to build a genuinely great product. Learn more about the people who trust in us."
 msgstr "Meet the team behind Ledgy that went out to build a genuinely great product. Learn more about the people who trust in us."
 
@@ -586,11 +586,11 @@ msgstr "Oh, it’s tax season again, and 50 holding confirmations are waiting to
 msgid "Once your incentive plan is on Ledgy, it’s time to engage your employees. They can log in to Ledgy themselves with their email address at any time and see how many shares they have already vested. Invite them with a click on the shareholders page."
 msgstr "Once your incentive plan is on Ledgy, it’s time to engage your employees. They can log in to Ledgy themselves with their email address at any time and see how many shares they have already vested. Invite them with a click on the shareholders page."
 
-#: src/pages/about-us.jsx:196
+#: src/pages/about-us.jsx:164
 msgid "One of Europe's oldest and largest early-stage VC funds"
 msgstr "One of Europe's oldest and largest early-stage VC funds"
 
-#: src/pages/about-us.jsx:216
+#: src/pages/about-us.jsx:184
 msgid "One of the most active Swiss early-stage angel investors"
 msgstr "One of the most active Swiss early-stage angel investors"
 
@@ -618,7 +618,7 @@ msgstr "Option termination"
 msgid "Or have a quick look at our <0>live demo</0>."
 msgstr "Or have a quick look at our <0>live demo</0>."
 
-#: src/pages/about-us.jsx:151
+#: src/layouts/team.jsx:60
 msgid "Oriol has a background in biotechnology and is passionate about any code-related matter, especially front-end development"
 msgstr "Oriol has a background in biotechnology and is passionate about any code-related matter, especially front-end development"
 
@@ -687,6 +687,7 @@ msgstr "Product"
 
 #: src/components/SecurityRow.jsx:22
 #: src/components/SecurityRow.jsx:37
+#: src/pages/blog.jsx:49
 msgid "Read more"
 msgstr "Read more"
 
@@ -797,7 +798,7 @@ msgstr "Single source of truth"
 msgid "Space elevator"
 msgstr "Space elevator"
 
-#: src/pages/about-us.jsx:221
+#: src/pages/about-us.jsx:189
 msgid "Specialized in investments in early-stage technology startups"
 msgstr "Specialized in investments in early-stage technology startups"
 
@@ -833,7 +834,7 @@ msgstr "Stored encrypted with the battle-tested <0>bcrypt algorithm</0> at 13 ro
 msgid "Strong passwords"
 msgstr "Strong passwords"
 
-#: src/layouts/markdown.jsx:87
+#: src/layouts/markdown.jsx:78
 msgid "Suggest changes"
 msgstr "Suggest changes"
 
@@ -849,7 +850,7 @@ msgstr "Takes too long to import your data? <0>We’ll do it for you!</0>"
 msgid "Team"
 msgstr "Team"
 
-#: src/pages/blog.jsx:49
+#: src/pages/blog.jsx:70
 msgid "The Ledgy Blog"
 msgstr "The Ledgy Blog"
 
@@ -886,12 +887,11 @@ msgstr "The transaction history will tell you exactly what happened to your owne
 msgid "Third Party Contractors"
 msgstr "Third Party Contractors"
 
-#: src/layouts/markdown.jsx:67
-#: src/pages/blog.jsx:52
+#: src/layouts/markdown.jsx:57
 msgid "This page is only available in English."
 msgstr "This page is only available in English."
 
-#: src/pages/blog.jsx:41
+#: src/pages/blog.jsx:62
 msgid "Thoughts on cap tables, financing rounds, and legal issues around running and managing a startup."
 msgstr "Thoughts on cap tables, financing rounds, and legal issues around running and managing a startup."
 
@@ -988,7 +988,7 @@ msgstr "We understand how sensitive cap table information is for any business. T
 msgid "We want to empower entrepreneurs. They should be able to focus on their business, not on bureaucratic paperwork. That’s why we want to establish a new, state-of-the-art tool to manage and exchange securities in private companies. Our goal is to make shares management a breeze for both companies and shareholders."
 msgstr "We want to empower entrepreneurs. They should be able to focus on their business, not on bureaucratic paperwork. That’s why we want to establish a new, state-of-the-art tool to manage and exchange securities in private companies. Our goal is to make shares management a breeze for both companies and shareholders."
 
-#: src/pages/about-us.jsx:165
+#: src/pages/about-us.jsx:133
 msgid "We’re hiring!"
 msgstr "We’re hiring!"
 
@@ -1020,7 +1020,7 @@ msgstr "With Ledgy you can download a beautiful snapshot of your company’s sha
 msgid "Work with us"
 msgstr "Work with us"
 
-#: src/pages/about-us.jsx:133
+#: src/layouts/team.jsx:34
 msgid "Yoko graduated from ETH and Oxford and was president of Swissloop, enabling the team to win the 3rd price at the SpaceX Hyperloop competition"
 msgstr "Yoko graduated from ETH and Oxford and was president of Swissloop, enabling the team to win the 3rd price at the SpaceX Hyperloop competition"
 
