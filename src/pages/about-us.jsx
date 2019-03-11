@@ -9,6 +9,7 @@ import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 import { Title, ChevronRight } from '../layouts/utils';
+import { team, type AuthorProps } from '../layouts/team';
 
 const Header = ({ i18n }: Props) => (
   <header className="header text-white bg-ledgy">
@@ -35,40 +36,38 @@ type ProfileProps = {
   img: Object,
   fade: string
 };
-type FounderProps = {
-  ...$Exact<ProfileProps>,
-  func: string,
-  twitterlink: string,
-  linkedinlink: string,
-  mail: string
-};
 
-const Founder = ({
-  name,
-  func,
-  description,
-  img,
-  twitterlink,
-  linkedinlink,
-  mail
-}: FounderProps) => (
-  <div className="col-12 col-md-6 team-1">
-    {img && <Img {...img} alt={name} />}
-    <h6>{name}</h6>
-    <small>{func}</small>
-    <p>{description}</p>
-    <div className="social social-boxed social-rounded social-gray">
-      <a className="social-mail" href={`mailto:${mail}`}>
-        <FontAwesomeIcon icon={faEnvelope} title="Email" />
-      </a>
-      <a className="social-twitter" href={twitterlink}>
-        <FontAwesomeIcon icon={faTwitter} title="Twitter" />
-      </a>
-      <a className="social-linkedin" href={linkedinlink}>
-        <FontAwesomeIcon icon={faLinkedin} title="LinkedIn" />
-      </a>
+const Founder = withI18n()(
+  ({
+    name,
+    role,
+    description,
+    img,
+    twitter,
+    linkedIn,
+    mail
+  }: {|
+    ...AuthorProps,
+    img: Object
+  |}) => (
+    <div className="col-12 col-md-6 team-1">
+      {img && <Img {...img} className="mx-auto" alt={name} />}
+      <h6>{name}</h6>
+      <small>{role}</small>
+      <p>{description}</p>
+      <div className="social social-boxed social-rounded social-gray">
+        <a className="social-mail" href={`mailto:${mail}`}>
+          <FontAwesomeIcon icon={faEnvelope} title="Email" />
+        </a>
+        <a className="social-twitter" href={twitter}>
+          <FontAwesomeIcon icon={faTwitter} title="Twitter" />
+        </a>
+        <a className="social-linkedin" href={linkedIn}>
+          <FontAwesomeIcon icon={faLinkedin} title="LinkedIn" />
+        </a>
+      </div>
     </div>
-  </div>
+  )
 );
 
 const Investor = ({ name, description, img }: ProfileProps) => (
@@ -118,42 +117,10 @@ const IndexPage = (props: Props) => {
             </header>
 
             <div className="row gap-y2">
-              <Founder
-                name="Timo Horstschaefer"
-                func="Co-Founder & CTO"
-                description={i18n.t`Coding since high school, Timo got an award for the best master thesis in computer science and worked one year as computer engineer in robotics`}
-                twitterlink="https://twitter.com/thrstschfr"
-                linkedinlink="https://www.linkedin.com/in/timohorstschaefer/"
-                mail="timo@ledgy.com"
-                img={data.timo}
-              />
-              <Founder
-                name="Yoko Spirig"
-                func="Co-Founder & CPO"
-                description={i18n.t`Yoko graduated from ETH and Oxford and was president of Swissloop, enabling the team to win the 3rd price at the SpaceX Hyperloop competition`}
-                twitterlink="https://twitter.com/YokoSpirig"
-                linkedinlink="https://www.linkedin.com/in/yokospirig/"
-                mail="yoko@ledgy.com"
-                img={data.yoko}
-              />
-              <Founder
-                name="Ben Brandt"
-                func="Co-Founder & CEO"
-                description={i18n.t`Ben has extensive experience in project management and has worked for two years as software-engineer in an ETH research group`}
-                twitterlink="https://twitter.com/bebinoy"
-                linkedinlink="https://www.linkedin.com/in/ben-elias-brandt-680a95110/"
-                mail="ben@ledgy.com"
-                img={data.ben}
-              />
-              <Founder
-                name="Oriol Vidal-Cortes"
-                func="Developer & First employee"
-                description={i18n.t`Oriol has a background in biotechnology and is passionate about any code-related matter, especially front-end development`}
-                twitterlink="https://twitter.com/ovcOS89"
-                linkedinlink="https://www.linkedin.com/in/oriol-vidal-cortes-37584080/"
-                mail="oriol@ledgy.com"
-                img={data.uri}
-              />
+              <Founder {...team.timo} img={data.timo} />
+              <Founder {...team.yoko} img={data.yoko} />
+              <Founder {...team.ben} img={data.ben} />
+              <Founder {...team.oriol} img={data.oriol} />
             </div>
           </div>
         </section>
@@ -259,29 +226,11 @@ export default withI18n()(IndexPage);
 // eslint-disable-next-line no-undef
 export const pageQuery = graphql`
   query {
+    ...TeamFragment
+
     mission: imageSharp(fluid: { originalName: { regex: "/mission/" } }) {
       fluid(maxWidth: 600) {
         ...GatsbyImageSharpFluid
-      }
-    }
-    ben: imageSharp(fluid: { originalName: { regex: "/ben.jpg/" } }) {
-      fixed(width: 245, height: 245) {
-        ...GatsbyImageSharpFixed
-      }
-    }
-    yoko: imageSharp(fluid: { originalName: { regex: "/yoko.jpg/" } }) {
-      fixed(width: 245, height: 245) {
-        ...GatsbyImageSharpFixed
-      }
-    }
-    timo: imageSharp(fluid: { originalName: { regex: "/timo.jpg/" } }) {
-      fixed(width: 245, height: 245) {
-        ...GatsbyImageSharpFixed
-      }
-    }
-    uri: imageSharp(fluid: { originalName: { regex: "/uri.jpg/" } }) {
-      fixed(width: 245, height: 245) {
-        ...GatsbyImageSharpFixed
       }
     }
 

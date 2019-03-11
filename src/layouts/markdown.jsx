@@ -9,6 +9,7 @@ import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 import { withMDXScope } from 'gatsby-mdx/context';
 import Img from 'gatsby-image';
 
+import { Author, Image } from '../components/Markdown';
 import { Title, githubUrl, targetBlank } from '../layouts/utils';
 
 export default ({
@@ -22,35 +23,15 @@ export default ({
   const { notLocalized } = pageContext;
   const { siteUrl } = data.site.siteMetadata;
 
-  const img = ({
-    src,
-    align,
-    caption,
-    size,
-    ...props
-  }: {
-    src: string,
-    align: string,
-    caption: string,
-    size: string
-  }) => {
-    const image = (
-      frontmatter.images.find(i => i && i.childImageSharp.fluid.originalName === src) || {}
-    ).childImageSharp;
-    return (
-      <figure
-        className={align ? `mx-auto float-md-${align} size-md-small m-6` : 'mx-auto my-6'}
-        style={size ? { width: `${size}px` } : {}}
-      >
-        <Img {...image} {...props} />
-        {caption && (
-          <figcaption className="text-muted small px-3 font-weight-light mt-1">
-            {caption}
-          </figcaption>
-        )}
-      </figure>
-    );
-  };
+  const img = ({ src, ...props }: { src: string }) => (
+    <Image
+      {...props}
+      img={
+        (frontmatter.images.find(i => i && i.childImageSharp.fluid.originalName === src) || {})
+          .childImageSharp
+      }
+    />
+  );
 
   const Renderer = withMDXScope(({ scope, ...props }) => (
     <MDXRenderer scope={{ ...scope, Img: img }} {...props} />
@@ -87,7 +68,7 @@ export default ({
             <div className="markdown clearfix">
               <Renderer>{code.body}</Renderer>
             </div>
-            <div className="d-flex pt-4">
+            <div className="d-flex py-4">
               {frontmatter.date && <small>{frontmatter.date}</small>}
               <small className="ml-auto">
                 <a
@@ -99,6 +80,7 @@ export default ({
                 </a>
               </small>
             </div>
+            {frontmatter.author && <Author name={frontmatter.author} />}
           </div>
         </section>
       </main>
@@ -116,6 +98,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
+        author
         date(formatString: "DD MMM YYYY")
         coverImage {
           childImageSharp {
