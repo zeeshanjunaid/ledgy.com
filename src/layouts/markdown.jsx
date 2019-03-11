@@ -7,7 +7,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen } from '@fortawesome/free-solid-svg-icons';
 import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 import { withMDXScope } from 'gatsby-mdx/context';
-import Img from 'gatsby-image';
 
 import { Author, Image } from '../components/Markdown';
 import { Title, githubUrl, targetBlank } from '../layouts/utils';
