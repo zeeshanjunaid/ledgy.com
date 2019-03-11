@@ -118,11 +118,22 @@ h1 {
 }
 
 .about {
-  h4 {
-    line-height: 1.2;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid $gray-200;
+
+  .author-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    h5 {
+      line-height: 0.6;
+    }
   }
+
   .gatsby-image-wrapper {
-    width: 120px;
+    width: 85px;
   }
 }
 

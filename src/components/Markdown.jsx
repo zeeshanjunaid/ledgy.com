@@ -10,21 +10,24 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { team, type AuthorProps } from '../layouts/team';
 
 const About = ({ about, img }: {| about: AuthorProps, img: Object |}) => (
-  <div className="about">
-    <Img {...img} alt={about.name} className="m-3 rounded-circle float-left" />
-    <h4 className="pt-4">
-      {about.name} <small className="text-nowrap">{about.role}</small>
-    </h4>
-    <div className="social social-boxed social-rounded social-gray">
-      <a className="social-mail" href={`mailto:${about.mail}`}>
-        <FontAwesomeIcon icon={faEnvelope} title="Email" />
-      </a>
-      <a className="social-twitter" href={about.twitter}>
-        <FontAwesomeIcon icon={faTwitter} title="Twitter" />
-      </a>
-      <a className="social-linkedin" href={about.linkedIn}>
-        <FontAwesomeIcon icon={faLinkedin} title="LinkedIn" />
-      </a>
+  <div className="about pt-3 mt-3">
+    <Img {...img} alt={about.name} className="m-4 rounded-circle float-left" />
+    <div className="author-info">
+      <h5 className="pt-3">{about.name}</h5>
+      <h5 className="mb-3">
+        <small className="text-nowrap">{about.role}</small>
+      </h5>
+      <div className="social social-boxed social-rounded social-gray">
+        <a className="social-mail" href={`mailto:${about.mail}`}>
+          <FontAwesomeIcon icon={faEnvelope} title="Email" />
+        </a>
+        <a className="social-twitter" href={about.twitter}>
+          <FontAwesomeIcon icon={faTwitter} title="Twitter" />
+        </a>
+        <a className="social-linkedin" href={about.linkedIn}>
+          <FontAwesomeIcon icon={faLinkedin} title="LinkedIn" />
+        </a>
+      </div>
     </div>
   </div>
 );
