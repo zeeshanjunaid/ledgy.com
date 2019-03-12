@@ -107,8 +107,26 @@ h1 {
   }
 }
 
+.team-1 {
+  .gatsby-image-wrapper {
+    max-width: 245px;
+  }
+}
+
 .container-small {
   max-width: 760px;
+}
+
+.about {
+  border-top: 1px solid $gray-200;
+
+  h5 {
+    line-height: 0.6;
+  }
+
+  .gatsby-image-wrapper {
+    width: 85px;
+  }
 }
 
 .markdown {
