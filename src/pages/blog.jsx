@@ -11,7 +11,7 @@ type PostProps = {|
   id: string,
   fields: {| slug: string |},
   excerpt: string,
-  frontmatter: {| date: string, title: string, coverImage: ?Object |}
+  frontmatter: {| date: string, title: string, description: string, coverImage: ?Object |}
 |};
 
 const PostLink = ({
@@ -44,7 +44,7 @@ const PostLink = ({
             </div>
             <small className="col-md-2 text-md-right text-muted">{post.frontmatter.date}</small>
           </div>
-          <p className="mb-0">{post.excerpt}</p>
+          <p className="mb-0">{post.frontmatter.description}</p>
           <Link className="small ml-auto" href to={to}>
             <Trans>Read more</Trans>
             <ChevronRight />
@@ -115,6 +115,7 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "DD MMM YYYY")
             title
+            description
             coverImage {
               publicURL
               childImageSharp {
