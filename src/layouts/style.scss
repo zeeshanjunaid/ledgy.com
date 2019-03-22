@@ -32,17 +32,15 @@ li > a {
 .btn {
   font-size: 0.6em;
   font-family: "Quicksand", sans-serif;
-  font-weight: 400;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); 
   transition: all 0.3s; 
-  border-radius: 10px;
+  padding: 7px 21px;
   &:hover {
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     transition: all 0.3s;
     transform: translateZ(10px) scale(1.02) !important;
   }
-  &:active, &:focus {
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23) !important;
+  &:focus, &:active {
+    box-shadow: none !important;
   }
 }
 .nav-navbar .nav-link,
@@ -94,6 +92,7 @@ h1 {
 .btn-xl {
   font-weight: 400;
   font-size: 0.8em;
+  padding: 10px 30px;
 }
 .signup {
   max-width: 600px;
@@ -191,5 +190,19 @@ h1 {
       margin-right: -2em !important;
       margin-left: 1em !important;
     }
+  }
+}
+
+#tablet-ledgy {
+  position: absolute;
+  height: 350px;
+  width: 100%;
+  top: 80vh;
+  transition: 0.1s;
+  @include media-breakpoint-up(md) {
+    height: 700px;
+    width: 700px;
+    top: 20vh;
+    right: 2vw;
   }
 }
