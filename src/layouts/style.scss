@@ -22,9 +22,6 @@ li > a {
 .bg-ledgy {
   background-image: linear-gradient(to right bottom, #053a5e, #005e85, #0086a9, #00afc9);
 }
-.main-banner {
-  height: 100vh;
-}
 .nav-link {
   font-size: 0.8em !important;
   font-family: "Quicksand", sans-serif;
@@ -75,6 +72,9 @@ h6 {
 }
 h1 {
   hyphens: none;
+  @include media-breakpoint-down(md) {
+    font-size: 2rem;
+  }
 }
 .footer {
   line-height: 1.9;
@@ -93,6 +93,9 @@ h1 {
   font-weight: 400;
   font-size: 0.8em;
   padding: 10px 30px;
+  @include media-breakpoint-down(sm) {
+    padding: 10px 20px;
+  }
 }
 .signup {
   max-width: 600px;
@@ -194,15 +197,30 @@ h1 {
 }
 
 #tablet-ledgy {
-  position: absolute;
   height: 350px;
-  width: 100%;
-  top: 80vh;
-  transition: 0.1s;
+  transition: 200ms;
+  overflow: hidden;
+  margin-top: -1.5rem;
   @include media-breakpoint-up(md) {
-    height: 700px;
-    width: 700px;
-    top: 20vh;
+    margin-top: 0;
+    height: 70vh;
+    top: 4vh;
     right: 2vw;
+  }
+}
+
+.home-banner {
+  @include media-breakpoint-up(md) {
+    height: 80vh;
+  }
+  @include media-breakpoint-up(md) {
+    height: 100vh;
+  }
+}
+
+.no-bullets-md {
+  @include media-breakpoint-down(md) {
+  list-style-type: none;
+  padding: 0;
   }
 }

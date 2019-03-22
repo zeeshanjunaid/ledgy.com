@@ -21,47 +21,58 @@ const Header = ({ i18n, data }: Props) => {
       const banner = document.querySelector('header');
       const { scrollY } = window;
       if (tablet && scrollY <= banner.clientHeight) {
-        tablet.style.transform = `rotateZ(${scrollY / 50}deg) translateY(${scrollY /
-          25}%) skew(-${scrollY / 100}deg)`;
+        tablet.style.transform = `rotateZ(${scrollY / 70}deg) translateY(${scrollY /
+          35}%) skew(-${scrollY / 140}deg)`;
       }
     }
   }, 50);
-  return (
-    <header className="header bg-ledgy main-banner">
-      <div id="tablet-ledgy" data-aos="fade-up">
-        <Img {...data.laptop} alt={i18n.t`Screenshot of the Ledgy app`} />
-      </div>
-      <div className="container">
-        <div className="row gap-y mt-2 pb-4 pb-md-6">
-          <div className="col-lg-6 mr-auto mb-4 mb-lg-0">
-            <h1 className="text-white text-center text-md-left mb-1 mb-sm-3 mb-lg-6">
-              <Trans>The Smart Equity Management Tool</Trans>
-            </h1>
 
-            <div className="text-white pb-4">
-              <p>
-                <Trans>
-                  Stay on top of your vesting schedules, options, phantom plans, and convertible
-                  loans. Get fast insights for financing rounds or exit negotiations using our
-                  built-in modeling tools.
-                  <br />
-                  <br />
-                  Are you an investor or employee? With the portfolio you will always have the
-                  latest information about your investment and vesting at your fingertips.
-                </Trans>
-              </p>
-            </div>
-            <a
-              className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-outline-light"
-              href={demoUrl}
-              {...targetBlank}
-            >
-              <Trans>See the demo</Trans>
-            </a>
-            <a className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-light" href="#try">
-              <Trans>Get Started</Trans>
-            </a>
+  return (
+    <header className="header bg-ledgy home-banner">
+      <div className="row gap-y mt-2 pb-4 pb-md-6">
+        <div className="col-lg-6 pl-lg-8">
+          <h1 className="text-white text-center text-lg-left mb-2 mb-sm-3">
+            <Trans>The Smartest Equity Management Software</Trans>
+          </h1>
+          <h5 className="text-white text-center text-lg-left pb-6">
+            Made for founders, thought for investors.
+          </h5>
+
+          <div className="text-white pb-4">
+            <ul className="no-bullets-md">
+              <Trans>
+                <li className="pb-2">
+                  Best automated <strong>cap table</strong> in Europe
+                </li>
+                <li className="pb-2">
+                  <strong>Employee participation</strong> plan management with any vesting schedule
+                  and notifications
+                </li>
+                <li className="pb-2">
+                  Intuitive modeling tools for <strong>financing round</strong> and{' '}
+                  <strong>exit planning</strong>
+                </li>
+                <li className="pb-2">
+                  Complete <strong>portfolio</strong> with the latest <strong> investment</strong>
+                  and <strong> vesting</strong>
+                  information right at your fingertips
+                </li>
+              </Trans>
+            </ul>
           </div>
+          <a
+            className="btn btn-block d-inline btn-xl mx-1 btn-round btn-outline-light"
+            href={demoUrl}
+            {...targetBlank}
+          >
+            <Trans>See the demo</Trans>
+          </a>
+          <a className="btn btn-block d-inline btn-xl mx-1 btn-round btn-light" href="#try">
+            <Trans>Get Started</Trans>
+          </a>
+        </div>
+        <div id="tablet-ledgy" className="col-lg-6" data-aos="fade-up">
+          <Img {...data.laptop} alt={i18n.t`Screenshot of the Ledgy app`} />
         </div>
       </div>
     </header>
