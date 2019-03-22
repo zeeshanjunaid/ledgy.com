@@ -37,7 +37,7 @@ module.exports = {
         short_name: 'Ledgy',
         start_url: '/',
         background_color: '#ffffff',
-        theme_color: '#20a8d8',
+        theme_color: '#0086a9',
         display: 'minimal-ui',
         icons: [
           {

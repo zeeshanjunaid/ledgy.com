@@ -10,11 +10,11 @@ import SecurityRow from '../components/SecurityRow';
 import { demoUrl, targetBlank } from '../layouts/utils';
 
 const Header = ({ i18n, data }: Props) => (
-  <header className="header bg-ledgy">
+  <header className="header bg-ledgy main-banner">
     <div className="container">
       <div className="text-white text-center mb-1 mb-sm-3 mb-lg-7">
         <h1>
-          <Trans>The missing accounting software for your equity and ESOPs</Trans>
+          <Trans>The Smart Equity Management Tool</Trans>
         </h1>
       </div>
       <div className="row gap-y mt-5 pb-4 pb-md-7">
@@ -69,13 +69,13 @@ const IndexPage = (props: Props) => (
               <Trans>You’re in good company</Trans>
             </h2>
             <p>
-              <Trans>
+              <Trans className="mb-4">
                 Many successful companies already use Ledgy for their equity plans and cap table
               </Trans>
             </p>
           </header>
 
-          <div className="partner mx-auto">
+          <div className="partner mx-auto py-4">
             <Reference img={props.data.bexio} name="Bexio" />
             <Reference img={props.data.cryptofinance} name="Crypto Finance AG" />
             <Reference img={props.data.viu} name="VIU Eyeware" />
