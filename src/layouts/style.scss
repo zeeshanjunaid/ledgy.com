@@ -24,11 +24,9 @@ li > a {
 }
 .nav-link {
   font-size: 0.8em !important;
-  font-family: "Quicksand", sans-serif;
 }
 .btn {
   font-size: 0.6em;
-  font-family: "Quicksand", sans-serif;
   transition: all 0.3s; 
   padding: 7px 21px;
   &:hover {
@@ -56,11 +54,6 @@ li > a {
   color: $white;
   background-color: $color-primary;
   border-color: $color-primary;
-  // &:hover {
-  //   background-color: #005fd2;
-  //   border-color: #005fd2;
-  //   box-shadow: 0 1px 10px rgba(80, 161, 255, 0.4);
-  // }
 }
 h1,
 h2,
@@ -94,7 +87,7 @@ h1 {
   font-size: 0.8em;
   padding: 10px 30px;
   @include media-breakpoint-down(sm) {
-    padding: 10px 20px;
+    padding: 10px 15px;
   }
 }
 .signup {
@@ -197,30 +190,24 @@ h1 {
 }
 
 #tablet-ledgy {
-  height: 350px;
   transition: 200ms;
   overflow: hidden;
-  margin-top: -1.5rem;
+  margin-left: auto;
+  margin-right: auto;
   @include media-breakpoint-up(md) {
-    margin-top: 0;
-    height: 70vh;
-    top: 4vh;
-    right: 2vw;
+    width: 75%;
+  }
+  @include media-breakpoint-up(lg) {
+    width: 120%;
+    margin-top: 10%;
   }
 }
 
 .home-banner {
   @include media-breakpoint-up(md) {
-    height: 80vh;
-  }
-  @include media-breakpoint-up(md) {
     height: 100vh;
   }
-}
-
-.no-bullets-md {
-  @include media-breakpoint-down(md) {
-  list-style-type: none;
-  padding: 0;
+  @include media-breakpoint-up(lg) {
+    height: 95vh;
   }
 }

@@ -12,7 +12,7 @@ import {
   faAngellist,
   faMedium
 } from '@fortawesome/free-brands-svg-icons';
-import 'typeface-quicksand'; // eslint-disable-line import/extensions
+import 'typeface-roboto-slab'; // eslint-disable-line import/extensions
 import 'typeface-work-sans'; // eslint-disable-line import/extensions
 import 'katex/dist/katex.min.css';
 import 'prism-themes/themes/prism-ghcolors.css';

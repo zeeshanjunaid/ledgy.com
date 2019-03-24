@@ -21,58 +21,66 @@ const Header = ({ i18n, data }: Props) => {
       const banner = document.querySelector('header');
       const { scrollY } = window;
       if (tablet && scrollY <= banner.clientHeight) {
-        tablet.style.transform = `rotateZ(${scrollY / 70}deg) translateY(${scrollY /
+        tablet.style.transform = `rotateZ(${scrollY / -70}deg) translateY(${scrollY /
           35}%) skew(-${scrollY / 140}deg)`;
       }
     }
   }, 50);
 
   return (
-    <header className="header bg-ledgy home-banner">
-      <div className="row gap-y mt-2 pb-4 pb-md-6">
-        <div className="col-lg-6 pl-lg-8">
-          <h1 className="text-white text-center text-lg-left mb-2 mb-sm-3">
-            <Trans>The Smartest Equity Management Software</Trans>
-          </h1>
-          <h5 className="text-white text-center text-lg-left pb-6">
-            Made for founders, thought for investors.
-          </h5>
-
-          <div className="text-white pb-4">
-            <ul className="no-bullets-md">
+    <header className="header bg-ledgy home-banner px-1 text-left ">
+      <div className="container">
+        <div className="row gap-y mt-md-2 pb-4 pb-md-6">
+          <div className="col-lg-6">
+            <h1 className="text-white mb-2 mb-sm-3">
               <Trans>
-                <li className="pb-2">
-                  Best automated <strong>cap table</strong> in Europe
-                </li>
-                <li className="pb-2">
-                  <strong>Employee participation</strong> plan management with any vesting schedule
-                  and notifications
-                </li>
-                <li className="pb-2">
-                  Intuitive modeling tools for <strong>financing round</strong> and{' '}
-                  <strong>exit planning</strong>
-                </li>
-                <li className="pb-2">
-                  Complete <strong>portfolio</strong> with the latest <strong> investment</strong>
-                  and <strong> vesting</strong>
-                  information right at your fingertips
-                </li>
+                <strong>The Smartest Equity Management Software</strong>
               </Trans>
-            </ul>
+            </h1>
+            <h5 className="text-white font-weight-light pb-4 pb-lg-6">
+              Made for founders, thought for investors.
+            </h5>
+
+            <div className="text-white pb-4">
+              <ul className="pl-4">
+                <Trans>
+                  <li className="pb-2 pb-lg-4">
+                    Best automated <span className="font-weight-normal">cap table</span> in Europe
+                  </li>
+                  <li className="pb-2 pb-lg-4">
+                    <span className="font-weight-normal">Employee participation</span> plan
+                    management with any vesting schedule and notifications
+                  </li>
+                  <li className="pb-2 pb-lg-4">
+                    Intuitive modeling tools for{' '}
+                    <span className="font-weight-normal">financing round</span> and{' '}
+                    <span className="font-weight-normal">exit planning</span>
+                  </li>
+                  <li className="pb-2 pb-lg-4">
+                    Complete <span className="font-weight-normal">portfolio</span> with the latest{' '}
+                    <span className="font-weight-normal"> investment </span>
+                    and <span className="font-weight-normal"> vesting </span>
+                    information right at your fingertips
+                  </li>
+                </Trans>
+              </ul>
+            </div>
+            <a
+              className="btn btn-block d-inline btn-xl mx-1 btn-round btn-outline-light"
+              href={demoUrl}
+              {...targetBlank}
+            >
+              <Trans>See the demo</Trans>
+            </a>
+            <a className="btn btn-block d-inline btn-xl mx-1 btn-round btn-light" href="#try">
+              <Trans>Get Started</Trans>
+            </a>
           </div>
-          <a
-            className="btn btn-block d-inline btn-xl mx-1 btn-round btn-outline-light"
-            href={demoUrl}
-            {...targetBlank}
-          >
-            <Trans>See the demo</Trans>
-          </a>
-          <a className="btn btn-block d-inline btn-xl mx-1 btn-round btn-light" href="#try">
-            <Trans>Get Started</Trans>
-          </a>
-        </div>
-        <div id="tablet-ledgy" className="col-lg-6" data-aos="fade-up">
-          <Img {...data.laptop} alt={i18n.t`Screenshot of the Ledgy app`} />
+          <div className="col-lg-6">
+            <div id="tablet-ledgy" data-aos="fade-up">
+              <Img {...data.laptop} alt={i18n.t`Screenshot of the Ledgy app`} />
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -148,7 +156,7 @@ export const pageQuery = graphql`
   query {
     ...FeaturesFragment
 
-    laptop: imageSharp(fluid: { originalName: { regex: "/ipad.png/" } }) {
+    laptop: imageSharp(fluid: { originalName: { regex: "/tablet-history.png/" } }) {
       fluid(maxWidth: 2000) {
         ...GatsbyImageSharpFluid_noBase64
       }
