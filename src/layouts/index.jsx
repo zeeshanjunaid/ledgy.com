@@ -1,6 +1,6 @@
 // @flow
 
-import * as React from 'react';
+import React, { useEffect } from 'react';
 import { StaticQuery, graphql, Link, navigate } from 'gatsby';
 import { I18nProvider, withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
@@ -281,6 +281,60 @@ type SiteProps = {
   location: { pathname: string }
 };
 
+const Initialize = ({ branch, pathname }: {| branch: string, pathname: string |}) => {
+  useEffect(() => {
+    window.branch = branch;
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ branch });
+
+    setTimeout(async () => {
+      require('../assets/js/page'); // eslint-disable-line global-require
+      require('../assets/js/script'); // eslint-disable-line global-require
+
+      if (getLocale() === 'de' && !pathname.startsWith('/de')) {
+        navigate(`/de${this.props.location.pathname}`);
+      }
+
+      await loadScript('https://wchat.eu.freshchat.com/js/widget.js');
+      window.fcSettings = {
+        token: 'e9a5ae2c-ad84-42c8-8786-a893acbca8b3',
+        host: 'https://wchat.eu.freshchat.com',
+        siteId: 'landing-page',
+        config: {
+          cssNames: {
+            widget: 'custom_fc_frame',
+            expanded: 'custom_fc_expanded'
+          }
+        }
+      };
+      await loadScript('https://snippets.freshchat.com/js/fc-pre-chat-form-v2.js');
+      window.fcPreChatform.fcWidgetInit({
+        heading: 'Ledgy',
+        textBanner: 'Please tell us a bit about yourself.',
+        SubmitLabel: 'Go',
+        fields: {
+          field1: {
+            type: 'name',
+            label: 'Name',
+            fieldId: 'name',
+            required: 'yes',
+            error: 'Please enter your name'
+          },
+          field2: {
+            type: 'email',
+            label: 'Email',
+            fieldId: 'email',
+            required: 'yes',
+            error: 'Please enter a valid email'
+          }
+        }
+      });
+      window.fcWidget.init(window.fcSettings);
+    }, 1414);
+  }, []);
+  return null;
+};
+
 const TemplateWrapper = withI18n()((props: SiteProps) => (
   <StaticQuery
     query={graphql`
@@ -288,6 +342,7 @@ const TemplateWrapper = withI18n()((props: SiteProps) => (
         site {
           siteMetadata {
             siteUrl
+            branch
           }
         }
       }
@@ -295,7 +350,7 @@ const TemplateWrapper = withI18n()((props: SiteProps) => (
     render={data => {
       const { i18n } = props;
       const prefix = langPrefix(props.lang);
-      const { siteUrl } = data.site.siteMetadata;
+      const { siteUrl, branch } = data.site.siteMetadata;
       const thumbnailUrl = `${siteUrl}/thumbnail.png`;
       const { pathname } = props.location;
       const EnPathname = `${siteUrl}${pathname.startsWith('/de') ? pathname.substr(3) : pathname}`;
@@ -306,6 +361,7 @@ const TemplateWrapper = withI18n()((props: SiteProps) => (
             description={i18n.t`Stay on top of your vesting schedules, options, phantom plans, and convertible loans. Get fast insights for financing rounds or exit negotiations using our built-in modeling tools. With the portfolio you will always have the latest information about your investment and vesting at your fingertips. Try now for free!`}
             thumbnailUrl={thumbnailUrl}
           />
+          <Initialize pathname={pathname} branch={branch} />
           <Helmet>
             <html lang={props.lang} />
             <meta
@@ -351,62 +407,14 @@ const TemplateWrapper = withI18n()((props: SiteProps) => (
   />
 ));
 
-export default class extends React.Component<{ location: { pathname: string } }> {
-  componentDidMount = () =>
-    setTimeout(async () => {
-      require('../assets/js/page'); // eslint-disable-line global-require
-      require('../assets/js/script'); // eslint-disable-line global-require
-
-      const { pathname } = this.props.location;
-      if (getLocale() === 'de' && !pathname.startsWith('/de')) {
-        navigate(`/de${this.props.location.pathname}`);
-      }
-
-      await loadScript('https://wchat.eu.freshchat.com/js/widget.js');
-      window.fcSettings = {
-        token: 'e9a5ae2c-ad84-42c8-8786-a893acbca8b3',
-        host: 'https://wchat.eu.freshchat.com',
-        siteId: 'landing-page',
-        config: {
-          cssNames: {
-            widget: 'custom_fc_frame',
-            expanded: 'custom_fc_expanded'
-          }
-        }
-      };
-      await loadScript('https://snippets.freshchat.com/js/fc-pre-chat-form-v2.js');
-      window.fcPreChatform.fcWidgetInit({
-        heading: 'Ledgy',
-        textBanner: 'Please tell us a bit about yourself.',
-        SubmitLabel: 'Go',
-        fields: {
-          field1: {
-            type: 'name',
-            label: 'Name',
-            fieldId: 'name',
-            required: 'yes',
-            error: 'Please enter your name'
-          },
-          field2: {
-            type: 'email',
-            label: 'Email',
-            fieldId: 'email',
-            required: 'yes',
-            error: 'Please enter a valid email'
-          }
-        }
-      });
-      window.fcWidget.init(window.fcSettings);
-    }, 1414);
-  render = () => {
-    const lang = langFromPath(this.props.location.pathname);
-    return (
-      <I18nProvider language={lang} catalogs={catalogs}>
-        <TemplateWrapper {...this.props} lang={lang} />
-      </I18nProvider>
-    );
-  };
-}
+export default (props: {| location: {| pathname: string |} |}) => {
+  const lang = langFromPath(props.location.pathname);
+  return (
+    <I18nProvider language={lang} catalogs={catalogs}>
+      <TemplateWrapper {...props} lang={lang} />
+    </I18nProvider>
+  );
+};
 
 // eslint-disable-next-line
 console.log(`
