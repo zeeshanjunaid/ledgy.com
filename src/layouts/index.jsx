@@ -283,7 +283,7 @@ type SiteProps = {
 
 const Initialize = ({ branch, pathname }: {| branch: string, pathname: string |}) => {
   useEffect(() => {
-    console.log(branch);
+    window.branch = branch;
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({ branch });
 
