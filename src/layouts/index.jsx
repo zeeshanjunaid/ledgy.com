@@ -1,6 +1,6 @@
 // @flow
 
-import * as React from 'react';
+import React, { useEffect } from 'react';
 import { StaticQuery, graphql, Link, navigate } from 'gatsby';
 import { I18nProvider, withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
@@ -281,6 +281,15 @@ type SiteProps = {
   location: { pathname: string }
 };
 
+const Branch = ({ branch }: {| branch: string |}) => {
+  useEffect(() => {
+    console.log(branch);
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ branch });
+  }, []);
+  return null;
+};
+
 const TemplateWrapper = withI18n()((props: SiteProps) => (
   <StaticQuery
     query={graphql`
@@ -300,11 +309,6 @@ const TemplateWrapper = withI18n()((props: SiteProps) => (
       const thumbnailUrl = `${siteUrl}/thumbnail.png`;
       const { pathname } = props.location;
       const EnPathname = `${siteUrl}${pathname.startsWith('/de') ? pathname.substr(3) : pathname}`;
-      if (typeof window === 'object' && !window.dataLayer) {
-        console.log(branch);
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({ branch });
-      }
       return (
         <div>
           <Title
@@ -312,6 +316,7 @@ const TemplateWrapper = withI18n()((props: SiteProps) => (
             description={i18n.t`Stay on top of your vesting schedules, options, phantom plans, and convertible loans. Get fast insights for financing rounds or exit negotiations using our built-in modeling tools. With the portfolio you will always have the latest information about your investment and vesting at your fingertips. Try now for free!`}
             thumbnailUrl={thumbnailUrl}
           />
+          <Branch branch={branch} />
           <Helmet>
             <html lang={props.lang} />
             <meta
