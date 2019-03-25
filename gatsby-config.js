@@ -1,4 +1,4 @@
-const { CONTEXT, URL, DEPLOY_PRIME_URL, NODE_ENV } = process.env;
+const { CONTEXT, URL, DEPLOY_PRIME_URL, NODE_ENV, BRANCH } = process.env;
 const src = `${__dirname}/src`;
 
 module.exports = {
@@ -7,7 +7,7 @@ module.exports = {
       (CONTEXT === 'production' && URL) ||
       DEPLOY_PRIME_URL ||
       `http://localhost:${NODE_ENV === 'production' ? 9 : 8}000`,
-    branch: process.env.BRANCH || 'development'
+    branch: BRANCH || 'development'
   },
   plugins: [
     'gatsby-plugin-layout',
