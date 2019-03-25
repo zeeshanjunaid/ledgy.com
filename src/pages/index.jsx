@@ -38,7 +38,7 @@ const Header = ({ i18n, data }: Props) => {
               </Trans>
             </h1>
             <h5 className="text-white font-weight-light pb-4 pb-lg-6">
-              Made for founders, thought for investors.
+              Made for startups, thought for investors.
             </h5>
 
             <div className="text-white pb-4">

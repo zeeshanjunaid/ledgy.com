@@ -191,23 +191,31 @@ h1 {
 
 #tablet-ledgy {
   transition: 200ms;
-  overflow: hidden;
   margin-left: auto;
   margin-right: auto;
   @include media-breakpoint-up(md) {
     width: 75%;
+    margin-top: 2.5%;
   }
   @include media-breakpoint-up(lg) {
-    width: 120%;
+    width: 110%;
+    margin-top: 15%;
+    }
+  @include media-breakpoint-up(xl) {
     margin-top: 10%;
+    width: 115%;
   }
 }
 
 .home-banner {
-  @include media-breakpoint-up(md) {
-    height: 100vh;
+  @include media-breakpoint-up(xl) {
+    @media(orientation:landscape) {
+     min-height: 95vh; 
+    }
   }
-  @include media-breakpoint-up(lg) {
-    height: 95vh;
+  @media screen and (min-width: 1440px) {
+    .container {
+      max-width: 1400px;
+    }
   }
 }
