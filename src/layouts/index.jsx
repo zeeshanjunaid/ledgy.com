@@ -288,6 +288,7 @@ const TemplateWrapper = withI18n()((props: SiteProps) => (
         site {
           siteMetadata {
             siteUrl
+            branch
           }
         }
       }
@@ -295,10 +296,15 @@ const TemplateWrapper = withI18n()((props: SiteProps) => (
     render={data => {
       const { i18n } = props;
       const prefix = langPrefix(props.lang);
-      const { siteUrl } = data.site.siteMetadata;
+      const { siteUrl, branch } = data.site.siteMetadata;
       const thumbnailUrl = `${siteUrl}/thumbnail.png`;
       const { pathname } = props.location;
       const EnPathname = `${siteUrl}${pathname.startsWith('/de') ? pathname.substr(3) : pathname}`;
+      if (typeof window === 'object' && !window.dataLayer) {
+        console.log(branch);
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ branch });
+      }
       return (
         <div>
           <Title

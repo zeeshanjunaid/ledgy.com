@@ -6,7 +6,8 @@ module.exports = {
     siteUrl:
       (CONTEXT === 'production' && URL) ||
       DEPLOY_PRIME_URL ||
-      `http://localhost:${NODE_ENV === 'production' ? 9 : 8}000`
+      `http://localhost:${NODE_ENV === 'production' ? 9 : 8}000`,
+    branch: process.env.BRANCH || 'development'
   },
   plugins: [
     'gatsby-plugin-layout',
