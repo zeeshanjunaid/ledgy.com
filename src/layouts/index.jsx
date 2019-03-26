@@ -86,7 +86,7 @@ const Footer = (props: LayoutProps) => (
       <section className="section bg-pale-secondary" id="try">
         <div className="container text-center signup py-md-7">
           <h2>
-            <Trans>Try Ledgy now for free.</Trans>
+            <Trans>Try Ledgy now for free</Trans>
           </h2>
 
           <SignupForm {...props} />
@@ -94,8 +94,8 @@ const Footer = (props: LayoutProps) => (
           <p>
             <Trans>
               Takes too long to import your data?&nbsp;
-              <a href={`mailto:contact@ledgy.com?subject=${'Request for cap table import'}`}>
-                We’ll do it for you!
+              <a href={`mailto:contact@ledgy.com?subject=${'Request for Ledgy import'}`}>
+                We’ll do it for you.
               </a>
             </Trans>
           </p>
@@ -161,23 +161,23 @@ const Footer = (props: LayoutProps) => (
               <Link className="nav-link" href to={`${props.prefix}/features/`}>
                 <Trans>Features</Trans>
               </Link>
-              <Link className="nav-link" href to={`${props.prefix}/pricing/`}>
-                <Trans>Pricing</Trans>
+              <Link className="nav-link" href to={`${props.prefix}/features/captable/`}>
+                <Trans>Cap Table</Trans>
               </Link>
-              <Link className="nav-link" href to={`${props.prefix}/features/consistency/`}>
-                <Trans>Consistency</Trans>
-              </Link>
-              <Link className="nav-link" href to={`${props.prefix}/features/round-modeling/`}>
-                <Trans>Round Modeling</Trans>
+              <Link className="nav-link" href to={`${props.prefix}/features/modeling/`}>
+                <Trans>Modeling</Trans>
               </Link>
               <Link className="nav-link" href to={`${props.prefix}/features/esop/`}>
                 <Trans>Employee Incentives</Trans>
               </Link>
-              <Link className="nav-link" href to={`${props.prefix}/features/reporting/`}>
-                <Trans>Reporting</Trans>
+              <Link className="nav-link" href to={`${props.prefix}/features/portfolio/`}>
+                <Trans>Portfolio</Trans>
               </Link>
-              <Link className="nav-link" href to={`${props.prefix}/features/investors/`}>
-                <Trans>Investors</Trans>
+              <Link className="nav-link" href to={`${props.prefix}/features/reports/`}>
+                <Trans>Reports</Trans>
+              </Link>
+              <Link className="nav-link" href to={`${props.prefix}/pricing/`}>
+                <Trans>Pricing</Trans>
               </Link>
             </div>
           </div>

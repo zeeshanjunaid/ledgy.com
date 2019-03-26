@@ -92,23 +92,23 @@ export const FeatureLinks = ({
     </header>
 
     <div className="row gap-y justify-content-center">
-      <FeatureLink {...props} name={i18n.t`Cap Table`} url="consistency" />
-      <FeatureLink {...props} name={i18n.t`Modeling`} url="round-modeling" />
-      <FeatureLink {...props} name={i18n.t`Employee Incentives`} url="esop" />
-      <FeatureLink {...props} name={i18n.t`Reporting`} url="reporting" />
-      <FeatureLink {...props} name={i18n.t`Portfolio`} url="investors" />
+      <FeatureLink {...props} name={i18n.t`Cap Table`} url="captable" />
+      <FeatureLink {...props} name={i18n.t`Modeling`} url="modeling" />
+      <FeatureLink {...props} name={i18n.t`Employee Participation Plans`} url="esop" />
+      <FeatureLink {...props} name={i18n.t`Portfolio`} url="portfolio" />
+      <FeatureLink {...props} name={i18n.t`Reporting`} url="reports" />
     </div>
   </div>
 );
 
 export const FeaturesFragment = graphql`
   fragment FeaturesFragment on Query {
-    consistency: imageSharp(fluid: { originalName: { regex: "/consistency.png/" } }) {
+    captable: imageSharp(fluid: { originalName: { regex: "/consistency.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
     }
-    roundModeling: imageSharp(fluid: { originalName: { regex: "/round-modeling.png/" } }) {
+    modeling: imageSharp(fluid: { originalName: { regex: "/round-modeling.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
@@ -118,12 +118,12 @@ export const FeaturesFragment = graphql`
         ...GatsbyImageSharpFluid
       }
     }
-    reporting: imageSharp(fluid: { originalName: { regex: "/reporting.png/" } }) {
+    reports: imageSharp(fluid: { originalName: { regex: "/reporting.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
     }
-    investors: imageSharp(fluid: { originalName: { regex: "/investors.png/" } }) {
+    portfolio: imageSharp(fluid: { originalName: { regex: "/investors.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }

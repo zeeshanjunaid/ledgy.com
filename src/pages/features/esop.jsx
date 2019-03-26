@@ -71,7 +71,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <p>
                 <Trans>
                   You can create a detailed vesting schedule by defining over how many months the
-                  shares are to be vested, wether there’s a cliff and how often a new batch of
+                  shares are to be vested, whether there’s a cliff and how often a new batch of
                   shares gets assigned to the employee.
                   <br />
                   As soon as you enter the first numbers, you will see a visual representation of

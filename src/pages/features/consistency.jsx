@@ -164,7 +164,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
           </div>
 
-          <FeatureLinks {...props} i18n={i18n} page="consistency" />
+          <FeatureLinks {...props} i18n={i18n} page="captable" />
         </div>
       </section>
     </main>

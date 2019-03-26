@@ -225,7 +225,7 @@ msgid "Dialog for holding confirmation"
 msgstr "Dialog um Besitzbestätigungen zu versenden"
 
 #: src/pages/features.jsx:45
-msgid "Did you know that many cap tables are incomplete or contain errors? Tracking the ownership history with Excel or Word can quickly lead to inconsistencies. Set up your shares with Ledgy and be sure that all data is consistent at any time. Give your key stakeholders access and collaborate on a single source of truth."
+msgid "Did you know that many cap tables are incomplete or contain errors? Tracking the ownership history with spreadsheets can quickly lead to inconsistencies. Set up your shares with Ledgy and be sure that all data is consistent at any time. Give your key stakeholders access and collaborate on a single source of truth."
 msgstr "Wusstest du, dass viele Cap Tables fehlerhaft und unvollständig sind? Es führt schnell zu Inkonsistenzen, wenn man die Beteiligungen mit Excel oder Word nachverfolgt. Mit Ledgy weißt du, dass alle Daten immer richtig sind. Vor allem aber kannst du deinen wichtigen Stakeholdern Zugriff geben und zusammen an einer zentralen Informationsquelle arbeiten."
 
 #: src/pages/features/consistency.jsx:87
@@ -510,7 +510,7 @@ msgid "Ledgy scales with your needs. Free for startups, powerful for grown-ups."
 msgstr "Ledgy skaliert mit deinen Anforderungen. Kostenlos für Startups, leistungsstark für größere Firmen."
 
 #: src/pages/features.jsx:76
-msgid "Let your employees be part of your company’s success. Ledgy supports vested stock, options, phantom options, inverse vesting and ESOP pools.<0/>Employees can even log in to Ledgy and track their vested shares in real-time."
+msgid "Let your employees be part of your company’s success. Ledgy supports vested stock, options, phantom options, inverse vesting and ESOP pools.<0/>Employees can log in to Ledgy and track their vested shares in real-time."
 msgstr "Beteilige deine Mitarbeiter am Erfolg deiner Firma. Ledgy unterstützt gevestete Aktien, Optionen, virtuelle Unternehmensbeteiligungenen, inverses Vesting und Pools von bewilligten Kapital.<0/>Mitarbeiter können sich sogar einloggen und ihre gevesteten Aktien in Echtzeit verfolgen."
 
 #: src/pages/contact.jsx:16
@@ -534,7 +534,7 @@ msgid "Make your employees happy"
 msgstr "Mach deine Mitarbeiter glücklich"
 
 #: src/pages/features.jsx:26
-msgid "Manage your shares.<0/>Not your Excel."
+msgid "Manage your shares.<0/>Not your spreadsheet."
 msgstr "Verwalte deine Aktien. <0/> Nicht dein Excel."
 
 #: src/pages/contact.jsx:82
@@ -842,7 +842,7 @@ msgid "Switzerland"
 msgstr "Schweiz"
 
 #: src/layouts/index.jsx:95
-msgid "Takes too long to import your data? <0>We’ll do it for you!</0>"
+msgid "Takes too long to import your data? <0>We’ll do it for you.</0>"
 msgstr "Der Import der Daten ist mühsam? <0>Wir erledigen das für dich!</0>"
 
 #: src/pages/about-us.jsx:116
@@ -915,7 +915,7 @@ msgid "Treasury shares"
 msgstr "Von der Firma gehaltene Aktien"
 
 #: src/layouts/index.jsx:89
-msgid "Try Ledgy now for free."
+msgid "Try Ledgy now for free"
 msgstr "Jetzt kostenlos auf Ledgy loslegen."
 
 #: src/components/AllFeatures.jsx:115
@@ -1024,7 +1024,7 @@ msgid "Yoko graduated from ETH and Oxford and was president of Swissloop, enabli
 msgstr "Yoko hat ihren Physik Master an der ETH und in Oxford gemacht und war Präsident von Swissloop, wo sie dem Team zum dritten Platz beim SpaceX Hyperloop Wettbewerb verholfen hat"
 
 #: src/pages/features/esop.jsx:72
-msgid "You can create a detailed vesting schedule by defining over how many months the shares are to be vested, wether there’s a cliff and how often a new batch of shares gets assigned to the employee.<0/>As soon as you enter the first numbers, you will see a visual representation of the current schedule."
+msgid "You can create a detailed vesting schedule by defining over how many months the shares are to be vested, whether there’s a cliff and how often a new batch of shares gets assigned to the employee.<0/>As soon as you enter the first numbers, you will see a visual representation of the current schedule."
 msgstr "Du kannst detailliertes Vesting definieren, indem du eine Gesamtdauer festlegst, ob es einen Cliff gibt und alle wie viele Monate die neuen Aktien nach dem Cliff vesten werden."
 
 #: src/pages/index.jsx:105

@@ -226,8 +226,8 @@ msgid "Dialog for holding confirmation"
 msgstr "Dialog for holding confirmation"
 
 #: src/pages/features.jsx:45
-msgid "Did you know that many cap tables are incomplete or contain errors? Tracking the ownership history with Excel or Word can quickly lead to inconsistencies. Set up your shares with Ledgy and be sure that all data is consistent at any time. Give your key stakeholders access and collaborate on a single source of truth."
-msgstr "Did you know that many cap tables are incomplete or contain errors? Tracking the ownership history with Excel or Word can quickly lead to inconsistencies. Set up your shares with Ledgy and be sure that all data is consistent at any time. Give your key stakeholders access and collaborate on a single source of truth."
+msgid "Did you know that many cap tables are incomplete or contain errors? Tracking the ownership history with spreadsheets can quickly lead to inconsistencies. Set up your shares with Ledgy and be sure that all data is consistent at any time. Give your key stakeholders access and collaborate on a single source of truth."
+msgstr "Did you know that many cap tables are incomplete or contain errors? Tracking the ownership history with spreadsheets can quickly lead to inconsistencies. Set up your shares with Ledgy and be sure that all data is consistent at any time. Give your key stakeholders access and collaborate on a single source of truth."
 
 #: src/pages/features/consistency.jsx:87
 msgid "Did you notice the number in the center bottom? Any time you transfer shares from one shareholder to another, Ledgy will show you how many shares that particular shareholder has <0>available</0> at that given point in time."
@@ -511,8 +511,8 @@ msgid "Ledgy scales with your needs. Free for startups, powerful for grown-ups."
 msgstr "Ledgy scales with your needs. Free for startups, powerful for grown-ups."
 
 #: src/pages/features.jsx:76
-msgid "Let your employees be part of your company’s success. Ledgy supports vested stock, options, phantom options, inverse vesting and ESOP pools.<0/>Employees can even log in to Ledgy and track their vested shares in real-time."
-msgstr "Let your employees be part of your company’s success. Ledgy supports vested stock, options, phantom options, inverse vesting and ESOP pools.<0/>Employees can even log in to Ledgy and track their vested shares in real-time."
+msgid "Let your employees be part of your company’s success. Ledgy supports vested stock, options, phantom options, inverse vesting and ESOP pools.<0/>Employees can log in to Ledgy and track their vested shares in real-time."
+msgstr "Let your employees be part of your company’s success. Ledgy supports vested stock, options, phantom options, inverse vesting and ESOP pools.<0/>Employees can log in to Ledgy and track their vested shares in real-time."
 
 #: src/pages/contact.jsx:16
 msgid "Let’s Get In Touch"
@@ -535,8 +535,8 @@ msgid "Make your employees happy"
 msgstr "Make your employees happy"
 
 #: src/pages/features.jsx:26
-msgid "Manage your shares.<0/>Not your Excel."
-msgstr "Manage your shares.<0/>Not your Excel."
+msgid "Manage your shares.<0/>Not your spreadsheet."
+msgstr "Manage your shares.<0/>Not your spreadsheet."
 
 #: src/pages/contact.jsx:82
 msgid "Managing directors"
@@ -843,8 +843,8 @@ msgid "Switzerland"
 msgstr "Switzerland"
 
 #: src/layouts/index.jsx:95
-msgid "Takes too long to import your data? <0>We’ll do it for you!</0>"
-msgstr "Takes too long to import your data? <0>We’ll do it for you!</0>"
+msgid "Takes too long to import your data? <0>We’ll do it for you.</0>"
+msgstr "Takes too long to import your data? <0>We’ll do it for you.</0>"
 
 #: src/pages/about-us.jsx:116
 msgid "Team"
@@ -916,8 +916,8 @@ msgid "Treasury shares"
 msgstr "Treasury shares"
 
 #: src/layouts/index.jsx:89
-msgid "Try Ledgy now for free."
-msgstr "Try Ledgy now for free."
+msgid "Try Ledgy now for free"
+msgstr "Try Ledgy now for free"
 
 #: src/components/AllFeatures.jsx:115
 msgid "Two-Factor authentication"
@@ -1025,8 +1025,8 @@ msgid "Yoko graduated from ETH and Oxford and was president of Swissloop, enabli
 msgstr "Yoko graduated from ETH and Oxford and was president of Swissloop, enabling the team to win the 3rd price at the SpaceX Hyperloop competition"
 
 #: src/pages/features/esop.jsx:72
-msgid "You can create a detailed vesting schedule by defining over how many months the shares are to be vested, wether there’s a cliff and how often a new batch of shares gets assigned to the employee.<0/>As soon as you enter the first numbers, you will see a visual representation of the current schedule."
-msgstr "You can create a detailed vesting schedule by defining over how many months the shares are to be vested, wether there’s a cliff and how often a new batch of shares gets assigned to the employee.<0/>As soon as you enter the first numbers, you will see a visual representation of the current schedule."
+msgid "You can create a detailed vesting schedule by defining over how many months the shares are to be vested, whether there’s a cliff and how often a new batch of shares gets assigned to the employee.<0/>As soon as you enter the first numbers, you will see a visual representation of the current schedule."
+msgstr "You can create a detailed vesting schedule by defining over how many months the shares are to be vested, whether there’s a cliff and how often a new batch of shares gets assigned to the employee.<0/>As soon as you enter the first numbers, you will see a visual representation of the current schedule."
 
 #: src/pages/index.jsx:105
 msgid "Your data in safe hands"
