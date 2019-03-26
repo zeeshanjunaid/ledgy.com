@@ -133,7 +133,8 @@ const IndexPage = ({ i18n, ...props }: Props) => (
               body={
                 <Trans>
                   Which we use to run and improve our Service for you. This excludes company
-                  information.&nbsp;
+                  information.
+                  <br />
                   <Link href to={`${props.prefix}/privacy#third-parties`}>
                     See which ones below
                     <ChevronRight />

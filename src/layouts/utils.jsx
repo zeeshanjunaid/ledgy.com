@@ -51,4 +51,6 @@ export const Li = ({ children }: { children: React.Node }) => (
   </li>
 );
 
-export const ChevronRight = () => <FontAwesomeIcon icon={faChevronRight} className="fs-12 ml-2" />;
+export const ChevronRight = () => (
+  <FontAwesomeIcon icon={faChevronRight} className="fs-12 ml-2 adjust-bottom swinging" />
+);

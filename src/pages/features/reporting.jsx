@@ -145,7 +145,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
           </div>
 
-          <FeatureLinks {...props} i18n={i18n} page="round-modeling" />
+          <FeatureLinks {...props} i18n={i18n} page="reporting" />
         </div>
       </section>
     </main>

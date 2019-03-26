@@ -38,7 +38,7 @@ const Header = ({ i18n, data }: Props) => {
               </Trans>
             </h1>
             <h5 className="text-white font-weight-light pb-4 pb-lg-6">
-              Made for startups, thought for investors.
+              <Trans>Made for startups, thought for investors.</Trans>
             </h5>
 
             <div className="text-white pb-4">
@@ -70,10 +70,10 @@ const Header = ({ i18n, data }: Props) => {
               href={demoUrl}
               {...targetBlank}
             >
-              <Trans>See the demo</Trans>
+              <Trans>See the Demo</Trans>
             </a>
             <a className="btn btn-block d-inline btn-xl mx-1 btn-round btn-light" href="#try">
-              <Trans>Get Started</Trans>
+              <Trans>Get Started Free</Trans>
             </a>
           </div>
           <div className="col-lg-6">
@@ -98,7 +98,9 @@ const IndexPage = (props: Props) => (
     <Header {...props} />
     <main className="main-content">
       <section className="section py-7" id="references">
+        <FeatureLinks {...props} page="index" />
         <div className="container">
+          <hr className="my-7" />
           <header className="section-header mb-3">
             <h2 className="my-4">
               <Trans>You’re in good company</Trans>
@@ -130,8 +132,6 @@ const IndexPage = (props: Props) => (
               <Trans>Find out why they trust us</Trans>
             </Link>
           </div>
-
-          <FeatureLinks {...props} page="index" />
 
           <section className="section py-5">
             <hr className="my-7" />
