@@ -54,3 +54,22 @@ export const Li = ({ children }: { children: React.Node }) => (
 export const ChevronRight = () => (
   <FontAwesomeIcon icon={faChevronRight} className="fs-12 ml-2 adjust-bottom swinging" />
 );
+
+export const animateTablet = () => {
+  let scrolling = false;
+  window.onscroll = () => {
+    scrolling = true;
+  };
+  setInterval(() => {
+    if (scrolling) {
+      scrolling = false;
+      const tablet = document.getElementById('tablet-ledgy');
+      const banner = document.querySelector('header');
+      const { scrollY } = window;
+      if (tablet && banner && scrollY <= banner.clientHeight) {
+        tablet.style.transform = `rotateZ(${scrollY / -70}deg) translateY(${scrollY /
+          35}%) skew(-${scrollY / 140}deg)`;
+      }
+    }
+  }, 50);
+};

@@ -17,7 +17,7 @@ import 'typeface-work-sans'; // eslint-disable-line import/extensions
 import 'katex/dist/katex.min.css';
 import 'prism-themes/themes/prism-ghcolors.css';
 
-import { Title, name, appUrl, demoUrl, loadScript, targetBlank } from './utils';
+import { Title, name, appUrl, demoUrl, loadScript, targetBlank, animateTablet } from './utils';
 import { catalogs, langFromPath, langPrefix, getLocale } from '../i18n-config';
 import SignupForm from '../components/SignupForm';
 
@@ -293,6 +293,7 @@ type SiteProps = {
 
 const Initialize = ({ branch, pathname }: {| branch: string, pathname: string |}) => {
   useEffect(() => {
+    animateTablet();
     window.branch = branch;
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({ branch });

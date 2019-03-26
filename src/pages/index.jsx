@@ -10,23 +10,6 @@ import SecurityRow from '../components/SecurityRow';
 import { demoUrl, targetBlank } from '../layouts/utils';
 
 const Header = ({ i18n, data }: Props) => {
-  let scrolling = false;
-  window.onscroll = () => {
-    scrolling = true;
-  };
-  setInterval(() => {
-    if (scrolling) {
-      scrolling = false;
-      const tablet = document.getElementById('tablet-ledgy');
-      const banner = document.querySelector('header');
-      const { scrollY } = window;
-      if (tablet && scrollY <= banner.clientHeight) {
-        tablet.style.transform = `rotateZ(${scrollY / -70}deg) translateY(${scrollY /
-          35}%) skew(-${scrollY / 140}deg)`;
-      }
-    }
-  }, 50);
-
   return (
     <header className="header bg-ledgy home-banner px-1 text-left ">
       <div className="container">
