@@ -1,3 +1,4 @@
+
 @include media-breakpoint-up(md) {
   html,
   body {
@@ -29,16 +30,12 @@ li > a {
   }
 }
 
-.text-white a {
-  border-bottom-color: rgba(255, 255, 255, 0.8);
-}
-
 .text-white p {
   color: $gray-100;
 }
 
 .bg-ledgy {
-  background-image: linear-gradient(to right bottom, #053a5e, #005e85, #0086a9, #00afc9);
+  background-image: linear-gradient(to right bottom, #053a5e, #005e85, #0086a9, #00afc9);;
 }
 .nav-link {
   font-size: 0.8em !important;
@@ -87,9 +84,7 @@ h1 {
     font-size: 2rem;
   }
 }
-.footer {
-  line-height: 1.9;
-}
+
 .partner {
   max-width: 960px;
 
@@ -111,12 +106,7 @@ h1 {
 .signup {
   max-width: 600px;
 }
-.footer {
-  line-height: normal;
-  a {
-    margin-bottom: 0.7em;
-  }
-}
+
 .imprint h6 {
   margin-bottom: 0;
 }
@@ -262,3 +252,16 @@ h1 {
   animation-timing-function: ease-out;
 }
 
+.footer {
+  background: linear-gradient(to right bottom, #005e85, #0086a9, #00afc9);
+  a {
+    margin-bottom: 0.7em;
+  }
+  .nav-link:hover {
+    color: white !important;
+  }
+}
+
+.social-item:hover {
+  box-shadow: 0 12px 24px rgba(0,0,0,0.25), 0 8px 8px rgba(0,0,0,0.22);
+}

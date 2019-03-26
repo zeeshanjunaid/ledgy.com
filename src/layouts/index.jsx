@@ -120,7 +120,7 @@ const Footer = (props: LayoutProps) => (
         </div>
       </section>
     )}
-    <footer className="footer py-7">
+    <footer className="footer py-7 text-white">
       <div className="container pb-2 pb-md-0">
         <div className="row gap-y">
           <div className="col-6 col-md-3 pl-6 order-md-2">
@@ -183,28 +183,30 @@ const Footer = (props: LayoutProps) => (
           </div>
 
           <div className="col-6 col-md-3 pl-6 order-md-1">
-            <Logo {...props} inverse={false} />
+            <Link href to={`${props.prefix}/#start`} className="navbar-brand">
+              <img className="logo-light" src={logoInverse} width={100} height={40} alt={name} />
+            </Link>
 
             <div className="row social social-bordered mt-3 mx-0">
-              <a className="col-3 col-lg-2 px-0 social-twitter" href="https://twitter.com/Ledgy">
+              <a className="col-3 col-lg-2 px-0 social-item" href="https://twitter.com/Ledgy">
                 <FontAwesomeIcon icon={faTwitter} title="Twitter" />
               </a>
               <a
-                className="col-3 col-lg-2 px-0 social-linkedin"
+                className="col-3 col-lg-2 px-0 social-item"
                 href="https://www.linkedin.com/company/ledgy"
               >
                 <FontAwesomeIcon icon={faLinkedin} title="LinkedIn" />
               </a>
               <a
-                className="col-3 col-lg-2 px-0 social-facebook"
+                className="col-3 col-lg-2 px-0 social-item"
                 href="https://www.facebook.com/LedgyCom/"
               >
                 <FontAwesomeIcon icon={faFacebook} title="Facebook" />
               </a>
-              <a className="col-3 col-lg-2 px-0 social-angellist" href="https://angel.co/ledgy">
+              <a className="col-3 col-lg-2 px-0 social-item" href="https://angel.co/ledgy">
                 <FontAwesomeIcon icon={faAngellist} title="AngelList" />
               </a>
-              <a className="col-3 col-lg-2 px-0 social-medium" href="https://blog.ledgy.com">
+              <a className="col-3 col-lg-2 px-0 social-item" href="https://blog.ledgy.com">
                 <FontAwesomeIcon icon={faMedium} title="Medium" />
               </a>
             </div>
@@ -213,7 +215,7 @@ const Footer = (props: LayoutProps) => (
                 <Link
                   href
                   to={props.location.pathname.substr(3)}
-                  className="btn btn-round btn-outline-primary"
+                  className="btn btn-round btn-outline-light"
                 >
                   English
                 </Link>
@@ -221,7 +223,7 @@ const Footer = (props: LayoutProps) => (
                 <Link
                   href
                   to={`/de${props.location.pathname}`}
-                  className="btn btn-round btn-outline-primary"
+                  className="btn btn-round btn-outline-light"
                 >
                   Deutsch
                 </Link>
