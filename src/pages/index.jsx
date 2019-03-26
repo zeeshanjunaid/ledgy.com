@@ -53,13 +53,13 @@ const Header = ({ i18n, data }: Props) => {
               </Trans>
             </div>
             <a
-              className="btn btn-block d-inline btn-xl mx-1 btn-round btn-outline-light"
+              className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-outline-light"
               href={demoUrl}
               {...targetBlank}
             >
               <Trans>See the Demo</Trans>
             </a>
-            <a className="btn btn-block d-inline btn-xl mx-1 btn-round btn-light" href="#try">
+            <a className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-light" href="#try">
               <Trans>Get Started Free</Trans>
             </a>
           </div>

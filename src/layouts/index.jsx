@@ -84,7 +84,7 @@ const Footer = (props: LayoutProps) => (
   <div>
     {hasFooter(props.location.pathname) && (
       <section className="section bg-pale-secondary" id="try">
-        <div className="container text-center signup py-7">
+        <div className="container text-center signup py-7 pb-sm-0">
           <h2>
             <Trans>Try Ledgy now for free.</Trans>
           </h2>
@@ -120,7 +120,7 @@ const Footer = (props: LayoutProps) => (
         </div>
       </section>
     )}
-    <footer className="footer py-7 text-white">
+    <footer className="footer pb-9 pt-7 py-md-7 text-white">
       <div className="container pb-2 pb-md-0">
         <div className="row gap-y">
           <div className="col-6 col-md-3 pl-6 order-md-2">
@@ -188,25 +188,39 @@ const Footer = (props: LayoutProps) => (
             </Link>
 
             <div className="row social social-bordered mt-3 mx-0">
-              <a className="col-3 col-lg-2 px-0 social-item" href="https://twitter.com/Ledgy">
+              <a
+                className="col-3 col-lg-2 px-0 social-item"
+                href="https://twitter.com/Ledgy"
+                {...targetBlank}
+              >
                 <FontAwesomeIcon icon={faTwitter} title="Twitter" />
               </a>
               <a
                 className="col-3 col-lg-2 px-0 social-item"
                 href="https://www.linkedin.com/company/ledgy"
+                {...targetBlank}
               >
                 <FontAwesomeIcon icon={faLinkedin} title="LinkedIn" />
               </a>
               <a
                 className="col-3 col-lg-2 px-0 social-item"
                 href="https://www.facebook.com/LedgyCom/"
+                {...targetBlank}
               >
                 <FontAwesomeIcon icon={faFacebook} title="Facebook" />
               </a>
-              <a className="col-3 col-lg-2 px-0 social-item" href="https://angel.co/ledgy">
+              <a
+                className="col-3 col-lg-2 px-0 social-item"
+                href="https://angel.co/ledgy"
+                {...targetBlank}
+              >
                 <FontAwesomeIcon icon={faAngellist} title="AngelList" />
               </a>
-              <a className="col-3 col-lg-2 px-0 social-item" href="https://blog.ledgy.com">
+              <a
+                className="col-3 col-lg-2 px-0 social-item"
+                href="https://blog.ledgy.com"
+                {...targetBlank}
+              >
                 <FontAwesomeIcon icon={faMedium} title="Medium" />
               </a>
             </div>
