@@ -84,7 +84,7 @@ const Footer = (props: LayoutProps) => (
   <div>
     {hasFooter(props.location.pathname) && (
       <section className="section bg-pale-secondary" id="try">
-        <div className="container text-center signup py-7 pb-sm-0">
+        <div className="container text-center signup py-md-7">
           <h2>
             <Trans>Try Ledgy now for free.</Trans>
           </h2>
