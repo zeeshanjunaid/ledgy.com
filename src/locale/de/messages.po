@@ -984,8 +984,8 @@ msgid "We understand how sensitive cap table information is for any business. Th
 msgstr "Uns ist bewusst, wie sensibel und vertraulich der Cap Table für jede Firma ist. Deshalb nehmen wir deine Privatsphäre und die Sicherheit deiner Daten sehr ernst. So schützen wir deine Daten."
 
 #: src/pages/about-us.jsx:96
-msgid "We want to empower entrepreneurs. They should be able to focus on their business, not on bureaucratic paperwork. That’s why we want to establish a new, state-of-the-art tool to manage and exchange securities in private companies. Our goal is to make shares management a breeze for both companies and shareholders."
-msgstr "Wir wollen Unternehmer stärken. Sie sollten sich auf ihr Geschäft konzentrieren können, nicht auf bürokratischen Papierkram. Aus diesem Grund möchten wir ein neues, hochmodernes Tool für die Verwaltung, den Austausch und den Handel von Wertpapieren in privaten Unternehmen schaffen. Unser Ziel ist es, das Aktienmanagement für Unternehmen und Gesellschafter zu einem Kinderspiel zu machen."
+msgid "We empower entrepreneurs with tools for their financing rounds and for engaging their investors and employees. Today, this involves a lot of paperwork, high costs and slow, intransparent processes. We make this a breeze for both companies and shareholders, establishing a new standard to manage and exchange securities in private companies. "
+msgstr "Wir unterstützen Unternehmer mit Tools für ihre Finanzierungsrunden und für die Motivation ihrer Investoren und Mitarbeiter. Dies ist heute mit viel Papierkram, hohen Kosten und langsamen, intransparenten Prozessen verbunden. Wir machen das für Unternehmen und Aktionäre zum Kinderspiel und etablieren einen neuen Standard für die Verwaltung und den Austausch von Wertpapieren in privaten Unternehmen."
 
 #: src/pages/about-us.jsx:133
 msgid "We’re hiring!"

@@ -89,16 +89,13 @@ const IndexPage = (props: Props) => {
           <div className="container">
             <div className="row">
               <div className="col-12 col-lg-6 pl-50 pr-80">
-                <h2>
-                  <Trans>Our mission</Trans>
-                </h2>
                 <p className="lead">
                   <Trans>
-                    We want to empower entrepreneurs. They should be able to focus on their
-                    business, not on bureaucratic paperwork. That’s why we want to establish a new,
-                    state-of-the-art tool to manage and exchange securities in private companies.
-                    Our goal is to make shares management a breeze for both companies and
-                    shareholders.
+                    We empower entrepreneurs with tools for their financing rounds and for engaging
+                    their investors and employees. Today, this involves a lot of paperwork, high
+                    costs and slow, intransparent processes. We make this a breeze for both
+                    companies and shareholders, establishing a new standard to manage and exchange
+                    securities in private companies.
                   </Trans>
                 </p>
               </div>

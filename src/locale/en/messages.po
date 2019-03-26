@@ -985,8 +985,8 @@ msgid "We understand how sensitive cap table information is for any business. Th
 msgstr "We understand how sensitive cap table information is for any business. That’s why your privacy and your data’s security is crucial to us. Here is what we do to protect your data."
 
 #: src/pages/about-us.jsx:96
-msgid "We want to empower entrepreneurs. They should be able to focus on their business, not on bureaucratic paperwork. That’s why we want to establish a new, state-of-the-art tool to manage and exchange securities in private companies. Our goal is to make shares management a breeze for both companies and shareholders."
-msgstr "We want to empower entrepreneurs. They should be able to focus on their business, not on bureaucratic paperwork. That’s why we want to establish a new, state-of-the-art tool to manage and exchange securities in private companies. Our goal is to make shares management a breeze for both companies and shareholders."
+msgid "We empower entrepreneurs with tools for their financing rounds and for engaging their investors and employees. Today, this involves a lot of paperwork, high costs and slow, intransparent processes. We make this a breeze for both companies and shareholders, establishing a new standard to manage and exchange securities in private companies. "
+msgstr "We empower entrepreneurs with tools for their financing rounds and for engaging their investors and employees. Today, this involves a lot of paperwork, high costs and slow, intransparent processes. We make this a breeze for both companies and shareholders, establishing a new standard to manage and exchange securities in private companies. "
 
 #: src/pages/about-us.jsx:133
 msgid "We’re hiring!"
