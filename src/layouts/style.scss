@@ -45,7 +45,7 @@ li > a {
   transition: all 0.3s; 
   padding: 7px 21px;
   &:hover {
-    box-shadow: 0 12px 24px rgba(0,0,0,0.25), 0 8px 8px rgba(0,0,0,0.22);
+    box-shadow: 0 4px 0px rgba(0,0,0,.5);
     transition: all 0.3s;
     transform: translateZ(10px) scale(1.02) !important;
   }
