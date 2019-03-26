@@ -83,6 +83,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             title={i18n.t`Investor Portfolio`}
             name={i18n.t`the Investor Portfolio`}
             url="portfolio"
+            left
           >
             <Trans>
               Are you an investor and want to track your portfolio companies? The founders are busy
@@ -95,7 +96,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <Hr />
 
-          <Feature {...props} name={i18n.t`Reports & Documents`} url="reports" left>
+          <Feature {...props} name={i18n.t`Reports & Documents`} url="reports">
             <Trans>
               Oh, it’s tax season again, and 50 holding confirmations are waiting to be sent to your
               shareholders. This means pasting names into document templates, computing the tax
