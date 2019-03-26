@@ -187,7 +187,7 @@ const Footer = (props: LayoutProps) => (
               <img className="logo-light" src={logoInverse} width={100} height={40} alt={name} />
             </Link>
 
-            <div className="row social social-bordered mt-3 mx-0">
+            <div className="row social mt-3 mx-0">
               <a
                 className="col-3 col-lg-2 px-0 social-item"
                 href="https://twitter.com/Ledgy"
