@@ -187,42 +187,18 @@ const Footer = (props: LayoutProps) => (
               <img className="logo-light" src={logoInverse} width={100} height={40} alt={name} />
             </Link>
 
-            <div className="row social mt-3 mx-0">
-              <a
-                className="col-3 col-lg-2 px-0 social-item"
-                href="https://twitter.com/Ledgy"
-                {...targetBlank}
-              >
-                <FontAwesomeIcon icon={faTwitter} title="Twitter" />
-              </a>
-              <a
-                className="col-3 col-lg-2 px-0 social-item"
-                href="https://www.linkedin.com/company/ledgy"
-                {...targetBlank}
-              >
-                <FontAwesomeIcon icon={faLinkedin} title="LinkedIn" />
-              </a>
-              <a
-                className="col-3 col-lg-2 px-0 social-item"
-                href="https://www.facebook.com/LedgyCom/"
-                {...targetBlank}
-              >
-                <FontAwesomeIcon icon={faFacebook} title="Facebook" />
-              </a>
-              <a
-                className="col-3 col-lg-2 px-0 social-item"
-                href="https://angel.co/ledgy"
-                {...targetBlank}
-              >
-                <FontAwesomeIcon icon={faAngellist} title="AngelList" />
-              </a>
-              <a
-                className="col-3 col-lg-2 px-0 social-item"
-                href="https://blog.ledgy.com"
-                {...targetBlank}
-              >
-                <FontAwesomeIcon icon={faMedium} title="Medium" />
-              </a>
+            <div className="social my-2">
+              {[
+                ['https://twitter.com/Ledgy', faTwitter, 'Twitter'],
+                ['https://www.linkedin.com/company/ledgy', faLinkedin, 'LinkedIn'],
+                ['https://https://www.facebook.com/LedgyCom/.com/Ledgy', faFacebook, 'Facebook'],
+                ['https://angel.co/ledgy', faAngellist, 'AngelList'],
+                ['https://blog.ledgy.com', faMedium, 'Medium']
+              ].map(([href, icon, title]) => (
+                <a href={href} key={title} {...targetBlank}>
+                  <FontAwesomeIcon icon={icon} title={title} />
+                </a>
+              ))}
             </div>
             <div className="mt-4">
               {props.lang === 'de' ? (
