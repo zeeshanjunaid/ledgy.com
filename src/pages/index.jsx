@@ -24,7 +24,7 @@ const Header = ({ i18n, data }: Props) => {
               <Trans>Made for startups, thought for investors.</Trans>
             </h5>
 
-            <div className="text-white pb-6 banner-line-height">
+            <div className="text-white pb-6 banner-text">
               <Trans>
                 Get your <span className="font-weight-normal">cap table</span> and{' '}
                 <span className="font-weight-normal">employee participation</span> plans right, from

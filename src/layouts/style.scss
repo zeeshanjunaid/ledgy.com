@@ -229,10 +229,11 @@ h1 {
   }
 }
 
-.banner-line-height {
-  line-height: 2.4rem;
+.banner-text {
+  line-height: 2.2rem;
+  hyphens: none;
   @include media-breakpoint-up(xl) {
-    line-height: 2.8rem;
+    line-height: 2.6rem;
   }
 }
 
