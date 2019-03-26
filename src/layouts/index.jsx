@@ -142,6 +142,9 @@ const Footer = (props: LayoutProps) => (
               <Link className="nav-link" href to={`${props.prefix}/security/`}>
                 <Trans>Security</Trans>
               </Link>
+              <Link className="nav-link" href to={`${props.prefix}/gdpr-dpa/`}>
+                <Trans>GDPR</Trans>
+              </Link>
               <Link className="nav-link" href to={`${props.prefix}/contact/`}>
                 <Trans>Contact & Imprint</Trans>
               </Link>
