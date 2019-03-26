@@ -238,6 +238,13 @@ h1 {
   }
 }
 
+.banner-line-height {
+  line-height: 2.4rem;
+  @include media-breakpoint-up(xl) {
+    line-height: 2.8rem;
+  }
+}
+
 .adjust-bottom {
   margin-bottom: 1px;
 }
@@ -254,3 +261,4 @@ h1 {
   animation-iteration-count: infinite;
   animation-timing-function: ease-out;
 }
+

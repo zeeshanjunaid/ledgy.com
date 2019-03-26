@@ -41,29 +41,16 @@ const Header = ({ i18n, data }: Props) => {
               <Trans>Made for startups, thought for investors.</Trans>
             </h5>
 
-            <div className="text-white pb-4">
-              <ul className="pl-4">
-                <Trans>
-                  <li className="pb-2 pb-lg-4">
-                    Best automated <span className="font-weight-normal">cap table</span> in Europe
-                  </li>
-                  <li className="pb-2 pb-lg-4">
-                    <span className="font-weight-normal">Employee participation</span> plan
-                    management with any vesting schedule and notifications
-                  </li>
-                  <li className="pb-2 pb-lg-4">
-                    Intuitive modeling tools for{' '}
-                    <span className="font-weight-normal">financing round</span> and{' '}
-                    <span className="font-weight-normal">exit planning</span>
-                  </li>
-                  <li className="pb-2 pb-lg-4">
-                    Complete <span className="font-weight-normal">portfolio</span> with the latest{' '}
-                    <span className="font-weight-normal"> investment </span>
-                    and <span className="font-weight-normal"> vesting </span>
-                    information right at your fingertips
-                  </li>
-                </Trans>
-              </ul>
+            <div className="text-white pb-6 banner-line-height">
+              <Trans>
+                Get your <span className="font-weight-normal">cap table</span> and{' '}
+                <span className="font-weight-normal">employee participation</span> plans right, from
+                the beginning. Make your{' '}
+                <span className="font-weight-normal">financing rounds</span> a{' '}
+                <span className="font-weight-normal">success</span> and engage your{' '}
+                <span className="font-weight-normal">investors and employees</span>. Know your{' '}
+                <span className="font-weight-normal">data is safe</span> and compliant.
+              </Trans>
             </div>
             <a
               className="btn btn-block d-inline btn-xl mx-1 btn-round btn-outline-light"

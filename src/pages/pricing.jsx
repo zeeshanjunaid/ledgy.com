@@ -131,13 +131,15 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </Trans>
             <br />
             <br />
-            <Link
-              href
-              to={`${props.prefix}/features/`}
-              className="btn btn-block d-sm-inline btn-round btn-xl btn-outline-primary mt-6"
-            >
-              <Trans>Discover all features</Trans>
-            </Link>
+            <div className="mx-auto text-center">
+              <Link
+                href
+                to={`${props.prefix}/features/`}
+                className="btn btn-block d-sm-inline btn-round btn-xl btn-outline-primary mt-6"
+              >
+                <Trans>Discover all features</Trans>
+              </Link>
+            </div>
           </p>
         </div>
       </section>
