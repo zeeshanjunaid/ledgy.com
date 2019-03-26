@@ -74,8 +74,8 @@ msgid "Are you an investor and want to track your portfolio companies? The found
 msgstr "Are you an investor and want to track your portfolio companies? The founders are busy and the numbers they give you are different from your own records?<0/>With their cap table on Ledgy, there’s only a single source of truth. Convince your companies, and you will never miss anything regarding your investments."
 
 #: src/pages/features/esop.jsx:39
-msgid "Are you building a fast-growing company and want your valuable employees to be part of your success? Ledgy offers you a powerful module to manage your employee incentive plans. No matter if you transfer real stock from your company to an employee, options from a fixed-size pool of approved capital, warrants or even phantom stock.<0/><1/>Terminate or exercise the options and keep track of the amount which is still available.<2/><3/>Add a vesting schedule to your ESOPs and track their status in real-time. Coolest thing ever, let your employees log in to Ledgy and allow them to see at any point in time how much stock they have already vested and how many shares are still outstanding."
-msgstr "Are you building a fast-growing company and want your valuable employees to be part of your success? Ledgy offers you a powerful module to manage your employee incentive plans. No matter if you transfer real stock from your company to an employee, options from a fixed-size pool of approved capital, warrants or even phantom stock.<0/><1/>Terminate or exercise the options and keep track of the amount which is still available.<2/><3/>Add a vesting schedule to your ESOPs and track their status in real-time. Coolest thing ever, let your employees log in to Ledgy and allow them to see at any point in time how much stock they have already vested and how many shares are still outstanding."
+msgid "Are you building a fast-growing company and want your valuable employees to be part of your success? Ledgy offers you a powerful module to manage your employee participation plans. No matter if you transfer real stock from your company to an employee, options from a fixed-size pool of approved capital, warrants or even phantom stock.<0/><1/>Terminate or exercise the options and keep track of the amount which is still available.<2/><3/>Add a vesting schedule to your ESOPs and track their status in real-time. Coolest thing ever, let your employees log in to Ledgy and allow them to see at any point in time how much stock they have already vested and how many shares are still outstanding."
+msgstr "Are you building a fast-growing company and want your valuable employees to be part of your success? Ledgy offers you a powerful module to manage your employee participation plans. No matter if you transfer real stock from your company to an employee, options from a fixed-size pool of approved capital, warrants or even phantom stock.<0/><1/>Terminate or exercise the options and keep track of the amount which is still available.<2/><3/>Add a vesting schedule to your ESOPs and track their status in real-time. Coolest thing ever, let your employees log in to Ledgy and allow them to see at any point in time how much stock they have already vested and how many shares are still outstanding."
 
 #: src/pages/features/investors.jsx:39
 msgid "As an investor, you can profit a lot from Ledgy. Any of your portfolio companies that use the platform will appear in your portfolio. See your key performance indicators of your investments at a glance.<0/><1/>Never lose track of how much you invested in which company and what’s the approximate value of your investments today."
@@ -263,8 +263,8 @@ msgstr "Document storage"
 
 #: src/pages/features/reporting.jsx:14
 #: src/pages/features/reporting.jsx:24
-msgid "Documents & Reporting"
-msgstr "Documents & Reporting"
+msgid "Documents & Reports"
+msgstr "Documents & Reports"
 
 #: src/pages/features/esop.jsx:14
 msgid "ESOP"
@@ -280,8 +280,8 @@ msgstr "EU data protection"
 
 #: src/pages/features/esop.jsx:24
 #: src/pages/features.jsx:75
-msgid "Employee Incentive Plans"
-msgstr "Employee Incentive Plans"
+msgid "Employee Participation Plans"
+msgstr "Employee Participation Plans"
 
 #: src/components/Features.jsx:97
 #: src/layouts/index.jsx:180

@@ -96,7 +96,7 @@ export const FeatureLinks = ({
       <FeatureLink {...props} name={i18n.t`Modeling`} url="modeling" />
       <FeatureLink {...props} name={i18n.t`Employee Participation Plans`} url="esop" />
       <FeatureLink {...props} name={i18n.t`Portfolio`} url="portfolio" />
-      <FeatureLink {...props} name={i18n.t`Reporting`} url="reports" />
+      <FeatureLink {...props} name={i18n.t`Reports`} url="reports" />
     </div>
   </div>
 );

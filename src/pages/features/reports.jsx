@@ -11,7 +11,7 @@ import { Title } from '../../layouts/utils';
 export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
     <Title
-      title={i18n.t`Documents & Reporting`}
+      title={i18n.t`Documents & Reports`}
       section={i18n.t`Features`}
       description={i18n.t`Save painful work inserting numbers into templates. Automated documents and reports at your fingertips.`}
     />
@@ -21,7 +21,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         <div className="row">
           <div className="col-12 col-lg-8 offset-lg-2">
             <h1>
-              <Trans>Documents & Reporting</Trans>
+              <Trans>Documents & Reports</Trans>
             </h1>
           </div>
         </div>
@@ -145,7 +145,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
           </div>
 
-          <FeatureLinks {...props} i18n={i18n} page="reporting" />
+          <FeatureLinks {...props} i18n={i18n} page="reports" />
         </div>
       </section>
     </main>

@@ -73,7 +73,7 @@ msgid "Are you an investor and want to track your portfolio companies? The found
 msgstr "Du bist Investor und möchtest einen Überblick über die Eckdaten deiner Portfoliounternehmen? Die Gründer sind zu beschäftigt und die Zahlen, die sie dir geben, unterscheiden sich von deinen eigenen Aufzeichnungen? <0/> Mit deinem Aktienregister auf Ledgy gibt es nur noch eine einzige “Single Source of Truth”. Überzeuge deine Unternehmen und du wirst keine Informationen über deine Investitionen mehr verpassen."
 
 #: src/pages/features/esop.jsx:39
-msgid "Are you building a fast-growing company and want your valuable employees to be part of your success? Ledgy offers you a powerful module to manage your employee incentive plans. No matter if you transfer real stock from your company to an employee, options from a fixed-size pool of approved capital, warrants or even phantom stock.<0/><1/>Terminate or exercise the options and keep track of the amount which is still available.<2/><3/>Add a vesting schedule to your ESOPs and track their status in real-time. Coolest thing ever, let your employees log in to Ledgy and allow them to see at any point in time how much stock they have already vested and how many shares are still outstanding."
+msgid "Are you building a fast-growing company and want your valuable employees to be part of your success? Ledgy offers you a powerful module to manage your employee participation plans. No matter if you transfer real stock from your company to an employee, options from a fixed-size pool of approved capital, warrants or even phantom stock.<0/><1/>Terminate or exercise the options and keep track of the amount which is still available.<2/><3/>Add a vesting schedule to your ESOPs and track their status in real-time. Coolest thing ever, let your employees log in to Ledgy and allow them to see at any point in time how much stock they have already vested and how many shares are still outstanding."
 msgstr "Baust du ein schnell wachsendes Unternehmen auf und willst, dass deine wertvollen Mitarbeiter Teil des Erfolgs sind? Ledgy bietet ein leistungsstarkes Modul zur Verwaltung deiner Beteiligungspläne. Unabhängig davon, ob man reale Aktien an einen Mitarbeiter überträgt, Optionen aus einem festen Pool an genehmigtem Kapital, Warrants oder sogar Phantom-Aktien.<0/><1/>Terminiere oder übe Optionen aus und behalte den noch verfügbaren Betrag im Auge.<2/><3/>Füge Vesting zu beliebigen Transaktionen hinzu und verfolge dessen Status. Und das Beste ist, dass sich die Mitarbeiter bei Ledgy einloggen und sehen können, wie viele Aktien sie versprochen bekommen und wie viele schon gevested sind."
 
 #: src/pages/features/investors.jsx:39
@@ -262,7 +262,7 @@ msgstr "Dokumentenablage"
 
 #: src/pages/features/reporting.jsx:14
 #: src/pages/features/reporting.jsx:24
-msgid "Documents & Reporting"
+msgid "Documents & Reports"
 msgstr "Dokumente und Berichte"
 
 #: src/pages/features/esop.jsx:14
@@ -279,7 +279,7 @@ msgstr "EU-Datenschutz"
 
 #: src/pages/features/esop.jsx:24
 #: src/pages/features.jsx:75
-msgid "Employee Incentive Plans"
+msgid "Employee Participation Plans"
 msgstr "Mitarbeiterbeteiligungspläne"
 
 #: src/components/Features.jsx:97
