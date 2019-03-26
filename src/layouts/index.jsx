@@ -354,8 +354,8 @@ const TemplateWrapper = withI18n()((props: SiteProps) => (
       return (
         <div>
           <Title
-            title={i18n.t`The missing accounting software for your equity and ESOPs`}
-            description={i18n.t`Stay on top of your vesting schedules, options, phantom plans, and convertible loans. Get fast insights for financing rounds or exit negotiations using our built-in modeling tools. With the portfolio you will always have the latest information about your investment and vesting at your fingertips. Try now for free!`}
+            title={i18n.t`Ledgy | The Smartest Equity Management Software`}
+            description={i18n.t`Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant. Try now for free!`}
             thumbnailUrl={thumbnailUrl}
           />
           <Initialize pathname={pathname} branch={branch} />
