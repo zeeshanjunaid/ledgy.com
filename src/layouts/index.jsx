@@ -300,7 +300,8 @@ const Initialize = ({ branch, pathname }: {| branch: string, pathname: string |}
           cssNames: {
             widget: 'custom_fc_frame',
             expanded: 'custom_fc_expanded'
-          }
+          },
+          headerProperty: { backgroundColor: '#0086a9' }
         }
       };
       await loadScript('https://snippets.freshchat.com/js/fc-pre-chat-form-v2.js');
