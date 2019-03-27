@@ -158,7 +158,7 @@ const IndexPage = (props: Props) => {
             <div className="row gap-y justify-content-center">
               <Investor
                 name="btov Partners"
-                description={i18n.t`Europe’s symbiosis of early stage VC funds and private investor network`}
+                description={i18n.t`Europe’s symbiosis of early-stage VC funds and private investor network`}
                 img={data.btov}
               />
               <Investor
