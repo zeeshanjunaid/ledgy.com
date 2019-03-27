@@ -287,7 +287,7 @@ msgstr "EU-Datenschutz"
 
 #: src/layouts/index.jsx:171
 msgid "Employee Incentives"
-msgstr "Mitarbeiterbeteiligungen"
+msgstr "Mitarbeiter​​​​beteiligungen"
 
 #: src/components/Features.jsx:97
 #: src/pages/features/esop.jsx:24
@@ -869,7 +869,7 @@ msgstr "Der Ledgy-Blog"
 #: src/layouts/index.jsx:348
 #: src/pages/index.jsx:19
 msgid "The New Standard in Equity Management"
-msgstr "Der Neue Standard im Equity Management"
+msgstr "Der Neue Standard im Equity Management"
 
 #: src/pages/security.jsx:110
 msgid "The code is always reviewed by at least one other engineer"
@@ -929,7 +929,7 @@ msgstr "Von der Firma gehaltene Aktien"
 
 #: src/layouts/index.jsx:89
 msgid "Try Ledgy now for free"
-msgstr "Jetzt kostenlos auf Ledgy loslegen"
+msgstr "Jetzt kostenlos mit Ledgy loslegen"
 
 #: src/components/AllFeatures.jsx:115
 msgid "Two-Factor authentication"
