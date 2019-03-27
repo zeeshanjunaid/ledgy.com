@@ -17,11 +17,11 @@ const Header = ({ i18n, data }: Props) => {
           <div className="col-lg-6">
             <h1 className="text-white mb-2 mb-sm-3">
               <Trans>
-                <strong>The Smartest Equity Management Software</strong>
+                <strong>The New Standard in Equity Management</strong>
               </Trans>
             </h1>
             <h5 className="text-white font-weight-light pb-4 pb-lg-6">
-              <Trans>Made for startups, thought for investors.</Trans>
+              <Trans>Made for startups, great for investors</Trans>
             </h5>
 
             <div className="text-white pb-6 banner-text">
