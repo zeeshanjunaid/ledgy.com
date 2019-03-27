@@ -6,7 +6,7 @@ const NotFoundPage = () => (
 
     <div className="container py-200">
       <header className="section-header">
-        <h2>Page Not Found</h2>
+        <h2 className="mt-4">Oh no!</h2>
         <hr />
         <p className="lead">Seems you’re looking for something that doesn’t exist.</p>
       </header>

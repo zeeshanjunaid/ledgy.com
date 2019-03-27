@@ -26,7 +26,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <Trans>
                 Manage your shares.
                 <br />
-                Not your Excel.
+                Not your spreadsheet.
               </Trans>
             </h1>
           </div>
@@ -38,9 +38,9 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         <div className="container">
           <Feature
             {...props}
-            name={i18n.t`Consistency`}
+            name={i18n.t`Cap Table`}
             title={i18n.t`A Trusted Single Source of Truth`}
-            url="consistency"
+            url="captable"
           >
             <Trans>
               Did you know that many cap tables are incomplete or contain errors? Tracking the
@@ -52,12 +52,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <Hr />
 
-          <Feature
-            {...props}
-            name={i18n.t`Funding Round and Exit Modeling`}
-            url="round-modeling"
-            left
-          >
+          <Feature {...props} name={i18n.t`Funding Round and Exit Modeling`} url="modeling" left>
             <Trans>
               What’s the stake percentage of the founders after a VC invests $2,000,000 at a
               valuation of $7,500,000 taking into account the 2 outstanding convertible loans and
@@ -72,23 +67,12 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <Hr />
 
-          <Feature {...props} name={i18n.t`Employee Incentive Plans`} url="esop">
+          <Feature {...props} name={i18n.t`Employee Participation Plans`} url="esop">
             <Trans>
               Let your employees be part of your company’s success. Ledgy supports vested stock,
               options, phantom options, inverse vesting and ESOP pools.
               <br />
-              Employees can even log in to Ledgy and track their vested shares in real-time.
-            </Trans>
-          </Feature>
-
-          <Hr />
-
-          <Feature {...props} name={i18n.t`Reporting & Documents`} url="reporting" left>
-            <Trans>
-              Oh, it’s tax season again, and 50 holding confirmations are waiting to be sent to your
-              shareholders. This means pasting names into document templates, computing the tax
-              value of all shares… <br />
-              Don’t worry. Generate and send all relevant documents with a single click on Ledgy.
+              Employees can log in to Ledgy and track their vested shares in real-time.
             </Trans>
           </Feature>
 
@@ -98,7 +82,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             {...props}
             title={i18n.t`Investor Portfolio`}
             name={i18n.t`the Investor Portfolio`}
-            url="investors"
+            url="portfolio"
+            left
           >
             <Trans>
               Are you an investor and want to track your portfolio companies? The founders are busy
@@ -106,6 +91,17 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <br />
               With their cap table on Ledgy, there’s only a single source of truth. Convince your
               companies, and you will never miss anything regarding your investments.
+            </Trans>
+          </Feature>
+
+          <Hr />
+
+          <Feature {...props} name={i18n.t`Reports & Documents`} url="reports">
+            <Trans>
+              Oh, it’s tax season again, and 50 holding confirmations are waiting to be sent to your
+              shareholders. This means pasting names into document templates, computing the tax
+              value of all shares… <br />
+              Don’t worry. Generate and send all relevant documents with a single click on Ledgy.
             </Trans>
           </Feature>
 

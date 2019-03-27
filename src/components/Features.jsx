@@ -48,7 +48,9 @@ const FeatureLink = (props: {
   data: Object
 }) =>
   props.page !== props.url && (
-    <div className="col-6 px-3 col-lg-3">
+    <div
+      className={`px-2 col-6 ${props.page === 'index' ? 'col-md-4 col-lg-2' : 'col-md-3 col-lg-3'}`}
+    >
       <Link href to={`${props.prefix}/features/${props.url}/`}>
         <div className="card border hover-shadow-8">
           <div className="card-body mb-0 pb-0 px-2 h-125">
@@ -76,39 +78,37 @@ export const FeatureLinks = ({
   data: Object,
   i18n: I18n
 }) => (
-  <div>
-    <hr className="my-7" />
+  <div className={props.page === 'index' && 'pb-7 pt-3 mx-4'}>
+    {props.page !== 'index' && <hr className="my-7" />}
 
     <header className="section-header ">
       <h2>
         {props.page === 'index' ? (
-          <Trans>Features</Trans>
+          <Trans>All you need in one place</Trans>
         ) : (
           <Trans>Discover more about Ledgy</Trans>
         )}
       </h2>
     </header>
 
-    <div className="row gap-y">
-      {props.page !== 'index' && (
-        <FeatureLink {...props} name={i18n.t`Consistency`} url="consistency" />
-      )}
-      <FeatureLink {...props} name={i18n.t`Round Modeling`} url="round-modeling" />
-      <FeatureLink {...props} name={i18n.t`Employee Incentives`} url="esop" />
-      <FeatureLink {...props} name={i18n.t`Reporting`} url="reporting" />
-      <FeatureLink {...props} name={i18n.t`Investors`} url="investors" />
+    <div className="row gap-y justify-content-center">
+      <FeatureLink {...props} name={i18n.t`Cap Table`} url="captable" />
+      <FeatureLink {...props} name={i18n.t`Modeling`} url="modeling" />
+      <FeatureLink {...props} name={i18n.t`Employee Participation Plans`} url="esop" />
+      <FeatureLink {...props} name={i18n.t`Portfolio`} url="portfolio" />
+      <FeatureLink {...props} name={i18n.t`Reports`} url="reports" />
     </div>
   </div>
 );
 
 export const FeaturesFragment = graphql`
   fragment FeaturesFragment on Query {
-    consistency: imageSharp(fluid: { originalName: { regex: "/consistency.png/" } }) {
+    captable: imageSharp(fluid: { originalName: { regex: "/consistency.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
     }
-    roundModeling: imageSharp(fluid: { originalName: { regex: "/round-modeling.png/" } }) {
+    modeling: imageSharp(fluid: { originalName: { regex: "/round-modeling.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
@@ -118,12 +118,12 @@ export const FeaturesFragment = graphql`
         ...GatsbyImageSharpFluid
       }
     }
-    reporting: imageSharp(fluid: { originalName: { regex: "/reporting.png/" } }) {
+    reports: imageSharp(fluid: { originalName: { regex: "/reporting.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
     }
-    investors: imageSharp(fluid: { originalName: { regex: "/investors.png/" } }) {
+    portfolio: imageSharp(fluid: { originalName: { regex: "/investors.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }

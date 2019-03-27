@@ -89,16 +89,13 @@ const IndexPage = (props: Props) => {
           <div className="container">
             <div className="row">
               <div className="col-12 col-lg-6 pl-50 pr-80">
-                <h2>
-                  <Trans>Our mission</Trans>
-                </h2>
                 <p className="lead">
                   <Trans>
-                    We want to empower entrepreneurs. They should be able to focus on their
-                    business, not on bureaucratic paperwork. That’s why we want to establish a new,
-                    state-of-the-art tool to manage and exchange securities in private companies.
-                    Our goal is to make shares management a breeze for both companies and
-                    shareholders.
+                    We empower entrepreneurs with tools for their financing rounds and for engaging
+                    their investors and employees. Today, this involves a lot of paperwork, high
+                    costs and slow, intransparent processes. We make this a breeze for both
+                    companies and shareholders, establishing a new standard to manage and exchange
+                    securities in private companies.
                   </Trans>
                 </p>
               </div>
@@ -161,22 +158,22 @@ const IndexPage = (props: Props) => {
             <div className="row gap-y justify-content-center">
               <Investor
                 name="btov Partners"
-                description={i18n.t`One of Europe's oldest and largest early-stage VC funds`}
+                description={i18n.t`Europe’s symbiosis of early-stage VC funds and private investor network`}
                 img={data.btov}
               />
               <Investor
                 name="Creathor Ventures"
-                description={i18n.t`Backing the creators of our future`}
+                description={i18n.t`Backing the creators of our future since 1984`}
                 img={data.creathor}
               />
               <Investor
                 name="VI Partners"
-                description={i18n.t`Healthcare & Technology Venture Capital since 2001`}
+                description={i18n.t`Healthcare & technology venture capital since 2001`}
                 img={data.vipartners}
               />
               <Investor
                 name="Dr. Paul E. Sevinç"
-                description={i18n.t`Entrepreneur, Technologist, Founder of Doodle.com`}
+                description={i18n.t`Entrepreneur, technologist, founder of Doodle.com`}
                 img={data.paul}
               />
               <Investor
@@ -186,17 +183,17 @@ const IndexPage = (props: Props) => {
               />
               <Investor
                 name="Luis Cabiedes"
-                description={i18n.t`Specialized in investments in early-stage technology startups`}
+                description={i18n.t`Leading Spanish investor in early-stage technology startups`}
                 img={data.luis}
               />
               <Investor
                 name="Myke Näf"
-                description={i18n.t`Entrepreneur, Business Angel, Founder of Doodle.com`}
+                description={i18n.t`Entrepreneur, business angel, founder of Doodle.com`}
                 img={data.myke}
               />
               <Investor
                 name="Cyrill Osterwalder"
-                description={i18n.t`Digital Entrepreneur and Investor. Security, Crypto & Privacy Expert`}
+                description={i18n.t`Digital entrepreneur and investor. Security, crypto & privacy expert`}
                 img={data.cyrill}
               />
               <Investor
@@ -206,12 +203,12 @@ const IndexPage = (props: Props) => {
               />
               <Investor
                 name="Adrian Bührer"
-                description={i18n.t`Investor & Consultant (Farmy.ch, Flatfox.ch), Founder of Students.ch`}
+                description={i18n.t`Investor & consultant (Farmy.ch, Flatfox.ch), founder of Students.ch`}
                 img={data.adrian}
               />
               <Investor
                 name="Elena Walder-Schiavone"
-                description={i18n.t`M&A and Private Equity Lawyer with a focus on start-up legal advise, Smartuplaw.ch`}
+                description={i18n.t`M&A and private equity lawyer with a focus on start-up legal advise, Smartuplaw.ch`}
                 img={data.elena}
               />
             </div>

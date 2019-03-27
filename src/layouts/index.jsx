@@ -12,12 +12,12 @@ import {
   faAngellist,
   faMedium
 } from '@fortawesome/free-brands-svg-icons';
-import 'typeface-slabo-27px'; // eslint-disable-line import/extensions
+import 'typeface-roboto-slab'; // eslint-disable-line import/extensions
 import 'typeface-work-sans'; // eslint-disable-line import/extensions
 import 'katex/dist/katex.min.css';
 import 'prism-themes/themes/prism-ghcolors.css';
 
-import { Title, name, appUrl, demoUrl, loadScript, targetBlank } from './utils';
+import { Title, name, appUrl, demoUrl, loadScript, targetBlank, animateTablet } from './utils';
 import { catalogs, langFromPath, langPrefix, getLocale } from '../i18n-config';
 import SignupForm from '../components/SignupForm';
 
@@ -84,9 +84,9 @@ const Footer = (props: LayoutProps) => (
   <div>
     {hasFooter(props.location.pathname) && (
       <section className="section bg-pale-secondary" id="try">
-        <div className="container text-center signup py-7">
+        <div className="container text-center signup py-md-7">
           <h2>
-            <Trans>Try Ledgy now for free.</Trans>
+            <Trans>Try Ledgy now for free</Trans>
           </h2>
 
           <SignupForm {...props} />
@@ -94,8 +94,8 @@ const Footer = (props: LayoutProps) => (
           <p>
             <Trans>
               Takes too long to import your data?&nbsp;
-              <a href={`mailto:contact@ledgy.com?subject=${'Request for cap table import'}`}>
-                We’ll do it for you!
+              <a href={`mailto:contact@ledgy.com?subject=${'Request for Ledgy import'}`}>
+                We’ll do it for you.
               </a>
             </Trans>
           </p>
@@ -120,7 +120,7 @@ const Footer = (props: LayoutProps) => (
         </div>
       </section>
     )}
-    <footer className="footer py-7">
+    <footer className="footer pb-9 pt-7 py-md-7 text-white">
       <div className="container pb-2 pb-md-0">
         <div className="row gap-y">
           <div className="col-6 col-md-3 pl-6 order-md-2">
@@ -145,15 +145,9 @@ const Footer = (props: LayoutProps) => (
               <Link className="nav-link" href to={`${props.prefix}/contact/`}>
                 <Trans>Contact & Imprint</Trans>
               </Link>
-              <small>
-                <Link
-                  className="badge badge-pill badge-success mx-auto px-5"
-                  href
-                  to={`${props.prefix}/jobs/`}
-                >
-                  <Trans>Work with us</Trans>
-                </Link>
-              </small>
+              <Link className="nav-link" href to={`${props.prefix}/jobs/`}>
+                <Trans>Career</Trans>
+              </Link>
             </div>
           </div>
 
@@ -167,59 +161,51 @@ const Footer = (props: LayoutProps) => (
               <Link className="nav-link" href to={`${props.prefix}/features/`}>
                 <Trans>Features</Trans>
               </Link>
-              <Link className="nav-link" href to={`${props.prefix}/pricing/`}>
-                <Trans>Pricing</Trans>
+              <Link className="nav-link" href to={`${props.prefix}/features/captable/`}>
+                <Trans>Cap Table</Trans>
               </Link>
-              <Link className="nav-link" href to={`${props.prefix}/features/consistency/`}>
-                <Trans>Consistency</Trans>
-              </Link>
-              <Link className="nav-link" href to={`${props.prefix}/features/round-modeling/`}>
-                <Trans>Round Modeling</Trans>
+              <Link className="nav-link" href to={`${props.prefix}/features/modeling/`}>
+                <Trans>Modeling</Trans>
               </Link>
               <Link className="nav-link" href to={`${props.prefix}/features/esop/`}>
                 <Trans>Employee Incentives</Trans>
               </Link>
-              <Link className="nav-link" href to={`${props.prefix}/features/reporting/`}>
-                <Trans>Reporting</Trans>
+              <Link className="nav-link" href to={`${props.prefix}/features/portfolio/`}>
+                <Trans>Portfolio</Trans>
               </Link>
-              <Link className="nav-link" href to={`${props.prefix}/features/investors/`}>
-                <Trans>Investors</Trans>
+              <Link className="nav-link" href to={`${props.prefix}/features/reports/`}>
+                <Trans>Reports</Trans>
+              </Link>
+              <Link className="nav-link" href to={`${props.prefix}/pricing/`}>
+                <Trans>Pricing</Trans>
               </Link>
             </div>
           </div>
 
           <div className="col-6 col-md-3 pl-6 order-md-1">
-            <Logo {...props} inverse={false} />
+            <Link href to={`${props.prefix}/#start`} className="navbar-brand">
+              <img className="logo-light" src={logoInverse} width={100} height={40} alt={name} />
+            </Link>
 
-            <div className="row social social-bordered mt-3 mx-0">
-              <a className="col-3 col-lg-2 px-0 social-twitter" href="https://twitter.com/Ledgy">
-                <FontAwesomeIcon icon={faTwitter} title="Twitter" />
-              </a>
-              <a
-                className="col-3 col-lg-2 px-0 social-linkedin"
-                href="https://www.linkedin.com/company/ledgy"
-              >
-                <FontAwesomeIcon icon={faLinkedin} title="LinkedIn" />
-              </a>
-              <a
-                className="col-3 col-lg-2 px-0 social-facebook"
-                href="https://www.facebook.com/LedgyCom/"
-              >
-                <FontAwesomeIcon icon={faFacebook} title="Facebook" />
-              </a>
-              <a className="col-3 col-lg-2 px-0 social-angellist" href="https://angel.co/ledgy">
-                <FontAwesomeIcon icon={faAngellist} title="AngelList" />
-              </a>
-              <a className="col-3 col-lg-2 px-0 social-medium" href="https://blog.ledgy.com">
-                <FontAwesomeIcon icon={faMedium} title="Medium" />
-              </a>
+            <div className="social my-2">
+              {[
+                ['https://twitter.com/Ledgy', faTwitter, 'Twitter'],
+                ['https://www.linkedin.com/company/ledgy', faLinkedin, 'LinkedIn'],
+                ['https://https://www.facebook.com/LedgyCom/.com/Ledgy', faFacebook, 'Facebook'],
+                ['https://angel.co/ledgy', faAngellist, 'AngelList'],
+                ['https://blog.ledgy.com', faMedium, 'Medium']
+              ].map(([href, icon, title]) => (
+                <a href={href} key={title} {...targetBlank}>
+                  <FontAwesomeIcon icon={icon} title={title} />
+                </a>
+              ))}
             </div>
             <div className="mt-4">
               {props.lang === 'de' ? (
                 <Link
                   href
                   to={props.location.pathname.substr(3)}
-                  className="btn btn-round btn-outline-primary"
+                  className="btn btn-round btn-outline-light"
                 >
                   English
                 </Link>
@@ -227,7 +213,7 @@ const Footer = (props: LayoutProps) => (
                 <Link
                   href
                   to={`/de${props.location.pathname}`}
-                  className="btn btn-round btn-outline-primary"
+                  className="btn btn-round btn-outline-light"
                 >
                   Deutsch
                 </Link>
@@ -283,6 +269,7 @@ type SiteProps = {
 
 const Initialize = ({ branch, pathname }: {| branch: string, pathname: string |}) => {
   useEffect(() => {
+    animateTablet();
     window.branch = branch;
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({ branch });
@@ -304,7 +291,8 @@ const Initialize = ({ branch, pathname }: {| branch: string, pathname: string |}
           cssNames: {
             widget: 'custom_fc_frame',
             expanded: 'custom_fc_expanded'
-          }
+          },
+          headerProperty: { backgroundColor: '#0086a9' }
         }
       };
       await loadScript('https://snippets.freshchat.com/js/fc-pre-chat-form-v2.js');
@@ -357,8 +345,8 @@ const TemplateWrapper = withI18n()((props: SiteProps) => (
       return (
         <div>
           <Title
-            title={i18n.t`The missing accounting software for your equity and ESOPs`}
-            description={i18n.t`Stay on top of your vesting schedules, options, phantom plans, and convertible loans. Get fast insights for financing rounds or exit negotiations using our built-in modeling tools. With the portfolio you will always have the latest information about your investment and vesting at your fingertips. Try now for free!`}
+            title={i18n.t`Ledgy | The New Standard in Equity Management`}
+            description={i18n.t`Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant. Try now for free!`}
             thumbnailUrl={thumbnailUrl}
           />
           <Initialize pathname={pathname} branch={branch} />

@@ -9,48 +9,47 @@ import { FeatureLinks } from '../components/Features';
 import SecurityRow from '../components/SecurityRow';
 import { demoUrl, targetBlank } from '../layouts/utils';
 
-const Header = ({ i18n, data }: Props) => (
-  <header className="header bg-ledgy">
-    <div className="container">
-      <div className="text-white text-center mb-1 mb-sm-3 mb-lg-7">
-        <h1>
-          <Trans>The missing accounting software for your equity and ESOPs</Trans>
-        </h1>
-      </div>
-      <div className="row gap-y mt-5 pb-4 pb-md-7">
-        <div className="col-lg-6 ml-auto mb-4 mb-lg-0">
-          <div className="text-white">
-            <p>
-              <Trans>
-                Stay on top of your vesting schedules, options, phantom plans, and convertible
-                loans. Get fast insights for financing rounds or exit negotiations using our
-                built-in modeling tools.
-                <br />
-                <br />
-                Are you an investor or employee? With the portfolio you will always have the latest
-                information about your investment and vesting at your fingertips.
-              </Trans>
-            </p>
-          </div>
-          <a
-            className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-outline-light"
-            href={demoUrl}
-            {...targetBlank}
-          >
-            <Trans>See the demo</Trans>
-          </a>
-          <a className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-light" href="#try">
-            <Trans>Get Started</Trans>
-          </a>
-        </div>
+const Header = ({ i18n, data }: Props) => {
+  return (
+    <header className="header bg-ledgy home-banner px-1 text-left ">
+      <div className="container">
+        <div className="row gap-y mt-md-2 pb-4 pb-md-6">
+          <div className="col-lg-6">
+            <h1 className="text-white mb-2 mb-sm-3">
+              <Trans>The New Standard in Equity Management</Trans>
+            </h1>
+            <h5 className="text-white font-weight-light pb-4 pb-lg-6 mb-0">
+              <Trans>Made for startups, great for investors</Trans>
+            </h5>
 
-        <div className="col-lg-6 order-lg-first" data-aos="fade-up">
-          <Img {...data.laptop} alt={i18n.t`Screenshot of the Ledgy app`} />
+            <div className="text-white pb-5 pb-lg-7 banner-text">
+              <Trans>
+                Get your cap table and employee participation plans right, from the beginning. Make{' '}
+                your financing rounds a success and engage your investors and employees. Know your{' '}
+                data is safe and compliant.
+              </Trans>
+            </div>
+            <a
+              className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-outline-light"
+              href={demoUrl}
+              {...targetBlank}
+            >
+              <Trans>See the Demo</Trans>
+            </a>
+            <a className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-light" href="#try">
+              <Trans>Get Started Free</Trans>
+            </a>
+          </div>
+          <div className="col-lg-6">
+            <div id="tablet-ledgy" data-aos="fade-up">
+              <Img {...data.laptop} alt={i18n.t`Screenshot of the Ledgy app`} />
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </header>
-);
+    </header>
+  );
+};
 
 const Reference = ({ img, name }: { img: Object, name: string }) => (
   <div style={{ width: '200px' }} className="my-4">
@@ -63,19 +62,21 @@ const IndexPage = (props: Props) => (
     <Header {...props} />
     <main className="main-content">
       <section className="section py-7" id="references">
+        <FeatureLinks {...props} page="index" />
         <div className="container">
+          <hr className="my-7" />
           <header className="section-header mb-3">
             <h2 className="my-4">
               <Trans>You’re in good company</Trans>
             </h2>
             <p>
-              <Trans>
+              <Trans className="mb-4">
                 Many successful companies already use Ledgy for their equity plans and cap table
               </Trans>
             </p>
           </header>
 
-          <div className="partner mx-auto">
+          <div className="partner mx-auto py-4">
             <Reference img={props.data.bexio} name="Bexio" />
             <Reference img={props.data.cryptofinance} name="Crypto Finance AG" />
             <Reference img={props.data.viu} name="VIU Eyeware" />
@@ -95,8 +96,6 @@ const IndexPage = (props: Props) => (
               <Trans>Find out why they trust us</Trans>
             </Link>
           </div>
-
-          <FeatureLinks {...props} page="index" />
 
           <section className="section py-5">
             <hr className="my-7" />
@@ -121,7 +120,7 @@ export const pageQuery = graphql`
   query {
     ...FeaturesFragment
 
-    laptop: imageSharp(fluid: { originalName: { regex: "/laptop.png/" } }) {
+    laptop: imageSharp(fluid: { originalName: { regex: "/tablet-history.png/" } }) {
       fluid(maxWidth: 2000) {
         ...GatsbyImageSharpFluid_noBase64
       }
