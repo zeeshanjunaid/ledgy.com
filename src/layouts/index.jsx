@@ -142,10 +142,13 @@ const Footer = (props: LayoutProps) => (
               <Link className="nav-link" href to={`${props.prefix}/security/`}>
                 <Trans>Security</Trans>
               </Link>
-              <Link className="nav-link" href to={`${props.prefix}/gdpr-dpa/`}>
+              <Link className="nav-link" href to={`${props.prefix}/legal/dpa/`}>
                 <Trans>GDPR</Trans>
               </Link>
-              <Link className="nav-link" href to={`${props.prefix}/terms/`}>
+              <Link className="nav-link" href to={`${props.prefix}/legal/cookies-policy/`}>
+                <Trans>Cookies Policy</Trans>
+              </Link>
+              <Link className="nav-link" href to={`${props.prefix}/legal/terms/`}>
                 <Trans>Terms of Service</Trans>
               </Link>
               <Link className="nav-link" href to={`${props.prefix}/contact/`}>
