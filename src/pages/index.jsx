@@ -18,11 +18,11 @@ const Header = ({ i18n, data }: Props) => {
             <h1 className="text-white mb-2 mb-sm-3">
               <Trans>The New Standard in Equity Management</Trans>
             </h1>
-            <h5 className="text-white font-weight-light pb-4 pb-lg-6">
+            <h5 className="text-white font-weight-light pb-4 pb-lg-6 mb-0">
               <Trans>Made for startups, great for investors</Trans>
             </h5>
 
-            <div className="text-white pb-6 banner-text">
+            <div className="text-white pb-5 pb-lg-7 banner-text">
               <Trans>
                 Get your <span className="font-weight-normal">cap table</span> and{' '}
                 <span className="font-weight-normal">employee participation</span> plans right, from
