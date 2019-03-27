@@ -24,13 +24,9 @@ const Header = ({ i18n, data }: Props) => {
 
             <div className="text-white pb-5 pb-lg-7 banner-text">
               <Trans>
-                Get your <span className="font-weight-normal">cap table</span> and{' '}
-                <span className="font-weight-normal">employee participation</span> plans right, from
-                the beginning. Make your{' '}
-                <span className="font-weight-normal">financing rounds</span> a{' '}
-                <span className="font-weight-normal">success</span> and engage your{' '}
-                <span className="font-weight-normal">investors and employees</span>. Know your{' '}
-                <span className="font-weight-normal">data is safe</span> and compliant.
+                Get your cap table and employee participation plans right, from the beginning. Make{' '}
+                your financing rounds a success and engage your investors and employees. Know your{' '}
+                data is safe and compliant.
               </Trans>
             </div>
             <a
