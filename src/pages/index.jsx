@@ -16,9 +16,7 @@ const Header = ({ i18n, data }: Props) => {
         <div className="row gap-y mt-md-2 pb-4 pb-md-6">
           <div className="col-lg-6">
             <h1 className="text-white mb-2 mb-sm-3">
-              <Trans>
-                <strong>The New Standard in Equity Management</strong>
-              </Trans>
+              <Trans>The New Standard in Equity Management</Trans>
             </h1>
             <h5 className="text-white font-weight-light pb-4 pb-lg-6">
               <Trans>Made for startups, great for investors</Trans>
