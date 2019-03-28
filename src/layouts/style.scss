@@ -45,7 +45,7 @@ li > a {
 }
 .btn {
   font-size: 0.6em;
-  transition: all 0.3s; 
+  transition: all 0.3s;
   padding: 7px 21px;
   &:hover {
     box-shadow: 0 10px 20px rgba(0,0,0,0.25), 0 6px 6px rgba(0,0,0,0.22);
@@ -177,6 +177,9 @@ h1 {
   hr {
     clear: both;
   }
+  strong {
+    font-weight: 400;
+  }
   .katex {
     font-size: 1em;
   }
@@ -226,7 +229,7 @@ h1 {
 .home-banner {
   @include media-breakpoint-up(xl) {
     @media(orientation:landscape) {
-     min-height: 95vh; 
+     min-height: 95vh;
     }
   }
 }
@@ -254,10 +257,10 @@ h1 {
 @keyframes swinging {
   from { transform: translateX(0px); }
   70%  { transform: translateX(5px); }
-  to   { transform: translateX(0px); }    
+  to   { transform: translateX(0px); }
 }
 
-.swinging {  
+.swinging {
   animation-name: swinging;
   animation-duration: 2s;
   animation-iteration-count: infinite;
@@ -273,4 +276,3 @@ h1 {
     color: white !important;
   }
 }
-

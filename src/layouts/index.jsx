@@ -138,6 +138,9 @@ const Footer = (props: LayoutProps) => (
             <Link className="nav-link" href to={`${props.prefix}/security/`}>
               <Trans>Security</Trans>
             </Link>
+            <Link className="nav-link" href to={`${props.prefix}/privacy/`}>
+              <Trans>Privacy</Trans>
+            </Link>
             <Link className="nav-link" href to={`${props.prefix}/jobs/`}>
               <Trans>Career</Trans>
             </Link>
@@ -218,17 +221,17 @@ const Footer = (props: LayoutProps) => (
             </strong>
           </h6>
           <div className="nav flex-column">
-            <Link className="nav-link" href to={`${props.prefix}/privacy/`}>
-              <Trans>Privacy</Trans>
-            </Link>
             <Link className="nav-link" href to={`${props.prefix}/legal/terms/`}>
               <Trans>Terms of Service</Trans>
+            </Link>
+            <Link className="nav-link" href to={`${props.prefix}/legal/privacy-policy/`}>
+              <Trans>Privacy Policy</Trans>
             </Link>
             <Link className="nav-link" href to={`${props.prefix}/legal/dpa/`}>
               <Trans>GDPR</Trans>
             </Link>
-            <Link className="nav-link" href to={`${props.prefix}/legal/cookies-policy/`}>
-              <Trans>Cookies Policy</Trans>
+            <Link className="nav-link" href to={`${props.prefix}/legal/cookie-policy/`}>
+              <Trans>Cookie Policy</Trans>
             </Link>
           </div>
         </div>
