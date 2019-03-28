@@ -85,6 +85,10 @@ h1 {
   }
 }
 
+.header h1, .header .banner-text {
+  max-width: 500px;
+}
+
 .partner {
   max-width: 960px;
 
