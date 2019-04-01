@@ -747,7 +747,7 @@ msgstr "Sicherheit"
 
 #: src/pages/index.jsx:37
 msgid "See the Demo"
-msgstr "Test die Demo"
+msgstr "Demo ansehen"
 
 #: src/components/AllFeatures.jsx:118
 msgid "Send holding confirmations"
