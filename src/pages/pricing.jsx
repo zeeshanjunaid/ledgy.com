@@ -122,7 +122,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
           </div>
 
-          <p className="mx-auto text-center mt-6">
+          <div className="mx-auto text-center mt-6">
             <Trans>
               Interested in our enterprise offer?
               <br />
@@ -140,7 +140,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                 <Trans>Discover all features</Trans>
               </Link>
             </div>
-          </p>
+          </div>
         </div>
       </section>
     </main>

@@ -531,10 +531,6 @@ msgstr "Ledgy can do a lot for you—and more features are constantly being deve
 msgid "Ledgy scales with your needs. Free for startups, powerful for grown-ups."
 msgstr "Ledgy scales with your needs. Free for startups, powerful for grown-ups."
 
-#: src/layouts/index.jsx:348
-msgid "Ledgy | The New Standard in Equity Management"
-msgstr "Ledgy | The New Standard in Equity Management"
-
 #: src/pages/features.jsx:71
 msgid "Let your employees be part of your company’s success. Ledgy supports vested stock, options, phantom options, inverse vesting and ESOP pools.<0/>Employees can log in to Ledgy and track their vested shares in real-time."
 msgstr "Let your employees be part of your company’s success. Ledgy supports vested stock, options, phantom options, inverse vesting and ESOP pools.<0/>Employees can log in to Ledgy and track their vested shares in real-time."
@@ -871,9 +867,10 @@ msgstr "Team"
 msgid "The Ledgy Blog"
 msgstr "The Ledgy Blog"
 
+#: src/layouts/index.jsx:348
 #: src/pages/index.jsx:19
-msgid "The New Standard in Equity Management"
-msgstr "The New Standard in Equity Management"
+msgid "The New Standard in Equity Management"
+msgstr "The New Standard in Equity Management"
 
 #: src/pages/security.jsx:110
 msgid "The code is always reviewed by at least one other engineer"
