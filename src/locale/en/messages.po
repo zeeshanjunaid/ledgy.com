@@ -1026,8 +1026,8 @@ msgid "We live up to highest security standards. We improve them continuously. 
 msgstr "We live up to highest security standards. We improve them continuously. <0>Check out what we do<1/></0>"
 
 #: src/pages/security.jsx:169
-msgid "We operate a <0>bug bounty program</0> on Federacy. Write us a message for an invitation."
-msgstr "We operate a <0>bug bounty program</0> on Federacy. Write us a message for an invitation."
+msgid "We operate a <0>bug bounty</0> program on Federacy. Write us a message for an invitation."
+msgstr "We operate a <0>bug bounty</0> program on Federacy. Write us a message for an invitation."
 
 #: src/pages/security.jsx:50
 msgid "We understand how sensitive cap table information is for any business. That’s why your privacy and your data’s security is crucial to us. Here is what we do to protect your data."

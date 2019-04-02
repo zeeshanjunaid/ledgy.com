@@ -169,9 +169,9 @@ const IndexPage = ({ i18n, ...props }: Object) => (
                   <Trans>
                     We operate a{' '}
                     <a {...targetBlank} href="https://www.federacy.com/ledgy">
-                      bug bounty program
+                      bug bounty
                     </a>{' '}
-                    on Federacy. Write us a message for an invitation.
+                    program on Federacy. Write us a message for an invitation.
                   </Trans>
                 }
                 size="6"

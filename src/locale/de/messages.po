@@ -6,7 +6,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Creation-Date: 2018-09-12T18:40:54.619Z\n"
-"PO-Revision-Date: 2019-04-01 18:28+0200\n"
+"PO-Revision-Date: 2019-04-02 15:41+0200\n"
 "Language: de\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
@@ -995,8 +995,8 @@ msgid "We live up to highest security standards. We improve them continuously. 
 msgstr "Wir erfüllen die höchsten Sicherheitsstandards. Und verbessern sie kontinuierlich. <0>Mehr erfahren<1/></0>"
 
 #: src/pages/security.jsx:169
-msgid "We operate a <0>bug bounty program</0> on Federacy. Write us a message for an invitation."
-msgstr "Wir betreiben ein <0>Bug Bounty-Programm</0> auf Federacy. Schreib’ uns eine Nachricht, um eine Einladung zu erhalten."
+msgid "We operate a <0>bug bounty</0> program on Federacy. Write us a message for an invitation."
+msgstr "Wir betreiben ein <0>Bug Bounty</0>-Programm auf Federacy. Schreib’ uns eine Nachricht, um eine Einladung zu erhalten."
 
 #: src/pages/security.jsx:50
 msgid "We understand how sensitive cap table information is for any business. That’s why your privacy and your data’s security is crucial to us. Here is what we do to protect your data."
