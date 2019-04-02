@@ -10,7 +10,7 @@ import {
   faShieldAlt,
   faChartPie,
   faChartBar,
-  faSignInAlt
+  faUser
 } from '@fortawesome/free-solid-svg-icons';
 
 import { PrivacyElement, PrivacyRow } from '../components/Privacy';
@@ -72,27 +72,27 @@ const IndexPage = ({ i18n, ...props }: Props) => (
 
           <PrivacyRow>
             <PrivacyElement
-              icon={faSignInAlt}
-              title={i18n.t`User information`}
-              body={i18n.t`Name, email, encrypted password and any other details you provide`}
+              icon={faChartPie}
+              title={i18n.t`Equity data`}
+              body={i18n.t`Stakeholder information, company information, share ledger transaction history, other cap table details. Equity data and all related information is used exclusively for the provision of the services`}
+              size="6"
+            />
+            <PrivacyElement
+              icon={faUser}
+              title={i18n.t`Identity and contact data`}
+              body={i18n.t`Name, email, address and any other details you provide. Provision of our services and management of your subscription. Providing you with updates about our services`}
               size="6"
             />
             <PrivacyElement
               icon={faChartBar}
-              title={i18n.t`Usage statistics`}
-              body={i18n.t`Name, time, and which features you use to understand and improve our service`}
+              title={i18n.t`Usage statistics and usage profile`}
+              body={i18n.t`Information about your website and service usage and communication preferences, to personalize and improve our service`}
               size="6"
             />
             <PrivacyElement
               icon={faDesktop}
-              title={i18n.t`Browser information`}
-              body={i18n.t`In case a crash happens, which helps us to fix it as fast as possible`}
-              size="6"
-            />
-            <PrivacyElement
-              icon={faChartPie}
-              title={i18n.t`Company information`}
-              body={i18n.t`Company name, and other company details. To properly use our Service you may enter the share ledger transactions and other cap table details.`}
+              title={i18n.t`Technical data`}
+              body={i18n.t`Browser type and version, time zone setting, location data, operating system, and platform. Analysis and improvement of our Services and communications and to prevent and fix problems`}
               size="6"
             />
           </PrivacyRow>
@@ -108,50 +108,25 @@ const IndexPage = ({ i18n, ...props }: Props) => (
               title={i18n.t`Security`}
               body={
                 <Trans>
-                  We live up to highest security standards. We improve them continuously.&nbsp;
+                  We live up to highest security standards. We improve them continuously.{' '}
                   <Link href to={`${props.prefix}/security/`}>
-                    Check out what we do
+                    See here what we do
                     <ChevronRight />
                   </Link>
                 </Trans>
               }
-              size="9"
+              size="12"
             />
             <PrivacyElement
               icon={faDesktop}
-              title={i18n.t`User information, usage statistics and browser information`}
-              body={i18n.t`We limit access and sharing as much as reasonably possible.`}
+              title={i18n.t`Contact data, usage statistics, and technical data`}
+              body={i18n.t`We limit access and sharing as much as reasonably possible. Some information is shared with third party contractors we use to run and improve our service for you`}
               size="6"
             />
             <PrivacyElement
               icon={faChartPie}
               title={i18n.t`Company information`}
-              body={i18n.t`Nobody has any access to the company information you provide.`}
-              size="6"
-            />
-          </PrivacyRow>
-        </Section>
-
-        <Section>
-          <h2>
-            <Trans>Who we share your information with</Trans>
-          </h2>
-          <PrivacyRow>
-            <PrivacyElement
-              icon={faPlug}
-              title={i18n.t`Third Party Contractors`}
-              body={
-                <Trans>
-                  Which we use to run and improve our Service for you. This excludes company
-                  information.
-                </Trans>
-              }
-              size="6"
-            />
-            <PrivacyElement
-              icon={faUsers}
-              title={i18n.t`Your shareholders`}
-              body={i18n.t`If you add them with their email address and they decide to sign up on Ledgy, shareholders can see their stake in your company and its latest valuation.`}
+              body={i18n.t`Nobody has any access to the equity data you provide. They are safely stored at a secure data center in France. Your stakeholders have no access and don’t get emails before you explicitly invite them`}
               size="6"
             />
           </PrivacyRow>

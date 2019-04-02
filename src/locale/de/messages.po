@@ -6,7 +6,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Creation-Date: 2018-09-12T18:40:54.619Z\n"
-"PO-Revision-Date: 2019-04-02 15:41+0200\n"
+"PO-Revision-Date: 2019-04-02 16:11+0200\n"
 "Language: de\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
@@ -131,9 +131,9 @@ msgstr "Breakpoint-Analyse"
 msgid "Bring order to your documents"
 msgstr "Bring’ Ordnung in deine Dokumente"
 
-#: src/pages/privacy.jsx:88
-msgid "Browser information"
-msgstr "Browser-Informationen"
+#: src/pages/privacy.jsx:95
+msgid "Browser type and version, time zone setting, location data, operating system, and platform. Analysis and improvement of our Services and communications and to prevent and fix problems"
+msgstr "Browsertyp und -version, Zeitzoneneinstellung, Standortdaten, Betriebssystem und Plattform. Zur Analyse und Verbesserung unserer Dienstleistungen und Kommunikation sowie zur Vermeidung und Behebung von Problemen"
 
 #: src/pages/security.jsx:167
 msgid "Bug bounty"
@@ -172,13 +172,9 @@ msgstr "Timo programmiert seit seiner Schulzeit, wurde für die beste Masterarbe
 msgid "Company"
 msgstr "Firma"
 
-#: src/pages/privacy.jsx:94 src/pages/privacy.jsx:128
+#: src/pages/privacy.jsx:128
 msgid "Company information"
 msgstr "Firmendaten"
-
-#: src/pages/privacy.jsx:95
-msgid "Company name, and other company details. To properly use our Service you may enter the share ledger transactions and other cap table details."
-msgstr "Firmenname und andere Firmendetails. Um unseren Service ordnungsgemäss nutzen zu können, kannst du die Aktien-Transaktionen und andere Cap Table-Details eingeben."
 
 #: src/pages/features/reports.jsx:36
 msgid "Configure your pdf reports"
@@ -195,6 +191,10 @@ msgstr "Kontakt"
 #: src/layouts/index.jsx:148
 msgid "Contact & Imprint"
 msgstr "Kontakt & Impressum"
+
+#: src/pages/privacy.jsx:122
+msgid "Contact data, usage statistics, and technical data"
+msgstr "Kontaktdaten, Nutzungsstatistiken und technische Daten"
 
 #: src/pages/security.jsx:142
 msgid "Content-Security-Policy"
@@ -312,6 +312,10 @@ msgstr "Unternehmer, Business Angel, Gründer von Doodle.com"
 #: src/pages/about-us.jsx:176
 msgid "Entrepreneur, technologist, founder of Doodle.com"
 msgstr "Unternehmer, Technologe, Gründer von Doodle.com"
+
+#: src/pages/privacy.jsx:76
+msgid "Equity data"
+msgstr "Aktiendaten"
 
 #: src/pages/pricing.jsx:48
 msgid "Error-free cap table"
@@ -440,9 +444,9 @@ msgstr "Besitzbestätigungen"
 msgid "How we protect your information"
 msgstr "Wie wir deine Informationen schützen"
 
-#: src/pages/privacy.jsx:154
-msgid "If you add them with their email address and they decide to sign up on Ledgy, shareholders can see their stake in your company and its latest valuation."
-msgstr "Falls du sie mit einer E-Mail-Adresse einträgst und sie sich bei Ledgy anmelden, können Gesellschafter ihren eigenen Anteil in deiner Firma sehen, sowie die aktuelle Bewertung."
+#: src/pages/privacy.jsx:82
+msgid "Identity and contact data"
+msgstr "Identität und Kontaktdaten"
 
 #: src/pages/security.jsx:197
 msgid "If you have any questions or discover anything suspicious, please <0>get in touch</0>."
@@ -456,13 +460,13 @@ msgstr "Illustrationen von"
 msgid "Import & export"
 msgstr "Import & Export"
 
-#: src/pages/privacy.jsx:89
-msgid "In case a crash happens, which helps us to fix it as fast as possible"
-msgstr "Falls unsere App abstürzt, damit wir den Fehler so schnell wie möglich beheben können"
-
 #: src/pages/features/esop.jsx:96
 msgid "In the case that your employee shares are implemented as options or phantom options, define a pool of approved capital first. Click the <0>Add pool</0> to create an options or phantom pool of a given share class and a fixed size. Then issue options, phantom options or shares from the approved capital and see key metrics of the pool like the amount still available."
 msgstr "Für Options- oder Phantompläne legst erst einen Pool von bewilligtem Kapital an. Klicke dafür auch <0>Add Pool</0> um einen Optionen- oder Phantompool von einer bestimmten Größe und Aktienklasse anzulegen. Dann kannst du Optionen oder virtuelle Optionen aus diesem bewilligten Kapital vergeben und die zentralen Metriken wie die noch verfügbare Menge verfolgen."
+
+#: src/pages/privacy.jsx:89
+msgid "Information about your website and service usage and communication preferences, to personalize and improve our service"
+msgstr "Informationen über deine Website- und Servicenutzung und Kommunikationseinstellungen, um unseren Service zu personalisieren und zu verbessern"
 
 #: src/pages/pricing.jsx:126
 msgid "Interested in our enterprise offer?<0/><1>Drop us an email</1> or use the chat right on this page."
@@ -581,21 +585,17 @@ msgstr "Modellierung"
 msgid "Multiple administrators"
 msgstr "Mehrere Administratoren"
 
-#: src/pages/privacy.jsx:77
-msgid "Name, email, encrypted password and any other details you provide"
-msgstr "Name, E-Mail, verschlüsseltes Passwort und alle anderen von dir angegebenen Daten"
-
 #: src/pages/privacy.jsx:83
-msgid "Name, time, and which features you use to understand and improve our service"
-msgstr "Name, Uhrzeit und welche Funktionen du verwendest, um unseren Service zu verstehen und zu verbessern"
+msgid "Name, email, address and any other details you provide. Provision of our services and management of your subscription. Providing you with updates about our services"
+msgstr "Name, E-Mail, Adresse und alle anderen Angaben, die du machst. Bereitstellung unserer Dienstleistungen und Verwaltung deines Abonnements. Wir informieren dich über Neuigkeiten zu unseren Dienstleistungen"
 
 #: src/pages/features/captable.jsx:145
 msgid "Nice charts!"
 msgstr "Coole Grafiken!"
 
 #: src/pages/privacy.jsx:129
-msgid "Nobody has any access to the company information you provide."
-msgstr "Niemand hat Zugriff auf die Unternehmensinformationen."
+msgid "Nobody has any access to the equity data you provide. They are safely stored at a secure data center in France. Your stakeholders have no access and don’t get emails before you explicitly invite them"
+msgstr "Niemand hat Zugang zu den von dir angegebenen Aktiendaten. Sie werden sicher in einem geschützten Rechenzentrum in Frankreich aufbewahrt. Deine Stakeholder haben keinen Zugriff und erhalten keine E-Mails, bevor du sie explizit einlädst"
 
 #: src/components/AllFeatures.jsx:47
 msgid "Numbered shares"
@@ -697,11 +697,11 @@ msgstr "Datenschutzrichtlinie"
 
 #: src/components/SecurityRow.jsx:19 src/pages/privacy.jsx:24
 msgid "Privacy made in Europe. Because your cap table data is not for everyone."
-msgstr "Privacy made in Europe. Weil deine Cap Table Daten nicht für jeden gedacht sind."
+msgstr "Privacy made in Europe. Weil deine Cap Table-Daten nicht für jeden gedacht sind."
 
 #: src/pages/privacy.jsx:47
 msgid "Privacy made in Europe. Because your cap table data is not for everyone.<0/><1/>We understand how sensitive cap table information is for any business. That’s why your privacy and your data’s security is crucial to us. We also know that long and complicated privacy policies are not very helpful, so we give an overview up-front."
-msgstr "Privacy made in Europe. Weil deine Cap Table Daten nicht für jeden gedacht sind.<0/><1/>Uns ist bewusst, wie wichtig und vertraulich Cap Table Daten für jede Firma sind. Deshalb nehmen wir deine Privatsphäre und die Sicherheit deiner Daten sehr ernst."
+msgstr "Privacy made in Europe. Weil deine Cap Table-Daten nicht für jeden gedacht sind.<0/><1/>Uns ist bewusst, wie wichtig und vertraulich Cap Table-Daten für jede Firma sind. Deshalb nehmen wir deine Privatsphäre und die Sicherheit deiner Daten sehr ernst."
 
 #: src/layouts/index.jsx:189
 msgid "Product"
@@ -818,6 +818,10 @@ msgstr "Weltraumlift"
 msgid "Spreadsheet Import"
 msgstr "Spreadsheet-Import"
 
+#: src/pages/privacy.jsx:77
+msgid "Stakeholder information, company information, share ledger transaction history, other cap table details. Equity data and all related information is used exclusively for the provision of the services"
+msgstr "Stakeholderinformationen, Unternehmensinformationen, Transaktionshistorie des Aktienbuchs, andere Details des Cap Tables. Aktiendaten und alle damit verbundenen Informationen werden ausschließlich für die Erbringung der Dienstleistungen verwendet"
+
 #: src/pages/features/captable.jsx:122
 msgid "Startups do end up with several conflicting spreadsheet-based cap tables, one being with the founders, one with the lawyers, one with the leading investors. Not so with Ledgy. Have one single source of truth and give your key stakeholders access with a single click. Don’t waste money on consolidating several cap table versions, professionaly manage it from the start instead."
 msgstr "Startups haben tatsächlich oft verschiedene Cap Table Versionen, die zueinander im Konflikt stehen. Einer von den Founders, einer bei den Anwälten und einer bei den Hauptinvestoren. Mit Ledgy passiert das nicht. Hier hast du eine einzige Informationsquelle und kannst deinen zentralen Stakeholdern mit einem Mausklick Zugriff geben. Verschwende kein Geld damit verschiedene Cap Tables von Anwälten wieder zusammenzuführen. Mach es lieber gleich professionell."
@@ -854,6 +858,10 @@ msgstr "Der Import ist mühsam? <0>Wir erledigen das für dich!</0>"
 msgid "Team"
 msgstr "Team"
 
+#: src/pages/privacy.jsx:94
+msgid "Technical data"
+msgstr "Technische Daten"
+
 #: src/layouts/index.jsx:225
 msgid "Terms of Service"
 msgstr "Nutzungsbedingungen"
@@ -889,10 +897,6 @@ msgstr "Unsere Seite ist ausschließlich über HTTPS erreichbar (<0>A+-Rating</0
 #: src/pages/features/portfolio.jsx:83
 msgid "The transaction history will tell you exactly what happened to your ownership at what time. Keep track of when you bought or sold shares and at which price. See which options you are currently holding or how much interest is on your convertible and whether there was a cap or discount."
 msgstr "Mit der Transaktionshistorie weißt du genau was sich wann an deinen Beteiligungen geändert hat. Behalte den Überblick darüber wann du Aktien gekauft oder verkauft hast und zu welchem Preis. Schau’ nach welche Optionen du gerade besitzt oder wie viel Zinsen auf deinen Wandeldarlehen inzwischen sind und ob es einen Cap oder Rabatt gab."
-
-#: src/pages/privacy.jsx:142
-msgid "Third Party Contractors"
-msgstr "Drittanbieter"
 
 #: src/pages/privacy.jsx:58
 msgid "This is a brief summary. For the details, please read our <0>Privacy Policy</0>."
@@ -942,17 +946,9 @@ msgstr "Zwei-Faktor-Authentisierung"
 msgid "Unlimited share classes"
 msgstr "Unbegrenzte Anzahl Aktienklassen"
 
-#: src/pages/privacy.jsx:82
-msgid "Usage statistics"
-msgstr "Nutzungsstatistiken"
-
-#: src/pages/privacy.jsx:76
-msgid "User information"
-msgstr "Nutzerdaten"
-
-#: src/pages/privacy.jsx:122
-msgid "User information, usage statistics and browser information"
-msgstr "Benutzerinformationen, Nutzungsstatistiken und Browser-Informationen"
+#: src/pages/privacy.jsx:88
+msgid "Usage statistics and usage profile"
+msgstr "Nutzungsstatistiken und Nutzungsprofile"
 
 #: src/pages/security.jsx:62
 msgid "Users have to set a <0>secure password</0>"
@@ -987,12 +983,12 @@ msgid "We empower entrepreneurs with tools for their financing rounds and for en
 msgstr "Wir unterstützen Unternehmer mit Tools für ihre Finanzierungsrunden und Motivation ihrer Investoren und Mitarbeiter. Heute ist dies mit viel Papierkram, hohen Kosten und langsamen, intransparenten Prozessen verbunden. Wir machen es für Unternehmen und Aktionäre zum Kinderspiel und etablieren einen neuen Standard für die Verwaltung und Handel von Wertpapieren in privaten Unternehmen."
 
 #: src/pages/privacy.jsx:123
-msgid "We limit access and sharing as much as reasonably possible."
-msgstr "Wir beschränken den Zugriff und das Teilen so weit wie möglich."
+msgid "We limit access and sharing as much as reasonably possible. Some information is shared with third party contractors we use to run and improve our service for you"
+msgstr "Wir beschränken den Zugriff und die Weitergabe so weit wie möglich. Einige Informationen werden an Drittanbieter weitergegeben, die wir verwenden, um unseren Service zu betreiben und zu verbessern"
 
 #: src/pages/privacy.jsx:110
-msgid "We live up to highest security standards. We improve them continuously. <0>Check out what we do<1/></0>"
-msgstr "Wir erfüllen die höchsten Sicherheitsstandards. Und verbessern sie kontinuierlich. <0>Mehr erfahren<1/></0>"
+msgid "We live up to highest security standards. We improve them continuously. <0>See here what we do<1/></0>"
+msgstr "Wir erfüllen die höchsten Sicherheitsstandards. Und verbessern sie kontinuierlich. <0>Mehr erfahren<1/></0>"
 
 #: src/pages/security.jsx:169
 msgid "We operate a <0>bug bounty</0> program on Federacy. Write us a message for an invitation."
@@ -1018,14 +1014,6 @@ msgstr "Wie viel Prozent halten die Gründer noch an der Firma, nachdem ein VC �
 msgid "When it’s time to exercise option grants, Ledgy calculates for you the amount that is already vested at a given date and lets you exercise parts or the full option grant.<0/><1/>Did an employee leave the company? Ledgy supports terminating part or the whole option grant.<2/><3/>Filter the transactions by an employee to see all their transactions (option grant, terminations and exercises) at a glance."
 msgstr "Wenn es an der Zeit ist Optionen auszuüben, sagt dir Ledgy welcher Teil zu dem Datum schon gevestet ist und lässt dich alles oder nur einen Teil der Option ausüben.<0/><1/>Hat ein Mitarbeiter die Firma verlassen? Ledgy unterstützt natürlich auch das Terminieren von Optionen.<2/><3/>Wenn du die Transaktionen nach einem bestimmten Mitarbeiter filterst, siehst du alle Optionen, Terminierungen und Ausübungen auf einen Blick."
 
-#: src/pages/privacy.jsx:144
-msgid "Which we use to run and improve our Service for you. This excludes company information."
-msgstr "Welche wir verwenden, um unseren Service zu betreiben und stetig zu verbessern. Ausgenommen hiervon sind Unternehmensinformationen."
-
-#: src/pages/privacy.jsx:137
-msgid "Who we share your information with"
-msgstr "An wen wir Daten weitergeben"
-
 #: src/pages/features/reports.jsx:39
 msgid "With Ledgy you can download a beautiful snapshot of your company’s shares structure. You can even configure it to include signature fields for your board of directors.<0/><1/>It includes the current cap table, with the non-diluted and fully-diluted stake of each shareholder (if you have options or phantom stock), your convertibles and ESOPs, and finally the transaction history, which tracks every change ever made to your cap table since the incorporation."
 msgstr "Ledgy erlaubt das Herunterladen von schön formatierten PDF Berichten des Cap Tables. Darin ist der aktuelle Cap Table mit nicht-verwässerten und verwässerten Prozentzahlen, Wandeldarlehen, Optionen und die ganze Transaktionshistorie, die alle je am Cap Table gemachten Änderungen seit der Gründung nachvollzieht. <0/></1>Man kann diese Berichte sogar nach Belieben konfigurieren."
@@ -1049,10 +1037,6 @@ msgstr "Mit den höchsten Sicherheitsstandards sind deine Daten bei uns sicher."
 #: src/pages/features/portfolio.jsx:36
 msgid "Your portfolio at a glance"
 msgstr "Dein Portfolio auf einen Blick"
-
-#: src/pages/privacy.jsx:153
-msgid "Your shareholders"
-msgstr "Deine Gesellschafter"
 
 #: src/pages/index.jsx:70
 msgid "You’re in good company"
