@@ -56,7 +56,9 @@ export const Image = ({ src, align, caption, size, img, ...props }: ImageProps) 
     className={align ? `mx-auto float-md-${align} size-md-small m-6` : 'mx-auto my-6'}
     style={size ? { width: `${size}px` } : {}}
   >
-    <Img {...img} {...props} />
+    <a href={img.fluid.src} data-provide="lightbox">
+      <Img {...img} {...props} />
+    </a>
     {caption && (
       <figcaption className="text-muted small px-3 font-weight-light mt-1">{caption}</figcaption>
     )}
