@@ -16,7 +16,7 @@ export default (props: Props) => (
         <Trans>Privacy</Trans>
       </h5>
       <p>
-        <Trans>Privacy made in Europe. Because your cap table data is not for everyone.</Trans>
+        <Trans>Privacy made in Europe. Because your equity data is not for everyone.</Trans>
         <br />
         <Link href to={`${props.prefix}/privacy/`}>
           <Trans>Read more</Trans>

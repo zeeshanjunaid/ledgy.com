@@ -4,8 +4,6 @@ import * as React from 'react';
 import { Link } from 'gatsby';
 import { withI18n, Trans } from '@lingui/react';
 import {
-  faUsers,
-  faPlug,
   faDesktop,
   faShieldAlt,
   faChartPie,
@@ -21,7 +19,7 @@ const Header = ({ i18n }: Props) => (
   <header className="header text-white bg-ledgy">
     <Title
       title={i18n.t`Privacy`}
-      description={i18n.t`Privacy made in Europe. Because your cap table data is not for everyone.`}
+      description={i18n.t`Privacy made in Europe. Because your equity data is not for everyone.`}
     />
 
     <div className="container text-center">
@@ -45,10 +43,10 @@ const IndexPage = ({ i18n, ...props }: Props) => (
         <Section>
           <p>
             <Trans>
-              Privacy made in Europe. Because your cap table data is not for everyone.
+              Privacy made in Europe. Because your equity data is not for everyone.
               <br />
               <br />
-              We understand how sensitive cap table information is for any business. That’s why your
+              We understand how sensitive equity information is for any business. That’s why your
               privacy and your data’s security is crucial to us. We also know that long and
               complicated privacy policies are not very helpful, so we give an overview up-front.
             </Trans>

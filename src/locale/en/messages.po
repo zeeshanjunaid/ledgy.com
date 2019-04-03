@@ -136,7 +136,7 @@ msgstr "Breakpoint analysis"
 msgid "Bring order to your documents"
 msgstr "Bring order to your documents"
 
-#: src/pages/privacy.jsx:95
+#: src/pages/privacy.jsx:93
 msgid "Browser type and version, time zone setting, location data, operating system, and platform. Analysis and improvement of our Services and communications and to prevent and fix problems"
 msgstr "Browser type and version, time zone setting, location data, operating system, and platform. Analysis and improvement of our Services and communications and to prevent and fix problems"
 
@@ -178,7 +178,7 @@ msgstr "Coding since high school, Timo got an award for the best master thesis i
 msgid "Company"
 msgstr "Company"
 
-#: src/pages/privacy.jsx:128
+#: src/pages/privacy.jsx:126
 msgid "Company information"
 msgstr "Company information"
 
@@ -199,7 +199,7 @@ msgstr "Contact"
 msgid "Contact & Imprint"
 msgstr "Contact & Imprint"
 
-#: src/pages/privacy.jsx:122
+#: src/pages/privacy.jsx:120
 msgid "Contact data, usage statistics, and technical data"
 msgstr "Contact data, usage statistics, and technical data"
 
@@ -323,7 +323,7 @@ msgstr "Entrepreneur, business angel, founder of Doodle.com"
 msgid "Entrepreneur, technologist, founder of Doodle.com"
 msgstr "Entrepreneur, technologist, founder of Doodle.com"
 
-#: src/pages/privacy.jsx:76
+#: src/pages/privacy.jsx:74
 msgid "Equity data"
 msgstr "Equity data"
 
@@ -455,11 +455,11 @@ msgstr "Holding confirmation"
 msgid "Holding confirmations"
 msgstr "Holding confirmations"
 
-#: src/pages/privacy.jsx:103
+#: src/pages/privacy.jsx:101
 msgid "How we protect your information"
 msgstr "How we protect your information"
 
-#: src/pages/privacy.jsx:82
+#: src/pages/privacy.jsx:80
 msgid "Identity and contact data"
 msgstr "Identity and contact data"
 
@@ -479,7 +479,7 @@ msgstr "Import & export"
 msgid "In the case that your employee shares are implemented as options or phantom options, define a pool of approved capital first. Click the <0>Add pool</0> to create an options or phantom pool of a given share class and a fixed size. Then issue options, phantom options or shares from the approved capital and see key metrics of the pool like the amount still available."
 msgstr "In the case that your employee shares are implemented as options or phantom options, define a pool of approved capital first. Click the <0>Add pool</0> to create an options or phantom pool of a given share class and a fixed size. Then issue options, phantom options or shares from the approved capital and see key metrics of the pool like the amount still available."
 
-#: src/pages/privacy.jsx:89
+#: src/pages/privacy.jsx:87
 msgid "Information about your website and service usage and communication preferences, to personalize and improve our service"
 msgstr "Information about your website and service usage and communication preferences, to personalize and improve our service"
 
@@ -603,7 +603,7 @@ msgstr "Modeling"
 msgid "Multiple administrators"
 msgstr "Multiple administrators"
 
-#: src/pages/privacy.jsx:83
+#: src/pages/privacy.jsx:81
 msgid "Name, email, address and any other details you provide. Provision of our services and management of your subscription. Providing you with updates about our services"
 msgstr "Name, email, address and any other details you provide. Provision of our services and management of your subscription. Providing you with updates about our services"
 
@@ -611,7 +611,7 @@ msgstr "Name, email, address and any other details you provide. Provision of our
 msgid "Nice charts!"
 msgstr "Nice charts!"
 
-#: src/pages/privacy.jsx:129
+#: src/pages/privacy.jsx:127
 msgid "Nobody has any access to the equity data you provide. They are safely stored at a secure data center in France. Your stakeholders have no access and don’t get emails before you explicitly invite them"
 msgstr "Nobody has any access to the equity data you provide. They are safely stored at a secure data center in France. Your stakeholders have no access and don’t get emails before you explicitly invite them"
 
@@ -709,8 +709,8 @@ msgstr "Pricing"
 
 #: src/components/SecurityRow.jsx:16
 #: src/layouts/index.jsx:142
-#: src/pages/privacy.jsx:23
-#: src/pages/privacy.jsx:31
+#: src/pages/privacy.jsx:21
+#: src/pages/privacy.jsx:29
 msgid "Privacy"
 msgstr "Privacy"
 
@@ -719,13 +719,13 @@ msgid "Privacy Policy"
 msgstr "Privacy Policy"
 
 #: src/components/SecurityRow.jsx:19
-#: src/pages/privacy.jsx:24
-msgid "Privacy made in Europe. Because your cap table data is not for everyone."
-msgstr "Privacy made in Europe. Because your cap table data is not for everyone."
+#: src/pages/privacy.jsx:22
+msgid "Privacy made in Europe. Because your equity data is not for everyone."
+msgstr "Privacy made in Europe. Because your equity data is not for everyone."
 
-#: src/pages/privacy.jsx:47
-msgid "Privacy made in Europe. Because your cap table data is not for everyone.<0/><1/>We understand how sensitive cap table information is for any business. That’s why your privacy and your data’s security is crucial to us. We also know that long and complicated privacy policies are not very helpful, so we give an overview up-front."
-msgstr "Privacy made in Europe. Because your cap table data is not for everyone.<0/><1/>We understand how sensitive cap table information is for any business. That’s why your privacy and your data’s security is crucial to us. We also know that long and complicated privacy policies are not very helpful, so we give an overview up-front."
+#: src/pages/privacy.jsx:45
+msgid "Privacy made in Europe. Because your equity data is not for everyone.<0/><1/>We understand how sensitive equity information is for any business. That’s why your privacy and your data’s security is crucial to us. We also know that long and complicated privacy policies are not very helpful, so we give an overview up-front."
+msgstr "Privacy made in Europe. Because your equity data is not for everyone.<0/><1/>We understand how sensitive equity information is for any business. That’s why your privacy and your data’s security is crucial to us. We also know that long and complicated privacy policies are not very helpful, so we give an overview up-front."
 
 #: src/layouts/index.jsx:189
 msgid "Product"
@@ -788,7 +788,7 @@ msgstr "Secure document storage"
 
 #: src/components/SecurityRow.jsx:31
 #: src/layouts/index.jsx:139
-#: src/pages/privacy.jsx:108
+#: src/pages/privacy.jsx:106
 #: src/pages/security.jsx:25
 #: src/pages/security.jsx:33
 msgid "Security"
@@ -846,7 +846,7 @@ msgstr "Space elevator"
 msgid "Spreadsheet Import"
 msgstr "Spreadsheet Import"
 
-#: src/pages/privacy.jsx:77
+#: src/pages/privacy.jsx:75
 msgid "Stakeholder information, company information, share ledger transaction history, other cap table details. Equity data and all related information is used exclusively for the provision of the services"
 msgstr "Stakeholder information, company information, share ledger transaction history, other cap table details. Equity data and all related information is used exclusively for the provision of the services"
 
@@ -886,7 +886,7 @@ msgstr "Takes too long to import your data? <0>We’ll do it for you.</0>"
 msgid "Team"
 msgstr "Team"
 
-#: src/pages/privacy.jsx:94
+#: src/pages/privacy.jsx:92
 msgid "Technical data"
 msgstr "Technical data"
 
@@ -927,7 +927,7 @@ msgstr "The site is accessible only through HTTPS (<0>A+ rating</0>)"
 msgid "The transaction history will tell you exactly what happened to your ownership at what time. Keep track of when you bought or sold shares and at which price. See which options you are currently holding or how much interest is on your convertible and whether there was a cap or discount."
 msgstr "The transaction history will tell you exactly what happened to your ownership at what time. Keep track of when you bought or sold shares and at which price. See which options you are currently holding or how much interest is on your convertible and whether there was a cap or discount."
 
-#: src/pages/privacy.jsx:58
+#: src/pages/privacy.jsx:56
 msgid "This is a brief summary. For the details, please read our <0>Privacy Policy</0>."
 msgstr "This is a brief summary. For the details, please read our <0>Privacy Policy</0>."
 
@@ -976,7 +976,7 @@ msgstr "Two-factor authentication"
 msgid "Unlimited share classes"
 msgstr "Unlimited share classes"
 
-#: src/pages/privacy.jsx:88
+#: src/pages/privacy.jsx:86
 msgid "Usage statistics and usage profile"
 msgstr "Usage statistics and usage profile"
 
@@ -1012,11 +1012,11 @@ msgstr "Warrants"
 msgid "We empower entrepreneurs with tools for their financing rounds and for engaging their investors and employees. Today, this involves a lot of paperwork, high costs and slow, intransparent processes. We make this a breeze for both companies and shareholders, establishing a new standard to manage and exchange securities in private companies."
 msgstr "We empower entrepreneurs with tools for their financing rounds and for engaging their investors and employees. Today, this involves a lot of paperwork, high costs and slow, intransparent processes. We make this a breeze for both companies and shareholders, establishing a new standard to manage and exchange securities in private companies."
 
-#: src/pages/privacy.jsx:123
+#: src/pages/privacy.jsx:121
 msgid "We limit access and sharing as much as reasonably possible. Some information is shared with third party contractors we use to run and improve our service for you"
 msgstr "We limit access and sharing as much as reasonably possible. Some information is shared with third party contractors we use to run and improve our service for you"
 
-#: src/pages/privacy.jsx:110
+#: src/pages/privacy.jsx:108
 msgid "We live up to highest security standards. We improve them continuously. <0>See here what we do<1/></0>"
 msgstr "We live up to highest security standards. We improve them continuously. <0>See here what we do<1/></0>"
 
@@ -1032,7 +1032,7 @@ msgstr "We understand how sensitive cap table information is for any business. T
 msgid "We’re hiring!"
 msgstr "We’re hiring!"
 
-#: src/pages/privacy.jsx:70
+#: src/pages/privacy.jsx:68
 msgid "What we may collect and why"
 msgstr "What we may collect and why"
 
