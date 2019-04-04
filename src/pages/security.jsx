@@ -12,7 +12,8 @@ import {
   faUserPlus,
   faLock,
   faKey,
-  faGlobeEurope
+  faGlobeEurope,
+  faBug
 } from '@fortawesome/free-solid-svg-icons';
 
 import { PrivacyElement } from '../components/Privacy';
@@ -158,6 +159,21 @@ const IndexPage = ({ i18n, ...props }: Object) => (
                 icon={faDatabase}
                 title={i18n.t`Backups`}
                 body={i18n.t`Daily backups ensure nothing is ever lost`}
+                size="6"
+              />
+
+              <PrivacyElement
+                icon={faBug}
+                title={i18n.t`Bug bounty`}
+                body={
+                  <Trans>
+                    We operate a{' '}
+                    <a {...targetBlank} href="https://www.federacy.com/ledgy">
+                      bug bounty
+                    </a>{' '}
+                    program on Federacy. Write us a message for an invitation.
+                  </Trans>
+                }
                 size="6"
               />
 

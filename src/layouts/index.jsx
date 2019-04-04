@@ -120,138 +120,157 @@ const Footer = (props: LayoutProps) => (
         </div>
       </section>
     )}
-    <footer className="footer pb-9 pt-7 py-md-7 text-white">
-      <div className="container pb-2 pb-md-0">
-        <div className="row gap-y">
-          <div className="col-6 col-md-3 pl-6 order-md-2">
-            <h6 className="mb-4 mt-1">
-              <strong>
-                <Trans>Company</Trans>
-              </strong>
-            </h6>
-            <div className="nav flex-column">
-              <Link className="nav-link" href to={`${props.prefix}/about-us/`}>
-                <Trans>About us</Trans>
-              </Link>
-              <Link className="nav-link" href to={`${props.prefix}/blog/`}>
-                <Trans>Blog</Trans>
-              </Link>
-              <Link className="nav-link" href to={`${props.prefix}/privacy/`}>
-                <Trans>Privacy</Trans>
-              </Link>
-              <Link className="nav-link" href to={`${props.prefix}/security/`}>
-                <Trans>Security</Trans>
-              </Link>
-              <Link className="nav-link" href to={`${props.prefix}/contact/`}>
-                <Trans>Contact & Imprint</Trans>
-              </Link>
-              <Link className="nav-link" href to={`${props.prefix}/jobs/`}>
-                <Trans>Career</Trans>
-              </Link>
-            </div>
-          </div>
-
-          <div className="col-6 col-md-3 pl-6 order-md-3">
-            <h6 className="mb-4 mt-1">
-              <strong>
-                <Trans>Product</Trans>
-              </strong>
-            </h6>
-            <div className="nav flex-column">
-              <Link className="nav-link" href to={`${props.prefix}/features/`}>
-                <Trans>Features</Trans>
-              </Link>
-              <Link className="nav-link" href to={`${props.prefix}/features/captable/`}>
-                <Trans>Cap Table</Trans>
-              </Link>
-              <Link className="nav-link" href to={`${props.prefix}/features/modeling/`}>
-                <Trans>Modeling</Trans>
-              </Link>
-              <Link className="nav-link" href to={`${props.prefix}/features/esop/`}>
-                <Trans>Employee Incentives</Trans>
-              </Link>
-              <Link className="nav-link" href to={`${props.prefix}/features/portfolio/`}>
-                <Trans>Portfolio</Trans>
-              </Link>
-              <Link className="nav-link" href to={`${props.prefix}/features/reports/`}>
-                <Trans>Reports</Trans>
-              </Link>
-              <Link className="nav-link" href to={`${props.prefix}/pricing/`}>
-                <Trans>Pricing</Trans>
-              </Link>
-            </div>
-          </div>
-
-          <div className="col-6 col-md-3 pl-6 order-md-1">
-            <Link href to={`${props.prefix}/#start`} className="navbar-brand">
-              <img className="logo-light" src={logoInverse} width={100} height={40} alt={name} />
+    <footer className="footer pb-9 pt-7 py-md-7 px-4 text-white">
+      <div className="row gap-y justify-content-md-center">
+        <div className="col-6 col-md-2 pl-6 order-md-2">
+          <h6 className="mb-4 mt-1">
+            <strong>
+              <Trans>Company</Trans>
+            </strong>
+          </h6>
+          <div className="nav flex-column">
+            <Link className="nav-link" href to={`${props.prefix}/about-us/`}>
+              <Trans>About us</Trans>
             </Link>
-
-            <div className="social my-2">
-              {[
-                ['https://twitter.com/Ledgy', faTwitter, 'Twitter'],
-                ['https://www.linkedin.com/company/ledgy', faLinkedin, 'LinkedIn'],
-                ['https://https://www.facebook.com/LedgyCom/.com/Ledgy', faFacebook, 'Facebook'],
-                ['https://angel.co/ledgy', faAngellist, 'AngelList'],
-                ['https://blog.ledgy.com', faMedium, 'Medium']
-              ].map(([href, icon, title]) => (
-                <a href={href} key={title} {...targetBlank}>
-                  <FontAwesomeIcon icon={icon} title={title} />
-                </a>
-              ))}
-            </div>
-            <div className="mt-4">
-              {props.lang === 'de' ? (
-                <Link
-                  href
-                  to={props.location.pathname.substr(3)}
-                  className="btn btn-round btn-outline-light"
-                >
-                  English
-                </Link>
-              ) : (
-                <Link
-                  href
-                  to={`/de${props.location.pathname}`}
-                  className="btn btn-round btn-outline-light"
-                >
-                  Deutsch
-                </Link>
-              )}
-            </div>
+            <Link className="nav-link" href to={`${props.prefix}/blog/`}>
+              <Trans>Blog</Trans>
+            </Link>
+            <Link className="nav-link" href to={`${props.prefix}/security/`}>
+              <Trans>Security</Trans>
+            </Link>
+            <Link className="nav-link" href to={`${props.prefix}/privacy/`}>
+              <Trans>Privacy</Trans>
+            </Link>
+            <Link className="nav-link" href to={`${props.prefix}/jobs/`}>
+              <Trans>Career</Trans>
+            </Link>
+            <Link className="nav-link" href to={`${props.prefix}/contact/`}>
+              <Trans>Contact & Imprint</Trans>
+            </Link>
           </div>
+        </div>
 
-          <div className="col-6 col-md-3 pl-6 order-md-4">
-            <h6 className="mb-4 mt-1">
-              <strong>
-                <Trans>Help</Trans>
-              </strong>
-            </h6>
-            <div className="nav flex-column">
-              <Link className="nav-link" href to={`${props.prefix}/help/getting-started/`}>
-                <Trans>Getting Started</Trans>
-              </Link>
-              <Link className="nav-link" href to={`${props.prefix}/help/faq/`}>
-                <Trans>FAQ</Trans>
-              </Link>
-            </div>
-            <h6 className="mb-4 mt-1">
-              <strong>
-                <Trans>Blog</Trans>
-              </strong>
-            </h6>
-            <div className="nav flex-column">
+        <div className="col-6 col-md-2 pl-6 order-md-4">
+          <h6 className="mb-4 mt-1">
+            <strong>
+              <Trans>Help</Trans>
+            </strong>
+          </h6>
+          <div className="nav flex-column">
+            <Link className="nav-link" href to={`${props.prefix}/help/getting-started/`}>
+              <Trans>Getting Started</Trans>
+            </Link>
+            <Link className="nav-link" href to={`${props.prefix}/help/faq/`}>
+              <Trans>FAQ</Trans>
+            </Link>
+          </div>
+          <h6 className="mb-4 mt-1">
+            <strong>
+              <Trans>Blog</Trans>
+            </strong>
+          </h6>
+          <div className="nav flex-column">
+            <Link
+              className="nav-link"
+              href
+              to={`${props.prefix}/blog/pre-and-post-money-option-pools/`}
+            >
+              Option Pools
+            </Link>
+            <Link className="nav-link" href to={`${props.prefix}/blog/convertible-loans/`}>
+              Convertible Loans
+            </Link>
+          </div>
+        </div>
+
+        <div className="col-6 col-md-2 pl-6 order-md-3">
+          <h6 className="mb-4 mt-1">
+            <strong>
+              <Trans>Product</Trans>
+            </strong>
+          </h6>
+          <div className="nav flex-column">
+            <Link className="nav-link" href to={`${props.prefix}/features/`}>
+              <Trans>Features</Trans>
+            </Link>
+            <Link className="nav-link" href to={`${props.prefix}/features/captable/`}>
+              <Trans>Cap Table</Trans>
+            </Link>
+            <Link className="nav-link" href to={`${props.prefix}/features/modeling/`}>
+              <Trans>Modeling</Trans>
+            </Link>
+            <Link className="nav-link" href to={`${props.prefix}/features/esop/`}>
+              <Trans>Employee Incentives</Trans>
+            </Link>
+            <Link className="nav-link" href to={`${props.prefix}/features/portfolio/`}>
+              <Trans>Portfolio</Trans>
+            </Link>
+            <Link className="nav-link" href to={`${props.prefix}/features/reports/`}>
+              <Trans>Reports</Trans>
+            </Link>
+            <Link className="nav-link" href to={`${props.prefix}/pricing/`}>
+              <Trans>Pricing</Trans>
+            </Link>
+          </div>
+        </div>
+
+        <div className="col-6 col-md-2 pl-6 order-md-4">
+          <h6 className="mb-4 mt-1">
+            <strong>
+              <Trans>Legal</Trans>
+            </strong>
+          </h6>
+          <div className="nav flex-column">
+            <Link className="nav-link" href to={`${props.prefix}/legal/terms/`}>
+              <Trans>Terms of Service</Trans>
+            </Link>
+            <Link className="nav-link" href to={`${props.prefix}/legal/privacy-policy/`}>
+              <Trans>Privacy Policy</Trans>
+            </Link>
+            <Link className="nav-link" href to={`${props.prefix}/legal/cookie-policy/`}>
+              <Trans>Cookie Policy</Trans>
+            </Link>
+            <Link className="nav-link" href to={`${props.prefix}/legal/gdpr/`}>
+              <Trans>GDPR</Trans>
+            </Link>
+          </div>
+        </div>
+        <div className="col-12 col-md-2 pl-6 order-md-1">
+          <Link href to={`${props.prefix}/#start`} className="navbar-brand">
+            <img className="logo-light" src={logoInverse} width={100} height={40} alt={name} />
+          </Link>
+
+          <div className="social my-2">
+            {[
+              ['https://twitter.com/Ledgy', faTwitter, 'Twitter'],
+              ['https://www.linkedin.com/company/ledgy', faLinkedin, 'LinkedIn'],
+              ['https://https://www.facebook.com/LedgyCom/.com/Ledgy', faFacebook, 'Facebook'],
+              ['https://angel.co/ledgy', faAngellist, 'AngelList'],
+              ['https://blog.ledgy.com', faMedium, 'Medium']
+            ].map(([href, icon, title]) => (
+              <a href={href} key={title} {...targetBlank}>
+                <FontAwesomeIcon icon={icon} title={title} />
+              </a>
+            ))}
+          </div>
+          <div className="mt-4">
+            {props.lang === 'de' ? (
               <Link
-                className="nav-link"
                 href
-                to={`${props.prefix}/blog/pre-and-post-money-option-pools/`}
+                to={props.location.pathname.substr(3)}
+                className="btn btn-round btn-outline-light"
               >
-                Option Pools
+                English
               </Link>
-              <Link className="nav-link" href to={`${props.prefix}/blog/convertible-loans/`}>
-                Convertible Loans
+            ) : (
+              <Link
+                href
+                to={`/de${props.location.pathname}`}
+                className="btn btn-round btn-outline-light"
+              >
+                Deutsch
               </Link>
-            </div>
+            )}
           </div>
         </div>
       </div>
