@@ -141,7 +141,7 @@ msgstr "Browsertyp und -version, Zeitzoneneinstellung, Standortdaten, Betriebssy
 
 #: src/pages/security.jsx:167
 msgid "Bug bounty"
-msgstr "Bug County"
+msgstr "Bug Bounty"
 
 #: src/pages/features/captable.jsx:103
 msgid "By the way, if you decide to number your shares, we also got you covered. Ledgy will track who owns which shares for each transaction and assist you in entering valid share numbers.<0/>With Ledgy you can be sure that no single share number goes missing or is assigned twice."
@@ -416,11 +416,11 @@ msgstr "Jetzt Kostenlos Testen"
 
 #: src/pages/index.jsx:26
 msgid "Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant."
-msgstr "Erstelle deinen Cap Table und Mitarbeiterbeteiligungspläne von Anfang an richtig. Bringe deine Finanzierungsrunden zu einem Erfolg und motiviere deine Investoren und Mitarbeiter. Stelle sicher, dass deine Daten sicher und konform sind."
+msgstr "Erstelle deinen Cap Table und Mitarbeiterbeteiligungspläne von Anfang an richtig. Bringe deine Finanzierungsrunden zum Erfolg und motiviere deine Investoren und Mitarbeiter. Stelle sicher, dass deine Daten sicher und konform sind."
 
 #: src/layouts/index.jsx:368
 msgid "Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant. Try now for free!"
-msgstr "Erstelle deinen Cap Table und Mitarbeiterbeteiligungspläne von Anfang an richtig. Bringe deine Finanzierungsrunden zu einem Erfolg und motiviere deine Investoren und Mitarbeiter. Stelle sicher, dass deine Daten sicher und konform sind. Jetzt kostenlos testen!"
+msgstr "Erstelle deinen Cap Table und Mitarbeiterbeteiligungspläne von Anfang an richtig. Bringe deine Finanzierungsrunden zum Erfolg und motiviere deine Investoren und Mitarbeiter. Stelle sicher, dass deine Daten sicher und konform sind. Jetzt kostenlos testen!"
 
 #: src/layouts/index.jsx:161
 msgid "Getting Started"
