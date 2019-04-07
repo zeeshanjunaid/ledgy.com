@@ -36,6 +36,17 @@ export default withI18n()(({ i18n, ...props }: Props) => (
     <main className="main-content">
       <section className="section pt-5">
         <div className="container">
+          <Feature {...props} name={i18n.t`Employee Participation Plans`} url="esop">
+            <Trans>
+              Let your employees be part of your company’s success. Ledgy supports vested stock,
+              options, phantom options, inverse vesting and ESOP pools.
+              <br />
+              Employees can log in to Ledgy and track their vested shares in real-time.
+            </Trans>
+          </Feature>
+
+          <Hr />
+
           <Feature
             {...props}
             name={i18n.t`Cap Table`}
@@ -62,17 +73,6 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               investment influence my exit strategy?
               <br />
               Honestly, we don’t know. But Ledgy does.
-            </Trans>
-          </Feature>
-
-          <Hr />
-
-          <Feature {...props} name={i18n.t`Employee Participation Plans`} url="esop">
-            <Trans>
-              Let your employees be part of your company’s success. Ledgy supports vested stock,
-              options, phantom options, inverse vesting and ESOP pools.
-              <br />
-              Employees can log in to Ledgy and track their vested shares in real-time.
             </Trans>
           </Feature>
 
