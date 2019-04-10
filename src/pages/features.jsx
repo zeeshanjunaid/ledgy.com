@@ -33,6 +33,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         </div>
       </div>
     </header>
+
     <main className="main-content">
       <section className="section pt-5">
         <div className="container">
@@ -52,6 +53,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             name={i18n.t`Cap Table`}
             title={i18n.t`A Trusted Single Source of Truth`}
             url="captable"
+            left
           >
             <Trans>
               Did you know that many cap tables are incomplete or contain errors? Tracking the
@@ -63,7 +65,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <Hr />
 
-          <Feature {...props} name={i18n.t`Funding Round and Exit Modeling`} url="modeling" left>
+          <Feature {...props} name={i18n.t`Funding Round and Exit Modeling`} url="modeling">
             <Trans>
               What’s the stake percentage of the founders after a VC invests $2,000,000 at a
               valuation of $7,500,000 taking into account the 2 outstanding convertible loans and
@@ -78,12 +80,22 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <Hr />
 
+          <Feature {...props} name={i18n.t`Reports & Documents`} url="reports" left>
+            <Trans>
+              Oh, it’s tax season again, and 50 holding confirmations are waiting to be sent to your
+              shareholders. This means pasting names into document templates, computing the tax
+              value of all shares… <br />
+              Don’t worry. Generate and send all relevant documents with a single click on Ledgy.
+            </Trans>
+          </Feature>
+
+          <Hr />
+
           <Feature
             {...props}
             title={i18n.t`Investor Portfolio`}
             name={i18n.t`the Investor Portfolio`}
             url="portfolio"
-            left
           >
             <Trans>
               Are you an investor and want to track your portfolio companies? The founders are busy
@@ -91,17 +103,6 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <br />
               With their cap table on Ledgy, there’s only a single source of truth. Convince your
               companies, and you will never miss anything regarding your investments.
-            </Trans>
-          </Feature>
-
-          <Hr />
-
-          <Feature {...props} name={i18n.t`Reports & Documents`} url="reports">
-            <Trans>
-              Oh, it’s tax season again, and 50 holding confirmations are waiting to be sent to your
-              shareholders. This means pasting names into document templates, computing the tax
-              value of all shares… <br />
-              Don’t worry. Generate and send all relevant documents with a single click on Ledgy.
             </Trans>
           </Feature>
 

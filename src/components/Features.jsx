@@ -103,6 +103,11 @@ export const FeatureLinks = ({
 
 export const FeaturesFragment = graphql`
   fragment FeaturesFragment on Query {
+    esop: imageSharp(fluid: { originalName: { regex: "/esop.png/" } }) {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid
+      }
+    }
     captable: imageSharp(fluid: { originalName: { regex: "/consistency.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
@@ -113,17 +118,12 @@ export const FeaturesFragment = graphql`
         ...GatsbyImageSharpFluid
       }
     }
-    esop: imageSharp(fluid: { originalName: { regex: "/esop.png/" } }) {
+    portfolio: imageSharp(fluid: { originalName: { regex: "/investors.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
     }
     reports: imageSharp(fluid: { originalName: { regex: "/reporting.png/" } }) {
-      fluid(maxWidth: 800) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-    portfolio: imageSharp(fluid: { originalName: { regex: "/investors.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
