@@ -39,10 +39,11 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         <div className="container">
           <Feature {...props} name={i18n.t`Employee Participation Plans`} url="esop">
             <Trans>
-              Let your employees be part of your company’s success. Ledgy supports vested stock,
-              options, phantom options, inverse vesting and ESOP pools.
+              Let your employees be part of your company’s success. Set up your vested stock,
+              options, phantom options, inverse vesting and ESOP pools in a matter of a few clicks.
               <br />
-              Employees can log in to Ledgy and track their vested shares in real-time.
+              Track your vesting schedules in the most efficient of ways and engage your employees
+              with full transparency over their participation plans.
             </Trans>
           </Feature>
 
