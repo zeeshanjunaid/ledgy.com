@@ -52,15 +52,16 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           <Feature
             {...props}
             name={i18n.t`Cap Table`}
-            title={i18n.t`A Trusted Single Source of Truth`}
+            title={i18n.t`Trust in Your Cap Table`}
             url="captable"
             left
           >
             <Trans>
-              Did you know that many cap tables are incomplete or contain errors? Tracking the
-              ownership history with Excel or Word can quickly lead to inconsistencies. Set up your
-              shares with Ledgy and be sure that all data is consistent at any time. Give your key
-              stakeholders access and collaborate on a single source of truth.
+              Do you know that many cap tables are incomplete or contain errors? Have you gone
+              through the cap table pain, and spent huge amounts of money on lawyers using
+              spreadsheets? What if you could automate a legally valid, error-free cap table that
+              was easy to use, quick to learn, and allowed you to manage your pooled investments,
+              all in one good-looking user interface?
             </Trans>
           </Feature>
 

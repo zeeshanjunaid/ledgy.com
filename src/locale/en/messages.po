@@ -24,8 +24,8 @@ msgstr "<0/> Signing up…"
 
 #: src/pages/features/captable.jsx:24
 #: src/pages/features.jsx:42
-msgid "A Trusted Single Source of Truth"
-msgstr "A Trusted Single Source of Truth"
+msgid "Trust in Your Cap Table"
+msgstr "Trust in Your Cap Table"
 
 #: src/pages/features/captable.jsx:162
 msgid "A basic cap table"

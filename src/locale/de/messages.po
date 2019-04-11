@@ -23,7 +23,7 @@ msgstr "<0/> Anmelden…"
 
 #: src/pages/features/captable.jsx:24
 #: src/pages/features.jsx:42
-msgid "A Trusted Single Source of Truth"
+msgid "Trust in Your Cap Table"
 msgstr "Eine einzige vertrauenswürdige Quelle"
 
 #: src/pages/features/captable.jsx:162
