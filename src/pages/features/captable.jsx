@@ -37,21 +37,25 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               </h2>
               <p>
                 <Trans>
-                  Keep the ownership history of your company at a single place. No more shuffling
-                  around with different documents shared via email, Dropbox, Google Drive or Slack.
+                  Keep the ownership history of your company in a single place. No more shuffling
+                  around with different documents, contacting lawyers, having missing pieces, and
+                  errors occurring left and right.
                   <br />
-                  Ledgy will be your single source of truth. And it’s a damn good one!
+                  <br />
+                  Feed Ledgy all of your cap table information and let it work as the one source of
+                  truth for your company equity.
                   <br />
                   <br />
-                  To get started enter all your ownership transactions into Ledgy. That’s an
-                  excellent opportunity to understand what has been going on in your cap table.
+                  With our quick and easy onboarding process, your legally valid cap table will be
+                  set up in no time! No room for errors, Ledgy's computing is state-of-the-art, and
+                  will warn you shall there be any inconsistencies.
                   <br />
                   <br />
                   Need help?{' '}
                   <Link href to={`${props.prefix}/contact/`}>
                     Contact us
                   </Link>
-                  , and we will assist you to get started with Ledgy.
+                  , and we will assist you on getting started with Ledgy.
                 </Trans>
               </p>
             </header>
