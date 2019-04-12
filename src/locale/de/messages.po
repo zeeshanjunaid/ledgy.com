@@ -31,7 +31,7 @@ msgstr "Über uns"
 msgid "Access rights"
 msgstr "Zugriffsrechte"
 
-#: src/pages/features/esop.jsx:104
+#: src/pages/features/esop.jsx:86
 msgid "Add an option pool"
 msgstr ""
 
@@ -39,7 +39,7 @@ msgstr ""
 msgid "Add portfolio investment"
 msgstr ""
 
-#: src/pages/features/esop.jsx:84
+#: src/pages/features/esop.jsx:105
 msgid "Add vesting"
 msgstr ""
 
@@ -266,7 +266,7 @@ msgstr "Dokumentenablage"
 msgid "ESOP"
 msgstr "Mitarbeiterbeteiligung"
 
-#: src/pages/features/esop.jsx:171
+#: src/pages/features/esop.jsx:172
 msgid "ESOPs in the portfolio"
 msgstr "ESOPs im Portfolio"
 
@@ -276,10 +276,6 @@ msgstr "EU-Datenschutz"
 
 #: src/pages/features/captable.jsx:125
 msgid "Each one of your transactions may have some documents associated to it; that is why Ledgy allows you to upload files and attach them to your transactions. These docs can then be downloaded in the <0>Documents</0> page and in the investor portfolio <1>History</1> page."
-msgstr ""
-
-#: src/pages/features/esop.jsx:36
-msgid "Easily track your vesting schedules"
 msgstr ""
 
 #: src/pages/features/relations.jsx:68
@@ -308,7 +304,7 @@ msgstr "Mitarbeiterbeteiligungen"
 msgid "Encrypted connection"
 msgstr "Verschlüsselte Verbindung"
 
-#: src/pages/features/esop.jsx:154
+#: src/pages/features/esop.jsx:155
 msgid "Engage your employees with more transparency"
 msgstr ""
 
@@ -477,7 +473,7 @@ msgstr "Illustrationen von"
 msgid "Import & export"
 msgstr "Import & Export"
 
-#: src/pages/features/esop.jsx:93
+#: src/pages/features/esop.jsx:75
 msgid "In the case that your employee shares are implemented as options or phantom options, define a pool of approved capital first. Click the <0>Add pool</0> to create an options or phantom pool of a given share class and a fixed size. Then issue options, phantom options or shares from the approved capital and see key metrics of the pool like the amount still available."
 msgstr "Für Options- oder Phantompläne legst erst einen Pool von bewilligtem Kapital an. Klicke dafür auch <0>Add Pool</0> um einen Optionen- oder Phantompool von einer bestimmten Größe und Aktienklasse anzulegen. Dann kannst du Optionen oder virtuelle Optionen aus diesem bewilligten Kapital vergeben und die zentralen Metriken wie die noch verfügbare Menge verfolgen."
 
@@ -523,7 +519,7 @@ msgstr "Investoren lieben es, den Fortschritt ihrer Unternehmen zu verfolgen. Hi
 msgid "Is your startup thriving and you’re already thinking about a new financing round to fuel your growth and take your company to the next level? Or maybe you are ready for a new adventure and would like to see what chunk of the pie each stakeholder gets if you proceed with an exit?<0/><1/>Ledgy’s modeling tools are exactly made for you to dive into all of these possibilites, allowing you to <2>quickly model</2> all sorts of different situations, <3>understand how dilution works</3> in such events, and assess the impact of <4>liquidation preferences</4>.<5/><6/>For a new round, start by entering a valuation (pre- or post-money) and you’ll immediately see how your convertibles apply to your cap table. Whether they have a cap, interest, or discount, Ledgy will do the math for you. Add investments and employee pools with a fixed percentage, or increase an existing one to that percentage. You can even choose if it only dilutes existing shareholders or everyone, including the new ones.<7/><8/>Watch in real time how the new investment impacts your current shareholder distribution. You can find the round modeling tool directly on the <9>Cap Table</9> page."
 msgstr ""
 
-#: src/pages/features/esop.jsx:128
+#: src/pages/features/esop.jsx:129
 msgid "Issue options from a pool"
 msgstr "Vergebe Optionen aus einem Pool"
 
@@ -592,6 +588,10 @@ msgstr "Entwickelt für Startups, perfekt für Investoren"
 msgid "Maintain the hierarchy of your company by setting your access rights on the <0>Stakeholders</0> page. Admins will have full control over the company, viewers will be able to see all cap table info in a read-only mode, and personal will see their own stake and percentage on their portfolio once transactions have been commited. Keep everyone happy and let them see what they need to."
 msgstr ""
 
+#: src/pages/features/esop.jsx:36
+msgid "Make your employees part of your success"
+msgstr ""
+
 #: src/pages/features.jsx:26
 msgid "Manage your shares.<0/>Not your spreadsheet."
 msgstr "Verwalte deine Aktien. <0/> Nicht dein Excel."
@@ -637,7 +637,7 @@ msgstr ""
 msgid "Oh, it’s tax season again, and 50 holding confirmations are waiting to be sent to your stakeholders. This means pasting names into document templates, computing the tax value of all shares… <0/>Don’t worry. Generate and send all relevant documents in a matter of a few clicks on Ledgy."
 msgstr ""
 
-#: src/pages/features/esop.jsx:157
+#: src/pages/features/esop.jsx:158
 msgid "Once your incentive plan is on Ledgy, it’s time to engage your employees. Head over to the stakeholders page and invite them with a single click. They will then receive an email so they can log in to Ledgy themselves and see how many shares they have vested at any point in time.<0/><1/>Remember, happy employees is one of the keys to a successful company."
 msgstr ""
 
@@ -669,7 +669,7 @@ msgstr "Oder wirf’ einen kurzen Blick auf unsere <0>Live-Demo</0>."
 msgid "Oriol has a background in biotechnology and is passionate about any code-related matter, especially front-end development"
 msgstr "Oriol hat einen Hintergrund in der Biotechnologie und ist begeistert von jeglicher code-relevanter Materie, insbesondere Frontend-Entwicklung"
 
-#: src/pages/features/esop.jsx:63
+#: src/pages/features/esop.jsx:64
 msgid "Overview over vested, granted, and exercised incentives"
 msgstr "Überblick über gevestete, herausgegebene und ausgeübte Optionen"
 
@@ -832,7 +832,7 @@ msgstr "Überprüfung der Aktiennummer"
 msgid "Share your scenarios"
 msgstr "Teile deine Szenarien"
 
-#: src/pages/features/esop.jsx:145
+#: src/pages/features/esop.jsx:146
 msgid "Show cap table fully diluted"
 msgstr "Verwässerte Ansicht des Cap Tables"
 
@@ -953,7 +953,7 @@ msgstr "Diese Seite ist nur auf Englisch verfügbar."
 msgid "Thoughts on cap tables, financing rounds, and legal issues around running and managing a startup."
 msgstr "Gedanken über Cap Tablet, Finanzierungsrunden und rechtliche Fragen rund um das Leiten und Managen eines Startups."
 
-#: src/pages/features/esop.jsx:135
+#: src/pages/features/esop.jsx:136
 msgid "To get an overall view of the situation, check out yur <0>Cap Table</0> page and select the <1>fully diluted detailed</1> view to see your pools and employee incentives. You can chose to view your diluted cap table with all options aggregated in their pool, or distributed to each person."
 msgstr ""
 
@@ -1075,7 +1075,7 @@ msgstr "Welche Daten wir sammeln und warum"
 msgid "What’s the stake percentage of the founders after a VC invests $2,000,000 at a valuation of $7,500,000, taking into account the 2 outstanding convertible loans and keeping the ESOP pool at 10% while only diluting existing shareholders? How does the capped participating liquidation preference that comes with this investment influence my exit strategy?<0/>Honestly, we don’t know. But Ledgy does."
 msgstr ""
 
-#: src/pages/features/esop.jsx:111
+#: src/pages/features/esop.jsx:112
 msgid "When it’s time to exercise option grants, Ledgy calculates for you the amount that is already vested at a given date and lets you exercise parts or the full option grant.<0/><1/>Did an employee leave the company? Ledgy supports terminating part or the whole option grant.<2/><3/>Filter the transactions by an employee to see all their transactions (option grant, terminations and exercises) at a glance."
 msgstr "Wenn es an der Zeit ist Optionen auszuüben, sagt dir Ledgy welcher Teil zu dem Datum schon gevestet ist und lässt dich alles oder nur einen Teil der Option ausüben.<0/><1/>Hat ein Mitarbeiter die Firma verlassen? Ledgy unterstützt natürlich auch das Terminieren von Optionen.<2/><3/>Wenn du die Transaktionen nach einem bestimmten Mitarbeiter filterst, siehst du alle Optionen, Terminierungen und Ausübungen auf einen Blick."
 
@@ -1084,14 +1084,14 @@ msgid "With Ledgy, maintaining professional relationships with your stakeholders
 msgstr ""
 
 #: src/pages/features/esop.jsx:39
-msgid "With Ledgy, setting up your ESOPs will become the simplest of tasks; in a matter of a few clicks, you will have your employee participation plans up and running, whether they are real stock transfers, options from a pool, warrants, or even phantom shares.<0/><1/>When it comes to vesting schedules, efficiently setting up their type, duration, cliff, and every other detail will not be a daunting effort. With interactive graphs, you will be able to monitor these schedules in real time, and even better, allow your employees to log in to their accounts so they can see at any point in time how much stock they have vested and how many shares are still outstanding.<2/><3/>When needed, terminating or exercising options will be just as intuitive, and any amount that may still be available will continue to be tracked."
+msgid "With Ledgy, setting up your ESOPs will become the simplest of tasks; in a matter of a few clicks, you will have your employee participation plans up and running, whether they are real stock transfers, options from a pool, warrants, or even phantom shares.<0/><1/>When it comes to vesting schedules, efficiently setting up their type, duration, cliff, and every other detail will not be a daunting effort. With interactive graphs, you will be able to monitor these schedules in real time, and even better, allow your employees to log in to their accounts so they can see at any point in time how much stock they have vested and how many shares are still outstanding.<2/><3/>When needed, terminating or exercising options will be just as intuitive, and any amount that may still be available will continue to be tracked. And there’s even more: any contract you’ll be able to upload and easily share with your employees."
 msgstr ""
 
 #: src/layouts/team.jsx:34
 msgid "Yoko graduated from ETH and Oxford and was president of Swissloop, enabling the team to win the 3rd price at the SpaceX Hyperloop competition"
 msgstr "Yoko hat ihren Physik Master an der ETH und in Oxford gemacht und war Präsident von Swissloop, wo sie dem Team zum dritten Platz beim SpaceX Hyperloop Wettbewerb verholfen hat"
 
-#: src/pages/features/esop.jsx:72
+#: src/pages/features/esop.jsx:93
 msgid "You can create a simple or custom vesting schedule, define over how many months the shares are to be vested, whether there’s a cliff, and how often a new batch of shares gets assigned to the employee.<0/>As soon as you enter the first numbers, you will see a visual representation of the current schedule."
 msgstr ""
 
