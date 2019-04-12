@@ -113,7 +113,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               </p>
             </div>
 
-            <div className="col-md-5 order-md-first" data-aos="fade-left">
+            <div className="col-md-5 order-md-first" data-aos="fade-right">
               <Img
                 {...props.data.downloadHoldingConfirmation}
                 alt={i18n.t`Dialog for holding confirmation`}

@@ -82,7 +82,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               </p>
             </div>
 
-            <div className="col-md-7" data-aos="fade-right">
+            <div className="col-md-7" data-aos="fade-left">
               <Img {...props.data.addOption} alt={i18n.t`Add an option pool`} />
             </div>
           </div>
@@ -101,7 +101,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               </p>
             </div>
 
-            <div className="col-md-7 order-md-first mr-auto" data-aos="fade-left">
+            <div className="col-md-7 order-md-first mr-auto" data-aos="fade-right">
               <Img {...props.data.addVesting} alt={i18n.t`Add vesting`} />
             </div>
           </div>

@@ -102,7 +102,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   </Trans>
                 </div>
 
-                <div className="col-md-6 order-md-first" data-aos="fade-left">
+                <div className="col-md-6 order-md-first" data-aos="fade-right">
                   <Img
                     {...props.data.roundModelingProRata}
                     alt={i18n.t`Distribute Investment Pro-Rata`}
