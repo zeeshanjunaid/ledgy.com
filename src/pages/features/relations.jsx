@@ -77,7 +77,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   <i>Stakeholders</i> page. Admins will have full control over the company, viewers
                   will be able to see all cap table info in a read-only mode, and personal will see
                   their own stake and percentage on their portfolio once transactions have been
-                  commited. Keep everyone happy and let them see what they need to.
+                  committed. Keep everyone happy and let them see what they need to.
                 </Trans>
               </p>
             </div>
