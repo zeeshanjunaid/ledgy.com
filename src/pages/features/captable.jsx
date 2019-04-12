@@ -5,7 +5,7 @@ import { withI18n, Trans } from '@lingui/react';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 
-import { FeatureLinks } from '../../components/Features';
+import { FeatureLinks } from '../../components/Feature';
 import { Title } from '../../layouts/utils';
 
 export default withI18n()(({ i18n, ...props }: Props) => (
@@ -141,16 +141,14 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <p>
                 <Trans>
                   How much is your company worth? With the valuation transaction, add the share
-                  price at your most recent valuation event. The chart in the portfolio’s{' '}
-                  <i>History</i> menu will colorfully show you how much your value has grown over
-                  time. For investors, see all of your companies aggregated there (and filter them
-                  if you need to)!
+                  price at all of your valuation events. Our beautiful interactive graphs will show
+                  you the evolution of your company’s valuation over time.
                 </Trans>
               </p>
             </div>
 
             <div className="col-md-8 order-md-first" data-aos="fade-right">
-              <Img {...props.data.performanceHistory} alt={i18n.t`Performance history`} />
+              <Img {...props.data.valuation} alt={i18n.t`Valuation`} />
             </div>
           </div>
 
@@ -164,7 +162,10 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <p>
                 <Trans>
                   We know it can be tedious to add each person and transaction one by one, so Ledgy
-                  has at your disposal the bulk import feature!
+                  has at your disposal the bulk import feature{' '}
+                  <span role="img" aria-label="rocket">
+                    🚀
+                  </span>
                   <br />
                   <br />
                   Whether it’s your stakeholders, share issues, or option issues, we got you
@@ -176,7 +177,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
             <div className="row gap-y">
               <div className="col-md-10 mx-auto mb-7" data-aos="fade-up">
-                <Img {...props.data.bulkEntry} alt={i18n.t`A basic cap table`} />
+                <Img {...props.data.bulkEntry} alt={i18n.t`Bulk entry`} />
               </div>
             </div>
           </div>
@@ -227,9 +228,7 @@ export const pageQuery = graphql`
         ...GatsbyImageSharpFluid
       }
     }
-    performanceHistory: imageSharp(
-      fluid: { originalName: { regex: "/performance-history.png/" } }
-    ) {
+    valuation: imageSharp(fluid: { originalName: { regex: "/valuation.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }

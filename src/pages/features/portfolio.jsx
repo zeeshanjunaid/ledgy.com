@@ -5,7 +5,7 @@ import { withI18n, Trans } from '@lingui/react';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
-import { FeatureLinks } from '../../components/Features';
+import { FeatureLinks } from '../../components/Feature';
 import { Title } from '../../layouts/utils';
 
 export default withI18n()(({ i18n, ...props }: Props) => (
@@ -43,7 +43,10 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   <br />
                   <br />
                   Never lose track of how much you invested in which company and what’s the
-                  approximate value of your investments today.
+                  approximate value of your investments today. The chart in the portfolio’s{' '}
+                  <i>History</i> menu will colorfully show you how much your value has grown over
+                  time. For investors, see all of your companies aggregated there (and filter them
+                  if you need to)!
                 </Trans>
               </p>
             </header>

@@ -5,7 +5,7 @@ import { withI18n, Trans } from '@lingui/react';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 
-import { FeatureLinks } from '../components/Features';
+import { FeatureLinks } from '../components/Feature';
 import SecurityRow from '../components/SecurityRow';
 import { demoUrl, targetBlank } from '../layouts/utils';
 
