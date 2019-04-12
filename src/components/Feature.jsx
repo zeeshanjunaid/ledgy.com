@@ -78,7 +78,7 @@ export const FeatureLinks = ({
   data: Object,
   i18n: I18n
 }) => (
-  <div className={props.page === 'index' && 'pb-7 pt-3 mx-4'}>
+  <div className={props.page === 'index' ? 'pb-7 pt-3' : 'py-3'}>
     {props.page !== 'index' && <hr className="my-7" />}
 
     <header className="section-header ">
