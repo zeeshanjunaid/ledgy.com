@@ -33,7 +33,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           <div>
             <header className="section-header text-left">
               <h2>
-                <Trans>Easily track your vesting schedules</Trans>
+                <Trans>Make your employees part of your success</Trans>
               </h2>
               <p>
                 <Trans>
@@ -51,7 +51,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   <br />
                   <br />
                   When needed, terminating or exercising options will be just as intuitive, and any
-                  amount that may still be available will continue to be tracked.
+                  amount that may still be available will continue to be tracked. And there’s even
+                  more: any contract you’ll be able to upload and easily share with your employees.
                 </Trans>
               </p>
             </header>
@@ -63,6 +64,26 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   alt={i18n.t`Overview over vested, granted, and exercised incentives`}
                 />
               </div>
+            </div>
+          </div>
+
+          <hr className="my-8" />
+
+          <div className="row align-items-center my-8">
+            <div className="col-md-4 mr-auto">
+              <p>
+                <Trans>
+                  In the case that your employee shares are implemented as options or phantom
+                  options, define a pool of approved capital first. Click the <i>Add pool</i> to
+                  create an options or phantom pool of a given share class and a fixed size. Then
+                  issue options, phantom options or shares from the approved capital and see key
+                  metrics of the pool like the amount still available.
+                </Trans>
+              </p>
+            </div>
+
+            <div className="col-md-7" data-aos="fade-right">
+              <Img {...props.data.addOption} alt={i18n.t`Add an option pool`} />
             </div>
           </div>
 
@@ -80,28 +101,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               </p>
             </div>
 
-            <div className="col-md-7 ml-auto" data-aos="fade-left">
+            <div className="col-md-7 order-md-first mr-auto" data-aos="fade-left">
               <Img {...props.data.addVesting} alt={i18n.t`Add vesting`} />
-            </div>
-          </div>
-
-          <hr className="my-8" />
-
-          <div className="row align-items-center my-8">
-            <div className="col-md-4 ml-auto">
-              <p>
-                <Trans>
-                  In the case that your employee shares are implemented as options or phantom
-                  options, define a pool of approved capital first. Click the <i>Add pool</i> to
-                  create an options or phantom pool of a given share class and a fixed size. Then
-                  issue options, phantom options or shares from the approved capital and see key
-                  metrics of the pool like the amount still available.
-                </Trans>
-              </p>
-            </div>
-
-            <div className="col-md-7 order-md-first" data-aos="fade-right">
-              <Img {...props.data.addOption} alt={i18n.t`Add an option pool`} />
             </div>
           </div>
 
