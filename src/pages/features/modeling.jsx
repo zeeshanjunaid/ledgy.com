@@ -11,7 +11,7 @@ import { Title } from '../../layouts/utils';
 export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
     <Title
-      title={i18n.t`Funding Round Modeling`}
+      title={i18n.t`Round and Exit Modeling`}
       section={i18n.t`Features`}
       description={i18n.t`Simulate the outcome of your upcoming financing rounds. Detailed models give you a headstart over angels and VCs.`}
     />
@@ -21,7 +21,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         <div className="row">
           <div className="col-12 col-lg-8 offset-lg-2">
             <h1>
-              <Trans>Funding Round Modeling</Trans>
+              <Trans>Round and Exit Modeling</Trans>
             </h1>
           </div>
         </div>
@@ -33,26 +33,31 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           <div>
             <header className="section-header text-left">
               <h2>
-                <Trans>Explore new scenarios for upcoming financing rounds interactively</Trans>
+                <Trans>Explore new scenarios interactively</Trans>
               </h2>
               <p>
                 <Trans>
-                  Is your startup running well and you’re already thinking about a new financing
-                  round to fuel your growth and take your company to the next level?
+                  Is your startup thriving and you’re already thinking about a new financing round
+                  to fuel your growth and take your company to the next level? Or maybe you are
+                  ready for a new adventure and would like to see what chunk of the pie each
+                  stakeholder gets if you proceed with an exit?
                   <br />
                   <br />
-                  Enter a valuation (pre- or post-money), and you will see how your convertibles
-                  apply to your cap table immediately. If your convertible has a cap, discount or an
-                  interest—Ledgy does the math for you. Add an investment and enter the value of the
-                  investment.
+                  Ledgy’s modeling tools are exactly made for you to dive into all of these
+                  possibilites, allowing you to <strong>quickly model</strong> all sorts of
+                  different situations, <strong>understand how dilution works</strong> in such
+                  events, and assess the impact of <strong>liquidation preferences</strong>.
                   <br />
                   <br />
-                  Add a new employee pool with a fixed percentage, or increase an existing one to
-                  that percentage. You can even choose if it only dilutes existing shareholders or
+                  For a new round, start by entering a valuation (pre- or post-money) and you’ll
+                  immediately see how your convertibles apply to your cap table. Whether they have a
+                  cap, interest, or discount, Ledgy will do the math for you. Add investments and
+                  employee pools with a fixed percentage, or increase an existing one to that
+                  percentage. You can even choose if it only dilutes existing shareholders or
                   everyone, including the new ones.
                   <br />
                   <br />
-                  Watch in real-time how the new investment impacts your current shareholder
+                  Watch in real time how the new investment impacts your current shareholder
                   distribution. You can find the round modeling tool directly on the{' '}
                   <i>Cap Table</i> page.
                 </Trans>
@@ -60,30 +65,52 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </header>
 
             <div className="row gap-y">
-              <div className="col-md-10 mx-auto mb-7" data-aos="fade-up">
+              <div className="col-md-10 mx-auto" data-aos="fade-up">
                 <Img {...props.data.roundModelingSample} alt={i18n.t`Round Modeling`} />
               </div>
             </div>
           </div>
 
-          <header className="section-header text-left">
-            <div className="row gap-y">
-              <div className="col-md-6 ml-auto">
-                <Trans>
-                  Often you will have a couple of new investors and then existing shareholders will
-                  participate pro-rata in the round. You cap table is in Ledgy, so you can
-                  distribute an investment amount pro-rata with just a single click.
-                </Trans>
-              </div>
+          <hr className="my-8" />
 
-              <div className="col-md-6" data-aos="fade-left">
-                <Img
-                  {...props.data.roundModelingProRata}
-                  alt={i18n.t`Distribute Investment Pro-Rata`}
-                />
+          <div>
+            <header className="section-header text-left">
+              <div className="row gap-y">
+                <div className="col-md-6 ml-auto">
+                  <Trans>
+                    Tweak different parameters of the simulation as they best suit you by clicking
+                    on <i>Actions</i> and <i>Settings</i>. You can adjust shares rounding, as well
+                    as including or excluding convertibles and/or pools in the share price.
+                  </Trans>
+                </div>
+
+                <div className="col-md-6" data-aos="fade-left">
+                  <Img {...props.data.simulationSettings} alt={i18n.t`Simulation settings`} />
+                </div>
               </div>
-            </div>
-          </header>
+            </header>
+          </div>
+
+          <div>
+            <header className="section-header text-left">
+              <div className="row gap-y">
+                <div className="col-md-6 ml-auto">
+                  <Trans>
+                    Often you will have a couple of new investors, and then existing shareholders
+                    will participate pro-rata in the round. Your cap table is on Ledgy, so you can
+                    distribute an investment amount pro-rata with just a single click.
+                  </Trans>
+                </div>
+
+                <div className="col-md-6 order-md-first" data-aos="fade-left">
+                  <Img
+                    {...props.data.roundModelingProRata}
+                    alt={i18n.t`Distribute Investment Pro-Rata`}
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
 
           <div>
             <header className="section-header text-left">
@@ -97,7 +124,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </header>
 
             <div className="row gap-y">
-              <div className="col-md-10 mx-auto mb-7" data-aos="fade-left">
+              <div className="col-md-10 mx-auto mb-7" data-aos="fade-right">
                 <Img
                   {...props.data.roundModelingCaptable}
                   alt={i18n.t`Cap table during round modeling`}
@@ -149,8 +176,29 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               </p>
             </div>
 
-            <div className="col-md-5" data-aos="fade-left">
+            <div className="col-md-6" data-aos="fade-left">
               <Img {...props.data.roundModelingConvert} alt={i18n.t`Convert financing round`} />
+            </div>
+          </div>
+
+          <hr className="my-8" />
+
+          <div className="row align-items-center pb-7">
+            <div className="col-md-4 mr-auto">
+              <h2>
+                <Trans>Exit Modeling</Trans>
+              </h2>
+              <p>
+                <Trans>
+                  What if your company is worth such an amount that makes you think about an exit?
+                  With the Premium Exit Modeling feature, Ledgy will do an insane amount of math to
+                  show you the distribution of stakes in all possible situations.
+                </Trans>
+              </p>
+            </div>
+
+            <div className="col-md-8 order-md-first" data-aos="fade-right">
+              <Img {...props.data.exitModeling} alt={i18n.t`Exit Modeling`} />
             </div>
           </div>
 
@@ -180,6 +228,13 @@ export const pageQuery = graphql`
         ...GatsbyImageSharpFluid
       }
     }
+    simulationSettings: imageSharp(
+      fluid: { originalName: { regex: "/simulation-settings.png/" } }
+    ) {
+      fluid(maxWidth: 500) {
+        ...GatsbyImageSharpFluid
+      }
+    }
     roundModelingProRata: imageSharp(
       fluid: { originalName: { regex: "/round-modeling-pro-rata.png/" } }
     ) {
@@ -195,6 +250,11 @@ export const pageQuery = graphql`
     roundModelingConvert: imageSharp(
       fluid: { originalName: { regex: "/round-modeling-convert.png/" } }
     ) {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    exitModeling: imageSharp(fluid: { originalName: { regex: "/exit-modeling.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }

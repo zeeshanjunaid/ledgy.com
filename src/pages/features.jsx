@@ -67,14 +67,13 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <Hr />
 
-          <Feature {...props} name={i18n.t`Funding Round and Exit Modeling`} url="modeling">
+          <Feature {...props} name={i18n.t`Round and Exit Modeling`} url="modeling">
             <Trans>
               What’s the stake percentage of the founders after a VC invests $2,000,000 at a
-              valuation of $7,500,000 taking into account the 2 outstanding convertible loans and
-              keeping the ESOP pool at 10% while only diluting existing shareholders?
-              <br />
-              How does the capped participating liquidation preference that comes with this
-              investment influence my exit strategy?
+              valuation of $7,500,000, taking into account the 2 outstanding convertible loans and
+              keeping the ESOP pool at 10% while only diluting existing shareholders? How does the
+              capped participating liquidation preference that comes with this investment influence
+              my exit strategy?
               <br />
               Honestly, we don’t know. But Ledgy does.
             </Trans>

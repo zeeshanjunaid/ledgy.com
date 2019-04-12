@@ -80,11 +80,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               </p>
             </div>
 
-            <div className="col-md-8 ml-auto" data-aos="fade-left">
-              <Img
-                {...props.data.addVesting}
-                alt={i18n.t`Add options or phantom options with vesting`}
-              />
+            <div className="col-md-7 ml-auto" data-aos="fade-left">
+              <Img {...props.data.addVesting} alt={i18n.t`Add vesting`} />
             </div>
           </div>
 
@@ -103,13 +100,13 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               </p>
             </div>
 
-            <div className="col-md-8 order-md-first" data-aos="fade-right">
+            <div className="col-md-7 order-md-first" data-aos="fade-right">
               <Img {...props.data.addOption} alt={i18n.t`Add an option pool`} />
             </div>
           </div>
 
           <div className="row align-items-center my-8">
-            <div className="col-md-7 ml-auto">
+            <div className="col-md-7">
               <p>
                 <Trans>
                   When it’s time to exercise option grants, Ledgy calculates for you the amount that
@@ -127,7 +124,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               </p>
             </div>
 
-            <div className="col-md-5" data-aos="fade-left">
+            <div className="col-md-4 ml-auto" data-aos="fade-left">
               <Img {...props.data.exerciseOption} alt={i18n.t`Issue options from a pool`} />
             </div>
           </div>
@@ -144,7 +141,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               </p>
             </div>
 
-            <div className="col-md-9 order-md-first" data-aos="fade-right">
+            <div className="col-md-8 order-md-first" data-aos="fade-right">
               <Img {...props.data.dilutedTable} alt={i18n.t`Show cap table fully diluted`} />
             </div>
           </div>
