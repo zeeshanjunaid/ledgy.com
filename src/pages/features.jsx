@@ -81,12 +81,13 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <Hr />
 
-          <Feature {...props} name={i18n.t`Reports & Documents`} url="reports" left>
+          <Feature {...props} name={i18n.t`Investor Relations`} url="relations" left>
             <Trans>
               Oh, it’s tax season again, and 50 holding confirmations are waiting to be sent to your
-              shareholders. This means pasting names into document templates, computing the tax
+              stakeholders. This means pasting names into document templates, computing the tax
               value of all shares… <br />
-              Don’t worry. Generate and send all relevant documents with a single click on Ledgy.
+              Don’t worry. Generate and send all relevant documents in a matter of a few clicks on
+              Ledgy.
             </Trans>
           </Feature>
 

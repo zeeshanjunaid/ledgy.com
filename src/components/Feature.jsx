@@ -96,7 +96,7 @@ export const FeatureLinks = ({
       <FeatureLink {...props} name={i18n.t`Cap Table`} url="captable" />
       <FeatureLink {...props} name={i18n.t`Modeling`} url="modeling" />
       <FeatureLink {...props} name={i18n.t`Portfolio`} url="portfolio" />
-      <FeatureLink {...props} name={i18n.t`Reports`} url="reports" />
+      <FeatureLink {...props} name={i18n.t`Investor Relations`} url="relations" />
     </div>
   </div>
 );
@@ -123,7 +123,7 @@ export const FeaturesFragment = graphql`
         ...GatsbyImageSharpFluid
       }
     }
-    reports: imageSharp(fluid: { originalName: { regex: "/reporting.png/" } }) {
+    relations: imageSharp(fluid: { originalName: { regex: "/reporting.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }

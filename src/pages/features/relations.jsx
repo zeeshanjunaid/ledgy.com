@@ -11,7 +11,7 @@ import { Title } from '../../layouts/utils';
 export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
     <Title
-      title={i18n.t`Documents & Reports`}
+      title={i18n.t`Investor Relations`}
       section={i18n.t`Features`}
       description={i18n.t`Save painful work inserting numbers into templates. Automated documents and reports at your fingertips.`}
     />
@@ -21,7 +21,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         <div className="row">
           <div className="col-12 col-lg-8 offset-lg-2">
             <h1>
-              <Trans>Documents & Reports</Trans>
+              <Trans>Investor Relations</Trans>
             </h1>
           </div>
         </div>
@@ -33,19 +33,20 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           <div>
             <header className="section-header text-left">
               <h2>
-                <Trans>Configure your pdf reports</Trans>
+                <Trans>Keep everyone up to date</Trans>
               </h2>
               <p>
                 <Trans>
-                  With Ledgy you can download a beautiful snapshot of your company’s shares
-                  structure. You can even configure it to include signature fields for your board of
-                  directors.
+                  With Ledgy, maintaining professional relationships with your stakeholders has
+                  never been more straightforward. All it takes is a few clicks to start reducing
+                  your amount of paperwork and integrate all of your documents on Ledgy.
                   <br />
                   <br />
-                  It includes the current cap table, with the non-diluted and fully-diluted stake of
-                  each shareholder (if you have options or phantom stock), your convertibles and
-                  ESOPs, and finally the transaction history, which tracks every change ever made to
-                  your cap table since the incorporation.
+                  Share and download reports incuding your cap table with the non-diluted and
+                  fully-diluted stake of each shareholder (if you have options or phantom stock),
+                  your convertibles and ESOPs, and the transaction history, which tracks every
+                  change ever made to your cap table. You can even configure them to include
+                  signature fields for your board of directors.
                 </Trans>
               </p>
             </header>
@@ -62,33 +63,59 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <hr className="my-8" />
 
-          <header className="section-header text-left">
+          <header className="section-header text-left mb-7">
             <h2>
-              <Trans>Send holding confirmations with ease</Trans>
+              <Trans>Easy-to-set access rights</Trans>
             </h2>
           </header>
 
-          <div className="row align-items-center my-8">
-            <div className="col-md-6 ml-auto">
+          <div className="row align-items-center mb-8">
+            <div className="col-md-4 mr-auto">
               <p>
                 <Trans>
-                  Remember that day last year during tax season when you had to send holding
-                  confirmations to each shareholder, filling out boring Word templates by hand?
-                  <br />
-                  <br />
-                  We’ve got the solution for you. With a single click, Ledgy creates nicely
-                  formatted holding confirmations for all of your shareholders and send them
-                  directly via email.
-                  <br />
-                  <br />
-                  Reduce hours of tedious work to just a few seconds. Hurray!
+                  Maintain the hierarchy of your company by setting your access rights on the{' '}
+                  <i>Stakeholders</i> page. Admins will have full control over the company, viewers
+                  will be able to see all cap table info in a read-only mode, and personal will see
+                  their own stake and percentage on their portfolio once transactions have been
+                  commited. Keep everyone happy and let them see what they need to.
                 </Trans>
               </p>
             </div>
 
-            <div className="col-md-5" data-aos="fade-left">
+            <div className="col-md-7" data-aos="fade-left">
+              <Img {...props.data.accessRights} alt={i18n.t`Stakeholders access rights`} />
+            </div>
+          </div>
+
+          <hr className="my-8" />
+
+          <header className="section-header text-right mb-7">
+            <h2>
+              <Trans>Effort-free holding confirmations</Trans>
+            </h2>
+          </header>
+
+          <div className="row align-items-center mb-8">
+            <div className="col-md-6 ml-auto">
+              <p>
+                <Trans>
+                  Remember that day last year during tax season when you had to send holding
+                  confirmations to each stakeholder, filling out boring Word templates by hand?
+                  <br />
+                  <br />
+                  We’ve got the solution for you. Ledgy automatically creates holding confirmations
+                  for all of your stakeholders, so they can log in to their account and download
+                  them.
+                  <br />
+                  <br />
+                  Reduce hours of tedious work to nothing. Hooray!
+                </Trans>
+              </p>
+            </div>
+
+            <div className="col-md-5 order-md-first" data-aos="fade-left">
               <Img
-                {...props.data.sendHoldingConfirmation}
+                {...props.data.downloadHoldingConfirmation}
                 alt={i18n.t`Dialog for holding confirmation`}
               />
             </div>
@@ -119,7 +146,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           <div>
             <header className="section-header text-left">
               <h2>
-                <Trans>Bring order to your documents</Trans>
+                <Trans>Share documents with your investors</Trans>
               </h2>
               <p>
                 <Trans>
@@ -145,7 +172,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
           </div>
 
-          <FeatureLinks {...props} i18n={i18n} page="reports" />
+          <FeatureLinks {...props} i18n={i18n} page="relations" />
         </div>
       </section>
     </main>
@@ -162,8 +189,13 @@ export const pageQuery = graphql`
         ...GatsbyImageSharpFluid
       }
     }
-    sendHoldingConfirmation: imageSharp(
-      fluid: { originalName: { regex: "/send-holding-confirmation.png/" } }
+    accessRights: imageSharp(fluid: { originalName: { regex: "/access-rights.png/" } }) {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    downloadHoldingConfirmation: imageSharp(
+      fluid: { originalName: { regex: "/download-holding-confirmation.png/" } }
     ) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
