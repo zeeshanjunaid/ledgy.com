@@ -38,15 +38,17 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <p>
                 <Trans>
                   As an investor, you can profit a lot from Ledgy. Any of your portfolio companies
-                  that use the platform will appear in your portfolio. See your key performance
-                  indicators of your investments at a glance.
+                  that use the platform will be syncronized with your portfolio. See your key
+                  performance indicators of your investments at a glance, and visualize all of your
+                  data aggregated or filtered out.
                   <br />
                   <br />
                   Never lose track of how much you invested in which company and what’s the
-                  approximate value of your investments today. The chart in the portfolio’s{' '}
-                  <i>History</i> menu will colorfully show you how much your value has grown over
-                  time. For investors, see all of your companies aggregated there (and filter them
-                  if you need to)!
+                  approximate value of your investments today.
+                  <br />
+                  <br />
+                  <i>And coming up soon...</i> Reporting in the investor portfolio! Where you will
+                  be able to see all your shared information with your companies in one place.
                 </Trans>
               </p>
             </header>
@@ -99,6 +101,34 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
           </div>
 
+          <hr className="my-8" />
+
+          <div>
+            <header className="section-header mb-7">
+              <h2>
+                <Trans>Adding investments: nice and smooth</Trans>
+              </h2>
+            </header>
+
+            <div className="row align-items-center mb-8">
+              <div className="col-md-4 mr-auto">
+                <p>
+                  <Trans>
+                    Just as you land on your investor portfolio, adding an investment is as simple
+                    as clicking on the <i>+ Add investment</i> button and filling out the form. Once
+                    you finish, your portfolio will be immediately updated with newly input values.
+                    It’s never been easier to keep track of all your investments in the same
+                    dashboard.
+                  </Trans>
+                </p>
+              </div>
+
+              <div className="col-md-7" data-aos="fade-left">
+                <Img {...props.data.addInvestment} alt={i18n.t`Add portfolio investment`} />
+              </div>
+            </div>
+          </div>
+
           <FeatureLinks {...props} i18n={i18n} page="portfolio" />
         </div>
       </section>
@@ -122,6 +152,11 @@ export const pageQuery = graphql`
       }
     }
     dashboardHistory: imageSharp(fluid: { originalName: { regex: "/dashboard-history.png/" } }) {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    addInvestment: imageSharp(fluid: { originalName: { regex: "/add-investment.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
