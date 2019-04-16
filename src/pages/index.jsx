@@ -5,7 +5,7 @@ import { withI18n, Trans } from '@lingui/react';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 
-import { FeatureLinks } from '../components/Features';
+import { FeatureLinks } from '../components/Feature';
 import SecurityRow from '../components/SecurityRow';
 import { demoUrl, targetBlank } from '../layouts/utils';
 
@@ -77,14 +77,13 @@ const IndexPage = (props: Props) => (
           </header>
 
           <div className="partner mx-auto py-4">
-            <Reference img={props.data.bexio} name="Bexio" />
-            <Reference img={props.data.cryptofinance} name="Crypto Finance AG" />
             <Reference img={props.data.viu} name="VIU Eyeware" />
-            <Reference img={props.data.allthings} name="Allthings Technologies" />
             <Reference img={props.data.farmy} name="Farmy" />
             <Reference img={props.data.sherpany} name="Sherpany" />
             <Reference img={props.data.frontify} name="Frontify" />
+            <Reference img={props.data.cryptofinance} name="Crypto Finance AG" />
             <Reference img={props.data.quitt} name="quitt.ch" />
+            <Reference img={props.data.allthings} name="Allthings Technologies" />
           </div>
 
           <div className="mx-auto text-center pb-5">

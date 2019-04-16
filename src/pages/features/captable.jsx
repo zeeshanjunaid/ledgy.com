@@ -5,7 +5,7 @@ import { withI18n, Trans } from '@lingui/react';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 
-import { FeatureLinks } from '../../components/Features';
+import { FeatureLinks } from '../../components/Feature';
 import { Title } from '../../layouts/utils';
 
 export default withI18n()(({ i18n, ...props }: Props) => (
@@ -21,7 +21,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         <div className="row">
           <div className="col-12 col-lg-8 offset-lg-2">
             <h1>
-              <Trans>A Trusted Single Source of Truth</Trans>
+              <Trans>Trust in Your Cap Table</Trans>
             </h1>
           </div>
         </div>
@@ -37,21 +37,25 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               </h2>
               <p>
                 <Trans>
-                  Keep the ownership history of your company at a single place. No more shuffling
-                  around with different documents shared via email, Dropbox, Google Drive or Slack.
+                  Keep the ownership history of your company in a single place. No more shuffling
+                  around with different documents, contacting lawyers, having missing pieces, and
+                  errors occurring left and right.
                   <br />
-                  Ledgy will be your single source of truth. And it’s a damn good one!
+                  <br />
+                  Feed Ledgy your company’s information and let our cap table work as the one source
+                  of truth for your company equity.
                   <br />
                   <br />
-                  To get started enter all your ownership transactions into Ledgy. That’s an
-                  excellent opportunity to understand what has been going on in your cap table.
+                  With our quick and easy onboarding process, your legally valid cap table will be
+                  set up in no time! No room for errors, Ledgy’s computing is state-of-the-art, and
+                  will warn you shall there be any inconsistencies.
                   <br />
                   <br />
                   Need help?{' '}
                   <Link href to={`${props.prefix}/contact/`}>
                     Contact us
                   </Link>
-                  , and we will assist you to get started with Ledgy.
+                  , and we will assist you in getting started with Ledgy.
                 </Trans>
               </p>
             </header>
@@ -64,35 +68,18 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           </div>
 
           <div className="row align-items-center my-8">
-            <div className="col-md-4">
+            <div className="col-md-5 ml-auto">
               <p>
                 <Trans>
-                  Oops, there was an error in your cap table? Don’t worry; Ledgy will assist you in
-                  getting your cap table straight.
-                  <br />
-                  Once finished, sit back and relax. Now you can be assured that your cap table is
-                  error-free.
+                  Here an example of how easy it is to perform transactions on Ledgy; in this case,
+                  a share transfer. Notice the number in the center bottom? Ledgy is always dynamic
+                  and will show you how many shares that particular stakeholder has <i>available</i>{' '}
+                  at that given point in time.
                 </Trans>
               </p>
             </div>
 
-            <div className="col-md-8 ml-auto" data-aos="fade-left">
-              <Img {...props.data.transactionError} alt={i18n.t`Transaction error checking`} />
-            </div>
-          </div>
-
-          <div className="row align-items-center my-8">
-            <div className="col-md-4 ml-auto">
-              <p>
-                <Trans>
-                  Did you notice the number in the center bottom? Any time you transfer shares from
-                  one shareholder to another, Ledgy will show you how many shares that particular
-                  shareholder has <i>available</i> at that given point in time.
-                </Trans>
-              </p>
-            </div>
-
-            <div className="col-md-8 order-md-first" data-aos="fade-right">
+            <div className="col-md-7 order-md-first" data-aos="fade-right">
               <Img {...props.data.availableShares} alt={i18n.t`Available shares for transfer`} />
             </div>
           </div>
@@ -117,23 +104,51 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           </div>
 
           <div className="row align-items-center my-8">
+            <div className="col-md-3 ml-auto">
+              <p>
+                <Trans>
+                  Has your company received funding via a pooled investment? Ledgy helps you
+                  understand who owns what stake in your company. In this example,{' '}
+                  <i>The Exciting Company</i> represents an investor pool with three beneficiaries.
+                </Trans>
+              </p>
+            </div>
+
+            <div className="col-md-9 order-md-first" data-aos="fade-right">
+              <Img {...props.data.pooledInvestment} alt={i18n.t`Pooled investment`} />
+            </div>
+          </div>
+
+          <div className="row align-items-center my-8">
+            <div className="col-md-5 ml-auto">
+              <p>
+                <Trans>
+                  Each one of your transactions may have some documents associated to it; that is
+                  why Ledgy allows you to upload files and attach them to your transactions. These
+                  docs can then be downloaded in the <i>Documents</i> page and the investor
+                  portfolio <i>History</i> page.
+                </Trans>
+              </p>
+            </div>
+
+            <div className="col-md-7" data-aos="fade-left">
+              <Img {...props.data.attachDocTransaction} alt={i18n.t`Attach doc to transaction`} />
+            </div>
+          </div>
+
+          <div className="row align-items-center my-8">
             <div className="col-md-4 ml-auto">
               <p>
                 <Trans>
-                  Startups do end up with several conflicting spreadsheet-based cap tables, one
-                  being with the founders, one with the lawyers, one with the leading investors. Not
-                  so with Ledgy. Have one single source of truth and give your key stakeholders
-                  access with a single click. Don’t waste money on consolidating several cap table
-                  versions, professionaly manage it from the start instead.
+                  How much is your company worth? With the valuation transaction, add the share
+                  price at all of your valuation events. Our beautiful interactive graphs will show
+                  you the evolution of your company’s valuation over time.
                 </Trans>
               </p>
             </div>
 
             <div className="col-md-8 order-md-first" data-aos="fade-right">
-              <Img
-                {...props.data.accessRights}
-                alt={i18n.t`Give view or admin access to your stakeholders`}
-              />
+              <Img {...props.data.valuation} alt={i18n.t`Valuation`} />
             </div>
           </div>
 
@@ -142,24 +157,27 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           <div>
             <header className="section-header text-left">
               <h2>
-                <Trans>Nice charts!</Trans>
+                <Trans>Bulk import!</Trans>
               </h2>
               <p>
                 <Trans>
-                  Finished? Go back to the <i>Cap Table</i> page and view the result. At any point
-                  in the history of your ownership, Ledgy can draw you a helpful chart that
-                  represents the current equity distribution of your company. <br />
-                  You have several views on your cap table at your fingertips. You can assign your
-                  shareholders to groups and view the distribution among them. Or you can get a
-                  comprehensive overview by viewing the distribution between the different
-                  securities, like common shares, preferred shares, convertibles and options.
+                  We know it can be tedious to add each person and transaction one by one, so Ledgy
+                  has at your disposal the bulk import feature{' '}
+                  <span role="img" aria-label="rocket">
+                    🚀
+                  </span>
+                  <br />
+                  <br />
+                  Whether it’s your stakeholders, share issues, or option issues, we got you
+                  covered. Just copy and paste your information into one of our built-in
+                  spreadsheets and <i>voilà!</i> Even easier done than said.
                 </Trans>
               </p>
             </header>
 
             <div className="row gap-y">
               <div className="col-md-10 mx-auto mb-7" data-aos="fade-up">
-                <Img {...props.data.captableBasic} alt={i18n.t`A basic cap table`} />
+                <Img {...props.data.bulkEntry} alt={i18n.t`Bulk entry`} />
               </div>
             </div>
           </div>
@@ -181,11 +199,6 @@ export const pageQuery = graphql`
         ...GatsbyImageSharpFluid
       }
     }
-    transactionError: imageSharp(fluid: { originalName: { regex: "/transaction-error.png/" } }) {
-      fluid(maxWidth: 800) {
-        ...GatsbyImageSharpFluid
-      }
-    }
     availableShares: imageSharp(fluid: { originalName: { regex: "/available-shares.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
@@ -198,12 +211,24 @@ export const pageQuery = graphql`
         ...GatsbyImageSharpFluid
       }
     }
-    accessRights: imageSharp(fluid: { originalName: { regex: "/access-rights.png/" } }) {
+    pooledInvestment: imageSharp(fluid: { originalName: { regex: "/pooled-investment.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
     }
-    captableBasic: imageSharp(fluid: { originalName: { regex: "/captable-basic.png/" } }) {
+    attachDocTransaction: imageSharp(
+      fluid: { originalName: { regex: "/attach-doc-transaction.png/" } }
+    ) {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    bulkEntry: imageSharp(fluid: { originalName: { regex: "/bulk-entry.png/" } }) {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    valuation: imageSharp(fluid: { originalName: { regex: "/valuation.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }

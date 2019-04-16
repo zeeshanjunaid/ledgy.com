@@ -5,7 +5,7 @@ import { withI18n, Trans } from '@lingui/react';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
-import { FeatureLinks } from '../../components/Features';
+import { FeatureLinks } from '../../components/Feature';
 import { Title } from '../../layouts/utils';
 
 export default withI18n()(({ i18n, ...props }: Props) => (
@@ -33,25 +33,26 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           <div>
             <header className="section-header text-left">
               <h2>
-                <Trans>Make your employees happy</Trans>
+                <Trans>Make your employees part of your success</Trans>
               </h2>
               <p>
                 <Trans>
-                  Are you building a fast-growing company and want your valuable employees to be
-                  part of your success? Ledgy offers you a powerful module to manage your employee
-                  incentive plans. No matter if you transfer real stock from your company to an
-                  employee, options from a fixed-size pool of approved capital, warrants or even
-                  phantom stock.
+                  With Ledgy, setting up your ESOPs will become the simplest of tasks; in a matter
+                  of a few clicks, you will have your employee participation plans up and running,
+                  whether they are real stock transfers, options from a pool, warrants, or even
+                  phantom shares.
                   <br />
                   <br />
-                  Terminate or exercise the options and keep track of the amount which is still
-                  available.
+                  When it comes to vesting schedules, efficiently setting up their type, duration,
+                  cliff, and every other detail will not be a daunting effort. With interactive
+                  graphs, you will be able to monitor these schedules in real time, and even better,
+                  allow your employees to log in to their accounts so they can see at any point in
+                  time how much stock they have vested and how many shares are still outstanding.
                   <br />
                   <br />
-                  Add a vesting schedule to your ESOPs and track their status in real-time. Coolest
-                  thing ever, let your employees log in to Ledgy and allow them to see at any point
-                  in time how much stock they have already vested and how many shares are still
-                  outstanding.
+                  When needed, terminating or exercising options will be just as intuitive, and any
+                  amount that may still be available will continue to be tracked. And there’s even
+                  more: any contract you’ll be able to upload and easily share with your employees.
                 </Trans>
               </p>
             </header>
@@ -60,38 +61,16 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <div className="col-md-12 mx-auto mb-7" data-aos="fade-up">
                 <Img
                   {...props.data.incentivesPage}
-                  alt={i18n.t`Overview over vested, granted, and exercised incentives`}
+                  alt={i18n.t`Overview over vested, granted and exercised incentives`}
                 />
               </div>
-            </div>
-          </div>
-
-          <div className="row align-items-center my-8">
-            <div className="col-md-4">
-              <p>
-                <Trans>
-                  You can create a detailed vesting schedule by defining over how many months the
-                  shares are to be vested, whether there’s a cliff and how often a new batch of
-                  shares gets assigned to the employee.
-                  <br />
-                  As soon as you enter the first numbers, you will see a visual representation of
-                  the current schedule.
-                </Trans>
-              </p>
-            </div>
-
-            <div className="col-md-8 ml-auto" data-aos="fade-left">
-              <Img
-                {...props.data.addOption}
-                alt={i18n.t`Add options or phantom options with vesting`}
-              />
             </div>
           </div>
 
           <hr className="my-8" />
 
           <div className="row align-items-center my-8">
-            <div className="col-md-4 ml-auto">
+            <div className="col-md-4 mr-auto">
               <p>
                 <Trans>
                   In the case that your employee shares are implemented as options or phantom
@@ -103,13 +82,32 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               </p>
             </div>
 
-            <div className="col-md-8 order-md-first" data-aos="fade-right">
-              <Img {...props.data.addPool} alt={i18n.t`Add an incentives pool`} />
+            <div className="col-md-7" data-aos="fade-left">
+              <Img {...props.data.addOption} alt={i18n.t`Add an option pool`} />
             </div>
           </div>
 
           <div className="row align-items-center my-8">
-            <div className="col-md-5 ml-auto">
+            <div className="col-md-4">
+              <p>
+                <Trans>
+                  You can create a simple or custom vesting schedule, define over how many months
+                  the shares are to be vested, whether there’s a cliff, and how often a new batch of
+                  shares gets assigned to the employee.
+                  <br />
+                  As soon as you enter the first numbers, you will see a visual representation of
+                  the current schedule.
+                </Trans>
+              </p>
+            </div>
+
+            <div className="col-md-7 order-md-first mr-auto" data-aos="fade-right">
+              <Img {...props.data.addVesting} alt={i18n.t`Add vesting`} />
+            </div>
+          </div>
+
+          <div className="row align-items-center my-8">
+            <div className="col-md-7">
               <p>
                 <Trans>
                   When it’s time to exercise option grants, Ledgy calculates for you the amount that
@@ -122,12 +120,12 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   <br />
                   <br />
                   Filter the transactions by an employee to see all their transactions (option
-                  grant, terminations and exercises) at a glance.
+                  grant, terminations, and exercises) at a glance.
                 </Trans>
               </p>
             </div>
 
-            <div className="col-md-7" data-aos="fade-left">
+            <div className="col-md-4 ml-auto" data-aos="fade-left">
               <Img {...props.data.exerciseOption} alt={i18n.t`Issue options from a pool`} />
             </div>
           </div>
@@ -136,15 +134,15 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             <div className="col-md-3 ml-auto">
               <p>
                 <Trans>
-                  Check back at your <i>Cap Table</i> and select the <i>fully diluted</i> view to
-                  see the newly created pool and employee incentives. You can even view your diluted
-                  cap table with all options aggregated in their pool, or distributed to each person
-                  (detailed view).
+                  To get an overall view of the situation, check out yur <i>Cap Table</i> page and
+                  select the <i>fully diluted detailed</i> view to see your pools and employee
+                  incentives. You can choose to view your diluted cap table with all options
+                  aggregated in their pool, or distributed to each person.
                 </Trans>
               </p>
             </div>
 
-            <div className="col-md-9 order-md-first" data-aos="fade-right">
+            <div className="col-md-8 order-md-first" data-aos="fade-right">
               <Img {...props.data.dilutedTable} alt={i18n.t`Show cap table fully diluted`} />
             </div>
           </div>
@@ -154,14 +152,17 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           <div>
             <header className="section-header text-left">
               <h2>
-                <Trans>Keep your employees engaged</Trans>
+                <Trans>Engage your employees with more transparency</Trans>
               </h2>
               <p>
                 <Trans>
-                  Once your incentive plan is on Ledgy, it’s time to engage your employees. They can
-                  log in to Ledgy themselves with their email address at any time and see how many
-                  shares they have already vested. Invite them with a click on the shareholders
-                  page.
+                  Once your incentive plan is on Ledgy, it’s time to engage your employees. Head
+                  over to the <i>Stakeholders</i> page and invite them with a single click. They
+                  will then receive an email so they can log in to Ledgy themselves and see how many
+                  shares they have vested at any point in time.
+                  <br />
+                  <br />
+                  Remember, happy employees is one of the keys to a successful company.
                 </Trans>
               </p>
             </header>
@@ -190,17 +191,12 @@ export const pageQuery = graphql`
         ...GatsbyImageSharpFluid
       }
     }
-    addOption: imageSharp(fluid: { originalName: { regex: "/option-add.png/" } }) {
+    addVesting: imageSharp(fluid: { originalName: { regex: "/add-vesting.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
     }
-    vestingSchedule: imageSharp(fluid: { originalName: { regex: "/vesting-schedule.png/" } }) {
-      fluid(maxWidth: 800) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-    addPool: imageSharp(fluid: { originalName: { regex: "/add-pool.png/" } }) {
+    addOption: imageSharp(fluid: { originalName: { regex: "/add-option.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }

@@ -4,7 +4,7 @@ import * as React from 'react';
 import { withI18n, Trans } from '@lingui/react';
 import { graphql } from 'gatsby';
 
-import { Feature } from '../components/Features';
+import { Feature } from '../components/Feature';
 import AllFeatures from '../components/AllFeatures';
 import SecurityRow from '../components/SecurityRow';
 import { Title } from '../layouts/utils';
@@ -33,33 +33,47 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         </div>
       </div>
     </header>
+
     <main className="main-content">
       <section className="section pt-5">
         <div className="container">
-          <Feature
-            {...props}
-            name={i18n.t`Cap Table`}
-            title={i18n.t`A Trusted Single Source of Truth`}
-            url="captable"
-          >
+          <Feature {...props} name={i18n.t`Employee Participation Plans`} url="esop">
             <Trans>
-              Did you know that many cap tables are incomplete or contain errors? Tracking the
-              ownership history with Excel or Word can quickly lead to inconsistencies. Set up your
-              shares with Ledgy and be sure that all data is consistent at any time. Give your key
-              stakeholders access and collaborate on a single source of truth.
+              Let your employees be part of your company’s success. Set up your vested stock,
+              options, phantom options, inverse vesting and ESOP pools in a matter of a few clicks.
+              <br />
+              Track your vesting schedules in the most efficient of ways and engage your employees
+              with full transparency over their participation plans.
             </Trans>
           </Feature>
 
           <Hr />
 
-          <Feature {...props} name={i18n.t`Funding Round and Exit Modeling`} url="modeling" left>
+          <Feature
+            {...props}
+            name={i18n.t`Cap Table`}
+            title={i18n.t`Trust in Your Cap Table`}
+            url="captable"
+            left
+          >
+            <Trans>
+              Do you know that many cap tables are incomplete or contain errors? Have you gone
+              through the cap table pain, and spent huge amounts of money on lawyers using
+              spreadsheets? What if you could automate a legally valid, error-free cap table that
+              was easy to use, quick to learn, and allowed you to manage your pooled investments,
+              all in one good-looking user interface?
+            </Trans>
+          </Feature>
+
+          <Hr />
+
+          <Feature {...props} name={i18n.t`Round and Exit Modeling`} url="modeling">
             <Trans>
               What’s the stake percentage of the founders after a VC invests $2,000,000 at a
-              valuation of $7,500,000 taking into account the 2 outstanding convertible loans and
-              keeping the ESOP pool at 10% while only diluting existing shareholders?
-              <br />
-              How does the capped participating liquidation preference that comes with this
-              investment influence my exit strategy?
+              valuation of $7,500,000, taking into account the 2 outstanding convertible loans and
+              keeping the ESOP pool at 10% while only diluting existing shareholders? How does the
+              capped participating liquidation preference that comes with this investment influence
+              my exit strategy?
               <br />
               Honestly, we don’t know. But Ledgy does.
             </Trans>
@@ -67,12 +81,13 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <Hr />
 
-          <Feature {...props} name={i18n.t`Employee Participation Plans`} url="esop">
+          <Feature {...props} name={i18n.t`Investor Relations`} url="relations" left>
             <Trans>
-              Let your employees be part of your company’s success. Ledgy supports vested stock,
-              options, phantom options, inverse vesting and ESOP pools.
-              <br />
-              Employees can log in to Ledgy and track their vested shares in real-time.
+              Oh, it’s tax season again, and 50 holding confirmations are waiting to be sent to your
+              stakeholders. This means pasting names into document templates, computing the tax
+              value of all shares… <br />
+              Don’t worry. Generate and send all relevant documents in a matter of a few clicks on
+              Ledgy.
             </Trans>
           </Feature>
 
@@ -83,7 +98,6 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             title={i18n.t`Investor Portfolio`}
             name={i18n.t`the Investor Portfolio`}
             url="portfolio"
-            left
           >
             <Trans>
               Are you an investor and want to track your portfolio companies? The founders are busy
@@ -91,17 +105,6 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <br />
               With their cap table on Ledgy, there’s only a single source of truth. Convince your
               companies, and you will never miss anything regarding your investments.
-            </Trans>
-          </Feature>
-
-          <Hr />
-
-          <Feature {...props} name={i18n.t`Reports & Documents`} url="reports">
-            <Trans>
-              Oh, it’s tax season again, and 50 holding confirmations are waiting to be sent to your
-              shareholders. This means pasting names into document templates, computing the tax
-              value of all shares… <br />
-              Don’t worry. Generate and send all relevant documents with a single click on Ledgy.
             </Trans>
           </Feature>
 

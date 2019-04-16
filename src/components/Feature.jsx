@@ -78,7 +78,7 @@ export const FeatureLinks = ({
   data: Object,
   i18n: I18n
 }) => (
-  <div className={props.page === 'index' && 'pb-7 pt-3 mx-4'}>
+  <div className={props.page === 'index' ? 'pb-7 pt-3' : 'py-3'}>
     {props.page !== 'index' && <hr className="my-7" />}
 
     <header className="section-header ">
@@ -92,17 +92,22 @@ export const FeatureLinks = ({
     </header>
 
     <div className="row gap-y justify-content-center">
+      <FeatureLink {...props} name={i18n.t`Employee Participation Plans`} url="esop" />
       <FeatureLink {...props} name={i18n.t`Cap Table`} url="captable" />
       <FeatureLink {...props} name={i18n.t`Modeling`} url="modeling" />
-      <FeatureLink {...props} name={i18n.t`Employee Participation Plans`} url="esop" />
-      <FeatureLink {...props} name={i18n.t`Portfolio`} url="portfolio" />
-      <FeatureLink {...props} name={i18n.t`Reports`} url="reports" />
+      <FeatureLink {...props} name={i18n.t`Investor Portfolio`} url="portfolio" />
+      <FeatureLink {...props} name={i18n.t`Investor Relations`} url="relations" />
     </div>
   </div>
 );
 
 export const FeaturesFragment = graphql`
   fragment FeaturesFragment on Query {
+    esop: imageSharp(fluid: { originalName: { regex: "/esop.png/" } }) {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid
+      }
+    }
     captable: imageSharp(fluid: { originalName: { regex: "/consistency.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
@@ -113,17 +118,12 @@ export const FeaturesFragment = graphql`
         ...GatsbyImageSharpFluid
       }
     }
-    esop: imageSharp(fluid: { originalName: { regex: "/esop.png/" } }) {
-      fluid(maxWidth: 800) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-    reports: imageSharp(fluid: { originalName: { regex: "/reporting.png/" } }) {
-      fluid(maxWidth: 800) {
-        ...GatsbyImageSharpFluid
-      }
-    }
     portfolio: imageSharp(fluid: { originalName: { regex: "/investors.png/" } }) {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    relations: imageSharp(fluid: { originalName: { regex: "/reporting.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
