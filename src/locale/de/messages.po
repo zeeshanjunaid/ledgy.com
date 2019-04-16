@@ -137,7 +137,7 @@ msgstr "Bug Bounty"
 
 #: src/pages/features/captable.jsx:180
 msgid "Bulk entry"
-msgstr "Bull-Import"
+msgstr "Bulk-Import"
 
 #: src/pages/features/captable.jsx:160
 msgid "Bulk import!"
