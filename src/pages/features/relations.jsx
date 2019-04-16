@@ -73,7 +73,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             <div className="col-md-4 mr-auto">
               <p>
                 <Trans>
-                  Maintain the hierarchy of your company by setting your access rights on the{' '}
+                  Maintain the data of your company by setting your access rights on the{' '}
                   <i>Stakeholders</i> page.
                   <ul>
                     <li>

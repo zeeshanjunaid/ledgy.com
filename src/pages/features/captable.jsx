@@ -107,8 +107,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             <div className="col-md-3 ml-auto">
               <p>
                 <Trans>
-                  Has your company received funding from an investment pool? Ledgy thinks it may be
-                  the case, and knows exactly how to take care of it. In this example,{' '}
+                  Has your company received funding via a pooled investment? Ledgy helps you
+                  understand who owns what stake in your company. In this example,{' '}
                   <i>The Exciting Company</i> represents an investor pool with three beneficiaries.
                 </Trans>
               </p>
