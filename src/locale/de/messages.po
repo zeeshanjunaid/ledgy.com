@@ -6,7 +6,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Creation-Date: 2018-09-12T18:40:54.619Z\n"
-"PO-Revision-Date: 2019-04-16 17:34+0200\n"
+"PO-Revision-Date: 2019-04-16 17:41+0200\n"
 "Language: de\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
@@ -572,7 +572,7 @@ msgstr "Pflegen die Daten deines Unternehmens, indem du Zugriffsrechte auf der S
 
 #: src/pages/features/esop.jsx:36
 msgid "Make your employees part of your success"
-msgstr "Lass’ deine Mitarbeiter an deinem Erfolg teilhaben"
+msgstr "Lass’ deine Mitarbeiter am Erfolg teilhaben"
 
 #: src/pages/features.jsx:26
 msgid "Manage your shares.<0/>Not your spreadsheet."
@@ -735,7 +735,7 @@ msgstr "Erinnerst du dich an den Tag im vergangenen Jahr während der Steuersais
 
 #: src/pages/features/captable.jsx:36
 msgid "Replace your Excel with Ledgy"
-msgstr "Ersetze dein Excel mit Ledgy"
+msgstr "Ersetze dein Excel durch Ledgy"
 
 #: src/pages/features/modeling.jsx:69
 msgid "Round Modeling"
