@@ -55,7 +55,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   <Link href to={`${props.prefix}/contact/`}>
                     Contact us
                   </Link>
-                  , and we will assist you on getting started with Ledgy.
+                  , and we will assist you in getting started with Ledgy.
                 </Trans>
               </p>
             </header>
@@ -125,7 +125,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                 <Trans>
                   Each one of your transactions may have some documents associated to it; that is
                   why Ledgy allows you to upload files and attach them to your transactions. These
-                  docs can then be downloaded in the <i>Documents</i> page and in the investor
+                  docs can then be downloaded in the <i>Documents</i> page and the investor
                   portfolio <i>History</i> page.
                 </Trans>
               </p>
@@ -169,8 +169,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   <br />
                   <br />
                   Whether it’s your stakeholders, share issues, or option issues, we got you
-                  covered. Just copy and paste your information into one of our built-in spreadsheet
-                  and <i>voilà!</i> Even easier done than said.
+                  covered. Just copy and paste your information into one of our built-in
+                  spreadsheets and <i>voilà!</i> Even easier done than said.
                 </Trans>
               </p>
             </header>

@@ -44,7 +44,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   <br />
                   <br />
                   Ledgy’s modeling tools are exactly made for you to dive into all of these
-                  possibilites, allowing you to <strong>quickly model</strong> all sorts of
+                  possibilities, allowing you to <strong>quickly model</strong> all sorts of
                   different situations, <strong>understand how dilution works</strong> in such
                   events, and assess the impact of <strong>liquidation preferences</strong>.
                   <br />
@@ -80,7 +80,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   <Trans>
                     Tweak different parameters of the simulation as they best suit you by clicking
                     on <i>Actions</i> and <i>Settings</i>. You can adjust shares rounding, as well
-                    as including or excluding convertibles and/or pools in the share price.
+                    as including or excluding convertibles and pools in the share price.
                   </Trans>
                 </div>
 

@@ -61,7 +61,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <div className="col-md-12 mx-auto mb-7" data-aos="fade-up">
                 <Img
                   {...props.data.incentivesPage}
-                  alt={i18n.t`Overview over vested, granted, and exercised incentives`}
+                  alt={i18n.t`Overview over vested, granted and exercised incentives`}
                 />
               </div>
             </div>
@@ -120,7 +120,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   <br />
                   <br />
                   Filter the transactions by an employee to see all their transactions (option
-                  grant, terminations and exercises) at a glance.
+                  grant, terminations, and exercises) at a glance.
                 </Trans>
               </p>
             </div>
@@ -136,7 +136,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                 <Trans>
                   To get an overall view of the situation, check out yur <i>Cap Table</i> page and
                   select the <i>fully diluted detailed</i> view to see your pools and employee
-                  incentives. You can chose to view your diluted cap table with all options
+                  incentives. You can choose to view your diluted cap table with all options
                   aggregated in their pool, or distributed to each person.
                 </Trans>
               </p>
@@ -157,9 +157,9 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <p>
                 <Trans>
                   Once your incentive plan is on Ledgy, it’s time to engage your employees. Head
-                  over to the stakeholders page and invite them with a single click. They will then
-                  receive an email so they can log in to Ledgy themselves and see how many shares
-                  they have vested at any point in time.
+                  over to the <i>Stakeholders</i> page and invite them with a single click. They
+                  will then receive an email so they can log in to Ledgy themselves and see how many
+                  shares they have vested at any point in time.
                   <br />
                   <br />
                   Remember, happy employees is one of the keys to a successful company.

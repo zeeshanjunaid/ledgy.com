@@ -38,7 +38,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <p>
                 <Trans>
                   As an investor, you can profit a lot from Ledgy. Any of your portfolio companies
-                  that use the platform will be syncronized with your portfolio. See your key
+                  that use the platform will be synchronized with your portfolio. See your key
                   performance indicators of your investments at a glance, and visualize all of your
                   data aggregated or filtered out.
                   <br />
@@ -47,8 +47,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   approximate value of your investments today.
                   <br />
                   <br />
-                  <i>And coming up soon...</i> Reporting in the investor portfolio! Where you will
-                  be able to see all your shared information with your companies in one place.
+                  <i>And coming up soon…</i> Reporting in the investor portfolio! Where you will be
+                  able to see all your shared information with your companies in one place.
                 </Trans>
               </p>
             </header>
@@ -115,8 +115,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                 <p>
                   <Trans>
                     Just as you land on your investor portfolio, adding an investment is as simple
-                    as clicking on the <i>+ Add investment</i> button and filling out the form. Once
-                    you finish, your portfolio will be immediately updated with newly input values.
+                    as clicking on the <i>Add investment</i> button and filling out the form. Once
+                    you finish, your portfolio will be immediately updated with new input values.
                     It’s never been easier to keep track of all your investments in the same
                     dashboard.
                   </Trans>

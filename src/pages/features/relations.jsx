@@ -42,7 +42,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   your amount of paperwork and integrate all of your documents on Ledgy.
                   <br />
                   <br />
-                  Share and download reports incuding your cap table with the non-diluted and
+                  Share and download reports including your cap table with the non-diluted and
                   fully-diluted stake of each shareholder (if you have options or phantom stock),
                   your convertibles and ESOPs, and the transaction history, which tracks every
                   change ever made to your cap table. You can even configure them to include
@@ -74,10 +74,20 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <p>
                 <Trans>
                   Maintain the hierarchy of your company by setting your access rights on the{' '}
-                  <i>Stakeholders</i> page. Admins will have full control over the company, viewers
-                  will be able to see all cap table info in a read-only mode, and personal will see
-                  their own stake and percentage on their portfolio once transactions have been
-                  committed. Keep everyone happy and let them see what they need to.
+                  <i>Stakeholders</i> page.
+                  <ul>
+                    <li>
+                      <strong>Admin</strong> Full control over the company
+                    </li>
+                    <li>
+                      <strong>View</strong> See all cap table info in a read-only mode
+                    </li>
+                    <li>
+                      <strong>Portfolio</strong> See only their stake and percentage in their
+                      portfolio
+                    </li>
+                  </ul>
+                  Keep everyone happy and let them see what they need to.
                 </Trans>
               </p>
             </div>
@@ -129,7 +139,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   optionally include a tax value of the shares. Employees will be able to see their
                   stock ownership plans and how many of their total shares they already have vested.
                   <br />
-                  Make your shareholders feel good, they will reward you.
+                  Make your shareholders feel good; they will reward you.
                 </Trans>
               </p>
             </header>
