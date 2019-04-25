@@ -83,6 +83,7 @@ const IndexPage = (props: Props) => (
             <Reference img={props.data.frontify} name="Frontify" />
             <Reference img={props.data.cryptofinance} name="Crypto Finance AG" />
             <Reference img={props.data.quitt} name="quitt.ch" />
+            <Reference img={props.data.yamo} name="Yamo" />
             <Reference img={props.data.allthings} name="Allthings Technologies" />
           </div>
 
@@ -162,6 +163,11 @@ export const pageQuery = graphql`
     }
     farmy: imageSharp(fluid: { originalName: { regex: "/farmy/" } }) {
       fixed(width: 130) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+    yamo: imageSharp(fluid: { originalName: { regex: "/yamo/" } }) {
+      fixed(width: 70) {
         ...GatsbyImageSharpFixed
       }
     }
