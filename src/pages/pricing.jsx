@@ -142,7 +142,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
             <hr className="my-8" />
             <h5>
-              <Trans>Premium offer for eco-friendly startups</Trans>{' '}
+              <Trans>Offer for eco-friendly startups</Trans>{' '}
               <span role="img" aria-label="earth">
                 🌍
               </span>

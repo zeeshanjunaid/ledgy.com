@@ -76,6 +76,10 @@ msgstr "Approved capital pools"
 msgid "Are you an investor and want to track your portfolio companies? The founders are busy and the numbers they give you are different from your own records?<0/>With their cap table on Ledgy, there’s only a single source of truth. Convince your companies, and you will never miss anything regarding your investments."
 msgstr "Are you an investor and want to track your portfolio companies? The founders are busy and the numbers they give you are different from your own records?<0/>With their cap table on Ledgy, there’s only a single source of truth. Convince your companies, and you will never miss anything regarding your investments."
 
+#: src/pages/pricing.jsx:151
+msgid "Are you part of a sustainability or clean-tech startup? <0/>If so, <1>tell us what you do</1> to see if you qualify for a <2>50% discount</2> on Ledgy Premium."
+msgstr "Are you part of a sustainability or clean-tech startup? <0/>If so, <1>tell us what you do</1> to see if you qualify for a <2>50% discount</2> on Ledgy Premium."
+
 #: src/pages/features/portfolio.jsx:39
 msgid "As an investor, you can profit a lot from Ledgy. Any of your portfolio companies that use the platform will be synchronized with your portfolio. See your key performance indicators of your investments at a glance, and visualize all of your data aggregated or filtered out.<0/><1/>Never lose track of how much you invested in which company and what’s the approximate value of your investments today.<2/><3/><4>And coming up soon…</4> Reporting in the investor portfolio! Where you will be able to see all your shared information with your companies in one place."
 msgstr "As an investor, you can profit a lot from Ledgy. Any of your portfolio companies that use the platform will be synchronized with your portfolio. See your key performance indicators of your investments at a glance, and visualize all of your data aggregated or filtered out.<0/><1/>Never lose track of how much you invested in which company and what’s the approximate value of your investments today.<2/><3/><4>And coming up soon…</4> Reporting in the investor portfolio! Where you will be able to see all your shared information with your companies in one place."
@@ -155,7 +159,7 @@ msgstr "By the way, if you decide to number your shares, we also got you covered
 msgid "CSV export"
 msgstr "CSV export"
 
-#: src/components/Feature.jsx:96
+#: src/components/Feature.jsx:97
 #: src/layouts/index.jsx:197
 #: src/pages/features.jsx:54
 msgid "Cap Table"
@@ -291,7 +295,7 @@ msgstr "Effort-free holding confirmations"
 msgid "Employee Incentives"
 msgstr "Employee Incentives"
 
-#: src/components/Feature.jsx:95
+#: src/components/Feature.jsx:96
 #: src/pages/features/esop.jsx:24
 #: src/pages/features.jsx:40
 msgid "Employee Participation Plans"
@@ -366,7 +370,7 @@ msgstr "FAQ"
 msgid "Features"
 msgstr "Features"
 
-#: src/pages/index.jsx:95
+#: src/pages/index.jsx:96
 msgid "Find out why they trust us"
 msgstr "Find out why they trust us"
 
@@ -494,14 +498,14 @@ msgstr "Investment overview"
 msgid "Investor & consultant (Farmy.ch, Flatfox.ch), founder of Students.ch"
 msgstr "Investor & consultant (Farmy.ch, Flatfox.ch), founder of Students.ch"
 
-#: src/components/Feature.jsx:98
+#: src/components/Feature.jsx:99
 #: src/pages/features/portfolio.jsx:14
 #: src/pages/features/portfolio.jsx:24
 #: src/pages/features.jsx:98
 msgid "Investor Portfolio"
 msgstr "Investor Portfolio"
 
-#: src/components/Feature.jsx:99
+#: src/components/Feature.jsx:100
 #: src/pages/features/relations.jsx:14
 #: src/pages/features/relations.jsx:24
 #: src/pages/features.jsx:84
@@ -609,7 +613,7 @@ msgstr "Many successful companies already use Ledgy for their equity plans and c
 msgid "Meet the team behind Ledgy that went out to build a genuinely great product. Learn more about the people who trust in us."
 msgstr "Meet the team behind Ledgy that went out to build a genuinely great product. Learn more about the people who trust in us."
 
-#: src/components/Feature.jsx:97
+#: src/components/Feature.jsx:98
 #: src/layouts/index.jsx:200
 msgid "Modeling"
 msgstr "Modeling"
@@ -629,6 +633,10 @@ msgstr "Nobody has any access to the equity data you provide. They are safely st
 #: src/components/AllFeatures.jsx:47
 msgid "Numbered shares"
 msgstr "Numbered shares"
+
+#: src/pages/pricing.jsx:145
+msgid "Offer for eco-friendly startups"
+msgstr "Offer for eco-friendly startups"
 
 #: src/pages/features/modeling.jsx:98
 msgid "Often you will have a couple of new investors, and then existing shareholders will participate pro-rata in the round. Your cap table is on Ledgy, so you can distribute an investment amount pro-rata with just a single click."
@@ -1096,7 +1104,7 @@ msgstr "Yoko graduated from ETH and Oxford and was president of Swissloop, enabl
 msgid "You can create a simple or custom vesting schedule, define over how many months the shares are to be vested, whether there’s a cliff, and how often a new batch of shares gets assigned to the employee.<0/>As soon as you enter the first numbers, you will see a visual representation of the current schedule."
 msgstr "You can create a simple or custom vesting schedule, define over how many months the shares are to be vested, whether there’s a cliff, and how often a new batch of shares gets assigned to the employee.<0/>As soon as you enter the first numbers, you will see a visual representation of the current schedule."
 
-#: src/pages/index.jsx:103
+#: src/pages/index.jsx:104
 msgid "Your data in safe hands"
 msgstr "Your data in safe hands"
 
