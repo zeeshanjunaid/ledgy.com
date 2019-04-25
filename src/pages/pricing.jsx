@@ -140,6 +140,23 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                 <Trans>Discover all features</Trans>
               </Link>
             </div>
+            <hr className="my-8" />
+            <h5>
+              <Trans>Premium offer for eco-friendly startups</Trans>{' '}
+              <span role="img" aria-label="earth">
+                🌍
+              </span>
+            </h5>
+            <p>
+              <Trans>
+                Are you part of a sustainability or clean-tech startup? <br />
+                If so,{' '}
+                <a href="mailto:contact@ledgy.com?subject=Premium Eco-Friendly Discount Application">
+                  tell us what you do
+                </a>{' '}
+                to see if you qualify for a <strong>50% discount</strong> on Ledgy Premium.
+              </Trans>
+            </p>
           </div>
         </div>
       </section>
