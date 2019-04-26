@@ -18,7 +18,7 @@ import 'katex/dist/katex.min.css';
 import 'prism-themes/themes/prism-ghcolors.css';
 
 import { Title, name, appUrl, demoUrl, loadScript, targetBlank, animateTablet } from './utils';
-import { catalogs, langFromPath, langPrefix, getLocale } from '../i18n-config';
+import { catalogs, langFromPath, langPrefix, getLocale, deprefix } from '../i18n-config';
 import SignupForm from '../components/SignupForm';
 
 import '../assets/scss/page.scss';
@@ -270,19 +270,27 @@ const Footer = (props: LayoutProps) => (
                 aria-labelledby="dropdownMenuButton"
                 style={{ minWidth: '7rem' }}
               >
-                <Link className="dropdown-item d-flex" to="/" href>
+                <Link className="dropdown-item d-flex" to={deprefix(props.location.pathname)} href>
                   <span className="mr-1" role="img" aria-label="English">
                     🍔
                   </span>
                   English
                 </Link>
-                <Link className="dropdown-item d-flex" to="/de/" href>
+                <Link
+                  className="dropdown-item d-flex"
+                  to={`/de${deprefix(props.location.pathname)}`}
+                  href
+                >
                   <span className="mr-1" role="img" aria-label="Deutsch">
                     🥨
                   </span>
                   Deutsch
                 </Link>
-                <Link className="dropdown-item d-flex" to="/fr/" href>
+                <Link
+                  className="dropdown-item d-flex"
+                  to={`/fr${deprefix(props.location.pathname)}`}
+                  href
+                >
                   <span className="mr-1" role="img" aria-label="Français">
                     🥖
                   </span>

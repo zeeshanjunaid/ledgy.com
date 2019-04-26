@@ -15,7 +15,7 @@ const defaultLanguage = 'en';
 
 const langPrefix = lang => (lang === defaultLanguage ? '' : `/${lang}`);
 const deprefix = pathname =>
-  pathname[0] === '/' && pathname[3] === '/' ? pathname.substr(4) : pathname;
+  pathname[0] === '/' && pathname[3] === '/' ? pathname.substr(3) : pathname;
 const langFromPath = pathname => {
   const lang = pathname.split('/')[1];
   return languages.includes(lang) ? lang : 'en';
