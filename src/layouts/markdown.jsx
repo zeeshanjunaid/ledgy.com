@@ -6,7 +6,7 @@ import { Trans } from '@lingui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen } from '@fortawesome/free-solid-svg-icons';
 import MDXRenderer from 'gatsby-mdx/mdx-renderer';
-import { withMDXScope } from 'gatsby-mdx/context';
+import { MDXProvider } from '@mdx-js/react';
 
 import { Author, Image, type ImageProps } from '../components/Markdown';
 import { Title, githubUrl, targetBlank } from '../layouts/utils';
@@ -31,10 +31,6 @@ export default ({
       }
     />
   );
-
-  const Renderer = withMDXScope(({ scope, ...props }) => (
-    <MDXRenderer scope={{ ...scope, Img: img }} {...props} />
-  ));
 
   return (
     <div>
@@ -65,7 +61,9 @@ export default ({
         <section className="section">
           <div className="container container-small">
             <div className="markdown clearfix">
-              <Renderer>{code.body}</Renderer>
+              <MDXProvider components={{ Img: img }}>
+                <MDXRenderer>{code.body}</MDXRenderer>
+              </MDXProvider>
             </div>
             <div className="d-flex py-4">
               {frontmatter.date && <small>{frontmatter.date}</small>}
