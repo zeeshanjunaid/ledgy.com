@@ -6,7 +6,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Creation-Date: 2018-09-12T18:40:54.619Z\n"
-"PO-Revision-Date: 2019-04-25 17:06+0200\n"
+"PO-Revision-Date: 2019-04-30 14:41+0200\n"
 "Language: de\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
@@ -158,7 +158,7 @@ msgstr "Übrigens, falls du dich entscheiden solltest, deine Aktien zu nummerier
 msgid "CSV export"
 msgstr "CSV-Export"
 
-#: src/components/Feature.jsx:97 
+#: src/components/Feature.jsx:97
 #: src/layouts/index.jsx:197
 #: src/pages/features.jsx:54
 msgid "Cap Table"
@@ -413,7 +413,7 @@ msgstr "Jetzt Kostenlos Testen"
 msgid "Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant."
 msgstr "Erstelle deinen Cap Table und Mitarbeiterbeteiligungspläne von Anfang an richtig. Bringe deine Finanzierungsrunden zum Erfolg und motiviere deine Investoren und Mitarbeiter. Stelle sicher, dass deine Daten sicher und konform sind."
 
-#: src/layouts/index.jsx:368
+#: src/layouts/index.jsx:395
 msgid "Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant. Try now for free!"
 msgstr "Erstelle deinen Cap Table und Mitarbeiterbeteiligungspläne von Anfang an richtig. Bringe deine Finanzierungsrunden zum Erfolg und motiviere deine Investoren und Mitarbeiter. Stelle sicher, dass deine Daten sicher und konform sind. Jetzt kostenlos testen!"
 
@@ -542,6 +542,10 @@ msgstr "Verwalte die Eigentumsgeschichte deines Unternehmens an einem einzigen O
 #: src/pages/features/esop.jsx:16
 msgid "Keep your employees motivated at work. They deserve it. Ledgy's ESOP module will help you to make it happen."
 msgstr "Motiviere deine Mitarbeiter bei der Arbeit. Sie verdienen es. Das ESOP-Modul von Ledgy wird dir dabei helfen."
+
+#: src/layouts/index.jsx:266
+msgid "Language"
+msgstr "Sprache"
 
 #: src/pages/about-us.jsx:186
 msgid "Leading Spanish investor in early-stage technology startups"
@@ -892,7 +896,7 @@ msgstr "Verschlüsselt mit dem bewährten <0>bcrypt-Algorithmus</0> mit 13 Runde
 msgid "Strong passwords"
 msgstr "Sichere Passwörter"
 
-#: src/layouts/markdown.jsx:78
+#: src/layouts/markdown.jsx:76
 msgid "Suggest changes"
 msgstr "Änderungen vorschlagen"
 
@@ -920,7 +924,7 @@ msgstr "Nutzungsbedingungen"
 msgid "The Ledgy Blog"
 msgstr "Der Ledgy-Blog"
 
-#: src/layouts/index.jsx:367
+#: src/layouts/index.jsx:394
 #: src/pages/index.jsx:19
 msgid "The New Standard in Equity Management"
 msgstr "Der Neue Standard im Equity Management"
@@ -953,7 +957,7 @@ msgstr "Mit der Transaktionshistorie weißt du genau was sich wann an deinen Bet
 msgid "This is a brief summary. For the details, please read our <0>Privacy Policy</0>."
 msgstr "Dies ist eine kurze Zusammenfassung. Weitere Informationen gibt es in unseren <0>Datenschutzrichtlinie</0>."
 
-#: src/layouts/markdown.jsx:57
+#: src/layouts/markdown.jsx:53
 msgid "This page is only available in English."
 msgstr "Diese Seite ist nur auf Englisch verfügbar."
 
@@ -1119,7 +1123,7 @@ msgstr "Dein Portfolio auf einen Blick"
 msgid "You’re in good company"
 msgstr "Du befindest dich in guter Gesellschaft"
 
-#: src/layouts/index.jsx:376
+#: src/layouts/index.jsx:403
 msgid "cap table, stock ledger, share register, startup, modeling, financing round, equity, esop, phantom, option plan, virtual, portfolio, reporting, investors"
 msgstr "cap table, Aktienbuch, Aktienregister, Startup, Modellierung, Finanzierungsrunde, Exit, ESOP, VSOP, Beteiligungsplan, Unternehmensbeteiligung, Mitarbeiterbeteiligung, Optionspläne, virtuelle Beteiligung, Reporting, Investor, Portfolio"
 
