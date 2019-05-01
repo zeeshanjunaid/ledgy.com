@@ -1,6 +1,6 @@
 // @flow
 
-import React, { useEffect } from 'react';
+import React, { useEffect, type Node } from 'react';
 import { StaticQuery, graphql, Link, navigate } from 'gatsby';
 import { I18nProvider, withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
@@ -18,7 +18,7 @@ import 'katex/dist/katex.min.css';
 import 'prism-themes/themes/prism-ghcolors.css';
 
 import { Title, name, appUrl, demoUrl, loadScript, targetBlank, animateTablet } from './utils';
-import { catalogs, langFromPath, langPrefix, getLocale } from '../i18n-config';
+import { catalogs, langFromPath, langPrefix, getLocale, deprefix } from '../i18n-config';
 import SignupForm from '../components/SignupForm';
 
 import '../assets/scss/page.scss';
@@ -254,23 +254,50 @@ const Footer = (props: LayoutProps) => (
             ))}
           </div>
           <div className="mt-4">
-            {props.lang === 'de' ? (
-              <Link
-                href
-                to={props.location.pathname.substr(3)}
-                className="btn btn-round btn-outline-light"
+            <div className="dropdown">
+              <button
+                className="btn btn-round btn-outline-light dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
               >
-                English
-              </Link>
-            ) : (
-              <Link
-                href
-                to={`/de${props.location.pathname}`}
-                className="btn btn-round btn-outline-light"
+                <Trans>Language</Trans>
+              </button>
+              <div
+                className="dropdown-menu"
+                aria-labelledby="dropdownMenuButton"
+                style={{ minWidth: '7rem' }}
               >
-                Deutsch
-              </Link>
-            )}
+                <Link className="dropdown-item d-flex" to={deprefix(props.location.pathname)} href>
+                  <span className="mr-1" role="img" aria-label="English">
+                    🍔
+                  </span>
+                  English
+                </Link>
+                <Link
+                  className="dropdown-item d-flex"
+                  to={`/de${deprefix(props.location.pathname)}`}
+                  href
+                >
+                  <span className="mr-1" role="img" aria-label="Deutsch">
+                    🥨
+                  </span>
+                  Deutsch
+                </Link>
+                <Link
+                  className="dropdown-item d-flex"
+                  to={`/fr${deprefix(props.location.pathname)}`}
+                  href
+                >
+                  <span className="mr-1" role="img" aria-label="Français">
+                    🥖
+                  </span>
+                  Français
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -282,7 +309,7 @@ const Footer = (props: LayoutProps) => (
 type SiteProps = {
   ...$Exact<Props>,
   lang: string,
-  children: React.Node,
+  children: Node,
   location: { pathname: string }
 };
 

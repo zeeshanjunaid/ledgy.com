@@ -11,3 +11,4 @@ yarn-error.log
 src/locale/_build/
 src/locale/de/messages.js
 src/locale/en/messages.js
+src/locale/fr/messages.js

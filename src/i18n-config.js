@@ -4,17 +4,22 @@ const flatten = require('lodash/fp/flatten');
 const values = require('lodash/fp/values');
 const compact = require('lodash/fp/compact');
 
-const languages = ['en', 'de'];
+const languages = ['en', 'de', 'fr'];
 const catalogs = {
   en: require('./locale/en/messages'), // eslint-disable-line global-require
-  de: require('./locale/de/messages') // eslint-disable-line global-require
+  de: require('./locale/de/messages'), // eslint-disable-line global-require
+  fr: require('./locale/fr/messages') // eslint-disable-line global-require
 };
 
 const defaultLanguage = 'en';
 
 const langPrefix = lang => (lang === defaultLanguage ? '' : `/${lang}`);
-const deprefix = pathname => (pathname.startsWith('/de/') ? pathname.substr(4) : pathname);
-const langFromPath = pathname => (pathname.startsWith('/de/') ? 'de' : 'en');
+const deprefix = pathname =>
+  pathname[0] === '/' && pathname[3] === '/' ? pathname.substr(3) : pathname;
+const langFromPath = pathname => {
+  const lang = pathname.split('/')[1];
+  return languages.includes(lang) ? lang : 'en';
+};
 
 const browserLanguagePropertyKeys = [
   'languages',
@@ -23,7 +28,6 @@ const browserLanguagePropertyKeys = [
   'userLanguage',
   'systemLanguage'
 ];
-const availableLanguages = ['de', 'en'];
 const getLocale = () =>
   compose(
     compact,
@@ -32,7 +36,7 @@ const getLocale = () =>
     pick(browserLanguagePropertyKeys)
   )(window.navigator)
     .map(s => s.substr(0, 2))
-    .find(s => availableLanguages.includes(s)) || 'en';
+    .find(s => languages.includes(s)) || 'en';
 
 exports.defaultLanguage = defaultLanguage;
 exports.languages = languages;

@@ -41,7 +41,13 @@ exports.createPages = ({ graphql, actions }) => {
   [['/jobs/', '/jobs/software-engineer/']].forEach(([fromPath, toPath]) => {
     const redirectInBrowser = true;
     createRedirect({ fromPath, toPath, redirectInBrowser });
-    createRedirect({ fromPath: `/de${fromPath}`, toPath: `/de${toPath}`, redirectInBrowser });
+    languages.forEach(lang =>
+      createRedirect({
+        fromPath: `/${lang}${fromPath}`,
+        toPath: `/${lang}${toPath}`,
+        redirectInBrowser
+      })
+    );
   });
 
   const component = path.resolve('./src/layouts/markdown.jsx');
@@ -71,11 +77,13 @@ exports.createPages = ({ graphql, actions }) => {
           component,
           context: { id: node.id }
         });
-        createPage({
-          path: `/de${slug}`,
-          component,
-          context: { id: node.id, notLocalized: true }
-        });
+        languages.forEach(lang =>
+          createPage({
+            path: `/${lang}${slug}`,
+            component,
+            context: { id: node.id, notLocalized: true }
+          })
+        );
       });
       resolve();
     });

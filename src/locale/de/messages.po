@@ -6,7 +6,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Creation-Date: 2018-09-12T18:40:54.619Z\n"
-"PO-Revision-Date: 2019-04-25 17:06+0200\n"
+"PO-Revision-Date: 2019-04-30 14:41+0200\n"
 "Language: de\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
@@ -21,7 +21,8 @@ msgstr "14 Tage testen"
 msgid "<0/> Signing up…"
 msgstr "<0/> Anmelden…"
 
-#: src/layouts/index.jsx:133 src/pages/about-us.jsx:17
+#: src/layouts/index.jsx:133
+#: src/pages/about-us.jsx:17
 #: src/pages/about-us.jsx:25
 msgid "About us"
 msgstr "Über uns"
@@ -122,7 +123,9 @@ msgstr "Backups"
 msgid "Ben has extensive experience in project management and has worked for two years as software-engineer in an ETH research group"
 msgstr "Ben hat umfangreiche Erfahrung im Projektmanagement und hat zwei Jahre als Software Engineer in einer ETH Forschungsgruppe gearbeitet"
 
-#: src/layouts/index.jsx:64 src/layouts/index.jsx:136 src/layouts/index.jsx:169
+#: src/layouts/index.jsx:64
+#: src/layouts/index.jsx:136
+#: src/layouts/index.jsx:169
 #: src/pages/blog.jsx:61
 msgid "Blog"
 msgstr "Blog"
@@ -155,7 +158,8 @@ msgstr "Übrigens, falls du dich entscheiden solltest, deine Aktien zu nummerier
 msgid "CSV export"
 msgstr "CSV-Export"
 
-#: src/components/Feature.jsx:97 src/layouts/index.jsx:197
+#: src/components/Feature.jsx:97
+#: src/layouts/index.jsx:197
 #: src/pages/features.jsx:54
 msgid "Cap Table"
 msgstr "Cap Table"
@@ -180,7 +184,8 @@ msgstr "Firma"
 msgid "Consistency checks"
 msgstr "Konsistenz-Checks"
 
-#: src/pages/contact.jsx:10 src/pages/contact.jsx:74
+#: src/pages/contact.jsx:10
+#: src/pages/contact.jsx:74
 msgid "Contact"
 msgstr "Kontakt"
 
@@ -204,7 +209,8 @@ msgstr "Finanzierungsrunde umwandeln"
 msgid "Convert to transactions"
 msgstr "In Transaktionen umwandeln"
 
-#: src/components/AllFeatures.jsx:38 src/pages/pricing.jsx:54
+#: src/components/AllFeatures.jsx:38
+#: src/pages/pricing.jsx:54
 msgid "Convertible loans"
 msgstr "Wandeldarlehen"
 
@@ -288,7 +294,8 @@ msgstr "Besitzbestätigungen ohne Aufwand"
 msgid "Employee Incentives"
 msgstr "Mitarbeiter​​​​beteiligungen"
 
-#: src/components/Feature.jsx:96 src/pages/features/esop.jsx:24
+#: src/components/Feature.jsx:96
+#: src/pages/features/esop.jsx:24
 #: src/pages/features.jsx:40
 msgid "Employee Participation Plans"
 msgstr "Mitarbeiterbeteiligungspläne"
@@ -317,7 +324,8 @@ msgstr "Unternehmer, Business Angel, Gründer von Doodle.com"
 msgid "Entrepreneur, technologist, founder of Doodle.com"
 msgstr "Unternehmer, Technologe, Gründer von Doodle.com"
 
-#: src/pages/privacy.jsx:74 src/pages/privacy.jsx:126
+#: src/pages/privacy.jsx:74
+#: src/pages/privacy.jsx:126
 msgid "Equity data"
 msgstr "Aktiendaten"
 
@@ -333,7 +341,8 @@ msgstr "Europe’s symbiosis of early-stage VC funds and private investor networ
 msgid "Every transaction in your cap table usually comes with a pile of additional documents, like contracts. Get rid of complicated folder structures and attach them directly to your transactions. Ledgy gives you an overview of all documents that you uploaded and their corresponding transactions. Also in your transaction history, you can select any transaction and see all connected documents at a glance.<0/><1/>You can also share your documents by sending a simple link to your shareholders. This eliminates confusion about different versions of documents, as it is often the case when sending documents via email."
 msgstr "Jede Transaktion in deinem Aktienregister enthält normalerweise einen Stapel zusätzlicher Dokumente, wie zum Beispiel Verträge. Befreie dich von komplizierten Ordnerstrukturen und verknüpfe sie einfach direkt mit deinen Transaktionen. Ledgy gibt dir einen Überblick über alle von dir hochgeladenen Dokumente und deren verknüpften Transaktionen. Außerdem kannst du im Transaktionsverlauf beliebige Transaktionen auswählen und alle damit verknüpften Dokumente auf einen Blick einsehen. <0/> <1/> Du kannst Dokumente auch einfach per Link mit deinen Gesellschaftern teilen. Auf diese Weise werden Verwechslungen bei verschiedenen Versionen von Dokumenten vermieden, was häufig beim Senden von Dokumenten per E-Mail der Fall ist."
 
-#: src/pages/features/modeling.jsx:189 src/pages/features/modeling.jsx:201
+#: src/pages/features/modeling.jsx:189
+#: src/pages/features/modeling.jsx:201
 msgid "Exit Modeling"
 msgstr "Exit-Modellierung"
 
@@ -349,10 +358,14 @@ msgstr "Neue Szenarien interaktiv erkunden"
 msgid "FAQ"
 msgstr "FAQ"
 
-#: src/layouts/index.jsx:58 src/layouts/index.jsx:194
-#: src/pages/features/captable.jsx:15 src/pages/features/esop.jsx:15
-#: src/pages/features/modeling.jsx:15 src/pages/features/portfolio.jsx:15
-#: src/pages/features/relations.jsx:15 src/pages/features.jsx:17
+#: src/layouts/index.jsx:58
+#: src/layouts/index.jsx:194
+#: src/pages/features/captable.jsx:15
+#: src/pages/features/esop.jsx:15
+#: src/pages/features/modeling.jsx:15
+#: src/pages/features/portfolio.jsx:15
+#: src/pages/features/relations.jsx:15
+#: src/pages/features.jsx:17
 msgid "Features"
 msgstr "Funktionen"
 
@@ -400,7 +413,7 @@ msgstr "Jetzt Kostenlos Testen"
 msgid "Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant."
 msgstr "Erstelle deinen Cap Table und Mitarbeiterbeteiligungspläne von Anfang an richtig. Bringe deine Finanzierungsrunden zum Erfolg und motiviere deine Investoren und Mitarbeiter. Stelle sicher, dass deine Daten sicher und konform sind."
 
-#: src/layouts/index.jsx:368
+#: src/layouts/index.jsx:395
 msgid "Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant. Try now for free!"
 msgstr "Erstelle deinen Cap Table und Mitarbeiterbeteiligungspläne von Anfang an richtig. Bringe deine Finanzierungsrunden zum Erfolg und motiviere deine Investoren und Mitarbeiter. Stelle sicher, dass deine Daten sicher und konform sind. Jetzt kostenlos testen!"
 
@@ -484,13 +497,17 @@ msgstr "Investment-Übersicht"
 msgid "Investor & consultant (Farmy.ch, Flatfox.ch), founder of Students.ch"
 msgstr "Investor & Berater (Farmy.ch, Flatfox.ch), Gründer von Students.ch"
 
-#: src/components/Feature.jsx:99 src/pages/features/portfolio.jsx:14
-#: src/pages/features/portfolio.jsx:24 src/pages/features.jsx:98
+#: src/components/Feature.jsx:99
+#: src/pages/features/portfolio.jsx:14
+#: src/pages/features/portfolio.jsx:24
+#: src/pages/features.jsx:98
 msgid "Investor Portfolio"
 msgstr "Investoren-Portfolio"
 
-#: src/components/Feature.jsx:100 src/pages/features/relations.jsx:14
-#: src/pages/features/relations.jsx:24 src/pages/features.jsx:84
+#: src/components/Feature.jsx:100
+#: src/pages/features/relations.jsx:14
+#: src/pages/features/relations.jsx:24
+#: src/pages/features.jsx:84
 msgid "Investor Relations"
 msgstr "Investor Relations"
 
@@ -526,6 +543,10 @@ msgstr "Verwalte die Eigentumsgeschichte deines Unternehmens an einem einzigen O
 msgid "Keep your employees motivated at work. They deserve it. Ledgy's ESOP module will help you to make it happen."
 msgstr "Motiviere deine Mitarbeiter bei der Arbeit. Sie verdienen es. Das ESOP-Modul von Ledgy wird dir dabei helfen."
 
+#: src/layouts/index.jsx:266
+msgid "Language"
+msgstr "Sprache"
+
 #: src/pages/about-us.jsx:186
 msgid "Leading Spanish investor in early-stage technology startups"
 msgstr "Der führende Investor aus Spanien im Early Stage-Segment"
@@ -538,7 +559,8 @@ msgstr "Erfahre mehr über"
 msgid "Ledgy can do a lot for you—and more features are constantly being developed. Most currently available features are listed below. Get in touch if your favorite feature is missing, we love to hear feedback."
 msgstr "Ledgy kann Vieles für dich machen—und weitere Features werden laufend entwickelt. Die meisten zurzeit verfügbaren Features sind hier aufgelistet. Melde dich, wenn dir etwas Wichtiges fehlt, wir hören liebend gerne Feedback."
 
-#: src/pages/pricing.jsx:13 src/pages/pricing.jsx:32
+#: src/pages/pricing.jsx:13
+#: src/pages/pricing.jsx:32
 msgid "Ledgy scales with your needs. Free for startups, powerful for grown-ups."
 msgstr "Ledgy skaliert mit deinen Anforderungen. Kostenlos für Startups, leistungsstark für größere Firmen."
 
@@ -594,7 +616,8 @@ msgstr "Viele erfolgreiche Unternehmen nutzen Ledgy schon für ihre Beteiligungs
 msgid "Meet the team behind Ledgy that went out to build a genuinely great product. Learn more about the people who trust in us."
 msgstr "Lerne das Team hinter Ledgy kennen, welches dieses geniale Produkt entwickelt hat. Erfahre mehr über die Leute, die uns Vertrauen."
 
-#: src/components/Feature.jsx:98 src/layouts/index.jsx:200
+#: src/components/Feature.jsx:98
+#: src/layouts/index.jsx:200
 msgid "Modeling"
 msgstr "Modellierung"
 
@@ -698,13 +721,17 @@ msgstr "Portfolio"
 msgid "Premium"
 msgstr "Premium"
 
-#: src/layouts/index.jsx:61 src/layouts/index.jsx:212 src/pages/pricing.jsx:12
+#: src/layouts/index.jsx:61
+#: src/layouts/index.jsx:212
+#: src/pages/pricing.jsx:12
 #: src/pages/pricing.jsx:21
 msgid "Pricing"
 msgstr "Preise"
 
-#: src/components/SecurityRow.jsx:16 src/layouts/index.jsx:142
-#: src/pages/privacy.jsx:21 src/pages/privacy.jsx:29
+#: src/components/SecurityRow.jsx:16
+#: src/layouts/index.jsx:142
+#: src/pages/privacy.jsx:21
+#: src/pages/privacy.jsx:29
 msgid "Privacy"
 msgstr "Datenschutz"
 
@@ -712,7 +739,8 @@ msgstr "Datenschutz"
 msgid "Privacy Policy"
 msgstr "Datenschutzrichtlinie"
 
-#: src/components/SecurityRow.jsx:19 src/pages/privacy.jsx:22
+#: src/components/SecurityRow.jsx:19
+#: src/pages/privacy.jsx:22
 msgid "Privacy made in Europe. Because your equity data is not for everyone."
 msgstr "Privacy made in Europe. Weil deine Beteiligungsdaten nicht für jeden gedacht sind."
 
@@ -724,7 +752,8 @@ msgstr "Privacy made in Europe. Weil deine Beteiligungsdaten nicht für jeden ge
 msgid "Product"
 msgstr "Produkt"
 
-#: src/components/SecurityRow.jsx:22 src/components/SecurityRow.jsx:37
+#: src/components/SecurityRow.jsx:22
+#: src/components/SecurityRow.jsx:37
 #: src/pages/blog.jsx:49
 msgid "Read more"
 msgstr "Mehr erfahren"
@@ -749,7 +778,8 @@ msgstr "Ersetze dein Excel durch Ledgy"
 msgid "Round Modeling"
 msgstr "Round Modeling"
 
-#: src/pages/features/modeling.jsx:14 src/pages/features/modeling.jsx:24
+#: src/pages/features/modeling.jsx:14
+#: src/pages/features/modeling.jsx:24
 #: src/pages/features.jsx:70
 msgid "Round and Exit Modeling"
 msgstr "Modellierung von Finanzierungsrunden und Exits"
@@ -778,8 +808,10 @@ msgstr "Wenn du runterscrollst wirst du sehen, dass der Cap Table im <0>Round Mo
 msgid "Secure document storage"
 msgstr "Sichere Dokumentenablage"
 
-#: src/components/SecurityRow.jsx:31 src/layouts/index.jsx:139
-#: src/pages/privacy.jsx:106 src/pages/security.jsx:25
+#: src/components/SecurityRow.jsx:31
+#: src/layouts/index.jsx:139
+#: src/pages/privacy.jsx:106
+#: src/pages/security.jsx:25
 #: src/pages/security.jsx:33
 msgid "Security"
 msgstr "Sicherheit"
@@ -864,7 +896,7 @@ msgstr "Verschlüsselt mit dem bewährten <0>bcrypt-Algorithmus</0> mit 13 Runde
 msgid "Strong passwords"
 msgstr "Sichere Passwörter"
 
-#: src/layouts/markdown.jsx:78
+#: src/layouts/markdown.jsx:76
 msgid "Suggest changes"
 msgstr "Änderungen vorschlagen"
 
@@ -892,7 +924,8 @@ msgstr "Nutzungsbedingungen"
 msgid "The Ledgy Blog"
 msgstr "Der Ledgy-Blog"
 
-#: src/layouts/index.jsx:367 src/pages/index.jsx:19
+#: src/layouts/index.jsx:394
+#: src/pages/index.jsx:19
 msgid "The New Standard in Equity Management"
 msgstr "Der Neue Standard im Equity Management"
 
@@ -924,7 +957,7 @@ msgstr "Mit der Transaktionshistorie weißt du genau was sich wann an deinen Bet
 msgid "This is a brief summary. For the details, please read our <0>Privacy Policy</0>."
 msgstr "Dies ist eine kurze Zusammenfassung. Weitere Informationen gibt es in unseren <0>Datenschutzrichtlinie</0>."
 
-#: src/layouts/markdown.jsx:57
+#: src/layouts/markdown.jsx:53
 msgid "This page is only available in English."
 msgstr "Diese Seite ist nur auf Englisch verfügbar."
 
@@ -952,7 +985,8 @@ msgstr "Verlauf der Transaktionen"
 msgid "Treasury shares"
 msgstr "Von der Firma gehaltene Aktien"
 
-#: src/pages/features/captable.jsx:24 src/pages/features.jsx:55
+#: src/pages/features/captable.jsx:24
+#: src/pages/features.jsx:55
 msgid "Trust in Your Cap Table"
 msgstr "Eine einzige vertrauenswürdige Quelle"
 
@@ -968,7 +1002,8 @@ msgstr "Passe die verschiedenen Parameter der Simulation an deine Bedürfnisse a
 msgid "Two-Factor authentication"
 msgstr "Zwei-Faktor-Authentisierung"
 
-#: src/pages/pricing.jsx:66 src/pages/security.jsx:92
+#: src/pages/pricing.jsx:66
+#: src/pages/security.jsx:92
 msgid "Two-factor authentication"
 msgstr "Zwei-Faktor-Authentisierung"
 
@@ -1088,7 +1123,7 @@ msgstr "Dein Portfolio auf einen Blick"
 msgid "You’re in good company"
 msgstr "Du befindest dich in guter Gesellschaft"
 
-#: src/layouts/index.jsx:376
+#: src/layouts/index.jsx:403
 msgid "cap table, stock ledger, share register, startup, modeling, financing round, equity, esop, phantom, option plan, virtual, portfolio, reporting, investors"
 msgstr "cap table, Aktienbuch, Aktienregister, Startup, Modellierung, Finanzierungsrunde, Exit, ESOP, VSOP, Beteiligungsplan, Unternehmensbeteiligung, Mitarbeiterbeteiligung, Optionspläne, virtuelle Beteiligung, Reporting, Investor, Portfolio"
 
