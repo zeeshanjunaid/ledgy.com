@@ -65,6 +65,19 @@ export const team: { [string]: AuthorProps } = {
     twitter: 'https://twitter.com/ovcOS89',
     linkedIn: 'https://www.linkedin.com/in/oriol-vidal-cortes-37584080/',
     mail: 'oriol@ledgy.com'
+  },
+  jules: {
+    name: 'Jules Henze',
+    role: 'Developer',
+    description: (
+      <Trans>
+        Jules started working as a software engineer beside his studies in environmental engineering 
+        at ETH Zurich and got hooked up. 
+      </Trans>
+    ),
+    twitter: 'https://twitter.com/HenzeJules',
+    linkedIn: 'https://ch.linkedin.com/in/jules-henze',
+    mail: 'jules@ledgy.com'
   }
 };
 
