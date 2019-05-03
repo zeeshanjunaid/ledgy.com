@@ -68,11 +68,12 @@ export const team: { [string]: AuthorProps } = {
   },
   jules: {
     name: 'Jules Henze',
-    role: 'Developer',
+    role: 'Developer & Paragliding-Pilot',
     description: (
       <Trans>
-        Jules started working as a software engineer beside his studies in environmental engineering 
-        at ETH Zurich and got hooked up. 
+        Jules studied environmental engineering at ETH Zurich while collecting first experiences as
+        a software developer in the private industry. He received an excellence scholarship and
+        finished his studies winning an award for an outstanding thesis
       </Trans>
     ),
     twitter: 'https://twitter.com/HenzeJules',
@@ -99,6 +100,11 @@ export const TeamFragment = graphql`
       }
     }
     oriol: imageSharp(fluid: { originalName: { regex: "/uri.jpg/" } }) {
+      fluid(maxWidth: 245, maxHeight: 245) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    jules: imageSharp(fluid: { originalName: { regex: "/jules.jpg/" } }) {
       fluid(maxWidth: 245, maxHeight: 245) {
         ...GatsbyImageSharpFluid
       }
