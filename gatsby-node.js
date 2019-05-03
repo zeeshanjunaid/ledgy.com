@@ -38,17 +38,19 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions;
-  [['/jobs/', '/jobs/software-engineer/']].forEach(([fromPath, toPath]) => {
-    const redirectInBrowser = true;
-    createRedirect({ fromPath, toPath, redirectInBrowser });
-    languages.forEach(lang =>
-      createRedirect({
-        fromPath: `/${lang}${fromPath}`,
-        toPath: `/${lang}${toPath}`,
-        redirectInBrowser
-      })
-    );
-  });
+  [['/jobs/', '/jobs/software-engineer/', '/new-features/kpis-and-reports']].forEach(
+    ([fromPath, toPath]) => {
+      const redirectInBrowser = true;
+      createRedirect({ fromPath, toPath, redirectInBrowser });
+      languages.forEach(lang =>
+        createRedirect({
+          fromPath: `/${lang}${fromPath}`,
+          toPath: `/${lang}${toPath}`,
+          redirectInBrowser
+        })
+      );
+    }
+  );
 
   const component = path.resolve('./src/layouts/markdown.jsx');
   return new Promise((resolve, reject) => {
