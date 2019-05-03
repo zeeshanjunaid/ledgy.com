@@ -2,13 +2,13 @@
 
 import * as React from 'react';
 import Img from 'gatsby-image';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import { withI18n, Trans } from '@lingui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
-import { Title, ChevronRight } from '../layouts/utils';
+import { Title } from '../layouts/utils';
 import { team, type AuthorProps } from '../layouts/team';
 
 const Header = ({ i18n }: Props) => (
