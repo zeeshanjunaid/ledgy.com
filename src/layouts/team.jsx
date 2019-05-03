@@ -68,7 +68,7 @@ export const team: { [string]: AuthorProps } = {
   },
   jules: {
     name: 'Jules Henze',
-    role: 'Developer & Paragliding-Pilot',
+    role: 'Developer & Paragliding Pilot',
     description: (
       <Trans>
         Jules studied environmental engineering at ETH Zurich while collecting first experiences as
