@@ -50,7 +50,7 @@ export default class extends React.Component<
     this.setState({ loading: true });
     const email = encodeURIComponent(this.state.email);
 
-    window.dataLayer.push({ event: 'signup' });
+    window.ga('send', 'event', 'signup', 'enterEmail');
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },

@@ -29,7 +29,7 @@ module.exports = {
       }
     },
     'gatsby-plugin-catch-links',
-    { resolve: 'gatsby-plugin-google-tagmanager', options: { id: 'GTM-P48JT9B' } },
+    { resolve: 'gatsby-plugin-google-analytics', options: { trackingId: 'UA-102106007-1' } },
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
