@@ -72,7 +72,7 @@ export const team: { [string]: AuthorProps } = {
     description: (
       <Trans>
         During his studies in engineering as an excellence scholar at ETH Zurich, Jules started working as a software
-	developer building web-applications
+	developer building web applications
       </Trans>
     ),
     twitter: 'https://twitter.com/HenzeJules',

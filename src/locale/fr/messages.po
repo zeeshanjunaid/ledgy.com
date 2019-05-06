@@ -264,7 +264,7 @@ msgid "Document storage"
 msgstr "Stockage des documents"
 
 #: src/layouts/team.jsx:73
-msgid "During his studies in engineering as an excellence scholar at ETH Zurich, Jules started working as a software \t\tdeveloper building web-applications"
+msgid "During his studies in engineering as an excellence scholar at ETH Zurich, Jules started working as a software \t\tdeveloper building web applications"
 msgstr "Durant ses études d'ingénieur en tant que chercheur d'excellence à l'ETH Zurich, Jules a commencé à travailler comme ingénieur en informatique pour le développement web"
 
 #: src/pages/features/esop.jsx:14
