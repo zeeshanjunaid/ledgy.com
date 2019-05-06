@@ -407,7 +407,7 @@ msgstr "Los geht’s"
 
 #: src/pages/index.jsx:40
 msgid "Get Started Free"
-msgstr "Jetzt Kostenlos Testen"
+msgstr "Kostenlos Testen"
 
 #: src/pages/index.jsx:26
 msgid "Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant."
