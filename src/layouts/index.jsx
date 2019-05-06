@@ -320,8 +320,7 @@ const Initialize = ({ branch, pathname }: {| branch: string, pathname: string |}
   useEffect(() => {
     animateTablet();
     window.branch = branch;
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ branch });
+    if (window.ga) window.ga('set', 'dimension1', branch);
 
     setTimeout(async () => {
       require('../assets/js/page'); // eslint-disable-line global-require
