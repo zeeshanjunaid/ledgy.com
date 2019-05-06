@@ -2,13 +2,13 @@
 
 import * as React from 'react';
 import Img from 'gatsby-image';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import { withI18n, Trans } from '@lingui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
-import { Title, ChevronRight } from '../layouts/utils';
+import { Title } from '../layouts/utils';
 import { team, type AuthorProps } from '../layouts/team';
 
 const Header = ({ i18n }: Props) => (
@@ -43,7 +43,7 @@ const Founder = withI18n()(
     ...AuthorProps,
     img: Object
   |}) => (
-    <div className="col-12 col-md-6 team-1">
+    <div className="col-12 col-md-4 team-1">
       {img && <Img {...img} className="mx-auto" alt={name} />}
       <h6>{name}</h6>
       <small>{role}</small>
@@ -114,36 +114,13 @@ const IndexPage = (props: Props) => {
               </h2>
             </header>
 
-            <div className="row gap-y2">
+            <div className="row gap-y2 justify-content-center">
               <Founder {...team.timo} img={data.timo} />
               <Founder {...team.yoko} img={data.yoko} />
               <Founder {...team.ben} img={data.ben} />
               <Founder {...team.oriol} img={data.oriol} />
+              <Founder {...team.jules} img={data.jules} />
             </div>
-          </div>
-        </section>
-
-        <section className="section bg-ledgy text-white">
-          <div className="container">
-            <header className="section-header mb-0  px-md-6">
-              <h2>
-                <Trans>We’re hiring!</Trans>
-              </h2>
-              <p>
-                <Trans>
-                  Do you feel working for Google is boring because they don’t grow by 1,000× during
-                  the next four years? Building a product is fantastic, but how about creating a
-                  whole team around it? Are you a web developer that eats bugs for breakfast?
-                  Fascinated by cutting-edge technology like React, blockchain or space elevators?
-                  <br />
-                  <br />
-                  <Link href to={`${props.prefix}/jobs/`}>
-                    Learn more
-                    <ChevronRight />
-                  </Link>
-                </Trans>
-              </p>
-            </header>
           </div>
         </section>
 

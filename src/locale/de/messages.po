@@ -107,11 +107,11 @@ msgstr "Audit-Trails"
 msgid "Available shares for transfer"
 msgstr "Verfügbare Aktien für die Übertragung"
 
-#: src/pages/about-us.jsx:154
+#: src/pages/about-us.jsx:131
 msgid "Backed by"
 msgstr "Unterstützt von"
 
-#: src/pages/about-us.jsx:166
+#: src/pages/about-us.jsx:143
 msgid "Backing the creators of our future since 1984"
 msgstr "Backing the creators of our future since 1984"
 
@@ -234,7 +234,7 @@ msgstr "Tägliche Backups stellen sicher, dass nichts verloren gehen kann"
 msgid "Dialog for holding confirmation"
 msgstr "Dialog um Besitzbestätigungen zu versenden"
 
-#: src/pages/about-us.jsx:196
+#: src/pages/about-us.jsx:173
 msgid "Digital entrepreneur and investor. Security, crypto & privacy expert"
 msgstr "Digital Entrepreneur und Investor. Security-, Crypto- & Privacy-Experte"
 
@@ -250,10 +250,6 @@ msgstr "Erfahre mehr über Ledgy"
 msgid "Distribute Investment Pro-Rata"
 msgstr "Pro-Rata Verteilung eines Investments"
 
-#: src/pages/about-us.jsx:133
-msgid "Do you feel working for Google is boring because they don’t grow by 1,000× during the next four years? Building a product is fantastic, but how about creating a whole team around it? Are you a web developer that eats bugs for breakfast? Fascinated by cutting-edge technology like React, blockchain or space elevators?<0/><1/><2>Learn more<3/></2>"
-msgstr "Du findest, für Google zu arbeiten ist langweilig, weil sie in den nächsten 4 Jahren nicht um das 1.000-fache wachsen werden? Eine Software zu entwickeln ist cool, aber wie wäre es ein ganzes Team darum aufzubauen? Du bist ein Web-Entwickler, der noch beim Frühstücken die letzten Bugs fixt? Du bist fasziniert von modernster Technologie wie React, Blockchain und Weltraumaufzügen?<0/><1/><2>Mehr erfahren<3/></2>"
-
 #: src/pages/features.jsx:59
 msgid "Do you know that many cap tables are incomplete or contain errors? Have you gone through the cap table pain, and spent huge amounts of money on lawyers using spreadsheets? What if you could automate a legally valid, error-free cap table that was easy to use, quick to learn, and allowed you to manage your pooled investments, all in one good-looking user interface?"
 msgstr "Wusstest du, dass viele Cap Tablet unvollständig sind oder Fehler enthalten? Hast du den Cap Table-Pain durchgemacht und große Mengen an Geld für Anwälte ausgegeben, die nur Spreadsheets verwenden? Was wäre, wenn du einen rechtsgültigen, fehlerfreien Cap Table automatisieren könntest, der einfach zu bedienen und schnell zu erlernen ist? Der es dir ermöglicht, die gepoolten Investitionen zu verwalten? Und das alles in einer gut aussehenden Benutzeroberfläche?"
@@ -265,6 +261,10 @@ msgstr "Dokumenten-Management"
 #: src/pages/pricing.jsx:69
 msgid "Document storage"
 msgstr "Dokumentenablage"
+
+#: src/layouts/team.jsx:73
+msgid "During his studies in engineering as an excellence scholar at ETH Zurich, Jules started working as a software developer building web applications"
+msgstr "Während seines Ingenieurstudiums als Stipendiat an der ETH Zürich, begann Jules als Softwareentwickler für Webapplikationen zu arbeiten"
 
 #: src/pages/features/esop.jsx:14
 msgid "ESOP"
@@ -316,11 +316,11 @@ msgstr "Motiviere deine Mitarbeiter durch mehr Transparenz"
 msgid "Enter your email…"
 msgstr "E-Mail-Adresse eingeben…"
 
-#: src/pages/about-us.jsx:191
+#: src/pages/about-us.jsx:168
 msgid "Entrepreneur, business angel, founder of Doodle.com"
 msgstr "Unternehmer, Business Angel, Gründer von Doodle.com"
 
-#: src/pages/about-us.jsx:176
+#: src/pages/about-us.jsx:153
 msgid "Entrepreneur, technologist, founder of Doodle.com"
 msgstr "Unternehmer, Technologe, Gründer von Doodle.com"
 
@@ -333,7 +333,7 @@ msgstr "Aktiendaten"
 msgid "Error-free cap table"
 msgstr "Fehlerfreier Cap Table"
 
-#: src/pages/about-us.jsx:161
+#: src/pages/about-us.jsx:138
 msgid "Europe’s symbiosis of early-stage VC funds and private investor network"
 msgstr "Europe’s symbiosis of early-stage VC funds and private investor network"
 
@@ -377,7 +377,7 @@ msgstr "Warum sie uns vertrauen"
 msgid "For even better protection of accounts. And our implementation is <0>open source</0>!"
 msgstr "Für noch mehr Sicherheit der Nutzerkonten. Übrigens, unsere Implementierung ist <0>Open Source</0>!"
 
-#: src/pages/about-us.jsx:201
+#: src/pages/about-us.jsx:178
 msgid "Founder of Meisser Economics, Bitcoin Association Switzerland, and Wuala"
 msgstr "Gründer von Meisser Economics, Bitcoin Association Schweiz und Wuala"
 
@@ -429,7 +429,7 @@ msgstr "HTTP-Header verhindern Cross-Site-Scripting und Code-Injection (<0>A+-Ra
 msgid "Has your company received funding via a pooled investment? Ledgy helps you understand who owns what stake in your company. In this example, <0>The Exciting Company</0> represents an investor pool with three beneficiaries."
 msgstr "Hat dein Startup eine Finanzierung über eine gepooltes Investment erhalten? Ledgy hilft dir zu verstehen, wem welcher Anteil an deinem Unternehmen gehört. In diesem Beispiel stellt <0>The Exciting Company</0> einen Investorenpool mit drei Begünstigten dar."
 
-#: src/pages/about-us.jsx:171
+#: src/pages/about-us.jsx:148
 msgid "Healthcare & technology venture capital since 2001"
 msgstr "Healthcare & technology venture capital since 2001"
 
@@ -493,7 +493,7 @@ msgstr "Interessiert an unserem Enterprise-Package?<0/><1>Schick’ uns eine Ema
 msgid "Investment overview"
 msgstr "Investment-Übersicht"
 
-#: src/pages/about-us.jsx:206
+#: src/pages/about-us.jsx:183
 msgid "Investor & consultant (Farmy.ch, Flatfox.ch), founder of Students.ch"
 msgstr "Investor & Berater (Farmy.ch, Flatfox.ch), Gründer von Students.ch"
 
@@ -547,7 +547,7 @@ msgstr "Motiviere deine Mitarbeiter bei der Arbeit. Sie verdienen es. Das ESOP-M
 msgid "Language"
 msgstr "Sprache"
 
-#: src/pages/about-us.jsx:186
+#: src/pages/about-us.jsx:163
 msgid "Leading Spanish investor in early-stage technology startups"
 msgstr "Der führende Investor aus Spanien im Early Stage-Segment"
 
@@ -584,7 +584,7 @@ msgstr "Liquidationspräferenzen"
 msgid "Log In"
 msgstr "Anmelden"
 
-#: src/pages/about-us.jsx:211
+#: src/pages/about-us.jsx:188
 msgid "M&A and private equity lawyer with a focus on start-up legal advise, Smartuplaw.ch"
 msgstr "M&A- und Private-Equity-Anwältin mit Schwerpunkt auf Start-up Beratung, Smartuplaw.ch"
 
@@ -653,7 +653,7 @@ msgstr "Oje, es ist wieder Zeit Steuererklärungen auszufüllen und es gibt 50 B
 msgid "Once your incentive plan is on Ledgy, it’s time to engage your employees. Head over to the <0>Stakeholders</0> page and invite them with a single click. They will then receive an email so they can log in to Ledgy themselves and see how many shares they have vested at any point in time.<1/><2/>Remember, happy employees is one of the keys to a successful company."
 msgstr "Sobald dein Mitarbeiterbeteiligungsprogramm auf Ledgy läuft, ist es an der Zeit, deine Mitarbeiter zu miteinzubeziehen. Gehe zur Seite <0>Stakeholders</0> und lade sie mit einem einzigen Klick ein. Sie erhalten dann eine E-Mail, mit der sie sich selbst bei Ledgy anmelden und jederzeit sehen können, wie viele Anteile sie zu einem beliebigen Zeitpunkt besitzen.<1/><2/><2/>Vergiss’ nicht, dass glückliche Mitarbeiter ein Schlüssel zum erfolgreichen Startup sind."
 
-#: src/pages/about-us.jsx:181
+#: src/pages/about-us.jsx:158
 msgid "One of the most active Swiss early-stage angel investors"
 msgstr "Einer der aktivsten Schweizer Angel-Investoren für Early Stage"
 
@@ -1070,10 +1070,6 @@ msgstr "Wir betreiben ein <0>Bug Bounty</0>-Programm auf Federacy. Schreib’ un
 #: src/pages/security.jsx:50
 msgid "We understand how sensitive cap table information is for any business. That’s why your privacy and your data’s security is crucial to us. Here is what we do to protect your data."
 msgstr "Uns ist bewusst, wie sensibel und vertraulich der Cap Table für jede Firma ist. Deshalb nehmen wir deine Privatsphäre und die Sicherheit deiner Daten sehr ernst. So schützen wir deine Daten."
-
-#: src/pages/about-us.jsx:130
-msgid "We’re hiring!"
-msgstr "Wir suchen Verstärkung!"
 
 #: src/pages/features/modeling.jsx:192
 msgid "What if your company is worth such an amount that makes you think about an exit? With the Premium Exit Modeling feature, Ledgy will do an insane amount of math to show you the distribution of stakes in all possible situations."

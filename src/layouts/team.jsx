@@ -65,6 +65,19 @@ export const team: { [string]: AuthorProps } = {
     twitter: 'https://twitter.com/ovcOS89',
     linkedIn: 'https://www.linkedin.com/in/oriol-vidal-cortes-37584080/',
     mail: 'oriol@ledgy.com'
+  },
+  jules: {
+    name: 'Jules Henze',
+    role: 'Developer & Paragliding Pilot',
+    description: (
+      <Trans>
+        During his studies in engineering as an excellence scholar at ETH Zurich, Jules started
+        working as a software developer building web applications
+      </Trans>
+    ),
+    twitter: 'https://twitter.com/HenzeJules',
+    linkedIn: 'https://ch.linkedin.com/in/jules-henze',
+    mail: 'jules@ledgy.com'
   }
 };
 
@@ -86,6 +99,11 @@ export const TeamFragment = graphql`
       }
     }
     oriol: imageSharp(fluid: { originalName: { regex: "/uri.jpg/" } }) {
+      fluid(maxWidth: 245, maxHeight: 245) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    jules: imageSharp(fluid: { originalName: { regex: "/jules.jpg/" } }) {
       fluid(maxWidth: 245, maxHeight: 245) {
         ...GatsbyImageSharpFluid
       }
