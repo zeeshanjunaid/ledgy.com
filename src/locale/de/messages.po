@@ -262,6 +262,10 @@ msgstr "Dokumenten-Management"
 msgid "Document storage"
 msgstr "Dokumentenablage"
 
+#: src/layouts/team.jsx:73
+msgid "During his studies in engineering as an excellence scholar at ETH Zurich, Jules started working as a software \t\tdeveloper building web-applications"
+msgstr "Während seines Ingenieurstudium als Stipendiat an der ETH Zürich, begann Jules als Software-Entwickler für Web-Applikation zu arbeiten"
+
 #: src/pages/features/esop.jsx:14
 msgid "ESOP"
 msgstr "Mitarbeiterbeteiligung"
@@ -522,10 +526,6 @@ msgstr "Dein Startup floriert und du denkst bereits über eine neue Finanzierung
 #: src/pages/features/esop.jsx:129
 msgid "Issue options from a pool"
 msgstr "Vergebe Optionen aus einem Pool"
-
-#: src/layouts/team.jsx:73
-msgid "Jules studied environmental engineering at ETH Zurich while collecting first experiences as a software developer in the private industry. He received an excellence scholarship and finished his studies winning an award for an outstanding thesis"
-msgstr "Jules begann während seines Umweltingenieurstudiums an der ETH Zürich als Softwareentwickler bei einem privaten Unternehmen zu arbeiten. Gefördert von einem Leistungstipendium schloss er das Studium mit einer Auszeichnung für eine herausragende Masterarbeit ab"
 
 #: src/pages/features/portfolio.jsx:116
 msgid "Just as you land on your investor portfolio, adding an investment is as simple as clicking on the <0>Add investment</0> button and filling out the form. Once you finish, your portfolio will be immediately updated with new input values. It’s never been easier to keep track of all your investments in the same dashboard."

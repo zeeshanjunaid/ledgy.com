@@ -71,9 +71,7 @@ export const team: { [string]: AuthorProps } = {
     role: 'Developer & Paragliding Pilot',
     description: (
       <Trans>
-        Jules studied environmental engineering at ETH Zurich while collecting first experiences as
-        a software developer in the private industry. He received an excellence scholarship and
-        finished his studies winning an award for an outstanding thesis
+        During his studies in engineering as an excellence scholar at ETH Zurich, Jules started working as a software 		developer building web-applications
       </Trans>
     ),
     twitter: 'https://twitter.com/HenzeJules',
