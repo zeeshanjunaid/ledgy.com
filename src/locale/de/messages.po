@@ -264,7 +264,7 @@ msgstr "Dokumentenablage"
 
 #: src/layouts/team.jsx:73
 msgid "During his studies in engineering as an excellence scholar at ETH Zurich, Jules started working as a software \t\tdeveloper building web-applications"
-msgstr "Während seines Ingenieurstudium als Stipendiat an der ETH Zürich, begann Jules als Software-Entwickler für Web-Applikation zu arbeiten"
+msgstr "Während seines Ingenieurstudium als Stipendiat an der ETH Zürich, begann Jules als Software-Entwickler für Web-Applikationen zu arbeiten"
 
 #: src/pages/features/esop.jsx:14
 msgid "ESOP"
