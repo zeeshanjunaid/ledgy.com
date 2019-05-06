@@ -71,7 +71,8 @@ export const team: { [string]: AuthorProps } = {
     role: 'Developer & Paragliding Pilot',
     description: (
       <Trans>
-        During his studies in engineering as an excellence scholar at ETH Zurich, Jules started working as a software 		developer building web-applications
+        During his studies in engineering as an excellence scholar at ETH Zurich, Jules started working as a software
+	developer building web-applications
       </Trans>
     ),
     twitter: 'https://twitter.com/HenzeJules',
