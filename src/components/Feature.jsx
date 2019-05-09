@@ -21,7 +21,7 @@ export const Feature = (props: {
   <div className="row align-items-center" style={{ minHeight: '300px' }}>
     <div className="col-md-6 ml-auto">
       <h2>{props.title || props.name}</h2>
-      <p>{props.children}</p>
+      <div>{props.children}</div>
       <p>
         <Link href to={`${props.prefix}/features/${props.url}/`}>
           <Trans>Learn more about</Trans> {props.name}
