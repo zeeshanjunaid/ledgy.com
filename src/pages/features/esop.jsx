@@ -6,7 +6,7 @@ import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 import { FeatureLinks } from '../../components/Feature';
-import { Title } from '../../layouts/utils';
+import { Title, FeatureLi } from '../../layouts/utils';
 
 export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
@@ -37,22 +37,20 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               </h2>
               <p>
                 <Trans>
-                  With Ledgy, setting up your ESOPs will become the simplest of tasks; in a matter
-                  of a few clicks, you will have your employee participation plans up and running,
-                  whether they are real stock transfers, options from a pool, warrants, or even
+                  Set up your ESOPS, whether real stock transfers, options from a pool, warrants, or
                   phantom shares.
-                  <br />
-                  <br />
-                  When it comes to vesting schedules, efficiently setting up their type, duration,
-                  cliff, and every other detail will not be a daunting effort. With interactive
-                  graphs, you will be able to monitor these schedules in real time, and even better,
-                  allow your employees to log in to their accounts so they can see at any point in
-                  time how much stock they have vested and how many shares are still outstanding.
-                  <br />
-                  <br />
-                  When needed, terminating or exercising options will be just as intuitive, and any
-                  amount that may still be available will continue to be tracked. And there’s even
-                  more: any contract you’ll be able to upload and easily share with your employees.
+                </Trans>
+              </p>
+              <p>
+                <Trans>
+                  Configure your vesting schedules and monitor them in real time. Terminate or
+                  exercise options when needed.
+                </Trans>
+              </p>
+              <p>
+                <Trans>
+                  Invite your employees so they can keep track of their option plans, and share any
+                  documents with them.
                 </Trans>
               </p>
             </header>
@@ -71,15 +69,19 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <div className="row align-items-center my-8">
             <div className="col-md-4 mr-auto">
-              <p>
-                <Trans>
-                  In the case that your employee shares are implemented as options or phantom
-                  options, define a pool of approved capital first. Click the <i>Add pool</i> to
-                  create an options or phantom pool of a given share class and a fixed size. Then
-                  issue options, phantom options or shares from the approved capital and see key
-                  metrics of the pool like the amount still available.
-                </Trans>
-              </p>
+              <ul className="pl-0 pt-2">
+                <FeatureLi>
+                  <Trans>Define pools of approved capital</Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>
+                    Create option or phantom pools of given share classes and fixed sizes
+                  </Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>Issue these shares from the approved capital and see key metrics</Trans>
+                </FeatureLi>
+              </ul>
             </div>
 
             <div className="col-md-7" data-aos="fade-left">
@@ -89,16 +91,17 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <div className="row align-items-center my-8">
             <div className="col-md-4">
-              <p>
-                <Trans>
-                  You can create a simple or custom vesting schedule, define over how many months
-                  the shares are to be vested, whether there’s a cliff, and how often a new batch of
-                  shares gets assigned to the employee.
-                  <br />
-                  As soon as you enter the first numbers, you will see a visual representation of
-                  the current schedule.
-                </Trans>
-              </p>
+              <ul className="pl-0 pt-2">
+                <FeatureLi>
+                  <Trans>Create simple or custom vesting schedules</Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>Define vesting period, cliffs, and how often shares get assigned.</Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>See your chart as soon as you start entering numbers</Trans>
+                </FeatureLi>
+              </ul>
             </div>
 
             <div className="col-md-7 order-md-first mr-auto" data-aos="fade-right">
@@ -108,21 +111,21 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <div className="row align-items-center my-8">
             <div className="col-md-7">
-              <p>
-                <Trans>
-                  When it’s time to exercise option grants, Ledgy calculates for you the amount that
-                  is already vested at a given date and lets you exercise parts or the full option
-                  grant.
-                  <br />
-                  <br />
-                  Did an employee leave the company? Ledgy supports terminating part or the whole
-                  option grant.
-                  <br />
-                  <br />
-                  Filter the transactions by an employee to see all their transactions (option
-                  grant, terminations, and exercises) at a glance.
-                </Trans>
-              </p>
+              <ul className="pl-0 pt-2">
+                <FeatureLi>
+                  <Trans>
+                    Exercise option grants at any time, whether vesting is finished or not
+                  </Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>Terminate part of the grant, or all of it</Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>
+                    Filter transactions by employee to see all of their transactions at a glance
+                  </Trans>
+                </FeatureLi>
+              </ul>
             </div>
 
             <div className="col-md-4 ml-auto" data-aos="fade-left">
@@ -132,14 +135,17 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <div className="row align-items-center my-8">
             <div className="col-md-3 ml-auto">
-              <p>
-                <Trans>
-                  To get an overall view of the situation, check out yur <i>Cap Table</i> page and
-                  select the <i>fully diluted detailed</i> view to see your pools and employee
-                  incentives. You can choose to view your diluted cap table with all options
-                  aggregated in their pool, or distributed to each person.
-                </Trans>
-              </p>
+              <ul className="pl-0 pt-2">
+                <FeatureLi>
+                  <Trans>See your pools and employee incentives in the cap table</Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>
+                    In the diluted cap table, see all options aggregated or distributed to each
+                    person
+                  </Trans>
+                </FeatureLi>
+              </ul>
             </div>
 
             <div className="col-md-8 order-md-first" data-aos="fade-right">
@@ -156,10 +162,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               </h2>
               <p>
                 <Trans>
-                  Once your incentive plan is on Ledgy, it’s time to engage your employees. Head
-                  over to the <i>Stakeholders</i> page and invite them with a single click. They
-                  will then receive an email so they can log in to Ledgy themselves and see how many
-                  shares they have vested at any point in time.
+                  Invite your employees with a single click. They will receive an email so they can
+                  log in to Ledgy and see how many shares they have vested at any point in time.
                   <br />
                   <br />
                   Remember, happy employees is one of the keys to a successful company.
