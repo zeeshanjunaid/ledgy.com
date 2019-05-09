@@ -5,7 +5,7 @@ import { Trans } from '@lingui/react';
 import { Li } from '../layouts/utils';
 
 export default () => (
-  <div className="row gap-y pt-2">
+  <div className="row gap-y pt-7">
     <div className="px-7">
       <h2>
         <Trans>And Much More</Trans>

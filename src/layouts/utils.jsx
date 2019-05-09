@@ -51,6 +51,13 @@ export const Li = ({ children }: { children: React.Node }) => (
   </li>
 );
 
+export const FeatureLi = ({ children }: { children: React.Node }) => (
+  <li className="media">
+    <FontAwesomeIcon icon={faCheck} className="text-primary mt-1" />
+    <div className="media-body ml-4 mb-4">{children}</div>
+  </li>
+);
+
 export const ChevronRight = () => (
   <FontAwesomeIcon icon={faChevronRight} className="fs-12 ml-2 adjust-bottom swinging" />
 );

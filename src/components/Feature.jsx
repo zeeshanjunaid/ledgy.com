@@ -18,7 +18,7 @@ export const Feature = (props: {
   left?: boolean,
   data: Object
 }) => (
-  <div className="row align-items-center">
+  <div className="row align-items-center" style={{ minHeight: '300px' }}>
     <div className="col-md-6 ml-auto">
       <h2>{props.title || props.name}</h2>
       <p>{props.children}</p>
