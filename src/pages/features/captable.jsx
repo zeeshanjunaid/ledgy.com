@@ -6,7 +6,7 @@ import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 
 import { FeatureLinks } from '../../components/Feature';
-import { Title } from '../../layouts/utils';
+import { Title, FeatureLi } from '../../layouts/utils';
 
 export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
@@ -37,27 +37,24 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               </h2>
               <p>
                 <Trans>
-                  Keep the ownership history of your company in a single place. No more shuffling
-                  around with different documents, contacting lawyers, having missing pieces, and
-                  errors occurring left and right.
-                  <br />
-                  <br />
-                  Feed Ledgy your company’s information and let our cap table work as the one source
-                  of truth for your company equity.
-                  <br />
-                  <br />
-                  With our quick and easy onboarding process, your legally valid cap table will be
-                  set up in no time! No room for errors, Ledgy’s computing is state-of-the-art, and
-                  will warn you shall there be any inconsistencies.
-                  <br />
-                  <br />
-                  Need help?{' '}
-                  <Link href to={`${props.prefix}/contact/`}>
-                    Contact us
-                  </Link>
-                  , and we will assist you in getting started with Ledgy.
+                  Keep the ownership history of your company in a single place. No need for
+                  paperwok, contacting lawyers, missing pieces, or frequent errors.
                 </Trans>
               </p>
+              <p>
+                <Trans>Ledgy’s cap table is the one source of truth for your company equity.</Trans>
+              </p>
+              <p>
+                <Trans>
+                  Quick and easy onboarding process to set up your legally valid, error-free cap
+                  table in no time!
+                </Trans>
+              </p>
+              <Trans>Need help?</Trans>{' '}
+              <Link href to={`${props.prefix}/contact/`}>
+                <Trans>Contact us</Trans>
+              </Link>
+              <Trans>, and we will assist you in getting started with Ledgy.</Trans>
             </header>
 
             <div className="row gap-y">
@@ -69,14 +66,17 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <div className="row align-items-center my-8">
             <div className="col-md-5 ml-auto">
-              <p>
-                <Trans>
-                  Here an example of how easy it is to perform transactions on Ledgy; in this case,
-                  a share transfer. Notice the number in the center bottom? Ledgy is always dynamic
-                  and will show you how many shares that particular stakeholder has <i>available</i>{' '}
-                  at that given point in time.
-                </Trans>
-              </p>
+              <ul className="pl-0 pt-2">
+                <FeatureLi>
+                  <Trans>
+                    Add any transaction, whether shares issue, transfer, valuation, convertible
+                    loan, class conversion, stock split, decrease, or employee incentives
+                  </Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>Dynamic display of available shares in all transactions</Trans>
+                </FeatureLi>
+              </ul>
             </div>
 
             <div className="col-md-7 order-md-first" data-aos="fade-right">
@@ -86,16 +86,14 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <div className="row align-items-center my-8">
             <div className="col-md-4 ml-auto">
-              <p>
-                <Trans>
-                  By the way, if you decide to number your shares, we also got you covered. Ledgy
-                  will track who owns which shares for each transaction and assist you in entering
-                  valid share numbers.
-                  <br />
-                  With Ledgy you can be sure that no single share number goes missing or is assigned
-                  twice.
-                </Trans>
-              </p>
+              <ul className="pl-0 pt-2">
+                <FeatureLi>
+                  <Trans>
+                    Numbered shares? No problem. Ledgy can track share numbers and assist you with
+                    entering valid values
+                  </Trans>
+                </FeatureLi>
+              </ul>
             </div>
 
             <div className="col-md-8" data-aos="fade-left">
@@ -104,31 +102,34 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           </div>
 
           <div className="row align-items-center my-8">
-            <div className="col-md-3 ml-auto">
-              <p>
-                <Trans>
-                  Has your company received funding via a pooled investment? Ledgy helps you
-                  understand who owns what stake in your company. In this example,{' '}
-                  <i>The Exciting Company</i> represents an investor pool with three beneficiaries.
-                </Trans>
-              </p>
+            <div className="col-md-4 ml-auto">
+              <ul className="pl-0 pt-2">
+                <FeatureLi>
+                  <Trans>
+                    And pooled investments? Ledgy also takes care of that, helping you understand
+                    who owns what stake in the company
+                  </Trans>
+                </FeatureLi>
+              </ul>
             </div>
 
-            <div className="col-md-9 order-md-first" data-aos="fade-right">
+            <div className="col-md-8 order-md-first" data-aos="fade-right">
               <Img {...props.data.pooledInvestment} alt={i18n.t`Pooled investment`} />
             </div>
           </div>
 
           <div className="row align-items-center my-8">
             <div className="col-md-5 ml-auto">
-              <p>
-                <Trans>
-                  Each one of your transactions may have some documents associated to it; that is
-                  why Ledgy allows you to upload files and attach them to your transactions. These
-                  docs can then be downloaded in the <i>Documents</i> page and the investor
-                  portfolio <i>History</i> page.
-                </Trans>
-              </p>
+              <ul className="pl-0 pt-2">
+                <FeatureLi>
+                  <Trans>Upload files associated to each of your transactions.</Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>
+                    Download these files at any time and share them with any of your stakeholders
+                  </Trans>
+                </FeatureLi>
+              </ul>
             </div>
 
             <div className="col-md-7" data-aos="fade-left">
@@ -138,13 +139,14 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <div className="row align-items-center my-8">
             <div className="col-md-4 ml-auto">
-              <p>
-                <Trans>
-                  How much is your company worth? With the valuation transaction, add the share
-                  price at all of your valuation events. Our beautiful interactive graphs will show
-                  you the evolution of your company’s valuation over time.
-                </Trans>
-              </p>
+              <ul className="pl-0 pt-2">
+                <FeatureLi>
+                  <Trans>Enjoy interactive graphical representations of valuation history</Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>Keep track of your company’s data at any point in time</Trans>
+                </FeatureLi>
+              </ul>
             </div>
 
             <div className="col-md-8 order-md-first" data-aos="fade-right">
@@ -161,16 +163,15 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               </h2>
               <p>
                 <Trans>
-                  We know it can be tedious to add each person and transaction one by one, so Ledgy
-                  has at your disposal the bulk import feature{' '}
+                  To facilitate importing your data to Ledgy, we provide you with the the bulk
+                  import feature{' '}
                   <span role="img" aria-label="rocket">
                     🚀
                   </span>
                   <br />
                   <br />
-                  Whether it’s your stakeholders, share issues, or option issues, we got you
-                  covered. Just copy and paste your information into one of our built-in
-                  spreadsheets and <i>voilà!</i> Even easier done than said.
+                  Whether it’s stakeholders, shares issues, or option issues, just copy and paste
+                  your information into one of our built-in spreadsheets and <i>voilà!</i>
                 </Trans>
               </p>
             </header>
