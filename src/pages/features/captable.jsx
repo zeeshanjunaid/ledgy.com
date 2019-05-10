@@ -58,14 +58,17 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </header>
 
             <div className="row gap-y">
-              <div className="col-md-10 mx-auto mb-7" data-aos="fade-up">
+              <div className="col-md-9 mx-auto mb-7" data-aos="fade-up">
                 <Img {...props.data.createCaptable} alt={i18n.t`Create a cap table`} />
               </div>
             </div>
           </div>
 
-          <div className="row align-items-center my-8">
+          <div className="row align-items-center my-8 pb-2">
             <div className="col-md-5 ml-auto">
+              <h2>
+                <Trans>All transaction types</Trans>
+              </h2>
               <ul className="pl-0 pt-2">
                 <FeatureLi>
                   <Trans>
@@ -84,30 +87,38 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
           </div>
 
-          <div className="row align-items-center my-8">
-            <div className="col-md-4 ml-auto">
+          <div className="row align-items-center my-8 pb-2">
+            <div className="col-md-4 mr-auto">
+              <h2>
+                <Trans>Numbered shares</Trans>
+              </h2>
               <ul className="pl-0 pt-2">
                 <FeatureLi>
+                  <Trans>Do you keep track of your share numbers?</Trans>
+                </FeatureLi>
+                <FeatureLi>
                   <Trans>
-                    Numbered shares? No problem. Ledgy can track share numbers and assist you with
-                    entering valid values
+                    No problem, Ledgy can track them and assist you with entering valid values
                   </Trans>
                 </FeatureLi>
               </ul>
             </div>
 
-            <div className="col-md-8" data-aos="fade-left">
-              <Img {...props.data.shareNumberChecking} alt={i18n.t`Share number checking`} />
+            <div className="col-md-7" data-aos="fade-left">
+              <Img {...props.data.shareNumbers} alt={i18n.t`Share number checking`} />
             </div>
           </div>
 
-          <div className="row align-items-center my-8">
+          <div className="row align-items-center my-8 pb-2">
             <div className="col-md-4 ml-auto">
+              <h2>
+                <Trans>Pooled investments</Trans>
+              </h2>
               <ul className="pl-0 pt-2">
                 <FeatureLi>
                   <Trans>
-                    And pooled investments? Ledgy also takes care of that, helping you understand
-                    who owns what stake in the company
+                    Ledgy also takes care of pooled investments, helping you understand who owns
+                    what stake in the company
                   </Trans>
                 </FeatureLi>
               </ul>
@@ -118,8 +129,11 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
           </div>
 
-          <div className="row align-items-center my-8">
+          <div className="row align-items-center my-8 pb-2">
             <div className="col-md-5 ml-auto">
+              <h2>
+                <Trans>Attach documents</Trans>
+              </h2>
               <ul className="pl-0 pt-2">
                 <FeatureLi>
                   <Trans>Upload files associated to each of your transactions.</Trans>
@@ -137,11 +151,14 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
           </div>
 
-          <div className="row align-items-center my-8">
+          <div className="row align-items-center my-8 pb-2">
             <div className="col-md-4 ml-auto">
+              <h2>
+                <Trans>Interactive charts</Trans>
+              </h2>
               <ul className="pl-0 pt-2">
                 <FeatureLi>
-                  <Trans>Enjoy interactive graphical representations of valuation history</Trans>
+                  <Trans>Complete graphical representations of valuation history</Trans>
                 </FeatureLi>
                 <FeatureLi>
                   <Trans>Keep track of your company’s data at any point in time</Trans>
@@ -154,32 +171,26 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
           </div>
 
-          <hr className="my-8" />
-
-          <div>
-            <header className="section-header text-left">
+          <div className="row align-items-center my-8">
+            <div className="col-md-4 ml-auto">
               <h2>
-                <Trans>Bulk import!</Trans>
+                <Trans>Bulk import</Trans>
               </h2>
-              <p>
-                <Trans>
-                  To facilitate importing your data to Ledgy, we provide you with the the bulk
-                  import feature{' '}
-                  <span role="img" aria-label="rocket">
-                    🚀
-                  </span>
-                  <br />
-                  <br />
-                  Whether it’s stakeholders, shares issues, or option issues, just copy and paste
-                  your information into one of our built-in spreadsheets and <i>voilà!</i>
-                </Trans>
-              </p>
-            </header>
+              <ul className="pl-0 pt-2">
+                <FeatureLi>
+                  <Trans>Speed up your onboarding process with the bulk import feature</Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>
+                    As easy as copying and pasting stakeholders, shares issues, or options into one
+                    of our built-in spreadsheets
+                  </Trans>
+                </FeatureLi>
+              </ul>
+            </div>
 
-            <div className="row gap-y">
-              <div className="col-md-10 mx-auto mb-7" data-aos="fade-up">
-                <Img {...props.data.bulkEntry} alt={i18n.t`Bulk entry`} />
-              </div>
+            <div className="col-md-8" data-aos="fade-left">
+              <Img {...props.data.bulkEntry} alt={i18n.t`Bulk entry`} />
             </div>
           </div>
 
@@ -205,9 +216,7 @@ export const pageQuery = graphql`
         ...GatsbyImageSharpFluid
       }
     }
-    shareNumberChecking: imageSharp(
-      fluid: { originalName: { regex: "/share-number-checking.png/" } }
-    ) {
+    shareNumbers: imageSharp(fluid: { originalName: { regex: "/share-numbers.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
