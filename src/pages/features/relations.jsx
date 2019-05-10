@@ -6,7 +6,7 @@ import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 import { FeatureLinks } from '../../components/Feature';
-import { Title } from '../../layouts/utils';
+import { Title, FeatureLi } from '../../layouts/utils';
 
 export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
@@ -37,16 +37,14 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               </h2>
               <p>
                 <Trans>
-                  With Ledgy, maintaining professional relationships with your stakeholders has
-                  never been more straightforward. All it takes is a few clicks to start reducing
-                  your amount of paperwork and integrate all of your documents on Ledgy.
-                  <br />
-                  <br />
-                  Share and download reports including your cap table with the non-diluted and
-                  fully-diluted stake of each shareholder (if you have options or phantom stock),
-                  your convertibles and ESOPs, and the transaction history, which tracks every
-                  change ever made to your cap table. You can even configure them to include
-                  signature fields for your board of directors.
+                  Keep your investors up to date at all times with Ledgy’s integrated document
+                  system.
+                </Trans>
+              </p>
+              <p>
+                <Trans>
+                  Add your KPIs, generate recurring Reports, attach documents, and share it all with
+                  your investors.
                 </Trans>
               </p>
             </header>
@@ -63,33 +61,35 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <hr className="my-8" />
 
-          <header className="section-header text-left mb-7">
-            <h2>
-              <Trans>Easy-to-set access rights</Trans>
-            </h2>
-          </header>
+          <div className="row align-items-center pb-7">
+            <div className="col-md-5 mr-auto">
+              <h2>
+                <Trans>Easy-to-set access rights</Trans>
+              </h2>
 
-          <div className="row align-items-center mb-8">
-            <div className="col-md-4 mr-auto">
-              <p>
-                <Trans>
-                  Maintain the data of your company by setting your access rights on the{' '}
-                  <i>Stakeholders</i> page.
-                  <ul>
+              <ul className="pl-0 pt-2">
+                <FeatureLi>
+                  <Trans>Control the access level of your stakeholders on Ledgy</Trans>
+                  <ul className="pt-2">
                     <li>
-                      <strong>Admin</strong> Full control over the company
+                      <Trans>
+                        <strong>Admin</strong> Full control over the company
+                      </Trans>
                     </li>
                     <li>
-                      <strong>View</strong> See all cap table info in a read-only mode
+                      <Trans>
+                        <strong>View</strong> See all cap table info in a read-only mode
+                      </Trans>
                     </li>
                     <li>
-                      <strong>Portfolio</strong> See only their stake and percentage in their
-                      portfolio
+                      <Trans>
+                        <strong>Portfolio</strong> See only their stake and percentage in their
+                        portfolio
+                      </Trans>
                     </li>
                   </ul>
-                  Keep everyone happy and let them see what they need to.
-                </Trans>
-              </p>
+                </FeatureLi>
+              </ul>
             </div>
 
             <div className="col-md-7" data-aos="fade-left">
@@ -97,88 +97,56 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
           </div>
 
-          <hr className="my-8" />
-
-          <header className="section-header text-right mb-7">
-            <h2>
-              <Trans>Effort-free holding confirmations</Trans>
-            </h2>
-          </header>
-
-          <div className="row align-items-center mb-8">
-            <div className="col-md-6 ml-auto">
-              <p>
-                <Trans>
-                  Remember that day last year during tax season when you had to send holding
-                  confirmations to each stakeholder, filling out boring Word templates by hand?
-                  <br />
-                  <br />
-                  We’ve got the solution for you. Ledgy automatically creates holding confirmations
-                  for all of your stakeholders, so they can log in to their account and download
-                  them.
-                  <br />
-                  <br />
-                  Reduce hours of tedious work to nothing. Hooray!
-                </Trans>
-              </p>
-            </div>
-
-            <div className="col-md-5 order-md-first" data-aos="fade-right">
-              <Img
-                {...props.data.downloadHoldingConfirmation}
-                alt={i18n.t`Dialog for holding confirmation`}
-              />
-            </div>
-          </div>
-
-          <div>
-            <header className="section-header text-left">
-              <p>
-                <Trans>
-                  The holding confirmation lists all assets that a shareholder owns. You can
-                  optionally include a tax value of the shares. Employees will be able to see their
-                  stock ownership plans and how many of their total shares they already have vested.
-                  <br />
-                  Make your shareholders feel good; they will reward you.
-                </Trans>
-              </p>
-            </header>
-
-            <div className="row gap-y">
-              <div className="col-md-8 mx-auto mb-7" data-aos="fade-right">
-                <Img {...props.data.holdingConfirmationPdf} alt={i18n.t`Holding confirmation`} />
-              </div>
-            </div>
-          </div>
-
-          <hr className="my-8" />
-
-          <div>
-            <header className="section-header text-left">
+          <div className="row align-items-center pb-7">
+            <div className="col-md-5 ml-auto">
               <h2>
-                <Trans>Share documents with your investors</Trans>
+                <Trans>Effort-free holding confirmations</Trans>
               </h2>
-              <p>
-                <Trans>
-                  Every transaction in your cap table usually comes with a pile of additional
-                  documents, like contracts. Get rid of complicated folder structures and attach
-                  them directly to your transactions. Ledgy gives you an overview of all documents
-                  that you uploaded and their corresponding transactions. Also in your transaction
-                  history, you can select any transaction and see all connected documents at a
-                  glance.
-                  <br />
-                  <br />
-                  You can also share your documents by sending a simple link to your shareholders.
-                  This eliminates confusion about different versions of documents, as it is often
-                  the case when sending documents via email.
-                </Trans>
-              </p>
-            </header>
+              <ul className="pl-0 pt-3">
+                <FeatureLi>
+                  <Trans>
+                    Automatically create holding confirmations for all of your stakeholders
+                  </Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>
+                    They will list all assets owned by the stakeholder and optionally include a tax
+                    value of the shares
+                  </Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>Your stakeholders will just need to log in and download them!</Trans>
+                </FeatureLi>
+              </ul>
+            </div>
 
-            <div className="row gap-y">
-              <div className="col-md-10 mx-auto mb-7" data-aos="fade-left">
-                <Img {...props.data.documentManagement} alt={i18n.t`Document management`} />
-              </div>
+            <div className="col-md-7 order-md-first" data-aos="fade-right">
+              <Img {...props.data.holdingConfirmationPdf} alt={i18n.t`Holding confirmation`} />
+            </div>
+          </div>
+
+          <div className="row align-items-center pb-7">
+            <div className="col-md-5 ml-auto">
+              <h2>
+                <Trans>Document sharing with investors</Trans>
+              </h2>
+              <ul className="pl-0 pt-3">
+                <FeatureLi>
+                  <Trans>Attach your documents directly to their corresponding transactions</Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>
+                    Quickly glance over your list of documents and associated transactions
+                  </Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>Share them with your selected stakeholders in a single click</Trans>
+                </FeatureLi>
+              </ul>
+            </div>
+
+            <div className="col-md-7" data-aos="fade-right">
+              <Img {...props.data.documentManagement} alt={i18n.t`Document management`} />
             </div>
           </div>
 
