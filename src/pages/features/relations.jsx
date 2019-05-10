@@ -61,7 +61,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <hr className="my-8" />
 
-          <div className="row align-items-center pb-8">
+          <div className="row align-items-center my-8 pb-2">
             <div className="col-md-5 mr-auto">
               <h2>
                 <Trans>Key Performance Indicators</Trans>
@@ -93,7 +93,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
           </div>
 
-          <div className="row align-items-center pb-8">
+          <div className="row align-items-center my-8 pb-2">
             <div className="col-md-5 ml-auto">
               <h2>
                 <Trans>Reports</Trans>
@@ -126,7 +126,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
           </div>
 
-          <div className="row align-items-center pb-8">
+          <div className="row align-items-center my-8 pb-2">
             <div className="col-md-5 mr-auto">
               <h2>
                 <Trans>Easy-to-set access rights</Trans>
@@ -162,7 +162,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
           </div>
 
-          <div className="row align-items-center pb-8">
+          <div className="row align-items-center my-8 pb-2">
             <div className="col-md-5 ml-auto">
               <h2>
                 <Trans>Effort-free holding confirmations</Trans>
@@ -193,11 +193,13 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           <div className="row align-items-center pb-7">
             <div className="col-md-5 ml-auto">
               <h2>
-                <Trans>Document sharing with investors</Trans>
+                <Trans>Document sharing</Trans>
               </h2>
               <ul className="pl-0 pt-3">
                 <FeatureLi>
-                  <Trans>Attach your documents directly to their corresponding transactions</Trans>
+                  <Trans>
+                    Attach your documents directly to their corresponding transactions or reports
+                  </Trans>
                 </FeatureLi>
                 <FeatureLi>
                   <Trans>
@@ -205,7 +207,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   </Trans>
                 </FeatureLi>
                 <FeatureLi>
-                  <Trans>Share them with your selected stakeholders in a single click</Trans>
+                  <Trans>Easily share them with your selected stakeholders</Trans>
                 </FeatureLi>
               </ul>
             </div>
