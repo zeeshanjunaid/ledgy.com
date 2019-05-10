@@ -98,8 +98,11 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                 </FeatureLi>
                 <FeatureLi>
                   <Trans>
-                    No problem, Ledgy can track them and assist you with entering valid values
+                    Ledgy can auto-assign numbered shares for all your transactions in a magic click
                   </Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>Ledgy also checks for missing or overlapping share numbers</Trans>
                 </FeatureLi>
               </ul>
             </div>
@@ -136,11 +139,15 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               </h2>
               <ul className="pl-0 pt-2">
                 <FeatureLi>
-                  <Trans>Upload files associated to each of your transactions.</Trans>
+                  <Trans>
+                    Document your legal history from the start and save hours in future due
+                    diligences
+                  </Trans>
                 </FeatureLi>
                 <FeatureLi>
                   <Trans>
-                    Download these files at any time and share them with any of your stakeholders
+                    Upload files associated to each of your transactions, share them, and download
+                    them at any time
                   </Trans>
                 </FeatureLi>
               </ul>
@@ -158,10 +165,16 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               </h2>
               <ul className="pl-0 pt-2">
                 <FeatureLi>
-                  <Trans>Complete graphical representations of valuation history</Trans>
+                  <Trans>
+                    Complete graphical representations of valuation history with state-of-the-art
+                    filters
+                  </Trans>
                 </FeatureLi>
                 <FeatureLi>
-                  <Trans>Keep track of your company’s data at any point in time</Trans>
+                  <Trans>
+                    Keep track of your company’s valuation, percentages, or number of shares at any
+                    point in time
+                  </Trans>
                 </FeatureLi>
               </ul>
             </div>
