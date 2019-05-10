@@ -67,19 +67,20 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <hr className="my-8" />
 
-          <div className="row align-items-center my-8">
+          <div className="row align-items-center my-8 pb-3">
             <div className="col-md-4 mr-auto">
+              <h2>
+                <Trans>Option and phantom pools</Trans>
+              </h2>
               <ul className="pl-0 pt-2">
                 <FeatureLi>
-                  <Trans>Define pools of approved capital</Trans>
-                </FeatureLi>
-                <FeatureLi>
                   <Trans>
-                    Create option or phantom pools of given share classes and fixed sizes
+                    Create option or phantom pools of given share classes from approved capital
+                    pools
                   </Trans>
                 </FeatureLi>
                 <FeatureLi>
-                  <Trans>Issue these shares from the approved capital and see key metrics</Trans>
+                  <Trans>Issue these shares and see key metrics</Trans>
                 </FeatureLi>
               </ul>
             </div>
@@ -89,12 +90,12 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
           </div>
 
-          <div className="row align-items-center my-8">
+          <div className="row align-items-center my-8 pb-3">
             <div className="col-md-4">
+              <h2>
+                <Trans>Simple and custom vesting schedules</Trans>
+              </h2>
               <ul className="pl-0 pt-2">
-                <FeatureLi>
-                  <Trans>Create simple or custom vesting schedules</Trans>
-                </FeatureLi>
                 <FeatureLi>
                   <Trans>Define vesting period, cliffs, and how often shares get assigned.</Trans>
                 </FeatureLi>
@@ -109,8 +110,11 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
           </div>
 
-          <div className="row align-items-center my-8">
+          <div className="row align-items-center my-8 pb-3">
             <div className="col-md-7">
+              <h2>
+                <Trans>Exercise and termination</Trans>
+              </h2>
               <ul className="pl-0 pt-2">
                 <FeatureLi>
                   <Trans>
@@ -133,16 +137,18 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
           </div>
 
-          <div className="row align-items-center my-8">
-            <div className="col-md-3 ml-auto">
+          <div className="row align-items-center my-8 pb-3">
+            <div className="col-md-4 ml-auto">
+              <h2>
+                <Trans>ESOPs in the cap table</Trans>
+              </h2>
               <ul className="pl-0 pt-2">
                 <FeatureLi>
                   <Trans>See your pools and employee incentives in the cap table</Trans>
                 </FeatureLi>
                 <FeatureLi>
                   <Trans>
-                    In the diluted cap table, see all options aggregated or distributed to each
-                    person
+                    In the diluted mode, see all options aggregated or distributed to each person
                   </Trans>
                 </FeatureLi>
               </ul>
@@ -153,28 +159,25 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
           </div>
 
-          <hr className="my-8" />
-
-          <div>
-            <header className="section-header text-left">
+          <div className="row align-items-center my-8">
+            <div className="col-md-4 ml-auto">
               <h2>
-                <Trans>Engage your employees with more transparency</Trans>
+                <Trans>Engage your employees</Trans>
               </h2>
-              <p>
-                <Trans>
-                  Invite your employees with a single click. They will receive an email so they can
-                  log in to Ledgy and see how many shares they have vested at any point in time.
-                  <br />
-                  <br />
-                  Remember, happy employees is one of the keys to a successful company.
-                </Trans>
-              </p>
-            </header>
+              <ul className="pl-0 pt-2">
+                <FeatureLi>
+                  <Trans>Invite them to join Ledgy in a single click</Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>
+                    After sign-up, they will be able to keep track of their vesting schedules
+                  </Trans>
+                </FeatureLi>
+              </ul>
+            </div>
 
-            <div className="row gap-y">
-              <div className="col-md-10 mx-auto mb-7" data-aos="fade-up">
-                <Img {...props.data.optionInPortfolio} alt={i18n.t`ESOPs in the portfolio`} />
-              </div>
+            <div className="col-md-8" data-aos="fade-left">
+              <Img {...props.data.optionInPortfolio} alt={i18n.t`ESOPs in the portfolio`} />
             </div>
           </div>
 
