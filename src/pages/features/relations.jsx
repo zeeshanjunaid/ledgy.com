@@ -61,7 +61,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <hr className="my-8" />
 
-          <div className="row align-items-center pb-7">
+          <div className="row align-items-center pb-8">
             <div className="col-md-5 mr-auto">
               <h2>
                 <Trans>Easy-to-set access rights</Trans>
@@ -97,7 +97,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
           </div>
 
-          <div className="row align-items-center pb-7">
+          <div className="row align-items-center pb-8">
             <div className="col-md-5 ml-auto">
               <h2>
                 <Trans>Effort-free holding confirmations</Trans>
@@ -145,7 +145,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               </ul>
             </div>
 
-            <div className="col-md-7" data-aos="fade-right">
+            <div className="col-md-7" data-aos="fade-left">
               <Img {...props.data.documentManagement} alt={i18n.t`Document management`} />
             </div>
           </div>
