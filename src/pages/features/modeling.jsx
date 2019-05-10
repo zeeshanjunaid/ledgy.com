@@ -43,13 +43,16 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               </p>
               <p>
                 <Trans>
-                  <strong>Quickly model</strong> all sorts of different situations,{' '}
-                  <strong>understand dilution </strong> in such events, and assess the impact of{' '}
-                  <strong>liquidation preferences</strong>.
+                  Quickly model all sorts of different situations, understand dilution in such
+                  events, and assess the impact of liquidation preferences.
                 </Trans>
               </p>
               <p>
-                <Trans>Start entering your data and see your model shape up in real time!</Trans>
+                <Trans>Start entering your data and see your model shape up in real time</Trans>
+                <span role="img" aria-label="take-off">
+                  {' '}
+                  🚀
+                </span>
               </p>
             </header>
 
@@ -62,50 +65,52 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <hr className="my-8" />
 
-          <div>
-            <header className="section-header text-left">
-              <div className="row gap-y">
-                <div className="col-md-6 ml-auto">
-                  <ul className="pl-0 pt-2">
-                    <FeatureLi>
-                      <Trans>Adjust shares rounding as preferred</Trans>
-                    </FeatureLi>
-                    <FeatureLi>
-                      <Trans>Include or exclude convertibles and pools in the share price</Trans>
-                    </FeatureLi>
-                  </ul>
-                </div>
+          <div className="row align-items-center my-8 pb-2">
+            <div className="col-md-6 mr-auto">
+              <h2>
+                <Trans>Tune up your simulations</Trans>
+              </h2>
+              <ul className="pl-0 pt-2">
+                <FeatureLi>
+                  <Trans>Adjust shares rounding as preferred</Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>Include or exclude convertibles and pools in the share price</Trans>
+                </FeatureLi>
+              </ul>
+            </div>
 
-                <div className="col-md-6" data-aos="fade-left">
-                  <Img {...props.data.simulationSettings} alt={i18n.t`Simulation settings`} />
-                </div>
-              </div>
-            </header>
+            <div className="col-md-5" data-aos="fade-left">
+              <Img {...props.data.simulationSettings} alt={i18n.t`Simulation settings`} />
+            </div>
           </div>
 
-          <div>
-            <header className="section-header text-left">
-              <div className="row gap-y">
-                <div className="col-md-6 ml-auto">
-                  <ul className="pl-0 pt-2">
-                    <FeatureLi>
-                      <Trans>Need to distribute an investment pro-rata?</Trans>
-                    </FeatureLi>
-                    <FeatureLi>
-                      <Trans>Simply enter the amount and investors participating</Trans>
-                    </FeatureLi>
-                  </ul>
-                </div>
+          <div className="row align-items-center my-8 pb-2">
+            <div className="col-md-6 ml-auto">
+              <h2>
+                <Trans>Pro-rata distribution</Trans>
+              </h2>
+              <ul className="pl-0 pt-2">
+                <FeatureLi>
+                  <Trans>
+                    Ledgy makes it easy to simulate an investment with a pro-rata distribution
+                  </Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>As simple as entering the amount and investors participating</Trans>
+                </FeatureLi>
+              </ul>
+            </div>
 
-                <div className="col-md-6 order-md-first" data-aos="fade-right">
-                  <Img
-                    {...props.data.roundModelingProRata}
-                    alt={i18n.t`Distribute Investment Pro-Rata`}
-                  />
-                </div>
-              </div>
-            </header>
+            <div className="col-md-5 order-md-first" data-aos="fade-right">
+              <Img
+                {...props.data.roundModelingProRata}
+                alt={i18n.t`Distribute Investment Pro-Rata`}
+              />
+            </div>
           </div>
+
+          <hr className="my-8" />
 
           <div>
             <header className="section-header my-5 text-left">
@@ -118,7 +123,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </header>
 
             <div className="row gap-y">
-              <div className="col-md-10 mx-auto mb-7" data-aos="fade-right">
+              <div className="col-md-10 mx-auto mb-7" data-aos="fade">
                 <Img
                   {...props.data.roundModelingCaptable}
                   alt={i18n.t`Cap table during round modeling`}
