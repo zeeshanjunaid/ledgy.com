@@ -64,6 +64,71 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           <div className="row align-items-center pb-8">
             <div className="col-md-5 mr-auto">
               <h2>
+                <Trans>Key Performance Indicators</Trans>
+              </h2>
+
+              <ul className="pl-0 pt-2">
+                <FeatureLi>
+                  <Trans>
+                    Integrate your KPIs on Ledgy in a single copy-paste action, including expected
+                    and actual values
+                  </Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>
+                    Choose their interval, unit, and type of graph you want them to be displayed in
+                  </Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>
+                    Share them with individual stakeholders or with whole groups, such as all your
+                    investors
+                  </Trans>
+                </FeatureLi>
+              </ul>
+            </div>
+
+            <div className="col-md-7" data-aos="fade-left">
+              <Img {...props.data.kpiChart} alt={i18n.t`Kpi chart`} />
+            </div>
+          </div>
+
+          <div className="row align-items-center pb-8">
+            <div className="col-md-5 ml-auto">
+              <h2>
+                <Trans>Reports</Trans>
+              </h2>
+              <ul className="pl-0 pt-3">
+                <FeatureLi>
+                  <Trans>
+                    Generate recurring reports with fixed intervals and attach your KPIs to them
+                  </Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>
+                    Our integrated rich text editor makes the typing process really smooth!
+                  </Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>Attach any documents that may need to go along with your report</Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>
+                    Publish your reports once done, which will share them with your selected
+                    stakeholders
+                  </Trans>
+                </FeatureLi>
+              </ul>
+            </div>
+
+            <div className="col-md-7 order-md-first" data-aos="fade-right">
+              <Img {...props.data.reportExample} alt={i18n.t`Report`} />
+            </div>
+          </div>
+
+          <div className="row align-items-center pb-8">
+            <div className="col-md-5 mr-auto">
+              <h2>
                 <Trans>Easy-to-set access rights</Trans>
               </h2>
 
@@ -164,6 +229,16 @@ export const pageQuery = graphql`
 
     shareRegisterPdf: imageSharp(fluid: { originalName: { regex: "/share-register-pdf.png/" } }) {
       fluid(maxWidth: 2400) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    kpiChart: imageSharp(fluid: { originalName: { regex: "/kpi-chart.png/" } }) {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    reportExample: imageSharp(fluid: { originalName: { regex: "/report-example.png/" } }) {
+      fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
     }
