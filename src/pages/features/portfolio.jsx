@@ -6,7 +6,7 @@ import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 import { FeatureLinks } from '../../components/Feature';
-import { Title } from '../../layouts/utils';
+import { Title, FeatureLi } from '../../layouts/utils';
 
 export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
@@ -31,101 +31,93 @@ export default withI18n()(({ i18n, ...props }: Props) => (
       <section className="section overflow-hidden">
         <div className="container text-left">
           <div>
-            <header className="section-header text-left">
+            <header className="section-header mb-5 text-left">
               <h2>
                 <Trans>Your portfolio at a glance</Trans>
               </h2>
               <p>
                 <Trans>
-                  As an investor, you can profit a lot from Ledgy. Any of your portfolio companies
-                  that use the platform will be synchronized with your portfolio. See your key
-                  performance indicators of your investments at a glance, and visualize all of your
-                  data aggregated or filtered out.
-                  <br />
-                  <br />
-                  Never lose track of how much you invested in which company and what’s the
-                  approximate value of your investments today.
-                  <br />
-                  <br />
-                  <i>And coming up soon…</i> Reporting in the investor portfolio! Where you will be
-                  able to see all your shared information with your companies in one place.
+                  As an investor, have all your portfolio companies using Ledgy synchronized in one
+                  place. See KPIs and Reports of your investments at a glance, and visualize all of
+                  your data in a friendly UI.
                 </Trans>
               </p>
-            </header>
-
-            <div className="row gap-y">
-              <div className="col-md-8 mx-auto mb-7" data-aos="fade-up">
-                <Img {...props.data.dashboardCards} alt={i18n.t`Investment overview`} />
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <header className="section-header text-left">
               <p>
                 <Trans>
-                  The detailed investment table gives an overview of the metrics of your
-                  investments. Check out what’s your stake in the company, how many shares and
-                  options you own and how much you initially invested. Even convertibles, if they’re
-                  not converted yet, will appear here.
-                  <br />
-                  Each valuation update that the founders enter into their transaction history on
-                  Ledgy will be reflected in the current value of your shares and your return.
+                  Never lose track of how much you invested in which company and what’s the
+                  approximate value of your investments today.
                 </Trans>
               </p>
             </header>
 
             <div className="row gap-y">
-              <div className="col-md-10 mx-auto mb-7" data-aos="fade-left">
+              <div className="col-md-11 mx-auto mb-7" data-aos="fade-up">
                 <Img {...props.data.dashboardShares} alt={i18n.t`Share details`} />
               </div>
             </div>
           </div>
 
-          <div>
-            <header className="section-header text-left mt-3">
-              <p>
-                <Trans>
-                  The transaction history will tell you exactly what happened to your ownership at
-                  what time. Keep track of when you bought or sold shares and at which price. See
-                  which options you are currently holding or how much interest is on your
-                  convertible and whether there was a cap or discount.
-                </Trans>
-              </p>
-            </header>
+          <hr className="mb-8" />
 
-            <div className="row gap-y">
-              <div className="col-md-10 mx-auto mb-7" data-aos="fade-up-right">
-                <Img {...props.data.dashboardHistory} alt={i18n.t`Transaction history`} />
-              </div>
+          <div className="row align-items-center pb-8">
+            <div className="col-md-5 mr-auto">
+              <h2>
+                <Trans>Monitor all your investments</Trans>
+              </h2>
+
+              <ul className="pl-0 pt-2">
+                <FeatureLi>
+                  <Trans>
+                    See detailed metrics in your portfolio table and a summary in your company cards
+                  </Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>Data can be visualized aggregated or filtered by company</Trans>
+                </FeatureLi>
+              </ul>
+            </div>
+
+            <div className="col-md-7 mx-auto mb-7" data-aos="fade-left">
+              <Img {...props.data.dashboardCards} alt={i18n.t`Investment overview`} />
             </div>
           </div>
 
-          <hr className="my-8" />
-
-          <div>
-            <header className="section-header mb-7">
+          <div className="row align-items-center pb-8">
+            <div className="col-md-4 mr-auto">
               <h2>
-                <Trans>Adding investments: nice and smooth</Trans>
+                <Trans>Keep track of your history</Trans>
               </h2>
-            </header>
 
-            <div className="row align-items-center mb-8">
-              <div className="col-md-4 mr-auto">
-                <p>
-                  <Trans>
-                    Just as you land on your investor portfolio, adding an investment is as simple
-                    as clicking on the <i>Add investment</i> button and filling out the form. Once
-                    you finish, your portfolio will be immediately updated with new input values.
-                    It’s never been easier to keep track of all your investments in the same
-                    dashboard.
-                  </Trans>
-                </p>
-              </div>
+              <ul className="pl-0 pt-2">
+                <FeatureLi>
+                  <Trans>With the transaction history table and plot</Trans>
+                </FeatureLi>
+              </ul>
+            </div>
 
-              <div className="col-md-7" data-aos="fade-left">
-                <Img {...props.data.addInvestment} alt={i18n.t`Add portfolio investment`} />
-              </div>
+            <div className="col-md-8 mx-auto mb-7 order-md-first" data-aos="fade-right">
+              <Img {...props.data.dashboardHistory} alt={i18n.t`Transaction history`} />{' '}
+            </div>
+          </div>
+
+          <div className="row align-items-center pb-8">
+            <div className="col-md-5 mr-auto">
+              <h2>
+                <Trans>Smoothly add investments</Trans>
+              </h2>
+
+              <ul className="pl-0 pt-2">
+                <FeatureLi>
+                  <Trans>It’s never been easier to centralize your data</Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>Fill out the form and have your portfolio immediately updated</Trans>
+                </FeatureLi>
+              </ul>
+            </div>
+
+            <div className="col-md-7 mx-auto" data-aos="fade-left">
+              <Img {...props.data.addInvestment} alt={i18n.t`Add portfolio investment`} />
             </div>
           </div>
 
