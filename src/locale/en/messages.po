@@ -1069,8 +1069,8 @@ msgid "We operate a <0>bug bounty</0> program on Federacy. Write us a message fo
 msgstr "We operate a <0>bug bounty</0> program on Federacy. Write us a message for an invitation."
 
 #: src/pages/security.jsx:50
-msgid "We understand how sensitive cap table information is for any business. That’s why your privacy and your data’s security is crucial to us. Here is what we do to protect your data."
-msgstr "We understand how sensitive cap table information is for any business. That’s why your privacy and your data’s security is crucial to us. Here is what we do to protect your data."
+msgid "We understand how sensitive equity information is for any business. That’s why your privacy and your data’s security is crucial to us. Here is what we do to protect your data."
+msgstr "We understand how sensitive equity information is for any business. That’s why your privacy and your data’s security is crucial to us. Here is what we do to protect your data."
 
 #: src/pages/features/modeling.jsx:192
 msgid "What if your company is worth such an amount that makes you think about an exit? With the Premium Exit Modeling feature, Ledgy will do an insane amount of math to show you the distribution of stakes in all possible situations."

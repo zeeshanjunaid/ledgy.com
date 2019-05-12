@@ -48,7 +48,7 @@ const IndexPage = ({ i18n, ...props }: Object) => (
           <header className="section-header text-left">
             <p>
               <Trans>
-                We understand how sensitive cap table information is for any business. That’s why
+                We understand how sensitive equity information is for any business. That’s why
                 your privacy and your data’s security is crucial to us. Here is what we do to
                 protect your data.
               </Trans>

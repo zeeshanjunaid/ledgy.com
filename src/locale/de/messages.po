@@ -1068,7 +1068,7 @@ msgid "We operate a <0>bug bounty</0> program on Federacy. Write us a message fo
 msgstr "Wir betreiben ein <0>Bug Bounty</0>-Programm auf Federacy. Schreib’ uns eine Nachricht, um eine Einladung zu erhalten."
 
 #: src/pages/security.jsx:50
-msgid "We understand how sensitive cap table information is for any business. That’s why your privacy and your data’s security is crucial to us. Here is what we do to protect your data."
+msgid "We understand how sensitive equity information is for any business. That’s why your privacy and your data’s security is crucial to us. Here is what we do to protect your data."
 msgstr "Uns ist bewusst, wie sensibel und vertraulich der Cap Table für jede Firma ist. Deshalb nehmen wir deine Privatsphäre und die Sicherheit deiner Daten sehr ernst. So schützen wir deine Daten."
 
 #: src/pages/features/modeling.jsx:192

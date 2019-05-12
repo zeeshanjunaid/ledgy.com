@@ -42,19 +42,22 @@ const IndexPage = ({ i18n, ...props }: Props) => (
       <div className="section">
         <Section>
           <p>
+            <Trans>Privacy made in Europe. Because your equity data is not for everyone.</Trans>
+          </p>
+          <p>
             <Trans>
-              Privacy made in Europe. Because your equity data is not for everyone.
-              <br />
-              <br />
-              We understand how sensitive equity information is for any business. That’s why your
-              privacy and your data’s security is crucial to us. We also know that long and
-              complicated privacy policies are not very helpful, so we give an overview up-front.
+              We comply with the Swiss Federal Act on Data Protection (FADP) and the General Data
+              Protection Regulation (GDPR). Read more about{' '}
+              <Link href to={`${props.prefix}/legal/gdpr/`}>
+                GDPR compliance
+              </Link>
+              .
             </Trans>
           </p>
 
           <p>
             <Trans>
-              This is a brief summary. For the details, please read our{' '}
+              This is a brief summary of the privacy policy. For the details, please read our{' '}
               <Link href to={`${props.prefix}/legal/privacy-policy/`}>
                 Privacy Policy
               </Link>
