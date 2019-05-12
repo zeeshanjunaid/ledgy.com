@@ -153,7 +153,10 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
 
             <div className="col-md-7" data-aos="fade-left">
-              <Img {...props.data.inviteEmployee} alt={i18n.t`ESOPs in the portfolio`} />
+              <Img
+                {...props.data.notificationEmail}
+                alt={i18n.t`Email notification about upcoming vesting event`}
+              />
             </div>
           </div>
 
@@ -234,12 +237,12 @@ export const pageQuery = graphql`
         ...GatsbyImageSharpFluid
       }
     }
-    inviteEmployee: imageSharp(fluid: { originalName: { regex: "/incentives-dashboard.png/" } }) {
+    notificationEmail: imageSharp(fluid: { originalName: { regex: "/uri.jpg/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
     }
-    bulkEntry: imageSharp(fluid: { originalName: { regex: "/bulk-entry.png/" } }) {
+    bulkEntry: imageSharp(fluid: { originalName: { regex: "/uri.jpg/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
