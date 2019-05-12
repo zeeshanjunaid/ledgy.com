@@ -126,18 +126,20 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           <Feature {...props} name={i18n.t`Investor Relations & Portfolio`} url="investors">
             <ul className="pl-0 pt-2">
               <FeatureLi>
-                <Trans>The simplest and most time-efficient way to manage your portfolio</Trans>
+                <Trans>Be professional towards your investors as a startup</Trans>
+              </FeatureLi>
+              <FeatureLi>
+                <Trans>Track and share KPIs and write recurring reports</Trans>
+              </FeatureLi>
+              <FeatureLi>
+                <Trans>
+                  The simplest and most time-efficient way to manage the portfolio as an investor
+                </Trans>
               </FeatureLi>
               <FeatureLi>
                 <Trans>
                   Get equity and reporting updates from your portfolio in one place, from
                   transaction history to legal documents, valuations, KPIs and reports
-                </Trans>
-              </FeatureLi>
-              <FeatureLi>
-                <Trans>
-                  Help your startups be professional from the start and support them during their
-                  fundraising
                 </Trans>
               </FeatureLi>
             </ul>
