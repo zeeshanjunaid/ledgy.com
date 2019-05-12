@@ -15,7 +15,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
     <Title
       title={i18n.t`Features`}
-      description={i18n.t`Round and exit modeling, employee incentives and a single source of truth—Ledgy serves your needs.`}
+      description={i18n.t`All you need in one place: Employee incentives, round and exit modeling, investor relations.`}
     />
 
     <header className="header text-white bg-ledgy">
@@ -23,11 +23,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         <div className="row">
           <div className="col-12 col-lg-8 offset-lg-2">
             <h1>
-              <Trans>
-                Manage your shares.
-                <br />
-                Not your spreadsheet.
-              </Trans>
+              <Trans>All you need in one place</Trans>
             </h1>
           </div>
         </div>
@@ -40,96 +36,109 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           <Feature {...props} name={i18n.t`Employee Participation Plans`} url="esop">
             <ul className="pl-0 pt-2">
               <FeatureLi>
-                <Trans>Vested stock, option plans, phantom options, inverse vesting</Trans>
+                <Trans>Engage your employees by making their plans transparent</Trans>
               </FeatureLi>
               <FeatureLi>
-                <Trans>Easily track vesting schedules</Trans>
+                <Trans>Keep track of any vesting schedule</Trans>
               </FeatureLi>
               <FeatureLi>
-                <Trans>Engage your employees and make their plans transparent</Trans>
+                <Trans>
+                  Supports everything from pools to options, phantom options, warrants, vested stock
+                  and inverse vesting
+                </Trans>
               </FeatureLi>
             </ul>
           </Feature>
 
           <Hr />
 
-          <Feature
-            {...props}
-            name={i18n.t`Cap Table`}
-            title={i18n.t`Trust in Your Cap Table`}
-            url="captable"
-            left
-          >
+          <Feature {...props} name={i18n.t`Cap Table Management`} url="captable" left>
             <ul className="pl-0 pt-2">
               <FeatureLi>
-                <Trans>Legally valid, error-free</Trans>
+                <Trans>Intuitive, legally valid and error-free cap table from the beginning</Trans>
               </FeatureLi>
               <FeatureLi>
-                <Trans>Simple to use and quick to learn</Trans>
+                <Trans>
+                  Transaction-based, linked to legal documents, for your future due diligence
+                </Trans>
               </FeatureLi>
               <FeatureLi>
-                <Trans>Manage pooled investments</Trans>
+                <Trans>
+                  Supports unlimited share classes, pooled investments and automatic numbered shares
+                </Trans>
               </FeatureLi>
             </ul>
           </Feature>
 
           <Hr />
 
-          <Feature {...props} name={i18n.t`Round and Exit Modeling`} url="modeling">
+          <Feature {...props} name={i18n.t`Round & Exit Modeling`} url="modeling">
             <ul className="pl-0 pt-2">
               <FeatureLi>
-                <Trans>Quickly simulate a new financing round or an exit</Trans>
+                <Trans>
+                  Understand how dilution works by quickly comparing several modeling scenarios
+                </Trans>
               </FeatureLi>
               <FeatureLi>
-                <Trans>Understand how dilution works</Trans>
+                <Trans>
+                  Flexible yet intuitive round modeling supporting convertibles, fixed employee
+                  pools and pro-rata distribution
+                </Trans>
               </FeatureLi>
               <FeatureLi>
-                <Trans>Effortlessly assess the impact of liquidation preferences</Trans>
+                <Trans>
+                  Assess the impact of liquidation preferences with waterfall analysis and
+                  breakpoint charts
+                </Trans>
               </FeatureLi>
             </ul>
           </Feature>
 
           <Hr />
 
-          <Feature {...props} name={i18n.t`Investor Relations`} url="relations" left>
+          <Feature {...props} name={i18n.t`Collaboration & Due Diligence`} url="collaboration" left>
             <ul className="pl-0 pt-2">
               <FeatureLi>
-                <Trans>Track KPIs and generate reports in a matter of clicks</Trans>
+                <Trans>Granular access rights, you control it</Trans>
               </FeatureLi>
               <FeatureLi>
-                <Trans>Generate holding confirmations and attach documents to your files</Trans>
+                <Trans>
+                  Data room, audit trail and read-only access for investors saves you costly due
+                  diligence tools
+                </Trans>
               </FeatureLi>
               <FeatureLi>
-                <Trans>Share it all with anyone you need to</Trans>
+                <Trans>
+                  Save time in future due diligences by attaching legal documents to their
+                  transactions, making them searchable by the transaction information
+                </Trans>
               </FeatureLi>
             </ul>
           </Feature>
 
           <Hr />
 
-          <Feature
-            {...props}
-            title={i18n.t`Investor Portfolio`}
-            name={i18n.t`the Investor Portfolio`}
-            url="portfolio"
-          >
+          <Feature {...props} name={i18n.t`Investor Relations & Portfolio`} url="investors">
             <ul className="pl-0 pt-2">
               <FeatureLi>
-                <Trans>Track all your portfolio companies as an investor</Trans>
+                <Trans>The simplest and most time-efficient way to manage your portfolio</Trans>
               </FeatureLi>
               <FeatureLi>
-                <Trans>See all your investments, history, KPIs, and reports</Trans>
+                <Trans>
+                  Get equity and reporting updates from your portfolio in one place, from
+                  transaction history to legal documents, valuations, KPIs and reports
+                </Trans>
               </FeatureLi>
               <FeatureLi>
-                <Trans>Have a centralized platform that serves as a single source of truth</Trans>
+                <Trans>
+                  Help your startups be professional from the start and support them during their
+                  fundraising
+                </Trans>
               </FeatureLi>
             </ul>
           </Feature>
 
-          <div className="mx-auto text-center my-8">
-            <hr />
-            <AllFeatures />
-          </div>
+          <Hr />
 
           <SecurityRow {...props} />
         </div>

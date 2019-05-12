@@ -19,7 +19,7 @@ export const Feature = (props: {
   data: Object
 }) => (
   <div className="row align-items-center" style={{ minHeight: '300px' }}>
-    <div className="col-md-6 ml-auto">
+    <div className="col-md-7 ml-auto">
       <h2>{props.title || props.name}</h2>
       <div>{props.children}</div>
       <p>
@@ -94,10 +94,10 @@ export const FeatureLinks = ({
     <div className="container custom-container">
       <div className="row gap-y justify-content-center">
         <FeatureLink {...props} name={i18n.t`Employee Participation Plans`} url="esop" />
-        <FeatureLink {...props} name={i18n.t`Cap Table`} url="captable" />
-        <FeatureLink {...props} name={i18n.t`Modeling`} url="modeling" />
-        <FeatureLink {...props} name={i18n.t`Investor Portfolio`} url="portfolio" />
-        <FeatureLink {...props} name={i18n.t`Investor Relations`} url="relations" />
+        <FeatureLink {...props} name={i18n.t`Cap Table Management`} url="captable" />
+        <FeatureLink {...props} name={i18n.t`Round & Exit Modeling`} url="modeling" />
+        <FeatureLink {...props} name={i18n.t`Collaboration & Due Diligence`} url="collaboration" />
+        <FeatureLink {...props} name={i18n.t`Investor Relations & Portfolio`} url="investors" />
       </div>
     </div>
   </div>
@@ -120,12 +120,12 @@ export const FeaturesFragment = graphql`
         ...GatsbyImageSharpFluid
       }
     }
-    portfolio: imageSharp(fluid: { originalName: { regex: "/investors.png/" } }) {
+    collaboration: imageSharp(fluid: { originalName: { regex: "/reporting.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
     }
-    relations: imageSharp(fluid: { originalName: { regex: "/reporting.png/" } }) {
+    investors: imageSharp(fluid: { originalName: { regex: "/investors.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }

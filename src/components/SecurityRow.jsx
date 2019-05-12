@@ -26,7 +26,7 @@ export default (props: Props) => (
     </div>
 
     <div className="col-md-6 col-xl-5">
-      <FontAwesomeIcon icon={faLock} className="text-success mb-2" size="3x" />
+      <FontAwesomeIcon icon={faLock} className="text-primary mb-2" size="3x" />
       <h5>
         <Trans>Security</Trans>
       </h5>
