@@ -6,7 +6,7 @@ import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 import { FeatureLinks } from '../../components/Feature';
-import { Title, FeatureLi } from '../../layouts/utils';
+import { Title, FeatureLi, Hr } from '../../layouts/utils';
 
 export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
@@ -32,27 +32,26 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         <div className="container text-left">
           <div>
             <header className="section-header text-left">
-              <h2>
-                <Trans>Make your employees part of your success</Trans>
-              </h2>
-              <p>
-                <Trans>
-                  Set up your ESOPS, whether real stock transfers, options from a pool, warrants, or
-                  phantom shares.
-                </Trans>
-              </p>
-              <p>
-                <Trans>
-                  Configure your vesting schedules and monitor them in real time. Terminate or
-                  exercise options when needed.
-                </Trans>
-              </p>
-              <p>
-                <Trans>
-                  Invite your employees so they can keep track of their option plans, and share any
-                  documents with them.
-                </Trans>
-              </p>
+              <ul className="pl-0 pt-2">
+                <FeatureLi>
+                  <Trans>Save hours of work by getting rid of manual spreadsheet processes</Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>
+                    Supports everything from pools to options, phantom options, warrants, vested
+                    stock and inverse vesting
+                  </Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>Keep track of any vesting schedule</Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>
+                    Get notified of important vesting and expiry events and engage your employees by
+                    inviting them to track their stake on Ledgy
+                  </Trans>
+                </FeatureLi>
+              </ul>
             </header>
 
             <div className="row gap-y">
@@ -65,22 +64,28 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
           </div>
 
-          <hr className="my-8" />
+          <Hr />
 
           <div className="row align-items-center my-8 pb-3">
-            <div className="col-md-4 mr-auto">
+            <div className="col-md-5 mr-auto">
               <h2>
-                <Trans>Option and phantom pools</Trans>
+                <Trans>Supports everything</Trans>
               </h2>
               <ul className="pl-0 pt-2">
                 <FeatureLi>
                   <Trans>
-                    Create option or phantom pools of given share classes from approved capital
-                    pools
+                    Create option or phantom pools reserved for employees and keep track of how much
+                    is granted, available, vested and exercised
                   </Trans>
                 </FeatureLi>
                 <FeatureLi>
-                  <Trans>Issue these shares and see key metrics</Trans>
+                  <Trans>
+                    Grant options, phantom options, warrants or add inverse vesting to stock
+                    transactions
+                  </Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>Track exercise, termination and expiration</Trans>
                 </FeatureLi>
               </ul>
             </div>
@@ -90,17 +95,25 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
           </div>
 
+          <Hr />
+
           <div className="row align-items-center my-8 pb-3">
-            <div className="col-md-4">
+            <div className="col-md-5">
               <h2>
-                <Trans>Simple and custom vesting schedules</Trans>
+                <Trans>Any vesting schedule</Trans>
               </h2>
               <ul className="pl-0 pt-2">
                 <FeatureLi>
-                  <Trans>Define vesting period, cliffs, and how often shares get assigned.</Trans>
+                  <Trans>Add vesting or inverse vesting to any transaction</Trans>
                 </FeatureLi>
                 <FeatureLi>
-                  <Trans>See your chart as soon as you start entering numbers</Trans>
+                  <Trans>
+                    Either use simple linear vesting with duration, interval and cliff, define your
+                    own custom vesting schedule, or select a preset
+                  </Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>Visualizations help you understand what happens</Trans>
                 </FeatureLi>
               </ul>
             </div>
@@ -110,74 +123,55 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
           </div>
 
-          <div className="row align-items-center my-8 pb-3">
-            <div className="col-md-7">
-              <h2>
-                <Trans>Exercise and termination</Trans>
-              </h2>
-              <ul className="pl-0 pt-2">
-                <FeatureLi>
-                  <Trans>
-                    Exercise option grants at any time, whether vesting is finished or not
-                  </Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>Terminate part of the grant, or all of it</Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>
-                    Filter transactions by employee to see all of their transactions at a glance
-                  </Trans>
-                </FeatureLi>
-              </ul>
-            </div>
-
-            <div className="col-md-4 ml-auto" data-aos="fade-left">
-              <Img {...props.data.exerciseOption} alt={i18n.t`Issue options from a pool`} />
-            </div>
-          </div>
-
-          <div className="row align-items-center my-8 pb-3">
-            <div className="col-md-4 ml-auto">
-              <h2>
-                <Trans>ESOPs in the cap table</Trans>
-              </h2>
-              <ul className="pl-0 pt-2">
-                <FeatureLi>
-                  <Trans>See your pools and employee incentives in the cap table</Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>
-                    In the diluted mode, see all options aggregated or distributed to each person
-                  </Trans>
-                </FeatureLi>
-              </ul>
-            </div>
-
-            <div className="col-md-8 order-md-first" data-aos="fade-right">
-              <Img {...props.data.dilutedTable} alt={i18n.t`Show cap table fully diluted`} />
-            </div>
-          </div>
+          <Hr />
 
           <div className="row align-items-center my-8">
-            <div className="col-md-4 ml-auto">
+            <div className="col-md-5 ml-auto">
               <h2>
                 <Trans>Engage your employees</Trans>
               </h2>
               <ul className="pl-0 pt-2">
                 <FeatureLi>
-                  <Trans>Invite them to join Ledgy in a single click</Trans>
+                  <Trans>
+                    Get notified two weeks before a cliff or vesting ends or a grant expires to not
+                    miss using your participation plan for engaging your employees
+                  </Trans>
                 </FeatureLi>
                 <FeatureLi>
                   <Trans>
-                    After sign-up, they will be able to keep track of their vesting schedules
+                    Invite your employees to track their stake and vesting in their Ledgy portfolio
                   </Trans>
                 </FeatureLi>
               </ul>
             </div>
 
-            <div className="col-md-8" data-aos="fade-left">
+            <div className="col-md-7" data-aos="fade-left">
               <Img {...props.data.optionInPortfolio} alt={i18n.t`ESOPs in the portfolio`} />
+            </div>
+          </div>
+
+          <Hr />
+
+          <div className="row align-items-center my-8">
+            <div className="col-md-5 ml-auto">
+              <h2>
+                <Trans>Diluted cap table</Trans>
+              </h2>
+              <ul className="pl-0 pt-2">
+                <FeatureLi>
+                  <Trans>See your pools and employee participation grants in the cap table</Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>
+                    Choose to only show pools or the detailed view with the grants distributed to
+                    their holders
+                  </Trans>
+                </FeatureLi>
+              </ul>
+            </div>
+
+            <div className="col-md-7 order-md-first" data-aos="fade-right">
+              <Img {...props.data.dilutedTable} alt={i18n.t`Show cap table fully diluted`} />
             </div>
           </div>
 

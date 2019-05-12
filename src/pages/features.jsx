@@ -5,11 +5,8 @@ import { withI18n, Trans } from '@lingui/react';
 import { graphql } from 'gatsby';
 
 import { Feature } from '../components/Feature';
-import AllFeatures from '../components/AllFeatures';
 import SecurityRow from '../components/SecurityRow';
-import { Title, FeatureLi } from '../layouts/utils';
-
-const Hr = () => <hr className="my-7" />;
+import { Title, FeatureLi, Hr } from '../layouts/utils';
 
 export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
@@ -36,15 +33,21 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           <Feature {...props} name={i18n.t`Employee Participation Plans`} url="esop">
             <ul className="pl-0 pt-2">
               <FeatureLi>
-                <Trans>Engage your employees by making their plans transparent</Trans>
+                <Trans>Save hours of work by getting rid of manual spreadsheet processes</Trans>
+              </FeatureLi>
+              <FeatureLi>
+                <Trans>
+                  Supports everything from pools to options, phantom options, warrants, vested stock
+                  and inverse vesting
+                </Trans>
               </FeatureLi>
               <FeatureLi>
                 <Trans>Keep track of any vesting schedule</Trans>
               </FeatureLi>
               <FeatureLi>
                 <Trans>
-                  Supports everything from pools to options, phantom options, warrants, vested stock
-                  and inverse vesting
+                  Get notified of important vesting and expiry events and engage your employees by
+                  inviting them to track their stake on Ledgy
                 </Trans>
               </FeatureLi>
             </ul>
