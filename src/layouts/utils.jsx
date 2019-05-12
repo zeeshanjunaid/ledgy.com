@@ -53,11 +53,7 @@ export const Li = ({ children }: { children: React.Node }) => (
 
 export const FeatureLi = ({ children }: { children: React.Node }) => (
   <li className="media">
-    <FontAwesomeIcon
-      icon={faDotCircle}
-      className="text-primary fa-xs"
-      style={{ marginTop: '7px' }}
-    />
+    <FontAwesomeIcon icon={faDotCircle} className="text-primary fa-xs mt-2" />
     <div className="media-body ml-4 mb-4">{children}</div>
   </li>
 );

@@ -62,12 +62,14 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               </FeatureLi>
               <FeatureLi>
                 <Trans>
-                  Transaction-based, linked to legal documents, for your future due diligence
+                  Transaction-based supporting any type like issuance, transfer, convertibles, stock
+                  split, share destruction, valuations
                 </Trans>
               </FeatureLi>
               <FeatureLi>
                 <Trans>
-                  Supports unlimited share classes, pooled investments and automatic numbered shares
+                  Featuring unlimited share classes, treasury shares, pooled investments and
+                  automatic share numbering
                 </Trans>
               </FeatureLi>
             </ul>
@@ -79,7 +81,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             <ul className="pl-0 pt-2">
               <FeatureLi>
                 <Trans>
-                  Understand how dilution works by quickly comparing several modeling scenarios
+                  Understand how dilution works by quickly comparing different modeling scenarios
                 </Trans>
               </FeatureLi>
               <FeatureLi>

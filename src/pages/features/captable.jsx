@@ -6,7 +6,7 @@ import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 
 import { FeatureLinks } from '../../components/Feature';
-import { Title, FeatureLi } from '../../layouts/utils';
+import { Title, FeatureLi, Hr, ChevronRight } from '../../layouts/utils';
 
 export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
@@ -32,29 +32,28 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         <div className="container text-left">
           <div>
             <header className="section-header text-left">
-              <h2>
-                <Trans>Replace your Excel with Ledgy</Trans>
-              </h2>
-              <p>
-                <Trans>
-                  Keep the ownership history of your company in a single place. No need for
-                  paperwok, contacting lawyers, missing pieces, or frequent errors.
-                </Trans>
-              </p>
-              <p>
-                <Trans>Ledgy’s cap table is the one source of truth for your company equity.</Trans>
-              </p>
-              <p>
-                <Trans>
-                  Quick and easy onboarding process to set up your legally valid, error-free cap
-                  table in no time!
-                </Trans>
-              </p>
-              <Trans>Need help?</Trans>{' '}
-              <Link href to={`${props.prefix}/contact/`}>
-                <Trans>Contact us</Trans>
-              </Link>
-              <Trans>, and we will assist you in getting started with Ledgy.</Trans>
+              <ul className="pl-0 pt-2">
+                <FeatureLi>
+                  <Trans>
+                    Intuitive, legally valid and error-free cap table from the beginning
+                  </Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>
+                    Transaction-based supporting any type like issuance, transfer, convertibles,
+                    stock split, share destruction, valuations
+                  </Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>
+                    Featuring unlimited share classes, treasury shares, pooled investments and
+                    automatic share numbering
+                  </Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>Get started in minutes with the copy-paste spreadsheet importer</Trans>
+                </FeatureLi>
+              </ul>
             </header>
 
             <div className="row gap-y">
@@ -64,6 +63,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
           </div>
 
+          <Hr />
+
           <div className="row align-items-center my-8 pb-2">
             <div className="col-md-5 ml-auto">
               <h2>
@@ -72,12 +73,21 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <ul className="pl-0 pt-2">
                 <FeatureLi>
                   <Trans>
-                    Add any transaction, whether shares issue, transfer, valuation, convertible
-                    loan, class conversion, stock split, decrease, or employee incentives
+                    The transaction based cap table allows browsing through the history and sets it
+                    up for future due diligences, saving you hours of work and lawyer costs
                   </Trans>
                 </FeatureLi>
                 <FeatureLi>
-                  <Trans>Dynamic display of available shares in all transactions</Trans>
+                  <Trans>
+                    Supports issuance, destruction, transfer, class conversion, convertibles, stock
+                    split, valuations, treasury shares and unlimited share classes
+                  </Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>
+                    Analyze your cap table by stakeholder, share class, stakeholder group and view
+                    it with all, only outstanding or diluted shares
+                  </Trans>
                 </FeatureLi>
               </ul>
             </div>
@@ -87,22 +97,30 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
           </div>
 
+          <Hr />
+
           <div className="row align-items-center my-8 pb-2">
-            <div className="col-md-4 mr-auto">
+            <div className="col-md-5 mr-auto">
               <h2>
                 <Trans>Numbered shares</Trans>
               </h2>
               <ul className="pl-0 pt-2">
                 <FeatureLi>
-                  <Trans>Do you keep track of your share numbers?</Trans>
-                </FeatureLi>
-                <FeatureLi>
                   <Trans>
-                    Ledgy can auto-assign numbered shares for all your transactions in a magic click
+                    In some countries numbering shares is necessary, but this can be a real pain
                   </Trans>
                 </FeatureLi>
                 <FeatureLi>
-                  <Trans>Ledgy also checks for missing or overlapping share numbers</Trans>
+                  <Trans>
+                    Auto-assign share numbers for all your transactions, Ledgy determines the next
+                    available ones
+                  </Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>
+                    They are checked for consistency, giving you the peace of mind that none go
+                    missing or are assigned twice
+                  </Trans>
                 </FeatureLi>
               </ul>
             </div>
@@ -112,25 +130,38 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
           </div>
 
+          <Hr />
+
           <div className="row align-items-center my-8 pb-2">
-            <div className="col-md-4 ml-auto">
+            <div className="col-md-5 ml-auto">
               <h2>
                 <Trans>Pooled investments</Trans>
               </h2>
               <ul className="pl-0 pt-2">
                 <FeatureLi>
                   <Trans>
-                    Ledgy also takes care of pooled investments, helping you understand who owns
-                    what stake in the company
+                    Pooled investments are common in many countries, Ledgy helps you keep them
+                    organized
+                  </Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>View the cap table in legal or economic terms</Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>
+                    Works with numbered shares and you can even run exit modeling with all economic
+                    stakeholders
                   </Trans>
                 </FeatureLi>
               </ul>
             </div>
 
-            <div className="col-md-8 order-md-first" data-aos="fade-right">
+            <div className="col-md-7 order-md-first" data-aos="fade-right">
               <Img {...props.data.pooledInvestment} alt={i18n.t`Pooled investment`} />
             </div>
           </div>
+
+          <Hr />
 
           <div className="row align-items-center my-8 pb-2">
             <div className="col-md-5 ml-auto">
@@ -139,18 +170,25 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               </h2>
               <ul className="pl-0 pt-2">
                 <FeatureLi>
+                  <Trans>Prove your transactions with their respective legal documents</Trans>
+                </FeatureLi>
+                <FeatureLi>
                   <Trans>
-                    Document your legal history from the start and save hours in future due
-                    diligences
+                    Share the documents attached with the stakeholders of this transaction
                   </Trans>
                 </FeatureLi>
                 <FeatureLi>
                   <Trans>
-                    Upload files associated to each of your transactions, share them, and download
-                    them at any time
+                    Quickly pull up legal documents by the information of their linked transactions,
+                    for example all legal documents of a specific stakeholder, share class or date
+                    range
                   </Trans>
                 </FeatureLi>
               </ul>
+              <Link href to={`${props.prefix}/features/collaboration/`}>
+                Learn more about due diligence
+                <ChevronRight />
+              </Link>
             </div>
 
             <div className="col-md-7" data-aos="fade-left">
@@ -158,36 +196,12 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
           </div>
 
-          <div className="row align-items-center my-8 pb-2">
-            <div className="col-md-4 ml-auto">
-              <h2>
-                <Trans>Interactive charts</Trans>
-              </h2>
-              <ul className="pl-0 pt-2">
-                <FeatureLi>
-                  <Trans>
-                    Complete graphical representations of valuation history with state-of-the-art
-                    filters
-                  </Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>
-                    Keep track of your company’s valuation, percentages, or number of shares at any
-                    point in time
-                  </Trans>
-                </FeatureLi>
-              </ul>
-            </div>
-
-            <div className="col-md-8 order-md-first" data-aos="fade-right">
-              <Img {...props.data.valuation} alt={i18n.t`Valuation`} />
-            </div>
-          </div>
+          <Hr />
 
           <div className="row align-items-center my-8">
             <div className="col-md-4 ml-auto">
               <h2>
-                <Trans>Bulk import</Trans>
+                <Trans>Spreadsheet importer</Trans>
               </h2>
               <ul className="pl-0 pt-2">
                 <FeatureLi>
@@ -195,14 +209,13 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                 </FeatureLi>
                 <FeatureLi>
                   <Trans>
-                    As easy as copying and pasting stakeholders, shares issues, or options into one
-                    of our built-in spreadsheets
+                    As easy as copying and pasting stakeholders, shares issues, or options
                   </Trans>
                 </FeatureLi>
               </ul>
             </div>
 
-            <div className="col-md-8" data-aos="fade-left">
+            <div className="col-md-8 order-md-first" data-aos="fade-right">
               <Img {...props.data.bulkEntry} alt={i18n.t`Bulk entry`} />
             </div>
           </div>
@@ -247,11 +260,6 @@ export const pageQuery = graphql`
       }
     }
     bulkEntry: imageSharp(fluid: { originalName: { regex: "/bulk-entry.png/" } }) {
-      fluid(maxWidth: 800) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-    valuation: imageSharp(fluid: { originalName: { regex: "/valuation.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }

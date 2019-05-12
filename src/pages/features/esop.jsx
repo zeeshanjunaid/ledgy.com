@@ -2,11 +2,11 @@
 
 import * as React from 'react';
 import { withI18n, Trans } from '@lingui/react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 
 import { FeatureLinks } from '../../components/Feature';
-import { Title, FeatureLi, Hr } from '../../layouts/utils';
+import { Title, FeatureLi, Hr, ChevronRight } from '../../layouts/utils';
 
 export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
@@ -50,6 +50,9 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                     Get notified of important vesting and expiry events and engage your employees by
                     inviting them to track their stake on Ledgy
                   </Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>Get started in minutes with the copy-paste spreadsheet importer</Trans>
                 </FeatureLi>
               </ul>
             </header>
@@ -143,10 +146,14 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   </Trans>
                 </FeatureLi>
               </ul>
+              <Link href to={`${props.prefix}/features/collaboration/`}>
+                Learn more about collaboration
+                <ChevronRight />
+              </Link>
             </div>
 
             <div className="col-md-7" data-aos="fade-left">
-              <Img {...props.data.optionInPortfolio} alt={i18n.t`ESOPs in the portfolio`} />
+              <Img {...props.data.inviteEmployee} alt={i18n.t`ESOPs in the portfolio`} />
             </div>
           </div>
 
@@ -172,6 +179,26 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
             <div className="col-md-7 order-md-first" data-aos="fade-right">
               <Img {...props.data.dilutedTable} alt={i18n.t`Show cap table fully diluted`} />
+            </div>
+          </div>
+
+          <div className="row align-items-center my-8">
+            <div className="col-md-4 ml-auto">
+              <h2>
+                <Trans>Spreadsheet importer</Trans>
+              </h2>
+              <ul className="pl-0 pt-2">
+                <FeatureLi>
+                  <Trans>Get started in minutes with the copy-paste spreadsheet importer</Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>Copy-pasting employee grants from your existing spreadsheet</Trans>
+                </FeatureLi>
+              </ul>
+            </div>
+
+            <div className="col-md-8" data-aos="fade-left">
+              <Img {...props.data.bulkEntry} alt={i18n.t`Bulk entry`} />
             </div>
           </div>
 
@@ -202,19 +229,17 @@ export const pageQuery = graphql`
         ...GatsbyImageSharpFluid
       }
     }
-    exerciseOption: imageSharp(fluid: { originalName: { regex: "/option-exercise.png/" } }) {
-      fluid(maxWidth: 800) {
-        ...GatsbyImageSharpFluid
-      }
-    }
     dilutedTable: imageSharp(fluid: { originalName: { regex: "/option-diluted-captable.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
     }
-    optionInPortfolio: imageSharp(
-      fluid: { originalName: { regex: "/incentives-dashboard.png/" } }
-    ) {
+    inviteEmployee: imageSharp(fluid: { originalName: { regex: "/incentives-dashboard.png/" } }) {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    bulkEntry: imageSharp(fluid: { originalName: { regex: "/bulk-entry.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
