@@ -164,6 +164,30 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           <div className="row align-items-center pb-7">
             <div className="col-md-5 ml-auto">
               <h2>
+                <Trans>Edit log</Trans>
+              </h2>
+              <ul className="pl-0 pt-3">
+                <FeatureLi>
+                  <Trans>Keep track of who edited what</Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>
+                    Equity data is too important to be accidentally tweaked in a spreadsheet
+                  </Trans>
+                </FeatureLi>
+              </ul>
+            </div>
+
+            <div className="col-md-7 order-md-first" data-aos="fade-right">
+              <Img {...props.data.editLog} alt={i18n.t`Record of edits`} />
+            </div>
+          </div>
+
+          <Hr />
+
+          <div className="row align-items-center pb-7">
+            <div className="col-md-5 ml-auto">
+              <h2>
                 <Trans>Holding confirmations</Trans>
               </h2>
               <ul className="pl-0 pt-3">
@@ -179,7 +203,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               </ul>
             </div>
 
-            <div className="col-md-7 order-md-first" data-aos="fade-right">
+            <div className="col-md-7" data-aos="fade-left">
               <Img {...props.data.holdingConfirmationPdf} alt={i18n.t`Holding confirmation`} />
             </div>
           </div>
@@ -233,6 +257,11 @@ export const pageQuery = graphql`
       }
     }
     valuation: imageSharp(fluid: { originalName: { regex: "/valuation.png/" } }) {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    editLog: imageSharp(fluid: { originalName: { regex: "/uri.jpg/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
