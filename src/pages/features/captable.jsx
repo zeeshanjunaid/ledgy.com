@@ -6,7 +6,7 @@ import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 
 import { FeatureLinks } from '../../components/Feature';
-import { Title, FeatureLi, Hr, ChevronRight } from '../../layouts/utils';
+import { Title, FeatureList, FeatureLi, Hr, ChevronRight } from '../../layouts/utils';
 
 export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
@@ -65,160 +65,110 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <Hr />
 
-          <div className="row align-items-center my-8 pb-2">
-            <div className="col-md-5 ml-auto">
-              <h2>
-                <Trans>All transaction types</Trans>
-              </h2>
-              <ul className="pl-0 pt-2">
-                <FeatureLi>
-                  <Trans>
-                    The transaction based cap table allows browsing through the history and sets it
-                    up for future due diligences, saving you hours of work and lawyer costs
-                  </Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>
-                    Supports issuance, destruction, transfer, class conversion, convertibles, stock
-                    split, valuations, treasury shares and unlimited share classes
-                  </Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>
-                    Analyze your cap table by stakeholder, share class, stakeholder group and view
-                    it with all, only outstanding or diluted shares
-                  </Trans>
-                </FeatureLi>
-              </ul>
-            </div>
-
-            <div className="col-md-7 order-md-first" data-aos="fade-right">
+          <FeatureList
+            textSize="5"
+            header={<Trans>All transaction types</Trans>}
+            features={[
+              <Trans>
+                The transaction-based cap table allows browsing through the history and sets it up
+                for future due diligences, saving you hours of work and lawyer costs
+              </Trans>,
+              <Trans>
+                Ledgy supports issuance, destruction, transfer, class conversion, convertibles,
+                stock split, valuations, treasury shares and unlimited share classes
+              </Trans>,
+              <Trans>
+                Analyze your cap table by stakeholder, share class, stakeholder group and view it
+                with all, only outstanding or diluted shares
+              </Trans>
+            ]}
+            imgSize="7"
+            img={
               <Img {...props.data.availableShares} alt={i18n.t`Available shares for transfer`} />
-            </div>
-          </div>
+            }
+            imgFirst
+          />
 
           <Hr />
 
-          <div className="row align-items-center my-8 pb-2">
-            <div className="col-md-5 mr-auto">
-              <h2>
-                <Trans>Numbered shares</Trans>
-              </h2>
-              <ul className="pl-0 pt-2">
-                <FeatureLi>
-                  <Trans>
-                    In some countries numbering shares is necessary, but this can be a real pain
-                  </Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>
-                    Auto-assign share numbers for all your transactions, Ledgy determines the next
-                    available ones
-                  </Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>
-                    They are checked for consistency, giving you the peace of mind that none go
-                    missing or are assigned twice
-                  </Trans>
-                </FeatureLi>
-              </ul>
-            </div>
-
-            <div className="col-md-7" data-aos="fade-left">
-              <Img {...props.data.shareNumbers} alt={i18n.t`Share number checking`} />
-            </div>
-          </div>
+          <FeatureList
+            textSize="5"
+            header={<Trans>Numbered shares</Trans>}
+            features={[
+              <Trans>
+                In some countries numbering shares is necessary, and it can be a real pain
+              </Trans>,
+              <Trans>
+                Auto-assign share numbers for all your transactions; Ledgy will determine the next
+                available ones
+              </Trans>,
+              <Trans>
+                Numbers are checked for consistency, giving you the peace of mind that none go
+                missing or are assigned twice
+              </Trans>
+            ]}
+            imgSize="7"
+            img={<Img {...props.data.shareNumbers} alt={i18n.t`Share number checking`} />}
+          />
 
           <Hr />
 
-          <div className="row align-items-center my-8 pb-2">
-            <div className="col-md-5 ml-auto">
-              <h2>
-                <Trans>Pooled investments</Trans>
-              </h2>
-              <ul className="pl-0 pt-2">
-                <FeatureLi>
-                  <Trans>
-                    Pooled investments are common in many countries, Ledgy helps you keep them
-                    organized
-                  </Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>View the cap table in legal or economic terms</Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>
-                    Works with numbered shares and you can even run exit modeling with all economic
-                    stakeholders
-                  </Trans>
-                </FeatureLi>
-              </ul>
-            </div>
-
-            <div className="col-md-7 order-md-first" data-aos="fade-right">
-              <Img {...props.data.pooledInvestment} alt={i18n.t`Pooled investment`} />
-            </div>
-          </div>
+          <FeatureList
+            textSize="5"
+            header={<Trans>Pooled investments</Trans>}
+            features={[
+              <Trans>
+                Pooled investments are common in many countries, Ledgy helps you keep them organized
+              </Trans>,
+              <Trans>View the cap table in legal or economic terms</Trans>,
+              <Trans>
+                They work with numbered shares and you can even run exit modeling with all economic
+                stakeholders
+              </Trans>
+            ]}
+            imgSize="7"
+            img={<Img {...props.data.pooledInvestment} alt={i18n.t`Pooled investment`} />}
+            imgFirst
+          />
 
           <Hr />
 
-          <div className="row align-items-center my-8 pb-2">
-            <div className="col-md-5 ml-auto">
-              <h2>
-                <Trans>Attach documents</Trans>
-              </h2>
-              <ul className="pl-0 pt-2">
-                <FeatureLi>
-                  <Trans>Prove your transactions with their respective legal documents</Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>
-                    Share the documents attached with the stakeholders of this transaction
-                  </Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>
-                    Quickly pull up legal documents by the information of their linked transactions,
-                    for example all legal documents of a specific stakeholder, share class or date
-                    range
-                  </Trans>
-                </FeatureLi>
-              </ul>
+          <FeatureList
+            textSize="5"
+            header={<Trans>Attach documents</Trans>}
+            features={[
+              <Trans>Prove your transactions with their respective legal documents</Trans>,
+              <Trans>Share the documents attached with the stakeholders of this transaction</Trans>,
+              <Trans>
+                Quickly pull up legal documents by the information of their linked transactions, for
+                example all legal documents of a specific stakeholder, share class or date range
+              </Trans>
+            ]}
+            imgSize="7"
+            img={
+              <Img {...props.data.attachDocTransaction} alt={i18n.t`Attach doc to transaction`} />
+            }
+            link={
               <Link href to={`${props.prefix}/features/collaboration/`}>
                 Learn more about due diligence
                 <ChevronRight />
               </Link>
-            </div>
-
-            <div className="col-md-7" data-aos="fade-left">
-              <Img {...props.data.attachDocTransaction} alt={i18n.t`Attach doc to transaction`} />
-            </div>
-          </div>
+            }
+          />
 
           <Hr />
 
-          <div className="row align-items-center my-8">
-            <div className="col-md-4 ml-auto">
-              <h2>
-                <Trans>Spreadsheet importer</Trans>
-              </h2>
-              <ul className="pl-0 pt-2">
-                <FeatureLi>
-                  <Trans>Speed up your onboarding process with the bulk import feature</Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>
-                    As easy as copying and pasting stakeholders, shares issues, or options
-                  </Trans>
-                </FeatureLi>
-              </ul>
-            </div>
-
-            <div className="col-md-8 order-md-first" data-aos="fade-right">
-              <Img {...props.data.bulkEntry} alt={i18n.t`Bulk entry`} />
-            </div>
-          </div>
+          <FeatureList
+            textSize="4"
+            header={<Trans>Spreadsheet importer</Trans>}
+            features={[
+              <Trans>Speed up your onboarding process with the bulk import feature</Trans>,
+              <Trans>As easy as copying and pasting stakeholders, shares issues, or options</Trans>
+            ]}
+            imgSize="8"
+            img={<Img {...props.data.bulkEntry} alt={i18n.t`Bulk entry`} />}
+            imgFirst
+          />
 
           <FeatureLinks {...props} i18n={i18n} page="captable" />
         </div>
