@@ -6,7 +6,7 @@ import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 import { FeatureLinks } from '../../components/Feature';
-import { Title, FeatureLi, Hr } from '../../layouts/utils';
+import { Title, FeatureList, FeatureLi, Hr } from '../../layouts/utils';
 
 export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
@@ -60,207 +60,143 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <Hr />
 
-          <div className="row align-items-center my-8 pb-2">
-            <div className="col-md-6 ml-auto">
-              <h2>
-                <Trans>Get the calculations right</Trans>
-              </h2>
-              <ul className="pl-0 pt-2">
-                <FeatureLi>
-                  <Trans>
-                    Add convertibles with cap, discount and interest and see how they convert during
-                    the next round
-                  </Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>
-                    See how many shares have to be reserved for a fixed percentage employee pool
-                  </Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>Use pre- or post-money valuation and see the respective other</Trans>
-                </FeatureLi>
-              </ul>
-            </div>
-
-            <div className="col-md-5 order-md-first" data-aos="fade-right">
-              <Img {...props.data.convertibleForm} alt={i18n.t`Get the calculations right`} />
-            </div>
-          </div>
+          <FeatureList
+            textSize="5"
+            header={<Trans>Get the calculations right</Trans>}
+            features={[
+              <Trans>
+                Add convertibles with cap, discount and interest and see how they convert during the
+                next round
+              </Trans>,
+              <Trans>
+                See how many shares have to be reserved for a fixed percentage employee pool
+              </Trans>,
+              <Trans>Use pre- or post-money valuation and see the respective other</Trans>
+            ]}
+            imgSize="7"
+            img={<Img {...props.data.convertibleForm} alt={i18n.t`Get the calculations right`} />}
+            imgFirst
+          />
 
           <Hr />
 
-          <div className="row align-items-center my-8 pb-2">
-            <div className="col-md-6 ml-auto">
-              <h2>
-                <Trans>Compare and share scenarios</Trans>
-              </h2>
-              <ul className="pl-0 pt-2">
-                <FeatureLi>
-                  <Trans>Add any number of scenarios to compare different possibilities</Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>Copy an existing scenario to compare a few details</Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>
-                    Share your scenarios as pdf, including valuations, investments, convertibles,
-                    amount of shares, and cap table
-                  </Trans>
-                </FeatureLi>
-              </ul>
-            </div>
-
-            <div className="col-md-5" data-aos="fade-left">
+          <FeatureList
+            textSize="5"
+            header={<Trans>Compare and share scenarios</Trans>}
+            features={[
+              <Trans>Add any number of scenarios to compare different possibilities</Trans>,
+              <Trans>Copy an existing scenario to compare a few details</Trans>,
+              <Trans>
+                Share your scenarios as pdf, including valuations, investments, convertibles, amount
+                of shares, and cap table
+              </Trans>
+            ]}
+            imgSize="6"
+            img={
               <Img {...props.data.modelingScenarios} alt={i18n.t`Compare and share scenarios`} />
-            </div>
-          </div>
+            }
+          />
 
           <Hr />
 
-          <div className="row align-items-center my-8 pb-2">
-            <div className="col-md-6 mr-auto">
-              <h2>
-                <Trans>Adjust your simulations</Trans>
-              </h2>
-              <ul className="pl-0 pt-2">
-                <FeatureLi>
-                  <Trans>
-                    Play around with founder- or investor-friendly settings, let convertibles and
-                    pools dilute all or only the existing shareholders
-                  </Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>Rounded share price, or exact to 10 decimals</Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>Round to nearest integer or always down</Trans>
-                </FeatureLi>
-              </ul>
-            </div>
-
-            <div className="col-md-5 order-md-first" data-aos="fade-right">
-              <Img {...props.data.simulationSettings} alt={i18n.t`Simulation settings`} />
-            </div>
-          </div>
+          <FeatureList
+            textSize="6"
+            header={<Trans>Adjust your simulations</Trans>}
+            features={[
+              <Trans>
+                Play around with founder- or investor-friendly settings, let convertibles and pools
+                dilute all or only the existing shareholders
+              </Trans>,
+              <Trans>Rounded share price, or exact to 10 decimals</Trans>,
+              <Trans>
+                Share your scenarios as pdf, including valuations, investments, convertibles, amount
+                of shares, and cap table
+              </Trans>
+            ]}
+            imgSize="6"
+            img={<Img {...props.data.simulationSettings} alt={i18n.t`Simulation settings`} />}
+            imgFirst
+          />
 
           <Hr />
 
-          <div className="row align-items-center my-8 pb-2">
-            <div className="col-md-6 ml-auto">
-              <h2>
-                <Trans>Pro-rata distribution</Trans>
-              </h2>
-              <ul className="pl-0 pt-2">
-                <FeatureLi>
-                  <Trans>
-                    Ledgy makes it easy to simulate an investment with a pro-rata distribution
-                  </Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>
-                    Uses your existing cap table percentages to distribute a fixed amount
-                  </Trans>
-                </FeatureLi>
-              </ul>
-            </div>
-
-            <div className="col-md-5" data-aos="fade-left">
+          <FeatureList
+            textSize="6"
+            header={<Trans>Pro-rata distribution</Trans>}
+            features={[
+              <Trans>
+                Ledgy makes it easy to simulate an investment with a pro-rata distribution
+              </Trans>,
+              <Trans>Uses your existing cap table percentages to distribute a fixed amount</Trans>
+            ]}
+            imgSize="5"
+            img={
               <Img
                 {...props.data.roundModelingProRata}
                 alt={i18n.t`Distribute investment pro-rata`}
               />
-            </div>
-          </div>
+            }
+          />
 
           <Hr />
 
-          <div className="row align-items-center">
-            <div className="col-md-5 ml-auto">
-              <h2>
-                <Trans>Diluted cap table</Trans>
-              </h2>
-              <ul className="pl-0 pt-3">
-                <FeatureLi>
-                  <Trans>Understand the dilution impact of the financing round</Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>
-                    When in round modeling, the cap table below shows the distribution after the
-                    round
-                  </Trans>
-                </FeatureLi>
-              </ul>
-            </div>
-
-            <div className="col-md-7 order-md-first" data-aos="fade-right">
+          <FeatureList
+            textSize="4"
+            header={<Trans>Diluted cap table</Trans>}
+            features={[
+              <Trans>Understand the dilution impact of the financing round</Trans>,
+              <Trans>
+                When in round modeling, the cap table below shows the distribution after the round
+              </Trans>
+            ]}
+            imgSize="8"
+            img={
               <Img
                 {...props.data.roundModelingCaptable}
                 alt={i18n.t`Cap table during round modeling`}
               />
-            </div>
-          </div>
+            }
+            imgFirst
+          />
 
           <Hr />
 
-          <div className="row align-items-center">
-            <div className="col-md-6 ml-auto">
-              <h2>
-                <Trans>Convert to transactions</Trans>
-              </h2>
-              <ul className="pl-0 pt-3">
-                <FeatureLi>
-                  <Trans>
-                    Automatically update the stakeholder list, transaction history and cap table
-                    after the round is finished
-                  </Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>Convert the final scenario in just two clicks</Trans>
-                </FeatureLi>
-              </ul>
-            </div>
-
-            <div className="col-md-6" data-aos="fade-left">
-              <Img {...props.data.roundModelingConvert} alt={i18n.t`Convert financing round`} />
-            </div>
-          </div>
+          <FeatureList
+            textSize="6"
+            header={<Trans>Convert to transactions</Trans>}
+            features={[
+              <Trans>
+                Automatically update the stakeholder list, transaction history and cap table after
+                the round is finished
+              </Trans>,
+              <Trans>Convert the final scenario in just two clicks</Trans>
+            ]}
+            imgSize="6"
+            img={<Img {...props.data.roundModelingConvert} alt={i18n.t`Convert financing round`} />}
+          />
 
           <Hr />
 
-          <div className="row align-items-center pb-7">
-            <div className="col-md-5 mr-auto">
-              <h2>
-                <Trans>Exit Modeling</Trans>
-              </h2>
-              <ul className="pl-0 pt-3">
-                <FeatureLi>
-                  <Trans>Understand the impact of liquidation preferences</Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>
-                    Supports non-participating, participating with and without cap, and interest
-                    payment
-                  </Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>
-                    Calculates waterfall analysis of liquidation preferences accross all rounds
-                  </Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>
-                    Breakpoint analysis show in which valuation ranges the preferences have an
-                    effect and let you optimally plan your strategy
-                  </Trans>
-                </FeatureLi>
-              </ul>
-            </div>
-
-            <div className="col-md-7 order-md-first" data-aos="fade-right">
-              <Img {...props.data.exitModeling} alt={i18n.t`Exit Modeling`} />
-            </div>
-          </div>
+          <FeatureList
+            textSize="5"
+            header={<Trans>Exit Modeling</Trans>}
+            features={[
+              <Trans>Understand the impact of liquidation preferences</Trans>,
+              <Trans>
+                Supports non-participating, participating with and without cap, and interest payment
+              </Trans>,
+              <Trans>
+                Calculates waterfall analysis of liquidation preferences accross all rounds
+              </Trans>,
+              <Trans>
+                Breakpoint analyses show in which valuation ranges the preferences have an effect
+                and let you optimally plan your strategy
+              </Trans>
+            ]}
+            imgSize="7"
+            img={<Img {...props.data.exitModeling} alt={i18n.t`Exit Modeling`} />}
+            imgFirst
+          />
 
           <FeatureLinks {...props} i18n={i18n} page="modeling" />
         </div>
@@ -302,11 +238,6 @@ export const pageQuery = graphql`
         ...GatsbyImageSharpFluid
       }
     }
-    roundModelingPdf: imageSharp(fluid: { originalName: { regex: "/round-modeling-pdf.png/" } }) {
-      fluid(maxWidth: 2000) {
-        ...GatsbyImageSharpFluid
-      }
-    }
     roundModelingConvert: imageSharp(
       fluid: { originalName: { regex: "/round-modeling-convert.png/" } }
     ) {
@@ -319,7 +250,7 @@ export const pageQuery = graphql`
         ...GatsbyImageSharpFluid
       }
     }
-    convertibleForm: imageSharp(fluid: { originalName: { regex: "/uri.jpg/" } }) {
+    convertibleForm: imageSharp(fluid: { originalName: { regex: "/convertible-form.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
