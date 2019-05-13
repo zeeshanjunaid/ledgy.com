@@ -104,7 +104,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           <Feature {...props} name={i18n.t`Collaboration & Due Diligence`} url="collaboration" left>
             <ul className="pl-0 pt-2">
               <FeatureLi>
-                <Trans>Granular access rights, you control it</Trans>
+                <Trans>Granular access rights, you control them</Trans>
               </FeatureLi>
               <FeatureLi>
                 <Trans>

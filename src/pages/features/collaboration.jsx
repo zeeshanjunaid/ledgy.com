@@ -30,10 +30,10 @@ export default withI18n()(({ i18n, ...props }: Props) => (
     <main className="main-content">
       <section className="section overflow-hidden">
         <div className="container text-left">
-          <header className="section-header text-left">
+          <header className="section-header text-left mb-2">
             <ul className="pl-0 pt-2">
               <FeatureLi>
-                <Trans>Granular access rights, you control it</Trans>
+                <Trans>Granular access rights, you control them</Trans>
               </FeatureLi>
               <FeatureLi>
                 <Trans>
@@ -51,8 +51,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           </header>
 
           <div className="row gap-y">
-            <div className="col-md-12 mx-auto mb-7" data-aos="fade-up">
-              <Img {...props.data.accessRights} alt={i18n.t`Stakeholders access rights`} />
+            <div className="col-md-10 mx-auto mb-7">
+              <Img {...props.data.documentLinks} alt={i18n.t`Document links`} />
             </div>
           </div>
 
@@ -167,7 +167,7 @@ export const pageQuery = graphql`
   query {
     ...FeaturesFragment
 
-    shareRegisterPdf: imageSharp(fluid: { originalName: { regex: "/share-register-pdf.png/" } }) {
+    documentLinks: imageSharp(fluid: { originalName: { regex: "/document-links.png/" } }) {
       fluid(maxWidth: 2400) {
         ...GatsbyImageSharpFluid
       }
