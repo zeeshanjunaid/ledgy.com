@@ -197,7 +197,7 @@ export const pageQuery = graphql`
         ...GatsbyImageSharpFluid
       }
     }
-    notificationEmail: imageSharp(fluid: { originalName: { regex: "/uri.jpg/" } }) {
+    notificationEmail: imageSharp(fluid: { originalName: { regex: "/notification-email.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
