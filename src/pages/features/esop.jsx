@@ -162,7 +162,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <Trans>Copy-pasting employee grants from your existing spreadsheet</Trans>
             ]}
             imgSize="8"
-            img={<Img {...props.data.bulkEntry} alt={i18n.t`Bulk entry`} />}
+            img={<Img {...props.data.bulkEntryOptions} alt={i18n.t`Bulk entry options`} />}
           />
 
           <FeatureLinks {...props} i18n={i18n} page="esop" />
@@ -202,7 +202,7 @@ export const pageQuery = graphql`
         ...GatsbyImageSharpFluid
       }
     }
-    bulkEntry: imageSharp(fluid: { originalName: { regex: "/uri.jpg/" } }) {
+    bulkEntryOptions: imageSharp(fluid: { originalName: { regex: "/bulk-entry-options.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
