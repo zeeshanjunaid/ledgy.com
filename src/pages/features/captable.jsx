@@ -70,16 +70,16 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             header={<Trans>All transaction types</Trans>}
             features={[
               <Trans>
-                The transaction-based cap table allows browsing through the history and sets it up
-                for future due diligences, saving you hours of work and lawyer costs
+                It’s transaction based setting it up for future due diligences, saving you hours of
+                work and lawyer costs
               </Trans>,
               <Trans>
-                Ledgy supports issuance, destruction, transfer, class conversion, convertibles,
-                stock split, valuations, treasury shares and unlimited share classes
+                Supports issuance, transfer, convertibles, stock split, valuations, treasury shares,
+                unlimited share classes and more
               </Trans>,
               <Trans>
-                Analyze your cap table by stakeholder, share class, stakeholder group and view it
-                with all, only outstanding or diluted shares
+                Analyze it by stakeholder, share class, stakeholder group and view it with all,
+                outstanding or diluted shares
               </Trans>
             ]}
             imgSize="7"
