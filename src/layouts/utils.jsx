@@ -58,6 +58,16 @@ export const FeatureLi = ({ children }: { children: React.Node }) => (
   </li>
 );
 
+export const FeatureList = ({ features }: { features: Array<React.Node> }) => (
+  <header className="section-header text-left">
+    <ul className="pl-0 pt-2">
+      {features.map(feature => (
+        <FeatureLi>{feature}</FeatureLi>
+      ))}
+    </ul>
+  </header>
+);
+
 export const ChevronRight = () => (
   <FontAwesomeIcon icon={faChevronRight} className="fs-12 ml-2 adjust-bottom swinging" />
 );

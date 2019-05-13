@@ -6,7 +6,7 @@ import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 
 import { FeatureLinks } from '../../components/Feature';
-import { Title, FeatureLi, Hr, ChevronRight } from '../../layouts/utils';
+import { Title, FeatureList, FeatureLi, Hr, ChevronRight } from '../../layouts/utils';
 
 export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
@@ -31,31 +31,21 @@ export default withI18n()(({ i18n, ...props }: Props) => (
       <section className="section overflow-hidden">
         <div className="container text-left">
           <div>
-            <header className="section-header text-left">
-              <ul className="pl-0 pt-2">
-                <FeatureLi>
-                  <Trans>Save hours of work by getting rid of manual spreadsheet processes</Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>
-                    Supports everything from pools to options, phantom options, warrants, vested
-                    stock and inverse vesting
-                  </Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>Keep track of any vesting schedule</Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>
-                    Get notified of important vesting and expiry events and engage your employees by
-                    inviting them to track their stake on Ledgy
-                  </Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>Get started in minutes with the copy-paste spreadsheet importer</Trans>
-                </FeatureLi>
-              </ul>
-            </header>
+            <FeatureList
+              features={[
+                <Trans>Save hours of work by getting rid of manual spreadsheet processes</Trans>,
+                <Trans>
+                  Supports everything from pools to options, phantom options, warrants, vested stock
+                  and inverse vesting
+                </Trans>,
+                <Trans>Keep track of any vesting schedule</Trans>,
+                <Trans>
+                  Get notified of important vesting and expiry events and engage your employees by
+                  inviting them to track their stake on Ledgy
+                </Trans>,
+                <Trans>Get started in minutes with the copy-paste spreadsheet importer</Trans>
+              ]}
+            />
 
             <div className="row gap-y">
               <div className="col-md-12 mx-auto mb-7" data-aos="fade-up">
