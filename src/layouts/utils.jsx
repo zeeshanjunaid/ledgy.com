@@ -58,15 +58,41 @@ export const FeatureLi = ({ children }: { children: React.Node }) => (
   </li>
 );
 
-export const FeatureList = ({ features }: { features: Array<React.Node> }) => (
-  <header className="section-header text-left">
-    <ul className="pl-0 pt-2">
-      {features.map(feature => (
-        <FeatureLi>{feature}</FeatureLi>
-      ))}
-    </ul>
-  </header>
+export const FeatureList = ({
+  textSize,
+  imgSize,
+  header,
+  features,
+  fade,
+  img,
+  imgFirst
+}: {
+  textSize: string,
+  imgSize: string,
+  header: React.Node,
+  features: Array<React.Node>,
+  fade: string,
+  img: React.Node,
+  imgFirst?: boolean
+}) => (
+  <div className="row align-items-center my-8 pb-3">
+    <div className={`col-md-${textSize} ${imgFirst ? 'ml-auto' : 'mr-auto'}`}>
+      <h2>{header}</h2>
+      <ul className="pl-0 pt-2">
+        {features.map(feature => (
+          <FeatureLi>{feature}</FeatureLi>
+        ))}
+      </ul>
+    </div>
+    <div
+      className={`col-md-${imgSize} ${imgFirst ? 'order-md-first mr-auto' : 'ml-auto'}`}
+      data-aos={`fade-${fade}`}
+    >
+      {img}
+    </div>
+  </div>
 );
+FeatureList.defaultProps = { imgFirst: false };
 
 export const ChevronRight = () => (
   <FontAwesomeIcon icon={faChevronRight} className="fs-12 ml-2 adjust-bottom swinging" />

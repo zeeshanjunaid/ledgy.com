@@ -31,21 +31,31 @@ export default withI18n()(({ i18n, ...props }: Props) => (
       <section className="section overflow-hidden">
         <div className="container text-left">
           <div>
-            <FeatureList
-              features={[
-                <Trans>Save hours of work by getting rid of manual spreadsheet processes</Trans>,
-                <Trans>
-                  Supports everything from pools to options, phantom options, warrants, vested stock
-                  and inverse vesting
-                </Trans>,
-                <Trans>Keep track of any vesting schedule</Trans>,
-                <Trans>
-                  Get notified of important vesting and expiry events and engage your employees by
-                  inviting them to track their stake on Ledgy
-                </Trans>,
-                <Trans>Get started in minutes with the copy-paste spreadsheet importer</Trans>
-              ]}
-            />
+            <header className="section-header text-left">
+              <ul className="pl-0 pt-2">
+                <FeatureLi>
+                  <Trans>Save hours of work by getting rid of manual spreadsheet processes</Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>
+                    Supports everything from pools to options, phantom options, warrants, vested
+                    stock and inverse vesting
+                  </Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>Keep track of any vesting schedule</Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>
+                    Get notified of important vesting and expiry events and engage your employees by
+                    inviting them to track their stake on Ledgy
+                  </Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>Get started in minutes with the copy-paste spreadsheet importer</Trans>
+                </FeatureLi>
+              </ul>
+            </header>
 
             <div className="row gap-y">
               <div className="col-md-12 mx-auto mb-7" data-aos="fade-up">
@@ -59,34 +69,24 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <Hr />
 
-          <div className="row align-items-center my-8 pb-3">
-            <div className="col-md-5 mr-auto">
-              <h2>
-                <Trans>Supports everything</Trans>
-              </h2>
-              <ul className="pl-0 pt-2">
-                <FeatureLi>
-                  <Trans>
-                    Create option or phantom pools reserved for employees and keep track of how much
-                    is granted, available, vested and exercised
-                  </Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>
-                    Grant options, phantom options, warrants or add inverse vesting to stock
-                    transactions
-                  </Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>Track exercise, termination and expiration</Trans>
-                </FeatureLi>
-              </ul>
-            </div>
-
-            <div className="col-md-7" data-aos="fade-left">
-              <Img {...props.data.addOption} alt={i18n.t`Add an option pool`} />
-            </div>
-          </div>
+          <FeatureList
+            textSize="5"
+            header={<Trans>Supports everything</Trans>}
+            features={[
+              <Trans>
+                Create option or phantom pools reserved for employees and keep track of how much is
+                granted, available, vested and exercised
+              </Trans>,
+              <Trans>
+                Grant options, phantom options, warrants or add inverse vesting to stock
+                transactions
+              </Trans>,
+              <Trans>Track exercise, termination and expiration</Trans>
+            ]}
+            imgSize="7"
+            fade="left"
+            img={<Img {...props.data.addOption} alt={i18n.t`Add an option pool`} />}
+          />
 
           <Hr />
 
