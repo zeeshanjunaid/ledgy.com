@@ -178,11 +178,6 @@ export const pageQuery = graphql`
   query {
     ...FeaturesFragment
 
-    dashboardCards: imageSharp(fluid: { originalName: { regex: "/dashboard-cards.png/" } }) {
-      fluid(maxWidth: 800) {
-        ...GatsbyImageSharpFluid
-      }
-    }
     dashboardShares: imageSharp(fluid: { originalName: { regex: "/dashboard-shares.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid

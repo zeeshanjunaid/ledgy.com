@@ -177,13 +177,6 @@ export const pageQuery = graphql`
         ...GatsbyImageSharpFluid
       }
     }
-    downloadHoldingConfirmation: imageSharp(
-      fluid: { originalName: { regex: "/download-holding-confirmation.png/" } }
-    ) {
-      fluid(maxWidth: 800) {
-        ...GatsbyImageSharpFluid
-      }
-    }
     holdingConfirmationPdf: imageSharp(
       fluid: { originalName: { regex: "/holding-confirmation-pdf.png/" } }
     ) {
@@ -194,11 +187,6 @@ export const pageQuery = graphql`
     documentManagement: imageSharp(
       fluid: { originalName: { regex: "/document-management.png/" } }
     ) {
-      fluid(maxWidth: 800) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-    dashboardShares: imageSharp(fluid: { originalName: { regex: "/dashboard-shares.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
