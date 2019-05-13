@@ -84,116 +84,86 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <Trans>Track exercise, termination and expiration</Trans>
             ]}
             imgSize="7"
-            fade="left"
             img={<Img {...props.data.addOption} alt={i18n.t`Add an option pool`} />}
           />
 
           <Hr />
 
-          <div className="row align-items-center my-8 pb-3">
-            <div className="col-md-5">
-              <h2>
-                <Trans>Any vesting schedule</Trans>
-              </h2>
-              <ul className="pl-0 pt-2">
-                <FeatureLi>
-                  <Trans>Add vesting or inverse vesting to any transaction</Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>
-                    Either use simple linear vesting with duration, interval and cliff, define your
-                    own custom vesting schedule, or select a preset
-                  </Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>Visualizations help you understand what happens</Trans>
-                </FeatureLi>
-              </ul>
-            </div>
-
-            <div className="col-md-7 order-md-first mr-auto" data-aos="fade-right">
-              <Img {...props.data.addVesting} alt={i18n.t`Add vesting`} />
-            </div>
-          </div>
+          <FeatureList
+            textSize="5"
+            header={<Trans>Any vesting schedule</Trans>}
+            features={[
+              <Trans>Add vesting or inverse vesting to any transaction</Trans>,
+              <Trans>
+                Either use simple linear vesting with duration, interval and cliff, define your own
+                custom vesting schedule, or select a preset
+              </Trans>,
+              <Trans>Visualizations help you understand what happens</Trans>
+            ]}
+            imgSize="7"
+            img={<Img {...props.data.addVesting} alt={i18n.t`Add vesting`} />}
+            imgFirst
+          />
 
           <Hr />
 
-          <div className="row align-items-center my-8">
-            <div className="col-md-5 ml-auto">
-              <h2>
-                <Trans>Engage your employees</Trans>
-              </h2>
-              <ul className="pl-0 pt-2">
-                <FeatureLi>
-                  <Trans>
-                    Get notified two weeks before a cliff or vesting ends or a grant expires to not
-                    miss using your participation plan for engaging your employees
-                  </Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>
-                    Invite your employees to track their stake and vesting in their Ledgy portfolio
-                  </Trans>
-                </FeatureLi>
-              </ul>
-              <Link href to={`${props.prefix}/features/collaboration/`}>
-                Learn more about collaboration
-                <ChevronRight />
-              </Link>
-            </div>
-
-            <div className="col-md-7" data-aos="fade-left">
+          <FeatureList
+            textSize="5"
+            header={<Trans>Engage your employees</Trans>}
+            features={[
+              <Trans>
+                Get notified two weeks before a cliff or vesting ends or a grant expires to not miss
+                using your participation plan for engaging your employees
+              </Trans>,
+              <Trans>
+                Invite your employees to track their stake and vesting in their Ledgy portfolio
+              </Trans>,
+              <Trans>Track exercise, termination and expiration</Trans>
+            ]}
+            imgSize="7"
+            img={
               <Img
                 {...props.data.notificationEmail}
                 alt={i18n.t`Email notification about upcoming vesting event`}
               />
-            </div>
-          </div>
+            }
+            link={
+              <Link href to={`${props.prefix}/features/collaboration/`}>
+                Learn more about collaboration
+                <ChevronRight />
+              </Link>
+            }
+          />
 
           <Hr />
 
-          <div className="row align-items-center my-8">
-            <div className="col-md-5 ml-auto">
-              <h2>
-                <Trans>Diluted cap table</Trans>
-              </h2>
-              <ul className="pl-0 pt-2">
-                <FeatureLi>
-                  <Trans>See your pools and employee participation grants in the cap table</Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>
-                    Choose to only show pools or the detailed view with the grants distributed to
-                    their holders
-                  </Trans>
-                </FeatureLi>
-              </ul>
-            </div>
+          <FeatureList
+            textSize="5"
+            header={<Trans>Diluted cap table</Trans>}
+            features={[
+              <Trans>See your pools and employee participation grants in the cap table</Trans>,
+              <Trans>
+                Choose to only show pools or the detailed view with the grants distributed to their
+                holders
+              </Trans>
+            ]}
+            imgSize="7"
+            img={<Img {...props.data.dilutedTable} alt={i18n.t`Show cap table fully diluted`} />}
+            imgFirst
+          />
 
-            <div className="col-md-7 order-md-first" data-aos="fade-right">
-              <Img {...props.data.dilutedTable} alt={i18n.t`Show cap table fully diluted`} />
-            </div>
-          </div>
+          <Hr />
 
-          <div className="row align-items-center my-8">
-            <div className="col-md-4 ml-auto">
-              <h2>
-                <Trans>Spreadsheet importer</Trans>
-              </h2>
-              <ul className="pl-0 pt-2">
-                <FeatureLi>
-                  <Trans>Get started in minutes with the copy-paste spreadsheet importer</Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>Copy-pasting employee grants from your existing spreadsheet</Trans>
-                </FeatureLi>
-              </ul>
-            </div>
-
-            <div className="col-md-8" data-aos="fade-left">
-              <Img {...props.data.bulkEntry} alt={i18n.t`Bulk entry`} />
-            </div>
-          </div>
+          <FeatureList
+            textSize="4"
+            header={<Trans>Spreadsheet importer</Trans>}
+            features={[
+              <Trans>Get started in minutes with the copy-paste spreadsheet importer</Trans>,
+              <Trans>Copy-pasting employee grants from your existing spreadsheet</Trans>
+            ]}
+            imgSize="8"
+            img={<Img {...props.data.bulkEntry} alt={i18n.t`Bulk entry`} />}
+          />
 
           <FeatureLinks {...props} i18n={i18n} page="esop" />
         </div>
