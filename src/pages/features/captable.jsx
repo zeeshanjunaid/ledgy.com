@@ -13,7 +13,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
     <Title
       title={i18n.t`Single source of truth`}
       section={i18n.t`Features`}
-      description={i18n.t`Track the complete history of your shares. Integrated consistency checks will guarantee that your cap table is error-free. Collaborate on a single source of truth.`}
+      description={i18n.t`Intuitive, legally valid and error-free cap table from the beginning, supporting all transaction types, unlimited share classes, pooled investments and numbered shares.`}
     />
 
     <header className="header text-white bg-ledgy">

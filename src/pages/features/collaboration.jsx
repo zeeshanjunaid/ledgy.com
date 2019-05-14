@@ -13,7 +13,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
     <Title
       title={i18n.t`Collaboration & Due Diligence`}
       section={i18n.t`Features`}
-      description={i18n.t`Save painful work inserting numbers into templates. Automated documents and reports at your fingertips.`}
+      description={i18n.t`Secure data room, audit trail and read-only access for investors; save costly due diligence tools.`}
     />
 
     <header className="header text-white bg-ledgy">

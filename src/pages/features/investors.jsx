@@ -13,7 +13,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
     <Title
       title={i18n.t`Investor Relations & Portfolio`}
       section={i18n.t`Features`}
-      description={i18n.t`Investors love to track the progress of their companies. Help them to be excited about what you have achieved.`}
+      description={i18n.t`As a startup, be professional towards your investors, track KPIs, write recurring reports. As an investor, this is the simplest and most time-efficient way to manage your portfolio.`}
     />
 
     <header className="header text-white bg-ledgy">

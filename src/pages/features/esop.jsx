@@ -13,7 +13,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
     <Title
       title={i18n.t`ESOP`}
       section={i18n.t`Features`}
-      description={i18n.t`Keep your employees motivated at work. They deserve it. Ledgy's ESOP module will help you to make it happen.`}
+      description={i18n.t`Save hours of work by getting rid of manual spreadsheet processes, keep track of any vesting schedule, get notified of important vesting and expiry events, get started in minutes with the spreadsheet importer.`}
     />
 
     <header className="header text-white bg-ledgy">

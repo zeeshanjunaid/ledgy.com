@@ -13,7 +13,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
     <Title
       title={i18n.t`Round and Exit Modeling`}
       section={i18n.t`Features`}
-      description={i18n.t`Simulate the outcome of your upcoming financing rounds. Detailed models give you a headstart over angels and VCs.`}
+      description={i18n.t`Understand how dilution works by quickly comparing different modeling scenarios for financing rounds and exits, including convertibles and employee pools.`}
     />
 
     <header className="header text-white bg-ledgy">
