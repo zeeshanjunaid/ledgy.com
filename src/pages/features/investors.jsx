@@ -7,7 +7,7 @@ import Img from 'gatsby-image';
 import { faFolderOpen, faFilePdf, faHistory, faChartLine } from '@fortawesome/free-solid-svg-icons';
 
 import { FeatureLinks, FeatureList, TopPageFeatureCard } from '../../components/Feature';
-import { Title, Hr } from '../../layouts/utils';
+import { Title } from '../../layouts/utils';
 
 export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
@@ -29,7 +29,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
       </div>
     </header>
     <main className="main-content">
-      <section className="section overflow-hidden">
+      <section className="section overflow-hidden pb-0 pt-7">
         <div className="container text-left">
           <div className="row pb-7">
             <TopPageFeatureCard
@@ -66,100 +66,82 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         </div>
       </section>
 
-      <section className="section overflow-hidden pb-0 pt-2" id="reports">
-        <div className="container text-left">
-          <Hr />
-          <FeatureList
-            textSize="5"
-            header={<Trans>Recurring Reports</Trans>}
-            features={[
-              <Trans>
-                Successful companies share regular updates with their stakeholders, holding
-                themselves accountable
-              </Trans>,
-              <Trans>Style your reports to your needs with the rich-text editor</Trans>,
-              <Trans>Attach your KPIs and any documents</Trans>,
-              <Trans>
-                Publish your reports once done, which will share them with your selected
-                stakeholders
-              </Trans>
-            ]}
-            imgSize="7"
-            img={<Img {...props.data.reportExample} alt={i18n.t`Report`} />}
-          />
-        </div>
-      </section>
+      <FeatureList
+        textSize="5"
+        header={<Trans>Recurring Reports</Trans>}
+        features={[
+          <Trans>
+            Successful companies share regular updates with their stakeholders, holding themselves
+            accountable
+          </Trans>,
+          <Trans>Style your reports to your needs with the rich-text editor</Trans>,
+          <Trans>Attach your KPIs and any documents</Trans>,
+          <Trans>
+            Publish your reports once done, which will share them with your selected stakeholders
+          </Trans>
+        ]}
+        imgSize="7"
+        img={<Img {...props.data.reportExample} alt={i18n.t`Report`} />}
+        id="reports"
+      />
 
-      <section className="section overflow-hidden pb-0 pt-2" id="kpis">
-        <div className="container text-left">
-          <Hr />
-          <FeatureList
-            textSize="5"
-            header={<Trans>Key Performance Indicators</Trans>}
-            features={[
-              <Trans>Every company has KPIs, and investors love seeing them in real-time</Trans>,
-              <Trans>Just copy-paste expected and actual values and customize the plots</Trans>,
-              <Trans>Share them with individual stakeholders or with stakeholder groups</Trans>
-            ]}
-            imgSize="7"
-            img={<Img {...props.data.kpiChart} alt={i18n.t`Kpi chart`} />}
-            imgFirst
-          />
-        </div>
-      </section>
+      <FeatureList
+        textSize="5"
+        header={<Trans>Key Performance Indicators</Trans>}
+        features={[
+          <Trans>Every company has KPIs, and investors love seeing them in real-time</Trans>,
+          <Trans>Just copy-paste expected and actual values and customize the plots</Trans>,
+          <Trans>Share them with individual stakeholders or with stakeholder groups</Trans>
+        ]}
+        imgSize="7"
+        img={<Img {...props.data.kpiChart} alt={i18n.t`Kpi chart`} />}
+        imgFirst
+        id="kpis"
+      />
 
-      <section className="section overflow-hidden pb-0 pt-2" id="professional">
-        <div className="container text-left">
-          <Hr />
-          <FeatureList
-            textSize="5"
-            header={<Trans>Professional portfolio</Trans>}
-            features={[
-              <Trans>Always up-to-date portfolio, curated by your startups</Trans>,
-              <Trans>Keep an eye on your investments, their value and multiple</Trans>,
-              <Trans>Weekly email notifications if the startups publish new information</Trans>
-            ]}
-            imgSize="7"
-            img={<Img {...props.data.dashboardShares} alt={i18n.t`Investor portfolio`} />}
-          />
-        </div>
-      </section>
+      <FeatureList
+        textSize="5"
+        header={<Trans>Professional portfolio</Trans>}
+        features={[
+          <Trans>Always up-to-date portfolio, curated by your startups</Trans>,
+          <Trans>Keep an eye on your investments, their value and multiple</Trans>,
+          <Trans>Weekly email notifications if the startups publish new information</Trans>
+        ]}
+        imgSize="7"
+        img={<Img {...props.data.dashboardShares} alt={i18n.t`Investor portfolio`} />}
+        id="professional"
+      />
 
-      <section className="section overflow-hidden pb-0 pt-2" id="portfolioHistory">
-        <div className="container text-left">
-          <Hr />
-          <FeatureList
-            textSize="4"
-            header={<Trans>Portfolio history</Trans>}
-            features={[
-              <Trans>Comprehensive transaction history</Trans>,
-              <Trans>Legal documents associated with the transactions at your fingertips</Trans>
-            ]}
-            imgSize="8"
-            img={<Img {...props.data.dashboardHistory} alt={i18n.t`Portfolio history`} />}
-            imgFirst
-          />
-        </div>
-      </section>
+      <FeatureList
+        textSize="4"
+        header={<Trans>Portfolio history</Trans>}
+        features={[
+          <Trans>Comprehensive transaction history</Trans>,
+          <Trans>Legal documents associated with the transactions at your fingertips</Trans>
+        ]}
+        imgSize="8"
+        img={<Img {...props.data.dashboardHistory} alt={i18n.t`Portfolio history`} />}
+        imgFirst
+        id="portfolioHistory"
+      />
+
+      <FeatureList
+        textSize="5"
+        header={<Trans>Complete your portfolio</Trans>}
+        features={[
+          <Trans>
+            Add an investment, if a company is not using Ledgy yet to complete your portfolio
+          </Trans>,
+          <Trans>
+            Invite the founder or CFO to claim the company and keep the information up-to-date
+          </Trans>
+        ]}
+        imgSize="7"
+        img={<Img {...props.data.addInvestment} alt={i18n.t`Add portfolio investment`} />}
+      />
 
       <section className="section overflow-hidden pt-2">
         <div className="container text-left">
-          <Hr />
-          <FeatureList
-            textSize="5"
-            header={<Trans>Complete your portfolio</Trans>}
-            features={[
-              <Trans>
-                Add an investment, if a company is not using Ledgy yet to complete your portfolio
-              </Trans>,
-              <Trans>
-                Invite the founder or CFO to claim the company and keep the information up-to-date
-              </Trans>
-            ]}
-            imgSize="7"
-            img={<Img {...props.data.addInvestment} alt={i18n.t`Add portfolio investment`} />}
-          />
-
           <FeatureLinks {...props} i18n={i18n} page="investors" />
         </div>
       </section>
