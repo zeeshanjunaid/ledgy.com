@@ -29,7 +29,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
       </div>
     </header>
     <main className="main-content">
-      <section className="section overflow-hidden pb-0 pt-6">
+      <section className="section overflow-hidden pb-0 pt-7">
         <div className="container text-left">
           <div className="row pb-8">
             <TopPageFeatureCard

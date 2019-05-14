@@ -55,7 +55,7 @@ export const ChevronRight = () => (
   <FontAwesomeIcon icon={faChevronRight} className="fs-12 ml-2 adjust-bottom swinging" />
 );
 
-export const Hr = () => <hr className="my-4 my-md-7" />;
+export const Hr = () => <hr className="my-5 my-md-7" />;
 
 export const animateTablet = () => {
   let scrolling = false;

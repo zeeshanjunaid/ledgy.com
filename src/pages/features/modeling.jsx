@@ -29,7 +29,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
       </div>
     </header>
     <main className="main-content">
-      <section className="section overflow-hidden pb-0 pt-6">
+      <section className="section overflow-hidden pb-0 pt-7">
         <div className="container text-left">
           <div className="row pb-8">
             <TopPageFeatureCard
@@ -59,7 +59,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           </div>
 
           <div className="row gap-y">
-            <div className="col-md-10 mx-auto mb-7" data-aos="fade-up">
+            <div className="col-md-10 mx-auto mb-5" data-aos="fade-up">
               <Img {...props.data.roundModelingSample} alt={i18n.t`Round Modeling`} />
             </div>
           </div>

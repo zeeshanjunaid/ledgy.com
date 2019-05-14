@@ -34,9 +34,9 @@ export default withI18n()(({ i18n, ...props }: Props) => (
       </div>
     </header>
     <main className="main-content">
-      <section className="section pb-0 pt-6 overflow-hidden">
+      <section className="section pb-0 pt-7 overflow-hidden">
         <div className="container text-left">
-          <div className="row pb-8">
+          <div className="row pb-7">
             <TopPageFeatureCard
               header={<Trans>Granular access rights</Trans>}
               body={<Trans>so you control what others can see and do</Trans>}
@@ -93,7 +93,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         img={<Img {...props.data.accessRights} alt={i18n.t`Stakeholders access rights`} />}
         id="access"
       />
-      >
+
       <FeatureList
         textSize="5"
         header={<Trans>Due diligence history</Trans>}
