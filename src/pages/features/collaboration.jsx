@@ -5,8 +5,8 @@ import { withI18n, Trans } from '@lingui/react';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 
-import { FeatureLinks } from '../../components/Feature';
-import { Title, FeatureList, FeatureLi, Hr, ChevronRight } from '../../layouts/utils';
+import { FeatureLinks, FeatureList, FeatureLi } from '../../components/Feature';
+import { Title, Hr, ChevronRight } from '../../layouts/utils';
 
 export default withI18n()(({ i18n, ...props }: Props) => (
   <div>

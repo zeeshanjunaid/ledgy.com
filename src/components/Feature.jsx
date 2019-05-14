@@ -4,6 +4,8 @@ import * as React from 'react';
 import { Trans } from '@lingui/react';
 import { Link, graphql } from 'gatsby';
 import Img from 'gatsby-image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDotCircle } from '@fortawesome/free-solid-svg-icons';
 
 import { ChevronRight } from '../layouts/utils';
 
@@ -100,6 +102,59 @@ export const FeatureLinks = ({
         <FeatureLink {...props} name={i18n.t`Investor Relations & Portfolio`} url="investors" />
       </div>
     </div>
+  </div>
+);
+
+export const FeatureLi = ({ children }: { children: React.Node }) => (
+  <li className="media">
+    <FontAwesomeIcon icon={faDotCircle} className="text-primary fa-xs mt-2" />
+    <div className="media-body ml-4 mb-4">{children}</div>
+  </li>
+);
+
+export const FeatureList = (props: {
+  textSize: string,
+  imgSize: string,
+  header: React.Node,
+  features: Array<React.Node>,
+  img: React.Node,
+  imgFirst?: boolean,
+  link?: React.Node
+}) => (
+  <div className="row align-items-center my-8 pb-3">
+    <div className={`col-md-${props.textSize} ${props.imgFirst ? 'ml-auto' : 'mr-auto'}`}>
+      <h2>{props.header}</h2>
+      <ul className="pl-0 pt-2">
+        {props.features.map(feature => (
+          <FeatureLi>{feature}</FeatureLi>
+        ))}
+      </ul>
+      {props.link}
+    </div>
+    <div
+      className={`col-md-${props.imgSize} ${props.imgFirst ? 'order-md-first mr-auto' : 'ml-auto'}`}
+      data-aos={`fade-${props.imgFirst ? 'right' : 'left'}`}
+    >
+      {props.img}
+    </div>
+  </div>
+);
+FeatureList.defaultProps = { imgFirst: false, link: <React.Fragment /> };
+
+export const TopPageFeatureCard = (props: {
+  header: React.Node,
+  body: React.Node,
+  icon: string,
+  href: string
+}) => (
+  <div className="col-md-6 pb-2">
+    <a href={props.href}>
+      <div className="top-page-feature-card card border hover-shadow-8 hover-translateY">
+        <FontAwesomeIcon icon={props.icon} className="top-page-feature-icon text-primary" />
+        <h5 className="m-0 text-primary">{props.header}</h5>
+        <p className="m-0">{props.body}</p>
+      </div>
+    </a>
   </div>
 );
 
