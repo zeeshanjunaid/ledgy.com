@@ -4,8 +4,9 @@ import * as React from 'react';
 import { withI18n, Trans } from '@lingui/react';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
+import { faFolderOpen, faFilePdf, faHistory, faChartLine } from '@fortawesome/free-solid-svg-icons';
 
-import { FeatureLinks, FeatureLi } from '../../components/Feature';
+import { FeatureLinks, FeatureLi, FeatureList, TopPageFeatureCard } from '../../components/Feature';
 import { Title, Hr } from '../../layouts/utils';
 
 export default withI18n()(({ i18n, ...props }: Props) => (
@@ -30,174 +31,134 @@ export default withI18n()(({ i18n, ...props }: Props) => (
     <main className="main-content">
       <section className="section overflow-hidden">
         <div className="container text-left">
-          <header className="section-header mb-5 text-left">
-            <ul className="pl-0 pt-2">
-              <FeatureLi>
-                <Trans>As a startup, be professional towards your investors</Trans>
-              </FeatureLi>
-              <FeatureLi>
-                <Trans>
-                  Track KPIs, write recurring reports and share them with your investors
-                </Trans>
-              </FeatureLi>
-              <FeatureLi>
-                <Trans>
-                  As an investor, this is the simplest and most time-efficient way to manage your
-                  portfolio
-                </Trans>
-              </FeatureLi>
-              <FeatureLi>
-                <Trans>
-                  Get equity and reporting updates from your portfolio in one place, from
-                  transaction history to legal documents, valuations, KPIs and reports
-                </Trans>
-              </FeatureLi>
-            </ul>
-          </header>
+          <div className="row pb-7">
+            <TopPageFeatureCard
+              header={<Trans>Recurring reports</Trans>}
+              body={<Trans>including KPIs and generated in a click</Trans>}
+              icon={faFilePdf}
+              href="#reports"
+            />
+            <TopPageFeatureCard
+              header={<Trans>KPIs</Trans>}
+              body={<Trans>your key performance data for your reports</Trans>}
+              icon={faChartLine}
+              href="#kpis"
+            />
+            <TopPageFeatureCard
+              header={<Trans>Professional portfolio</Trans>}
+              body={<Trans>to stay up to date with all your investments</Trans>}
+              icon={faFolderOpen}
+              href="#professional"
+            />
+            <TopPageFeatureCard
+              header={<Trans>Portfolio history</Trans>}
+              body={<Trans>to keep track of all that’s happened</Trans>}
+              icon={faHistory}
+              href="#portfolioHistory"
+            />
+          </div>
 
           <div className="row gap-y">
             <div className="col-md-11 mx-auto mb-7" data-aos="fade-up">
               <Img {...props.data.kpiChart} alt={i18n.t`KPI chart`} />
             </div>
           </div>
+        </div>
+      </section>
 
+      <section className="section overflow-hidden pb-0 pt-2" id="reports">
+        <div className="container text-left">
           <Hr />
+          <FeatureList
+            textSize="5"
+            header={<Trans>Recurring Reports</Trans>}
+            features={[
+              <Trans>
+                Successful companies share regular updates with their stakeholders, holding
+                themselves accountable
+              </Trans>,
+              <Trans>Style your reports to your needs with the rich-text editor</Trans>,
+              <Trans>Attach your KPIs and any documents</Trans>,
+              <Trans>
+                Publish your reports once done, which will share them with your selected
+                stakeholders
+              </Trans>
+            ]}
+            imgSize="7"
+            img={<Img {...props.data.reportExample} alt={i18n.t`Report`} />}
+          />
+        </div>
+      </section>
 
-          <div className="row align-items-center">
-            <div className="col-md-5 ml-auto">
-              <h2>
-                <Trans>Recurring Reports</Trans>
-              </h2>
-              <ul className="pl-0 pt-3">
-                <FeatureLi>
-                  <Trans>
-                    Successful companies share regular updates with their stakeholders, holding
-                    themselves accountable
-                  </Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>Style your reports to your needs with the rich-text editor</Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>Attach your KPIs and any documents</Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>
-                    Publish your reports once done, which will share them with your selected
-                    stakeholders
-                  </Trans>
-                </FeatureLi>
-              </ul>
-            </div>
-
-            <div className="col-md-7 order-md-first" data-aos="fade-right">
-              <Img {...props.data.reportExample} alt={i18n.t`Report`} />
-            </div>
-          </div>
-
+      <section className="section overflow-hidden pb-0 pt-2" id="kpis">
+        <div className="container text-left">
           <Hr />
+          <FeatureList
+            textSize="5"
+            header={<Trans>Key Performance Indicators</Trans>}
+            features={[
+              <Trans>Every company has KPIs, and investors love seeing them in real-time</Trans>,
+              <Trans>Just copy-paste expected and actual values and customize the plots</Trans>,
+              <Trans>Share them with individual stakeholders or with stakeholder groups</Trans>
+            ]}
+            imgSize="7"
+            img={<Img {...props.data.kpiChart} alt={i18n.t`Kpi chart`} />}
+            imgFirst
+          />
+        </div>
+      </section>
 
-          <div className="row align-items-center">
-            <div className="col-md-5 mr-auto">
-              <h2>
-                <Trans>Key Performance Indicators</Trans>
-              </h2>
-
-              <ul className="pl-0 pt-2">
-                <FeatureLi>
-                  <Trans>Every company has KPIs, and investors love seeing them in real-time</Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>Just copy-paste expected and actual values and customize the plots</Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>Share them with individual stakeholders or with stakeholder groups</Trans>
-                </FeatureLi>
-              </ul>
-            </div>
-
-            <div className="col-md-7" data-aos="fade-left">
-              <Img {...props.data.kpiChart} alt={i18n.t`Kpi chart`} />
-            </div>
-          </div>
-
+      <section className="section overflow-hidden pb-0 pt-2" id="professional">
+        <div className="container text-left">
           <Hr />
+          <FeatureList
+            textSize="5"
+            header={<Trans>Professional portfolio</Trans>}
+            features={[
+              <Trans>Always up-to-date portfolio, curated by your startups</Trans>,
+              <Trans>Keep an eye on your investments, their value and multiple</Trans>,
+              <Trans>Weekly email notifications if the startups publish new information</Trans>
+            ]}
+            imgSize="7"
+            img={<Img {...props.data.dashboardShares} alt={i18n.t`Investor portfolio`} />}
+          />
+        </div>
+      </section>
 
-          <div className="row align-items-center">
-            <div className="col-md-4 mr-auto">
-              <h2>
-                <Trans>Professional portfolio</Trans>
-              </h2>
-
-              <ul className="pl-0 pt-2">
-                <FeatureLi>
-                  <Trans>Always up-to-date portfolio, curated by your startups</Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>Keep an eye on your investments, their value and multiple</Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>Weekly Email notifications if the startups publish new information</Trans>
-                </FeatureLi>
-              </ul>
-            </div>
-
-            <div className="col-md-8 mx-auto mb-7 order-md-first" data-aos="fade-right">
-              <Img {...props.data.dashboardShares} alt={i18n.t`Investor portfolio`} />{' '}
-            </div>
-          </div>
-
+      <section className="section overflow-hidden pb-0 pt-2" id="portfolioHistory">
+        <div className="container text-left">
           <Hr />
+          <FeatureList
+            textSize="4"
+            header={<Trans>Portfolio history</Trans>}
+            features={[
+              <Trans>Comprehensive transaction history</Trans>,
+              <Trans>Legal documents associated with the transactions at your fingertips</Trans>
+            ]}
+            imgSize="8"
+            img={<Img {...props.data.dashboardHistory} alt={i18n.t`Portfolio history`} />}
+            imgFirst
+          />
+        </div>
+      </section>
 
-          <div className="row align-items-center">
-            <div className="col-md-4 mr-auto">
-              <h2>
-                <Trans>Portfolio history</Trans>
-              </h2>
-
-              <ul className="pl-0 pt-2">
-                <FeatureLi>
-                  <Trans>Comprehensive transaction history</Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>Legal documents associated with the transactions at your fingertips</Trans>
-                </FeatureLi>
-              </ul>
-            </div>
-
-            <div className="col-md-8 mx-auto mb-7" data-aos="fade-left">
-              <Img {...props.data.dashboardHistory} alt={i18n.t`Portfolio history`} />{' '}
-            </div>
-          </div>
-
+      <section className="section overflow-hidden pt-2">
+        <div className="container text-left">
           <Hr />
-
-          <div className="row align-items-center">
-            <div className="col-md-5 mr-auto">
-              <h2>
-                <Trans>Complete your portfolio</Trans>
-              </h2>
-
-              <ul className="pl-0 pt-2">
-                <FeatureLi>
-                  <Trans>
-                    Add an investment, if a company is not using Ledgy yet to complete your
-                    portfolio
-                  </Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>
-                    Invite the founder or CFO to claim the company and keep the information
-                    up-to-date
-                  </Trans>
-                </FeatureLi>
-              </ul>
-            </div>
-
-            <div className="col-md-7 mx-auto order-md-first" data-aos="fade-right">
-              <Img {...props.data.addInvestment} alt={i18n.t`Add portfolio investment`} />
-            </div>
-          </div>
+          <FeatureList
+            textSize="5"
+            header={<Trans>Complete your portfolio</Trans>}
+            features={[
+              <Trans>
+                Add an investment, if a company is not using Ledgy yet to complete your portfolio
+              </Trans>,
+              <Trans>
+                Invite the founder or CFO to claim the company and keep the information up-to-date
+              </Trans>
+            ]}
+            imgSize="7"
+            img={<Img {...props.data.addInvestment} alt={i18n.t`Add portfolio investment`} />}
+          />
 
           <FeatureLinks {...props} i18n={i18n} page="investors" />
         </div>

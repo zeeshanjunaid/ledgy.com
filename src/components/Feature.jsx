@@ -121,7 +121,7 @@ export const FeatureList = (props: {
   imgFirst?: boolean,
   link?: React.Node
 }) => (
-  <div className="row align-items-center my-8 pb-3">
+  <div className="row align-items-center my-4 pb-3">
     <div className={`col-md-${props.textSize} ${props.imgFirst ? 'ml-auto' : 'mr-auto'}`}>
       <h2>{props.header}</h2>
       <ul className="pl-0 pt-2">

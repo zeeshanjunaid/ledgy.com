@@ -71,10 +71,9 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         </div>
       </section>
 
-      <Hr />
-
-      <section className="section pb-0 pt-2" id="access">
+      <section className="section overflow-hidden pb-0 pt-2" id="access">
         <div className="container text-left">
+          <Hr />
           <FeatureList
             textSize="5"
             header={<Trans>Granular access rights</Trans>}
@@ -104,7 +103,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
       <Hr />
 
-      <section className="section pb-0 pt-2" id="dueDiligence">
+      <section className="section overflow-hidden pb-0 pt-2" id="dueDiligence">
         <div className="container text-left">
           <FeatureList
             textSize="5"
@@ -129,7 +128,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
       <Hr />
 
-      <section className="section pb-0 pt-2" id="dataRoom">
+      <section className="section overflow-hidden pb-0 pt-2" id="dataRoom">
         <div className="container text-left">
           <FeatureList
             textSize="5"
@@ -153,7 +152,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
       <Hr />
 
-      <section className="section pb-0 pt-2">
+      <section className="section overflow-hidden pb-0 pt-2">
         <div className="container text-left">
           <FeatureList
             textSize="6"
@@ -173,7 +172,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
       <Hr />
 
-      <section className="section pt-2" id="holding">
+      <section className="section overflow-hidden pt-2" id="holding">
         <div className="container text-left">
           <FeatureList
             textSize="5"

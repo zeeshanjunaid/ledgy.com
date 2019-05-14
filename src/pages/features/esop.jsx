@@ -71,7 +71,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
       <Hr />
 
-      <section className="section pb-0 pt-2" id="support">
+      <section className="section overflow-hidden pb-0 pt-2" id="support">
         <div className="container text-left">
           <FeatureList
             textSize="5"
@@ -95,7 +95,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
       <Hr />
 
-      <section className="section pb-0 pt-2" id="vesting">
+      <section className="section overflow-hidden pb-0 pt-2" id="vesting">
         <div className="container text-left">
           <FeatureList
             textSize="5"
@@ -117,7 +117,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
       <Hr />
 
-      <section className="section pb-0 pt-2" id="engage">
+      <section className="section overflow-hidden pb-0 pt-2" id="engage">
         <div className="container text-left">
           <FeatureList
             textSize="5"
@@ -151,7 +151,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
       <Hr />
 
-      <section className="section pb-0 pt-2">
+      <section className="section overflow-hidden pb-0 pt-2">
         <div className="container text-left">
           <FeatureList
             textSize="5"
@@ -172,7 +172,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
       <Hr />
 
-      <section className="section pt-2" id="spreadsheet">
+      <section className="section overflow-hidden pt-2" id="spreadsheet">
         <div className="container text-left">
           <FeatureList
             textSize="4"
