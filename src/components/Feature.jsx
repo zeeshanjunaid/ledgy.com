@@ -160,27 +160,27 @@ export const TopPageFeatureCard = (props: {
 
 export const FeaturesFragment = graphql`
   fragment FeaturesFragment on Query {
-    esop: imageSharp(fluid: { originalName: { regex: "/esop.png/" } }) {
+    esop: imageSharp(fluid: { originalName: { regex: "/employee-participation.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
     }
-    captable: imageSharp(fluid: { originalName: { regex: "/consistency.png/" } }) {
+    captable: imageSharp(fluid: { originalName: { regex: "/captable.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
     }
-    modeling: imageSharp(fluid: { originalName: { regex: "/round-modeling.png/" } }) {
+    modeling: imageSharp(fluid: { originalName: { regex: "/modeling.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
     }
-    collaboration: imageSharp(fluid: { originalName: { regex: "/reporting.png/" } }) {
+    collaboration: imageSharp(fluid: { originalName: { regex: "/due-diligence.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
     }
-    investors: imageSharp(fluid: { originalName: { regex: "/investors.png/" } }) {
+    investors: imageSharp(fluid: { originalName: { regex: "/investor-relations.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
