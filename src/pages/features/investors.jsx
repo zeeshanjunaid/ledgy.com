@@ -6,7 +6,7 @@ import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import { faFolderOpen, faFilePdf, faHistory, faChartLine } from '@fortawesome/free-solid-svg-icons';
 
-import { FeatureLinks, FeatureLi, FeatureList, TopPageFeatureCard } from '../../components/Feature';
+import { FeatureLinks, FeatureList, TopPageFeatureCard } from '../../components/Feature';
 import { Title, Hr } from '../../layouts/utils';
 
 export default withI18n()(({ i18n, ...props }: Props) => (
