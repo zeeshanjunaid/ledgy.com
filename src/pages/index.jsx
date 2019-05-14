@@ -7,7 +7,7 @@ import Img from 'gatsby-image';
 
 import { FeatureLinks } from '../components/Feature';
 import SecurityRow from '../components/SecurityRow';
-import { demoUrl, targetBlank } from '../layouts/utils';
+import { demoUrl, targetBlank, Hr } from '../layouts/utils';
 
 const Header = ({ i18n, data }: Props) => {
   return (
@@ -67,10 +67,12 @@ const IndexPage = (props: Props) => (
           <hr className="my-7" />
           <header className="section-header mb-3">
             <h2 className="my-4">
-              <Trans>You’re in good company</Trans>
+              <Trans>Join hundreds of companies</Trans>
             </h2>
             <p>
-              <Trans className="mb-4">Join hundreds of companies already using Ledgy</Trans>
+              <Trans className="mb-4">
+                who already use Ledgy for their equity management and investor relations
+              </Trans>
             </p>
           </header>
 
@@ -95,16 +97,9 @@ const IndexPage = (props: Props) => (
             </Link>
           </div>
 
-          <section className="section py-5">
-            <hr className="my-7" />
-            <header className="section-header mb-7">
-              <h2>
-                <Trans>Your data in safe hands</Trans>
-              </h2>
-            </header>
+          <Hr />
 
-            <SecurityRow {...props} />
-          </section>
+          <SecurityRow {...props} />
         </div>
       </section>
     </main>

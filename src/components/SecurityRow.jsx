@@ -9,7 +9,7 @@ import { faShieldAlt, faLock } from '@fortawesome/free-solid-svg-icons';
 import { ChevronRight } from '../layouts/utils';
 
 export default (props: Props) => (
-  <div className="row gap-y text-center">
+  <div className="row gap-y text-center my-5">
     <div className="col-md-6 col-xl-5 offset-xl-1">
       <FontAwesomeIcon icon={faShieldAlt} className="text-primary mb-2" size="3x" />
       <h5>
