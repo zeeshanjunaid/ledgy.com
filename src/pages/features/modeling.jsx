@@ -7,7 +7,7 @@ import Img from 'gatsby-image';
 import { faSlidersH, faCalculator, faImages, faCoins } from '@fortawesome/free-solid-svg-icons';
 
 import { FeatureLinks, FeatureList, TopPageFeatureCard } from '../../components/Feature';
-import { Title, Hr } from '../../layouts/utils';
+import { Title } from '../../layouts/utils';
 
 export default withI18n()(({ i18n, ...props }: Props) => (
   <div>

@@ -12,7 +12,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 import { FeatureLinks, FeatureList, TopPageFeatureCard } from '../../components/Feature';
-import { Title, Hr, ChevronRight } from '../../layouts/utils';
+import { Title, ChevronRight } from '../../layouts/utils';
 
 export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
@@ -34,9 +34,9 @@ export default withI18n()(({ i18n, ...props }: Props) => (
       </div>
     </header>
     <main className="main-content">
-      <section className="section pb-0 overflow-hidden">
+      <section className="section pb-0 pt-6 overflow-hidden">
         <div className="container text-left">
-          <div className="row pb-7">
+          <div className="row pb-8">
             <TopPageFeatureCard
               header={<Trans>Granular access rights</Trans>}
               body={<Trans>so you control what others can see and do</Trans>}
@@ -64,130 +64,99 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           </div>
 
           <div className="row gap-y">
-            <div className="col-md-10 mx-auto mb-7">
+            <div className="col-md-10 mx-auto mb-7" data-aos="fade-up">
               <Img {...props.data.documentLinks} alt={i18n.t`Document links`} />
             </div>
           </div>
         </div>
       </section>
-
-      <section className="section overflow-hidden pb-0 pt-2" id="access">
+      <FeatureList
+        textSize="5"
+        header={<Trans>Granular access rights</Trans>}
+        features={[
+          <Trans>Stakeholders will only be notified if you explicitely invite them yourself</Trans>,
+          <Trans>
+            <strong>Admin</strong> Full control over the company for your co-founders
+          </Trans>,
+          <Trans>
+            <strong>View</strong> See all cap table info in a read-only mode for due diligences
+          </Trans>,
+          <Trans>
+            <strong>Portfolio</strong> See only the own stake in their{' '}
+            <Link href to={`${props.prefix}/features/investors/`}>
+              portfolio
+              <ChevronRight />
+            </Link>
+          </Trans>
+        ]}
+        imgSize="7"
+        img={<Img {...props.data.accessRights} alt={i18n.t`Stakeholders access rights`} />}
+        id="access"
+      />
+      >
+      <FeatureList
+        textSize="5"
+        header={<Trans>Due diligence history</Trans>}
+        features={[
+          <Trans>
+            Set your company up for future due diligences, saving you hours of work and lawyer costs
+          </Trans>,
+          <Trans>The transaction-based cap table allows browsing through the history</Trans>,
+          <Trans>
+            Track your valuations and understand the history in terms of percentage and number of
+            shares
+          </Trans>
+        ]}
+        imgSize="7"
+        img={<Img {...props.data.valuation} alt={i18n.t`Valuation`} />}
+        imgFirst
+        id="dueDiligence"
+      />
+      <FeatureList
+        textSize="5"
+        header={<Trans>Secure data room</Trans>}
+        features={[
+          <Trans>Save on costly due diligence tools</Trans>,
+          <Trans>Prove your transactions by linking their respective legal documents</Trans>,
+          <Trans>
+            Make linked documents accessible to stakeholders involved in the transaction
+          </Trans>,
+          <Trans>
+            Quickly pull up documents by the information of their linked transactions; for example
+            all of a specific stakeholder, share class or date range
+          </Trans>
+        ]}
+        imgSize="7"
+        img={<Img {...props.data.documentManagement} alt={i18n.t`Document management`} />}
+        id="dataRoom"
+      />
+      <FeatureList
+        textSize="6"
+        header={<Trans>Edit log</Trans>}
+        features={[
+          <Trans>Equity data is too important to be accidentally tweaked in a spreadsheet</Trans>,
+          <Trans>Keep track of who edited what and hold admins accountable</Trans>
+        ]}
+        imgSize="5"
+        img={<Img {...props.data.editLog} alt={i18n.t`Record of edits`} />}
+        imgFirst
+      />
+      <FeatureList
+        textSize="5"
+        header={<Trans>Holding confirmations</Trans>}
+        features={[
+          <Trans>Download holding confirmations with a single click</Trans>,
+          <Trans>
+            They will list all assets owned by the stakeholder and optionally include a tax value of
+            the shares
+          </Trans>
+        ]}
+        imgSize="7"
+        img={<Img {...props.data.holdingConfirmationPdf} alt={i18n.t`Holding confirmation`} />}
+        id="holding"
+      />
+      <section className="section overflow-hidden pt-2">
         <div className="container text-left">
-          <Hr />
-          <FeatureList
-            textSize="5"
-            header={<Trans>Granular access rights</Trans>}
-            features={[
-              <Trans>
-                Stakeholders will only be notified if you explicitely invite them yourself
-              </Trans>,
-              <Trans>
-                <strong>Admin</strong> Full control over the company for your co-founders
-              </Trans>,
-              <Trans>
-                <strong>View</strong> See all cap table info in a read-only mode for due diligences
-              </Trans>,
-              <Trans>
-                <strong>Portfolio</strong> See only the own stake in their{' '}
-                <Link href to={`${props.prefix}/features/investors/`}>
-                  portfolio
-                  <ChevronRight />
-                </Link>
-              </Trans>
-            ]}
-            imgSize="7"
-            img={<Img {...props.data.accessRights} alt={i18n.t`Stakeholders access rights`} />}
-          />
-        </div>
-      </section>
-
-      <Hr />
-
-      <section className="section overflow-hidden pb-0 pt-2" id="dueDiligence">
-        <div className="container text-left">
-          <FeatureList
-            textSize="5"
-            header={<Trans>Due diligence history</Trans>}
-            features={[
-              <Trans>
-                Set your company up for future due diligences, saving you hours of work and lawyer
-                costs
-              </Trans>,
-              <Trans>The transaction-based cap table allows browsing through the history</Trans>,
-              <Trans>
-                Track your valuations and understand the history in terms of percentage and number
-                of shares
-              </Trans>
-            ]}
-            imgSize="7"
-            img={<Img {...props.data.valuation} alt={i18n.t`Valuation`} />}
-            imgFirst
-          />
-        </div>
-      </section>
-
-      <Hr />
-
-      <section className="section overflow-hidden pb-0 pt-2" id="dataRoom">
-        <div className="container text-left">
-          <FeatureList
-            textSize="5"
-            header={<Trans>Secure data room</Trans>}
-            features={[
-              <Trans>Save on costly due diligence tools</Trans>,
-              <Trans>Prove your transactions by linking their respective legal documents</Trans>,
-              <Trans>
-                Make linked documents accessible to stakeholders involved in the transaction
-              </Trans>,
-              <Trans>
-                Quickly pull up documents by the information of their linked transactions; for
-                example all of a specific stakeholder, share class or date range
-              </Trans>
-            ]}
-            imgSize="7"
-            img={<Img {...props.data.documentManagement} alt={i18n.t`Document management`} />}
-          />
-        </div>
-      </section>
-
-      <Hr />
-
-      <section className="section overflow-hidden pb-0 pt-2">
-        <div className="container text-left">
-          <FeatureList
-            textSize="6"
-            header={<Trans>Edit log</Trans>}
-            features={[
-              <Trans>
-                Equity data is too important to be accidentally tweaked in a spreadsheet
-              </Trans>,
-              <Trans>Keep track of who edited what and hold admins accountable</Trans>
-            ]}
-            imgSize="5"
-            img={<Img {...props.data.editLog} alt={i18n.t`Record of edits`} />}
-            imgFirst
-          />
-        </div>
-      </section>
-
-      <Hr />
-
-      <section className="section overflow-hidden pt-2" id="holding">
-        <div className="container text-left">
-          <FeatureList
-            textSize="5"
-            header={<Trans>Holding confirmations</Trans>}
-            features={[
-              <Trans>Download holding confirmations with a single click</Trans>,
-              <Trans>
-                They will list all assets owned by the stakeholder and optionally include a tax
-                value of the shares
-              </Trans>
-            ]}
-            imgSize="7"
-            img={<Img {...props.data.holdingConfirmationPdf} alt={i18n.t`Holding confirmation`} />}
-          />
-
           <FeatureLinks {...props} i18n={i18n} page="collaboration" />
         </div>
       </section>
