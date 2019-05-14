@@ -7,7 +7,7 @@ import Img from 'gatsby-image';
 import { faFileExcel, faFileAlt, faUsers, faPaperclip } from '@fortawesome/free-solid-svg-icons';
 
 import { FeatureLinks, FeatureList, TopPageFeatureCard } from '../../components/Feature';
-import { Title, Hr, ChevronRight } from '../../layouts/utils';
+import { Title, ChevronRight } from '../../layouts/utils';
 
 export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
@@ -29,7 +29,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
       </div>
     </header>
     <main className="main-content">
-      <section className="section overflow-hidden pb-0">
+      <section className="section overflow-hidden pb-0 pt-6">
         <div className="container text-left">
           <div className="row pb-7">
             <TopPageFeatureCard
@@ -52,144 +52,116 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             />
             <TopPageFeatureCard
               header={<Trans>Spreadsheet importer</Trans>}
-              body={<Trans>save time and focus on what matters</Trans>}
+              body={<Trans>save time, focus on what matters</Trans>}
               icon={faFileExcel}
               href="#importer"
             />
           </div>
 
           <div className="row gap-y">
-            <div className="col-md-9 mx-auto mb-7" data-aos="fade-up">
+            <div className="col-md-9 mx-auto mb-4" data-aos="fade-up">
               <Img {...props.data.createCaptable} alt={i18n.t`Create a cap table`} />
             </div>
           </div>
         </div>
       </section>
 
-      <Hr />
+      <FeatureList
+        textSize="5"
+        header={<Trans>All transaction types</Trans>}
+        features={[
+          <Trans>
+            It’s transaction based setting it up for future due diligences, saving you hours of work
+            and lawyer costs
+          </Trans>,
+          <Trans>
+            Supports issuance, transfer, convertibles, stock split, valuations, treasury shares,
+            unlimited share classes and more
+          </Trans>,
+          <Trans>
+            Analyze it by stakeholder, share class, stakeholder group and view it with all,
+            outstanding or diluted shares
+          </Trans>
+        ]}
+        imgSize="7"
+        img={<Img {...props.data.availableShares} alt={i18n.t`Available shares for transfer`} />}
+        imgFirst
+        id="transactions"
+      />
 
-      <section className="section overflow-hidden pb-0 pt-2" id="transactions">
+      <FeatureList
+        textSize="5"
+        header={<Trans>Numbered shares</Trans>}
+        features={[
+          <Trans>In some countries numbering shares is necessary, and it can be a real pain</Trans>,
+          <Trans>
+            Auto-assign share numbers for all your transactions; Ledgy will determine the next
+            available ones
+          </Trans>,
+          <Trans>
+            Numbers are checked for consistency, giving you the peace of mind that none go missing
+            or are assigned twice
+          </Trans>
+        ]}
+        imgSize="7"
+        img={<Img {...props.data.shareNumbers} alt={i18n.t`Share number checking`} />}
+      />
+
+      <FeatureList
+        textSize="5"
+        header={<Trans>Pooled investments</Trans>}
+        features={[
+          <Trans>
+            Pooled investments are common in many countries, Ledgy helps you keep them organized
+          </Trans>,
+          <Trans>View the cap table in legal or economic terms</Trans>,
+          <Trans>
+            They work with numbered shares and you can even run exit modeling with all economic
+            stakeholders
+          </Trans>
+        ]}
+        imgSize="7"
+        img={<Img {...props.data.pooledInvestment} alt={i18n.t`Pooled investment`} />}
+        imgFirst
+        id="pooled"
+      />
+
+      <FeatureList
+        textSize="5"
+        header={<Trans>Attach documents</Trans>}
+        features={[
+          <Trans>Prove your transactions with their respective legal documents</Trans>,
+          <Trans>Share the documents attached with the stakeholders of this transaction</Trans>,
+          <Trans>
+            Quickly pull up legal documents by the information of their linked transactions
+          </Trans>
+        ]}
+        imgSize="7"
+        img={<Img {...props.data.attachDocTransaction} alt={i18n.t`Attach doc to transaction`} />}
+        link={
+          <Link href to={`${props.prefix}/features/collaboration/`}>
+            Learn more about document management
+            <ChevronRight />
+          </Link>
+        }
+        id="documents"
+      />
+
+      <FeatureList
+        textSize="4"
+        header={<Trans>Spreadsheet importer</Trans>}
+        features={[
+          <Trans>Speed up your onboarding process with the bulk import feature</Trans>,
+          <Trans>As easy as copying and pasting stakeholders, shares issues, or options</Trans>
+        ]}
+        imgSize="8"
+        img={<Img {...props.data.bulkEntry} alt={i18n.t`Bulk entry`} />}
+        imgFirst
+        id="importer"
+      />
+
+      <section className="section overflow-hidden pt-2">
         <div className="container text-left">
-          <FeatureList
-            textSize="5"
-            header={<Trans>All transaction types</Trans>}
-            features={[
-              <Trans>
-                It’s transaction based setting it up for future due diligences, saving you hours of
-                work and lawyer costs
-              </Trans>,
-              <Trans>
-                Supports issuance, transfer, convertibles, stock split, valuations, treasury shares,
-                unlimited share classes and more
-              </Trans>,
-              <Trans>
-                Analyze it by stakeholder, share class, stakeholder group and view it with all,
-                outstanding or diluted shares
-              </Trans>
-            ]}
-            imgSize="7"
-            img={
-              <Img {...props.data.availableShares} alt={i18n.t`Available shares for transfer`} />
-            }
-            imgFirst
-          />
-        </div>
-      </section>
-
-      <Hr />
-
-      <section className="section overflow-hidden pb-0 pt-2">
-        <div className="container text-left">
-          <FeatureList
-            textSize="5"
-            header={<Trans>Numbered shares</Trans>}
-            features={[
-              <Trans>
-                In some countries numbering shares is necessary, and it can be a real pain
-              </Trans>,
-              <Trans>
-                Auto-assign share numbers for all your transactions; Ledgy will determine the next
-                available ones
-              </Trans>,
-              <Trans>
-                Numbers are checked for consistency, giving you the peace of mind that none go
-                missing or are assigned twice
-              </Trans>
-            ]}
-            imgSize="7"
-            img={<Img {...props.data.shareNumbers} alt={i18n.t`Share number checking`} />}
-          />
-        </div>
-      </section>
-
-      <Hr />
-
-      <section className="section overflow-hidden pb-0 pt-2" id="pooled">
-        <div className="container text-left">
-          <FeatureList
-            textSize="5"
-            header={<Trans>Pooled investments</Trans>}
-            features={[
-              <Trans>
-                Pooled investments are common in many countries, Ledgy helps you keep them organized
-              </Trans>,
-              <Trans>View the cap table in legal or economic terms</Trans>,
-              <Trans>
-                They work with numbered shares and you can even run exit modeling with all economic
-                stakeholders
-              </Trans>
-            ]}
-            imgSize="7"
-            img={<Img {...props.data.pooledInvestment} alt={i18n.t`Pooled investment`} />}
-            imgFirst
-          />
-        </div>
-      </section>
-
-      <Hr />
-
-      <section className="section overflow-hidden pb-0 pt-2" id="documents">
-        <div className="container text-left">
-          <FeatureList
-            textSize="5"
-            header={<Trans>Attach documents</Trans>}
-            features={[
-              <Trans>Prove your transactions with their respective legal documents</Trans>,
-              <Trans>Share the documents attached with the stakeholders of this transaction</Trans>,
-              <Trans>
-                Quickly pull up legal documents by the information of their linked transactions
-              </Trans>
-            ]}
-            imgSize="7"
-            img={
-              <Img {...props.data.attachDocTransaction} alt={i18n.t`Attach doc to transaction`} />
-            }
-            link={
-              <Link href to={`${props.prefix}/features/collaboration/`}>
-                Learn more about document management
-                <ChevronRight />
-              </Link>
-            }
-          />
-        </div>
-      </section>
-
-      <Hr />
-
-      <section className="section overflow-hidden pb-0 pt-2" id="importer">
-        <div className="container text-left">
-          <FeatureList
-            textSize="4"
-            header={<Trans>Spreadsheet importer</Trans>}
-            features={[
-              <Trans>Speed up your onboarding process with the bulk import feature</Trans>,
-              <Trans>As easy as copying and pasting stakeholders, shares issues, or options</Trans>
-            ]}
-            imgSize="8"
-            img={<Img {...props.data.bulkEntry} alt={i18n.t`Bulk entry`} />}
-            imgFirst
-          />
-
           <FeatureLinks {...props} i18n={i18n} page="captable" />
         </div>
       </section>
