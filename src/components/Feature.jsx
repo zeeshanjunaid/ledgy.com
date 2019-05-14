@@ -129,8 +129,9 @@ export const FeatureList = (props: {
         <div className={`col-md-${props.textSize} ${props.imgFirst ? 'ml-auto' : 'mr-auto'}`}>
           <h2>{props.header}</h2>
           <ul className="pl-0 pt-2">
-            {props.features.map(feature => (
-              <FeatureLi>{feature}</FeatureLi>
+            {props.features.map((feature, i) => (
+              // eslint-disable-next-line react/no-array-index-key
+              <FeatureLi key={i}>{feature}</FeatureLi>
             ))}
           </ul>
           {props.link}
