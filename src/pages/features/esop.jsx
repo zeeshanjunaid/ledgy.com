@@ -4,9 +4,10 @@ import * as React from 'react';
 import { withI18n, Trans } from '@lingui/react';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
+import { faFileExcel, faGlobe, faUserTie, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 
 import { FeatureLinks } from '../../components/Feature';
-import { Title, FeatureList, FeatureLi, Hr, ChevronRight } from '../../layouts/utils';
+import { Title, FeatureList, Hr, ChevronRight, TopPageFeatureCard } from '../../layouts/utils';
 
 export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
@@ -28,47 +29,50 @@ export default withI18n()(({ i18n, ...props }: Props) => (
       </div>
     </header>
     <main className="main-content">
-      <section className="section overflow-hidden">
+      <section className="section overflow-hidden pb-0">
         <div className="container text-left">
-          <div>
-            <header className="section-header text-left">
-              <ul className="pl-0 pt-2">
-                <FeatureLi>
-                  <Trans>Save hours of work by getting rid of manual spreadsheet processes</Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>
-                    Supports everything from pools to options, phantom options, warrants, vested
-                    stock and inverse vesting
-                  </Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>Keep track of any vesting schedule</Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>
-                    Get notified of important vesting and expiry events and engage your employees by
-                    inviting them to track their stake on Ledgy
-                  </Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>Get started in minutes with the copy-paste spreadsheet importer</Trans>
-                </FeatureLi>
-              </ul>
-            </header>
-
-            <div className="row gap-y">
-              <div className="col-md-12 mx-auto mb-7" data-aos="fade-up">
-                <Img
-                  {...props.data.incentivesPage}
-                  alt={i18n.t`Overview over vested, granted and exercised incentives`}
-                />
-              </div>
-            </div>
+          <div className="row pb-7">
+            <TopPageFeatureCard
+              header={<Trans>Supports everything</Trans>}
+              body={<Trans>all transactions type you need</Trans>}
+              icon={faGlobe}
+              href="#support"
+            />
+            <TopPageFeatureCard
+              header={<Trans>Any vesting schedule</Trans>}
+              body={<Trans>simple or custom, completely customizable</Trans>}
+              icon={faCalendarAlt}
+              href="#vesting"
+            />
+            <TopPageFeatureCard
+              header={<Trans>Engage your employees</Trans>}
+              body={<Trans>let them join you on Ledgy and be notified</Trans>}
+              icon={faUserTie}
+              href="#engage"
+            />
+            <TopPageFeatureCard
+              header={<Trans>Spreadsheet importer</Trans>}
+              body={<Trans>save time and focus on what matters</Trans>}
+              icon={faFileExcel}
+              href="#spreadsheet"
+            />
           </div>
 
-          <Hr />
+          <div className="row gap-y">
+            <div className="col-md-12 mx-auto mb-7" data-aos="fade-up">
+              <Img
+                {...props.data.incentivesPage}
+                alt={i18n.t`Overview over vested, granted and exercised incentives`}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <Hr />
+
+      <section className="section pb-0 pt-2" id="support">
+        <div className="container text-left">
           <FeatureList
             textSize="5"
             header={<Trans>Supports everything</Trans>}
@@ -86,9 +90,13 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             imgSize="7"
             img={<Img {...props.data.addOption} alt={i18n.t`Add an option pool`} />}
           />
+        </div>
+      </section>
 
-          <Hr />
+      <Hr />
 
+      <section className="section pb-0 pt-2" id="vesting">
+        <div className="container text-left">
           <FeatureList
             textSize="5"
             header={<Trans>Any vesting schedule</Trans>}
@@ -104,9 +112,13 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             img={<Img {...props.data.addVesting} alt={i18n.t`Add vesting`} />}
             imgFirst
           />
+        </div>
+      </section>
 
-          <Hr />
+      <Hr />
 
+      <section className="section pb-0 pt-2" id="engage">
+        <div className="container text-left">
           <FeatureList
             textSize="5"
             header={<Trans>Engage your employees</Trans>}
@@ -134,9 +146,13 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               </Link>
             }
           />
+        </div>
+      </section>
 
-          <Hr />
+      <Hr />
 
+      <section className="section pb-0 pt-2">
+        <div className="container text-left">
           <FeatureList
             textSize="5"
             header={<Trans>Diluted cap table</Trans>}
@@ -151,9 +167,13 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             img={<Img {...props.data.dilutedTable} alt={i18n.t`Show cap table fully diluted`} />}
             imgFirst
           />
+        </div>
+      </section>
 
-          <Hr />
+      <Hr />
 
+      <section className="section pt-2" id="spreadsheet">
+        <div className="container text-left">
           <FeatureList
             textSize="4"
             header={<Trans>Spreadsheet importer</Trans>}

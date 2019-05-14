@@ -4,9 +4,10 @@ import * as React from 'react';
 import { withI18n, Trans } from '@lingui/react';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
+import { faFileExcel, faGlobe, faUserTie, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 
 import { FeatureLinks } from '../../components/Feature';
-import { Title, FeatureList, FeatureLi, Hr, ChevronRight } from '../../layouts/utils';
+import { Title, FeatureList, Hr, ChevronRight, TopPageFeatureCard } from '../../layouts/utils';
 
 export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
@@ -30,8 +31,29 @@ export default withI18n()(({ i18n, ...props }: Props) => (
     <main className="main-content">
       <section className="section overflow-hidden">
         <div className="container text-left">
-          <div>
-            <header className="section-header text-left">
+          <div className="row">
+            <TopPageFeatureCard
+              header="Supports everything"
+              body="all transactions type you need"
+              icon={faGlobe}
+            />
+            <TopPageFeatureCard
+              header="Any vesting schedule"
+              body="simple or custom, completely customizable"
+              icon={faCalendarAlt}
+            />
+            <TopPageFeatureCard
+              header="Engage your employees"
+              body="let them join you on Ledgy and be notified"
+              icon={faUserTie}
+            />
+            <TopPageFeatureCard
+              header="Spreadsheet importer"
+              body="save time and focus on what matters"
+              icon={faFileExcel}
+            />
+          </div>
+          {/* <header className="section-header text-left">
               <ul className="pl-0 pt-2">
                 <FeatureLi>
                   <Trans>
@@ -54,12 +76,11 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   <Trans>Get started in minutes with the copy-paste spreadsheet importer</Trans>
                 </FeatureLi>
               </ul>
-            </header>
+            </header> */}
 
-            <div className="row gap-y">
-              <div className="col-md-9 mx-auto mb-7" data-aos="fade-up">
-                <Img {...props.data.createCaptable} alt={i18n.t`Create a cap table`} />
-              </div>
+          <div className="row gap-y">
+            <div className="col-md-9 mx-auto mb-7" data-aos="fade-up">
+              <Img {...props.data.createCaptable} alt={i18n.t`Create a cap table`} />
             </div>
           </div>
 

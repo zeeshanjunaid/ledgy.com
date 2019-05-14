@@ -52,7 +52,7 @@ const FeatureLink = (props: {
       className={`px-2 col-6 ${props.page === 'index' ? 'col-md-4 col-lg-2' : 'col-md-3 col-lg-3'}`}
     >
       <Link href to={`${props.prefix}/features/${props.url}/`}>
-        <div className="card border hover-shadow-8">
+        <div className="card border hover-shadow-8 hover-translateY">
           <div className="card-body mb-0 pb-0 px-2 h-125">
             <h6 className="card-title text-center">{props.name}</h6>
           </div>
