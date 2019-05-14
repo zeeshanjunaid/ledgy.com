@@ -70,9 +70,7 @@ const IndexPage = (props: Props) => (
               <Trans>You’re in good company</Trans>
             </h2>
             <p>
-              <Trans className="mb-4">
-                Many successful companies already use Ledgy for their equity plans and cap table
-              </Trans>
+              <Trans className="mb-4">Join hundreds of companies already using Ledgy</Trans>
             </p>
           </header>
 

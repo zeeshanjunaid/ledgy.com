@@ -12,7 +12,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
     <Title
       title={i18n.t`Features`}
-      description={i18n.t`All you need in one place: Employee incentives, round and exit modeling, investor relations.`}
+      description={i18n.t`All you need in one place: Employee participation plan management, round and exit modeling, due diligence tools and investor relations.`}
     />
 
     <header className="header text-white bg-ledgy">
