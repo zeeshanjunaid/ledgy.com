@@ -7,7 +7,7 @@ import Img from 'gatsby-image';
 import { faFileExcel, faGlobe, faUserTie, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 
 import { FeatureLinks, FeatureList, TopPageFeatureCard } from '../../components/Feature';
-import { Title, Hr, ChevronRight } from '../../layouts/utils';
+import { Title, ChevronRight } from '../../layouts/utils';
 
 export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
@@ -29,12 +29,12 @@ export default withI18n()(({ i18n, ...props }: Props) => (
       </div>
     </header>
     <main className="main-content">
-      <section className="section overflow-hidden pb-0">
+      <section className="section overflow-hidden pb-0 pt-6">
         <div className="container text-left">
-          <div className="row pb-7">
+          <div className="row pb-3">
             <TopPageFeatureCard
-              header={<Trans>Supports everything</Trans>}
-              body={<Trans>all transactions type you need</Trans>}
+              header={<Trans>Support everything</Trans>}
+              body={<Trans>all transaction types you need</Trans>}
               icon={faGlobe}
               href="#support"
             />
@@ -59,7 +59,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           </div>
 
           <div className="row gap-y">
-            <div className="col-md-12 mx-auto mb-7" data-aos="fade-up">
+            <div className="col-md-12 mx-auto mb-4" data-aos="fade-up">
               <Img
                 {...props.data.incentivesPage}
                 alt={i18n.t`Overview over vested, granted and exercised incentives`}
@@ -69,122 +69,99 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         </div>
       </section>
 
-      <Hr />
+      <FeatureList
+        textSize="5"
+        header={<Trans>Support everything</Trans>}
+        features={[
+          <Trans>
+            Create option or phantom pools reserved for employees and keep track of how much is
+            granted, available, vested and exercised
+          </Trans>,
+          <Trans>
+            Grant options, phantom options, warrants or add inverse vesting to stock transactions
+          </Trans>,
+          <Trans>Track exercise, termination and expiration</Trans>
+        ]}
+        imgSize="7"
+        img={<Img {...props.data.addOption} alt={i18n.t`Add an option pool`} />}
+        id="support"
+      />
 
-      <section className="section overflow-hidden pb-0 pt-2" id="support">
-        <div className="container text-left">
-          <FeatureList
-            textSize="5"
-            header={<Trans>Supports everything</Trans>}
-            features={[
-              <Trans>
-                Create option or phantom pools reserved for employees and keep track of how much is
-                granted, available, vested and exercised
-              </Trans>,
-              <Trans>
-                Grant options, phantom options, warrants or add inverse vesting to stock
-                transactions
-              </Trans>,
-              <Trans>Track exercise, termination and expiration</Trans>
-            ]}
-            imgSize="7"
-            img={<Img {...props.data.addOption} alt={i18n.t`Add an option pool`} />}
+      <FeatureList
+        textSize="5"
+        header={<Trans>Any vesting schedule</Trans>}
+        features={[
+          <Trans>Add vesting or inverse vesting to any transaction</Trans>,
+          <Trans>
+            Either use simple linear vesting with duration, interval and cliff, define your own
+            custom vesting schedule, or select a preset
+          </Trans>,
+          <Trans>Visualizations help you understand what happens</Trans>
+        ]}
+        imgSize="7"
+        img={<Img {...props.data.addVesting} alt={i18n.t`Add vesting`} />}
+        imgFirst
+        id="vesting"
+      />
+
+      <FeatureList
+        textSize="5"
+        header={<Trans>Engage your employees</Trans>}
+        features={[
+          <Trans>
+            Get notified two weeks before a cliff or vesting ends or a grant expires to not miss
+            using your participation plan for engaging your employees
+          </Trans>,
+          <Trans>
+            Invite your employees to track their stake and vesting in their Ledgy portfolio
+          </Trans>,
+          <Trans>Track exercise, termination and expiration</Trans>
+        ]}
+        imgSize="7"
+        img={
+          <Img
+            {...props.data.notificationEmail}
+            alt={i18n.t`Email notification about upcoming vesting event`}
           />
-        </div>
-      </section>
+        }
+        link={
+          <Link href to={`${props.prefix}/features/collaboration/`}>
+            Learn more about collaboration
+            <ChevronRight />
+          </Link>
+        }
+        id="engage"
+      />
 
-      <Hr />
+      <FeatureList
+        textSize="5"
+        header={<Trans>Diluted cap table</Trans>}
+        features={[
+          <Trans>See your pools and employee participation grants in the cap table</Trans>,
+          <Trans>
+            Choose to only show pools or the detailed view with the grants distributed to their
+            holders
+          </Trans>
+        ]}
+        imgSize="7"
+        img={<Img {...props.data.dilutedTable} alt={i18n.t`Show cap table fully diluted`} />}
+        imgFirst
+      />
 
-      <section className="section overflow-hidden pb-0 pt-2" id="vesting">
+      <FeatureList
+        textSize="4"
+        header={<Trans>Spreadsheet importer</Trans>}
+        features={[
+          <Trans>Get started in minutes with the copy-paste spreadsheet importer</Trans>,
+          <Trans>Copy-pasting employee grants from your existing spreadsheet</Trans>
+        ]}
+        imgSize="8"
+        img={<Img {...props.data.bulkEntryOptions} alt={i18n.t`Bulk entry options`} />}
+        id="spreadsheet"
+      />
+
+      <section className="section overflow-hidden pt-2">
         <div className="container text-left">
-          <FeatureList
-            textSize="5"
-            header={<Trans>Any vesting schedule</Trans>}
-            features={[
-              <Trans>Add vesting or inverse vesting to any transaction</Trans>,
-              <Trans>
-                Either use simple linear vesting with duration, interval and cliff, define your own
-                custom vesting schedule, or select a preset
-              </Trans>,
-              <Trans>Visualizations help you understand what happens</Trans>
-            ]}
-            imgSize="7"
-            img={<Img {...props.data.addVesting} alt={i18n.t`Add vesting`} />}
-            imgFirst
-          />
-        </div>
-      </section>
-
-      <Hr />
-
-      <section className="section overflow-hidden pb-0 pt-2" id="engage">
-        <div className="container text-left">
-          <FeatureList
-            textSize="5"
-            header={<Trans>Engage your employees</Trans>}
-            features={[
-              <Trans>
-                Get notified two weeks before a cliff or vesting ends or a grant expires to not miss
-                using your participation plan for engaging your employees
-              </Trans>,
-              <Trans>
-                Invite your employees to track their stake and vesting in their Ledgy portfolio
-              </Trans>,
-              <Trans>Track exercise, termination and expiration</Trans>
-            ]}
-            imgSize="7"
-            img={
-              <Img
-                {...props.data.notificationEmail}
-                alt={i18n.t`Email notification about upcoming vesting event`}
-              />
-            }
-            link={
-              <Link href to={`${props.prefix}/features/collaboration/`}>
-                Learn more about collaboration
-                <ChevronRight />
-              </Link>
-            }
-          />
-        </div>
-      </section>
-
-      <Hr />
-
-      <section className="section overflow-hidden pb-0 pt-2">
-        <div className="container text-left">
-          <FeatureList
-            textSize="5"
-            header={<Trans>Diluted cap table</Trans>}
-            features={[
-              <Trans>See your pools and employee participation grants in the cap table</Trans>,
-              <Trans>
-                Choose to only show pools or the detailed view with the grants distributed to their
-                holders
-              </Trans>
-            ]}
-            imgSize="7"
-            img={<Img {...props.data.dilutedTable} alt={i18n.t`Show cap table fully diluted`} />}
-            imgFirst
-          />
-        </div>
-      </section>
-
-      <Hr />
-
-      <section className="section overflow-hidden pt-2" id="spreadsheet">
-        <div className="container text-left">
-          <FeatureList
-            textSize="4"
-            header={<Trans>Spreadsheet importer</Trans>}
-            features={[
-              <Trans>Get started in minutes with the copy-paste spreadsheet importer</Trans>,
-              <Trans>Copy-pasting employee grants from your existing spreadsheet</Trans>
-            ]}
-            imgSize="8"
-            img={<Img {...props.data.bulkEntryOptions} alt={i18n.t`Bulk entry options`} />}
-          />
-
           <FeatureLinks {...props} i18n={i18n} page="esop" />
         </div>
       </section>

@@ -7,7 +7,7 @@ import Img from 'gatsby-image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDotCircle } from '@fortawesome/free-solid-svg-icons';
 
-import { ChevronRight } from '../layouts/utils';
+import { ChevronRight, Hr } from '../layouts/utils';
 
 const hyphenToCamelCase = (s: string) => s.replace(/-([a-z])/g, g => g[1].toUpperCase());
 
@@ -119,27 +119,35 @@ export const FeatureList = (props: {
   features: Array<React.Node>,
   img: React.Node,
   imgFirst?: boolean,
-  link?: React.Node
+  link?: React.Node,
+  id?: string
 }) => (
-  <div className="row align-items-center my-4 pb-3">
-    <div className={`col-md-${props.textSize} ${props.imgFirst ? 'ml-auto' : 'mr-auto'}`}>
-      <h2>{props.header}</h2>
-      <ul className="pl-0 pt-2">
-        {props.features.map(feature => (
-          <FeatureLi>{feature}</FeatureLi>
-        ))}
-      </ul>
-      {props.link}
+  <section className="section overflow-hidden p-0" id={props.id}>
+    <div className="container text-left">
+      <Hr />
+      <div className="row align-items-center my-7 pt-7">
+        <div className={`col-md-${props.textSize} ${props.imgFirst ? 'ml-auto' : 'mr-auto'}`}>
+          <h2>{props.header}</h2>
+          <ul className="pl-0 pt-2">
+            {props.features.map(feature => (
+              <FeatureLi>{feature}</FeatureLi>
+            ))}
+          </ul>
+          {props.link}
+        </div>
+        <div
+          className={`col-md-${props.imgSize} ${
+            props.imgFirst ? 'order-md-first mr-auto' : 'ml-auto'
+          }`}
+          data-aos={`fade-${props.imgFirst ? 'right' : 'left'}`}
+        >
+          {props.img}
+        </div>
+      </div>
     </div>
-    <div
-      className={`col-md-${props.imgSize} ${props.imgFirst ? 'order-md-first mr-auto' : 'ml-auto'}`}
-      data-aos={`fade-${props.imgFirst ? 'right' : 'left'}`}
-    >
-      {props.img}
-    </div>
-  </div>
+  </section>
 );
-FeatureList.defaultProps = { imgFirst: false, link: <React.Fragment /> };
+FeatureList.defaultProps = { imgFirst: false, link: <React.Fragment />, id: '' };
 
 export const TopPageFeatureCard = (props: {
   header: React.Node,
