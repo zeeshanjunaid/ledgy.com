@@ -140,8 +140,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <Trans>Prove your transactions with their respective legal documents</Trans>,
               <Trans>Share the documents attached with the stakeholders of this transaction</Trans>,
               <Trans>
-                Quickly pull up legal documents by the information of their linked transactions, for
-                example all legal documents of a specific stakeholder, share class or date range
+                Quickly pull up legal documents by the information of their linked transactions
               </Trans>
             ]}
             imgSize="7"
@@ -150,7 +149,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             }
             link={
               <Link href to={`${props.prefix}/features/collaboration/`}>
-                Learn more about due diligence
+                Learn more about document management
                 <ChevronRight />
               </Link>
             }

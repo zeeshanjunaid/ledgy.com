@@ -90,9 +90,10 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             header={<Trans>Due diligence history</Trans>}
             features={[
               <Trans>
-                The transaction-based cap table allows browsing through the history and sets it up
-                for future due diligences, saving you hours of work and lawyer costs
+                Set your company up for future due diligences, saving you hours of work and lawyer
+                costs
               </Trans>,
+              <Trans>The transaction-based cap table allows browsing through the history</Trans>,
               <Trans>
                 Track your valuations and understand the history in terms of percentage and number
                 of shares
@@ -107,9 +108,9 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <FeatureList
             textSize="5"
-            header={<Trans>Data room</Trans>}
+            header={<Trans>Secure data room</Trans>}
             features={[
-              <Trans>Secure legal document storage</Trans>,
+              <Trans>Save on costly due diligence tools</Trans>,
               <Trans>Prove your transactions by linking their respective legal documents</Trans>,
               <Trans>
                 Make linked documents accessible to stakeholders involved in the transaction
@@ -129,10 +130,10 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             textSize="6"
             header={<Trans>Edit log</Trans>}
             features={[
-              <Trans>Keep track of who edited what</Trans>,
               <Trans>
                 Equity data is too important to be accidentally tweaked in a spreadsheet
-              </Trans>
+              </Trans>,
+              <Trans>Keep track of who edited what and hold admins accountable</Trans>
             ]}
             imgSize="5"
             img={<Img {...props.data.editLog} alt={i18n.t`Record of edits`} />}
