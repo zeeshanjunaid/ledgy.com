@@ -33,14 +33,17 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           <header className="section-header mb-5 text-left">
             <ul className="pl-0 pt-2">
               <FeatureLi>
-                <Trans>Be professional towards your investors as a startup</Trans>
-              </FeatureLi>
-              <FeatureLi>
-                <Trans>Track and share KPIs and write recurring reports</Trans>
+                <Trans>As a startup, be professional towards your investors</Trans>
               </FeatureLi>
               <FeatureLi>
                 <Trans>
-                  The simplest and most time-efficient way to manage the portfolio as an investor
+                  Track KPIs, write recurring reports and share them with your investors
+                </Trans>
+              </FeatureLi>
+              <FeatureLi>
+                <Trans>
+                  As an investor, this is the simplest and most time-efficient way to manage your
+                  portfolio
                 </Trans>
               </FeatureLi>
               <FeatureLi>
@@ -54,82 +57,29 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <div className="row gap-y">
             <div className="col-md-11 mx-auto mb-7" data-aos="fade-up">
-              <Img {...props.data.dashboardShares} alt={i18n.t`Share details`} />
-            </div>
-          </div>
-
-          <hr className="mb-8" />
-
-          <div className="row align-items-center pb-8">
-            <div className="col-md-4 mr-auto">
-              <h2>
-                <Trans>Keep track of your history</Trans>
-              </h2>
-
-              <ul className="pl-0 pt-2">
-                <FeatureLi>
-                  <Trans>With the transaction history table and plot</Trans>
-                </FeatureLi>
-              </ul>
-            </div>
-
-            <div className="col-md-8 mx-auto mb-7 order-md-first" data-aos="fade-right">
-              <Img {...props.data.dashboardHistory} alt={i18n.t`Transaction history`} />{' '}
-            </div>
-          </div>
-
-          <div className="row align-items-center my-8 pb-2">
-            <div className="col-md-5 mr-auto">
-              <h2>
-                <Trans>Key Performance Indicators</Trans>
-              </h2>
-
-              <ul className="pl-0 pt-2">
-                <FeatureLi>
-                  <Trans>
-                    Integrate your KPIs on Ledgy in a single copy-paste action, including expected
-                    and actual values
-                  </Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>
-                    Choose their interval, unit, and type of graph you want them to be displayed in
-                  </Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>
-                    Share them with individual stakeholders or with whole groups, such as all your
-                    investors
-                  </Trans>
-                </FeatureLi>
-              </ul>
-            </div>
-
-            <div className="col-md-7" data-aos="fade-left">
-              <Img {...props.data.kpiChart} alt={i18n.t`Kpi chart`} />
+              <Img {...props.data.kpiChart} alt={i18n.t`KPI chart`} />
             </div>
           </div>
 
           <Hr />
 
-          <div className="row align-items-center my-8 pb-2">
+          <div className="row align-items-center">
             <div className="col-md-5 ml-auto">
               <h2>
-                <Trans>Reports</Trans>
+                <Trans>Recurring Reports</Trans>
               </h2>
               <ul className="pl-0 pt-3">
                 <FeatureLi>
                   <Trans>
-                    Generate recurring reports with fixed intervals and attach your KPIs to them
+                    Successful companies share regular updates with their stakeholders, holding
+                    themselves accountable
                   </Trans>
                 </FeatureLi>
                 <FeatureLi>
-                  <Trans>
-                    Our integrated rich text editor makes the typing process really smooth!
-                  </Trans>
+                  <Trans>Style your reports to your needs with the rich-text editor</Trans>
                 </FeatureLi>
                 <FeatureLi>
-                  <Trans>Attach any documents that may need to go along with your report</Trans>
+                  <Trans>Attach your KPIs and any documents</Trans>
                 </FeatureLi>
                 <FeatureLi>
                   <Trans>
@@ -145,23 +95,106 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
           </div>
 
-          <div className="row align-items-center pb-8">
+          <Hr />
+
+          <div className="row align-items-center">
             <div className="col-md-5 mr-auto">
               <h2>
-                <Trans>Smoothly add investments</Trans>
+                <Trans>Key Performance Indicators</Trans>
               </h2>
 
               <ul className="pl-0 pt-2">
                 <FeatureLi>
-                  <Trans>It’s never been easier to centralize your data</Trans>
+                  <Trans>Every company has KPIs, and investors love seeing them in real-time</Trans>
                 </FeatureLi>
                 <FeatureLi>
-                  <Trans>Fill out the form and have your portfolio immediately updated</Trans>
+                  <Trans>Just copy-paste expected and actual values and customize the plots</Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>Share them with individual stakeholders or with stakeholder groups</Trans>
                 </FeatureLi>
               </ul>
             </div>
 
-            <div className="col-md-7 mx-auto" data-aos="fade-left">
+            <div className="col-md-7" data-aos="fade-left">
+              <Img {...props.data.kpiChart} alt={i18n.t`Kpi chart`} />
+            </div>
+          </div>
+
+          <Hr />
+
+          <div className="row align-items-center">
+            <div className="col-md-4 mr-auto">
+              <h2>
+                <Trans>Professional portfolio</Trans>
+              </h2>
+
+              <ul className="pl-0 pt-2">
+                <FeatureLi>
+                  <Trans>Always up-to-date portfolio, curated by your startups</Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>Keep an eye on your investments, their value and multiple</Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>Weekly Email notifications if the startups publish new information</Trans>
+                </FeatureLi>
+              </ul>
+            </div>
+
+            <div className="col-md-8 mx-auto mb-7 order-md-first" data-aos="fade-right">
+              <Img {...props.data.dashboardShares} alt={i18n.t`Investor portfolio`} />{' '}
+            </div>
+          </div>
+
+          <Hr />
+
+          <div className="row align-items-center">
+            <div className="col-md-4 mr-auto">
+              <h2>
+                <Trans>Portfolio history</Trans>
+              </h2>
+
+              <ul className="pl-0 pt-2">
+                <FeatureLi>
+                  <Trans>Comprehensive transaction history</Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>Legal documents associated with the transactions at your fingertips</Trans>
+                </FeatureLi>
+              </ul>
+            </div>
+
+            <div className="col-md-8 mx-auto mb-7" data-aos="fade-left">
+              <Img {...props.data.dashboardHistory} alt={i18n.t`Portfolio history`} />{' '}
+            </div>
+          </div>
+
+          <Hr />
+
+          <div className="row align-items-center">
+            <div className="col-md-5 mr-auto">
+              <h2>
+                <Trans>Complete your portfolio</Trans>
+              </h2>
+
+              <ul className="pl-0 pt-2">
+                <FeatureLi>
+                  <Trans>
+                    Add an investment, if a company is not using Ledgy yet to complete your
+                    portfolio
+                  </Trans>
+                </FeatureLi>
+                <FeatureLi>
+                  <Trans>
+                    Invite the founder or CFO to claim the company and keep the information
+                    up-to-date
+                  </Trans>
+                </FeatureLi>
+              </ul>
+            </div>
+
+            <div className="col-md-7 mx-auto order-md-first" data-aos="fade-right">
               <Img {...props.data.addInvestment} alt={i18n.t`Add portfolio investment`} />
             </div>
           </div>

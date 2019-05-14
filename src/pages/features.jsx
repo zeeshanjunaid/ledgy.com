@@ -129,7 +129,9 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                 <Trans>Be professional towards your investors as a startup</Trans>
               </FeatureLi>
               <FeatureLi>
-                <Trans>Track and share KPIs and write recurring reports</Trans>
+                <Trans>
+                  Track KPIs, write recurring reports and share them with your investors
+                </Trans>
               </FeatureLi>
               <FeatureLi>
                 <Trans>
