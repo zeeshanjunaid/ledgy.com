@@ -4,8 +4,14 @@ import * as React from 'react';
 import { withI18n, Trans } from '@lingui/react';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
+import {
+  faDatabase,
+  faUserLock,
+  faHistory,
+  faClipboardCheck
+} from '@fortawesome/free-solid-svg-icons';
 
-import { FeatureLinks, FeatureList, FeatureLi } from '../../components/Feature';
+import { FeatureLinks, FeatureList, TopPageFeatureCard } from '../../components/Feature';
 import { Title, Hr, ChevronRight } from '../../layouts/utils';
 
 export default withI18n()(({ i18n, ...props }: Props) => (
@@ -28,36 +34,47 @@ export default withI18n()(({ i18n, ...props }: Props) => (
       </div>
     </header>
     <main className="main-content">
-      <section className="section overflow-hidden">
+      <section className="section pb-0 overflow-hidden">
         <div className="container text-left">
-          <header className="section-header text-left mb-2">
-            <ul className="pl-0 pt-2">
-              <FeatureLi>
-                <Trans>Granular access rights, you control them</Trans>
-              </FeatureLi>
-              <FeatureLi>
-                <Trans>
-                  Data room, audit trail and read-only access for investors saves you costly due
-                  diligence tools
-                </Trans>
-              </FeatureLi>
-              <FeatureLi>
-                <Trans>
-                  Save time in future due diligences by attaching legal documents to their
-                  transactions, making them searchable by the transaction information
-                </Trans>
-              </FeatureLi>
-            </ul>
-          </header>
+          <div className="row pb-7">
+            <TopPageFeatureCard
+              header={<Trans>Granular access rights</Trans>}
+              body={<Trans>so you control what others can see and do</Trans>}
+              icon={faUserLock}
+              href="#access"
+            />
+            <TopPageFeatureCard
+              header={<Trans>Due diligence history</Trans>}
+              body={<Trans>to track past events and foresee what’s coming</Trans>}
+              icon={faHistory}
+              href="#dueDiligence"
+            />
+            <TopPageFeatureCard
+              header={<Trans>Secure data room</Trans>}
+              body={<Trans>to manage all of your legal documents</Trans>}
+              icon={faDatabase}
+              href="#dataRoom"
+            />
+            <TopPageFeatureCard
+              header={<Trans>Holding confirmations</Trans>}
+              body={<Trans>generated on the fly in a single click</Trans>}
+              icon={faClipboardCheck}
+              href="#holding"
+            />
+          </div>
 
           <div className="row gap-y">
             <div className="col-md-10 mx-auto mb-7">
               <Img {...props.data.documentLinks} alt={i18n.t`Document links`} />
             </div>
           </div>
+        </div>
+      </section>
 
-          <Hr />
+      <Hr />
 
+      <section className="section pb-0 pt-2" id="access">
+        <div className="container text-left">
           <FeatureList
             textSize="5"
             header={<Trans>Granular access rights</Trans>}
@@ -82,9 +99,13 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             imgSize="7"
             img={<Img {...props.data.accessRights} alt={i18n.t`Stakeholders access rights`} />}
           />
+        </div>
+      </section>
 
-          <Hr />
+      <Hr />
 
+      <section className="section pb-0 pt-2" id="dueDiligence">
+        <div className="container text-left">
           <FeatureList
             textSize="5"
             header={<Trans>Due diligence history</Trans>}
@@ -103,9 +124,13 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             img={<Img {...props.data.valuation} alt={i18n.t`Valuation`} />}
             imgFirst
           />
+        </div>
+      </section>
 
-          <Hr />
+      <Hr />
 
+      <section className="section pb-0 pt-2" id="dataRoom">
+        <div className="container text-left">
           <FeatureList
             textSize="5"
             header={<Trans>Secure data room</Trans>}
@@ -123,9 +148,13 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             imgSize="7"
             img={<Img {...props.data.documentManagement} alt={i18n.t`Document management`} />}
           />
+        </div>
+      </section>
 
-          <Hr />
+      <Hr />
 
+      <section className="section pb-0 pt-2">
+        <div className="container text-left">
           <FeatureList
             textSize="6"
             header={<Trans>Edit log</Trans>}
@@ -139,9 +168,13 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             img={<Img {...props.data.editLog} alt={i18n.t`Record of edits`} />}
             imgFirst
           />
+        </div>
+      </section>
 
-          <Hr />
+      <Hr />
 
+      <section className="section pt-2" id="holding">
+        <div className="container text-left">
           <FeatureList
             textSize="5"
             header={<Trans>Holding confirmations</Trans>}
