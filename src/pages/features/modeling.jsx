@@ -4,8 +4,9 @@ import * as React from 'react';
 import { withI18n, Trans } from '@lingui/react';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
+import { faSlidersH, faCalculator, faImages, faCoins } from '@fortawesome/free-solid-svg-icons';
 
-import { FeatureLinks, FeatureList, FeatureLi } from '../../components/Feature';
+import { FeatureLinks, FeatureList, TopPageFeatureCard } from '../../components/Feature';
 import { Title, Hr } from '../../layouts/utils';
 
 export default withI18n()(({ i18n, ...props }: Props) => (
@@ -30,36 +31,45 @@ export default withI18n()(({ i18n, ...props }: Props) => (
     <main className="main-content">
       <section className="section overflow-hidden">
         <div className="container text-left">
-          <header className="section-header text-left">
-            <ul className="pl-0 pt-2">
-              <FeatureLi>
-                <Trans>
-                  Understand how dilution works by quickly comparing different modeling scenarios
-                </Trans>
-              </FeatureLi>
-              <FeatureLi>
-                <Trans>
-                  Flexible yet intuitive round modeling supporting convertibles, fixed employee
-                  pools and pro-rata distribution
-                </Trans>
-              </FeatureLi>
-              <FeatureLi>
-                <Trans>
-                  Assess the impact of liquidation preferences with waterfall analysis and
-                  breakpoint charts
-                </Trans>
-              </FeatureLi>
-            </ul>
-          </header>
+          <div className="row pb-7">
+            <TopPageFeatureCard
+              header={<Trans>Get the calculations right</Trans>}
+              body={<Trans>with our round and exit modeling tools</Trans>}
+              icon={faCalculator}
+              href="#calculations"
+            />
+            <TopPageFeatureCard
+              header={<Trans>Compare and share scenarios</Trans>}
+              body={<Trans>of different financing round situations</Trans>}
+              icon={faImages}
+              href="#compare"
+            />
+            <TopPageFeatureCard
+              header={<Trans>Adjust your simulations</Trans>}
+              body={<Trans>to make the model fit your needs</Trans>}
+              icon={faSlidersH}
+              href="#adjust"
+            />
+            <TopPageFeatureCard
+              header={<Trans>Exit modeling</Trans>}
+              body={<Trans>find out how stakes would distribute</Trans>}
+              icon={faCoins}
+              href="#exit"
+            />
+          </div>
 
           <div className="row gap-y">
             <div className="col-md-10 mx-auto" data-aos="fade-up">
               <Img {...props.data.roundModelingSample} alt={i18n.t`Round Modeling`} />
             </div>
           </div>
+        </div>
+      </section>
 
-          <Hr />
+      <Hr />
 
+      <section className="section pb-0 pt-2" id="calculations">
+        <div className="container text-left">
           <FeatureList
             textSize="5"
             header={<Trans>Get the calculations right</Trans>}
@@ -77,9 +87,13 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             img={<Img {...props.data.convertibleForm} alt={i18n.t`Get the calculations right`} />}
             imgFirst
           />
+        </div>
+      </section>
 
-          <Hr />
+      <Hr />
 
+      <section className="section pb-0 pt-2" id="compare">
+        <div className="container text-left">
           <FeatureList
             textSize="5"
             header={<Trans>Compare and share scenarios</Trans>}
@@ -96,9 +110,13 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <Img {...props.data.modelingScenarios} alt={i18n.t`Compare and share scenarios`} />
             }
           />
+        </div>
+      </section>
 
-          <Hr />
+      <Hr />
 
+      <section className="section pb-0 pt-2" id="adjust">
+        <div className="container text-left">
           <FeatureList
             textSize="6"
             header={<Trans>Adjust your simulations</Trans>}
@@ -117,9 +135,13 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             img={<Img {...props.data.simulationSettings} alt={i18n.t`Simulation settings`} />}
             imgFirst
           />
+        </div>
+      </section>
 
-          <Hr />
+      <Hr />
 
+      <section className="section pb-0 pt-2">
+        <div className="container text-left">
           <FeatureList
             textSize="6"
             header={<Trans>Pro-rata distribution</Trans>}
@@ -137,9 +159,13 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               />
             }
           />
+        </div>
+      </section>
 
-          <Hr />
+      <Hr />
 
+      <section className="section pb-0 pt-2">
+        <div className="container text-left">
           <FeatureList
             textSize="4"
             header={<Trans>Diluted cap table</Trans>}
@@ -158,9 +184,13 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             }
             imgFirst
           />
+        </div>
+      </section>
 
-          <Hr />
+      <Hr />
 
+      <section className="section pb-0 pt-2">
+        <div className="container text-left">
           <FeatureList
             textSize="6"
             header={<Trans>Convert to transactions</Trans>}
@@ -174,9 +204,13 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             imgSize="6"
             img={<Img {...props.data.roundModelingConvert} alt={i18n.t`Convert financing round`} />}
           />
+        </div>
+      </section>
 
-          <Hr />
+      <Hr />
 
+      <section className="section pt-2" id="exit">
+        <div className="container text-left">
           <FeatureList
             textSize="5"
             header={<Trans>Exit Modeling</Trans>}
