@@ -125,7 +125,7 @@ export const FeatureList = (props: {
   <section className="section overflow-hidden p-0" id={props.id}>
     <div className="container text-left">
       <Hr />
-      <div className="row align-items-center my-7 pt-7">
+      <div className="row align-items-center my-4 pt-4 my-md-7 pt-md-7">
         <div className={`col-md-${props.textSize} ${props.imgFirst ? 'ml-auto' : 'mr-auto'}`}>
           <h2>{props.header}</h2>
           <ul className="pl-0 pt-2">
