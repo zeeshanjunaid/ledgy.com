@@ -31,7 +31,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
     <main className="main-content">
       <section className="section overflow-hidden pb-0 pt-6">
         <div className="container text-left">
-          <div className="row pb-7">
+          <div className="row pb-8">
             <TopPageFeatureCard
               header={<Trans>All transaction types</Trans>}
               body={<Trans>are supported in our platform</Trans>}
@@ -59,7 +59,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           </div>
 
           <div className="row gap-y">
-            <div className="col-md-9 mx-auto mb-4" data-aos="fade-up">
+            <div className="col-md-9 mx-auto mb-7" data-aos="fade-up">
               <Img {...props.data.createCaptable} alt={i18n.t`Create a cap table`} />
             </div>
           </div>
