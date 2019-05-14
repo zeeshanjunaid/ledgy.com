@@ -4,7 +4,7 @@ import * as React from 'react';
 import { withI18n, Trans } from '@lingui/react';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
-import { faFileExcel, faGlobe, faUserTie, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
+import { faFileExcel, faFileAlt, faUsers, faPaperclip } from '@fortawesome/free-solid-svg-icons';
 
 import { FeatureLinks, FeatureList, TopPageFeatureCard } from '../../components/Feature';
 import { Title, Hr, ChevronRight } from '../../layouts/utils';
@@ -29,63 +29,47 @@ export default withI18n()(({ i18n, ...props }: Props) => (
       </div>
     </header>
     <main className="main-content">
-      <section className="section overflow-hidden">
+      <section className="section overflow-hidden pb-0">
         <div className="container text-left">
-          <div className="row">
+          <div className="row pb-7">
             <TopPageFeatureCard
-              header="Supports everything"
-              body="all transactions type you need"
-              icon={faGlobe}
+              header={<Trans>All transaction types</Trans>}
+              body={<Trans>are supported in our platform</Trans>}
+              icon={faFileAlt}
+              href="#transactions"
             />
             <TopPageFeatureCard
-              header="Any vesting schedule"
-              body="simple or custom, completely customizable"
-              icon={faCalendarAlt}
+              header={<Trans>Pooled investments</Trans>}
+              body={<Trans>are easy to manage with Ledgy</Trans>}
+              icon={faUsers}
+              href="#pooled"
             />
             <TopPageFeatureCard
-              header="Engage your employees"
-              body="let them join you on Ledgy and be notified"
-              icon={faUserTie}
+              header={<Trans>Attach documents</Trans>}
+              body={<Trans>to each of your transactions</Trans>}
+              icon={faPaperclip}
+              href="#documents"
             />
             <TopPageFeatureCard
-              header="Spreadsheet importer"
-              body="save time and focus on what matters"
+              header={<Trans>Spreadsheet importer</Trans>}
+              body={<Trans>save time and focus on what matters</Trans>}
               icon={faFileExcel}
+              href="#importer"
             />
           </div>
-          {/* <header className="section-header text-left">
-              <ul className="pl-0 pt-2">
-                <FeatureLi>
-                  <Trans>
-                    Intuitive, legally valid and error-free cap table from the beginning
-                  </Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>
-                    Transaction-based supporting any type like issuance, transfer, convertibles,
-                    stock split, share destruction, valuations
-                  </Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>
-                    Featuring unlimited share classes, treasury shares, pooled investments and
-                    automatic share numbering
-                  </Trans>
-                </FeatureLi>
-                <FeatureLi>
-                  <Trans>Get started in minutes with the copy-paste spreadsheet importer</Trans>
-                </FeatureLi>
-              </ul>
-            </header> */}
 
           <div className="row gap-y">
             <div className="col-md-9 mx-auto mb-7" data-aos="fade-up">
               <Img {...props.data.createCaptable} alt={i18n.t`Create a cap table`} />
             </div>
           </div>
+        </div>
+      </section>
 
-          <Hr />
+      <Hr />
 
+      <section className="section pb-0 pt-2" id="transactions">
+        <div className="container text-left">
           <FeatureList
             textSize="5"
             header={<Trans>All transaction types</Trans>}
@@ -109,9 +93,13 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             }
             imgFirst
           />
+        </div>
+      </section>
 
-          <Hr />
+      <Hr />
 
+      <section className="section pb-0 pt-2">
+        <div className="container text-left">
           <FeatureList
             textSize="5"
             header={<Trans>Numbered shares</Trans>}
@@ -131,9 +119,13 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             imgSize="7"
             img={<Img {...props.data.shareNumbers} alt={i18n.t`Share number checking`} />}
           />
+        </div>
+      </section>
 
-          <Hr />
+      <Hr />
 
+      <section className="section pb-0 pt-2" id="pooled">
+        <div className="container text-left">
           <FeatureList
             textSize="5"
             header={<Trans>Pooled investments</Trans>}
@@ -151,9 +143,13 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             img={<Img {...props.data.pooledInvestment} alt={i18n.t`Pooled investment`} />}
             imgFirst
           />
+        </div>
+      </section>
 
-          <Hr />
+      <Hr />
 
+      <section className="section pb-0 pt-2" id="documents">
+        <div className="container text-left">
           <FeatureList
             textSize="5"
             header={<Trans>Attach documents</Trans>}
@@ -175,9 +171,13 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               </Link>
             }
           />
+        </div>
+      </section>
 
-          <Hr />
+      <Hr />
 
+      <section className="section pb-0 pt-2" id="importer">
+        <div className="container text-left">
           <FeatureList
             textSize="4"
             header={<Trans>Spreadsheet importer</Trans>}
