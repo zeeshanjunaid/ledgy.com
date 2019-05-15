@@ -61,8 +61,8 @@ msgid "Add any number of scenarios to compare different possibilities"
 msgstr "Add any number of scenarios to compare different possibilities"
 
 #: src/pages/features/modeling.jsx:78
-msgid "Add convertibles with cap, discount and interest and see how they convert during the next round"
-msgstr "Add convertibles with cap, discount and interest and see how they convert during the next round"
+msgid "Add convertibles with cap, discount, and interest and see how they convert during the next round"
+msgstr "Add convertibles with cap, discount, and interest and see how they convert during the next round"
 
 #: src/pages/features/investors.jsx:145
 msgid "Add portfolio investment"
@@ -148,8 +148,8 @@ msgid "Auto-assign share numbers for all your transactions; Ledgy will determine
 msgstr "Auto-assign share numbers for all your transactions; Ledgy will determine the next available ones"
 
 #: src/pages/features/modeling.jsx:165
-msgid "Automatically update the stakeholder list, transaction history and cap table after the round is finished"
-msgstr "Automatically update the stakeholder list, transaction history and cap table after the round is finished"
+msgid "Automatically update the stakeholder list, transaction history, and cap table after the round is finished"
+msgstr "Automatically update the stakeholder list, transaction history, and cap table after the round is finished"
 
 #: src/pages/features/captable.jsx:92
 msgid "Available shares for transfer"
@@ -194,7 +194,7 @@ msgstr "Blockchain notary"
 msgid "Blog"
 msgstr "Blog"
 
-#: src/pages/features/modeling.jsx:186
+#: src/pages/features/modeling.jsx:184
 msgid "Breakpoint analyses show in which valuation ranges the preferences have an effect and let you optimally plan your strategy"
 msgstr "Breakpoint analyses show in which valuation ranges the preferences have an effect and let you optimally plan your strategy"
 
@@ -219,8 +219,8 @@ msgid "Bulk entry options"
 msgstr "Bulk entry options"
 
 #: src/pages/features/modeling.jsx:183
-msgid "Calculates waterfall analysis of liquidation preferences accross all rounds"
-msgstr "Calculates waterfall analysis of liquidation preferences accross all rounds"
+msgid "Calculates waterfall analysis of liquidation preferences across all rounds"
+msgstr "Calculates waterfall analysis of liquidation preferences across all rounds"
 
 #: src/layouts/index.jsx:184
 msgid "Cap Table"
@@ -244,8 +244,8 @@ msgid "Choose to only show pools or the detailed view with the grants distribute
 msgstr "Choose to only show pools or the detailed view with the grants distributed to their holders"
 
 #: src/layouts/team.jsx:21
-msgid "Coding since high school, Timo got an award for the best master thesis in computer science and worked one year as computer engineer in robotics"
-msgstr "Coding since high school, Timo got an award for the best master thesis in computer science and worked one year as computer engineer in robotics"
+msgid "Coding since high school, Timo got an award for the best master thesis in computer science and worked one year as a computer engineer in robotics"
+msgstr "Coding since high school, Timo got an award for the best master thesis in computer science and worked one year as a computer engineer in robotics"
 
 #: src/components/Feature.jsx:101
 #: src/pages/features/collaboration.jsx:20
@@ -329,8 +329,8 @@ msgid "Daily backups ensure nothing is ever lost"
 msgstr "Daily backups ensure nothing is ever lost"
 
 #: src/pages/features.jsx:110
-msgid "Data room, audit trail and read-only access for investors saves you costly due diligence tools"
-msgstr "Data room, audit trail and read-only access for investors saves you costly due diligence tools"
+msgid "Data room, audit trail and read-only access for investors save you costly due diligence tools"
+msgstr "Data room, audit trail and read-only access for investors save you costly due diligence tools"
 
 #: src/pages/about-us.jsx:173
 msgid "Digital entrepreneur and investor. Security, crypto & privacy expert"
@@ -378,8 +378,8 @@ msgid "Due diligence history"
 msgstr "Due diligence history"
 
 #: src/layouts/team.jsx:73
-msgid "During his studies in engineering as an excellence scholar at ETH Zurich, Jules started working as a software developer building web applications"
-msgstr "During his studies in engineering as an excellence scholar at ETH Zurich, Jules started working as a software developer building web applications"
+msgid "During his studies in engineering as an excellent scholar at ETH Zurich, Jules started working as a software developer building web applications"
+msgstr "During his studies in engineering as an excellent scholar at ETH Zurich, Jules started working as a software developer building web applications"
 
 #: src/pages/features/esop.jsx:15
 msgid "ESOP"
@@ -392,10 +392,6 @@ msgstr "EU data protection"
 #: src/pages/features/collaboration.jsx:158
 msgid "Edit log"
 msgstr "Edit log"
-
-#: src/pages/features/esop.jsx:95
-msgid "Either use simple linear vesting with duration, interval and cliff, define your own custom vesting schedule, or select a preset"
-msgstr "Either use simple linear vesting with duration, interval and cliff, define your own custom vesting schedule, or select a preset"
 
 #: src/pages/features/esop.jsx:124
 msgid "Email notification about upcoming vesting event"
@@ -458,7 +454,7 @@ msgid "Every company has KPIs, and investors love seeing them in real-time"
 msgstr "Every company has KPIs, and investors love seeing them in real-time"
 
 #: src/pages/features/modeling.jsx:177
-#: src/pages/features/modeling.jsx:192
+#: src/pages/features/modeling.jsx:190
 msgid "Exit Modeling"
 msgstr "Exit Modeling"
 
@@ -482,16 +478,16 @@ msgid "Features"
 msgstr "Features"
 
 #: src/pages/features.jsx:70
-msgid "Featuring unlimited share classes, treasury shares, pooled investments and automatic share numbering"
-msgstr "Featuring unlimited share classes, treasury shares, pooled investments and automatic share numbering"
+msgid "Featuring unlimited share classes, treasury shares, pooled investments, and automatic share numbering"
+msgstr "Featuring unlimited share classes, treasury shares, pooled investments, and automatic share numbering"
 
 #: src/pages/index.jsx:96
 msgid "Find out why they trust us"
 msgstr "Find out why they trust us"
 
 #: src/pages/features.jsx:88
-msgid "Flexible yet intuitive round modeling supporting convertibles, fixed employee pools and pro-rata distribution"
-msgstr "Flexible yet intuitive round modeling supporting convertibles, fixed employee pools and pro-rata distribution"
+msgid "Flexible yet intuitive round modeling supporting convertibles, fixed employee pools, and pro-rata distribution"
+msgstr "Flexible yet intuitive round modeling supporting convertibles, fixed employee pools, and pro-rata distribution"
 
 #: src/pages/security.jsx:94
 msgid "For even better protection of accounts. And our implementation is <0>open source</0>!"
@@ -627,8 +623,8 @@ msgid "Intuitive, legally valid and error-free cap table from the beginning"
 msgstr "Intuitive, legally valid and error-free cap table from the beginning"
 
 #: src/pages/features/captable.jsx:22
-msgid "Intuitive, legally valid and error-free cap table from the beginning, supporting all transaction types, unlimited share classes, pooled investments and numbered shares."
-msgstr "Intuitive, legally valid and error-free cap table from the beginning, supporting all transaction types, unlimited share classes, pooled investments and numbered shares."
+msgid "Intuitive, legally valid and error-free cap table from the beginning, supporting all transaction types, unlimited share classes, pooled investments, and numbered shares."
+msgstr "Intuitive, legally valid and error-free cap table from the beginning, supporting all transaction types, unlimited share classes, pooled investments, and numbered shares."
 
 #: src/pages/about-us.jsx:183
 msgid "Investor & consultant (Farmy.ch, Flatfox.ch), founder of Students.ch"
@@ -886,8 +882,8 @@ msgid "Publish your reports once done, which will share them with your selected 
 msgstr "Publish your reports once done, which will share them with your selected stakeholders"
 
 #: src/pages/features/collaboration.jsx:107
-msgid "Quickly pull up documents by the information of their linked transactions; for example all of a specific stakeholder, share class or date range"
-msgstr "Quickly pull up documents by the information of their linked transactions; for example all of a specific stakeholder, share class or date range"
+msgid "Quickly pull up documents by the information of their linked transactions; for example, all of a specific stakeholder, share class or date range"
+msgstr "Quickly pull up documents by the information of their linked transactions; for example, all of a specific stakeholder, share class or date range"
 
 #: src/pages/features/captable.jsx:140
 msgid "Quickly pull up legal documents by the information of their linked transactions"
@@ -954,8 +950,8 @@ msgid "Save on costly due diligence tools"
 msgstr "Save on costly due diligence tools"
 
 #: src/pages/features.jsx:116
-msgid "Save time in future due diligences by attaching legal documents to their transactions, making them searchable by the transaction information"
-msgstr "Save time in future due diligences by attaching legal documents to their transactions, making them searchable by the transaction information"
+msgid "Save time in future due diligence by attaching legal documents to their transactions, making them searchable by the transaction information"
+msgstr "Save time in future due diligence by attaching legal documents to their transactions, making them searchable by the transaction information"
 
 #: src/pages/index.jsx:45
 msgid "Screenshot of the Ledgy app"
@@ -1054,8 +1050,8 @@ msgid "Stakeholders access rights"
 msgstr "Stakeholders access rights"
 
 #: src/pages/features/collaboration.jsx:78
-msgid "Stakeholders will only be notified if you explicitely invite them yourself"
-msgstr "Stakeholders will only be notified if you explicitely invite them yourself"
+msgid "Stakeholders will only be notified if you explicitly invite them yourself"
+msgstr "Stakeholders will only be notified if you explicitly invite them yourself"
 
 #: src/pages/security.jsx:79
 msgid "Stored encrypted with the battle-tested <0>bcrypt algorithm</0> at 13 rounds"
@@ -1083,16 +1079,16 @@ msgid "Supports everything"
 msgstr "Supports everything"
 
 #: src/pages/features.jsx:39
-msgid "Supports everything from pools to options, phantom options, warrants, vested stock and inverse vesting"
-msgstr "Supports everything from pools to options, phantom options, warrants, vested stock and inverse vesting"
+msgid "Supports everything from pools to options, phantom options, warrants, vested stock, and inverse vesting"
+msgstr "Supports everything from pools to options, phantom options, warrants, vested stock, and inverse vesting"
 
 #: src/pages/features/captable.jsx:82
 msgid "Supports issuance, transfer, convertibles, stock split, valuations, treasury shares, unlimited share classes and more"
 msgstr "Supports issuance, transfer, convertibles, stock split, valuations, treasury shares, unlimited share classes and more"
 
 #: src/pages/features/modeling.jsx:180
-msgid "Supports non-participating, participating with and without cap, and interest payment"
-msgstr "Supports non-participating, participating with and without cap, and interest payment"
+msgid "Supports non-participating, participating with and without a cap, and interest payment"
+msgstr "Supports non-participating, participating with and without a cap, and interest payment"
 
 #: src/pages/contact.jsx:65
 msgid "Switzerland"
@@ -1177,20 +1173,17 @@ msgid "Track your valuations and understand the history in terms of percentage a
 msgstr "Track your valuations and understand the history in terms of percentage and number of shares"
 
 #: src/pages/features/captable.jsx:41
-msgid "Transaction based"
-msgstr "Transaction based"
+#: src/pages/features/captable.jsx:76
+msgid "Transaction-based"
+msgstr "Transaction-based"
 
 #: src/pages/features/captable.jsx:78
-msgid "Transaction based cap table, setting it up for future due diligences, saving you hours of work and lawyer costs"
-msgstr "Transaction based cap table, setting it up for future due diligences, saving you hours of work and lawyer costs"
+msgid "Transaction-based cap table, setting it up for future due diligence, saving you hours of work and lawyer costs"
+msgstr "Transaction-based cap table, setting it up for future due diligence, saving you hours of work and lawyer costs"
 
 #: src/pages/features.jsx:64
 msgid "Transaction-based supporting any type like issuance, transfer, convertibles, stock split, share destruction, valuations"
 msgstr "Transaction-based supporting any type like issuance, transfer, convertibles, stock split, share destruction, valuations"
-
-#: src/pages/features/captable.jsx:76
-msgid "Transactions based"
-msgstr "Transactions based"
 
 #: src/pages/features/collaboration.jsx:53
 msgid "Transparent history"
@@ -1241,6 +1234,10 @@ msgstr "Usage statistics and usage profile"
 msgid "Use pre- or post-money valuation and see the respective other"
 msgstr "Use pre- or post-money valuation and see the respective other"
 
+#: src/pages/features/esop.jsx:95
+msgid "Use simple linear vesting with duration, interval and cliff, define your own custom vesting schedule, or select a preset"
+msgstr "Use simple linear vesting with duration, interval and cliff, define your own custom vesting schedule, or select a preset"
+
 #: src/pages/security.jsx:62
 msgid "Users have to set a <0>secure password</0>"
 msgstr "Users have to set a <0>secure password</0>"
@@ -1290,8 +1287,8 @@ msgid "We comply with the Swiss Federal Act on Data Protection (FADP) and the Ge
 msgstr "We comply with the Swiss Federal Act on Data Protection (FADP) and the General Data Protection Regulation (GDPR). Read more about <0>GDPR compliance</0>."
 
 #: src/pages/about-us.jsx:93
-msgid "We empower entrepreneurs with tools for their financing rounds and for engaging their investors and employees. Today, this involves a lot of paperwork, high costs and slow, intransparent processes. We make this a breeze for both companies and shareholders, establishing a new standard to manage and exchange securities in private companies."
-msgstr "We empower entrepreneurs with tools for their financing rounds and for engaging their investors and employees. Today, this involves a lot of paperwork, high costs and slow, intransparent processes. We make this a breeze for both companies and shareholders, establishing a new standard to manage and exchange securities in private companies."
+msgid "We empower entrepreneurs with tools for their financing rounds and for engaging their investors and employees. Today, this involves a lot of paperwork, high costs, and slow, intransparent processes. We make this a breeze for both companies and shareholders, establishing a new standard to manage and exchange securities in private companies."
+msgstr "We empower entrepreneurs with tools for their financing rounds and for engaging their investors and employees. Today, this involves a lot of paperwork, high costs, and slow, intransparent processes. We make this a breeze for both companies and shareholders, establishing a new standard to manage and exchange securities in private companies."
 
 #: src/pages/privacy.jsx:124
 msgid "We limit access and sharing as much as reasonably possible. Some information is shared with third party contractors we use to run and improve our service for you"
@@ -1370,8 +1367,8 @@ msgid "save time, focus on what matters"
 msgstr "save time, focus on what matters"
 
 #: src/pages/features/captable.jsx:42
-msgid "saving you hours during due diligences"
-msgstr "saving you hours during due diligences"
+msgid "saving you hours during due diligence"
+msgstr "saving you hours during due diligence"
 
 #: src/pages/features/investors.jsx:48
 msgid "share your key performance indicators"
