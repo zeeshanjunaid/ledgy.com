@@ -70,6 +70,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           </div>
         </div>
       </section>
+
       <FeatureList
         textSize="5"
         header={<Trans>Granular access rights</Trans>}
@@ -110,6 +111,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         ]}
         imgSize="7"
         img={<Img {...props.data.documentManagement} alt={i18n.t`Document management`} />}
+        imgFirst
         id="dataRoom"
       />
 
@@ -128,8 +130,27 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         ]}
         imgSize="7"
         img={<Img {...props.data.valuation} alt={i18n.t`Valuation`} />}
-        imgFirst
         id="dueDiligence"
+      />
+
+      <FeatureList
+        textSize="6"
+        header={<Trans>Blockchain certification</Trans>}
+        features={[
+          <Trans>
+            Unforgeable proof that your documents were not modified since the certification
+          </Trans>,
+          <Trans>
+            A certificate of each document is automatically stored on the bitcoin blockchain when
+            uploading
+          </Trans>,
+          <Trans>
+            Using Ledgy from the beginning thus builds a new level of due diligence history
+          </Trans>
+        ]}
+        imgSize="5"
+        img={<Img {...props.data.blockchainNotary} alt={i18n.t`Blockchain notary`} />}
+        imgFirst
       />
 
       <FeatureList
@@ -141,7 +162,6 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         ]}
         imgSize="5"
         img={<Img {...props.data.editLog} alt={i18n.t`Record of edits`} />}
-        imgFirst
       />
 
       <FeatureList
@@ -156,6 +176,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         ]}
         imgSize="7"
         img={<Img {...props.data.holdingConfirmationPdf} alt={i18n.t`Holding confirmation`} />}
+        imgFirst
         id="holding"
       />
 
@@ -203,6 +224,11 @@ export const pageQuery = graphql`
       }
     }
     editLog: imageSharp(fluid: { originalName: { regex: "/edit-log.png/" } }) {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    blockchainNotary: imageSharp(fluid: { originalName: { regex: "/uri.jpg/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
