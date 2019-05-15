@@ -91,7 +91,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
       />
 
       <FeatureList
-        textSize="5"
+        textSize="8"
         header={<Trans>Compare and share scenarios</Trans>}
         features={[
           <Trans>Add any number of scenarios to compare different possibilities</Trans>,
@@ -101,7 +101,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             shares, and cap table
           </Trans>
         ]}
-        imgSize="6"
+        imgSize="3"
         img={<Img {...props.data.modelingScenarios} alt={i18n.t`Compare and share scenarios`} />}
         id="compare"
       />
@@ -253,7 +253,7 @@ export const pageQuery = graphql`
         ...GatsbyImageSharpFluid
       }
     }
-    modelingScenarios: imageSharp(fluid: { originalName: { regex: "/uri.jpg/" } }) {
+    modelingScenarios: imageSharp(fluid: { originalName: { regex: "/modeling-scenarios.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
