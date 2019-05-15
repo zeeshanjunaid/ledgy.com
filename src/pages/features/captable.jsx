@@ -19,7 +19,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
     <Title
       title={i18n.t`Single source of truth`}
       section={i18n.t`Features`}
-      description={i18n.t`Intuitive, legally valid and error-free cap table from the beginning, supporting all transaction types, unlimited share classes, pooled investments and numbered shares.`}
+      description={i18n.t`Intuitive, legally valid and error-free cap table from the beginning, supporting all transaction types, unlimited share classes, pooled investments, and numbered shares.`}
     />
 
     <header className="header text-white bg-ledgy">
@@ -38,8 +38,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         <div className="container text-left">
           <div className="row pb-8">
             <TopPageFeatureCard
-              header={<Trans>Transaction based</Trans>}
-              body={<Trans>saving you hours during due diligences</Trans>}
+              header={<Trans>Transaction-based</Trans>}
+              body={<Trans>saving you hours during due diligence</Trans>}
               icon={faExchangeAlt}
               href="#transactions"
             />
@@ -73,11 +73,11 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
       <FeatureList
         textSize="5"
-        header={<Trans>Transactions based</Trans>}
+        header={<Trans>Transaction-based</Trans>}
         features={[
           <Trans>
-            Transaction based cap table, setting it up for future due diligences, saving you hours
-            of work and lawyer costs
+            Transaction-based cap table, setting it up for future due diligence, saving you hours of
+            work and lawyer costs
           </Trans>,
           <Trans>
             Supports issuance, transfer, convertibles, stock split, valuations, treasury shares,

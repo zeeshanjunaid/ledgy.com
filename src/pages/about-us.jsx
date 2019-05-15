@@ -93,7 +93,7 @@ const IndexPage = (props: Props) => {
                   <Trans>
                     We empower entrepreneurs with tools for their financing rounds and for engaging
                     their investors and employees. Today, this involves a lot of paperwork, high
-                    costs and slow, intransparent processes. We make this a breeze for both
+                    costs, and slow, intransparent processes. We make this a breeze for both
                     companies and shareholders, establishing a new standard to manage and exchange
                     securities in private companies.
                   </Trans>

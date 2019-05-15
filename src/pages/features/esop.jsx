@@ -93,8 +93,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         features={[
           <Trans>Add vesting or inverse vesting to any transaction</Trans>,
           <Trans>
-            Either use simple linear vesting with duration, interval and cliff, define your own
-            custom vesting schedule, or select a preset
+            Use simple linear vesting with duration, interval and cliff, define your own custom
+            vesting schedule, or select a preset
           </Trans>,
           <Trans>Visualizations help you understand what happens</Trans>
         ]}

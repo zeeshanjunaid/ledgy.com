@@ -20,7 +20,7 @@ export const team: { [string]: AuthorProps } = {
     description: (
       <Trans>
         Coding since high school, Timo got an award for the best master thesis in computer science
-        and worked one year as computer engineer in robotics
+        and worked one year as a computer engineer in robotics
       </Trans>
     ),
     twitter: 'https://twitter.com/thrstschfr',
@@ -71,7 +71,7 @@ export const team: { [string]: AuthorProps } = {
     role: 'Developer & Paragliding Pilot',
     description: (
       <Trans>
-        During his studies in engineering as an excellence scholar at ETH Zurich, Jules started
+        During his studies in engineering as an excellent scholar at ETH Zurich, Jules started
         working as a software developer building web applications
       </Trans>
     ),

@@ -76,7 +76,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         header={<Trans>Get the calculations right</Trans>}
         features={[
           <Trans>
-            Add convertibles with cap, discount and interest and see how they convert during the
+            Add convertibles with cap, discount, and interest and see how they convert during the
             next round
           </Trans>,
           <Trans>
@@ -163,7 +163,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         header={<Trans>Convert to transactions</Trans>}
         features={[
           <Trans>
-            Automatically update the stakeholder list, transaction history and cap table after the
+            Automatically update the stakeholder list, transaction history, and cap table after the
             round is finished
           </Trans>,
           <Trans>Convert the final scenario in just two clicks</Trans>
@@ -178,11 +178,9 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         features={[
           <Trans>Understand the impact of liquidation preferences</Trans>,
           <Trans>
-            Supports non-participating, participating with and without cap, and interest payment
+            Supports non-participating, participating with and without a cap, and interest payment
           </Trans>,
-          <Trans>
-            Calculates waterfall analysis of liquidation preferences accross all rounds
-          </Trans>,
+          <Trans>Calculates waterfall analysis of liquidation preferences across all rounds</Trans>,
           <Trans>
             Breakpoint analyses show in which valuation ranges the preferences have an effect and
             let you optimally plan your strategy

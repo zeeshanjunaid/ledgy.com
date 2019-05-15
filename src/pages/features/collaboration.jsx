@@ -75,7 +75,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         textSize="5"
         header={<Trans>Granular access rights</Trans>}
         features={[
-          <Trans>Stakeholders will only be notified if you explicitely invite them yourself</Trans>,
+          <Trans>Stakeholders will only be notified if you explicitly invite them yourself</Trans>,
           <Trans>
             <strong>Admin</strong> Full control over the company for your co-founders
           </Trans>,
@@ -105,7 +105,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             Make linked documents accessible to stakeholders involved in the transaction
           </Trans>,
           <Trans>
-            Quickly pull up documents by the information of their linked transactions; for example
+            Quickly pull up documents by the information of their linked transactions; for example,
             all of a specific stakeholder, share class or date range
           </Trans>
         ]}

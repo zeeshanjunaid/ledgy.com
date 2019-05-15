@@ -37,8 +37,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               </FeatureLi>
               <FeatureLi>
                 <Trans>
-                  Supports everything from pools to options, phantom options, warrants, vested stock
-                  and inverse vesting
+                  Supports everything from pools to options, phantom options, warrants, vested
+                  stock, and inverse vesting
                 </Trans>
               </FeatureLi>
               <FeatureLi>
@@ -68,7 +68,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               </FeatureLi>
               <FeatureLi>
                 <Trans>
-                  Featuring unlimited share classes, treasury shares, pooled investments and
+                  Featuring unlimited share classes, treasury shares, pooled investments, and
                   automatic share numbering
                 </Trans>
               </FeatureLi>
@@ -87,7 +87,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <FeatureLi>
                 <Trans>
                   Flexible yet intuitive round modeling supporting convertibles, fixed employee
-                  pools and pro-rata distribution
+                  pools, and pro-rata distribution
                 </Trans>
               </FeatureLi>
               <FeatureLi>
@@ -108,13 +108,13 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               </FeatureLi>
               <FeatureLi>
                 <Trans>
-                  Data room, audit trail and read-only access for investors saves you costly due
+                  Data room, audit trail and read-only access for investors save you costly due
                   diligence tools
                 </Trans>
               </FeatureLi>
               <FeatureLi>
                 <Trans>
-                  Save time in future due diligences by attaching legal documents to their
+                  Save time in future due diligence by attaching legal documents to their
                   transactions, making them searchable by the transaction information
                 </Trans>
               </FeatureLi>
