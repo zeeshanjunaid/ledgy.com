@@ -228,7 +228,7 @@ export const pageQuery = graphql`
         ...GatsbyImageSharpFluid
       }
     }
-    blockchainNotary: imageSharp(fluid: { originalName: { regex: "/uri.jpg/" } }) {
+    blockchainNotary: imageSharp(fluid: { originalName: { regex: "/blockchain-notary.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
