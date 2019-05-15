@@ -4,7 +4,12 @@ import * as React from 'react';
 import { withI18n, Trans } from '@lingui/react';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import { faSlidersH, faCalculator, faImages, faCoins } from '@fortawesome/free-solid-svg-icons';
+import {
+  faSlidersH,
+  faCalculator,
+  faImages,
+  faSearchDollar
+} from '@fortawesome/free-solid-svg-icons';
 
 import { FeatureLinks, FeatureList, TopPageFeatureCard } from '../../components/Feature';
 import { Title } from '../../layouts/utils';
@@ -34,26 +39,26 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           <div className="row pb-8">
             <TopPageFeatureCard
               header={<Trans>Get the calculations right</Trans>}
-              body={<Trans>with our round and exit modeling tools</Trans>}
+              body={<Trans>modeling a new round, including convertibles</Trans>}
               icon={faCalculator}
               href="#calculations"
             />
             <TopPageFeatureCard
               header={<Trans>Compare and share scenarios</Trans>}
-              body={<Trans>of different financing round situations</Trans>}
+              body={<Trans>when planning your next financing round</Trans>}
               icon={faImages}
               href="#compare"
             />
             <TopPageFeatureCard
               header={<Trans>Adjust your simulations</Trans>}
-              body={<Trans>to make the model fit your needs</Trans>}
+              body={<Trans>to make the calculations fit your needs</Trans>}
               icon={faSlidersH}
               href="#adjust"
             />
             <TopPageFeatureCard
-              header={<Trans>Exit modeling</Trans>}
-              body={<Trans>find out how stakes would distribute</Trans>}
-              icon={faCoins}
+              header={<Trans>Understand dilution</Trans>}
+              body={<Trans>by liquidation preferences</Trans>}
+              icon={faSearchDollar}
               href="#exit"
             />
           </div>
@@ -90,7 +95,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         header={<Trans>Compare and share scenarios</Trans>}
         features={[
           <Trans>Add any number of scenarios to compare different possibilities</Trans>,
-          <Trans>Copy an existing scenario to compare a few details</Trans>,
+          <Trans>Copy an existing scenario to compare it</Trans>,
           <Trans>
             Share your scenarios as pdf, including valuations, investments, convertibles, amount of
             shares, and cap table

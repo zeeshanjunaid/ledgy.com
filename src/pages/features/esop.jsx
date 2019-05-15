@@ -4,7 +4,7 @@ import * as React from 'react';
 import { withI18n, Trans } from '@lingui/react';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
-import { faFileExcel, faGlobe, faUserTie, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
+import { faFileExcel, faGlobe, faSmile, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 
 import { FeatureLinks, FeatureList, TopPageFeatureCard } from '../../components/Feature';
 import { Title, ChevronRight } from '../../layouts/utils';
@@ -33,21 +33,21 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         <div className="container text-left">
           <div className="row pb-3">
             <TopPageFeatureCard
-              header={<Trans>Support everything</Trans>}
-              body={<Trans>all transaction types you need</Trans>}
+              header={<Trans>Supports everything</Trans>}
+              body={<Trans>from options, to phantom and vested stock</Trans>}
               icon={faGlobe}
               href="#support"
             />
             <TopPageFeatureCard
-              header={<Trans>Any vesting schedule</Trans>}
-              body={<Trans>simple or custom, completely customizable</Trans>}
+              header={<Trans>Track any vesting schedule</Trans>}
+              body={<Trans>stopping the spreadsheet mess</Trans>}
               icon={faCalendarAlt}
               href="#vesting"
             />
             <TopPageFeatureCard
               header={<Trans>Engage your employees</Trans>}
-              body={<Trans>let them join you on Ledgy and be notified</Trans>}
-              icon={faUserTie}
+              body={<Trans>get notified of vesting events, invite employees</Trans>}
+              icon={faSmile}
               href="#engage"
             />
             <TopPageFeatureCard
@@ -71,7 +71,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
       <FeatureList
         textSize="5"
-        header={<Trans>Support everything</Trans>}
+        header={<Trans>Supports everything</Trans>}
         features={[
           <Trans>
             Create option or phantom pools reserved for employees and keep track of how much is

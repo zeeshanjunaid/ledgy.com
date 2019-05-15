@@ -44,20 +44,20 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               href="#access"
             />
             <TopPageFeatureCard
-              header={<Trans>Due diligence history</Trans>}
-              body={<Trans>to track past events and foresee what’s coming</Trans>}
-              icon={faHistory}
-              href="#dueDiligence"
-            />
-            <TopPageFeatureCard
               header={<Trans>Secure data room</Trans>}
               body={<Trans>to manage all of your legal documents</Trans>}
               icon={faDatabase}
               href="#dataRoom"
             />
             <TopPageFeatureCard
+              header={<Trans>Transparent history</Trans>}
+              body={<Trans>and edit log simplify due diligence</Trans>}
+              icon={faHistory}
+              href="#dueDiligence"
+            />
+            <TopPageFeatureCard
               header={<Trans>Holding confirmations</Trans>}
-              body={<Trans>generated on the fly in a single click</Trans>}
+              body={<Trans>with a single click</Trans>}
               icon={faClipboardCheck}
               href="#holding"
             />
@@ -96,24 +96,6 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
       <FeatureList
         textSize="5"
-        header={<Trans>Due diligence history</Trans>}
-        features={[
-          <Trans>
-            Set your company up for future due diligences, saving you hours of work and lawyer costs
-          </Trans>,
-          <Trans>The transaction-based cap table allows browsing through the history</Trans>,
-          <Trans>
-            Track your valuations and understand the history in terms of percentage and number of
-            shares
-          </Trans>
-        ]}
-        imgSize="7"
-        img={<Img {...props.data.valuation} alt={i18n.t`Valuation`} />}
-        imgFirst
-        id="dueDiligence"
-      />
-      <FeatureList
-        textSize="5"
         header={<Trans>Secure data room</Trans>}
         features={[
           <Trans>Save on costly due diligence tools</Trans>,
@@ -130,6 +112,26 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         img={<Img {...props.data.documentManagement} alt={i18n.t`Document management`} />}
         id="dataRoom"
       />
+
+      <FeatureList
+        textSize="5"
+        header={<Trans>Due diligence history</Trans>}
+        features={[
+          <Trans>
+            Set your company up for future due diligences, saving you hours of work and lawyer costs
+          </Trans>,
+          <Trans>The transaction-based cap table allows browsing through the history</Trans>,
+          <Trans>
+            Track your valuations and understand the history in terms of percentage and number of
+            shares
+          </Trans>
+        ]}
+        imgSize="7"
+        img={<Img {...props.data.valuation} alt={i18n.t`Valuation`} />}
+        imgFirst
+        id="dueDiligence"
+      />
+
       <FeatureList
         textSize="6"
         header={<Trans>Edit log</Trans>}
@@ -141,6 +143,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         img={<Img {...props.data.editLog} alt={i18n.t`Record of edits`} />}
         imgFirst
       />
+
       <FeatureList
         textSize="5"
         header={<Trans>Holding confirmations</Trans>}
@@ -155,6 +158,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         img={<Img {...props.data.holdingConfirmationPdf} alt={i18n.t`Holding confirmation`} />}
         id="holding"
       />
+
       <section className="section overflow-hidden pt-2">
         <div className="container text-left">
           <FeatureLinks {...props} i18n={i18n} page="collaboration" />

@@ -4,7 +4,12 @@ import * as React from 'react';
 import { withI18n, Trans } from '@lingui/react';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
-import { faFileExcel, faFileAlt, faUsers, faPaperclip } from '@fortawesome/free-solid-svg-icons';
+import {
+  faFileExcel,
+  faExchangeAlt,
+  faUsers,
+  faPaperclip
+} from '@fortawesome/free-solid-svg-icons';
 
 import { FeatureLinks, FeatureList, TopPageFeatureCard } from '../../components/Feature';
 import { Title, ChevronRight } from '../../layouts/utils';
@@ -22,7 +27,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         <div className="row">
           <div className="col-12 col-lg-8 offset-lg-2">
             <h1>
-              <Trans>Trust in Your Cap Table</Trans>
+              <Trans>Trust your Cap Table</Trans>
             </h1>
           </div>
         </div>
@@ -33,20 +38,20 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         <div className="container text-left">
           <div className="row pb-8">
             <TopPageFeatureCard
-              header={<Trans>All transaction types</Trans>}
-              body={<Trans>are supported in our platform</Trans>}
-              icon={faFileAlt}
+              header={<Trans>Transaction based</Trans>}
+              body={<Trans>saving you hours during due diligences</Trans>}
+              icon={faExchangeAlt}
               href="#transactions"
             />
             <TopPageFeatureCard
               header={<Trans>Pooled investments</Trans>}
-              body={<Trans>are easy to manage with Ledgy</Trans>}
+              body={<Trans>and numbered shares are natively supported</Trans>}
               icon={faUsers}
               href="#pooled"
             />
             <TopPageFeatureCard
               header={<Trans>Attach documents</Trans>}
-              body={<Trans>to each of your transactions</Trans>}
+              body={<Trans>to prove your transactions</Trans>}
               icon={faPaperclip}
               href="#documents"
             />
@@ -68,11 +73,11 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
       <FeatureList
         textSize="5"
-        header={<Trans>All transaction types</Trans>}
+        header={<Trans>Transactions based</Trans>}
         features={[
           <Trans>
-            It’s transaction based setting it up for future due diligences, saving you hours of work
-            and lawyer costs
+            Transaction based cap table, setting it up for future due diligences, saving you hours
+            of work and lawyer costs
           </Trans>,
           <Trans>
             Supports issuance, transfer, convertibles, stock split, valuations, treasury shares,

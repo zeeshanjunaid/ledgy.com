@@ -4,7 +4,12 @@ import * as React from 'react';
 import { withI18n, Trans } from '@lingui/react';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import { faFolderOpen, faFilePdf, faHistory, faChartLine } from '@fortawesome/free-solid-svg-icons';
+import {
+  faListAlt,
+  faFileSignature,
+  faHistory,
+  faChartLine
+} from '@fortawesome/free-solid-svg-icons';
 
 import { FeatureLinks, FeatureList, TopPageFeatureCard } from '../../components/Feature';
 import { Title } from '../../layouts/utils';
@@ -34,25 +39,25 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           <div className="row pb-7">
             <TopPageFeatureCard
               header={<Trans>Recurring reports</Trans>}
-              body={<Trans>including KPIs and generated in a click</Trans>}
-              icon={faFilePdf}
+              body={<Trans>help you be professional towards your investors</Trans>}
+              icon={faFileSignature}
               href="#reports"
             />
             <TopPageFeatureCard
               header={<Trans>KPIs</Trans>}
-              body={<Trans>your key performance data for your reports</Trans>}
+              body={<Trans>share your key performance indicators</Trans>}
               icon={faChartLine}
               href="#kpis"
             />
             <TopPageFeatureCard
               header={<Trans>Professional portfolio</Trans>}
               body={<Trans>to stay up to date with all your investments</Trans>}
-              icon={faFolderOpen}
+              icon={faListAlt}
               href="#professional"
             />
             <TopPageFeatureCard
               header={<Trans>Portfolio history</Trans>}
-              body={<Trans>to keep track of all that’s happened</Trans>}
+              body={<Trans>to keep track of changes, including documents</Trans>}
               icon={faHistory}
               href="#portfolioHistory"
             />
