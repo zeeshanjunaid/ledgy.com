@@ -140,6 +140,13 @@ const Footer = (props: LayoutProps) => (
             <Link className="nav-link" href to={`${props.prefix}/help/faq/`}>
               <Trans>FAQ</Trans>
             </Link>
+            <Link
+              className="nav-link"
+              href
+              to={`${props.prefix}/help/employee-participation-guide/`}
+            >
+              Legal Templates
+            </Link>
           </div>
           <h6 className="mb-4 mt-1">
             <strong>
@@ -159,13 +166,6 @@ const Footer = (props: LayoutProps) => (
             </Link>
             <Link className="nav-link" href to={`${props.prefix}/updates/kpis-and-reports/`}>
               KPIs & Reports
-            </Link>
-            <Link
-              className="nav-link"
-              href
-              to={`${props.prefix}/help/employee-participation-guide/`}
-            >
-              Employee Participation
             </Link>
           </div>
         </div>
