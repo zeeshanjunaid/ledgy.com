@@ -6,7 +6,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Creation-Date: 2018-09-12T18:40:54.619Z\n"
-"PO-Revision-Date: 2019-05-16 15:03+0200\n"
+"PO-Revision-Date: 2019-05-17 09:26+0200\n"
 "Language: de\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
@@ -881,11 +881,11 @@ msgstr "Veröffentliche deine Berichte, sobald sie fertig sind, und teile sie mi
 
 #: src/pages/features/collaboration.jsx:107
 msgid "Quickly pull up documents by the information of their linked transactions; for example, all of a specific stakeholder, share class or date range"
-msgstr "Rufe rasch Dokumente anhand der verknüpften Transaktionen z.B. aller relevanten Stakeholder, Aktienklassen oder Datumsbereiche auf"
+msgstr "Finde Dokumente anhand der verknüpften Transaktionen z.B. aller relevanten Stakeholder, Aktienklassen oder Datumsbereiche"
 
 #: src/pages/features/captable.jsx:140
 msgid "Quickly pull up legal documents by the information of their linked transactions"
-msgstr "Rufe rasch Dokumente anhand der verknüpften Transaktionen auf"
+msgstr "Finde Rechtsdokumente anhand der verknüpften Transaktionen"
 
 #: src/components/SecurityRow.jsx:22 src/components/SecurityRow.jsx:37
 #: src/pages/blog.jsx:49
@@ -893,9 +893,8 @@ msgid "Read more"
 msgstr "Mehr erfahren"
 
 #: src/pages/features/collaboration.jsx:164
-#, fuzzy
 msgid "Record of edits"
-msgstr "Aufzeichnung der Bearbeitungen"
+msgstr "Historie der Änderungen"
 
 #: src/pages/features/investors.jsx:76
 #, fuzzy
@@ -916,9 +915,8 @@ msgid "Report"
 msgstr "Bericht"
 
 #: src/components/Feature.jsx:100 src/pages/features.jsx:80
-#, fuzzy
 msgid "Round & Exit Modeling"
-msgstr "Modellierung von Finanzierungsrunden und Exits"
+msgstr "Modellierung von Finanzierungsrunden & Exits"
 
 #: src/pages/features/modeling.jsx:68
 msgid "Round Modeling"
@@ -943,16 +941,15 @@ msgstr "Spare Stunden an Arbeit, indem du auf manuelle Tabellenkalkulationsdokum
 
 #: src/pages/features/esop.jsx:17
 msgid "Save hours of work by getting rid of manual spreadsheet processes, keep track of any vesting schedule, get notified of important vesting and expiry events, get started in minutes with the spreadsheet importer."
-msgstr "Spare Stunden an Arbeit, indem du auf manuelle Tabellenkalkulationsdokumente verzichtest und den Überblick über alle Vesting-Pläne behältst, dich über wichtige Ablaufdaten informieren lässt und innerhalb weniger Minuten mit dem Import von Tabellendokumenten beginnst."
+msgstr "Spare Stunden an Arbeit, indem du auf manuelle Tabellenkalkulationsdokumente verzichtest und den Überblick über alle Vesting-Pläne behältst, dich über wichtige Verfallstermine informieren lässt und innerhalb weniger Minuten mit dem Import von Tabellendokumenten beginnst."
 
 #: src/pages/features/collaboration.jsx:102
 msgid "Save on costly due diligence tools"
 msgstr "Spare dir kostspielige Due-Diligence-Werkzeuge"
 
 #: src/pages/features.jsx:116
-#, fuzzy
 msgid "Save time in future due diligence by attaching legal documents to their transactions, making them searchable by the transaction information"
-msgstr "Sparen Sie Zeit bei der zukünftigen Due Diligence, indem Sie ihren Transaktionen juristische Dokumente beifügen, die anhand der Transaktionsinformationen durchsucht werden können"
+msgstr "Spare dir Zeit bei zukünftigen Due Diligence Prozessen, indem du Transaktionen die jeweiligen Rechtsdokumente anfügst, welche später anhand der Transaktionsinformationen gefunden werden können."
 
 #: src/pages/index.jsx:45
 msgid "Screenshot of the Ledgy app"
@@ -965,7 +962,6 @@ msgid "Secure data room"
 msgstr "Sicherer Datenraum"
 
 #: src/pages/features/collaboration.jsx:22
-#, fuzzy
 msgid "Secure data room, audit trail and read-only access for investors; save costly due diligence tools."
 msgstr "Sicherer Datenraum, Audit-Trail und schreibgeschützter Zugriff für Investoren; sparen Sie teure Due-Diligence-Tools."
 
@@ -975,41 +971,36 @@ msgid "Security"
 msgstr "Sicherheit"
 
 #: src/pages/features/modeling.jsx:82
-#, fuzzy
 msgid "See how many shares have to be reserved for a fixed percentage employee pool"
-msgstr "Sehen Sie, wie viele Aktien für einen festen prozentualen Mitarbeiterpool reserviert werden müssen"
+msgstr "Erfahre, wie viele Aktien für einen festen prozentualen Mitarbeiterpool reserviert werden müssen"
 
 #: src/pages/index.jsx:37
 msgid "See the Demo"
 msgstr "Demo ansehen"
 
 #: src/pages/features/esop.jsx:140
-#, fuzzy
 msgid "See your pools and employee participation grants in the cap table"
-msgstr "Sehen Sie Ihre Pools und Mitarbeiterbeteiligungen in der Cap-Tabelle"
+msgstr "Sehe deine Pools und Mitarbeiterbeteiligungen in der Cap Table"
 
 #: src/pages/security.jsx:117
 msgid "Server call rate limit"
 msgstr "Limitierung der Server-Anfragen"
 
 #: src/pages/features/collaboration.jsx:122
-#, fuzzy
 msgid "Set your company up for future due diligences, saving you hours of work and lawyer costs"
-msgstr "Richten Sie Ihr Unternehmen auf zukünftige Due Diligences ein und sparen Sie sich Arbeitszeiten und Anwaltskosten"
+msgstr "Bereite dein Unternehmen auf zukünftige Due Diligences Prozesse vor und spare dir Arbeitszeit und Anwaltskosten"
 
 #: src/pages/features/captable.jsx:112
 msgid "Share number checking"
-msgstr "Überprüfung der Aktiennummer"
+msgstr "Überprüfung der Aktiennummerierung"
 
 #: src/pages/features/captable.jsx:139
-#, fuzzy
 msgid "Share the documents attached with the stakeholders of this transaction"
-msgstr "Teilen Sie die beigefügten Dokumente mit den Interessengruppen dieser Transaktion"
+msgstr "Teile die beigefügten Dokumente mit den Interessengruppen dieser Transaktion"
 
 #: src/pages/features/investors.jsx:99
-#, fuzzy
 msgid "Share them with individual stakeholders or with stakeholder groups"
-msgstr "Teilen Sie sie mit einzelnen Interessengruppen oder mit Stakeholdergruppen"
+msgstr "Teile sie mit einzelnen Interessengruppen oder mit Stakeholdergruppen"
 
 #: src/pages/features/modeling.jsx:99 src/pages/features/modeling.jsx:118
 #, fuzzy
@@ -1030,22 +1021,20 @@ msgstr "Simulationseinstellungen"
 
 #: src/pages/features/captable.jsx:20
 msgid "Single source of truth"
-msgstr "Eine einzige Informationsquelle"
+msgstr "Single source of truth"
 
 #: src/pages/about-us.jsx:103
 msgid "Space elevator"
 msgstr "Weltraumlift"
 
 #: src/pages/features/captable.jsx:159
-#, fuzzy
 msgid "Speed up your onboarding process with the bulk import feature"
-msgstr "Beschleunigen Sie Ihren Onboarding-Prozess mit der Massenimportfunktion"
+msgstr "Benutze die Massenimportfunktion für einen einfachen Einstieg"
 
 #: src/pages/features/captable.jsx:59 src/pages/features/captable.jsx:157
 #: src/pages/features/esop.jsx:54 src/pages/features/esop.jsx:153
-#, fuzzy
 msgid "Spreadsheet importer"
-msgstr "Tabellenkalkulations-Importeur"
+msgstr "Tabellendokument-Import"
 
 #: src/pages/privacy.jsx:78
 msgid "Stakeholder information, company information, share ledger transaction history, other cap table details. Equity data and all related information is used exclusively for the provision of the services"
@@ -1056,9 +1045,8 @@ msgid "Stakeholders access rights"
 msgstr "Zugriffsrechte der Stakeholder"
 
 #: src/pages/features/collaboration.jsx:78
-#, fuzzy
 msgid "Stakeholders will only be notified if you explicitly invite them yourself"
-msgstr "Stakeholder werden nur benachrichtigt, wenn Sie sie ausdrücklich selbst einladen"
+msgstr "Stakeholder werden nur benachrichtigt, wenn du sie ausdrücklich selbst einlädst"
 
 #: src/pages/security.jsx:79
 msgid "Stored encrypted with the battle-tested <0>bcrypt algorithm</0> at 13 rounds"
@@ -1069,14 +1057,12 @@ msgid "Strong passwords"
 msgstr "Sichere Passwörter"
 
 #: src/pages/features/investors.jsx:82
-#, fuzzy
 msgid "Style your reports to your needs with the rich-text editor"
-msgstr "Gestalten Sie Ihre Berichte nach Ihren Bedürfnissen mit dem Rich-Text-Editor"
+msgstr "Gestalte Berichte nach deinen Bedürfnissen mit dem Rich-Text-Editor"
 
 #: src/pages/features/investors.jsx:78
-#, fuzzy
 msgid "Successful companies share regular updates with their stakeholders, holding themselves accountable"
-msgstr "Erfolgreiche Unternehmen teilen regelmäßige Updates mit ihren Stakeholdern und halten sich selbst verantwortlich"
+msgstr "Erfolgreiche Unternehmen teilen regelmäßig Updates mit ihren Stakeholdern und nehmen ihre Verantwortung war"
 
 #: src/layouts/markdown.jsx:76
 msgid "Suggest changes"
@@ -1093,14 +1079,12 @@ msgid "Supports everything from pools to options, phantom options, warrants, ves
 msgstr "Unterstützt alles von Pools über Optionen, Phantomoptionen, Warrants, Freizügigkeitsrechte bis hin zu Inverse Vesting"
 
 #: src/pages/features/captable.jsx:82
-#, fuzzy
 msgid "Supports issuance, transfer, convertibles, stock split, valuations, treasury shares, unlimited share classes and more"
-msgstr "Unterstützt Ausgabe, Übertragung, Wandelanleihen, Aktiensplit, Bewertungen, eigene Aktien, unbegrenzte Aktiengattungen und mehr"
+msgstr "Unterstützt Ausgabe, Übertragung, Wandeldarlehen, Aktiensplit, Bewertungen, eigene Aktien, unbegrenzte Aktienklassen und mehr"
 
 #: src/pages/features/modeling.jsx:180
-#, fuzzy
 msgid "Supports non-participating, participating with and without a cap, and interest payment"
-msgstr "Unterstützt die Nichtteilnahme, die Teilnahme mit und ohne Cap sowie die Zahlung von Zinsen"
+msgstr "Unterstützt Non-participating, Participating mit und ohne Cap, sowie Zinsen"
 
 #: src/pages/contact.jsx:65
 msgid "Switzerland"
@@ -1128,25 +1112,23 @@ msgstr "Der Neue Standard im Equity Management"
 
 #: src/pages/security.jsx:111
 msgid "The code is always reviewed by at least one other engineer"
-msgstr "Jede Zeile Code wir immer von mindestens einem weiteren Entwickler geprüft"
+msgstr "Jede Zeile Code wird immer von mindestens einem weiteren Entwickler geprüft"
 
 #: src/pages/security.jsx:118
 msgid "The frequency of server calls is limited to prevent brute-force attacks"
 msgstr "Die Anzahl an Server-Anfragen ist beschränkt, um Brute-Force-Attacken zu verhindern"
 
 #: src/pages/features.jsx:137
-#, fuzzy
 msgid "The simplest and most time-efficient way to manage the portfolio as an investor"
-msgstr "Der einfachste und zeiteffizienteste Weg, das Portfolio als Investor zu verwalten"
+msgstr "Der einfachste und zeitsparendste Weg, das Portfolio als Investor zu verwalten"
 
 #: src/pages/security.jsx:126
 msgid "The site is accessible only through HTTPS (<0>A+ rating</0>)"
 msgstr "Unsere Seite ist ausschließlich über HTTPS erreichbar (<0>A+-Rating</0>)"
 
 #: src/pages/features/collaboration.jsx:125
-#, fuzzy
 msgid "The transaction-based cap table allows browsing through the history"
-msgstr "Die transaktionsbasierte Cap-Tabelle ermöglicht das Durchsuchen des Verlaufs"
+msgstr "Die Cap Table basiert auf den Transaktionen und ermöglicht so den Einblick in den Verlauf"
 
 #: src/pages/features/collaboration.jsx:172
 #, fuzzy
@@ -1159,9 +1141,8 @@ msgid "They work with numbered shares and you can even run exit modeling with al
 msgstr "Sie arbeiten mit nummerierten Aktien und Sie können sogar eine Exit-Modellierung mit allen Wirtschaftsbeteiligten durchführen"
 
 #: src/pages/privacy.jsx:59
-#, fuzzy
 msgid "This is a brief summary of the privacy policy. For the details, please read our <0>Privacy Policy</0>."
-msgstr "Dies ist eine kurze Zusammenfassung der Datenschutzerklärung. Für die Details lesen Sie bitte unsere <0>Datenschutzerklärung</0>."
+msgstr "Dies ist eine kurze Zusammenfassung der Datenschutzerklärung. Für Details lesen Sie bitte unsere <0>Datenschutzerklärung</0>."
 
 #: src/layouts/markdown.jsx:53
 msgid "This page is only available in English."
@@ -1169,17 +1150,15 @@ msgstr "Diese Seite ist nur auf Englisch verfügbar."
 
 #: src/pages/blog.jsx:62
 msgid "Thoughts on cap tables, financing rounds, and legal issues around running and managing a startup."
-msgstr "Gedanken über Cap Tablet, Finanzierungsrunden und rechtliche Fragen rund um das Leiten und Managen eines Startups."
+msgstr "Gedanken zur Cap Table, Finanzierungsrunden und rechtlichen Fragen rund um das Leiten und Managen eines Startups."
 
 #: src/pages/features.jsx:132
-#, fuzzy
 msgid "Track KPIs, write recurring reports and share them with your investors"
-msgstr "Verfolgen Sie KPIs, schreiben Sie wiederkehrende Berichte und teilen Sie diese mit Ihren Investoren"
+msgstr "Verfolge KPIs, schreibe wiederkehrende Berichte und teile diese mit deinen Investoren"
 
 #: src/pages/features/esop.jsx:42
-#, fuzzy
 msgid "Track any vesting schedule"
-msgstr "Verfolgen Sie jeden Ausübungsplan"
+msgstr "Verfolge jeden Vesting-Plan"
 
 #: src/pages/features/esop.jsx:83 src/pages/features/esop.jsx:118
 #, fuzzy
@@ -1187,9 +1166,8 @@ msgid "Track exercise, termination and expiration"
 msgstr "Verfolgung von Ausübung, Kündigung und Verfall"
 
 #: src/pages/features/collaboration.jsx:126
-#, fuzzy
 msgid "Track your valuations and understand the history in terms of percentage and number of shares"
-msgstr "Verfolgen Sie Ihre Bewertungen und verstehen Sie die Historie in Bezug auf Prozentsatz und Anzahl der Aktien"
+msgstr "Verfolge deine Bewertungen und verstehen die Historie in Bezug auf Prozentsatz und Anzahl der Aktien"
 
 #: src/pages/features/captable.jsx:41 src/pages/features/captable.jsx:76
 #, fuzzy
@@ -1197,19 +1175,16 @@ msgid "Transaction-based"
 msgstr "Transaktionsbasiert"
 
 #: src/pages/features/captable.jsx:78
-#, fuzzy
 msgid "Transaction-based cap table, setting it up for future due diligence, saving you hours of work and lawyer costs"
-msgstr "Transaktionsbasierte Cap-Tabelle, die für die zukünftige Due Diligence eingerichtet wird, wodurch Sie Arbeitsstunden und Anwaltskosten sparen"
+msgstr "Transaktionsbasierte Cap Table, die für zukünftige Due Diligence-Prozesse vorbereitet ist, wodurch du Arbeitsstunden und Anwaltskosten sparst"
 
 #: src/pages/features.jsx:64
-#, fuzzy
 msgid "Transaction-based supporting any type like issuance, transfer, convertibles, stock split, share destruction, valuations"
-msgstr "Transaktionsbasierte Unterstützung jeglicher Art wie Ausgabe, Übertragung, Wandelanleihen, Aktiensplit, Aktienvernichtung, Bewertungen, etc"
+msgstr "Transaktionsbasiert, unterstützt jegliche Art wie Ausgabe, Übertragung, Wandelanleihen, Aktiensplit, Aktienvernichtung, Bewertungen, etc"
 
 #: src/pages/features/collaboration.jsx:53
-#, fuzzy
 msgid "Transparent history"
-msgstr "Transparente Historie"
+msgstr "Transparenter Verlauf"
 
 #: src/pages/features/captable.jsx:30
 #, fuzzy
@@ -1230,57 +1205,48 @@ msgid "Understand dilution"
 msgstr "Verdünnung verstehen"
 
 #: src/pages/features.jsx:83
-#, fuzzy
 msgid "Understand how dilution works by quickly comparing different modeling scenarios"
-msgstr "Verstehen Sie, wie Verdünnung funktioniert, indem Sie verschiedene Modellierungsszenarien schnell vergleichen"
+msgstr "Verstehe, wie Verdünnung funktioniert, indem du verschiedene Modellierungsszenarien vergleichst"
 
 #: src/pages/features/modeling.jsx:22
-#, fuzzy
 msgid "Understand how dilution works by quickly comparing different modeling scenarios for financing rounds and exits, including convertibles and employee pools."
-msgstr "Verstehen Sie, wie Verwässerung funktioniert, indem Sie verschiedene Modellierungsszenarien für die Finanzierung von Runden und Exits, einschließlich Wandelanleihen und Mitarbeiterpools, schnell vergleichen."
+msgstr "Verstehe, wie Verwässerung funktioniert, indem du verschiedene Modellierungsszenarien für Finanzierungsrunden und Exits, einschließlich Wandeldarlehen und Mitarbeiterpools, vergleichst."
 
 #: src/pages/features/modeling.jsx:146
-#, fuzzy
 msgid "Understand the dilution impact of the financing round"
-msgstr "Verstehen Sie die Verwässerungseffekte der Finanzierungsrunde"
+msgstr "Verstehe den Verwässerungseffekt einer Finanzierungsrunde"
 
 #: src/pages/features/modeling.jsx:179
-#, fuzzy
 msgid "Understand the impact of liquidation preferences"
-msgstr "Verstehen Sie die Auswirkungen von Liquidationspräferenzen"
+msgstr "Verstehe die Auswirkungen von Liquidationspräferenzen"
 
 #: src/pages/features/collaboration.jsx:140
-#, fuzzy
 msgid "Unforgeable proof that your documents were not modified since the certification"
-msgstr "Unvergesslicher Nachweis, dass Ihre Dokumente seit der Zertifizierung nicht verändert wurden"
+msgstr "Fölschungsicherer Nachweis, dass deine Dokumente seit der Zertifizierung nicht verändert wurden"
 
 #: src/pages/privacy.jsx:89
 msgid "Usage statistics and usage profile"
 msgstr "Nutzungsstatistiken und Nutzungsprofile"
 
 #: src/pages/features/modeling.jsx:85
-#, fuzzy
 msgid "Use pre- or post-money valuation and see the respective other"
-msgstr "Verwenden Sie die Pre- oder Post-Money-Bewertung und beachten Sie die jeweils anderen"
+msgstr "Verwende eine Pre- oder Post-Money-Bewertung und betrachte auch einfach die andere"
 
 #: src/pages/features/esop.jsx:95
-#, fuzzy
 msgid "Use simple linear vesting with duration, interval and cliff, define your own custom vesting schedule, or select a preset"
-msgstr "Verwenden Sie einfache lineare Vesting mit Dauer, Intervall und Klippe, definieren Sie Ihren eigenen benutzerdefinierten Vesting-Plan oder wählen Sie eine Voreinstellung"
+msgstr "Verwende lineares Vesting mit Dauer, Intervall und Klippe, definiere deinen eigenen Vesting-Plan oder wählen Sie eine Voreinstellung"
 
 #: src/pages/security.jsx:62
 msgid "Users have to set a <0>secure password</0>"
-msgstr "Alle Nutzer müssen ein <0>extrem sicheres Passwort</0> wählen"
+msgstr "Alle Nutzer müssen ein <0>sicheres Passwort</0> wählen"
 
 #: src/pages/features/modeling.jsx:134
-#, fuzzy
 msgid "Uses your existing cap table percentages to distribute a fixed amount"
-msgstr "Verwendet Ihre bestehenden Prozentsätze der Cap-Tabelle, um einen festen Betrag zu verteilen"
+msgstr "Verwendet deine bestehenden Prozentsätze der Cap Table, um einen festen Betrag zu verteilen"
 
 #: src/pages/features/collaboration.jsx:147
-#, fuzzy
 msgid "Using Ledgy from the beginning thus builds a new level of due diligence history"
-msgstr "Die Verwendung von Ledgy von Anfang an führt somit zu einer neuen Ebene der Due Diligence Geschichte"
+msgstr "Von Anfang an Ledgy zu benutzen ist der Eintritt in ein neues Level im Bereich der Due Diligence"
 
 #: src/pages/contact.jsx:68
 msgid "VAT number"
@@ -1299,18 +1265,16 @@ msgid "Vesting plans"
 msgstr "Vestingpläne"
 
 #: src/pages/features/captable.jsx:122
-#, fuzzy
 msgid "View the cap table in legal or economic terms"
-msgstr "Betrachten Sie die Cap-Tabelle in rechtlicher oder wirtschaftlicher Hinsicht"
+msgstr "Betrachten Sie die Cap Table aus rechtlichem oder wirtschaftlichem Blickwinkel"
 
 #: src/pages/pricing.jsx:100
 msgid "Virtual option programs"
 msgstr "Virtuelle Option-Programme"
 
 #: src/pages/features/esop.jsx:99
-#, fuzzy
 msgid "Visualizations help you understand what happens"
-msgstr "Visualisierungen helfen Ihnen zu verstehen, was passiert"
+msgstr "Visualisierungen helfen dir zu verstehen, was passiert"
 
 #: src/pages/pricing.jsx:103
 msgid "Warrants"
@@ -1322,9 +1286,8 @@ msgid "We comply with the Swiss Federal Act on Data Protection (FADP) and the Ge
 msgstr "Wir halten uns an das Bundesgesetz über den Datenschutz (DSG) und die Allgemeine Datenschutzverordnung (GDPR). Lesen Sie mehr über die <0>Einhaltung der GDPR-Richtlinien</0>."
 
 #: src/pages/about-us.jsx:93
-#, fuzzy
 msgid "We empower entrepreneurs with tools for their financing rounds and for engaging their investors and employees. Today, this involves a lot of paperwork, high costs, and slow, intransparent processes. We make this a breeze for both companies and shareholders, establishing a new standard to manage and exchange securities in private companies."
-msgstr "Wir unterstützen Unternehmer mit Tools für ihre Finanzierungsrunden und Motivation ihrer Investoren und Mitarbeiter. Heute ist dies mit viel Papierkram, hohen Kosten und langsamen, intransparenten Prozessen verbunden. Wir machen es für Unternehmen und Aktionäre zum Kinderspiel und etablieren einen neuen Standard für die Verwaltung und Handel von Wertpapieren in privaten Unternehmen."
+msgstr "Wir unterstützen Unternehmer mit Werkzeugen für ihre Finanzierungsrunden und Motivation ihrer Investoren und Mitarbeiter. Heute ist dies mit viel Papierkram, hohen Kosten und langsamen, intransparenten Prozessen verbunden. Wir machen es für Unternehmen und Aktionäre zum Kinderspiel und etablieren einen neuen Standard für die Verwaltung und Handel von Wertpapieren in privaten Unternehmen."
 
 #: src/pages/privacy.jsx:124
 msgid "We limit access and sharing as much as reasonably possible. Some information is shared with third party contractors we use to run and improve our service for you"
@@ -1343,37 +1306,32 @@ msgid "We understand how sensitive equity information is for any business. That�
 msgstr "Uns ist bewusst, wie sensibel und vertraulich der Cap Table für jede Firma ist. Deshalb nehmen wir deine Privatsphäre und die Sicherheit deiner Daten sehr ernst. So schützen wir deine Daten."
 
 #: src/pages/features/investors.jsx:113
-#, fuzzy
 msgid "Weekly email notifications if the startups publish new information"
-msgstr "Wöchentliche E-Mail-Benachrichtigungen, wenn die Startups neue Informationen veröffentlichen"
+msgstr "Wöchentliche E-Mail-Benachrichtigungen, wenn Startups neue Informationen veröffentlichen"
 
 #: src/pages/privacy.jsx:71
 msgid "What we may collect and why"
 msgstr "Welche Daten wir sammeln und warum"
 
 #: src/pages/features/modeling.jsx:147
-#, fuzzy
 msgid "When in round modeling, the cap table below shows the distribution after the round"
-msgstr "Bei der runden Modellierung zeigt die folgende Kappentafel die Verteilung nach der Runde"
+msgstr "Bei der Rundenmodellierung zeigt die folgende Cap Table die Verteilung danach"
 
 #: src/layouts/team.jsx:34
 msgid "Yoko graduated from ETH and Oxford and was president of Swissloop, enabling the team to win the 3rd price at the SpaceX Hyperloop competition"
 msgstr "Yoko hat ihren Physik Master an der ETH und in Oxford gemacht und war Präsident von Swissloop, wo sie dem Team zum dritten Platz beim SpaceX Hyperloop Wettbewerb verholfen hat"
 
 #: src/components/SecurityRow.jsx:31
-#, fuzzy
 msgid "Your data is safe with us"
-msgstr "Ihre Daten sind bei uns sicher"
+msgstr "Deine Daten sind bei uns sicher"
 
 #: src/pages/features/collaboration.jsx:54
-#, fuzzy
 msgid "and edit log simplify due diligence"
-msgstr "und bearbeiten Sie das Protokoll, um die Sorgfaltspflicht zu vereinfachen"
+msgstr "und bearbeite das Protokoll, um Due Diligence zu vereinfachen"
 
 #: src/pages/features/captable.jsx:48
-#, fuzzy
 msgid "and numbered shares are natively supported"
-msgstr "und nummerierte Aktien werden nativ unterstützt"
+msgstr "und die Aktiennummerierung wird nativ unterstützt"
 
 #: src/pages/features/modeling.jsx:60
 #, fuzzy
@@ -1382,7 +1340,7 @@ msgstr "Liquidationspräferenzen"
 
 #: src/layouts/index.jsx:389
 msgid "cap table, stock ledger, share register, startup, modeling, financing round, equity, esop, phantom, option plan, virtual, portfolio, reporting, investors"
-msgstr "cap table, Aktienbuch, Aktienregister, Startup, Modellierung, Finanzierungsrunde, Exit, ESOP, VSOP, Beteiligungsplan, Unternehmensbeteiligung, Mitarbeiterbeteiligung, Optionspläne, virtuelle Beteiligung, Reporting, Investor, Portfolio"
+msgstr "Cap Table, Aktienbuch, Aktienregister, Startup, Modellierung, Finanzierungsrunde, Exit, ESOP, VSOP, Beteiligungsplan, Unternehmensbeteiligung, Mitarbeiterbeteiligung, Optionspläne, virtuelle Beteiligung, Reporting, Investor, Portfolio"
 
 #: src/pages/features/esop.jsx:37
 #, fuzzy
@@ -1390,84 +1348,68 @@ msgid "from options, to phantom and vested stock"
 msgstr "von Optionen, über Phantom- bis hin zu Freizügigkeitsaktien"
 
 #: src/pages/features/esop.jsx:49
-#, fuzzy
 msgid "get notified of vesting events, invite employees"
-msgstr "benachrichtigung über Ausübungsereignisse, Einladung von Mitarbeitern"
+msgstr "were benachrichtigt über Ausübungsereignisse, lade Mitarbeiter ein"
 
 #: src/pages/features/investors.jsx:42
-#, fuzzy
 msgid "help you be professional towards your investors"
-msgstr "ihnen helfen, professionell mit Ihren Investoren umzugehen"
+msgstr "dir helfen, professionell mit Ihren Investoren umzugehen"
 
 #: src/pages/features/modeling.jsx:42
-#, fuzzy
 msgid "modeling a new round, including convertibles"
-msgstr "modellierung einer neuen Runde, einschließlich Cabriolets"
+msgstr "Modellierung einer neuen Runde, einschließlich Convertibles"
 
 #: src/pages/features/esop.jsx:55
-#, fuzzy
 msgid "save time and focus on what matters"
-msgstr "zeitersparnis und Konzentration auf das Wesentliche"
+msgstr "Spare Zeit und konzentriere dich auf die Dinge, die deine Aufmerksamkeit brauchen"
 
 #: src/pages/features/captable.jsx:60
-#, fuzzy
 msgid "save time, focus on what matters"
-msgstr "zeitersparnis, Konzentration auf das Wesentliche"
+msgstr "Spare Zeit, konzentriere dich auf die Dinge, die deine Aufmerksamkeit brauchen"
 
 #: src/pages/features/captable.jsx:42
-#, fuzzy
 msgid "saving you hours during due diligence"
-msgstr "sie sparen Stunden bei der Due Diligence"
+msgstr "spare Zeit bei der Due Diligence"
 
 #: src/pages/features/investors.jsx:48
-#, fuzzy
 msgid "share your key performance indicators"
-msgstr "teilen Sie Ihre wichtigsten Leistungsindikatoren mit uns"
+msgstr "teile die wichtigsten Leistungsindikatoren mit uns"
 
 #: src/pages/features/collaboration.jsx:42
-#, fuzzy
 msgid "so you control what others can see and do"
-msgstr "so dass du kontrollierst, was andere sehen und tun können"
+msgstr "du kontrollierst, was andere sehen und bearbeiten können"
 
 #: src/pages/features/esop.jsx:43
-#, fuzzy
 msgid "stopping the spreadsheet mess"
-msgstr "stoppen der Tabellenkalkulation"
+msgstr "stoppen des Durcheinanders in Tabellendokumenten"
 
 #: src/pages/features/investors.jsx:60
-#, fuzzy
 msgid "to keep track of changes, including documents"
-msgstr "die Verfolgung von Änderungen, einschließlich der Dokumente, zu gewährleisten"
+msgstr "Auf dem Laufenden bleiben, auch bei den Dokumenten"
 
 #: src/pages/features/modeling.jsx:54
-#, fuzzy
 msgid "to make the calculations fit your needs"
-msgstr "um die Berechnungen an Ihre Bedürfnisse anzupassen"
+msgstr "um die Berechnungen an deine Bedürfnisse anzupassen"
 
 #: src/pages/features/collaboration.jsx:48
-#, fuzzy
 msgid "to manage all of your legal documents"
-msgstr "zur Verwaltung aller Ihrer juristischen Dokumente"
+msgstr "zur Verwaltung all deiner Rechtsdokumente"
 
 #: src/pages/features/captable.jsx:54
-#, fuzzy
 msgid "to prove your transactions"
-msgstr "um Ihre Transaktionen zu beweisen"
+msgstr "um deine Transaktionen zu belegen"
 
 #: src/pages/features/investors.jsx:54
-#, fuzzy
 msgid "to stay up to date with all your investments"
-msgstr "um mit all Ihren Investitionen auf dem Laufenden zu bleiben"
+msgstr "bleibe up-to-date bei deinen Investitionen"
 
 #: src/pages/features/modeling.jsx:48
-#, fuzzy
 msgid "when planning your next financing round"
-msgstr "bei der Planung Ihrer nächsten Finanzierungsrunde"
+msgstr "bei der Planung deiner nächsten Finanzierungsrunde"
 
 #: src/pages/index.jsx:73
-#, fuzzy
 msgid "who already use Ledgy for their equity management and investor relations"
-msgstr "die Ledgy bereits für ihr Eigenkapitalmanagement und ihre Investor Relations nutzen"
+msgstr "die Ledgy bereits für die Verwaltung von Eigenkapital und ihre Inves nutzen"
 
 #: src/pages/features/collaboration.jsx:60
 #, fuzzy
