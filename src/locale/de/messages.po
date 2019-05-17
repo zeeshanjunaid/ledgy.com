@@ -1406,7 +1406,7 @@ msgstr "die Ledgy bereits für die Verwaltung von Eigenkapital und ihre Investor
 #: src/pages/features/collaboration.jsx:60
 #, fuzzy
 msgid "with a single click"
-msgstr "Oje, es ist wieder Zeit Steuererklärungen auszufüllen und es gibt 50 Besitzbestätigungen, die darauf warten, an den Aktionäre versandt zu werden. Das bedeutet, Namen in Dokumentvorlagen einfügen, den Steuerwert aller Anteile berechnen... <0/> Mach dir keine Sorgen. Generiere und sende alle wichtigen Dokumente mit einem einzigen Klick auf Ledgy."
+msgstr ""
 
 #: src/pages/pricing.jsx:87
 msgid "€79/month"
