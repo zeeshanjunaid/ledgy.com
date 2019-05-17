@@ -73,7 +73,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
       <FeatureList
         textSize="5"
-        header={<Trans>Recurring Reports</Trans>}
+        header={<Trans>Recurring reports</Trans>}
         features={[
           <Trans>
             Successful companies share regular updates with their stakeholders, holding themselves
