@@ -181,7 +181,7 @@ const Footer = (props: LayoutProps) => (
               <Trans>Employee Incentives</Trans>
             </Link>
             <Link className="nav-link" href to={`${props.prefix}/features/collaboration/`}>
-              <Trans>Collaboration</Trans>
+              <Trans>Due Diligence</Trans>
             </Link>
             <Link className="nav-link" href to={`${props.prefix}/features/investors/`}>
               <Trans>Investors</Trans>

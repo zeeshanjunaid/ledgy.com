@@ -114,8 +114,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           </Trans>,
           <Trans>
             Invite your employees to track their stake and vesting in their Ledgy portfolio
-          </Trans>,
-          <Trans>Track exercise, termination and expiration</Trans>
+          </Trans>
         ]}
         imgSize="7"
         img={
@@ -126,7 +125,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         }
         link={
           <Link href to={`${props.prefix}/features/collaboration/`}>
-            Learn more about collaboration
+            <Trans>Learn more about collaboration</Trans>
             <ChevronRight />
           </Link>
         }
