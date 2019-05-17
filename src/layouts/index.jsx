@@ -327,7 +327,7 @@ const Initialize = ({ branch, pathname }: {| branch: string, pathname: string |}
       require('../assets/js/script'); // eslint-disable-line global-require
 
       if (getLocale() === 'de' && !pathname.startsWith('/de')) {
-        navigate(`/de${this.props.location.pathname}`);
+        navigate(`/de${pathname}`);
       }
 
       await loadScript('https://wchat.eu.freshchat.com/js/widget.js');
