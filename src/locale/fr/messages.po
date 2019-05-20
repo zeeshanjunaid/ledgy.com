@@ -147,7 +147,7 @@ msgstr ""
 msgid "Auto-assign share numbers for all your transactions; Ledgy will determine the next available ones"
 msgstr ""
 
-#: src/pages/features/modeling.jsx:165
+#: src/pages/features/modeling.jsx:161
 msgid "Automatically update the stakeholder list, transaction history, and cap table after the round is finished"
 msgstr ""
 
@@ -194,7 +194,7 @@ msgstr ""
 msgid "Blog"
 msgstr "Blog"
 
-#: src/pages/features/modeling.jsx:184
+#: src/pages/features/modeling.jsx:180
 msgid "Breakpoint analyses show in which valuation ranges the preferences have an effect and let you optimally plan your strategy"
 msgstr ""
 
@@ -214,11 +214,11 @@ msgstr "Bug Bounty"
 msgid "Bulk entry"
 msgstr "Entrée en bloc"
 
-#: src/pages/features/esop.jsx:159
+#: src/pages/features/esop.jsx:158
 msgid "Bulk entry options"
 msgstr ""
 
-#: src/pages/features/modeling.jsx:183
+#: src/pages/features/modeling.jsx:179
 msgid "Calculates waterfall analysis of liquidation preferences across all rounds"
 msgstr ""
 
@@ -231,7 +231,7 @@ msgstr "Cap Table"
 msgid "Cap Table Management"
 msgstr ""
 
-#: src/pages/features/modeling.jsx:155
+#: src/pages/features/modeling.jsx:151
 msgid "Cap table during round modeling"
 msgstr "Cap table pendant la levée de fonds"
 
@@ -239,16 +239,12 @@ msgstr "Cap table pendant la levée de fonds"
 msgid "Career"
 msgstr "Carrière"
 
-#: src/pages/features/esop.jsx:141
+#: src/pages/features/esop.jsx:140
 msgid "Choose to only show pools or the detailed view with the grants distributed to their holders"
 msgstr ""
 
 #: src/layouts/team.jsx:21
 msgid "Coding since high school, Timo got an award for the best master thesis in computer science and worked one year as a computer engineer in robotics"
-msgstr ""
-
-#: src/layouts/index.jsx:184
-msgid "Collaboration"
 msgstr ""
 
 #: src/components/Feature.jsx:101
@@ -292,15 +288,15 @@ msgstr "Données de contact, statistiques d’utilisation et données techniques
 msgid "Content-Security-Policy"
 msgstr "Politique de sécurité du contenu"
 
-#: src/pages/features/modeling.jsx:172
+#: src/pages/features/modeling.jsx:168
 msgid "Convert financing round"
 msgstr "Convertir la levée de fonds"
 
-#: src/pages/features/modeling.jsx:169
+#: src/pages/features/modeling.jsx:165
 msgid "Convert the final scenario in just two clicks"
 msgstr ""
 
-#: src/pages/features/modeling.jsx:163
+#: src/pages/features/modeling.jsx:159
 msgid "Convert to transactions"
 msgstr "Convertir en transactions"
 
@@ -316,7 +312,7 @@ msgstr "Politique de Cookies"
 msgid "Copy an existing scenario to compare it"
 msgstr ""
 
-#: src/pages/features/esop.jsx:156
+#: src/pages/features/esop.jsx:155
 msgid "Copy-pasting employee grants from your existing spreadsheet"
 msgstr ""
 
@@ -340,8 +336,8 @@ msgstr ""
 msgid "Digital entrepreneur and investor. Security, crypto & privacy expert"
 msgstr "Entrepreneur et investisseur en technologies digitales. Expert en sécurité et cryptographie"
 
-#: src/pages/features/esop.jsx:138
-#: src/pages/features/modeling.jsx:144
+#: src/pages/features/esop.jsx:137
+#: src/pages/features/modeling.jsx:140
 msgid "Diluted cap table"
 msgstr ""
 
@@ -353,7 +349,7 @@ msgstr "Découvre les fonctionnalités"
 msgid "Discover more about Ledgy"
 msgstr "Découvre plus sur Ledgy"
 
-#: src/pages/features/modeling.jsx:138
+#: src/pages/features/modeling.jsx:134
 msgid "Distribute investment pro-rata"
 msgstr ""
 
@@ -371,6 +367,10 @@ msgstr "Stockage des documents"
 
 #: src/pages/features/collaboration.jsx:171
 msgid "Download holding confirmations with a single click"
+msgstr ""
+
+#: src/layouts/index.jsx:184
+msgid "Due Diligence"
 msgstr ""
 
 #: src/pages/features/collaboration.jsx:30
@@ -397,7 +397,7 @@ msgstr "Protection des données de l’UE"
 msgid "Edit log"
 msgstr ""
 
-#: src/pages/features/esop.jsx:124
+#: src/pages/features/esop.jsx:123
 msgid "Email notification about upcoming vesting event"
 msgstr ""
 
@@ -457,8 +457,8 @@ msgstr "La symbiose européenne entre les fonds de capital-risque et le réseau 
 msgid "Every company has KPIs, and investors love seeing them in real-time"
 msgstr ""
 
-#: src/pages/features/modeling.jsx:177
-#: src/pages/features/modeling.jsx:190
+#: src/pages/features/modeling.jsx:173
+#: src/pages/features/modeling.jsx:186
 msgid "Exit Modeling"
 msgstr "Modélisation de stratégie de sortie"
 
@@ -529,7 +529,7 @@ msgstr ""
 msgid "Get notified two weeks before a cliff or vesting ends or a grant expires to not miss using your participation plan for engaging your employees"
 msgstr ""
 
-#: src/pages/features/esop.jsx:155
+#: src/pages/features/esop.jsx:154
 msgid "Get started in minutes with the copy-paste spreadsheet importer"
 msgstr ""
 
@@ -622,6 +622,10 @@ msgstr "Des informations sur ton site Web et utilisation de services ainsi que l
 msgid "Interested in our enterprise offer?<0/><1>Drop us an email</1> or use the chat right on this page."
 msgstr "Intéressé par notre offre d’entreprise?<0/><1>Envoie-nous un email</1> ou utilise le chat à droite sur cette page."
 
+#: src/pages/features/captable.jsx:20
+msgid "Intuitive and correct from the beginning"
+msgstr ""
+
 #: src/pages/features.jsx:61
 msgid "Intuitive, legally valid and error-free cap table from the beginning"
 msgstr ""
@@ -705,7 +709,15 @@ msgstr "Investisseur majeur en Espagne dans les tech startups en phase initiale"
 msgid "Learn more about"
 msgstr "En savoir plus sur:"
 
-#: src/pages/features/modeling.jsx:133
+#: src/pages/features/esop.jsx:128
+msgid "Learn more about collaboration"
+msgstr ""
+
+#: src/pages/features/captable.jsx:148
+msgid "Learn more about document management"
+msgstr ""
+
+#: src/pages/features/modeling.jsx:129
 msgid "Ledgy makes it easy to simulate an investment with a pro-rata distribution"
 msgstr ""
 
@@ -860,7 +872,7 @@ msgstr ""
 msgid "Privacy made in Europe. Because your equity data is not for everyone."
 msgstr "Confidentialité made in Europe. Parce que tes données ne doivent pas être accessible à tout le monde."
 
-#: src/pages/features/modeling.jsx:131
+#: src/pages/features/modeling.jsx:127
 msgid "Pro-rata distribution"
 msgstr ""
 
@@ -978,7 +990,7 @@ msgstr ""
 msgid "See the Demo"
 msgstr "Voir la démo"
 
-#: src/pages/features/esop.jsx:140
+#: src/pages/features/esop.jsx:139
 msgid "See your pools and employee participation grants in the cap table"
 msgstr ""
 
@@ -1003,11 +1015,10 @@ msgid "Share them with individual stakeholders or with stakeholder groups"
 msgstr ""
 
 #: src/pages/features/modeling.jsx:99
-#: src/pages/features/modeling.jsx:118
 msgid "Share your scenarios as pdf, including valuations, investments, convertibles, amount of shares, and cap table"
 msgstr ""
 
-#: src/pages/features/esop.jsx:147
+#: src/pages/features/esop.jsx:146
 msgid "Show cap table fully diluted"
 msgstr "Afficher le cap table entièrement dilué"
 
@@ -1015,13 +1026,9 @@ msgstr "Afficher le cap table entièrement dilué"
 msgid "Sign Up"
 msgstr "S’inscrire"
 
-#: src/pages/features/modeling.jsx:124
+#: src/pages/features/modeling.jsx:120
 msgid "Simulation settings"
 msgstr "Paramètres de simulation"
-
-#: src/pages/features/captable.jsx:20
-msgid "Single source of truth"
-msgstr "Une seule source de vérité"
 
 #: src/pages/about-us.jsx:103
 msgid "Space elevator"
@@ -1034,7 +1041,7 @@ msgstr ""
 #: src/pages/features/captable.jsx:59
 #: src/pages/features/captable.jsx:157
 #: src/pages/features/esop.jsx:54
-#: src/pages/features/esop.jsx:153
+#: src/pages/features/esop.jsx:152
 msgid "Spreadsheet importer"
 msgstr ""
 
@@ -1083,7 +1090,7 @@ msgstr ""
 msgid "Supports issuance, transfer, convertibles, stock split, valuations, treasury shares, unlimited share classes and more"
 msgstr ""
 
-#: src/pages/features/modeling.jsx:180
+#: src/pages/features/modeling.jsx:176
 msgid "Supports non-participating, participating with and without a cap, and interest payment"
 msgstr ""
 
@@ -1161,7 +1168,6 @@ msgid "Track any vesting schedule"
 msgstr ""
 
 #: src/pages/features/esop.jsx:83
-#: src/pages/features/esop.jsx:118
 msgid "Track exercise, termination and expiration"
 msgstr ""
 
@@ -1211,11 +1217,11 @@ msgstr ""
 msgid "Understand how dilution works by quickly comparing different modeling scenarios for financing rounds and exits, including convertibles and employee pools."
 msgstr ""
 
-#: src/pages/features/modeling.jsx:146
+#: src/pages/features/modeling.jsx:142
 msgid "Understand the dilution impact of the financing round"
 msgstr ""
 
-#: src/pages/features/modeling.jsx:179
+#: src/pages/features/modeling.jsx:175
 msgid "Understand the impact of liquidation preferences"
 msgstr ""
 
@@ -1239,7 +1245,7 @@ msgstr ""
 msgid "Users have to set a <0>secure password</0>"
 msgstr "Les utilisateurs doivent définir un mot de passe <0>sécurisé </0>"
 
-#: src/pages/features/modeling.jsx:134
+#: src/pages/features/modeling.jsx:130
 msgid "Uses your existing cap table percentages to distribute a fixed amount"
 msgstr ""
 
@@ -1311,7 +1317,7 @@ msgstr ""
 msgid "What we may collect and why"
 msgstr "Ce que nous pouvons recueillir et pourquoi"
 
-#: src/pages/features/modeling.jsx:147
+#: src/pages/features/modeling.jsx:143
 msgid "When in round modeling, the cap table below shows the distribution after the round"
 msgstr ""
 
@@ -1355,12 +1361,9 @@ msgstr ""
 msgid "modeling a new round, including convertibles"
 msgstr ""
 
+#: src/pages/features/captable.jsx:60
 #: src/pages/features/esop.jsx:55
 msgid "save time and focus on what matters"
-msgstr ""
-
-#: src/pages/features/captable.jsx:60
-msgid "save time, focus on what matters"
 msgstr ""
 
 #: src/pages/features/captable.jsx:42
