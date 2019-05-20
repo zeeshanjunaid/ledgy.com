@@ -6,7 +6,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Creation-Date: 2018-09-12T18:40:54.619Z\n"
-"PO-Revision-Date: 2019-05-20 12:02+0200\n"
+"PO-Revision-Date: 2019-05-20 16:15+0200\n"
 "Language: de\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
@@ -23,15 +23,15 @@ msgstr "<0/> Registrieren…"
 
 #: src/pages/features/collaboration.jsx:79
 msgid "<0>Admin</0> Full control over the company for your co-founders"
-msgstr "<0>Admin</0> Volle Kontrolle über das Unternehmen für Ihre Mitgründer"
+msgstr "<0>Admin</0> Volle Kontrolle über das Unternehmen für dein Mitgründer"
 
 #: src/pages/features/collaboration.jsx:85
 msgid "<0>Portfolio</0> See only the own stake in their <1>portfolio<2/></1>"
-msgstr "<0>Portfolio</0> Sehe nur die eigene Beteiligung in Deinem <1>Portfolio</1><2/>"
+msgstr "<0>Portfolio</0> Sehe nur die eigene Beteiligung in deinem <1>Portfolio</1><2/>"
 
 #: src/pages/features/collaboration.jsx:82
 msgid "<0>View</0> See all cap table info in a read-only mode for due diligences"
-msgstr "<0>Ansicht</0> Alle Informationen zum Cap Table schreibgeschützt für Due-Diligence-Prüfungen anzeigen"
+msgstr "<0>Ansicht</0> Lesezugriff auf alle Informationen für Due-Diligence"
 
 #: src/pages/features/collaboration.jsx:143
 msgid "A certificate of each document is automatically stored on the bitcoin blockchain when uploading"
@@ -383,7 +383,7 @@ msgstr "EU-Datenschutz"
 
 #: src/pages/features/collaboration.jsx:158
 msgid "Edit log"
-msgstr "Protokoll bearbeiten"
+msgstr "Bearbeitungsprotokoll"
 
 #: src/pages/features/esop.jsx:124
 msgid "Email notification about upcoming vesting event"
@@ -428,7 +428,7 @@ msgstr "Aktiendaten"
 
 #: src/pages/features/collaboration.jsx:160
 msgid "Equity data is too important to be accidentally tweaked in a spreadsheet"
-msgstr "Aktiendaten sind zu wichtig, um sie versehentlich in einem Tabellendokument zu verändern "
+msgstr "Beteiligungsdaten sind zu wichtig, um sie versehentlich in einem Tabellendokument zu verändern"
 
 #: src/pages/pricing.jsx:48
 msgid "Error-free cap table"
@@ -659,7 +659,7 @@ msgstr "Behalte den Überblick über alle Vesting-Pläne"
 
 #: src/pages/features/collaboration.jsx:161
 msgid "Keep track of who edited what and hold admins accountable"
-msgstr "Behalte den Überblick, wer was bearbeitet hat und übertrage Administratoren die Verantwortung"
+msgstr "Behalte den Überblick, wer was bearbeitet hat und behalte ein Auge auf Administratoren"
 
 #: src/pages/features/investors.jsx:95
 msgid "Key Performance Indicators"
@@ -719,7 +719,7 @@ msgstr "Gemacht für Startups, perfekt für Investoren"
 
 #: src/pages/features/collaboration.jsx:104
 msgid "Make linked documents accessible to stakeholders involved in the transaction"
-msgstr "Mache verknüpfte Dokumente den an der Transaktion beteiligten Interessengruppen zugänglich"
+msgstr "Mache diese Dokumente den an der Transaktion beteiligten Personen zugänglich"
 
 #: src/pages/contact.jsx:82
 msgid "Managing directors"
@@ -739,7 +739,7 @@ msgstr "Name, E-Mail, Adresse und alle anderen Angaben, die du machst. Für die 
 
 #: src/pages/privacy.jsx:130
 msgid "Nobody has any access to the equity data you provide. They are safely stored at a secure data center in France. Your stakeholders have no access and don’t get emails before you explicitly invite them"
-msgstr "Niemand hat Zugang zu den von dir angegebenen Aktiendaten. Sie werden sicher in einem geschützten Rechenzentrum in Frankreich gespeichert. Deine Stakeholder haben keinen Zugriff und erhalten keine E-Mails, bevor du sie nicht explizit dazu einlädst"
+msgstr "Niemand hat Zugang zu den von dir angegebenen Aktiendaten. Sie werden sicher in einem geschützten Rechenzentrum in Frankreich gespeichert. Deine Stakeholder haben keinen Zugriff und erhalten keine E-Mails, bevor du sie nicht explizit einlädst"
 
 #: src/pages/features/captable.jsx:99
 msgid "Numbered shares"
@@ -842,7 +842,7 @@ msgstr "Professionelles Portfolio"
 
 #: src/pages/features/collaboration.jsx:103
 msgid "Prove your transactions by linking their respective legal documents"
-msgstr "Belege deine Transaktionen durch die Verknüpfung der jeweiligen Rechtsdokumente"
+msgstr "Belege deine Transaktionen durch die jeweiligen rechtlichen Dokumente"
 
 #: src/pages/features/captable.jsx:138
 msgid "Prove your transactions with their respective legal documents"
@@ -854,7 +854,7 @@ msgstr "Veröffentliche deine Berichte, sobald sie fertig sind, und teile sie mi
 
 #: src/pages/features/collaboration.jsx:107
 msgid "Quickly pull up documents by the information of their linked transactions; for example, all of a specific stakeholder, share class or date range"
-msgstr "Finde Dokumente anhand der verknüpften Transaktionen z.B. aller relevanten Stakeholder, Aktienklassen oder Datumsbereiche"
+msgstr "Finde Dokumente anhand der verknüpften Transaktionen z.B. zu einer Person, Aktienklasse oder in einem Datumsbereich"
 
 #: src/pages/features/captable.jsx:140
 msgid "Quickly pull up legal documents by the information of their linked transactions"
@@ -1086,7 +1086,7 @@ msgstr "Unsere Seite ist ausschließlich über HTTPS erreichbar (<0>A+-Rating</0
 
 #: src/pages/features/collaboration.jsx:125
 msgid "The transaction-based cap table allows browsing through the history"
-msgstr "Der Cap Table basiert auf den Transaktionen und ermöglicht so den Einblick in den Verlauf"
+msgstr "Der Cap Table basiert auf Transaktionen und ermöglicht so eine schnelle Prüfung der Historie"
 
 #: src/pages/features/collaboration.jsx:172
 msgid "They will list all assets owned by the stakeholder and optionally include a tax value of the shares"
@@ -1122,7 +1122,7 @@ msgstr "Behalte den Überblick über Ausübung, Kündigung und Verfall"
 
 #: src/pages/features/collaboration.jsx:126
 msgid "Track your valuations and understand the history in terms of percentage and number of shares"
-msgstr "Verfolge die Unternehmensbewertung und verstehe den Verlauf in Bezug auf Prozentsatz und Anzahl der Aktien"
+msgstr "Verfolge die Unternehmensbewertung und verstehe die Historie in Bezug auf prozentuale und absolute Verteilung"
 
 #: src/pages/features/captable.jsx:41 src/pages/features/captable.jsx:76
 msgid "Transaction-based"
@@ -1138,7 +1138,7 @@ msgstr "Transaktionsbasiert, mit Unterstützung von allen Typen angefangen bei d
 
 #: src/pages/features/collaboration.jsx:53
 msgid "Transparent history"
-msgstr "Transparenter Verlauf"
+msgstr "Transparente Historie"
 
 #: src/pages/features/captable.jsx:30
 msgid "Trust your Cap Table"
@@ -1198,7 +1198,7 @@ msgstr "Verwendet deine bestehenden Prozentsätze des Cap Table, um einen festen
 
 #: src/pages/features/collaboration.jsx:147
 msgid "Using Ledgy from the beginning thus builds a new level of due diligence history"
-msgstr "Von Anfang an Ledgy zu benutzen bedeutet ein neues Level im Bereich der Due Diligence zu betreten"
+msgstr "Von Anfang an Ledgy zu benutzen baut dadurch ein ganz neues Level an Vertrauen für zukünftige Due Diligence auf"
 
 #: src/pages/contact.jsx:68
 msgid "VAT number"
@@ -1278,7 +1278,7 @@ msgstr "Deine Daten sind bei uns sicher"
 
 #: src/pages/features/collaboration.jsx:54
 msgid "and edit log simplify due diligence"
-msgstr "und Bearbeitungsprotokoll vereinfachen Due Diligence"
+msgstr "und Änderungprotokoll vereinfachen Due Diligence"
 
 #: src/pages/features/captable.jsx:48
 msgid "and numbered shares are natively supported"
@@ -1342,7 +1342,7 @@ msgstr "ermöglichen dir die Anpassung an deinen Fall"
 
 #: src/pages/features/collaboration.jsx:48
 msgid "to manage all of your legal documents"
-msgstr "zur Verwaltung all deiner Rechtsdokumente"
+msgstr "zur Verwaltung all deiner rechtlichen Dokumente"
 
 #: src/pages/features/captable.jsx:54
 msgid "to prove your transactions"
