@@ -6,7 +6,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Creation-Date: 2018-09-12T18:40:54.619Z\n"
-"PO-Revision-Date: 2019-05-17 21:24+0200\n"
+"PO-Revision-Date: 2019-05-20 11:51+0200\n"
 "Language: de\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
@@ -100,7 +100,7 @@ msgstr "Du hast immer ein aktuelles Portfolio, gepflegt von deinen Start-ups"
 
 #: src/pages/features/captable.jsx:86
 msgid "Analyze it by stakeholder, share class, stakeholder group and view it with all, outstanding or diluted shares"
-msgstr "Analysiere es nach Stakeholder, Aktienklasse, Stakeholdergruppe und betrachte es mit allen ausstehenden oder diluted Aktien"
+msgstr "Analysiere nach Stakeholder, Aktienklasse, Stakeholdergruppe, nur mit ausstehenden Anteilen oder verwässert"
 
 #: src/pages/features/esop.jsx:92
 msgid "Any vesting schedule"
@@ -116,7 +116,7 @@ msgstr "Als Startup, sei professionell gegenüber den Investoren, verfolge KPIs 
 
 #: src/pages/features/captable.jsx:160
 msgid "As easy as copying and pasting stakeholders, shares issues, or options"
-msgstr "So einfach wie das Kopieren und Einfügen von Stakeholdern, Emissionen oder Optionen"
+msgstr "Ganz einfach Stakeholder, Emissionen oder Optionen aus Excel kopieren und einfügen"
 
 #: src/pages/features.jsx:94
 msgid "Assess the impact of liquidation preferences with waterfall analysis and breakpoint charts"
@@ -259,7 +259,7 @@ msgstr "Szenarien vergleichen und teilen"
 
 #: src/pages/features/investors.jsx:135
 msgid "Complete your portfolio"
-msgstr "Vervollständigen Sie Ihr Portfolio"
+msgstr "Vervollständige dein Portfolio"
 
 #: src/pages/features/investors.jsx:124
 msgid "Comprehensive transaction history"
@@ -590,7 +590,7 @@ msgstr "Import & Export"
 
 #: src/pages/features/captable.jsx:101
 msgid "In some countries numbering shares is necessary, and it can be a real pain"
-msgstr "In einigen Ländern ist die Nummerierung von Aktien notwendig. Das kann sehr mühsam sein"
+msgstr "In einigen Ländern ist die Nummerierung von Aktien notwendig, was mühsam sein kann"
 
 #: src/pages/privacy.jsx:90
 msgid "Information about your website and service usage and communication preferences, to personalize and improve our service"
@@ -796,7 +796,7 @@ msgstr "Gepoolte Investments"
 
 #: src/pages/features/captable.jsx:119
 msgid "Pooled investments are common in many countries, Ledgy helps you keep them organized"
-msgstr "Gepoolte Investitionen sind in vielen Ländern üblich. Ledgy hilft dir, sie zu organisieren"
+msgstr "Gepoolte Investitionen sind in vielen Ländern üblich. Ledgy hilft dir, sie zu organisieren."
 
 #: src/pages/features/investors.jsx:59 src/pages/features/investors.jsx:122
 #: src/pages/features/investors.jsx:128
@@ -846,7 +846,7 @@ msgstr "Belege deine Transaktionen durch die Verknüpfung der jeweiligen Rechtsd
 
 #: src/pages/features/captable.jsx:138
 msgid "Prove your transactions with their respective legal documents"
-msgstr "Belegen deine Transaktionen mit den entsprechenden rechtlichen Dokumenten"
+msgstr "Belege deine Transaktionen mit den entsprechenden rechtlichen Dokumenten"
 
 #: src/pages/features/investors.jsx:84
 msgid "Publish your reports once done, which will share them with your selected stakeholders"
@@ -858,7 +858,7 @@ msgstr "Finde Dokumente anhand der verknüpften Transaktionen z.B. aller relevan
 
 #: src/pages/features/captable.jsx:140
 msgid "Quickly pull up legal documents by the information of their linked transactions"
-msgstr "Finde Rechtsdokumente anhand der verknüpften Transaktionen"
+msgstr "Finde Dokumente anhand der Informationen der verknüpften Transaktionen"
 
 #: src/components/SecurityRow.jsx:22 src/components/SecurityRow.jsx:37
 #: src/pages/blog.jsx:49
@@ -957,7 +957,7 @@ msgstr "Überprüfung der Aktiennummerierung"
 
 #: src/pages/features/captable.jsx:139
 msgid "Share the documents attached with the stakeholders of this transaction"
-msgstr "Teile die beigefügten Dokumente mit den Interessengruppen dieser Transaktion"
+msgstr "Teile die angehängten Dokumente mit den Beteiligten dieser Transaktion"
 
 #: src/pages/features/investors.jsx:99
 msgid "Share them with individual stakeholders or with stakeholder groups"
@@ -989,7 +989,7 @@ msgstr "Weltraumlift"
 
 #: src/pages/features/captable.jsx:159
 msgid "Speed up your onboarding process with the bulk import feature"
-msgstr "Benutze die Massenimportfunktion für einen einfachen Einstieg"
+msgstr "Durch die Importtools kannst du innert kürzester Zeit loslegen"
 
 #: src/pages/features/captable.jsx:59 src/pages/features/captable.jsx:157
 #: src/pages/features/esop.jsx:54 src/pages/features/esop.jsx:153
@@ -1098,7 +1098,7 @@ msgstr "Nummerierte Aktien werden unterstützt und du kannst sogar eine Exit-Mod
 
 #: src/pages/privacy.jsx:59
 msgid "This is a brief summary of the privacy policy. For the details, please read our <0>Privacy Policy</0>."
-msgstr "Dies ist eine kurze Zusammenfassung der Datenschutzerklärung. Für Details lesen Sie bitte unsere <0>Datenschutzerklärung</0>."
+msgstr "Dies ist eine kurze Zusammenfassung der Datenschutzerklärung. Für Details lese bitte unsere <0>Datenschutzerklärung</0>."
 
 #: src/layouts/markdown.jsx:53
 msgid "This page is only available in English."
@@ -1130,7 +1130,7 @@ msgstr "Transaktionsbasiert"
 
 #: src/pages/features/captable.jsx:78
 msgid "Transaction-based cap table, setting it up for future due diligence, saving you hours of work and lawyer costs"
-msgstr "Transaktionsbasierter Cap Table, das für zukünftige Due-Diligence-Prüfungen vorbereitet ist, wodurch du Arbeitsstunden und Anwaltskosten sparst"
+msgstr "Transaktionsbasierter Cap Table, der für zukünftige Due-Diligence vorbereitet und dadurch Zeit und Anwaltskosten spart"
 
 #: src/pages/features.jsx:64
 msgid "Transaction-based supporting any type like issuance, transfer, convertibles, stock split, share destruction, valuations"
@@ -1142,7 +1142,7 @@ msgstr "Transparenter Verlauf"
 
 #: src/pages/features/captable.jsx:30
 msgid "Trust your Cap Table"
-msgstr "Eine einzige vertrauenswürdige Quelle"
+msgstr "Vertraue deinem Cap Table"
 
 #: src/layouts/index.jsx:89
 msgid "Try Ledgy now for free"
@@ -1218,7 +1218,7 @@ msgstr "Vestingpläne"
 
 #: src/pages/features/captable.jsx:122
 msgid "View the cap table in legal or economic terms"
-msgstr "Betrachte den Cap Table aus rechtlichem oder wirtschaftlichem Blickwinkel"
+msgstr "Analysiere den Cap Table aus rechtlichem oder wirtschaftlichem Blickwinkel"
 
 #: src/pages/pricing.jsx:100
 msgid "Virtual option programs"
@@ -1310,11 +1310,11 @@ msgstr "Modellierung einer neuen Runde, einschließlich Convertibles"
 
 #: src/pages/features/esop.jsx:55
 msgid "save time and focus on what matters"
-msgstr "Spare Zeit und konzentriere dich auf das Wichtige"
+msgstr "Spare Zeit und konzentriere dich auf Wichtiges"
 
 #: src/pages/features/captable.jsx:60
 msgid "save time, focus on what matters"
-msgstr "Spare Zeit, konzentriere dich auf die Dinge, die deine Aufmerksamkeit brauchen"
+msgstr "Spare Zeit und konzentriere dich auf Wichtiges"
 
 #: src/pages/features/captable.jsx:42
 msgid "saving you hours during due diligence"

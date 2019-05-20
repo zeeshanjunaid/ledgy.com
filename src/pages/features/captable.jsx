@@ -17,7 +17,7 @@ import { Title, ChevronRight } from '../../layouts/utils';
 export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
     <Title
-      title={i18n.t`Single source of truth`}
+      title={i18n.t`Intuitive and correct from the beginning`}
       section={i18n.t`Features`}
       description={i18n.t`Intuitive, legally valid and error-free cap table from the beginning, supporting all transaction types, unlimited share classes, pooled investments, and numbered shares.`}
     />
@@ -57,7 +57,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             />
             <TopPageFeatureCard
               header={<Trans>Spreadsheet importer</Trans>}
-              body={<Trans>save time, focus on what matters</Trans>}
+              body={<Trans>save time and focus on what matters</Trans>}
               icon={faFileExcel}
               href="#importer"
             />
@@ -145,7 +145,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         img={<Img {...props.data.attachDocTransaction} alt={i18n.t`Attach doc to transaction`} />}
         link={
           <Link href to={`${props.prefix}/features/collaboration/`}>
-            Learn more about document management
+            <Trans>Learn more about document management</Trans>
             <ChevronRight />
           </Link>
         }
