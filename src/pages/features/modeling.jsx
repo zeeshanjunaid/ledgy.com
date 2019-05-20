@@ -114,11 +114,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             Play around with founder- or investor-friendly settings, let convertibles and pools
             dilute all or only the existing shareholders
           </Trans>,
-          <Trans>Rounded share price, or exact to 10 decimals</Trans>,
-          <Trans>
-            Share your scenarios as pdf, including valuations, investments, convertibles, amount of
-            shares, and cap table
-          </Trans>
+          <Trans>Rounded share price, or exact to 10 decimals</Trans>
         ]}
         imgSize="6"
         img={<Img {...props.data.simulationSettings} alt={i18n.t`Simulation settings`} />}

@@ -6,7 +6,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Creation-Date: 2018-09-12T18:40:54.619Z\n"
-"PO-Revision-Date: 2019-05-20 11:51+0200\n"
+"PO-Revision-Date: 2019-05-20 12:02+0200\n"
 "Language: de\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
@@ -60,7 +60,7 @@ msgstr "Erstelle eine beliebige Anzahl Szenarien, um verschiedene Möglichkeiten
 
 #: src/pages/features/modeling.jsx:78
 msgid "Add convertibles with cap, discount, and interest and see how they convert during the next round"
-msgstr "Füge Wandeldarlehen mit Cap, Rabatt und Zinsen hinzu und sehe, wie sie sich in der nächsten Runde umwandeln"
+msgstr "Füge Wandeldarlehen mit Cap, Discount und Zinsen hinzu und sehe, wie sie sich in der nächsten Runde umwandeln"
 
 #: src/pages/features/investors.jsx:145
 msgid "Add portfolio investment"
@@ -76,7 +76,7 @@ msgstr "Hinzufügen von Vesting oder inversem Vesting zu jeder Transaktion"
 
 #: src/pages/features/modeling.jsx:53 src/pages/features/modeling.jsx:111
 msgid "Adjust your simulations"
-msgstr "Verändere die Parameter"
+msgstr "Flexible Einstellungen"
 
 #: src/pages/pricing.jsx:94
 msgid "All Free features"
@@ -303,7 +303,7 @@ msgstr "Cookie-Richtlinie"
 
 #: src/pages/features/modeling.jsx:98
 msgid "Copy an existing scenario to compare it"
-msgstr "Kopiere ein bestehendes Szenario"
+msgstr "Kopiere ein bestehendes Szenario um es zu vergleichen"
 
 #: src/pages/features/esop.jsx:156
 msgid "Copy-pasting employee grants from your existing spreadsheet"
@@ -516,7 +516,7 @@ msgstr "Lege in wenigen Minuten mit dem Copy-Paste-Tool für bestehende Tabellen
 #: src/pages/features/modeling.jsx:41 src/pages/features/modeling.jsx:76
 #: src/pages/features/modeling.jsx:88
 msgid "Get the calculations right"
-msgstr "Mache fehlerfreie Berechnungen"
+msgstr "Vermeide kostspielige Fehler"
 
 #: src/pages/index.jsx:26
 msgid "Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant."
@@ -783,7 +783,7 @@ msgstr "Code-Audits"
 
 #: src/pages/features/modeling.jsx:113
 msgid "Play around with founder- or investor-friendly settings, let convertibles and pools dilute all or only the existing shareholders"
-msgstr "Experimentiere mit gründer- oder investorenfreundlichen Rahmenbedingungen, lasse Wandeldarlehen und Pools alle oder nur die bestehenden Aktionärsanteile verwässern"
+msgstr "Experimentiere mit gründer- oder investorenfreundlichen Rahmenbedingungen, lasse Wandeldarlehen und Pools alle oder nur bestehende Anteilseigner verwässern"
 
 #: src/pages/features/captable.jsx:129
 msgid "Pooled investment"
@@ -830,7 +830,7 @@ msgstr "Datenschutz made in Europe. Weil deine Beteiligungsdaten nicht jeder ken
 
 #: src/pages/features/modeling.jsx:131
 msgid "Pro-rata distribution"
-msgstr "pro-rata Verteilung"
+msgstr "Pro-rata Verteilung"
 
 #: src/layouts/index.jsx:167
 msgid "Product"
@@ -895,7 +895,7 @@ msgstr "Rundenmodellierung"
 
 #: src/pages/features/modeling.jsx:117
 msgid "Rounded share price, or exact to 10 decimals"
-msgstr "Anzeige des gerundeten Aktienkurs oder exakt auf 10 Dezimalstellen genau"
+msgstr "Wähle zwischen gerundeten oder auf 10 Dezimalstellen exakten Preis"
 
 #: src/pages/features.jsx:36
 msgid "Save hours of work by getting rid of manual spreadsheet processes"
@@ -933,7 +933,7 @@ msgstr "Sicherheit"
 
 #: src/pages/features/modeling.jsx:82
 msgid "See how many shares have to be reserved for a fixed percentage employee pool"
-msgstr "Erfahre, wie viele Aktien für einen festen prozentualen Mitarbeiterpool reserviert werden müssen"
+msgstr "Finde heraus, wie viele Aktien für einen festen prozentualen Mitarbeiterpool reserviert werden müssen"
 
 #: src/pages/index.jsx:37
 msgid "See the Demo"
@@ -1182,7 +1182,7 @@ msgstr "Nutzungsstatistiken und Nutzungsprofile"
 
 #: src/pages/features/modeling.jsx:85
 msgid "Use pre- or post-money valuation and see the respective other"
-msgstr "Verwende eine Pre- oder Post-Money-Bewertung"
+msgstr "Verwende Pre- oder Post-Money-Bewertung"
 
 #: src/pages/features/esop.jsx:95
 msgid "Use simple linear vesting with duration, interval and cliff, define your own custom vesting schedule, or select a preset"
@@ -1286,7 +1286,7 @@ msgstr "und Aktiennummerierung wird nativ unterstützt"
 
 #: src/pages/features/modeling.jsx:60
 msgid "by liquidation preferences"
-msgstr "Liquidationspräferenzen"
+msgstr "durch Liquidationspräferenzen"
 
 #: src/layouts/index.jsx:380
 msgid "cap table, stock ledger, share register, startup, modeling, financing round, equity, esop, phantom, option plan, virtual, portfolio, reporting, investors"
@@ -1306,7 +1306,7 @@ msgstr "unterstützen dich dabei, eine professionelle Zusammenarbeit mit deinen 
 
 #: src/pages/features/modeling.jsx:42
 msgid "modeling a new round, including convertibles"
-msgstr "Modellierung einer neuen Runde, einschließlich Convertibles"
+msgstr "bei der Modellierung neuer Runden, einschließlich Wandeldarlehen"
 
 #: src/pages/features/esop.jsx:55
 msgid "save time and focus on what matters"
@@ -1338,7 +1338,7 @@ msgstr "sei über Veränderungen informiert, auch bei den Dokumenten"
 
 #: src/pages/features/modeling.jsx:54
 msgid "to make the calculations fit your needs"
-msgstr "um die Berechnungen an deine Bedürfnisse anzupassen"
+msgstr "ermöglichen dir die Anpassung an deinen Fall"
 
 #: src/pages/features/collaboration.jsx:48
 msgid "to manage all of your legal documents"
