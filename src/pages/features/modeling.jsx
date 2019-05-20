@@ -170,7 +170,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
       <FeatureList
         textSize="5"
-        header={<Trans>Exit Modeling</Trans>}
+        header={<Trans>Exit modeling</Trans>}
         features={[
           <Trans>Understand the impact of liquidation preferences</Trans>,
           <Trans>
@@ -183,7 +183,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           </Trans>
         ]}
         imgSize="7"
-        img={<Img {...props.data.exitModeling} alt={i18n.t`Exit Modeling`} />}
+        img={<Img {...props.data.exitModeling} alt={i18n.t`Exit modeling`} />}
         imgFirst
         id="exit"
       />

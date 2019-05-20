@@ -92,7 +92,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
       <FeatureList
         textSize="5"
-        header={<Trans>Key Performance Indicators</Trans>}
+        header={<Trans>Key performance indicators</Trans>}
         features={[
           <Trans>Every company has KPIs, and investors love seeing them in real-time</Trans>,
           <Trans>Just copy-paste expected and actual values and customize the plots</Trans>,

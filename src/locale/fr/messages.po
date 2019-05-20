@@ -459,7 +459,7 @@ msgstr ""
 
 #: src/pages/features/modeling.jsx:173
 #: src/pages/features/modeling.jsx:186
-msgid "Exit Modeling"
+msgid "Exit modeling"
 msgstr "Modélisation de stratégie de sortie"
 
 #: src/pages/pricing.jsx:115
@@ -690,7 +690,7 @@ msgid "Keep track of who edited what and hold admins accountable"
 msgstr ""
 
 #: src/pages/features/investors.jsx:95
-msgid "Key Performance Indicators"
+msgid "Key performance indicators"
 msgstr ""
 
 #: src/pages/features/investors.jsx:102

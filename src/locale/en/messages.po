@@ -459,8 +459,8 @@ msgstr "Every company has KPIs, and investors love seeing them in real-time"
 
 #: src/pages/features/modeling.jsx:173
 #: src/pages/features/modeling.jsx:186
-msgid "Exit Modeling"
-msgstr "Exit Modeling"
+msgid "Exit modeling"
+msgstr "Exit modeling"
 
 #: src/pages/pricing.jsx:115
 msgid "Exit modeling"
@@ -690,8 +690,8 @@ msgid "Keep track of who edited what and hold admins accountable"
 msgstr "Keep track of who edited what and hold admins accountable"
 
 #: src/pages/features/investors.jsx:95
-msgid "Key Performance Indicators"
-msgstr "Key Performance Indicators"
+msgid "Key performance indicators"
+msgstr "Key performance indicators"
 
 #: src/pages/features/investors.jsx:102
 msgid "Kpi chart"

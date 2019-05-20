@@ -6,7 +6,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Creation-Date: 2018-09-12T18:40:54.619Z\n"
-"PO-Revision-Date: 2019-05-20 18:10+0200\n"
+"PO-Revision-Date: 2019-05-20 21:03+0200\n"
 "Language: de\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
@@ -443,7 +443,7 @@ msgid "Every company has KPIs, and investors love seeing them in real-time"
 msgstr "Jedes Unternehmen hat KPIs und Investoren lieben es, sie in Echtzeit zu verfolgen"
 
 #: src/pages/features/modeling.jsx:173 src/pages/features/modeling.jsx:186
-msgid "Exit Modeling"
+msgid "Exit modeling"
 msgstr "Exit-Modellierung"
 
 #: src/pages/pricing.jsx:115
@@ -666,8 +666,8 @@ msgid "Keep track of who edited what and hold admins accountable"
 msgstr "Behalte den Überblick, wer was bearbeitet hat und behalte ein Auge auf Administratoren"
 
 #: src/pages/features/investors.jsx:95
-msgid "Key Performance Indicators"
-msgstr "Key Performance Indicators"
+msgid "Key performance indicators"
+msgstr "Key performance indicators"
 
 #: src/pages/features/investors.jsx:102
 msgid "Kpi chart"
@@ -883,7 +883,7 @@ msgstr "Historie der Änderungen"
 
 #: src/pages/features/investors.jsx:41 src/pages/features/investors.jsx:76
 msgid "Recurring reports"
-msgstr "Regelmässige Reportst"
+msgstr "Regelmässige Reports"
 
 #: src/pages/features/investors.jsx:89
 msgid "Report"
