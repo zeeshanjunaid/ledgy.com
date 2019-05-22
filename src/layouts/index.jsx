@@ -89,7 +89,9 @@ const Footer = (props: LayoutProps) => (
             <Trans>Try Ledgy now for free</Trans>
           </h2>
 
-          <p className="text-muted">No credit card required</p>
+          <p className="text-muted">
+            <Trans>No credit card required</Trans>
+          </p>
 
           <SignupForm {...props} />
         </div>
