@@ -37,7 +37,21 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 };
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions;
+  const { createPage, createRedirect } = actions;
+  [
+    ['/esop', '/help/employee-participation-guide'],
+    ['/esop/', '/help/employee-participation-guide']
+  ].forEach(([fromPath, toPath]) => {
+    const redirectInBrowser = true;
+    createRedirect({ fromPath, toPath, redirectInBrowser });
+    languages.forEach(lang =>
+      createRedirect({
+        fromPath: `/${lang}${fromPath}`,
+        toPath: `/${lang}${toPath}`,
+        redirectInBrowser
+      })
+    );
+  });
 
   const component = path.resolve('./src/layouts/markdown.jsx');
   return new Promise((resolve, reject) => {
