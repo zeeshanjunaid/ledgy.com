@@ -4,8 +4,10 @@ import * as React from 'react';
 import { Trans } from '@lingui/react';
 import { Link, graphql } from 'gatsby';
 import Img from 'gatsby-image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDotCircle } from '@fortawesome/free-solid-svg-icons';
 
-import { ChevronRight } from '../layouts/utils';
+import { ChevronRight, Hr } from '../layouts/utils';
 
 const hyphenToCamelCase = (s: string) => s.replace(/-([a-z])/g, g => g[1].toUpperCase());
 
@@ -18,10 +20,10 @@ export const Feature = (props: {
   left?: boolean,
   data: Object
 }) => (
-  <div className="row align-items-center">
-    <div className="col-md-6 ml-auto">
+  <div className="row align-items-center" style={{ minHeight: '300px' }}>
+    <div className="col-md-7 ml-auto">
       <h2>{props.title || props.name}</h2>
-      <p>{props.children}</p>
+      <div>{props.children}</div>
       <p>
         <Link href to={`${props.prefix}/features/${props.url}/`}>
           <Trans>Learn more about</Trans> {props.name}
@@ -52,7 +54,7 @@ const FeatureLink = (props: {
       className={`px-2 col-6 ${props.page === 'index' ? 'col-md-4 col-lg-2' : 'col-md-3 col-lg-3'}`}
     >
       <Link href to={`${props.prefix}/features/${props.url}/`}>
-        <div className="card border hover-shadow-8">
+        <div className="card border hover-shadow-8 hover-translateY">
           <div className="card-body mb-0 pb-0 px-2 h-125">
             <h6 className="card-title text-center">{props.name}</h6>
           </div>
@@ -94,38 +96,100 @@ export const FeatureLinks = ({
     <div className="container custom-container">
       <div className="row gap-y justify-content-center">
         <FeatureLink {...props} name={i18n.t`Employee Participation Plans`} url="esop" />
-        <FeatureLink {...props} name={i18n.t`Cap Table`} url="captable" />
-        <FeatureLink {...props} name={i18n.t`Modeling`} url="modeling" />
-        <FeatureLink {...props} name={i18n.t`Investor Portfolio`} url="portfolio" />
-        <FeatureLink {...props} name={i18n.t`Investor Relations`} url="relations" />
+        <FeatureLink {...props} name={i18n.t`Cap Table Management`} url="captable" />
+        <FeatureLink {...props} name={i18n.t`Round & Exit Modeling`} url="modeling" />
+        <FeatureLink {...props} name={i18n.t`Collaboration & Due Diligence`} url="collaboration" />
+        <FeatureLink {...props} name={i18n.t`Investor Relations & Portfolio`} url="investors" />
       </div>
     </div>
   </div>
 );
 
+export const FeatureLi = ({ children }: { children: React.Node }) => (
+  <li className="media">
+    <FontAwesomeIcon icon={faDotCircle} className="text-primary fa-xs mt-2" />
+    <div className="media-body ml-4 mb-4">{children}</div>
+  </li>
+);
+
+export const FeatureList = (props: {
+  textSize: string,
+  imgSize: string,
+  header: React.Node,
+  features: Array<React.Node>,
+  img: React.Node,
+  imgFirst?: boolean,
+  link?: React.Node,
+  id?: string
+}) => (
+  <section className="section overflow-hidden p-0" id={props.id}>
+    <div className="container text-left">
+      <Hr />
+      <div className="row align-items-center my-4 pt-4 my-md-7 pt-md-7">
+        <div className={`col-md-${props.textSize} ${props.imgFirst ? 'ml-auto' : 'mr-auto'}`}>
+          <h2>{props.header}</h2>
+          <ul className="pl-0 pt-2">
+            {props.features.map((feature, i) => (
+              // eslint-disable-next-line react/no-array-index-key
+              <FeatureLi key={i}>{feature}</FeatureLi>
+            ))}
+          </ul>
+          {props.link}
+        </div>
+        <div
+          className={`col-md-${props.imgSize} ${
+            props.imgFirst ? 'order-md-first mr-auto' : 'ml-auto'
+          }`}
+          data-aos={`fade-${props.imgFirst ? 'right' : 'left'}`}
+        >
+          {props.img}
+        </div>
+      </div>
+    </div>
+  </section>
+);
+FeatureList.defaultProps = { imgFirst: false, link: <React.Fragment />, id: '' };
+
+export const TopPageFeatureCard = (props: {
+  header: React.Node,
+  body: React.Node,
+  icon: string,
+  href: string
+}) => (
+  <div className="col-md-6 pb-2">
+    <a href={props.href}>
+      <div className="top-page-feature-card card border hover-shadow-8 hover-translateY">
+        <FontAwesomeIcon icon={props.icon} className="top-page-feature-icon text-primary" />
+        <h5 className="m-0 text-primary">{props.header}</h5>
+        <p className="m-0">{props.body}</p>
+      </div>
+    </a>
+  </div>
+);
+
 export const FeaturesFragment = graphql`
   fragment FeaturesFragment on Query {
-    esop: imageSharp(fluid: { originalName: { regex: "/esop.png/" } }) {
+    esop: imageSharp(fluid: { originalName: { regex: "/employee-participation.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
     }
-    captable: imageSharp(fluid: { originalName: { regex: "/consistency.png/" } }) {
+    captable: imageSharp(fluid: { originalName: { regex: "/captable.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
     }
-    modeling: imageSharp(fluid: { originalName: { regex: "/round-modeling.png/" } }) {
+    modeling: imageSharp(fluid: { originalName: { regex: "/modeling.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
     }
-    portfolio: imageSharp(fluid: { originalName: { regex: "/investors.png/" } }) {
+    collaboration: imageSharp(fluid: { originalName: { regex: "/due-diligence.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
     }
-    relations: imageSharp(fluid: { originalName: { regex: "/reporting.png/" } }) {
+    investors: imageSharp(fluid: { originalName: { regex: "/investor-relations.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }

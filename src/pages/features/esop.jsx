@@ -2,18 +2,19 @@
 
 import * as React from 'react';
 import { withI18n, Trans } from '@lingui/react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
+import { faFileExcel, faGlobe, faSmile, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 
-import { FeatureLinks } from '../../components/Feature';
-import { Title } from '../../layouts/utils';
+import { FeatureLinks, FeatureList, TopPageFeatureCard } from '../../components/Feature';
+import { Title, ChevronRight } from '../../layouts/utils';
 
 export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
     <Title
       title={i18n.t`ESOP`}
       section={i18n.t`Features`}
-      description={i18n.t`Keep your employees motivated at work. They deserve it. Ledgy's ESOP module will help you to make it happen.`}
+      description={i18n.t`Save hours of work by getting rid of manual spreadsheet processes, keep track of any vesting schedule, get notified of important vesting and expiry events, get started in minutes with the spreadsheet importer.`}
     />
 
     <header className="header text-white bg-ledgy">
@@ -28,152 +29,138 @@ export default withI18n()(({ i18n, ...props }: Props) => (
       </div>
     </header>
     <main className="main-content">
-      <section className="section overflow-hidden">
+      <section className="section overflow-hidden pb-0 pt-7">
         <div className="container text-left">
-          <div>
-            <header className="section-header text-left">
-              <h2>
-                <Trans>Make your employees part of your success</Trans>
-              </h2>
-              <p>
-                <Trans>
-                  With Ledgy, setting up your ESOPs will become the simplest of tasks; in a matter
-                  of a few clicks, you will have your employee participation plans up and running,
-                  whether they are real stock transfers, options from a pool, warrants, or even
-                  phantom shares.
-                  <br />
-                  <br />
-                  When it comes to vesting schedules, efficiently setting up their type, duration,
-                  cliff, and every other detail will not be a daunting effort. With interactive
-                  graphs, you will be able to monitor these schedules in real time, and even better,
-                  allow your employees to log in to their accounts so they can see at any point in
-                  time how much stock they have vested and how many shares are still outstanding.
-                  <br />
-                  <br />
-                  When needed, terminating or exercising options will be just as intuitive, and any
-                  amount that may still be available will continue to be tracked. And there’s even
-                  more: any contract you’ll be able to upload and easily share with your employees.
-                </Trans>
-              </p>
-            </header>
-
-            <div className="row gap-y">
-              <div className="col-md-12 mx-auto mb-7" data-aos="fade-up">
-                <Img
-                  {...props.data.incentivesPage}
-                  alt={i18n.t`Overview over vested, granted and exercised incentives`}
-                />
-              </div>
-            </div>
+          <div className="row pb-3">
+            <TopPageFeatureCard
+              header={<Trans>Supports everything</Trans>}
+              body={<Trans>from options, to phantom and vested stock</Trans>}
+              icon={faGlobe}
+              href="#support"
+            />
+            <TopPageFeatureCard
+              header={<Trans>Track any vesting schedule</Trans>}
+              body={<Trans>stopping the spreadsheet mess</Trans>}
+              icon={faCalendarAlt}
+              href="#vesting"
+            />
+            <TopPageFeatureCard
+              header={<Trans>Engage your employees</Trans>}
+              body={<Trans>get notified of vesting events, invite employees</Trans>}
+              icon={faSmile}
+              href="#engage"
+            />
+            <TopPageFeatureCard
+              header={<Trans>Spreadsheet importer</Trans>}
+              body={<Trans>save time and focus on what matters</Trans>}
+              icon={faFileExcel}
+              href="#spreadsheet"
+            />
           </div>
 
-          <hr className="my-8" />
-
-          <div className="row align-items-center my-8">
-            <div className="col-md-4 mr-auto">
-              <p>
-                <Trans>
-                  In the case that your employee shares are implemented as options or phantom
-                  options, define a pool of approved capital first. Click the <i>Add pool</i> to
-                  create an options or phantom pool of a given share class and a fixed size. Then
-                  issue options, phantom options or shares from the approved capital and see key
-                  metrics of the pool like the amount still available.
-                </Trans>
-              </p>
-            </div>
-
-            <div className="col-md-7" data-aos="fade-left">
-              <Img {...props.data.addOption} alt={i18n.t`Add an option pool`} />
+          <div className="row gap-y">
+            <div className="col-md-12 mx-auto mb-5" data-aos="fade-up">
+              <Img
+                {...props.data.incentivesPage}
+                alt={i18n.t`Overview over vested, granted and exercised incentives`}
+              />
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className="row align-items-center my-8">
-            <div className="col-md-4">
-              <p>
-                <Trans>
-                  You can create a simple or custom vesting schedule, define over how many months
-                  the shares are to be vested, whether there’s a cliff, and how often a new batch of
-                  shares gets assigned to the employee.
-                  <br />
-                  As soon as you enter the first numbers, you will see a visual representation of
-                  the current schedule.
-                </Trans>
-              </p>
-            </div>
+      <FeatureList
+        textSize="5"
+        header={<Trans>Supports everything</Trans>}
+        features={[
+          <Trans>
+            Create option or phantom pools reserved for employees and keep track of how much is
+            granted, available, vested and exercised
+          </Trans>,
+          <Trans>
+            Grant options, phantom options, warrants or add inverse vesting to stock transactions
+          </Trans>,
+          <Trans>Track exercise, termination and expiration</Trans>
+        ]}
+        imgSize="7"
+        img={<Img {...props.data.addOption} alt={i18n.t`Add an option pool`} />}
+        id="support"
+      />
 
-            <div className="col-md-7 order-md-first mr-auto" data-aos="fade-right">
-              <Img {...props.data.addVesting} alt={i18n.t`Add vesting`} />
-            </div>
-          </div>
+      <FeatureList
+        textSize="5"
+        header={<Trans>Any vesting schedule</Trans>}
+        features={[
+          <Trans>Add vesting or inverse vesting to any transaction</Trans>,
+          <Trans>
+            Use simple linear vesting with duration, interval and cliff, define your own custom
+            vesting schedule, or select a preset
+          </Trans>,
+          <Trans>Visualizations help you understand what happens</Trans>
+        ]}
+        imgSize="7"
+        img={<Img {...props.data.addVesting} alt={i18n.t`Add vesting`} />}
+        imgFirst
+        id="vesting"
+      />
 
-          <div className="row align-items-center my-8">
-            <div className="col-md-7">
-              <p>
-                <Trans>
-                  When it’s time to exercise option grants, Ledgy calculates for you the amount that
-                  is already vested at a given date and lets you exercise parts or the full option
-                  grant.
-                  <br />
-                  <br />
-                  Did an employee leave the company? Ledgy supports terminating part or the whole
-                  option grant.
-                  <br />
-                  <br />
-                  Filter the transactions by an employee to see all their transactions (option
-                  grant, terminations, and exercises) at a glance.
-                </Trans>
-              </p>
-            </div>
+      <FeatureList
+        textSize="5"
+        header={<Trans>Engage your employees</Trans>}
+        features={[
+          <Trans>
+            Get notified two weeks before a cliff or vesting ends or a grant expires to not miss
+            using your participation plan for engaging your employees
+          </Trans>,
+          <Trans>
+            Invite your employees to track their stake and vesting in their Ledgy portfolio
+          </Trans>
+        ]}
+        imgSize="7"
+        img={
+          <Img
+            {...props.data.notificationEmail}
+            alt={i18n.t`Email notification about upcoming vesting event`}
+          />
+        }
+        link={
+          <Link href to={`${props.prefix}/features/collaboration/`}>
+            <Trans>Learn more about collaboration</Trans>
+            <ChevronRight />
+          </Link>
+        }
+        id="engage"
+      />
 
-            <div className="col-md-4 ml-auto" data-aos="fade-left">
-              <Img {...props.data.exerciseOption} alt={i18n.t`Issue options from a pool`} />
-            </div>
-          </div>
+      <FeatureList
+        textSize="5"
+        header={<Trans>Diluted cap table</Trans>}
+        features={[
+          <Trans>See your pools and employee participation grants in the cap table</Trans>,
+          <Trans>
+            Choose to only show pools or the detailed view with the grants distributed to their
+            holders
+          </Trans>
+        ]}
+        imgSize="7"
+        img={<Img {...props.data.dilutedTable} alt={i18n.t`Show cap table fully diluted`} />}
+        imgFirst
+      />
 
-          <div className="row align-items-center my-8">
-            <div className="col-md-3 ml-auto">
-              <p>
-                <Trans>
-                  To get an overall view of the situation, check out yur <i>Cap Table</i> page and
-                  select the <i>fully diluted detailed</i> view to see your pools and employee
-                  incentives. You can choose to view your diluted cap table with all options
-                  aggregated in their pool, or distributed to each person.
-                </Trans>
-              </p>
-            </div>
+      <FeatureList
+        textSize="4"
+        header={<Trans>Spreadsheet importer</Trans>}
+        features={[
+          <Trans>Get started in minutes with the copy-paste spreadsheet importer</Trans>,
+          <Trans>Copy-pasting employee grants from your existing spreadsheet</Trans>
+        ]}
+        imgSize="8"
+        img={<Img {...props.data.bulkEntryOptions} alt={i18n.t`Bulk entry options`} />}
+        id="spreadsheet"
+      />
 
-            <div className="col-md-8 order-md-first" data-aos="fade-right">
-              <Img {...props.data.dilutedTable} alt={i18n.t`Show cap table fully diluted`} />
-            </div>
-          </div>
-
-          <hr className="my-8" />
-
-          <div>
-            <header className="section-header text-left">
-              <h2>
-                <Trans>Engage your employees with more transparency</Trans>
-              </h2>
-              <p>
-                <Trans>
-                  Once your incentive plan is on Ledgy, it’s time to engage your employees. Head
-                  over to the <i>Stakeholders</i> page and invite them with a single click. They
-                  will then receive an email so they can log in to Ledgy themselves and see how many
-                  shares they have vested at any point in time.
-                  <br />
-                  <br />
-                  Remember, happy employees is one of the keys to a successful company.
-                </Trans>
-              </p>
-            </header>
-
-            <div className="row gap-y">
-              <div className="col-md-10 mx-auto mb-7" data-aos="fade-up">
-                <Img {...props.data.optionInPortfolio} alt={i18n.t`ESOPs in the portfolio`} />
-              </div>
-            </div>
-          </div>
-
+      <section className="section overflow-hidden pt-2">
+        <div className="container text-left">
           <FeatureLinks {...props} i18n={i18n} page="esop" />
         </div>
       </section>
@@ -201,19 +188,17 @@ export const pageQuery = graphql`
         ...GatsbyImageSharpFluid
       }
     }
-    exerciseOption: imageSharp(fluid: { originalName: { regex: "/option-exercise.png/" } }) {
-      fluid(maxWidth: 800) {
-        ...GatsbyImageSharpFluid
-      }
-    }
     dilutedTable: imageSharp(fluid: { originalName: { regex: "/option-diluted-captable.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
     }
-    optionInPortfolio: imageSharp(
-      fluid: { originalName: { regex: "/incentives-dashboard.png/" } }
-    ) {
+    notificationEmail: imageSharp(fluid: { originalName: { regex: "/notification-email.png/" } }) {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    bulkEntryOptions: imageSharp(fluid: { originalName: { regex: "/bulk-entry-options.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }

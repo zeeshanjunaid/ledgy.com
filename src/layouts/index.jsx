@@ -17,7 +17,7 @@ import 'typeface-work-sans'; // eslint-disable-line import/extensions
 import 'katex/dist/katex.min.css';
 import 'prism-themes/themes/prism-ghcolors.css';
 
-import { Title, name, appUrl, demoUrl, loadScript, targetBlank, animateTablet } from './utils';
+import { Title, name, appUrl, loadScript, targetBlank, animateTablet } from './utils';
 import { catalogs, langFromPath, langPrefix, getLocale, deprefix } from '../i18n-config';
 import SignupForm from '../components/SignupForm';
 
@@ -89,34 +89,11 @@ const Footer = (props: LayoutProps) => (
             <Trans>Try Ledgy now for free</Trans>
           </h2>
 
-          <SignupForm {...props} />
+          <p className="text-muted">
+            <Trans>No credit card required</Trans>
+          </p>
 
-          <p>
-            <Trans>
-              Takes too long to import your data?&nbsp;
-              <a href={`mailto:contact@ledgy.com?subject=${'Request for Ledgy import'}`}>
-                We’ll do it for you.
-              </a>
-            </Trans>
-          </p>
-          <p>
-            <Trans>
-              Still hesitating?&nbsp;
-              <Link href to={`${props.prefix}/features/`}>
-                Learn more about our features
-              </Link>
-              .
-            </Trans>
-          </p>
-          <p>
-            <Trans>
-              Or have a quick look at our&nbsp;
-              <a href={`${demoUrl}`} {...targetBlank}>
-                live demo
-              </a>
-              .
-            </Trans>
-          </p>
+          <SignupForm {...props} />
         </div>
       </section>
     )}
@@ -205,11 +182,11 @@ const Footer = (props: LayoutProps) => (
             <Link className="nav-link" href to={`${props.prefix}/features/esop/`}>
               <Trans>Employee Incentives</Trans>
             </Link>
-            <Link className="nav-link" href to={`${props.prefix}/features/portfolio/`}>
-              <Trans>Portfolio</Trans>
+            <Link className="nav-link" href to={`${props.prefix}/features/collaboration/`}>
+              <Trans>Due Diligence</Trans>
             </Link>
-            <Link className="nav-link" href to={`${props.prefix}/features/relations/`}>
-              <Trans>Relations</Trans>
+            <Link className="nav-link" href to={`${props.prefix}/features/investors/`}>
+              <Trans>Investors</Trans>
             </Link>
             <Link className="nav-link" href to={`${props.prefix}/pricing/`}>
               <Trans>Pricing</Trans>

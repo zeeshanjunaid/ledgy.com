@@ -4,18 +4,15 @@ import * as React from 'react';
 import { withI18n, Trans } from '@lingui/react';
 import { graphql } from 'gatsby';
 
-import { Feature } from '../components/Feature';
-import AllFeatures from '../components/AllFeatures';
+import { Feature, FeatureLi } from '../components/Feature';
 import SecurityRow from '../components/SecurityRow';
-import { Title } from '../layouts/utils';
-
-const Hr = () => <hr className="my-3" />;
+import { Title, Hr } from '../layouts/utils';
 
 export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
     <Title
       title={i18n.t`Features`}
-      description={i18n.t`Round and exit modeling, employee incentives and a single source of truth—Ledgy serves your needs.`}
+      description={i18n.t`All you need in one place: Employee participation plan management, round and exit modeling, due diligence tools and investor relations.`}
     />
 
     <header className="header text-white bg-ledgy">
@@ -23,11 +20,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         <div className="row">
           <div className="col-12 col-lg-8 offset-lg-2">
             <h1>
-              <Trans>
-                Manage your shares.
-                <br />
-                Not your spreadsheet.
-              </Trans>
+              <Trans>All you need in one place</Trans>
             </h1>
           </div>
         </div>
@@ -35,83 +28,126 @@ export default withI18n()(({ i18n, ...props }: Props) => (
     </header>
 
     <main className="main-content">
-      <section className="section pt-5">
+      <section className="section pt-7">
         <div className="container">
           <Feature {...props} name={i18n.t`Employee Participation Plans`} url="esop">
-            <Trans>
-              Let your employees be part of your company’s success. Set up your vested stock,
-              options, phantom options, inverse vesting and ESOP pools in a matter of a few clicks.
-              <br />
-              Track your vesting schedules in the most efficient of ways and engage your employees
-              with full transparency over their participation plans.
-            </Trans>
+            <ul className="pl-0 pt-2">
+              <FeatureLi>
+                <Trans>Save hours of work by getting rid of manual spreadsheet processes</Trans>
+              </FeatureLi>
+              <FeatureLi>
+                <Trans>
+                  Supports everything from pools to options, phantom options, warrants, vested
+                  stock, and inverse vesting
+                </Trans>
+              </FeatureLi>
+              <FeatureLi>
+                <Trans>Keep track of any vesting schedule</Trans>
+              </FeatureLi>
+              <FeatureLi>
+                <Trans>
+                  Get notified of important vesting and expiry events and engage your employees by
+                  inviting them to track their stake on Ledgy
+                </Trans>
+              </FeatureLi>
+            </ul>
           </Feature>
 
           <Hr />
 
-          <Feature
-            {...props}
-            name={i18n.t`Cap Table`}
-            title={i18n.t`Trust in Your Cap Table`}
-            url="captable"
-            left
-          >
-            <Trans>
-              Do you know that many cap tables are incomplete or contain errors? Have you gone
-              through the cap table pain, and spent huge amounts of money on lawyers using
-              spreadsheets? What if you could automate a legally valid, error-free cap table that
-              was easy to use, quick to learn, and allowed you to manage your pooled investments,
-              all in one good-looking user interface?
-            </Trans>
+          <Feature {...props} name={i18n.t`Cap Table Management`} url="captable" left>
+            <ul className="pl-0 pt-2">
+              <FeatureLi>
+                <Trans>Intuitive, legally valid and error-free cap table from the beginning</Trans>
+              </FeatureLi>
+              <FeatureLi>
+                <Trans>
+                  Transaction-based supporting any type like issuance, transfer, convertibles, stock
+                  split, share destruction, valuations
+                </Trans>
+              </FeatureLi>
+              <FeatureLi>
+                <Trans>
+                  Featuring unlimited share classes, treasury shares, pooled investments, and
+                  automatic share numbering
+                </Trans>
+              </FeatureLi>
+            </ul>
           </Feature>
 
           <Hr />
 
-          <Feature {...props} name={i18n.t`Round and Exit Modeling`} url="modeling">
-            <Trans>
-              What’s the stake percentage of the founders after a VC invests $2,000,000 at a
-              valuation of $7,500,000, taking into account the 2 outstanding convertible loans and
-              keeping the ESOP pool at 10% while only diluting existing shareholders? How does the
-              capped participating liquidation preference that comes with this investment influence
-              my exit strategy?
-              <br />
-              Honestly, we don’t know. But Ledgy does.
-            </Trans>
+          <Feature {...props} name={i18n.t`Round & Exit Modeling`} url="modeling">
+            <ul className="pl-0 pt-2">
+              <FeatureLi>
+                <Trans>
+                  Understand how dilution works by quickly comparing different modeling scenarios
+                </Trans>
+              </FeatureLi>
+              <FeatureLi>
+                <Trans>
+                  Flexible yet intuitive round modeling supporting convertibles, fixed employee
+                  pools, and pro-rata distribution
+                </Trans>
+              </FeatureLi>
+              <FeatureLi>
+                <Trans>
+                  Assess the impact of liquidation preferences with waterfall analysis and
+                  breakpoint charts
+                </Trans>
+              </FeatureLi>
+            </ul>
           </Feature>
 
           <Hr />
 
-          <Feature {...props} name={i18n.t`Investor Relations`} url="relations" left>
-            <Trans>
-              Oh, it’s tax season again, and 50 holding confirmations are waiting to be sent to your
-              stakeholders. This means pasting names into document templates, computing the tax
-              value of all shares… <br />
-              Don’t worry. Generate and send all relevant documents in a matter of a few clicks on
-              Ledgy.
-            </Trans>
+          <Feature {...props} name={i18n.t`Collaboration & Due Diligence`} url="collaboration" left>
+            <ul className="pl-0 pt-2">
+              <FeatureLi>
+                <Trans>Granular access rights, you control them</Trans>
+              </FeatureLi>
+              <FeatureLi>
+                <Trans>
+                  Data room, audit trail and read-only access for investors save you costly due
+                  diligence tools
+                </Trans>
+              </FeatureLi>
+              <FeatureLi>
+                <Trans>
+                  Save time in future due diligence by attaching legal documents to their
+                  transactions, making them searchable by the transaction information
+                </Trans>
+              </FeatureLi>
+            </ul>
           </Feature>
 
           <Hr />
 
-          <Feature
-            {...props}
-            title={i18n.t`Investor Portfolio`}
-            name={i18n.t`the Investor Portfolio`}
-            url="portfolio"
-          >
-            <Trans>
-              Are you an investor and want to track your portfolio companies? The founders are busy
-              and the numbers they give you are different from your own records?
-              <br />
-              With their cap table on Ledgy, there’s only a single source of truth. Convince your
-              companies, and you will never miss anything regarding your investments.
-            </Trans>
+          <Feature {...props} name={i18n.t`Investor Relations & Portfolio`} url="investors">
+            <ul className="pl-0 pt-2">
+              <FeatureLi>
+                <Trans>Be professional towards your investors as a startup</Trans>
+              </FeatureLi>
+              <FeatureLi>
+                <Trans>
+                  Track KPIs, write recurring reports and share them with your investors
+                </Trans>
+              </FeatureLi>
+              <FeatureLi>
+                <Trans>
+                  The simplest and most time-efficient way to manage the portfolio as an investor
+                </Trans>
+              </FeatureLi>
+              <FeatureLi>
+                <Trans>
+                  Get equity and reporting updates from your portfolio in one place, from
+                  transaction history to legal documents, valuations, KPIs and reports
+                </Trans>
+              </FeatureLi>
+            </ul>
           </Feature>
 
-          <div className="mx-auto text-center my-8">
-            <hr />
-            <AllFeatures />
-          </div>
+          <Hr />
 
           <SecurityRow {...props} />
         </div>

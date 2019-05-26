@@ -15,7 +15,7 @@ const Header = ({ i18n }: Props) => (
   <header className="header text-white bg-ledgy">
     <Title
       title={i18n.t`About us`}
-      description={i18n.t`Meet the team behind Ledgy that went out to build a genuinely great product. Learn more about the people who trust in us.`}
+      description={i18n.t`Meet the team behind Ledgy that went out to help startups thrive. Learn more about the people who trust in us.`}
     />
 
     <div className="container text-center">
@@ -93,7 +93,7 @@ const IndexPage = (props: Props) => {
                   <Trans>
                     We empower entrepreneurs with tools for their financing rounds and for engaging
                     their investors and employees. Today, this involves a lot of paperwork, high
-                    costs and slow, intransparent processes. We make this a breeze for both
+                    costs, and slow, intransparent processes. We make this a breeze for both
                     companies and shareholders, establishing a new standard to manage and exchange
                     securities in private companies.
                   </Trans>
