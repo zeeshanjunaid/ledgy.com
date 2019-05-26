@@ -28,11 +28,11 @@ msgstr "<0>Admin</0> Contrôle total de l'entreprise pour tes cofondateurs"
 
 #: src/pages/features/collaboration.jsx:85
 msgid "<0>Portfolio</0> See only the own stake in their <1>portfolio<2/></1>"
-msgstr "<0>Portefeuille</0> Voir uniquement la participation personnelle dans son <1>portefeuille d’investissement<2/></1>"
+msgstr "<0>Portfolio</0> Voir uniquement la participation personnelle dans son <1>portefeuille d’investissement<2/></1>"
 
 #: src/pages/features/collaboration.jsx:82
 msgid "<0>View</0> See all cap table info in a read-only mode for due diligences"
-msgstr "<0>Afficher</0> Voir toutes les informations du cap table en mode lecture seule pour les diligences raisonnables"
+msgstr "<0>View</0> Voir toutes les informations du cap table en mode lecture seule pour les diligences raisonnables"
 
 #: src/pages/features/collaboration.jsx:143
 msgid "A certificate of each document is automatically stored on the bitcoin blockchain when uploading"
@@ -320,7 +320,7 @@ msgstr "Des sauvegardes quotidiennes garantissent que rien n’est jamais perdu"
 
 #: src/pages/features.jsx:110
 msgid "Data room, audit trail and read-only access for investors save you costly due diligence tools"
-msgstr "La data room, piste d’audits et accès en lecture seule pour les investisseurs te permettent d'économiser des outils coûteux de diligence raisonnable"
+msgstr "Data room, piste d’audits et accès en lecture seule pour les investisseurs te permettent d'économiser des outils coûteux de diligence raisonnable"
 
 #: src/pages/about-us.jsx:173
 msgid "Digital entrepreneur and investor. Security, crypto & privacy expert"
@@ -413,7 +413,7 @@ msgstr "Bénéficie des plus hauts standards de sécurité"
 
 #: src/components/SignupForm.jsx:82
 msgid "Enter your email…"
-msgstr "Entre to adresse email…"
+msgstr "Entre ton adresse email…"
 
 #: src/pages/about-us.jsx:168
 msgid "Entrepreneur, business angel, founder of Doodle.com"
@@ -518,7 +518,7 @@ msgstr "Effectue les bons calculs"
 
 #: src/pages/index.jsx:26
 msgid "Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant."
-msgstr "Bien comprendre ton cap table et tes plans d’actionnariat des employés, dès le début. Fais de tes levées de fond un succès et mobilise tes investisseurs et tes employés. Sois sûr que tes données soient en sécurité et conformes."
+msgstr "Bien comprendre ton cap table et tes plans d’actionnariat, dès le début. Fais de tes levées de fond un succès et mobilise tes investisseurs et tes employés. Sois sûr que tes données soient en sécurité."
 
 #: src/layouts/index.jsx:374
 msgid "Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant. Try now for free!"
@@ -539,7 +539,7 @@ msgstr "Droits d'accès personnalisés"
 
 #: src/pages/features.jsx:107
 msgid "Granular access rights, you control them"
-msgstr "Droits d'accès personnalisés, tu les contrôles"
+msgstr "Droits d'accès personnalisés"
 
 #: src/pages/security.jsx:144
 msgid "HTTP headers prevent cross-site scripting and code injection (<0>A+ rating</0>)"
@@ -617,7 +617,7 @@ msgstr "Investisseur & consultant (Farmy.ch, Flatfox.ch), fondateur de Students.
 #: src/components/Feature.jsx:102 src/pages/features/investors.jsx:20
 #: src/pages/features/investors.jsx:30 src/pages/features.jsx:126
 msgid "Investor Relations & Portfolio"
-msgstr "Relations avec les investisseurs et portefeuille d’investissement"
+msgstr "Relations investisseurs et portfolio"
 
 #: src/pages/features/investors.jsx:116
 msgid "Investor portfolio"
@@ -1040,7 +1040,7 @@ msgstr "Suggérer des changements"
 
 #: src/pages/features/esop.jsx:36 src/pages/features/esop.jsx:74
 msgid "Supports everything"
-msgstr "Soutiens tout"
+msgstr "Tout est pris en charge"
 
 #: src/pages/features.jsx:39
 msgid "Supports everything from pools to options, phantom options, warrants, vested stock, and inverse vesting"
@@ -1076,7 +1076,7 @@ msgstr "Le Blog Ledgy"
 
 #: src/layouts/index.jsx:373 src/pages/index.jsx:19
 msgid "The New Standard in Equity Management"
-msgstr "Le nouveau standard en matière de gestion d’actions"
+msgstr "Le nouveau standard en gestion d’actions"
 
 #: src/pages/security.jsx:111
 msgid "The code is always reviewed by at least one other engineer"
