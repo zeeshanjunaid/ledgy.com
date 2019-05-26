@@ -145,7 +145,7 @@ const Footer = (props: LayoutProps) => (
               href
               to={`${props.prefix}/help/employee-participation-guide/`}
             >
-              Legal Templates
+              ESOP Templates
             </Link>
           </div>
           <h6 className="mb-4 mt-1">
