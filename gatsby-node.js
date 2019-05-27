@@ -40,7 +40,9 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions;
   [
     ['/esop', '/help/employee-participation-guide'],
-    ['/esop/', '/help/employee-participation-guide']
+    ['/esop/', '/help/employee-participation-guide'],
+    ['/ESOP', '/help/employee-participation-guide'],
+    ['/ESOP/', '/help/employee-participation-guide']
   ].forEach(([fromPath, toPath]) => {
     const redirectInBrowser = true;
     createRedirect({ fromPath, toPath, redirectInBrowser });
