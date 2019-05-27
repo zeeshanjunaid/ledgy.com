@@ -1,4 +1,6 @@
 [options]
+server.max_workers=4
+
 module.file_ext=.js
 module.file_ext=.jsx
 module.file_ext=.json
