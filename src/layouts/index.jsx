@@ -140,6 +140,13 @@ const Footer = (props: LayoutProps) => (
             <Link className="nav-link" href to={`${props.prefix}/help/faq/`}>
               <Trans>FAQ</Trans>
             </Link>
+            <Link
+              className="nav-link"
+              href
+              to={`${props.prefix}/help/employee-participation-guide/`}
+            >
+              ESOP Templates
+            </Link>
           </div>
           <h6 className="mb-4 mt-1">
             <strong>
