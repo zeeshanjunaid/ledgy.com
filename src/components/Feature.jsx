@@ -158,10 +158,15 @@ export const TopPageFeatureCard = (props: {
 }) => (
   <div className="col-md-6 pb-2">
     <a href={props.href}>
-      <div className="top-page-feature-card card border hover-shadow-8 hover-translateY">
-        <FontAwesomeIcon icon={props.icon} className="top-page-feature-icon text-primary" />
-        <h5 className="m-0 text-primary">{props.header}</h5>
-        <p className="m-0">{props.body}</p>
+      <div
+        className="top-page-feature-card card border hover-shadow-8 hover-translateY
+      d-flex flex-row align-items-center justify-content-start"
+      >
+        <FontAwesomeIcon icon={props.icon} className="text-primary top-page-feature-icon" />
+        <div>
+          <h5 className="m-0 text-primary">{props.header}</h5>
+          <p className="m-0">{props.body}</p>
+        </div>
       </div>
     </a>
   </div>
