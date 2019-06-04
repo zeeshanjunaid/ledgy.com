@@ -6,6 +6,8 @@ import { Link } from 'gatsby';
 
 import { Title, Li } from '../layouts/utils';
 
+const Detail = props => <small className="d-block text-muted" {...props} />;
+
 export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
     <Title
@@ -49,9 +51,27 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   </Li>
                   <Li>
                     <Trans>Round modeling</Trans>
+                    <Detail>
+                      <Trans>1 financing round, no exit</Trans>
+                    </Detail>
                   </Li>
                   <Li>
-                    <Trans>Convertible loans</Trans>
+                    <Trans>Document storage</Trans>
+                    <Detail>
+                      <Trans>Up to 100 MB, no sharing</Trans>
+                    </Detail>
+                  </Li>
+                  <Li>
+                    <Trans>Multiple admins</Trans>
+                    <Detail>
+                      <Trans>Up to 3</Trans>
+                    </Detail>
+                  </Li>
+                  <Li>
+                    <Trans>KPI tracking</Trans>
+                  </Li>
+                  <Li>
+                    <Trans>Recurring reports</Trans>
                   </Li>
                   <Li>
                     <Trans>Pooled investments</Trans>
@@ -60,13 +80,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                     <Trans>Import & export</Trans>
                   </Li>
                   <Li>
-                    <Trans>Access rights</Trans>
-                  </Li>
-                  <Li>
                     <Trans>Two-factor authentication</Trans>
-                  </Li>
-                  <Li>
-                    <Trans>Document storage</Trans>
                   </Li>
                   <Li>
                     <Trans>Holding confirmations</Trans>
@@ -84,35 +98,47 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   <Trans>Premium</Trans>
                 </h6>
                 <h2>
-                  <Trans>€79/month</Trans>
+                  <Trans>€2</Trans>
                 </h2>
-                <small className="text-muted">
-                  <Trans>€99/month if billed monthly</Trans>
-                </small>
+                <Detail>
+                  <Trans>per stakeholder & month</Trans>
+                </Detail>
                 <ul className="text-left mt-6 mb-0">
                   <Li>
                     <Trans>All Free features</Trans>
                   </Li>
                   <Li>
-                    <Trans>Option programs</Trans>
+                    <Trans>Round modeling</Trans>
+                    <Detail>
+                      <Trans>Multiple rounds + exit</Trans>
+                    </Detail>
                   </Li>
                   <Li>
-                    <Trans>Virtual option programs</Trans>
+                    <Trans>Document storage</Trans>
+                    <Detail>
+                      <Trans>Unlimited + sharing</Trans>
+                    </Detail>
                   </Li>
                   <Li>
-                    <Trans>Warrants</Trans>
+                    <Trans>Multiple admins</Trans>
+                    <Detail>
+                      <Trans>Unlimited</Trans>
+                    </Detail>
                   </Li>
                   <Li>
-                    <Trans>Vesting plans</Trans>
+                    <Trans>Employee incentives</Trans>
                   </Li>
                   <Li>
-                    <Trans>Vesting email notifications</Trans>
+                    <Trans>Complex vesting plans</Trans>
+                  </Li>
+                  <Li>
+                    <Trans>Email notifications</Trans>
+                  </Li>
+                  <Li>
+                    <Trans>Modeling scenarios</Trans>
                   </Li>
                   <Li>
                     <Trans>Liquidation preferences </Trans>
-                  </Li>
-                  <Li>
-                    <Trans>Exit modeling</Trans>
                   </Li>
                   <Li>
                     <Trans>Breakpoint analysis</Trans>
