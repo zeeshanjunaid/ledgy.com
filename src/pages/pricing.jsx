@@ -52,19 +52,13 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   <Li>
                     <Trans>Round modeling</Trans>
                     <Detail>
-                      <Trans>1 financing round, no exit</Trans>
+                      <Trans>1 financing round</Trans>
                     </Detail>
                   </Li>
                   <Li>
                     <Trans>Document storage</Trans>
                     <Detail>
                       <Trans>Up to 100 MB, no sharing</Trans>
-                    </Detail>
-                  </Li>
-                  <Li>
-                    <Trans>Multiple admins</Trans>
-                    <Detail>
-                      <Trans>Up to 3</Trans>
                     </Detail>
                   </Li>
                   <Li>
@@ -110,7 +104,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   <Li>
                     <Trans>Round modeling</Trans>
                     <Detail>
-                      <Trans>Multiple rounds + exit</Trans>
+                      <Trans>Unlimited</Trans>
                     </Detail>
                   </Li>
                   <Li>
@@ -120,10 +114,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                     </Detail>
                   </Li>
                   <Li>
-                    <Trans>Multiple admins</Trans>
-                    <Detail>
-                      <Trans>Unlimited</Trans>
-                    </Detail>
+                    <Trans>Exit analysis</Trans>
+                    <Detail>Liq prefs + breakpoints</Detail>
                   </Li>
                   <Li>
                     <Trans>Employee incentives</Trans>
@@ -132,16 +124,13 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                     <Trans>Complex vesting plans</Trans>
                   </Li>
                   <Li>
-                    <Trans>Email notifications</Trans>
-                  </Li>
-                  <Li>
                     <Trans>Modeling scenarios</Trans>
                   </Li>
                   <Li>
-                    <Trans>Liquidation preferences </Trans>
+                    <Trans>Email notifications</Trans>
                   </Li>
                   <Li>
-                    <Trans>Breakpoint analysis</Trans>
+                    <Trans>Multiple admins</Trans>
                   </Li>
                 </ul>
               </div>
