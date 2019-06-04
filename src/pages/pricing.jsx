@@ -39,7 +39,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <div className="justify-content-center row gap-y">
             <div className="col-lg-4">
-              <div className="pricing-3 popular border rounded">
+              <div className="pricing-3 popular border rounded pb-1">
                 <h6>&nbsp;</h6>
                 <h2>
                   <Trans>Free</Trans>
@@ -90,7 +90,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
 
             <div className="col-lg-4">
-              <div className="pricing-3 popular border rounded">
+              <div className="pricing-3 popular border rounded pb-1">
                 <span className="popular-tag">
                   <Trans>14 days trial</Trans>
                 </span>
