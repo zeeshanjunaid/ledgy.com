@@ -40,8 +40,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <div className="justify-content-center row gap-y">
             <div className="col-lg-4">
-              <div className="pricing-3 border rounded pb-1">
-                <h6>&nbsp;</h6>
+              <div className="pricing-3 border rounded pb-4">
+                <h6>Basic</h6>
                 <h2>
                   <Trans>Free</Trans>
                 </h2>
@@ -51,6 +51,12 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                     <strong>
                       <Trans>Error-free cap table</Trans>
                     </strong>
+                  </Li>
+                  <Li>
+                    <Trans>KPI tracking</Trans>
+                  </Li>
+                  <Li>
+                    <Trans>Recurring reports</Trans>
                   </Li>
                   <Li>
                     <Trans>Single admin</Trans>
@@ -68,12 +74,6 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                     </Detail>
                   </Li>
                   <Li>
-                    <Trans>KPI tracking</Trans>
-                  </Li>
-                  <Li>
-                    <Trans>Recurring reports</Trans>
-                  </Li>
-                  <Li>
                     <Trans>Pooled investments</Trans>
                   </Li>
                   <Li>
@@ -86,11 +86,16 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                     <Trans>Holding confirmations</Trans>
                   </Li>
                 </ul>
+                <div className="text-center mb-3">
+                  <a href="#try" className="btn btn-round btn-xl btn-outline-primary">
+                    <Trans>Get started</Trans>
+                  </a>
+                </div>
               </div>
             </div>
 
             <div className="col-lg-4">
-              <div className="pricing-3 popular border border-success rounded pb-1 shadow">
+              <div className="pricing-3 popular border border-success rounded pb-4 shadow">
                 <span className="popular-tag">
                   <Trans>14 days trial</Trans>
                 </span>
@@ -110,6 +115,12 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                     </strong>
                   </Li>
                   <Li>
+                    <Trans>Options, Phantom, Warrants</Trans>
+                  </Li>
+                  <Li>
+                    <Trans>Any vesting schedule</Trans>
+                  </Li>
+                  <Li>
                     <Trans>Multiple admins</Trans>
                     <Detail>Up to 3</Detail>
                   </Li>
@@ -126,12 +137,6 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                     </Detail>
                   </Li>
                   <Li>
-                    <Trans>Employee incentives</Trans>
-                  </Li>
-                  <Li>
-                    <Trans>Complex vesting plans</Trans>
-                  </Li>
-                  <Li>
                     <Trans>Email notifications</Trans>
                   </Li>
                   <Li>
@@ -140,17 +145,23 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   <Li>
                     <Trans>Breakpoint + exit analysis</Trans>
                   </Li>
+                  <li>&nbsp;</li>
                 </ul>
+                <div className="text-center mb-3">
+                  <a href="#try" className="btn btn-round btn-xl btn-primary">
+                    <Trans>Try 14 days free</Trans>
+                  </a>
+                </div>
               </div>
             </div>
 
             <div className="col-lg-4">
-              <div className="pricing-3 border rounded pb-1">
+              <div className="pricing-3 border rounded pb-4">
                 <h6>
                   <Trans>Enterprise</Trans>
                 </h6>
                 <h2>
-                  <a href="mailto:contact@ledgy.com">
+                  <a href="mailto:sales@ledgy.com">
                     <Trans>Contact us</Trans>
                   </a>
                 </h2>
@@ -160,6 +171,12 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                     <strong>
                       <Trans>All Premium features</Trans>
                     </strong>
+                  </Li>
+                  <Li>
+                    <Trans>Priority support</Trans>
+                  </Li>
+                  <Li>
+                    <Trans>Guided onboarding</Trans>
                   </Li>
                   <Li>
                     <Trans>Multiple admins</Trans>
@@ -178,12 +195,6 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                     </Detail>
                   </Li>
                   <Li>
-                    <Trans>Priority support</Trans>
-                  </Li>
-                  <Li>
-                    <Trans>Guided onboarding</Trans>
-                  </Li>
-                  <Li>
                     <Trans>
                       Document workflows
                       <Soon />
@@ -195,19 +206,28 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                       <Soon />
                     </Trans>
                   </Li>
+                  <li>&nbsp;</li>
+                  <li>&nbsp;</li>
                 </ul>
+                <div className="text-center mb-3">
+                  <a
+                    href="mailto:sales@ledgy.com"
+                    className="btn btn-round btn-xl btn-outline-primary"
+                  >
+                    <Trans>Contact us</Trans>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
 
           <div className="mx-auto text-center mt-6">
+            <p className="text-muted fs-20">
+              A stakeholder is any holder of shares, (phantom) options, warrants, or convertibles.
+              <br />
+              It does not include the company treasury or incentive pools.
+            </p>
             <div className="mx-auto text-center mt-6">
-              <a
-                href="#try"
-                className="btn btn-block d-sm-inline btn-round btn-xl btn-primary mr-2"
-              >
-                <Trans>Get started free</Trans>
-              </a>
               <Link
                 href
                 to={`${props.prefix}/features/`}
