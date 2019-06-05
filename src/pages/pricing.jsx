@@ -41,10 +41,10 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           <div className="justify-content-center row gap-y">
             <div className="col-lg-4">
               <div className="pricing-3 border rounded pb-4">
-                <h6>Basic</h6>
-                <h2>
+                <h3>Basic</h3>
+                <h5>
                   <Trans>Free</Trans>
-                </h2>
+                </h5>
                 <Detail>&nbsp;</Detail>
                 <ul className="text-left mt-6 mb-0">
                   <Li>
@@ -64,7 +64,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   <Li>
                     <Trans>Document storage</Trans>
                     <Detail>
-                      <Trans>Up to 100 MB, no sharing</Trans>
+                      <Trans>Up to 50 MB, no sharing</Trans>
                     </Detail>
                   </Li>
                   <Li>
@@ -97,16 +97,16 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             <div className="col-lg-4">
               <div className="pricing-3 popular border border-success rounded pb-4 shadow">
                 <span className="popular-tag">
-                  <Trans>14 days trial</Trans>
+                  <Trans>14-day trial</Trans>
                 </span>
-                <h6>
+                <h3>
                   <Trans>Premium</Trans>
-                </h6>
-                <h2>
+                </h3>
+                <h5>
                   <Trans>€2</Trans>
-                </h2>
+                </h5>
                 <Detail>
-                  <Trans>per stakeholder & month</Trans>
+                  <Trans>per stakeholder per month</Trans>
                 </Detail>
                 <ul className="text-left mt-6 mb-0">
                   <Li>
@@ -121,8 +121,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                     <Trans>Any vesting schedule</Trans>
                   </Li>
                   <Li>
-                    <Trans>Multiple admins</Trans>
-                    <Detail>Up to 3</Detail>
+                    <Trans>Up to 3 admins</Trans>
                   </Li>
                   <Li>
                     <Trans>Document storage</Trans>
@@ -143,7 +142,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                     <Trans>Liquidation preferences</Trans>
                   </Li>
                   <Li>
-                    <Trans>Breakpoint + exit analysis</Trans>
+                    <Trans>Breakpoint + exit analysises</Trans>
                   </Li>
                   <li>&nbsp;</li>
                 </ul>
@@ -157,14 +156,14 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
             <div className="col-lg-4">
               <div className="pricing-3 border rounded pb-4">
-                <h6>
+                <h3>
                   <Trans>Enterprise</Trans>
-                </h6>
-                <h2>
+                </h3>
+                <h5>
                   <a href="mailto:sales@ledgy.com">
                     <Trans>Contact us</Trans>
                   </a>
-                </h2>
+                </h5>
                 <Detail>&nbsp;</Detail>
                 <ul className="text-left mt-6 mb-0">
                   <Li>
@@ -179,8 +178,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                     <Trans>Guided onboarding</Trans>
                   </Li>
                   <Li>
-                    <Trans>Multiple admins</Trans>
-                    <Detail>Unlimited</Detail>
+                    <Trans>Unlimited admins</Trans>
                   </Li>
                   <Li>
                     <Trans>Document storage</Trans>
@@ -223,9 +221,11 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <div className="text-center mt-6">
             <p className="text-muted fs-20">
-              A stakeholder is any holder of shares, (phantom) options, warrants, or convertibles.
-              <br />
-              It does not include the company treasury or incentive pools.
+              <Trans>
+                A stakeholder is any holder of shares, (phantom) options, warrants, or convertibles.
+                <br />
+                It does not include the company treasury or incentive pools.
+              </Trans>
             </p>
             <p className=" mt-6">
               <Link href to={`${props.prefix}/features/`}>
