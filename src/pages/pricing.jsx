@@ -4,7 +4,7 @@ import * as React from 'react';
 import { withI18n, Trans } from '@lingui/react';
 import { Link } from 'gatsby';
 
-import { Title, Li } from '../layouts/utils';
+import { Title, Li, ChevronRight } from '../layouts/utils';
 
 const Detail = props => <small className="d-block text-muted" {...props} />;
 const Soon = () => <small className="badge badge-pill badge-primary fs-10">Coming soon</small>;
@@ -111,11 +111,11 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                 <ul className="text-left mt-6 mb-0">
                   <Li>
                     <strong>
-                      <Trans>All Free features</Trans>
+                      <Trans>All Basic features</Trans>
                     </strong>
                   </Li>
                   <Li>
-                    <Trans>Options, Phantom, Warrants</Trans>
+                    <Trans>Options, phantom, warrants</Trans>
                   </Li>
                   <Li>
                     <Trans>Any vesting schedule</Trans>
@@ -221,21 +221,18 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
           </div>
 
-          <div className="mx-auto text-center mt-6">
+          <div className="text-center mt-6">
             <p className="text-muted fs-20">
               A stakeholder is any holder of shares, (phantom) options, warrants, or convertibles.
               <br />
               It does not include the company treasury or incentive pools.
             </p>
-            <div className="mx-auto text-center mt-6">
-              <Link
-                href
-                to={`${props.prefix}/features/`}
-                className="btn btn-block d-sm-inline btn-round btn-xl btn-outline-primary"
-              >
+            <p className=" mt-6">
+              <Link href to={`${props.prefix}/features/`}>
                 <Trans>Discover all features</Trans>
+                <ChevronRight />
               </Link>
-            </div>
+            </p>
             <hr className="my-8" />
             <h5>
               <Trans>Offer for eco-friendly startups</Trans>{' '}
