@@ -7,6 +7,7 @@ import { Link } from 'gatsby';
 import { Title, Li } from '../layouts/utils';
 
 const Detail = props => <small className="d-block text-muted" {...props} />;
+const Soon = () => <small className="badge badge-pill badge-primary fs-10">Coming soon</small>;
 
 export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
@@ -39,26 +40,31 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <div className="justify-content-center row gap-y">
             <div className="col-lg-4">
-              <div className="pricing-3 popular border rounded pb-1">
+              <div className="pricing-3 border rounded pb-1">
                 <h6>&nbsp;</h6>
                 <h2>
                   <Trans>Free</Trans>
                 </h2>
-                <small className="text-muted">&nbsp;</small>
+                <Detail>&nbsp;</Detail>
                 <ul className="text-left mt-6 mb-0">
                   <Li>
-                    <Trans>Error-free cap table</Trans>
+                    <strong>
+                      <Trans>Error-free cap table</Trans>
+                    </strong>
                   </Li>
                   <Li>
-                    <Trans>Round modeling</Trans>
-                    <Detail>
-                      <Trans>1 financing round</Trans>
-                    </Detail>
+                    <Trans>Single admin</Trans>
                   </Li>
                   <Li>
                     <Trans>Document storage</Trans>
                     <Detail>
                       <Trans>Up to 100 MB, no sharing</Trans>
+                    </Detail>
+                  </Li>
+                  <Li>
+                    <Trans>Financing round modeling</Trans>
+                    <Detail>
+                      <Trans>1 round, 1 scenario</Trans>
                     </Detail>
                   </Li>
                   <Li>
@@ -84,7 +90,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
 
             <div className="col-lg-4">
-              <div className="pricing-3 popular border rounded pb-1">
+              <div className="pricing-3 popular border border-success rounded pb-1 shadow">
                 <span className="popular-tag">
                   <Trans>14 days trial</Trans>
                 </span>
@@ -99,23 +105,25 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                 </Detail>
                 <ul className="text-left mt-6 mb-0">
                   <Li>
-                    <Trans>All Free features</Trans>
+                    <strong>
+                      <Trans>All Free features</Trans>
+                    </strong>
                   </Li>
                   <Li>
-                    <Trans>Round modeling</Trans>
-                    <Detail>
-                      <Trans>Unlimited</Trans>
-                    </Detail>
+                    <Trans>Multiple admins</Trans>
+                    <Detail>Up to 3</Detail>
                   </Li>
                   <Li>
                     <Trans>Document storage</Trans>
                     <Detail>
-                      <Trans>Unlimited + sharing</Trans>
+                      <Trans>Up to 500 MB + sharing</Trans>
                     </Detail>
                   </Li>
                   <Li>
-                    <Trans>Exit analysis</Trans>
-                    <Detail>Liq prefs + breakpoints</Detail>
+                    <Trans>Financing round modeling</Trans>
+                    <Detail>
+                      <Trans>Multiple rounds, 3 scenarios</Trans>
+                    </Detail>
                   </Li>
                   <Li>
                     <Trans>Employee incentives</Trans>
@@ -124,13 +132,68 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                     <Trans>Complex vesting plans</Trans>
                   </Li>
                   <Li>
-                    <Trans>Modeling scenarios</Trans>
-                  </Li>
-                  <Li>
                     <Trans>Email notifications</Trans>
                   </Li>
                   <Li>
+                    <Trans>Liquidation preferences</Trans>
+                  </Li>
+                  <Li>
+                    <Trans>Breakpoint + exit analysis</Trans>
+                  </Li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="col-lg-4">
+              <div className="pricing-3 border rounded pb-1">
+                <h6>
+                  <Trans>Enterprise</Trans>
+                </h6>
+                <h2>
+                  <a href="mailto:contact@ledgy.com">
+                    <Trans>Contact us</Trans>
+                  </a>
+                </h2>
+                <Detail>&nbsp;</Detail>
+                <ul className="text-left mt-6 mb-0">
+                  <Li>
+                    <strong>
+                      <Trans>All Premium features</Trans>
+                    </strong>
+                  </Li>
+                  <Li>
                     <Trans>Multiple admins</Trans>
+                    <Detail>Unlimited</Detail>
+                  </Li>
+                  <Li>
+                    <Trans>Document storage</Trans>
+                    <Detail>
+                      <Trans>Unlimited + sharing</Trans>
+                    </Detail>
+                  </Li>
+                  <Li>
+                    <Trans>Financing round modeling</Trans>
+                    <Detail>
+                      <Trans>Unlimited rounds + scenarios</Trans>
+                    </Detail>
+                  </Li>
+                  <Li>
+                    <Trans>Priority support</Trans>
+                  </Li>
+                  <Li>
+                    <Trans>Guided onboarding</Trans>
+                  </Li>
+                  <Li>
+                    <Trans>
+                      Document workflows
+                      <Soon />
+                    </Trans>
+                  </Li>
+                  <Li>
+                    <Trans>
+                      Electronic signatures
+                      <Soon />
+                    </Trans>
                   </Li>
                 </ul>
               </div>
@@ -138,19 +201,17 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           </div>
 
           <div className="mx-auto text-center mt-6">
-            <Trans>
-              Interested in our enterprise offer?
-              <br />
-              <a href="mailto:contact@ledgy.com">Drop us an email</a> or use the chat right on this
-              page.
-            </Trans>
-            <br />
-            <br />
-            <div className="mx-auto text-center">
+            <div className="mx-auto text-center mt-6">
+              <a
+                href="#try"
+                className="btn btn-block d-sm-inline btn-round btn-xl btn-primary mr-2"
+              >
+                <Trans>Get started free</Trans>
+              </a>
               <Link
                 href
                 to={`${props.prefix}/features/`}
-                className="btn btn-block d-sm-inline btn-round btn-xl btn-outline-primary mt-6"
+                className="btn btn-block d-sm-inline btn-round btn-xl btn-outline-primary"
               >
                 <Trans>Discover all features</Trans>
               </Link>
