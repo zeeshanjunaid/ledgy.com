@@ -89,7 +89,7 @@ export const team: { [string]: AuthorProps } = {
       </Trans>
     ),
     twitter: 'https://twitter.com/colmarius',
-    linkedIn: 'https://ch.linkedin.com/in/mariuscolacioiu',
+    linkedIn: 'https://www.linkedin.com/in/mariuscolacioiu',
     mail: 'marius@ledgy.com'
   }
 };
