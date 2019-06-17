@@ -81,11 +81,11 @@ export const team: { [string]: AuthorProps } = {
   },
   marius: {
     name: 'Marius Colacioiu',
-    role: 'Developer & ...',
+    role: 'Developer & Trial Runner',
     description: (
       <Trans>
         Marius has a background in computer science, graduated from Milan University and
-        since 2012 enjoys working with startups
+        since 2012 is passionate about startups and hackathons
       </Trans>
     ),
     twitter: 'https://twitter.com/colmarius',
@@ -121,7 +121,7 @@ export const TeamFragment = graphql`
         ...GatsbyImageSharpFluid
       }
     }
-    marius: imageSharp(fluid: { originalName: { regex: "/jules.jpg/" } }) {
+    marius: imageSharp(fluid: { originalName: { regex: "/marius.jpg/" } }) {
       fluid(maxWidth: 245, maxHeight: 245) {
         ...GatsbyImageSharpFluid
       }
