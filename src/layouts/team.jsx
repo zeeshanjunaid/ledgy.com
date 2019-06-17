@@ -84,8 +84,8 @@ export const team: { [string]: AuthorProps } = {
     role: 'Developer & Trial Runner',
     description: (
       <Trans>
-        Marius has a background in computer science, graduated from Milan University and
-        since 2012 is passionate about startups and hackathons
+        Marius has a background in computer science, graduated from Milan University and since 2012
+        is passionate about startups and hackathons
       </Trans>
     ),
     twitter: 'https://twitter.com/colmarius',
