@@ -81,11 +81,11 @@ export const team: { [string]: AuthorProps } = {
   },
   marius: {
     name: 'Marius Colacioiu',
-    role: 'Developer & Trial Runner',
+    role: 'Developer & Trail Runner',
     description: (
       <Trans>
-        Marius has a background in computer science, graduated from Milan University and since 2012
-        is passionate about startups and hackathons
+        Marius has a background in computer science, graduated from Milan University and worked as a
+        full stack developer at XING and On
       </Trans>
     ),
     twitter: 'https://twitter.com/colmarius',

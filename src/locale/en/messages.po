@@ -760,8 +760,8 @@ msgid "Managing directors"
 msgstr "Managing directors"
 
 #: src/layouts/team.jsx:86
-msgid "Marius has a background in computer science, graduated from Milan University and since 2012 is passionate about startups and hackathons"
-msgstr "Marius has a background in computer science, graduated from Milan University and since 2012 is passionate about startups and hackathons"
+msgid "Marius has a background in computer science, graduated from Milan University and worked as a full stack developer at XING and On"
+msgstr "Marius has a background in computer science, graduated from Milan University and worked as a full stack developer at XING and On"
 
 #: src/pages/about-us.jsx:18
 msgid "Meet the team behind Ledgy that went out to help startups thrive. Learn more about the people who trust in us."
