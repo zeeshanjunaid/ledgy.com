@@ -85,7 +85,7 @@ export const team: { [string]: AuthorProps } = {
     description: (
       <Trans>
         Marius has a background in computer science, graduated from Milan University and worked as a
-        full stack developer at XING and On
+        full-stack developer at XING and On
       </Trans>
     ),
     twitter: 'https://twitter.com/colmarius',
