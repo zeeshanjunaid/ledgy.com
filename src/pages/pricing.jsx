@@ -6,7 +6,7 @@ import { Link } from 'gatsby';
 
 import { Title, Li, ChevronRight } from '../layouts/utils';
 
-const Detail = props => <small className="d-block text-muted" {...props} />;
+const Detail = props => <small className="d-block text-light mt-1" {...props} />;
 const Soon = () => <small className="badge badge-pill badge-primary fs-10">Coming soon</small>;
 
 export default withI18n()(({ i18n, ...props }: Props) => (
@@ -30,41 +30,24 @@ export default withI18n()(({ i18n, ...props }: Props) => (
     <main className="main-content">
       <section className="section">
         <div className="container">
-          <header className="section-header">
-            <p>
-              <Trans>
-                Ledgy scales with your needs. Free for startups, powerful for grown-ups.
-              </Trans>
-            </p>
-          </header>
-
           <div className="justify-content-center row gap-y">
             <div className="col-lg-4">
               <div className="pricing-3 border rounded pb-4">
-                <h3>Basic</h3>
+                <h3>Starter</h3>
                 <h5>
-                  <Trans>Free</Trans>
+                  <Trans>free</Trans>
                 </h5>
                 <Detail>&nbsp;</Detail>
                 <ul className="text-left mt-6 mb-0">
                   <Li>
                     <strong>
-                      <Trans>Error-free cap table</Trans>
+                      <Trans>Cap table management</Trans>
                     </strong>
                   </Li>
                   <Li>
-                    <Trans>KPI tracking</Trans>
-                  </Li>
-                  <Li>
-                    <Trans>Recurring reports</Trans>
-                  </Li>
-                  <Li>
-                    <Trans>Single admin</Trans>
-                  </Li>
-                  <Li>
-                    <Trans>Document storage</Trans>
+                    <Trans>Reporting</Trans>
                     <Detail>
-                      <Trans>Up to 50 MB, no sharing</Trans>
+                      <Trans>Recurring reports, KPIs</Trans>
                     </Detail>
                   </Li>
                   <Li>
@@ -74,16 +57,28 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                     </Detail>
                   </Li>
                   <Li>
-                    <Trans>Pooled investments</Trans>
+                    <Trans>Access rights</Trans>
+                    <Detail>
+                      <Trans>2 admins, shareholder access</Trans>
+                    </Detail>
                   </Li>
                   <Li>
-                    <Trans>Import & export</Trans>
-                  </Li>
-                  <Li>
-                    <Trans>Two-factor authentication</Trans>
+                    <Trans>Document storage</Trans>
+                    <Detail>
+                      <Trans>Up to 50 MB</Trans>
+                    </Detail>
                   </Li>
                   <Li>
                     <Trans>Holding confirmations</Trans>
+                  </Li>
+                  <Li>
+                    <Trans>Pooled investments</Trans>
+                  </Li>
+                  <Li>
+                    <Trans>Convertibles</Trans>
+                  </Li>
+                  <Li>
+                    <Trans>Two-factor authentication</Trans>
                   </Li>
                 </ul>
                 <div className="text-center mb-3">
@@ -97,7 +92,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             <div className="col-lg-4">
               <div className="pricing-3 popular border border-success rounded pb-4 shadow">
                 <span className="popular-tag">
-                  <Trans>14-day trial</Trans>
+                  <Trans>30 days trial</Trans>
                 </span>
                 <h3>
                   <Trans>Premium</Trans>
@@ -111,22 +106,13 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                 <ul className="text-left mt-6 mb-0">
                   <Li>
                     <strong>
-                      <Trans>All Basic features</Trans>
+                      <Trans>All Starter features</Trans>
                     </strong>
                   </Li>
                   <Li>
-                    <Trans>Options, phantom, warrants</Trans>
-                  </Li>
-                  <Li>
-                    <Trans>Any vesting schedule</Trans>
-                  </Li>
-                  <Li>
-                    <Trans>Up to 3 admins</Trans>
-                  </Li>
-                  <Li>
-                    <Trans>Document storage</Trans>
+                    <Trans>Equity plan management</Trans>
                     <Detail>
-                      <Trans>Up to 500 MB + sharing</Trans>
+                      <Trans>Any vesting schedule</Trans>
                     </Detail>
                   </Li>
                   <Li>
@@ -136,13 +122,28 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                     </Detail>
                   </Li>
                   <Li>
-                    <Trans>Email notifications</Trans>
+                    <Trans>Access rights</Trans>
+                    <Detail>
+                      <Trans>4 admins, view-only access</Trans>
+                    </Detail>
+                  </Li>
+                  <Li>
+                    <Trans>Document storage</Trans>
+                    <Detail>
+                      <Trans>Up to 500 MB</Trans>
+                    </Detail>
+                  </Li>
+                  <Li>
+                    <Trans>Notifications</Trans>
+                    <Detail>
+                      <Trans>Vesting, expiry, maturity</Trans>
+                    </Detail>
                   </Li>
                   <Li>
                     <Trans>Liquidation preferences</Trans>
                   </Li>
                   <Li>
-                    <Trans>Breakpoint + exit analysises</Trans>
+                    <Trans>Breakpoint + exit analyses</Trans>
                   </Li>
                   <li>&nbsp;</li>
                 </ul>
@@ -173,23 +174,26 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   </Li>
                   <Li>
                     <Trans>Priority support</Trans>
-                  </Li>
-                  <Li>
-                    <Trans>Guided onboarding</Trans>
-                  </Li>
-                  <Li>
-                    <Trans>Unlimited admins</Trans>
-                  </Li>
-                  <Li>
-                    <Trans>Document storage</Trans>
                     <Detail>
-                      <Trans>Unlimited + sharing</Trans>
+                      <Trans>Phone & chat, onboarding</Trans>
                     </Detail>
                   </Li>
                   <Li>
                     <Trans>Financing round modeling</Trans>
                     <Detail>
                       <Trans>Unlimited rounds + scenarios</Trans>
+                    </Detail>
+                  </Li>
+                  <Li>
+                    <Trans>Access rights</Trans>
+                    <Detail>
+                      <Trans>Unlimited admins</Trans>
+                    </Detail>
+                  </Li>
+                  <Li>
+                    <Trans>Document storage</Trans>
+                    <Detail>
+                      <Trans>Unlimited</Trans>
                     </Detail>
                   </Li>
                   <Li>
