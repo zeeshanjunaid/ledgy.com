@@ -143,7 +143,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                     <Trans>Liquidation preferences</Trans>
                   </Li>
                   <Li>
-                    <Trans>Breakpoint + exit analyses</Trans>
+                    <Trans>Breakpoint & exit analyses</Trans>
                   </Li>
                   <li>&nbsp;</li>
                 </ul>
@@ -181,7 +181,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   <Li>
                     <Trans>Financing round modeling</Trans>
                     <Detail>
-                      <Trans>Unlimited rounds + scenarios</Trans>
+                      <Trans>Unlimited rounds & scenarios</Trans>
                     </Detail>
                   </Li>
                   <Li>
