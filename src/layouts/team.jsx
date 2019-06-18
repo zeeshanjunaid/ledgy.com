@@ -78,6 +78,19 @@ export const team: { [string]: AuthorProps } = {
     twitter: 'https://twitter.com/HenzeJules',
     linkedIn: 'https://ch.linkedin.com/in/jules-henze',
     mail: 'jules@ledgy.com'
+  },
+  marius: {
+    name: 'Marius Colacioiu',
+    role: 'Developer & Trail Runner',
+    description: (
+      <Trans>
+        Marius has a background in computer science, graduated from Milan University and worked as a
+        lead developer at XING and On
+      </Trans>
+    ),
+    twitter: 'https://twitter.com/colmarius',
+    linkedIn: 'https://www.linkedin.com/in/mariuscolacioiu',
+    mail: 'marius@ledgy.com'
   }
 };
 
@@ -104,6 +117,11 @@ export const TeamFragment = graphql`
       }
     }
     jules: imageSharp(fluid: { originalName: { regex: "/jules.jpg/" } }) {
+      fluid(maxWidth: 245, maxHeight: 245) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    marius: imageSharp(fluid: { originalName: { regex: "/marius.jpg/" } }) {
       fluid(maxWidth: 245, maxHeight: 245) {
         ...GatsbyImageSharpFluid
       }

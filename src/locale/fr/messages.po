@@ -4,7 +4,7 @@ msgstr ""
 "Mime-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.2.3\n"
 "Language: fr\n"
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
@@ -151,11 +151,11 @@ msgstr "Mise à jour automatique de la liste des actionnaires, de l'historique d
 msgid "Available shares for transfer"
 msgstr "Actions disponibles pour transfert"
 
-#: src/pages/about-us.jsx:131
+#: src/pages/about-us.jsx:132
 msgid "Backed by"
 msgstr "Soutenu par"
 
-#: src/pages/about-us.jsx:143
+#: src/pages/about-us.jsx:144
 msgid "Backing the creators of our future since 1984"
 msgstr "Nous soutenons les créateurs de notre avenir depuis 1984"
 
@@ -183,7 +183,7 @@ msgstr "Certification Blockchain"
 msgid "Blockchain notary"
 msgstr "Notaire Blockchain"
 
-#: src/layouts/index.jsx:64 src/layouts/index.jsx:113 src/layouts/index.jsx:146
+#: src/layouts/index.jsx:64 src/layouts/index.jsx:113 src/layouts/index.jsx:153
 #: src/pages/blog.jsx:61
 msgid "Blog"
 msgstr "Blog"
@@ -216,7 +216,7 @@ msgstr "Options d'entrée en bloc"
 msgid "Calculates waterfall analysis of liquidation preferences across all rounds"
 msgstr "Calcule l'analyse en cascade des préférences de liquidation à travers toutes les levées de fonds"
 
-#: src/layouts/index.jsx:177
+#: src/layouts/index.jsx:184
 msgid "Cap Table"
 msgstr "Cap Table"
 
@@ -294,7 +294,7 @@ msgstr "Convertir en transactions"
 msgid "Convertible loans"
 msgstr "Billets convertibles"
 
-#: src/layouts/index.jsx:211
+#: src/layouts/index.jsx:218
 msgid "Cookie Policy"
 msgstr "Politique de Cookies"
 
@@ -322,7 +322,7 @@ msgstr "Des sauvegardes quotidiennes garantissent que rien n’est jamais perdu"
 msgid "Data room, audit trail and read-only access for investors save you costly due diligence tools"
 msgstr "Data room, piste d’audits et accès en lecture seule pour les investisseurs te permettent d'économiser des outils coûteux de diligence raisonnable"
 
-#: src/pages/about-us.jsx:173
+#: src/pages/about-us.jsx:174
 msgid "Digital entrepreneur and investor. Security, crypto & privacy expert"
 msgstr "Entrepreneur et investisseur en technologies digitales. Expert en sécurité et cryptographie"
 
@@ -358,7 +358,7 @@ msgstr "Stockage des documents"
 msgid "Download holding confirmations with a single click"
 msgstr "Télécharge les confirmations de possession d'un simple clic"
 
-#: src/layouts/index.jsx:186
+#: src/layouts/index.jsx:193
 msgid "Due Diligence"
 msgstr "Diligence raisonnable"
 
@@ -390,7 +390,7 @@ msgstr "Modifier l’historique d’édition"
 msgid "Email notification about upcoming vesting event"
 msgstr "Notification par e-mail d’évènement de complétion de vesting imminent"
 
-#: src/layouts/index.jsx:183
+#: src/layouts/index.jsx:190
 msgid "Employee Incentives"
 msgstr "Participation des employés"
 
@@ -415,11 +415,11 @@ msgstr "Bénéficie des plus hauts standards de sécurité"
 msgid "Enter your email…"
 msgstr "Entre ton adresse email…"
 
-#: src/pages/about-us.jsx:168
+#: src/pages/about-us.jsx:169
 msgid "Entrepreneur, business angel, founder of Doodle.com"
 msgstr "Entrepreneur, business angel, fondateur de Doodle.com"
 
-#: src/pages/about-us.jsx:153
+#: src/pages/about-us.jsx:154
 msgid "Entrepreneur, technologist, founder of Doodle.com"
 msgstr "Entrepreneur, technologist, fondateur de Doodle.com"
 
@@ -435,7 +435,7 @@ msgstr "Les données sur les actions sont trop importantes pour être modifiées
 msgid "Error-free cap table"
 msgstr "Cap table sans erreur"
 
-#: src/pages/about-us.jsx:138
+#: src/pages/about-us.jsx:139
 msgid "Europe’s symbiosis of early-stage VC funds and private investor network"
 msgstr "La symbiose européenne entre les fonds de capital-risque et le réseau d’investisseurs privés"
 
@@ -452,7 +452,7 @@ msgstr "Modélisation de stratégie de sortie"
 msgid "FAQ"
 msgstr "FAQ"
 
-#: src/layouts/index.jsx:58 src/layouts/index.jsx:174
+#: src/layouts/index.jsx:58 src/layouts/index.jsx:181
 #: src/pages/features/captable.jsx:21 src/pages/features/collaboration.jsx:21
 #: src/pages/features/esop.jsx:16 src/pages/features/investors.jsx:21
 #: src/pages/features/modeling.jsx:21 src/pages/features.jsx:14
@@ -475,7 +475,7 @@ msgstr "Modélisation de rondes de financement flexible et intuitive, prenant en
 msgid "For even better protection of accounts. And our implementation is <0>open source</0>!"
 msgstr "Pour une meilleure protection des comptes. Et notre implémentation est <0>open source</0> !"
 
-#: src/pages/about-us.jsx:178
+#: src/pages/about-us.jsx:179
 msgid "Founder of Meisser Economics, Bitcoin Association Switzerland, and Wuala"
 msgstr "Fondateur de Meisser Economics, Bitcoin Association Switzerland, et Wuala"
 
@@ -483,7 +483,7 @@ msgstr "Fondateur de Meisser Economics, Bitcoin Association Switzerland, et Wual
 msgid "Free"
 msgstr "Gratuit"
 
-#: src/layouts/index.jsx:214
+#: src/layouts/index.jsx:221
 msgid "GDPR"
 msgstr "RGPD"
 
@@ -520,7 +520,7 @@ msgstr "Effectue les bons calculs"
 msgid "Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant."
 msgstr "Bien comprendre ton cap table et tes plans d’actionnariat, dès le début. Fais de tes levées de fond un succès et mobilise tes investisseurs et tes employés. Sois sûr que tes données soient en sécurité."
 
-#: src/layouts/index.jsx:374
+#: src/layouts/index.jsx:381
 msgid "Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant. Try now for free!"
 msgstr "Configure ton cap table et tes plans d’actionnariat des employés correctement, dès le début. Fais de tes levées de fonds un succès et mobilise tes investisseurs et tes employés. Aies la tranquillité d’esprit que tes données sont sûres et conformes. Essaye maintenant gratuitement !"
 
@@ -545,7 +545,7 @@ msgstr "Droits d'accès personnalisés"
 msgid "HTTP headers prevent cross-site scripting and code injection (<0>A+ rating</0>)"
 msgstr "Les en-têtes HTTP empêchent les scripts intersites et l’injection de code (<0>A+ rating</0>)"
 
-#: src/pages/about-us.jsx:148
+#: src/pages/about-us.jsx:149
 msgid "Healthcare & technology venture capital since 2001"
 msgstr "Capital de risque dans le domaine de la santé et de la technologie depuis 2001"
 
@@ -610,7 +610,7 @@ msgstr "Cap table intuitif, juridiquement valide et exempt d'erreurs dès le dé
 msgid "Intuitive, legally valid and error-free cap table from the beginning, supporting all transaction types, unlimited share classes, pooled investments, and numbered shares."
 msgstr "Cap table intuitif, juridiquement valide et exempt d'erreurs dès le début, prenant en charge tous les types de transaction, les catégories d'actions illimitées, les placements en pool et les actions numérotées."
 
-#: src/pages/about-us.jsx:183
+#: src/pages/about-us.jsx:184
 msgid "Investor & consultant (Farmy.ch, Flatfox.ch), founder of Students.ch"
 msgstr "Investisseur & consultant (Farmy.ch, Flatfox.ch), fondateur de Students.ch"
 
@@ -623,7 +623,7 @@ msgstr "Relations investisseurs et portfolio"
 msgid "Investor portfolio"
 msgstr "Portefeuille d’investisseurs"
 
-#: src/layouts/index.jsx:189
+#: src/layouts/index.jsx:196
 msgid "Investors"
 msgstr "Investisseurs"
 
@@ -671,11 +671,11 @@ msgstr "Indicateurs clés de performance"
 msgid "Kpi chart"
 msgstr "Diagramme Kpi"
 
-#: src/layouts/index.jsx:246
+#: src/layouts/index.jsx:253
 msgid "Language"
 msgstr "Langue"
 
-#: src/pages/about-us.jsx:163
+#: src/pages/about-us.jsx:164
 msgid "Leading Spanish investor in early-stage technology startups"
 msgstr "Investisseur majeur en Espagne dans les tech startups en phase initiale"
 
@@ -699,7 +699,7 @@ msgstr "Ledgy facilite la simulation d'un investissement avec une distribution a
 msgid "Ledgy scales with your needs. Free for startups, powerful for grown-ups."
 msgstr "Ledgy s’adapte à tes besoins. Gratuit pour les startups, puissant pour les scale-ups."
 
-#: src/layouts/index.jsx:200
+#: src/layouts/index.jsx:207
 msgid "Legal"
 msgstr "Légal"
 
@@ -719,7 +719,7 @@ msgstr "Préférences de liquidation"
 msgid "Log In"
 msgstr "Connexion"
 
-#: src/pages/about-us.jsx:188
+#: src/pages/about-us.jsx:189
 msgid "M&A and private equity lawyer with a focus on start-up legal advise, Smartuplaw.ch"
 msgstr "Avocate en M&A et private equity, spécialisée dans le conseil juridique aux startups, Smartuplaw.ch"
 
@@ -735,11 +735,15 @@ msgstr "Rendre les documents liés aux transactions accessibles aux actionnaires
 msgid "Managing directors"
 msgstr "Directeurs généraux"
 
+#: src/layouts/team.jsx:86
+msgid "Marius has a background in computer science, graduated from Milan University and worked as a lead developer at XING and On"
+msgstr "Marius a une formation en informatique, est diplômé de l’Université de Milan et a travaillé comme développeur principal chez XING et On"
+
 #: src/pages/about-us.jsx:18
 msgid "Meet the team behind Ledgy that went out to help startups thrive. Learn more about the people who trust in us."
 msgstr "Rencontre l'équipe derrière Ledgy qui pour mission d’aider les startups à prospérer. En savoir plus sur les personnes qui nous font confiance."
 
-#: src/layouts/index.jsx:180
+#: src/layouts/index.jsx:187
 msgid "Modeling"
 msgstr "Modélisation"
 
@@ -767,7 +771,7 @@ msgstr "La cohérence des numéros est vérifiée, ce qui te donne la tranquilli
 msgid "Offer for eco-friendly startups"
 msgstr "Offre pour les startups respectueuses de l’environnement"
 
-#: src/pages/about-us.jsx:158
+#: src/pages/about-us.jsx:159
 msgid "One of the most active Swiss early-stage angel investors"
 msgstr "L’un des angel investors suisses les plus actifs en early-stage"
 
@@ -821,7 +825,7 @@ msgstr "Historique du portefeuille"
 msgid "Premium"
 msgstr "Premium"
 
-#: src/layouts/index.jsx:61 src/layouts/index.jsx:192 src/pages/pricing.jsx:12
+#: src/layouts/index.jsx:61 src/layouts/index.jsx:199 src/pages/pricing.jsx:12
 #: src/pages/pricing.jsx:21
 msgid "Pricing"
 msgstr "Tarifs"
@@ -830,7 +834,7 @@ msgstr "Tarifs"
 msgid "Privacy"
 msgstr "Confidentialité"
 
-#: src/layouts/index.jsx:208
+#: src/layouts/index.jsx:215
 msgid "Privacy Policy"
 msgstr "Politique de confidentialité"
 
@@ -846,7 +850,7 @@ msgstr "Confidentialité made in Europe. Parce que tes données ne doivent pas �
 msgid "Pro-rata distribution"
 msgstr "Distribution au prorata"
 
-#: src/layouts/index.jsx:169
+#: src/layouts/index.jsx:176
 msgid "Product"
 msgstr "Produit"
 
@@ -1066,7 +1070,7 @@ msgstr "Équipe"
 msgid "Technical data"
 msgstr "Données Techniques"
 
-#: src/layouts/index.jsx:205
+#: src/layouts/index.jsx:212
 msgid "Terms of Service"
 msgstr "Conditions d’utilisation"
 
@@ -1074,7 +1078,7 @@ msgstr "Conditions d’utilisation"
 msgid "The Ledgy Blog"
 msgstr "Le Blog Ledgy"
 
-#: src/layouts/index.jsx:373 src/pages/index.jsx:19
+#: src/layouts/index.jsx:380 src/pages/index.jsx:19
 msgid "The New Standard in Equity Management"
 msgstr "Le nouveau standard en gestion d’actions"
 
@@ -1298,7 +1302,7 @@ msgstr "et les actions numérotées sont soutenues nativement"
 msgid "by liquidation preferences"
 msgstr "préférences de liquidation"
 
-#: src/layouts/index.jsx:382
+#: src/layouts/index.jsx:389
 msgid "cap table, stock ledger, share register, startup, modeling, financing round, equity, esop, phantom, option plan, virtual, portfolio, reporting, investors"
 msgstr "cap table, registre d’actions, startup, modélisation, ronde de financement, levée de fonds, actions, esop, plan d’options, virtuel, portefeuille, reporting, investisseurs, plan d’options"
 
