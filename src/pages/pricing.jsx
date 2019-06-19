@@ -59,7 +59,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   <Li>
                     <Trans>Access rights</Trans>
                     <Detail>
-                      <Trans>2 admins, shareholder access</Trans>
+                      <Trans>2 admins, stakeholder access</Trans>
                     </Detail>
                   </Li>
                   <Li>

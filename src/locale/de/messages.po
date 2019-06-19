@@ -18,8 +18,8 @@ msgid "1 round, 1 scenario"
 msgstr "1 Runde, 1 Szenario"
 
 #: src/pages/pricing.jsx:62
-msgid "2 admins, shareholder access"
-msgstr "2 Admins, Shareholder Zugriff"
+msgid "2 admins, stakeholder access"
+msgstr "2 Admins, Stakeholder-Zugriff"
 
 #: src/pages/pricing.jsx:95
 msgid "30 days trial"
@@ -96,11 +96,11 @@ msgstr "Flexible Einstellungen"
 
 #: src/pages/pricing.jsx:172
 msgid "All Premium features"
-msgstr "Alle Premium Features"
+msgstr "Alle Premium-Features"
 
 #: src/pages/pricing.jsx:109
 msgid "All Starter features"
-msgstr "Alle Starter Features"
+msgstr "Alle Starter-Features"
 
 #: src/pages/security.jsx:184
 msgid "All data is stored at an <0>independent provider</0> in France"
@@ -209,7 +209,7 @@ msgstr "Blog"
 
 #: src/pages/pricing.jsx:146
 msgid "Breakpoint & exit analyses"
-msgstr "Breakpoint & Exit Analyse"
+msgstr "Breakpoint & Exit-Analyse"
 
 #: src/pages/features/modeling.jsx:180
 msgid "Breakpoint analyses show in which valuation ranges the preferences have an effect and let you optimally plan your strategy"
@@ -249,7 +249,7 @@ msgstr "Cap Table während der Finanzierungsrundensimulation"
 
 #: src/pages/pricing.jsx:44
 msgid "Cap table management"
-msgstr "Cap Table Verwaltung"
+msgstr "Cap Table-Verwaltung"
 
 #: src/layouts/index.jsx:122
 msgid "Career"
@@ -383,7 +383,7 @@ msgstr "Dokumentenablage"
 
 #: src/pages/pricing.jsx:200
 msgid "Document workflows<0/>"
-msgstr "Dokumenten Workflows<0/>"
+msgstr "Dokumenten-Workflows<0/>"
 
 #: src/pages/features/collaboration.jsx:171
 msgid "Download holding confirmations with a single click"
@@ -419,7 +419,7 @@ msgstr "Bearbeitungsprotokoll"
 
 #: src/pages/pricing.jsx:206
 msgid "Electronic signatures<0/>"
-msgstr "Elektronische Unterschriften<0/>"
+msgstr "Elektronische Signaturen<0/>"
 
 #: src/pages/features/esop.jsx:123
 msgid "Email notification about upcoming vesting event"

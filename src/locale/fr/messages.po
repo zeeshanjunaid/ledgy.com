@@ -19,7 +19,7 @@ msgid "1 round, 1 scenario"
 msgstr ""
 
 #: src/pages/pricing.jsx:62
-msgid "2 admins, shareholder access"
+msgid "2 admins, stakeholder access"
 msgstr ""
 
 #: src/pages/pricing.jsx:95
