@@ -1260,8 +1260,8 @@ msgid "Trust your Cap Table"
 msgstr "Trust your Cap Table"
 
 #: src/pages/pricing.jsx:152
-msgid "Try 14 days free"
-msgstr "Try 14 days free"
+msgid "Try 30 days free"
+msgstr "Try 30 days free"
 
 #: src/layouts/index.jsx:89
 msgid "Try Ledgy now for free"

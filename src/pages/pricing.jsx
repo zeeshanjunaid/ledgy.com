@@ -149,7 +149,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                 </ul>
                 <div className="text-center mb-3">
                   <a href="#try" className="btn btn-round btn-xl btn-primary">
-                    <Trans>Try 14 days free</Trans>
+                    <Trans>Try 30 days free</Trans>
                   </a>
                 </div>
               </div>

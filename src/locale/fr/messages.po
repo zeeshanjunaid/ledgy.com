@@ -1260,7 +1260,7 @@ msgid "Trust your Cap Table"
 msgstr "Fais confiance à ton cap table"
 
 #: src/pages/pricing.jsx:152
-msgid "Try 14 days free"
+msgid "Try 30 days free"
 msgstr ""
 
 #: src/layouts/index.jsx:89

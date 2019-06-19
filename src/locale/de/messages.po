@@ -27,7 +27,7 @@ msgstr "30 Tage Probe"
 
 #: src/pages/pricing.jsx:127
 msgid "4 admins, view-only access"
-msgstr "4 Admins, Ansichtszugriff"
+msgstr "4 Admins, Nur-Lese-Zugriff"
 
 #: src/components/SignupForm.jsx:18
 msgid "<0/> Signing up…"
@@ -1209,8 +1209,8 @@ msgid "Trust your Cap Table"
 msgstr "Vertraue deinem Cap Table"
 
 #: src/pages/pricing.jsx:152
-msgid "Try 14 days free"
-msgstr "14 Tage kostenlos testen"
+msgid "Try 30 days free"
+msgstr "30 Tage gratis testen"
 
 #: src/layouts/index.jsx:89
 msgid "Try Ledgy now for free"
@@ -1246,7 +1246,7 @@ msgstr "Fälschungssicherer Nachweis, dass deine Dokumente seit der Zertifizieru
 
 #: src/pages/pricing.jsx:196
 msgid "Unlimited"
-msgstr "Unliniiert"
+msgstr "Unlimitiert"
 
 #: src/pages/pricing.jsx:190
 msgid "Unlimited admins"
@@ -1254,7 +1254,7 @@ msgstr "Unlimitierte Admins"
 
 #: src/pages/pricing.jsx:184
 msgid "Unlimited rounds & scenarios"
-msgstr "Unlimitierte Runden und Szenarien"
+msgstr "Unlimitierte Runden & Szenarien"
 
 #: src/pages/pricing.jsx:68
 msgid "Up to 50 MB"
