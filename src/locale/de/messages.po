@@ -51,7 +51,7 @@ msgstr "Für jedes Dokument wird beim Hochladen automatisch ein Zertifikat auf d
 
 #: src/pages/pricing.jsx:228
 msgid "A stakeholder is any holder of shares, (phantom) options, warrants, or convertibles.<0/>It does not include the company treasury or incentive pools."
-msgstr "Ein Stakeholder ist Halter von Anteilen, Optionen, Phantom Anteilen, Warrants oder Wandeldarlehen.<0/>Die Firma selbst oder Beteiligungspools werden nicht eingerechnet."
+msgstr "Ein Stakeholder ist Halter von Anteilen, Optionen, Phantom-Anteilen, Warrants oder Wandeldarlehen.<0/>Die Firma selbst oder Beteiligungspools werden nicht eingerechnet."
 
 #: src/layouts/index.jsx:110
 #: src/pages/about-us.jsx:17
@@ -104,7 +104,7 @@ msgstr "Alle Premium-Features"
 
 #: src/pages/pricing.jsx:109
 msgid "All Standard features"
-msgstr "Alle Standard Features"
+msgstr "Alle Standard-Features"
 
 #: src/pages/security.jsx:184
 msgid "All data is stored at an <0>independent provider</0> in France"
@@ -400,7 +400,7 @@ msgstr "Dokumenten-Workflows<0/>"
 
 #: src/pages/pricing.jsx:242
 msgid "Does your startup tackle the climate crisis?"
-msgstr "Engagiert sich dein Startups gegen die Klimakrise?"
+msgstr "Hilft dein Startup, die Klimakrise zu lösen?"
 
 #: src/pages/features/collaboration.jsx:171
 msgid "Download holding confirmations with a single click"
@@ -1397,7 +1397,7 @@ msgstr "Yoko hat ihren Physik Master an der ETH und in Oxford gemacht und war Pr
 
 #: src/pages/pricing.jsx:248
 msgid "You get a <0>20% discount</0> on Premium, if your startup provably reduces emissions.<1/><2>Write us</2> about your impact to see if you qualify."
-msgstr "Du bekommst <0>20% Discount</0> auf Premium, wenn dein Startup nachweislich Emissionen reduziert.<1/><2>Schreib’ uns</2> über deinen Impact, um herauszufinden, ob das auf dein Startup zutrifft."
+msgstr "Du bekommst <0>20% Discount</0> auf den Premium-Plan, wenn dein Startup nachweislich Emissionen reduziert.<1/><2>Schreib’ uns</2> über deinen Impact, um herauszufinden, ob das auf dein Startup zutrifft."
 
 #: src/components/SecurityRow.jsx:31
 msgid "Your data is safe with us"
