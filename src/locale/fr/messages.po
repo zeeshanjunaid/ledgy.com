@@ -400,7 +400,7 @@ msgid "Document workflows<0/>"
 msgstr ""
 
 #: src/pages/pricing.jsx:242
-msgid "Does your startup fight the climate crisis?"
+msgid "Does your startup tackle the climate crisis?"
 msgstr ""
 
 #: src/pages/features/collaboration.jsx:171

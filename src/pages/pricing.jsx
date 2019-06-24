@@ -239,7 +239,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </p>
             <hr className="my-8" />
             <h5>
-              <Trans>Does your startup fight the climate crisis?</Trans>{' '}
+              <Trans>Does your startup tackle the climate crisis?</Trans>{' '}
               <span role="img" aria-label="earth">
                 🌍
               </span>
