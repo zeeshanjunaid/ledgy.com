@@ -104,7 +104,7 @@ msgid "All Premium features"
 msgstr ""
 
 #: src/pages/pricing.jsx:109
-msgid "All Starter features"
+msgid "All Standard features"
 msgstr ""
 
 #: src/pages/security.jsx:184
@@ -132,10 +132,6 @@ msgstr "Analyse-le par actionnaire, catégorie d'actions, groupe d’actionnaire
 #: src/pages/pricing.jsx:115
 msgid "Any vesting schedule"
 msgstr "Tout calendrier de vesting"
-
-#: src/pages/pricing.jsx:248
-msgid "Are you part of a sustainability or clean-tech startup? <0/>If so, <1>tell us what you do</1> to see if you qualify for a <2>50% discount</2> on Ledgy Premium."
-msgstr "Fais-tu partie d’une startup de développement durable ou de technologies propres? <0/>Si c’est le cas, <1>décris-nous ce que vous faites </1> pour voir si vous êtes éligible à une remise de <2>50% </2> sur Ledgy Premium."
 
 #: src/pages/features/investors.jsx:22
 msgid "As a startup, be professional towards your investors, track KPIs, write recurring reports. As an investor, this is the simplest and most time-efficient way to manage your portfolio."
@@ -401,6 +397,10 @@ msgstr "Stockage des documents"
 
 #: src/pages/pricing.jsx:200
 msgid "Document workflows<0/>"
+msgstr ""
+
+#: src/pages/pricing.jsx:242
+msgid "Does your startup fight the climate crisis?"
 msgstr ""
 
 #: src/pages/features/collaboration.jsx:171
@@ -840,10 +840,6 @@ msgstr "Actions numérotées"
 #: src/pages/features/captable.jsx:106
 msgid "Numbers are checked for consistency, giving you the peace of mind that none go missing or are assigned twice"
 msgstr "La cohérence des numéros est vérifiée, ce qui te donne la tranquillité d'esprit qu'aucun numéro ne disparaît ou n'est attribué deux fois"
-
-#: src/pages/pricing.jsx:242
-msgid "Offer for eco-friendly startups"
-msgstr "Offre pour les startups respectueuses de l’environnement"
 
 #: src/pages/about-us.jsx:159
 msgid "One of the most active Swiss early-stage angel investors"
@@ -1399,6 +1395,10 @@ msgstr "Dans la modélisation de levée de fonds, le cap table au-dessous montre
 #: src/layouts/team.jsx:34
 msgid "Yoko graduated from ETH and Oxford and was president of Swissloop, enabling the team to win the 3rd price at the SpaceX Hyperloop competition"
 msgstr "Yoko est diplômée de l’ETH Zürich et d’Oxford et a été présidente de Swissloop, équipe Suisse qui a gagné le 3ème prix au concours SpaceX Hyperloop"
+
+#: src/pages/pricing.jsx:248
+msgid "You get a <0>20% discount</0> on Premium, if your startup provably reduces emissions.<1/><2>Write us</2> about your impact to see if you qualify."
+msgstr ""
 
 #: src/components/SecurityRow.jsx:31
 msgid "Your data is safe with us"

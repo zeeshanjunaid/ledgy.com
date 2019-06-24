@@ -104,8 +104,8 @@ msgid "All Premium features"
 msgstr "All Premium features"
 
 #: src/pages/pricing.jsx:109
-msgid "All Starter features"
-msgstr "All Starter features"
+msgid "All Standard features"
+msgstr "All Standard features"
 
 #: src/pages/security.jsx:184
 msgid "All data is stored at an <0>independent provider</0> in France"
@@ -132,10 +132,6 @@ msgstr "Analyze it by stakeholder, share class, stakeholder group and view it wi
 #: src/pages/pricing.jsx:115
 msgid "Any vesting schedule"
 msgstr "Any vesting schedule"
-
-#: src/pages/pricing.jsx:248
-msgid "Are you part of a sustainability or clean-tech startup? <0/>If so, <1>tell us what you do</1> to see if you qualify for a <2>50% discount</2> on Ledgy Premium."
-msgstr "Are you part of a sustainability or clean-tech startup? <0/>If so, <1>tell us what you do</1> to see if you qualify for a <2>50% discount</2> on Ledgy Premium."
 
 #: src/pages/features/investors.jsx:22
 msgid "As a startup, be professional towards your investors, track KPIs, write recurring reports. As an investor, this is the simplest and most time-efficient way to manage your portfolio."
@@ -402,6 +398,10 @@ msgstr "Document storage"
 #: src/pages/pricing.jsx:200
 msgid "Document workflows<0/>"
 msgstr "Document workflows<0/>"
+
+#: src/pages/pricing.jsx:242
+msgid "Does your startup fight the climate crisis?"
+msgstr "Does your startup fight the climate crisis?"
 
 #: src/pages/features/collaboration.jsx:171
 msgid "Download holding confirmations with a single click"
@@ -840,10 +840,6 @@ msgstr "Numbered shares"
 #: src/pages/features/captable.jsx:106
 msgid "Numbers are checked for consistency, giving you the peace of mind that none go missing or are assigned twice"
 msgstr "Numbers are checked for consistency, giving you the peace of mind that none go missing or are assigned twice"
-
-#: src/pages/pricing.jsx:242
-msgid "Offer for eco-friendly startups"
-msgstr "Offer for eco-friendly startups"
 
 #: src/pages/about-us.jsx:159
 msgid "One of the most active Swiss early-stage angel investors"
@@ -1399,6 +1395,10 @@ msgstr "When in round modeling, the cap table below shows the distribution after
 #: src/layouts/team.jsx:34
 msgid "Yoko graduated from ETH and Oxford and was president of Swissloop, enabling the team to win the 3rd price at the SpaceX Hyperloop competition"
 msgstr "Yoko graduated from ETH and Oxford and was president of Swissloop, enabling the team to win the 3rd price at the SpaceX Hyperloop competition"
+
+#: src/pages/pricing.jsx:248
+msgid "You get a <0>20% discount</0> on Premium, if your startup provably reduces emissions.<1/><2>Write us</2> about your impact to see if you qualify."
+msgstr "You get a <0>20% discount</0> on Premium, if your startup provably reduces emissions.<1/><2>Write us</2> about your impact to see if you qualify."
 
 #: src/components/SecurityRow.jsx:31
 msgid "Your data is safe with us"
