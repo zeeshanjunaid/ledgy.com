@@ -383,8 +383,8 @@ msgid "Document workflows<0/>"
 msgstr "Workflows de documents<0/>"
 
 #: src/pages/pricing.jsx:242
-msgid "Does your startup fight the climate crisis?"
-msgstr "Ta startup contribue-t-elle à la lutte contre le changement climatique ?"
+msgid "Does your startup tackle the climate crisis?"
+msgstr "Ta startup contribue-t-elle à la lutte contre le changement climatique?"
 
 #: src/pages/features/collaboration.jsx:171
 msgid "Download holding confirmations with a single click"
