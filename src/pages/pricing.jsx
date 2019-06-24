@@ -4,7 +4,10 @@ import * as React from 'react';
 import { withI18n, Trans } from '@lingui/react';
 import { Link } from 'gatsby';
 
-import { Title, Li } from '../layouts/utils';
+import { Title, Li, ChevronRight } from '../layouts/utils';
+
+const Detail = props => <small className="d-block text-light mt-1" {...props} />;
+const Soon = () => <small className="badge badge-pill badge-primary fs-10">Coming soon</small>;
 
 export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
@@ -27,134 +30,229 @@ export default withI18n()(({ i18n, ...props }: Props) => (
     <main className="main-content">
       <section className="section">
         <div className="container">
-          <header className="section-header">
-            <p>
-              <Trans>
-                Ledgy scales with your needs. Free for startups, powerful for grown-ups.
-              </Trans>
-            </p>
-          </header>
-
           <div className="justify-content-center row gap-y">
             <div className="col-lg-4">
-              <div className="pricing-3 popular border rounded">
-                <h6>&nbsp;</h6>
-                <h2>
-                  <Trans>Free</Trans>
-                </h2>
-                <small className="text-muted">&nbsp;</small>
+              <div className="pricing-3 border rounded pb-4">
+                <h3>Standard</h3>
+                <h5>
+                  <Trans>free</Trans>
+                </h5>
+                <Detail>&nbsp;</Detail>
                 <ul className="text-left mt-6 mb-0">
                   <Li>
-                    <Trans>Error-free cap table</Trans>
+                    <strong>
+                      <Trans>Cap table management</Trans>
+                    </strong>
                   </Li>
                   <Li>
-                    <Trans>Round modeling</Trans>
+                    <Trans>Reporting</Trans>
+                    <Detail>
+                      <Trans>Recurring reports, KPIs</Trans>
+                    </Detail>
                   </Li>
                   <Li>
-                    <Trans>Convertible loans</Trans>
+                    <Trans>Financing round modeling</Trans>
+                    <Detail>
+                      <Trans>1 round, 1 scenario</Trans>
+                    </Detail>
+                  </Li>
+                  <Li>
+                    <Trans>Access rights</Trans>
+                    <Detail>
+                      <Trans>2 admins, stakeholder access</Trans>
+                    </Detail>
+                  </Li>
+                  <Li>
+                    <Trans>Document storage</Trans>
+                    <Detail>
+                      <Trans>Up to 50 MB</Trans>
+                    </Detail>
+                  </Li>
+                  <Li>
+                    <Trans>Holding confirmations</Trans>
                   </Li>
                   <Li>
                     <Trans>Pooled investments</Trans>
                   </Li>
                   <Li>
-                    <Trans>Import & export</Trans>
-                  </Li>
-                  <Li>
-                    <Trans>Access rights</Trans>
+                    <Trans>Convertibles</Trans>
                   </Li>
                   <Li>
                     <Trans>Two-factor authentication</Trans>
                   </Li>
-                  <Li>
-                    <Trans>Document storage</Trans>
-                  </Li>
-                  <Li>
-                    <Trans>Holding confirmations</Trans>
-                  </Li>
                 </ul>
+                <div className="text-center mb-3">
+                  <a href="#try" className="btn btn-round btn-xl btn-outline-primary">
+                    <Trans>Get started</Trans>
+                  </a>
+                </div>
               </div>
             </div>
 
             <div className="col-lg-4">
-              <div className="pricing-3 popular border rounded">
+              <div className="pricing-3 popular border border-success rounded pb-4 shadow">
                 <span className="popular-tag">
-                  <Trans>14 days trial</Trans>
+                  <Trans>30 days trial</Trans>
                 </span>
-                <h6>
+                <h3>
                   <Trans>Premium</Trans>
-                </h6>
-                <h2>
-                  <Trans>€79/month</Trans>
-                </h2>
-                <small className="text-muted">
-                  <Trans>€99/month if billed monthly</Trans>
-                </small>
+                </h3>
+                <h5>
+                  <Trans>€2</Trans>
+                </h5>
+                <Detail>
+                  <Trans>per stakeholder per month</Trans>
+                </Detail>
                 <ul className="text-left mt-6 mb-0">
                   <Li>
-                    <Trans>All Free features</Trans>
+                    <strong>
+                      <Trans>All Standard features</Trans>
+                    </strong>
                   </Li>
                   <Li>
-                    <Trans>Option programs</Trans>
+                    <Trans>Equity plan management</Trans>
+                    <Detail>
+                      <Trans>Any vesting schedule</Trans>
+                    </Detail>
                   </Li>
                   <Li>
-                    <Trans>Virtual option programs</Trans>
+                    <Trans>Financing round modeling</Trans>
+                    <Detail>
+                      <Trans>Multiple rounds, 3 scenarios</Trans>
+                    </Detail>
                   </Li>
                   <Li>
-                    <Trans>Warrants</Trans>
+                    <Trans>Access rights</Trans>
+                    <Detail>
+                      <Trans>4 admins, view-only access</Trans>
+                    </Detail>
                   </Li>
                   <Li>
-                    <Trans>Vesting plans</Trans>
+                    <Trans>Document storage</Trans>
+                    <Detail>
+                      <Trans>Up to 500 MB</Trans>
+                    </Detail>
                   </Li>
                   <Li>
-                    <Trans>Vesting email notifications</Trans>
+                    <Trans>Notifications</Trans>
+                    <Detail>
+                      <Trans>Vesting, expiry, maturity</Trans>
+                    </Detail>
                   </Li>
                   <Li>
-                    <Trans>Liquidation preferences </Trans>
+                    <Trans>Liquidation preferences</Trans>
                   </Li>
                   <Li>
-                    <Trans>Exit modeling</Trans>
+                    <Trans>Breakpoint & exit analyses</Trans>
                   </Li>
-                  <Li>
-                    <Trans>Breakpoint analysis</Trans>
-                  </Li>
+                  <li>&nbsp;</li>
                 </ul>
+                <div className="text-center mb-3">
+                  <a href="#try" className="btn btn-round btn-xl btn-primary">
+                    <Trans>Try 30 days free</Trans>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-4">
+              <div className="pricing-3 border rounded pb-4">
+                <h3>
+                  <Trans>Enterprise</Trans>
+                </h3>
+                <h5>
+                  <a href="mailto:sales@ledgy.com">
+                    <Trans>Contact us</Trans>
+                  </a>
+                </h5>
+                <Detail>&nbsp;</Detail>
+                <ul className="text-left mt-6 mb-0">
+                  <Li>
+                    <strong>
+                      <Trans>All Premium features</Trans>
+                    </strong>
+                  </Li>
+                  <Li>
+                    <Trans>Priority support</Trans>
+                    <Detail>
+                      <Trans>Phone & chat, onboarding</Trans>
+                    </Detail>
+                  </Li>
+                  <Li>
+                    <Trans>Financing round modeling</Trans>
+                    <Detail>
+                      <Trans>Unlimited rounds & scenarios</Trans>
+                    </Detail>
+                  </Li>
+                  <Li>
+                    <Trans>Access rights</Trans>
+                    <Detail>
+                      <Trans>Unlimited admins</Trans>
+                    </Detail>
+                  </Li>
+                  <Li>
+                    <Trans>Document storage</Trans>
+                    <Detail>
+                      <Trans>Unlimited</Trans>
+                    </Detail>
+                  </Li>
+                  <Li>
+                    <Trans>
+                      Document workflows
+                      <Soon />
+                    </Trans>
+                  </Li>
+                  <Li>
+                    <Trans>
+                      Electronic signatures
+                      <Soon />
+                    </Trans>
+                  </Li>
+                  <li>&nbsp;</li>
+                  <li>&nbsp;</li>
+                </ul>
+                <div className="text-center mb-3">
+                  <a
+                    href="mailto:sales@ledgy.com"
+                    className="btn btn-round btn-xl btn-outline-primary"
+                  >
+                    <Trans>Contact us</Trans>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="mx-auto text-center mt-6">
-            <Trans>
-              Interested in our enterprise offer?
-              <br />
-              <a href="mailto:contact@ledgy.com">Drop us an email</a> or use the chat right on this
-              page.
-            </Trans>
-            <br />
-            <br />
-            <div className="mx-auto text-center">
-              <Link
-                href
-                to={`${props.prefix}/features/`}
-                className="btn btn-block d-sm-inline btn-round btn-xl btn-outline-primary mt-6"
-              >
+          <div className="text-center mt-6">
+            <p className="text-muted fs-20">
+              <Trans>
+                A stakeholder is any holder of shares, (phantom) options, warrants, or convertibles.
+                <br />
+                It does not include the company treasury or incentive pools.
+              </Trans>
+            </p>
+            <p className=" mt-6">
+              <Link href to={`${props.prefix}/features/`}>
                 <Trans>Discover all features</Trans>
+                <ChevronRight />
               </Link>
-            </div>
+            </p>
             <hr className="my-8" />
             <h5>
-              <Trans>Offer for eco-friendly startups</Trans>{' '}
+              <Trans>Does your startup tackle the climate crisis?</Trans>{' '}
               <span role="img" aria-label="earth">
                 🌍
               </span>
             </h5>
             <p>
               <Trans>
-                Are you part of a sustainability or clean-tech startup? <br />
-                If so,{' '}
+                You get a <strong>20% discount</strong> on Premium, if your startup provably reduces
+                emissions.
+                <br />
                 <a href="mailto:contact@ledgy.com?subject=Premium Eco-Friendly Discount Application">
-                  tell us what you do
+                  Write us
                 </a>{' '}
-                to see if you qualify for a <strong>50% discount</strong> on Ledgy Premium.
+                about your impact to see if you qualify.
               </Trans>
             </p>
           </div>
