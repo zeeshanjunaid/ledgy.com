@@ -33,7 +33,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           <div className="justify-content-center row gap-y">
             <div className="col-lg-4">
               <div className="pricing-3 border rounded pb-4">
-                <h3>Starter</h3>
+                <h3>Standard</h3>
                 <h5>
                   <Trans>free</Trans>
                 </h5>
@@ -106,7 +106,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                 <ul className="text-left mt-6 mb-0">
                   <Li>
                     <strong>
-                      <Trans>All Starter features</Trans>
+                      <Trans>All Standard features</Trans>
                     </strong>
                   </Li>
                   <Li>
@@ -239,19 +239,20 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </p>
             <hr className="my-8" />
             <h5>
-              <Trans>Offer for eco-friendly startups</Trans>{' '}
+              <Trans>Does your startup fight the climate crisis?</Trans>{' '}
               <span role="img" aria-label="earth">
                 🌍
               </span>
             </h5>
             <p>
               <Trans>
-                Are you part of a sustainability or clean-tech startup? <br />
-                If so,{' '}
+                You get a <strong>20% discount</strong> on Premium, if your startup provably reduces
+                emissions.
+                <br />
                 <a href="mailto:contact@ledgy.com?subject=Premium Eco-Friendly Discount Application">
-                  tell us what you do
+                  Write us
                 </a>{' '}
-                to see if you qualify for a <strong>50% discount</strong> on Ledgy Premium.
+                about your impact to see if you qualify.
               </Trans>
             </p>
           </div>
