@@ -9,5 +9,7 @@ exports.onServiceWorkerUpdateReady = () => window.location.reload(true);
 if (window.ga) {
   window.ga('require', 'linker');
   window.ga('linker:autoLink', ['app.ledgy.com']);
-  console.log('cross');
+  window.ga(tracker => {
+    window.clientId = tracker.get('clientId');
+  });
 }
