@@ -58,7 +58,7 @@ export default class extends React.Component<
         document.referrer
       )}&href=${encodeURIComponent(`${window.location.href}`)}`
     }).then(() => {
-      window.location.href = `${appUrl}/signup?email=${email}`;
+      window.location.href = `${appUrl}/signup?email=${email}&_ga=${window.clientId || ''}`;
     });
   };
   render = () => {
