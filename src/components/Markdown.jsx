@@ -3,6 +3,7 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
+import { Trans } from '@lingui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
@@ -66,3 +67,16 @@ export const Image = ({ align, caption, size, img, ...props }: ImageProps) => (
     )}
   </figure>
 );
+
+const languages = {
+  en: <Trans>English</Trans>,
+  de: <Trans>German</Trans>,
+  fr: <Trans>French</Trans>
+};
+
+export const LanguageHint = ({ lang, documentLang }: {| lang: string, documentLang: string |}) =>
+  lang !== documentLang && (
+    <div className="text-center">
+      <Trans>This page is only available in</Trans> {languages[documentLang]}
+    </div>
+  );
