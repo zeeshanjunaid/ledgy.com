@@ -91,6 +91,19 @@ export const team: { [string]: AuthorProps } = {
     twitter: 'https://twitter.com/colmarius',
     linkedIn: 'https://www.linkedin.com/in/mariuscolacioiu',
     mail: 'marius@ledgy.com'
+  },
+  jahlela: {
+    name: 'Jahlela Hasle',
+    role: 'Developer & Neuroscientist',
+    description: (
+      <Trans>
+        Jahlela has a background in cognitive neuroscience, graduated from UC Berkeley, and founded
+        a few startups before switching to full-time engineering
+      </Trans>
+    ),
+    twitter: 'https://twitter.com/jahlela',
+    linkedIn: 'https://www.linkedin.com/in/jahlelahasle',
+    mail: 'jahlela@ledgy.com'
   }
 };
 
@@ -122,6 +135,11 @@ export const TeamFragment = graphql`
       }
     }
     marius: imageSharp(fluid: { originalName: { regex: "/marius.jpg/" } }) {
+      fluid(maxWidth: 245, maxHeight: 245) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    jahlela: imageSharp(fluid: { originalName: { regex: "/jahlela.jpg/" } }) {
       fluid(maxWidth: 245, maxHeight: 245) {
         ...GatsbyImageSharpFluid
       }
