@@ -313,3 +313,32 @@ h1 {
     transition: 200ms;
   }
 }
+
+.testimonial {
+  line-height: 1.8;
+  small {
+    font-weight: 300;
+    &::before {
+      content: '\2014';
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.testimonial-description::before {
+  content: '“';
+  margin-left: -13px;
+  padding-right: 4px;
+}
+.testimonial-description::after {
+  content: '”';
+  margin-right: -13px;
+  padding-left: 4px;
+}
+
+.testimonial-description::before,
+.testimonial-description::after {
+  font-size: 1.5rem;
+  line-height: 1;
+  opacity: .5;
+}

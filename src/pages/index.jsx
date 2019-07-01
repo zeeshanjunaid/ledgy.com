@@ -51,6 +51,33 @@ const Header = ({ i18n, data }: Props) => {
   );
 };
 
+const Testimonial = ({
+  img,
+  name,
+  description,
+  col
+}: {
+  img: Object,
+  name: string,
+  description: string,
+  col: number
+}) => (
+  <div
+    className={`testimonial col-lg-${col} d-flex flex-column justify-content-start align-items-center`}
+  >
+    <div
+      className="d-flex align-items-center justify-content-center mt-4"
+      style={{ height: '100px' }}
+    >
+      <Img {...img} alt={name} />
+    </div>
+    <div className="d-flex flex-column justify-content-between mt-4" style={{ height: '150px' }}>
+      <div className="testimonial-description">{description}</div>
+      <small className="text-light">{name}</small>
+    </div>
+  </div>
+);
+
 const Reference = ({ img, name }: { img: Object, name: string }) => (
   <div style={{ width: '200px' }} className="my-4">
     <Img {...img} alt={name} />
@@ -64,7 +91,40 @@ const IndexPage = (props: Props) => (
       <section className="section py-7" id="references">
         <FeatureLinks {...props} page="index" />
         <div className="container">
-          <hr className="my-7" />
+          <Hr />
+
+          <header className="section-header mb-3">
+            <h2 className="my-4">
+              <Trans>What they say about us</Trans>
+            </h2>
+          </header>
+          <div className="row gap-y text-center">
+            <Testimonial
+              col={6}
+              name="Tobias Gunzenhauser, CEO, Yamo"
+              img={props.data.yamo}
+              description={
+                <Trans>
+                  I needed exactly that. Every founder should use Ledgy’s modeling tools for
+                  financing rounds!
+                </Trans>
+              }
+            />
+            <Testimonial
+              col={6}
+              name="Christian Menzi, Sherpany"
+              img={props.data.sherpany}
+              description={
+                <Trans>
+                  I finally have a reliable overview over all our shares and employee grants. I
+                  didn’t have that when we still used Excel.
+                </Trans>
+              }
+            />
+          </div>
+
+          <Hr />
+
           <header className="section-header mb-3">
             <h2 className="my-4">
               <Trans>Join hundreds of companies</Trans>
