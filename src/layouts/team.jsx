@@ -2,7 +2,8 @@
 
 import React, { type Node } from 'react';
 import { Trans } from '@lingui/react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
+import { targetBlank } from './utils';
 
 export type AuthorProps = {|
   name: string,
@@ -13,7 +14,7 @@ export type AuthorProps = {|
   mail: string
 |};
 
-export const team: { [string]: AuthorProps } = {
+export const getWholeTeam = (props: Props): { [string]: AuthorProps } => ({
   timo: {
     name: 'Timo Horstschaefer',
     role: 'Co-Founder & CTO',
@@ -104,8 +105,25 @@ export const team: { [string]: AuthorProps } = {
     twitter: 'https://twitter.com/jahlela',
     linkedIn: 'https://www.linkedin.com/in/jahlelahasle',
     mail: 'jahlela@ledgy.com'
+  },
+  stella: {
+    name: 'Stella',
+    role: 'Rocket & Trailblazer',
+    description: (
+      <Trans>
+        Stella is a model Saturn V rocket, which has been to space 13 times, and holds the record
+        for largest payload capacity to low Earth orbit. <br />
+        She's still under construction -{' '}
+        <Link href to={`${props.prefix}/jobs/`} {...targetBlank}>
+          Ready to help?
+        </Link>
+      </Trans>
+    ),
+    twitter: 'https://twitter.com/hashtag/saturnv',
+    linkedIn: 'https://www.linkedin.com/company/nasa',
+    mail: 'contact@ledgy.com'
   }
-};
+});
 
 export const TeamFragment = graphql`
   fragment TeamFragment on Query {
@@ -140,6 +158,11 @@ export const TeamFragment = graphql`
       }
     }
     jahlela: imageSharp(fluid: { originalName: { regex: "/jahlela.jpg/" } }) {
+      fluid(maxWidth: 245, maxHeight: 245) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    stella: imageSharp(fluid: { originalName: { regex: "/stella.jpg/" } }) {
       fluid(maxWidth: 245, maxHeight: 245) {
         ...GatsbyImageSharpFluid
       }
