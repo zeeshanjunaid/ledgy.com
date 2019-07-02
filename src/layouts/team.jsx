@@ -111,12 +111,11 @@ export const getWholeTeam = (props: Props): { [string]: AuthorProps } => ({
     role: 'Rocket & Trailblazer',
     description: (
       <Trans>
-        Stella is a model Saturn V rocket, which has been to space 13 times, and holds the record
-        for largest payload capacity to low Earth orbit. <br />
-        She's still under construction -{' '}
-        <Link href to={`${props.prefix}/jobs/`} {...targetBlank}>
+        Stella is a model of the Saturn V rocket, which has been to space 13 times, and holds the
+        record for largest payload to low Earth orbit. She's still under construction -{' '}
+        <a href={`${props.prefix}/jobs/`} {...targetBlank}>
           Ready to help?
-        </Link>
+        </a>
       </Trans>
     ),
     twitter: 'https://twitter.com/hashtag/saturnv',
