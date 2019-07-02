@@ -72,8 +72,8 @@ const Nav = (props: LayoutProps) => (
         <a className="btn btn-round btn-outline-light ml-lg-4 mr-2" href={appUrl}>
           <Trans>Log In</Trans>
         </a>
-        <a className="btn btn-round btn-light ml-lg-0 mr-2" href="#try">
-          <Trans>Sign Up</Trans>
+        <a className="btn btn-round btn-light ml-lg-0 mr-2" href="#subscribe">
+          <Trans>Subscribe</Trans>
         </a>
       </div>
     </div>
@@ -83,14 +83,14 @@ const Nav = (props: LayoutProps) => (
 const Footer = (props: LayoutProps) => (
   <div>
     {hasFooter(props.location.pathname) && (
-      <section className="section bg-pale-secondary" id="try">
+      <section className="section bg-pale-secondary" id="subscribe">
         <div className="container text-center signup py-md-7">
           <h2>
-            <Trans>Try Ledgy now for free</Trans>
+            <Trans>Subscribe to our newsletter</Trans>
           </h2>
 
           <p className="text-muted">
-            <Trans>No credit card required</Trans>
+            <Trans>And stay up-to-date with everything your start-up needs</Trans>
           </p>
 
           <SignupForm {...props} />
