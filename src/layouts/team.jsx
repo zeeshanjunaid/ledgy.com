@@ -98,7 +98,7 @@ export const team: { [string]: AuthorProps } = {
     description: (
       <Trans>
         Jahlela has a background in cognitive neuroscience, graduated from UC Berkeley, and founded
-        a few startups before switching to full-time engineering
+        a few startups before switching to full-time software engineering
       </Trans>
     ),
     twitter: 'https://twitter.com/jahlela',

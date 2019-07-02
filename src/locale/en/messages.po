@@ -170,11 +170,11 @@ msgstr "Automatically update the stakeholder list, transaction history, and cap 
 msgid "Available shares for transfer"
 msgstr "Available shares for transfer"
 
-#: src/pages/about-us.jsx:132
+#: src/pages/about-us.jsx:133
 msgid "Backed by"
 msgstr "Backed by"
 
-#: src/pages/about-us.jsx:144
+#: src/pages/about-us.jsx:145
 msgid "Backing the creators of our future since 1984"
 msgstr "Backing the creators of our future since 1984"
 
@@ -360,7 +360,7 @@ msgstr "Daily backups ensure nothing is ever lost"
 msgid "Data room, audit trail and read-only access for investors save you costly due diligence tools"
 msgstr "Data room, audit trail and read-only access for investors save you costly due diligence tools"
 
-#: src/pages/about-us.jsx:174
+#: src/pages/about-us.jsx:175
 msgid "Digital entrepreneur and investor. Security, crypto & privacy expert"
 msgstr "Digital entrepreneur and investor. Security, crypto & privacy expert"
 
@@ -474,7 +474,7 @@ msgstr "Enter your email…"
 msgid "Entrepreneur, business angel, founder of Doodle.com"
 msgstr "Entrepreneur, business angel, founder of Doodle.com"
 
-#: src/pages/about-us.jsx:154
+#: src/pages/about-us.jsx:155
 msgid "Entrepreneur, technologist, founder of Doodle.com"
 msgstr "Entrepreneur, technologist, founder of Doodle.com"
 
@@ -491,7 +491,7 @@ msgstr "Equity data is too important to be accidentally tweaked in a spreadsheet
 msgid "Equity plan management"
 msgstr "Equity plan management"
 
-#: src/pages/about-us.jsx:139
+#: src/pages/about-us.jsx:140
 msgid "Europe’s symbiosis of early-stage VC funds and private investor network"
 msgstr "Europe’s symbiosis of early-stage VC funds and private investor network"
 
@@ -545,7 +545,7 @@ msgstr "Flexible yet intuitive round modeling supporting convertibles, fixed emp
 msgid "For even better protection of accounts. And our implementation is <0>open source</0>!"
 msgstr "For even better protection of accounts. And our implementation is <0>open source</0>!"
 
-#: src/pages/about-us.jsx:179
+#: src/pages/about-us.jsx:180
 msgid "Founder of Meisser Economics, Bitcoin Association Switzerland, and Wuala"
 msgstr "Founder of Meisser Economics, Bitcoin Association Switzerland, and Wuala"
 
@@ -616,7 +616,7 @@ msgstr "Granular access rights, you control them"
 msgid "HTTP headers prevent cross-site scripting and code injection (<0>A+ rating</0>)"
 msgstr "HTTP headers prevent cross-site scripting and code injection (<0>A+ rating</0>)"
 
-#: src/pages/about-us.jsx:149
+#: src/pages/about-us.jsx:150
 msgid "Healthcare & technology venture capital since 2001"
 msgstr "Healthcare & technology venture capital since 2001"
 
@@ -678,7 +678,7 @@ msgstr "Intuitive, legally valid and error-free cap table from the beginning"
 msgid "Intuitive, legally valid and error-free cap table from the beginning, supporting all transaction types, unlimited share classes, pooled investments, and numbered shares."
 msgstr "Intuitive, legally valid and error-free cap table from the beginning, supporting all transaction types, unlimited share classes, pooled investments, and numbered shares."
 
-#: src/pages/about-us.jsx:184
+#: src/pages/about-us.jsx:185
 msgid "Investor & consultant (Farmy.ch, Flatfox.ch), founder of Students.ch"
 msgstr "Investor & consultant (Farmy.ch, Flatfox.ch), founder of Students.ch"
 
@@ -749,7 +749,7 @@ msgstr "Kpi chart"
 msgid "Language"
 msgstr "Language"
 
-#: src/pages/about-us.jsx:164
+#: src/pages/about-us.jsx:165
 msgid "Leading Spanish investor in early-stage technology startups"
 msgstr "Leading Spanish investor in early-stage technology startups"
 
@@ -849,7 +849,7 @@ msgstr "Numbered shares"
 msgid "Numbers are checked for consistency, giving you the peace of mind that none go missing or are assigned twice"
 msgstr "Numbers are checked for consistency, giving you the peace of mind that none go missing or are assigned twice"
 
-#: src/pages/about-us.jsx:159
+#: src/pages/about-us.jsx:160
 msgid "One of the most active Swiss early-stage angel investors"
 msgstr "One of the most active Swiss early-stage angel investors"
 

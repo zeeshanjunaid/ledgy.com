@@ -4,7 +4,7 @@ msgstr ""
 "Mime-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.2.3\n"
 "Language: fr\n"
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
@@ -170,11 +170,11 @@ msgstr "Mise à jour automatique de la liste des actionnaires, de l’historique
 msgid "Available shares for transfer"
 msgstr "Actions disponibles pour transfert"
 
-#: src/pages/about-us.jsx:132
+#: src/pages/about-us.jsx:133
 msgid "Backed by"
 msgstr "Soutenu par"
 
-#: src/pages/about-us.jsx:144
+#: src/pages/about-us.jsx:145
 msgid "Backing the creators of our future since 1984"
 msgstr "Nous soutenons les créateurs de notre avenir depuis 1984"
 
@@ -360,7 +360,7 @@ msgstr "Des sauvegardes quotidiennes garantissent que rien n’est jamais perdu"
 msgid "Data room, audit trail and read-only access for investors save you costly due diligence tools"
 msgstr "Data room, piste d’audits et accès en lecture seule pour les investisseurs te permettent d’économiser des outils coûteux de diligence raisonnable"
 
-#: src/pages/about-us.jsx:174
+#: src/pages/about-us.jsx:175
 msgid "Digital entrepreneur and investor. Security, crypto & privacy expert"
 msgstr "Entrepreneur et investisseur en technologies digitales. Expert en sécurité et cryptographie"
 
@@ -470,11 +470,11 @@ msgstr "Bénéficie des plus hauts standards de sécurité"
 msgid "Enter your email…"
 msgstr "Entre ton adresse email…"
 
-#: src/pages/about-us.jsx:169
+#: src/pages/about-us.jsx:170
 msgid "Entrepreneur, business angel, founder of Doodle.com"
 msgstr "Entrepreneur, business angel, fondateur de Doodle.com"
 
-#: src/pages/about-us.jsx:154
+#: src/pages/about-us.jsx:155
 msgid "Entrepreneur, technologist, founder of Doodle.com"
 msgstr "Entrepreneur, technologist, fondateur de Doodle.com"
 
@@ -491,7 +491,7 @@ msgstr "Les données sur les actions sont trop importantes pour être modifiées
 msgid "Equity plan management"
 msgstr "Plan d’actionnariat"
 
-#: src/pages/about-us.jsx:139
+#: src/pages/about-us.jsx:140
 msgid "Europe’s symbiosis of early-stage VC funds and private investor network"
 msgstr "La symbiose européenne entre les fonds de capital-risque et le réseau d’investisseurs privés"
 
@@ -545,7 +545,7 @@ msgstr "Modélisation de rondes de financement flexible et intuitive, prenant en
 msgid "For even better protection of accounts. And our implementation is <0>open source</0>!"
 msgstr "Pour une meilleure protection des comptes. Et notre implémentation est <0>open source</0> !"
 
-#: src/pages/about-us.jsx:179
+#: src/pages/about-us.jsx:180
 msgid "Founder of Meisser Economics, Bitcoin Association Switzerland, and Wuala"
 msgstr "Fondateur de Meisser Economics, Bitcoin Association Switzerland, et Wuala"
 
@@ -616,7 +616,7 @@ msgstr "Droits d’accès personnalisés"
 msgid "HTTP headers prevent cross-site scripting and code injection (<0>A+ rating</0>)"
 msgstr "Les en-têtes HTTP empêchent les scripts intersites et l’injection de code (<0>A+ rating</0>)"
 
-#: src/pages/about-us.jsx:149
+#: src/pages/about-us.jsx:150
 msgid "Healthcare & technology venture capital since 2001"
 msgstr "Capital de risque dans le domaine de la santé et de la technologie depuis 2001"
 
@@ -678,7 +678,7 @@ msgstr "Cap table intuitif, juridiquement valide et exempt d’erreurs dès le d
 msgid "Intuitive, legally valid and error-free cap table from the beginning, supporting all transaction types, unlimited share classes, pooled investments, and numbered shares."
 msgstr "Cap table intuitif, juridiquement valide et exempt d’erreurs dès le début, prenant en charge tous les types de transaction, les catégories d’actions illimitées, les placements en pool et les actions numérotées."
 
-#: src/pages/about-us.jsx:184
+#: src/pages/about-us.jsx:185
 msgid "Investor & consultant (Farmy.ch, Flatfox.ch), founder of Students.ch"
 msgstr "Investisseur & consultant (Farmy.ch, Flatfox.ch), fondateur de Students.ch"
 
@@ -749,7 +749,7 @@ msgstr "Diagramme Kpi"
 msgid "Language"
 msgstr "Langue"
 
-#: src/pages/about-us.jsx:164
+#: src/pages/about-us.jsx:165
 msgid "Leading Spanish investor in early-stage technology startups"
 msgstr "Investisseur majeur en Espagne dans les tech startups en phase initiale"
 
@@ -849,7 +849,7 @@ msgstr "Actions numérotées"
 msgid "Numbers are checked for consistency, giving you the peace of mind that none go missing or are assigned twice"
 msgstr "La cohérence des numéros est vérifiée, ce qui te donne la tranquillité d’esprit qu’aucun numéro ne disparaît ou n’est attribué deux fois"
 
-#: src/pages/about-us.jsx:159
+#: src/pages/about-us.jsx:160
 msgid "One of the most active Swiss early-stage angel investors"
 msgstr "L’un des angel investors suisses les plus actifs en early-stage"
 

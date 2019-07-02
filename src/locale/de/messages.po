@@ -169,11 +169,11 @@ msgstr "Automatische Aktualisierung der Stakeholderliste, der Transaktionshistor
 msgid "Available shares for transfer"
 msgstr "Verfügbare Aktien für die Übertragung"
 
-#: src/pages/about-us.jsx:132
+#: src/pages/about-us.jsx:133
 msgid "Backed by"
 msgstr "Unterstützt von"
 
-#: src/pages/about-us.jsx:144
+#: src/pages/about-us.jsx:145
 msgid "Backing the creators of our future since 1984"
 msgstr "Backing the creators of our future since 1984"
 
@@ -359,7 +359,7 @@ msgstr "Tägliche Backups stellen sicher, dass nichts verloren gehen kann"
 msgid "Data room, audit trail and read-only access for investors save you costly due diligence tools"
 msgstr "Datenraum, Audit-Trail und schreibgeschützter Zugriff für Investoren ersparen dir teure Due-Diligence Tools"
 
-#: src/pages/about-us.jsx:174
+#: src/pages/about-us.jsx:175
 msgid "Digital entrepreneur and investor. Security, crypto & privacy expert"
 msgstr "Digital Entrepreneur und Investor. Security-, Crypto- & Privacy-Experte"
 
@@ -473,7 +473,7 @@ msgstr "Gebe deine E-Mail-Adresse ein…"
 msgid "Entrepreneur, business angel, founder of Doodle.com"
 msgstr "Unternehmer, Business Angel, Gründer von Doodle.com"
 
-#: src/pages/about-us.jsx:154
+#: src/pages/about-us.jsx:155
 msgid "Entrepreneur, technologist, founder of Doodle.com"
 msgstr "Unternehmer, Technologe, Gründer von Doodle.com"
 
@@ -490,7 +490,7 @@ msgstr "Beteiligungsdaten sind zu wichtig, um sie versehentlich in einem Tabelle
 msgid "Equity plan management"
 msgstr "Beteiligungspläne"
 
-#: src/pages/about-us.jsx:139
+#: src/pages/about-us.jsx:140
 msgid "Europe’s symbiosis of early-stage VC funds and private investor network"
 msgstr "Europe’s symbiosis of early-stage VC funds and private investor network"
 
@@ -544,7 +544,7 @@ msgstr "Flexible und dennoch intuitive Rundenmodellierung, welche Wandeldarlehen
 msgid "For even better protection of accounts. And our implementation is <0>open source</0>!"
 msgstr "Für noch mehr Sicherheit der Nutzerkonten. Übrigens, unsere Implementierung ist <0>Open Source</0>!"
 
-#: src/pages/about-us.jsx:179
+#: src/pages/about-us.jsx:180
 msgid "Founder of Meisser Economics, Bitcoin Association Switzerland, and Wuala"
 msgstr "Gründer von Meisser Economics, Bitcoin Association Schweiz und Wuala"
 
@@ -615,7 +615,7 @@ msgstr "Granulare Zugriffsrechte, du hast die Kontrolle"
 msgid "HTTP headers prevent cross-site scripting and code injection (<0>A+ rating</0>)"
 msgstr "HTTP-Header verhindern Cross-Site-Scripting und Code-Injection (<0>A+-Rating</0>)"
 
-#: src/pages/about-us.jsx:149
+#: src/pages/about-us.jsx:150
 msgid "Healthcare & technology venture capital since 2001"
 msgstr "Healthcare & technology venture capital since 2001"
 
@@ -677,7 +677,7 @@ msgstr "Intuitiver, rechtsgültiger und fehlerfreier Cap Table von Anfang an"
 msgid "Intuitive, legally valid and error-free cap table from the beginning, supporting all transaction types, unlimited share classes, pooled investments, and numbered shares."
 msgstr "Intuitive, rechtsgültige und fehlerfreie Cap Tables von Anfang an, die alle Transaktionsarten, unbegrenzte Aktienklassen, gepoolte Anlagen und nummerierte Aktien unterstützt."
 
-#: src/pages/about-us.jsx:184
+#: src/pages/about-us.jsx:185
 msgid "Investor & consultant (Farmy.ch, Flatfox.ch), founder of Students.ch"
 msgstr "Investor & Berater (Farmy.ch, Flatfox.ch), Gründer von Students.ch"
 
@@ -748,7 +748,7 @@ msgstr "KPI-Diagramm"
 msgid "Language"
 msgstr "Sprache"
 
-#: src/pages/about-us.jsx:164
+#: src/pages/about-us.jsx:165
 msgid "Leading Spanish investor in early-stage technology startups"
 msgstr "Der führende Investor aus Spanien im Early Stage-Segment"
 
@@ -848,7 +848,7 @@ msgstr "Aktiennummerierung"
 msgid "Numbers are checked for consistency, giving you the peace of mind that none go missing or are assigned twice"
 msgstr "Die Nummerierung wird auf Konsistenz geprüft, was dir die Gewissheit gibt, dass keine verloren geht oder doppelt vergeben wird"
 
-#: src/pages/about-us.jsx:159
+#: src/pages/about-us.jsx:160
 msgid "One of the most active Swiss early-stage angel investors"
 msgstr "Einer der aktivsten Schweizer Angel-Investoren für Early Stage"
 
