@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
-import { team, type AuthorProps } from '../layouts/team';
+import { getWholeTeam, type AuthorProps } from '../layouts/team';
 
 const About = ({ about, img }: {| about: AuthorProps, img: Object |}) => (
   <div className="about d-flex justify-content-center pt-3 mt-3">
@@ -32,16 +32,19 @@ const About = ({ about, img }: {| about: AuthorProps, img: Object |}) => (
   </div>
 );
 
-export const Author = ({ name }: { name: string }) => (
-  <StaticQuery
-    query={graphql`
-      query {
-        ...TeamFragment
-      }
-    `}
-    render={data => <About about={team[name]} img={data[name]} />}
-  />
-);
+export const Author = ({ name, ...props }: { name: string }) => {
+  const team = getWholeTeam(props);
+  return (
+    <StaticQuery
+      query={graphql`
+        query {
+          ...TeamFragment
+        }
+      `}
+      render={data => <About about={team[name]} img={data[name]} />}
+    />
+  );
+};
 
 export type ImageProps = {|
   align: string,

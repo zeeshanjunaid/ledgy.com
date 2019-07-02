@@ -77,7 +77,7 @@ export default ({
                 </a>
               </small>
             </div>
-            {frontmatter.author && <Author name={frontmatter.author} />}
+            {frontmatter.author && <Author {...props} name={frontmatter.author} />}
           </div>
         </section>
       </main>
