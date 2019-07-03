@@ -173,14 +173,8 @@ export const pageQuery = graphql`
         ...GatsbyImageSharpFluid_noBase64
       }
     }
-
     viu: imageSharp(fluid: { originalName: { regex: "/viu/" } }) {
       fixed(width: 120) {
-        ...GatsbyImageSharpFixed
-      }
-    }
-    quitt: imageSharp(fluid: { originalName: { regex: "/quitt/" } }) {
-      fixed(width: 80) {
         ...GatsbyImageSharpFixed
       }
     }
@@ -199,18 +193,8 @@ export const pageQuery = graphql`
         ...GatsbyImageSharpFixed
       }
     }
-    bexio: imageSharp(fluid: { originalName: { regex: "/bexio/" } }) {
-      fixed(width: 110) {
-        ...GatsbyImageSharpFixed
-      }
-    }
     allthings: imageSharp(fluid: { originalName: { regex: "/allthings/" } }) {
       fixed(width: 150) {
-        ...GatsbyImageSharpFixed
-      }
-    }
-    farmy: imageSharp(fluid: { originalName: { regex: "/farmy/" } }) {
-      fixed(width: 130) {
         ...GatsbyImageSharpFixed
       }
     }
