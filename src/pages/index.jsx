@@ -59,7 +59,7 @@ const Testimonial = ({
 }: {
   img: Object,
   name: string,
-  description: string,
+  description: React.Element,
   col: number
 }) => (
   <div
@@ -67,7 +67,7 @@ const Testimonial = ({
   >
     <div
       className="d-flex align-items-center justify-content-center mt-4"
-      style={{ height: '100px' }}
+      style={{ minHeight: '80px' }}
     >
       <Img {...img} alt={name} />
     </div>
@@ -79,8 +79,10 @@ const Testimonial = ({
 );
 
 const Reference = ({ img, name }: { img: Object, name: string }) => (
-  <div style={{ width: '200px' }} className="my-4">
-    <Img {...img} alt={name} />
+  <div className="col-6 col-lg-3 pb-6 pb-lg-0">
+    <div className="d-flex justify-content-center">
+      <Img {...img} alt={name} />
+    </div>
   </div>
 );
 
@@ -95,10 +97,29 @@ const IndexPage = (props: Props) => (
 
           <header className="section-header mb-3">
             <h2 className="my-4">
-              <Trans>What they say about us</Trans>
+              <Trans>Join hundreds of companies</Trans>
             </h2>
+            <p>
+              <Trans>
+                that already use Ledgy for their equity management and investor relations
+              </Trans>
+            </p>
           </header>
-          <div className="row gap-y text-center">
+          {/* <Hr marginX={10} /> */}
+          <div className="my-8" />
+          <div className="row align-content-center">
+            <Reference img={props.data.viu} name="VIU Eyeware" />
+            <Reference img={props.data.frontify} name="Frontify" />
+            <Reference img={props.data.cryptofinance} name="Crypto Finance AG" />
+            <Reference img={props.data.allthings} name="Allthings Technologies" />
+            {/* <Reference img={props.data.farmy} name="Farmy" />
+            <Reference img={props.data.sherpany} name="Sherpany" />
+            <Reference img={props.data.quitt} name="quitt.ch" />
+            <Reference img={props.data.yamo} name="Yamo" /> */}
+          </div>
+          <Hr marginX={10} />
+
+          <div className="row text-center">
             <Testimonial
               col={6}
               name="Tobias Gunzenhauser, CEO, Yamo"
@@ -123,31 +144,7 @@ const IndexPage = (props: Props) => (
             />
           </div>
 
-          <Hr />
-
-          <header className="section-header mb-3">
-            <h2 className="my-4">
-              <Trans>Join hundreds of companies</Trans>
-            </h2>
-            <p>
-              <Trans className="mb-4">
-                who already use Ledgy for their equity management and investor relations
-              </Trans>
-            </p>
-          </header>
-
-          <div className="partner mx-auto py-4">
-            <Reference img={props.data.viu} name="VIU Eyeware" />
-            <Reference img={props.data.farmy} name="Farmy" />
-            <Reference img={props.data.sherpany} name="Sherpany" />
-            <Reference img={props.data.frontify} name="Frontify" />
-            <Reference img={props.data.cryptofinance} name="Crypto Finance AG" />
-            <Reference img={props.data.quitt} name="quitt.ch" />
-            <Reference img={props.data.yamo} name="Yamo" />
-            <Reference img={props.data.allthings} name="Allthings Technologies" />
-          </div>
-
-          <div className="mx-auto text-center pb-5">
+          <div className="mx-auto text-center pt-8 pb-4">
             <Link
               href
               to={`${props.prefix}/features/`}
