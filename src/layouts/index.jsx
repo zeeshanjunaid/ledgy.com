@@ -26,7 +26,8 @@ import '../assets/scss/page.scss';
 import logoDefault from '../img/logo_black.png';
 import logoInverse from '../img/logo_white.png';
 
-const hasFooter = (pathname: string) => !pathname.match(/contact/);
+const showSubscribe = (pathname: string) =>
+  !pathname.match(/contact/) && !pathname.match(/subscribed/);
 
 type LayoutProps = {
   ...$Exact<Props>,
@@ -72,9 +73,11 @@ const Nav = (props: LayoutProps) => (
         <a className="btn btn-round btn-outline-light ml-lg-4 mr-2" href={appUrl}>
           <Trans>Log In</Trans>
         </a>
-        <a className="btn btn-round btn-light ml-lg-0 mr-2" href="#subscribe">
-          <Trans>Subscribe</Trans>
-        </a>
+        {showSubscribe(props.location.pathname) && (
+          <a className="btn btn-round btn-light ml-lg-0 mr-2" href="#subscribe">
+            <Trans>Subscribe</Trans>
+          </a>
+        )}
       </div>
     </div>
   </nav>
@@ -82,7 +85,7 @@ const Nav = (props: LayoutProps) => (
 
 const Footer = (props: LayoutProps) => (
   <div>
-    {hasFooter(props.location.pathname) && (
+    {showSubscribe(props.location.pathname) && (
       <section className="section bg-pale-secondary" id="subscribe">
         <div className="container text-center signup py-md-7">
           <h2>

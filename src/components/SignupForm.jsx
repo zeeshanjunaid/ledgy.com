@@ -45,7 +45,6 @@ export default class extends React.Component<
             />
             <button
               type="submit"
-              value="Subscribe"
               name="subscribe"
               id="mc-embedded-subscribe"
               className="btn btn-primary btn-round btn-xl"
