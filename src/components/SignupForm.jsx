@@ -29,7 +29,7 @@ export default class extends React.Component<
     return (
       <>
         <form
-          action="https://gmail.us3.list-manage.com/subscribe/post?u=9270e3d8bb9a6ef73633717af&amp;id=1c0ab18e1a"
+          action="https://ledgy.us16.list-manage.com/subscribe/post?u=d6181c123b4d20b2104c4652f&amp;id=c9cfbb11a6"
           method="post"
           className="input-round py-5"
           onSubmit={this.handleSubmit}
