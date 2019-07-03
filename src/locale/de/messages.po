@@ -526,13 +526,17 @@ msgstr "Funktionen"
 msgid "Featuring unlimited share classes, treasury shares, pooled investments, and automatic share numbering"
 msgstr "Mit beliebig vielen Anteilsklassen, Treasury Anteilen, gepoolten Investitionen und automatischer Aktiennummerierung"
 
+#: src/pages/index.jsx:137
+msgid "Finally, I have a reliable overview of all our shares, employee grants, and their legal documents. So much better than the Excel I used before."
+msgstr ""
+
 #: src/pages/pricing.jsx:54
 #: src/pages/pricing.jsx:119
 #: src/pages/pricing.jsx:182
 msgid "Financing round modeling"
 msgstr "Modellierung von Runden"
 
-#: src/pages/index.jsx:96
+#: src/pages/index.jsx:151
 msgid "Find out why they trust us"
 msgstr "Warum sie uns vertrauen"
 
@@ -641,6 +645,10 @@ msgstr "Besitzbestätigungen"
 msgid "How we protect your information"
 msgstr "Wie wir deine Informationen schützen"
 
+#: src/pages/index.jsx:126
+msgid "I needed exactly that. Every founder should use Ledgy’s modeling tools for financing rounds!"
+msgstr ""
+
 #: src/pages/privacy.jsx:83
 msgid "Identity and contact data"
 msgstr "Identitäts und Kontaktdaten"
@@ -700,7 +708,7 @@ msgstr "Lade Gründer oder CFO ein, das Unternehmen zu verwalten und die Informa
 msgid "Invite your employees to track their stake and vesting in their Ledgy portfolio"
 msgstr "Lade deine Mitarbeiter dazu ein, ihre Beteiligung und Vesting-Pläne in ihrem Ledgy-Portfolio zu verfolgen"
 
-#: src/pages/index.jsx:70
+#: src/pages/index.jsx:100
 msgid "Join hundreds of companies"
 msgstr "Schliesse dich hunderten Startups an"
 
@@ -1464,6 +1472,10 @@ msgstr "du kontrollierst, was andere sehen und bearbeiten können"
 msgid "stopping the spreadsheet mess"
 msgstr "stoppe das Durcheinander in Tabellendokumenten"
 
+#: src/pages/index.jsx:103
+msgid "that already use Ledgy for their equity management and investor relations"
+msgstr ""
+
 #: src/pages/features/investors.jsx:60
 msgid "to keep track of changes, including documents"
 msgstr "um Änderungen im Auge zu behalten"
@@ -1487,10 +1499,6 @@ msgstr "um bei deinen Investitionen auf dem Laufenden zu bleiben"
 #: src/pages/features/modeling.jsx:48
 msgid "when planning your next financing round"
 msgstr "bei der Planung deiner nächsten Finanzierungsrunde"
-
-#: src/pages/index.jsx:73
-msgid "who already use Ledgy for their equity management and investor relations"
-msgstr "die Ledgy bereits für ihre Beteiligungen und Investor Relations nutzen"
 
 #: src/pages/features/collaboration.jsx:60
 msgid "with a single click"

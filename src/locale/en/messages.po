@@ -527,13 +527,17 @@ msgstr "Features"
 msgid "Featuring unlimited share classes, treasury shares, pooled investments, and automatic share numbering"
 msgstr "Featuring unlimited share classes, treasury shares, pooled investments, and automatic share numbering"
 
+#: src/pages/index.jsx:137
+msgid "Finally, I have a reliable overview of all our shares, employee grants, and their legal documents. So much better than the Excel I used before."
+msgstr "Finally, I have a reliable overview of all our shares, employee grants, and their legal documents. So much better than the Excel I used before."
+
 #: src/pages/pricing.jsx:54
 #: src/pages/pricing.jsx:119
 #: src/pages/pricing.jsx:182
 msgid "Financing round modeling"
 msgstr "Financing round modeling"
 
-#: src/pages/index.jsx:96
+#: src/pages/index.jsx:151
 msgid "Find out why they trust us"
 msgstr "Find out why they trust us"
 
@@ -642,6 +646,10 @@ msgstr "Holding confirmations"
 msgid "How we protect your information"
 msgstr "How we protect your information"
 
+#: src/pages/index.jsx:126
+msgid "I needed exactly that. Every founder should use Ledgy’s modeling tools for financing rounds!"
+msgstr "I needed exactly that. Every founder should use Ledgy’s modeling tools for financing rounds!"
+
 #: src/pages/privacy.jsx:83
 msgid "Identity and contact data"
 msgstr "Identity and contact data"
@@ -701,7 +709,7 @@ msgstr "Invite the founder or CFO to claim the company and keep the information 
 msgid "Invite your employees to track their stake and vesting in their Ledgy portfolio"
 msgstr "Invite your employees to track their stake and vesting in their Ledgy portfolio"
 
-#: src/pages/index.jsx:70
+#: src/pages/index.jsx:100
 msgid "Join hundreds of companies"
 msgstr "Join hundreds of companies"
 
@@ -1465,6 +1473,10 @@ msgstr "so you control what others can see and do"
 msgid "stopping the spreadsheet mess"
 msgstr "stopping the spreadsheet mess"
 
+#: src/pages/index.jsx:103
+msgid "that already use Ledgy for their equity management and investor relations"
+msgstr "that already use Ledgy for their equity management and investor relations"
+
 #: src/pages/features/investors.jsx:60
 msgid "to keep track of changes, including documents"
 msgstr "to keep track of changes, including documents"
@@ -1488,10 +1500,6 @@ msgstr "to stay up to date with all your investments"
 #: src/pages/features/modeling.jsx:48
 msgid "when planning your next financing round"
 msgstr "when planning your next financing round"
-
-#: src/pages/index.jsx:73
-msgid "who already use Ledgy for their equity management and investor relations"
-msgstr "who already use Ledgy for their equity management and investor relations"
 
 #: src/pages/features/collaboration.jsx:60
 msgid "with a single click"
