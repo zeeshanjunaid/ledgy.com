@@ -105,18 +105,16 @@ const IndexPage = (props: Props) => (
               </Trans>
             </p>
           </header>
-          {/* <Hr marginX={10} /> */}
+
           <div className="my-8" />
+
           <div className="row align-content-center">
             <Reference img={props.data.viu} name="VIU Eyeware" />
             <Reference img={props.data.frontify} name="Frontify" />
             <Reference img={props.data.cryptofinance} name="Crypto Finance AG" />
             <Reference img={props.data.allthings} name="Allthings Technologies" />
-            {/* <Reference img={props.data.farmy} name="Farmy" />
-            <Reference img={props.data.sherpany} name="Sherpany" />
-            <Reference img={props.data.quitt} name="quitt.ch" />
-            <Reference img={props.data.yamo} name="Yamo" /> */}
           </div>
+
           <Hr marginX={10} />
 
           <div className="row text-center">
@@ -137,8 +135,8 @@ const IndexPage = (props: Props) => (
               img={props.data.sherpany}
               description={
                 <Trans>
-                  I finally have a reliable overview over all our shares and employee grants. I
-                  didn’t have that when we still used Excel.
+                  Finally, I have a reliable overview of all our shares, employee grants, and their
+                  legal documents. So much better than the Excel I used before.
                 </Trans>
               }
             />
