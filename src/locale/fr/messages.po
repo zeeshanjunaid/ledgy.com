@@ -1430,6 +1430,10 @@ msgstr "préférences de liquidation"
 msgid "cap table, stock ledger, share register, startup, modeling, financing round, equity, esop, phantom, option plan, virtual, portfolio, reporting, investors"
 msgstr "cap table, registre d’actions, startup, modélisation, ronde de financement, levée de fonds, actions, esop, plan d’options, virtuel, portefeuille, reporting, investisseurs, plan d’options"
 
+#: src/layouts/index.jsx:94
+msgid "for monthly updates on new features and start-up resources"
+msgstr ""
+
 #: src/pages/pricing.jsx:38
 msgid "free"
 msgstr "gratuit"
