@@ -19,7 +19,7 @@ import 'prism-themes/themes/prism-ghcolors.css';
 
 import { Title, name, appUrl, loadScript, targetBlank, animateTablet, trackSignup } from './utils';
 import { catalogs, langFromPath, langPrefix, getLocale, deprefix } from '../i18n-config';
-import SignupForm from '../components/SignupForm';
+import NewsletterForm from '../components/NewsletterForm';
 
 import '../assets/scss/page.scss';
 
@@ -89,7 +89,7 @@ const Footer = (props: LayoutProps) => (
   <div>
     {showSubscribe(props.location.pathname) && (
       <section className="section bg-pale-secondary">
-        <div className="container text-center signup py-md-7">
+        <div className="container text-center newsletter py-md-7">
           <h2>
             <Trans>Subscribe to the newsletter</Trans>
           </h2>
@@ -98,7 +98,7 @@ const Footer = (props: LayoutProps) => (
             <Trans>for monthly updates on new features and start-up resources</Trans>
           </p>
 
-          <SignupForm {...props} />
+          <NewsletterForm {...props} />
         </div>
       </section>
     )}
