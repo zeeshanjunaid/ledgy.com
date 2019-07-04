@@ -6,7 +6,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Creation-Date: 2018-09-12T18:40:54.619Z\n"
-"PO-Revision-Date: 2019-07-05 12:24+0200\n"
+"PO-Revision-Date: 2019-07-04 16:54+0200\n"
 "Language: de\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: Timo Horstschäfer <timo@ledgy.com>\n"
@@ -49,15 +49,15 @@ msgstr "Für jedes Dokument wird beim Hochladen automatisch ein Zertifikat auf d
 msgid "A stakeholder is any holder of shares, (phantom) options, warrants, or convertibles.<0/>It does not include the company treasury or incentive pools."
 msgstr "Ein Stakeholder ist Halter von Anteilen, Optionen, Phantom-Anteilen, Warrants oder Wandeldarlehen.<0/>Die Firma selbst oder Beteiligungspools werden nicht eingerechnet."
 
-#: src/layouts/index.jsx:119
+#: src/layouts/index.jsx:110
 #: src/pages/about-us.jsx:17
 #: src/pages/about-us.jsx:25
 msgid "About us"
 msgstr "Über uns"
 
-#: src/pages/pricing.jsx:20
-#: src/pages/pricing.jsx:32
-#: src/pages/pricing.jsx:43
+#: src/pages/pricing.jsx:60
+#: src/pages/pricing.jsx:125
+#: src/pages/pricing.jsx:188
 msgid "Access rights"
 msgstr "Zugriffsrechte"
 
@@ -201,9 +201,9 @@ msgstr "Blockchain-Zertifizierung"
 msgid "Blockchain notary"
 msgstr "Blockchain-Notar"
 
-#: src/layouts/index.jsx:65
-#: src/layouts/index.jsx:122
-#: src/layouts/index.jsx:162
+#: src/layouts/index.jsx:64
+#: src/layouts/index.jsx:113
+#: src/layouts/index.jsx:153
 #: src/pages/blog.jsx:61
 msgid "Blog"
 msgstr "Blog"
@@ -306,8 +306,8 @@ msgstr "Kontakt & Impressum"
 msgid "Contact data, usage statistics, and technical data"
 msgstr "Kontaktdaten, Nutzungsstatistiken und technische Daten"
 
-#: src/pages/pricing.jsx:156
-#: src/pages/pricing.jsx:158
+#: src/pages/pricing.jsx:165
+#: src/pages/pricing.jsx:219
 msgid "Contact us"
 msgstr "Kontaktiere uns"
 
@@ -388,9 +388,9 @@ msgstr "Dokumentverknüpfungen"
 msgid "Document management"
 msgstr "Dokumenteverwaltung"
 
-#: src/pages/pricing.jsx:21
-#: src/pages/pricing.jsx:33
-#: src/pages/pricing.jsx:44
+#: src/pages/pricing.jsx:66
+#: src/pages/pricing.jsx:131
+#: src/pages/pricing.jsx:194
 msgid "Document storage"
 msgstr "Dokumentenablage"
 
@@ -507,8 +507,8 @@ msgstr "Exit-Modellierung"
 msgid "FAQ"
 msgstr "FAQ"
 
-#: src/layouts/index.jsx:59
-#: src/layouts/index.jsx:190
+#: src/layouts/index.jsx:58
+#: src/layouts/index.jsx:181
 #: src/pages/features/captable.jsx:21
 #: src/pages/features/collaboration.jsx:21
 #: src/pages/features/esop.jsx:16
@@ -633,7 +633,7 @@ msgstr "Besitzbestätigung"
 
 #: src/pages/features/collaboration.jsx:59
 #: src/pages/features/collaboration.jsx:169
-#: src/pages/pricing.jsx:22
+#: src/pages/pricing.jsx:72
 msgid "Holding confirmations"
 msgstr "Besitzbestätigungen"
 
@@ -886,7 +886,7 @@ msgstr "Gepoolte Investments"
 
 #: src/pages/features/captable.jsx:47
 #: src/pages/features/captable.jsx:117
-#: src/pages/pricing.jsx:23
+#: src/pages/pricing.jsx:75
 msgid "Pooled investments"
 msgstr "Gepoolte Investments"
 
@@ -900,10 +900,14 @@ msgstr "Gepoolte Investitionen sind in vielen Ländern üblich. Ledgy hilft dir,
 msgid "Portfolio history"
 msgstr "Portfolio-Historie"
 
-#: src/layouts/index.jsx:62
-#: src/layouts/index.jsx:208
-#: src/pages/pricing.jsx:121
-#: src/pages/pricing.jsx:130
+#: src/pages/pricing.jsx:98
+msgid "Premium"
+msgstr "Premium"
+
+#: src/layouts/index.jsx:61
+#: src/layouts/index.jsx:199
+#: src/pages/pricing.jsx:15
+#: src/pages/pricing.jsx:24
 msgid "Pricing"
 msgstr "Preise"
 
@@ -911,7 +915,7 @@ msgstr "Preise"
 msgid "Priority support"
 msgstr "Prioritätssupport"
 
-#: src/layouts/index.jsx:128
+#: src/layouts/index.jsx:119
 #: src/pages/privacy.jsx:21
 #: src/pages/privacy.jsx:29
 msgid "Privacy"
@@ -1042,7 +1046,7 @@ msgstr "Sicherer Datenraum"
 msgid "Secure data room, audit trail and read-only access for investors; save costly due diligence tools."
 msgstr "Sicherer Data Room, Audit-Trail und Lesezugriff für Investoren sparen dir teure Due-Diligence Tools."
 
-#: src/layouts/index.jsx:125
+#: src/layouts/index.jsx:116
 #: src/pages/privacy.jsx:109
 #: src/pages/security.jsx:25
 #: src/pages/security.jsx:33
@@ -1279,7 +1283,11 @@ msgstr "Vertraue deinem Cap Table"
 msgid "Try 30 days free"
 msgstr "30 Tage gratis testen"
 
-#: src/pages/pricing.jsx:25
+#: src/layouts/index.jsx:89
+msgid "Try Ledgy now for free"
+msgstr "Jetzt kostenlos ausprobieren"
+
+#: src/pages/pricing.jsx:81
 #: src/pages/security.jsx:92
 msgid "Two-factor authentication"
 msgstr "2-Faktor-Authentisierung"

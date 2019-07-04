@@ -50,15 +50,15 @@ msgstr "Un certificat de chaque document est automatiquement stocké sur la bitc
 msgid "A stakeholder is any holder of shares, (phantom) options, warrants, or convertibles.<0/>It does not include the company treasury or incentive pools."
 msgstr "Un stakeholder est tout détenteur d’actions, d’options (virtuelles), warrants ou de billets convertibles.<0/>Il n’inclut pas la société elle-même ni les pools d’options."
 
-#: src/layouts/index.jsx:119
+#: src/layouts/index.jsx:110
 #: src/pages/about-us.jsx:17
 #: src/pages/about-us.jsx:25
 msgid "About us"
 msgstr "À propos de nous"
 
-#: src/pages/pricing.jsx:20
-#: src/pages/pricing.jsx:32
-#: src/pages/pricing.jsx:43
+#: src/pages/pricing.jsx:60
+#: src/pages/pricing.jsx:125
+#: src/pages/pricing.jsx:188
 msgid "Access rights"
 msgstr "Droits d’accès"
 
@@ -103,10 +103,6 @@ msgstr "Les fonctions Premium"
 msgid "All data is stored at an <0>independent provider</0> in France"
 msgstr "Toutes les données sont stockées chez un prestataire <0>indépendant </0> en France"
 
-#: src/pages/pricing.jsx:29
-msgid "All standard features"
-msgstr "Les fonctions standard"
-
 #: src/components/Feature.jsx:89
 #: src/pages/features.jsx:23
 msgid "All you need in one place"
@@ -125,7 +121,7 @@ msgid "Analyze it by stakeholder, share class, stakeholder group and view it wit
 msgstr "Analyse-le par actionnaire, catégorie d’actions, groupe d’actionnaires et visualise-le avec toutes les actions en circulation ou diluées"
 
 #: src/pages/features/esop.jsx:92
-#: src/pages/pricing.jsx:30
+#: src/pages/pricing.jsx:115
 msgid "Any vesting schedule"
 msgstr "Tout calendrier de vesting"
 
@@ -202,9 +198,9 @@ msgstr "Certification Blockchain"
 msgid "Blockchain notary"
 msgstr "Notaire Blockchain"
 
-#: src/layouts/index.jsx:65
-#: src/layouts/index.jsx:122
-#: src/layouts/index.jsx:162
+#: src/layouts/index.jsx:64
+#: src/layouts/index.jsx:113
+#: src/layouts/index.jsx:153
 #: src/pages/blog.jsx:61
 msgid "Blog"
 msgstr "Blog"
@@ -307,8 +303,8 @@ msgstr "Contact & Mentions légales"
 msgid "Contact data, usage statistics, and technical data"
 msgstr "Données de contact, statistiques d’utilisation et données techniques"
 
-#: src/pages/pricing.jsx:156
-#: src/pages/pricing.jsx:158
+#: src/pages/pricing.jsx:165
+#: src/pages/pricing.jsx:219
 msgid "Contact us"
 msgstr "Contactez-nous"
 
@@ -389,9 +385,9 @@ msgstr "Liens aux documents"
 msgid "Document management"
 msgstr "Gestion des documents"
 
-#: src/pages/pricing.jsx:21
-#: src/pages/pricing.jsx:33
-#: src/pages/pricing.jsx:44
+#: src/pages/pricing.jsx:66
+#: src/pages/pricing.jsx:131
+#: src/pages/pricing.jsx:194
 msgid "Document storage"
 msgstr "Stockage des documents"
 
@@ -508,8 +504,8 @@ msgstr "Modélisation de stratégie de sortie"
 msgid "FAQ"
 msgstr "FAQ"
 
-#: src/layouts/index.jsx:59
-#: src/layouts/index.jsx:190
+#: src/layouts/index.jsx:58
+#: src/layouts/index.jsx:181
 #: src/pages/features/captable.jsx:21
 #: src/pages/features/collaboration.jsx:21
 #: src/pages/features/esop.jsx:16
@@ -634,7 +630,7 @@ msgstr "Confirmation de possession"
 
 #: src/pages/features/collaboration.jsx:59
 #: src/pages/features/collaboration.jsx:169
-#: src/pages/pricing.jsx:22
+#: src/pages/pricing.jsx:72
 msgid "Holding confirmations"
 msgstr "Confirmations de possession"
 
@@ -709,15 +705,7 @@ msgstr "Invite le fondateur ou le directeur financier au compte de l’entrepris
 msgid "Invite your employees to track their stake and vesting in their Ledgy portfolio"
 msgstr "Invite tes employés à suivre leur part et leur vesting dans leur portefeuille Ledgy"
 
-<<<<<<< HEAD
 #: src/pages/index.jsx:136
-=======
-#: src/layouts/team.jsx:100
-msgid "Jahlela has a background in cognitive neuroscience, graduated from UC Berkeley, and founded a few startups before switching to full-time software engineering"
-msgstr "Jahlela a une formation en neurosciences cognitives, est diplômée de l’Université de Berkeley et a fondé quelques start-ups avant de passer au génie logiciel à plein temps"
-
-#: src/pages/index.jsx:104
->>>>>>> 2b6a022... add translation
 msgid "Join hundreds of companies"
 msgstr "Rejoins des centaines d’entreprises"
 
@@ -801,19 +789,11 @@ msgstr "Préférences de liquidation"
 msgid "Log In"
 msgstr "Connexion"
 
-<<<<<<< HEAD
 #: src/pages/index.jsx:23
 msgid "Lost track of who owns how many shares in your startup? Let Ledgy deal with it."
 msgstr "Perdu la vue d’ensemble de qui possède combien d'actions dans ta startup? Laisse Ledgy s'en occuper."
 
 #: src/pages/about-us.jsx:189
-=======
-#: src/layouts/team.jsx:113
-msgid "Luna is a model of the Saturn V rocket, which has been to space 13 times, and holds the record for largest payload to low Earth orbit. She's still under construction - <0>Ready to help?</0>"
-msgstr "Luna est un modèle de la fusée Saturn V, qui a été dans l'espace 13 fois, et détient le record de la plus grande charge utile en orbite terrestre basse. Elle est toujours en construction - <0>Prêt à aider?</0>"
-
-#: src/pages/about-us.jsx:192
->>>>>>> 2b6a022... add translation
 msgid "M&A and private equity lawyer with a focus on start-up legal advise, Smartuplaw.ch"
 msgstr "Avocate en M&A et private equity, spécialisée dans le conseil juridique aux startups, Smartuplaw.ch"
 
@@ -903,7 +883,7 @@ msgstr "Investissement en fond commun"
 
 #: src/pages/features/captable.jsx:47
 #: src/pages/features/captable.jsx:117
-#: src/pages/pricing.jsx:23
+#: src/pages/pricing.jsx:75
 msgid "Pooled investments"
 msgstr "Investissement en fond commun"
 
@@ -917,10 +897,14 @@ msgstr "Les placements collectifs en pool sont courants dans de nombreux pays, L
 msgid "Portfolio history"
 msgstr "Historique du portefeuille"
 
-#: src/layouts/index.jsx:62
-#: src/layouts/index.jsx:208
-#: src/pages/pricing.jsx:121
-#: src/pages/pricing.jsx:130
+#: src/pages/pricing.jsx:98
+msgid "Premium"
+msgstr "Premium"
+
+#: src/layouts/index.jsx:61
+#: src/layouts/index.jsx:199
+#: src/pages/pricing.jsx:15
+#: src/pages/pricing.jsx:24
 msgid "Pricing"
 msgstr "Tarifs"
 
@@ -928,7 +912,7 @@ msgstr "Tarifs"
 msgid "Priority support"
 msgstr "Support prioritaire"
 
-#: src/layouts/index.jsx:128
+#: src/layouts/index.jsx:119
 #: src/pages/privacy.jsx:21
 #: src/pages/privacy.jsx:29
 msgid "Privacy"
@@ -1059,7 +1043,7 @@ msgstr "Data room sécurisée"
 msgid "Secure data room, audit trail and read-only access for investors; save costly due diligence tools."
 msgstr "Data room sécurisée, piste d’audits et accès en lecture seule pour les investisseurs; économise sur les outils coûteux de diligence raisonnable."
 
-#: src/layouts/index.jsx:125
+#: src/layouts/index.jsx:116
 #: src/pages/privacy.jsx:109
 #: src/pages/security.jsx:25
 #: src/pages/security.jsx:33
@@ -1210,13 +1194,8 @@ msgstr "Conditions d’utilisation"
 msgid "The Ledgy Blog"
 msgstr "Le Blog Ledgy"
 
-<<<<<<< HEAD
 #: src/layouts/index.jsx:386
 #: src/pages/index.jsx:16
-=======
-#: src/layouts/index.jsx:389
-#: src/pages/index.jsx:19
->>>>>>> 2b6a022... add translation
 msgid "The New Standard in Equity Management"
 msgstr "Le nouveau standard en gestion d’actions"
 
@@ -1301,7 +1280,11 @@ msgstr "Fais confiance à ton cap table"
 msgid "Try 30 days free"
 msgstr "30 jours gratuits"
 
-#: src/pages/pricing.jsx:25
+#: src/layouts/index.jsx:89
+msgid "Try Ledgy now for free"
+msgstr "Essaye Ledgy maintenant gratuitement"
+
+#: src/pages/pricing.jsx:81
 #: src/pages/security.jsx:92
 msgid "Two-factor authentication"
 msgstr "Authentification à deux facteurs"
