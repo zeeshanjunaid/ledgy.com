@@ -72,7 +72,7 @@ const PricingColumn = (props: {
   detail?: React.Element,
   enterprise?: boolean
 }) => (
-  <div className="col-lg-6 col-xl-4">
+  <div className="col-lg-4">
     <div
       className={`pricing-3 border rounded pb-4 ${
         props.popular ? 'popular, border, border-success, shadow' : ''
@@ -85,9 +85,11 @@ const PricingColumn = (props: {
       )}
       <div className="d-flex flex-column justify-content-between h-100">
         <div>
-          <h3>{props.name}</h3>
-          <h5>{props.price}</h5>
-          <Detail>{props.detail ? props.detail : <>&nbsp;</>}</Detail>
+          <div className="pricing-top">
+            <h3>{props.name}</h3>
+            <h5>{props.price}</h5>
+            <Detail>{props.detail ? props.detail : <>&nbsp;</>}</Detail>
+          </div>
           <ul className="text-left mt-6 mb-0">
             <PlanFeatures features={props.plan} />
           </ul>

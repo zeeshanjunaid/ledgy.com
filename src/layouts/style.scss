@@ -113,18 +113,29 @@ h1 {
 }
 .pricing-3 {
   @include media-breakpoint-up(lg) {
+    height: 1210px; 
+  }
+  @include media-breakpoint-up(xl) {
     height: 840px; 
-  }
-  h6 {
-    height: 2rem;
-  }
-  h4 {
-    height: 4.5rem;
   }
   li {
     position: relative;
-    height: 3em;
     line-height: 1.2;
+    height: 3em;
+    @include media-breakpoint-up(lg) {
+      height: 5em;
+    }
+    @include media-breakpoint-up(xl) {
+      height: 3em;
+    }
+  }
+  .pricing-top {
+    @include media-breakpoint-up(lg) {
+      height: 150px; 
+    }
+    @include media-breakpoint-up(xl) {
+      height: unset; 
+    }
   }
 }
 
