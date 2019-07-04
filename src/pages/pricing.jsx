@@ -82,7 +82,11 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   </Li>
                 </ul>
                 <div className="text-center mb-3">
-                  <a href="#try" className="btn btn-round btn-xl btn-outline-primary">
+                  <a
+                    href={`${appUrl}/signup`}
+                    onClick={trackSignup}
+                    className="btn btn-round btn-xl btn-outline-primary"
+                  >
                     <Trans>Get started</Trans>
                   </a>
                 </div>
