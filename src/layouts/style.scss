@@ -112,6 +112,9 @@ h1 {
   margin-bottom: 0;
 }
 .pricing-3 {
+  @include media-breakpoint-up(lg) {
+    height: 840px; 
+  }
   h6 {
     height: 2rem;
   }
