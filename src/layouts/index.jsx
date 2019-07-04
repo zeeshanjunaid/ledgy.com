@@ -17,7 +17,7 @@ import 'typeface-work-sans'; // eslint-disable-line import/extensions
 import 'katex/dist/katex.min.css';
 import 'prism-themes/themes/prism-ghcolors.css';
 
-import { Title, name, appUrl, loadScript, targetBlank, animateTablet } from './utils';
+import { Title, name, appUrl, loadScript, targetBlank, animateTablet, trackSignup } from './utils';
 import { catalogs, langFromPath, langPrefix, getLocale, deprefix } from '../i18n-config';
 import SignupForm from '../components/SignupForm';
 
@@ -73,7 +73,11 @@ const Nav = (props: LayoutProps) => (
         <a className="btn btn-round btn-outline-light ml-lg-4 mr-2" href={`${appUrl}/login`}>
           <Trans>Log In</Trans>
         </a>
-        <a className="btn btn-round btn-light ml-lg-0 mr-2" href={`${appUrl}/signup`}>
+        <a
+          className="btn btn-round btn-light ml-lg-0 mr-2"
+          href={`${appUrl}/signup`}
+          onClick={trackSignup}
+        >
           <Trans>Sign up</Trans>
         </a>
       </div>
