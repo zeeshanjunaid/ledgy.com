@@ -70,14 +70,12 @@ const Nav = (props: LayoutProps) => (
       </section>
 
       <div className="navbar-right">
-        <a className="btn btn-round btn-outline-light ml-lg-4 mr-2" href={appUrl}>
+        <a className="btn btn-round btn-outline-light ml-lg-4 mr-2" href={`${appUrl}/login`}>
           <Trans>Log In</Trans>
         </a>
-        {showSubscribe(props.location.pathname) && (
-          <a className="btn btn-round btn-light ml-lg-0 mr-2" href="#subscribe">
-            <Trans>Subscribe</Trans>
-          </a>
-        )}
+        <a className="btn btn-round btn-light ml-lg-0 mr-2" href={`${appUrl}/signup`}>
+          <Trans>Sign up</Trans>
+        </a>
       </div>
     </div>
   </nav>
@@ -86,14 +84,14 @@ const Nav = (props: LayoutProps) => (
 const Footer = (props: LayoutProps) => (
   <div>
     {showSubscribe(props.location.pathname) && (
-      <section className="section bg-pale-secondary" id="subscribe">
+      <section className="section bg-pale-secondary">
         <div className="container text-center signup py-md-7">
           <h2>
-            <Trans>Subscribe to our newsletter</Trans>
+            <Trans>Subscribe to the newsletter</Trans>
           </h2>
 
           <p className="text-muted">
-            <Trans>and stay up-to-date with everything your start-up needs</Trans>
+            <Trans>to get monthly updates about new features and start-up resources</Trans>
           </p>
 
           <SignupForm {...props} />
