@@ -106,12 +106,12 @@ export const getWholeTeam = (props: Props): { [string]: AuthorProps } => ({
     linkedIn: 'https://www.linkedin.com/in/jahlelahasle',
     mail: 'jahlela@ledgy.com'
   },
-  stella: {
-    name: 'Stella',
+  luna: {
+    name: 'Luna',
     role: 'Rocket & Trailblazer',
     description: (
       <Trans>
-        Stella is a model of the Saturn V rocket, which has been to space 13 times, and holds the
+        Luna is a model of the Saturn V rocket, which has been to space 13 times, and holds the
         record for largest payload to low Earth orbit. She's still under construction -{' '}
         <a href={`${props.prefix}/jobs/`} {...targetBlank}>
           Ready to help?
@@ -161,7 +161,7 @@ export const TeamFragment = graphql`
         ...GatsbyImageSharpFluid
       }
     }
-    stella: imageSharp(fluid: { originalName: { regex: "/stella.jpg/" } }) {
+    luna: imageSharp(fluid: { originalName: { regex: "/luna.jpg/" } }) {
       fluid(maxWidth: 245, maxHeight: 245) {
         ...GatsbyImageSharpFluid
       }
