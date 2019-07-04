@@ -4,7 +4,7 @@ msgstr ""
 "Mime-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.2.3\n"
 "Language: fr\n"
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
@@ -502,11 +502,15 @@ msgstr "Fonctionalités"
 msgid "Featuring unlimited share classes, treasury shares, pooled investments, and automatic share numbering"
 msgstr "Avec un nombre illimité de catégories d’actions, d’actions autodétenues, de placements collectifs et de numérotation automatique des actions"
 
+#: src/pages/index.jsx:137
+msgid "Finally, I have a reliable overview of all our shares, employee grants, and their legal documents. So much better than the Excel I used before."
+msgstr "Enfin, j‘ai une vue d‘ensemble fiable de toutes nos actions, des attributions aux employés et de leurs documents juridiques. Tellement mieux que l‘Excel que j‘utilisais avant."
+
 #: src/pages/pricing.jsx:54 src/pages/pricing.jsx:119 src/pages/pricing.jsx:182
 msgid "Financing round modeling"
 msgstr "Modélisation"
 
-#: src/pages/index.jsx:96
+#: src/pages/index.jsx:151
 msgid "Find out why they trust us"
 msgstr "Découvre pourquoi ils nous font confiance"
 
@@ -613,6 +617,10 @@ msgstr "Confirmations de possession"
 msgid "How we protect your information"
 msgstr "Comment nous protégeons tes données personnelles"
 
+#: src/pages/index.jsx:126
+msgid "I needed exactly that. Every founder should use Ledgy’s modeling tools for financing rounds!"
+msgstr "C‘est exactement ce dont j‘avais besoin. Tous les fondateurs devraient utiliser les outils de modélisation de Ledgy pour leurs levées de fonds!"
+
 #: src/pages/privacy.jsx:83
 msgid "Identity and contact data"
 msgstr "Identité et coordonnées"
@@ -670,7 +678,7 @@ msgstr "Invite le fondateur ou le directeur financier au compte de l’entrepris
 msgid "Invite your employees to track their stake and vesting in their Ledgy portfolio"
 msgstr "Invite tes employés à suivre leur part et leur vesting dans leur portefeuille Ledgy"
 
-#: src/pages/index.jsx:70
+#: src/pages/index.jsx:100
 msgid "Join hundreds of companies"
 msgstr "Rejoins des centaines d’entreprises"
 
@@ -1413,6 +1421,10 @@ msgstr "pour que tu puisse contrôler ce que les autres peuvent voir et faire"
 msgid "stopping the spreadsheet mess"
 msgstr "l’arrêt du désordre des feuilles de calcul"
 
+#: src/pages/index.jsx:103
+msgid "that already use Ledgy for their equity management and investor relations"
+msgstr "qui utilisent déjà Ledgy pour la gestion de leurs actions et leurs relations avec les investisseurs"
+
 #: src/pages/features/investors.jsx:60
 msgid "to keep track of changes, including documents"
 msgstr "pour suivre les changements, y compris les documents"
@@ -1436,10 +1448,6 @@ msgstr "afin de rester au courant de tous tes investissements"
 #: src/pages/features/modeling.jsx:48
 msgid "when planning your next financing round"
 msgstr "lors de la planification de ta prochaine ronde de financement"
-
-#: src/pages/index.jsx:73
-msgid "who already use Ledgy for their equity management and investor relations"
-msgstr "qui utilisent déjà Ledgy pour la gestion de leurs actions et leurs relations avec les investisseurs"
 
 #: src/pages/features/collaboration.jsx:60
 msgid "with a single click"

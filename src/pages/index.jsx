@@ -51,9 +51,38 @@ const Header = ({ i18n, data }: Props) => {
   );
 };
 
+const Testimonial = ({
+  img,
+  name,
+  description,
+  col
+}: {
+  img: Object,
+  name: string,
+  description: React.Element,
+  col: number
+}) => (
+  <div
+    className={`testimonial col-lg-${col} d-flex flex-column justify-content-start align-items-center`}
+  >
+    <div
+      className="d-flex align-items-center justify-content-center mt-4"
+      style={{ minHeight: '80px' }}
+    >
+      <Img {...img} alt={name} />
+    </div>
+    <div className="d-flex flex-column justify-content-between mt-4" style={{ height: '150px' }}>
+      <div className="testimonial-description">{description}</div>
+      <small className="text-light">{name}</small>
+    </div>
+  </div>
+);
+
 const Reference = ({ img, name }: { img: Object, name: string }) => (
-  <div style={{ width: '200px' }} className="my-4">
-    <Img {...img} alt={name} />
+  <div className="col-6 col-lg-3 pb-6 pb-lg-0">
+    <div className="d-flex justify-content-center">
+      <Img {...img} alt={name} />
+    </div>
   </div>
 );
 
@@ -64,30 +93,56 @@ const IndexPage = (props: Props) => (
       <section className="section py-7" id="references">
         <FeatureLinks {...props} page="index" />
         <div className="container">
-          <hr className="my-7" />
+          <Hr />
+
           <header className="section-header mb-3">
             <h2 className="my-4">
               <Trans>Join hundreds of companies</Trans>
             </h2>
             <p>
-              <Trans className="mb-4">
-                who already use Ledgy for their equity management and investor relations
+              <Trans>
+                that already use Ledgy for their equity management and investor relations
               </Trans>
             </p>
           </header>
 
-          <div className="partner mx-auto py-4">
+          <div className="my-8" />
+
+          <div className="row align-content-center">
             <Reference img={props.data.viu} name="VIU Eyeware" />
-            <Reference img={props.data.farmy} name="Farmy" />
-            <Reference img={props.data.sherpany} name="Sherpany" />
             <Reference img={props.data.frontify} name="Frontify" />
             <Reference img={props.data.cryptofinance} name="Crypto Finance AG" />
-            <Reference img={props.data.quitt} name="quitt.ch" />
-            <Reference img={props.data.yamo} name="Yamo" />
             <Reference img={props.data.allthings} name="Allthings Technologies" />
           </div>
 
-          <div className="mx-auto text-center pb-5">
+          <Hr marginX={10} />
+
+          <div className="row text-center">
+            <Testimonial
+              col={6}
+              name="Tobias Gunzenhauser, CEO, Yamo"
+              img={props.data.yamo}
+              description={
+                <Trans>
+                  I needed exactly that. Every founder should use Ledgy’s modeling tools for
+                  financing rounds!
+                </Trans>
+              }
+            />
+            <Testimonial
+              col={6}
+              name="Christian Menzi, Sherpany"
+              img={props.data.sherpany}
+              description={
+                <Trans>
+                  Finally, I have a reliable overview of all our shares, employee grants, and their
+                  legal documents. So much better than the Excel I used before.
+                </Trans>
+              }
+            />
+          </div>
+
+          <div className="mx-auto text-center pt-8 pb-4">
             <Link
               href
               to={`${props.prefix}/features/`}
@@ -118,14 +173,8 @@ export const pageQuery = graphql`
         ...GatsbyImageSharpFluid_noBase64
       }
     }
-
     viu: imageSharp(fluid: { originalName: { regex: "/viu/" } }) {
       fixed(width: 120) {
-        ...GatsbyImageSharpFixed
-      }
-    }
-    quitt: imageSharp(fluid: { originalName: { regex: "/quitt/" } }) {
-      fixed(width: 80) {
         ...GatsbyImageSharpFixed
       }
     }
@@ -144,18 +193,8 @@ export const pageQuery = graphql`
         ...GatsbyImageSharpFixed
       }
     }
-    bexio: imageSharp(fluid: { originalName: { regex: "/bexio/" } }) {
-      fixed(width: 110) {
-        ...GatsbyImageSharpFixed
-      }
-    }
     allthings: imageSharp(fluid: { originalName: { regex: "/allthings/" } }) {
       fixed(width: 150) {
-        ...GatsbyImageSharpFixed
-      }
-    }
-    farmy: imageSharp(fluid: { originalName: { regex: "/farmy/" } }) {
-      fixed(width: 130) {
         ...GatsbyImageSharpFixed
       }
     }
