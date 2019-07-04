@@ -2,7 +2,7 @@
 
 import React, { type Node } from 'react';
 import { Trans } from '@lingui/react';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import { targetBlank } from './utils';
 
 export type AuthorProps = {|
@@ -112,7 +112,7 @@ export const getWholeTeam = (props: Props): { [string]: AuthorProps } => ({
     description: (
       <Trans>
         Luna is a model of the Saturn V rocket, which has been to space 13 times, and holds the
-        record for largest payload to low Earth orbit. She's still under construction -{' '}
+        record for largest payload to low Earth orbit. She‘s still under construction -{' '}
         <a href={`${props.prefix}/jobs/`} {...targetBlank}>
           Ready to help?
         </a>
