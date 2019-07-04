@@ -91,7 +91,7 @@ const Footer = (props: LayoutProps) => (
           </h2>
 
           <p className="text-muted">
-            <Trans>to get monthly updates about new features and start-up resources</Trans>
+            <Trans>for monthly updates on new features and start-up resources</Trans>
           </p>
 
           <SignupForm {...props} />
