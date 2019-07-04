@@ -503,7 +503,7 @@ msgstr "Mit beliebig vielen Anteilsklassen, Treasury Anteilen, gepoolten Investi
 
 #: src/pages/index.jsx:137
 msgid "Finally, I have a reliable overview of all our shares, employee grants, and their legal documents. So much better than the Excel I used before."
-msgstr "Endlich habe ich eine zuverlässige Übersicht über all unsere Aktienanteile, Mitarbeiterdarlehen und die rechtlichen Dokumente dazu. Das ist so viel besser als Excel, das ich früher benutzte."
+msgstr "Endlich habe ich eine zuverlässige Übersicht über all unsere Aktien, Mitarbeiterdarlehen und die rechtlichen Dokumente dazu. Das ist so viel besser als Excel, das ich früher benutzt habe."
 
 #: src/pages/pricing.jsx:54 src/pages/pricing.jsx:119 src/pages/pricing.jsx:182
 msgid "Financing round modeling"
@@ -618,7 +618,7 @@ msgstr "Wie wir deine Informationen schützen"
 
 #: src/pages/index.jsx:126
 msgid "I needed exactly that. Every founder should use Ledgy’s modeling tools for financing rounds!"
-msgstr "Genau das hat mir gefehlt. Jeder Gründer sollte Ledgy’s Modellierungs Werkzeug für Finanzierungsrunden benutzen!"
+msgstr "Genau das hat mir gefehlt. Jeder Gründer sollte Ledgys Modellierungswerkzeug für Finanzierungsrunden benutzen!"
 
 #: src/pages/privacy.jsx:83
 msgid "Identity and contact data"

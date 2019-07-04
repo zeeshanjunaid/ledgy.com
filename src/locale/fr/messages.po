@@ -504,7 +504,7 @@ msgstr "Avec un nombre illimité de catégories d’actions, d’actions autodé
 
 #: src/pages/index.jsx:137
 msgid "Finally, I have a reliable overview of all our shares, employee grants, and their legal documents. So much better than the Excel I used before."
-msgstr "Enfin, j'ai une vue d'ensemble fiable de toutes nos actions, des attributions aux employés et de leurs documents juridiques. Tellement mieux que l'Excel que j'utilisais avant."
+msgstr "Enfin, j‘ai une vue d‘ensemble fiable de toutes nos actions, des attributions aux employés et de leurs documents juridiques. Tellement mieux que l‘Excel que j‘utilisais avant."
 
 #: src/pages/pricing.jsx:54 src/pages/pricing.jsx:119 src/pages/pricing.jsx:182
 msgid "Financing round modeling"
@@ -619,7 +619,7 @@ msgstr "Comment nous protégeons tes données personnelles"
 
 #: src/pages/index.jsx:126
 msgid "I needed exactly that. Every founder should use Ledgy’s modeling tools for financing rounds!"
-msgstr "C'est exactement ce dont j'avais besoin. Tous les fondateurs devraient utiliser les outils de modélisation de Ledgy pour leurs levées de fonds!"
+msgstr "C‘est exactement ce dont j‘avais besoin. Tous les fondateurs devraient utiliser les outils de modélisation de Ledgy pour leurs levées de fonds!"
 
 #: src/pages/privacy.jsx:83
 msgid "Identity and contact data"
