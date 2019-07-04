@@ -7,7 +7,7 @@ import Img from 'gatsby-image';
 
 import { FeatureLinks } from '../components/Feature';
 import SecurityRow from '../components/SecurityRow';
-import { demoUrl, targetBlank, Hr } from '../layouts/utils';
+import { demoUrl, targetBlank, Hr, appUrl, trackSignup } from '../layouts/utils';
 
 const Header = ({ i18n, data }: Props) => {
   return (
@@ -36,7 +36,11 @@ const Header = ({ i18n, data }: Props) => {
             >
               <Trans>See the Demo</Trans>
             </a>
-            <a className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-light" href="#try">
+            <a
+              className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-light"
+              href={`${appUrl}/signup`}
+              onClick={trackSignup}
+            >
               <Trans>Get Started Free</Trans>
             </a>
           </div>

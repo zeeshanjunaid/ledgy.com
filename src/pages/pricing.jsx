@@ -4,7 +4,7 @@ import * as React from 'react';
 import { withI18n, Trans } from '@lingui/react';
 import { Link } from 'gatsby';
 
-import { Title, Li, ChevronRight } from '../layouts/utils';
+import { Title, Li, ChevronRight, appUrl, trackSignup } from '../layouts/utils';
 
 const Detail = props => <small className="d-block text-light mt-1" {...props} />;
 const Soon = () => <small className="badge badge-pill badge-primary fs-10">Coming soon</small>;
@@ -148,7 +148,11 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   <li>&nbsp;</li>
                 </ul>
                 <div className="text-center mb-3">
-                  <a href="#try" className="btn btn-round btn-xl btn-primary">
+                  <a
+                    href={`${appUrl}/signup`}
+                    onClick={trackSignup}
+                    className="btn btn-round btn-xl btn-primary"
+                  >
                     <Trans>Try 30 days free</Trans>
                   </a>
                 </div>
