@@ -709,7 +709,15 @@ msgstr "Invite le fondateur ou le directeur financier au compte de l’entrepris
 msgid "Invite your employees to track their stake and vesting in their Ledgy portfolio"
 msgstr "Invite tes employés à suivre leur part et leur vesting dans leur portefeuille Ledgy"
 
+<<<<<<< HEAD
 #: src/pages/index.jsx:136
+=======
+#: src/layouts/team.jsx:100
+msgid "Jahlela has a background in cognitive neuroscience, graduated from UC Berkeley, and founded a few startups before switching to full-time software engineering"
+msgstr "Jahlela a une formation en neurosciences cognitives, est diplômée de l’Université de Berkeley et a fondé quelques start-ups avant de passer au génie logiciel à plein temps"
+
+#: src/pages/index.jsx:104
+>>>>>>> 2b6a022... add translation
 msgid "Join hundreds of companies"
 msgstr "Rejoins des centaines d’entreprises"
 
@@ -793,11 +801,19 @@ msgstr "Préférences de liquidation"
 msgid "Log In"
 msgstr "Connexion"
 
+<<<<<<< HEAD
 #: src/pages/index.jsx:23
 msgid "Lost track of who owns how many shares in your startup? Let Ledgy deal with it."
 msgstr "Perdu la vue d’ensemble de qui possède combien d'actions dans ta startup? Laisse Ledgy s'en occuper."
 
 #: src/pages/about-us.jsx:189
+=======
+#: src/layouts/team.jsx:113
+msgid "Luna is a model of the Saturn V rocket, which has been to space 13 times, and holds the record for largest payload to low Earth orbit. She's still under construction - <0>Ready to help?</0>"
+msgstr "Luna est un modèle de la fusée Saturn V, qui a été dans l'espace 13 fois, et détient le record de la plus grande charge utile en orbite terrestre basse. Elle est toujours en construction - <0>Prêt à aider?</0>"
+
+#: src/pages/about-us.jsx:192
+>>>>>>> 2b6a022... add translation
 msgid "M&A and private equity lawyer with a focus on start-up legal advise, Smartuplaw.ch"
 msgstr "Avocate en M&A et private equity, spécialisée dans le conseil juridique aux startups, Smartuplaw.ch"
 
@@ -1129,10 +1145,6 @@ msgstr "Droits d’accès des actionnaires"
 msgid "Stakeholders will only be notified if you explicitly invite them yourself"
 msgstr "Les actionnaires ne seront informées que si tu les invites explicitement"
 
-#: src/layouts/team.jsx:113
-msgid "Stella is a model of the Saturn V rocket, which has been to space 13 times, and holds the record for largest payload to low Earth orbit. She's still under construction - <0>Ready to help?</0>"
-msgstr ""
-
 #: src/pages/security.jsx:79
 msgid "Stored encrypted with the battle-tested <0>bcrypt algorithm</0> at 13 rounds"
 msgstr "Stocké crypté avec l’algorithme de cryptage <0>bcrypt testé</0>"
@@ -1157,7 +1169,7 @@ msgstr "S’inscrire à la newsletter"
 msgid "Successful companies share regular updates with their stakeholders, holding themselves accountable"
 msgstr "Les entreprises qui réussissent partagent régulièrement des mises à jour avec leurs actionnaires"
 
-#: src/layouts/markdown.jsx:76
+#: src/layouts/markdown.jsx:78
 msgid "Suggest changes"
 msgstr "Suggérer des changements"
 
@@ -1198,8 +1210,13 @@ msgstr "Conditions d’utilisation"
 msgid "The Ledgy Blog"
 msgstr "Le Blog Ledgy"
 
+<<<<<<< HEAD
 #: src/layouts/index.jsx:386
 #: src/pages/index.jsx:16
+=======
+#: src/layouts/index.jsx:389
+#: src/pages/index.jsx:19
+>>>>>>> 2b6a022... add translation
 msgid "The New Standard in Equity Management"
 msgstr "Le nouveau standard en gestion d’actions"
 
@@ -1235,7 +1252,7 @@ msgstr "Ils fonctionnent avec des actions numérotées et tu peux même exécute
 msgid "This is a brief summary of the privacy policy. For the details, please read our <0>Privacy Policy</0>."
 msgstr "Voici un bref résumé de la politique de confidentialité. Pour plus de détails, lis notre <0>Politique de confidentialité</0>."
 
-#: src/layouts/markdown.jsx:53
+#: src/layouts/markdown.jsx:55
 msgid "This page is only available in English."
 msgstr "Cette page n’est disponible qu’en anglais."
 

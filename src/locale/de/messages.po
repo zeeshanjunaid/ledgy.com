@@ -1128,10 +1128,6 @@ msgstr "Zugriffsrechte der Stakeholder"
 msgid "Stakeholders will only be notified if you explicitly invite them yourself"
 msgstr "Stakeholder werden nur benachrichtigt, wenn du sie ausdrücklich dazu einlädst"
 
-#: src/layouts/team.jsx:113
-msgid "Stella is a model of the Saturn V rocket, which has been to space 13 times, and holds the record for largest payload to low Earth orbit. She's still under construction - <0>Ready to help?</0>"
-msgstr ""
-
 #: src/pages/security.jsx:79
 msgid "Stored encrypted with the battle-tested <0>bcrypt algorithm</0> at 13 rounds"
 msgstr "Verschlüsselt mit dem bewährten <0>bcrypt-Algorithmus</0> mit 13 Runden"
@@ -1156,7 +1152,7 @@ msgstr "Newsletter abonnieren"
 msgid "Successful companies share regular updates with their stakeholders, holding themselves accountable"
 msgstr "Erfolgreiche Unternehmen teilen regelmäßig Updates mit ihren Stakeholdern"
 
-#: src/layouts/markdown.jsx:76
+#: src/layouts/markdown.jsx:78
 msgid "Suggest changes"
 msgstr "Änderungen vorschlagen"
 
@@ -1234,7 +1230,7 @@ msgstr "Nummerierte Aktien werden unterstützt und du kannst sogar eine Exit-Mod
 msgid "This is a brief summary of the privacy policy. For the details, please read our <0>Privacy Policy</0>."
 msgstr "Dies ist eine kurze Zusammenfassung der Datenschutzerklärung. Für Details lese bitte unsere <0>Datenschutzerklärung</0>."
 
-#: src/layouts/markdown.jsx:53
+#: src/layouts/markdown.jsx:55
 msgid "This page is only available in English."
 msgstr "Diese Seite ist nur auf Englisch verfügbar."
 
