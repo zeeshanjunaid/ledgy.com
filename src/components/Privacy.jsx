@@ -26,6 +26,6 @@ export const PrivacyElement = ({
 );
 PrivacyElement.defaultProps = { body: '', size: '12' };
 
-export const PrivacyRow = ({ children }: { children: React.Element<any> }) => (
+export const PrivacyRow = ({ children }: { children: Array<React.Node> }) => (
   <div className="row gap-y my-4">{children}</div>
 );

@@ -104,7 +104,7 @@ h1 {
     padding: 10px 15px;
   }
 }
-.signup {
+.newsletter {
   max-width: 600px;
 }
 
@@ -112,16 +112,31 @@ h1 {
   margin-bottom: 0;
 }
 .pricing-3 {
-  h6 {
-    height: 2rem;
+  max-width: 380px;
+  @include media-breakpoint-up(lg) {
+    height: 1210px; 
   }
-  h4 {
-    height: 4.5rem;
+  @include media-breakpoint-up(xl) {
+    height: 840px; 
   }
   li {
     position: relative;
-    height: 3em;
     line-height: 1.2;
+    height: 3em;
+    @include media-breakpoint-up(lg) {
+      height: 5em;
+    }
+    @include media-breakpoint-up(xl) {
+      height: 3em;
+    }
+  }
+  .pricing-top {
+    @include media-breakpoint-up(lg) {
+      height: 150px; 
+    }
+    @include media-breakpoint-up(xl) {
+      height: unset; 
+    }
   }
 }
 

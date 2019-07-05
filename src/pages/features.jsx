@@ -149,7 +149,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <Hr />
 
-          <SecurityRow {...props} />
+          <SecurityRow {...props} i18n={i18n} />
         </div>
       </section>
 

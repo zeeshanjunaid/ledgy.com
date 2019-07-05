@@ -17,16 +17,17 @@ import 'typeface-work-sans'; // eslint-disable-line import/extensions
 import 'katex/dist/katex.min.css';
 import 'prism-themes/themes/prism-ghcolors.css';
 
-import { Title, name, appUrl, loadScript, targetBlank, animateTablet } from './utils';
+import { Title, name, appUrl, loadScript, targetBlank, animateTablet, trackSignup } from './utils';
 import { catalogs, langFromPath, langPrefix, getLocale, deprefix } from '../i18n-config';
-import SignupForm from '../components/SignupForm';
+import NewsletterForm from '../components/NewsletterForm';
 
 import '../assets/scss/page.scss';
 
 import logoDefault from '../img/logo_black.png';
 import logoInverse from '../img/logo_white.png';
 
-const hasFooter = (pathname: string) => !pathname.match(/contact/);
+const showSubscribe = (pathname: string) =>
+  !pathname.match(/contact/) && !pathname.match(/subscribed/);
 
 type LayoutProps = {
   ...$Exact<Props>,
@@ -69,11 +70,19 @@ const Nav = (props: LayoutProps) => (
       </section>
 
       <div className="navbar-right">
-        <a className="btn btn-round btn-outline-light ml-lg-4 mr-2" href={appUrl}>
+        <a
+          className="btn btn-round btn-outline-light ml-lg-4 mr-2"
+          href={`${appUrl}/login`}
+          onClick={() => trackSignup('login')}
+        >
           <Trans>Log In</Trans>
         </a>
-        <a className="btn btn-round btn-light ml-lg-0 mr-2" href="#try">
-          <Trans>Sign Up</Trans>
+        <a
+          className="btn btn-round btn-light ml-lg-0 mr-2"
+          href={`${appUrl}/signup`}
+          onClick={trackSignup}
+        >
+          <Trans>Sign up</Trans>
         </a>
       </div>
     </div>
@@ -82,18 +91,18 @@ const Nav = (props: LayoutProps) => (
 
 const Footer = (props: LayoutProps) => (
   <div>
-    {hasFooter(props.location.pathname) && (
-      <section className="section bg-pale-secondary" id="try">
-        <div className="container text-center signup py-md-7">
+    {showSubscribe(props.location.pathname) && (
+      <section className="section bg-pale-secondary">
+        <div className="container text-center newsletter py-md-7">
           <h2>
-            <Trans>Try Ledgy now for free</Trans>
+            <Trans>Subscribe to the newsletter</Trans>
           </h2>
 
           <p className="text-muted">
-            <Trans>No credit card required</Trans>
+            <Trans>for monthly updates on new features and start-up resources</Trans>
           </p>
 
-          <SignupForm {...props} />
+          <NewsletterForm {...props} />
         </div>
       </section>
     )}

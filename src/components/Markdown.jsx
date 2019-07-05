@@ -44,14 +44,13 @@ export const Author = ({ name }: { name: string }) => (
 );
 
 export type ImageProps = {|
-  src: string,
   align: string,
   caption: string,
   size: string,
   img: Object
 |};
 
-export const Image = ({ src, align, caption, size, img, ...props }: ImageProps) => (
+export const Image = ({ align, caption, size, img, ...props }: ImageProps) => (
   <figure
     className={align ? `mx-auto float-md-${align} size-md-small m-6` : 'mx-auto my-6'}
     style={size ? { width: `${size}px` } : {}}
