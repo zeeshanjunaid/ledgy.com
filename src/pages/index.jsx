@@ -18,14 +18,14 @@ const experiments = [
   },
   {
     name: 'lostTrack',
-    title: <Trans>Equity management for startups</Trans>,
+    title: <Trans>Round Modeling. Made Simple.</Trans>,
     subtitle: (
       <Trans>Lost track of who owns how many shares in your startup? Let Ledgy deal with it.</Trans>
     )
   },
   {
     name: 'modelFinancingRound',
-    title: <Trans>Equity management for startups</Trans>,
+    title: <Trans>Round Modeling. Made Simple.</Trans>,
     subtitle: <Trans>Want to model the new financing round for your company? Use Ledgy!</Trans>
   },
   {

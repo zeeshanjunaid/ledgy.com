@@ -489,8 +489,8 @@ msgstr "Les données sur les actions sont trop importantes pour être modifiées
 
 #: src/pages/index.jsx:20
 #: src/pages/index.jsx:27
-msgid "Equity management for startups"
-msgstr "Gestion d’actions pour startups"
+msgid "Round Modeling. Made Simple."
+msgstr "Modélise tes levées de fonds. Simplement."
 
 #: src/pages/pricing.jsx:30
 msgid "Equity plan management"

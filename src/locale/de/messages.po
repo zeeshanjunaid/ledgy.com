@@ -488,8 +488,8 @@ msgstr "Beteiligungsdaten sind zu wichtig, um sie versehentlich in einem Tabelle
 
 #: src/pages/index.jsx:20
 #: src/pages/index.jsx:27
-msgid "Equity management for startups"
-msgstr "Equity Management für Startups"
+msgid "Round Modeling. Made Simple."
+msgstr "Runden-Modellierung. Ganz Einfach."
 
 #: src/pages/pricing.jsx:30
 msgid "Equity plan management"
