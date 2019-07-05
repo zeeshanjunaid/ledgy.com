@@ -7,7 +7,11 @@ import { Link } from 'gatsby';
 import { Title, Li, ChevronRight, appUrl, trackSignup } from '../layouts/utils';
 
 const Detail = props => <small className="d-block text-light mt-1" {...props} />;
-const Soon = () => <small className="badge badge-pill badge-primary fs-10 ml-1">Coming soon</small>;
+const Soon = () => (
+  <small className="badge badge-pill badge-primary fs-10 ml-1">
+    <Trans>Coming soon</Trans>
+  </small>
+);
 
 const standard = [
   [1, <Trans>Cap table management</Trans>, '', true],
