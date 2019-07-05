@@ -9,17 +9,46 @@ import { FeatureLinks } from '../components/Feature';
 import SecurityRow from '../components/SecurityRow';
 import { demoUrl, targetBlank, Hr, appUrl, trackSignup } from '../layouts/utils';
 
+const experiments = [
+  {
+    name: 'master',
+    title: <Trans>The New Standard in Equity Management</Trans>,
+    subtitle: <Trans>Made for startups, great for investors</Trans>
+  },
+  {
+    name: 'lostTrack',
+    title: <Trans>Equity management for startups</Trans>,
+    subtitle: (
+      <Trans>Lost track of who owns how many shares in your startup? Let Ledgy deal with it.</Trans>
+    )
+  },
+  {
+    name: 'modelFinancingRound',
+    title: <Trans>Equity management for startups</Trans>,
+    subtitle: <Trans>Want to model the new financing round for your company? Use Ledgy!</Trans>
+  },
+  {
+    name: 'investorRelations',
+    title: <Trans>Investor relations and equity management for startups</Trans>,
+    subtitle: (
+      <Trans>Share important documents with your investors, advisory board and employees.</Trans>
+    )
+  }
+];
+
 const Header = ({ i18n, data }: Props) => {
+  const selectedExperiment = window.experiment
+    ? experiments.find(v => v.name === window.experiment)
+    : experiments[0];
+
   return (
     <header className="header bg-ledgy home-banner px-1 text-left ">
       <div className="container">
         <div className="row gap-y mt-md-2 pb-4 pb-md-6">
           <div className="col-lg-6">
-            <h1 className="text-white mb-2 mb-sm-3">
-              <Trans>The New Standard in Equity Management</Trans>
-            </h1>
+            <h1 className="text-white mb-2 mb-sm-3">{selectedExperiment.title}</h1>
             <h5 className="text-white font-weight-light pb-4 pb-lg-6 mb-0">
-              <Trans>Made for startups, great for investors</Trans>
+              {selectedExperiment.subtitle}
             </h5>
 
             <div className="text-white pb-5 pb-lg-7 banner-text">

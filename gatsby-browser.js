@@ -6,10 +6,15 @@ exports.onRouteUpdate = () => {
 
 exports.onServiceWorkerUpdateReady = () => window.location.reload(true);
 
+const sample = array => array[Math.floor(Math.random() * array.length)];
+const experiments = ['master', 'modelFinancingRound', 'investorRelations', 'lostTrack'];
+window.experiment = sample(experiments);
+
 if (window.ga) {
   window.ga('require', 'linker');
   window.ga('linker:autoLink', ['app.ledgy.com']);
   window.ga(tracker => {
     window.clientId = tracker.get('clientId');
   });
+  window.ga('set', 'dimension1', window.experiment);
 }

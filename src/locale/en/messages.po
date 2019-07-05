@@ -487,6 +487,11 @@ msgstr "Equity data"
 msgid "Equity data is too important to be accidentally tweaked in a spreadsheet"
 msgstr "Equity data is too important to be accidentally tweaked in a spreadsheet"
 
+#: src/pages/index.jsx:20
+#: src/pages/index.jsx:27
+msgid "Equity management for startups"
+msgstr "Equity management for startups"
+
 #: src/pages/pricing.jsx:30
 msgid "Equity plan management"
 msgstr "Equity plan management"
@@ -523,7 +528,7 @@ msgstr "Features"
 msgid "Featuring unlimited share classes, treasury shares, pooled investments, and automatic share numbering"
 msgstr "Featuring unlimited share classes, treasury shares, pooled investments, and automatic share numbering"
 
-#: src/pages/index.jsx:141
+#: src/pages/index.jsx:170
 msgid "Finally, I have a reliable overview of all our shares, employee grants, and their legal documents. So much better than the Excel I used before."
 msgstr "Finally, I have a reliable overview of all our shares, employee grants, and their legal documents. So much better than the Excel I used before."
 
@@ -533,7 +538,7 @@ msgstr "Finally, I have a reliable overview of all our shares, employee grants, 
 msgid "Financing round modeling"
 msgstr "Financing round modeling"
 
-#: src/pages/index.jsx:155
+#: src/pages/index.jsx:184
 msgid "Find out why they trust us"
 msgstr "Find out why they trust us"
 
@@ -557,7 +562,7 @@ msgstr "Free"
 msgid "GDPR"
 msgstr "GDPR"
 
-#: src/pages/index.jsx:44
+#: src/pages/index.jsx:73
 msgid "Get Started Free"
 msgstr "Get Started Free"
 
@@ -587,11 +592,11 @@ msgstr "Get started in minutes with the copy-paste spreadsheet importer"
 msgid "Get the calculations right"
 msgstr "Get the calculations right"
 
-#: src/pages/index.jsx:26
+#: src/pages/index.jsx:55
 msgid "Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant."
 msgstr "Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant."
 
-#: src/layouts/index.jsx:390
+#: src/layouts/index.jsx:387
 msgid "Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant. Try now for free!"
 msgstr "Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant. Try now for free!"
 
@@ -642,7 +647,7 @@ msgstr "Holding confirmations"
 msgid "How we protect your information"
 msgstr "How we protect your information"
 
-#: src/pages/index.jsx:130
+#: src/pages/index.jsx:159
 msgid "I needed exactly that. Every founder should use Ledgy’s modeling tools for financing rounds!"
 msgstr "I needed exactly that. Every founder should use Ledgy’s modeling tools for financing rounds!"
 
@@ -693,6 +698,10 @@ msgstr "Investor Relations & Portfolio"
 msgid "Investor portfolio"
 msgstr "Investor portfolio"
 
+#: src/pages/index.jsx:32
+msgid "Investor relations and equity management for startups"
+msgstr "Investor relations and equity management for startups"
+
 #: src/layouts/index.jsx:205
 msgid "Investors"
 msgstr "Investors"
@@ -705,7 +714,7 @@ msgstr "Invite the founder or CFO to claim the company and keep the information 
 msgid "Invite your employees to track their stake and vesting in their Ledgy portfolio"
 msgstr "Invite your employees to track their stake and vesting in their Ledgy portfolio"
 
-#: src/pages/index.jsx:104
+#: src/pages/index.jsx:133
 msgid "Join hundreds of companies"
 msgstr "Join hundreds of companies"
 
@@ -789,11 +798,15 @@ msgstr "Liquidation preferences"
 msgid "Log In"
 msgstr "Log In"
 
+#: src/pages/index.jsx:22
+msgid "Lost track of who owns how many shares in your startup? Let Ledgy deal with it."
+msgstr "Lost track of who owns how many shares in your startup? Let Ledgy deal with it."
+
 #: src/pages/about-us.jsx:189
 msgid "M&A and private equity lawyer with a focus on start-up legal advise, Smartuplaw.ch"
 msgstr "M&A and private equity lawyer with a focus on start-up legal advise, Smartuplaw.ch"
 
-#: src/pages/index.jsx:22
+#: src/pages/index.jsx:16
 msgid "Made for startups, great for investors"
 msgstr "Made for startups, great for investors"
 
@@ -1017,7 +1030,7 @@ msgstr "Save on costly due diligence tools"
 msgid "Save time in future due diligence by attaching legal documents to their transactions, making them searchable by the transaction information"
 msgstr "Save time in future due diligence by attaching legal documents to their transactions, making them searchable by the transaction information"
 
-#: src/pages/index.jsx:49
+#: src/pages/index.jsx:78
 msgid "Screenshot of the Ledgy app"
 msgstr "Screenshot of the Ledgy app"
 
@@ -1041,7 +1054,7 @@ msgstr "Security"
 msgid "See how many shares have to be reserved for a fixed percentage employee pool"
 msgstr "See how many shares have to be reserved for a fixed percentage employee pool"
 
-#: src/pages/index.jsx:37
+#: src/pages/index.jsx:66
 msgid "See the Demo"
 msgstr "See the Demo"
 
@@ -1056,6 +1069,10 @@ msgstr "Server call rate limit"
 #: src/pages/features/collaboration.jsx:122
 msgid "Set your company up for future due diligences, saving you hours of work and lawyer costs"
 msgstr "Set your company up for future due diligences, saving you hours of work and lawyer costs"
+
+#: src/pages/index.jsx:34
+msgid "Share important documents with your investors, advisory board and employees."
+msgstr "Share important documents with your investors, advisory board and employees."
 
 #: src/pages/features/captable.jsx:112
 msgid "Share number checking"
@@ -1177,8 +1194,8 @@ msgstr "Terms of Service"
 msgid "The Ledgy Blog"
 msgstr "The Ledgy Blog"
 
-#: src/layouts/index.jsx:389
-#: src/pages/index.jsx:19
+#: src/layouts/index.jsx:386
+#: src/pages/index.jsx:15
 msgid "The New Standard in Equity Management"
 msgstr "The New Standard in Equity Management"
 
@@ -1356,6 +1373,10 @@ msgstr "View the cap table in legal or economic terms"
 msgid "Visualizations help you understand what happens"
 msgstr "Visualizations help you understand what happens"
 
+#: src/pages/index.jsx:28
+msgid "Want to model the new financing round for your company? Use Ledgy!"
+msgstr "Want to model the new financing round for your company? Use Ledgy!"
+
 #: src/pages/privacy.jsx:48
 msgid "We comply with the Swiss Federal Act on Data Protection (FADP) and the General Data Protection Regulation (GDPR). Read more about <0>GDPR compliance</0>."
 msgstr "We comply with the Swiss Federal Act on Data Protection (FADP) and the General Data Protection Regulation (GDPR). Read more about <0>GDPR compliance</0>."
@@ -1416,7 +1437,7 @@ msgstr "and numbered shares are natively supported"
 msgid "by liquidation preferences"
 msgstr "by liquidation preferences"
 
-#: src/layouts/index.jsx:398
+#: src/layouts/index.jsx:395
 msgid "cap table, stock ledger, share register, startup, modeling, financing round, equity, esop, phantom, option plan, virtual, portfolio, reporting, investors"
 msgstr "cap table, stock ledger, share register, startup, modeling, financing round, equity, esop, phantom, option plan, virtual, portfolio, reporting, investors"
 
@@ -1465,7 +1486,7 @@ msgstr "so you control what others can see and do"
 msgid "stopping the spreadsheet mess"
 msgstr "stopping the spreadsheet mess"
 
-#: src/pages/index.jsx:107
+#: src/pages/index.jsx:136
 msgid "that already use Ledgy for their equity management and investor relations"
 msgstr "that already use Ledgy for their equity management and investor relations"
 

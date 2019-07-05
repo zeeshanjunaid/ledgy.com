@@ -312,9 +312,6 @@ type SiteProps = {
 const Initialize = ({ branch, pathname }: {| branch: string, pathname: string |}) => {
   useEffect(() => {
     animateTablet();
-    window.branch = branch;
-    if (window.ga) window.ga('set', 'dimension1', branch);
-
     setTimeout(async () => {
       require('../assets/js/page'); // eslint-disable-line global-require
       require('../assets/js/script'); // eslint-disable-line global-require
