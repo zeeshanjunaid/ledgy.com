@@ -309,7 +309,7 @@ type SiteProps = {
   location: { pathname: string }
 };
 
-const Initialize = ({ branch, pathname }: {| branch: string, pathname: string |}) => {
+const Initialize = ({ pathname }: {| pathname: string |}) => {
   useEffect(() => {
     animateTablet();
     setTimeout(async () => {
@@ -368,7 +368,6 @@ const TemplateWrapper = withI18n()((props: SiteProps) => (
         site {
           siteMetadata {
             siteUrl
-            branch
           }
         }
       }
@@ -376,7 +375,7 @@ const TemplateWrapper = withI18n()((props: SiteProps) => (
     render={data => {
       const { i18n } = props;
       const prefix = langPrefix(props.lang);
-      const { siteUrl, branch } = data.site.siteMetadata;
+      const { siteUrl } = data.site.siteMetadata;
       const thumbnailUrl = `${siteUrl}/thumbnail.png`;
       const { pathname } = props.location;
       const EnPathname = `${siteUrl}${pathname.startsWith('/de') ? pathname.substr(3) : pathname}`;
@@ -387,7 +386,7 @@ const TemplateWrapper = withI18n()((props: SiteProps) => (
             description={i18n.t`Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant. Try now for free!`}
             thumbnailUrl={thumbnailUrl}
           />
-          <Initialize pathname={pathname} branch={branch} />
+          <Initialize pathname={pathname} />
           <Helmet>
             <html lang={props.lang} />
             <meta
