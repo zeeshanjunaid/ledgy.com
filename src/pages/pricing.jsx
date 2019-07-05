@@ -78,7 +78,7 @@ const PricingColumn = (props: {
 }) => (
   <div className="col-lg-4">
     <div
-      className={`pricing-3 border rounded pb-4 ${
+      className={`pricing-3 border rounded pb-4 mx-auto ${
         props.popular ? 'popular border border-success shadow' : ''
       }`}
     >
