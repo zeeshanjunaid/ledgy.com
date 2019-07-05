@@ -500,7 +500,7 @@ msgstr "Avec un nombre illimité de catégories d’actions, d’actions autodé
 
 #: src/pages/index.jsx:141
 msgid "Finally, I have a reliable overview of all our shares, employee grants, and their legal documents. So much better than the Excel I used before."
-msgstr "Enfin, j‘ai une vue d‘ensemble fiable de toutes nos actions, des attributions aux employés et de leurs documents juridiques. Tellement mieux que l‘Excel que j‘utilisais avant."
+msgstr "Enfin, j’ai une vue d’ensemble fiable de toutes nos actions, des attributions aux employés et de leurs documents juridiques. Tellement mieux que l’Excel que j’utilisais avant."
 
 #: src/pages/pricing.jsx:19 src/pages/pricing.jsx:31 src/pages/pricing.jsx:42
 msgid "Financing round modeling"
@@ -615,7 +615,7 @@ msgstr "Comment nous protégeons tes données personnelles"
 
 #: src/pages/index.jsx:130
 msgid "I needed exactly that. Every founder should use Ledgy’s modeling tools for financing rounds!"
-msgstr "C‘est exactement ce dont j‘avais besoin. Tous les fondateurs devraient utiliser les outils de modélisation de Ledgy pour leurs levées de fonds!"
+msgstr "C’est exactement ce dont j’avais besoin. Tous les fondateurs devraient utiliser les outils de modélisation de Ledgy pour leurs levées de fonds!"
 
 #: src/pages/privacy.jsx:83
 msgid "Identity and contact data"
@@ -1079,7 +1079,7 @@ msgstr "Personnalise tes rapports selon tes besoins avec l’éditeur de texte"
 
 #: src/components/NewsletterForm.jsx:56
 msgid "Subscribe"
-msgstr "S'abonner"
+msgstr "S’abonner"
 
 #: src/layouts/index.jsx:98
 msgid "Subscribe to the newsletter"
@@ -1347,7 +1347,7 @@ msgstr "Yoko est diplômée de l’ETH Zürich et d’Oxford et a été préside
 
 #: src/pages/pricing.jsx:185
 msgid "You get a <0>20% discount</0> on Premium if your startup helps reducing carbon emissions.<1/><2>Write us</2> about your impact to see if you qualify."
-msgstr "Tu bénéficies d'un <0>rabais de 20 %</0> sur Premium si ta startup contribue à réduire les émissions de carbone.<1/><2>Écris-nous</2> au sujet de ton impact pour voir si tu es admissible."
+msgstr "Tu bénéficies d’un <0>rabais de 20 %</0> sur Premium si ta startup contribue à réduire les émissions de carbone.<1/><2>Écris-nous</2> au sujet de ton impact pour voir si tu es admissible."
 
 #: src/components/SecurityRow.jsx:31
 msgid "Your data is safe with us"
