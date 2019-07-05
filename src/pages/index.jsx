@@ -1,25 +1,57 @@
 // @flow
 
-import * as React from 'react';
+import React, { useEffect } from 'react';
 import { withI18n, Trans } from '@lingui/react';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
+import sample from 'lodash/sample';
 
 import { FeatureLinks } from '../components/Feature';
 import SecurityRow from '../components/SecurityRow';
 import { demoUrl, targetBlank, Hr, appUrl, trackSignup } from '../layouts/utils';
 
+const experiments = [
+  {
+    name: 'master',
+    title: <Trans>The New Standard in Equity Management</Trans>,
+    subtitle: <Trans>Made for startups, great for investors</Trans>
+  },
+  {
+    name: 'lostTrack',
+    title: <Trans>Round Modeling. Made Simple.</Trans>,
+    subtitle: (
+      <Trans>Lost track of who owns how many shares in your startup? Let Ledgy deal with it.</Trans>
+    )
+  },
+  {
+    name: 'modelFinancingRound',
+    title: <Trans>Round Modeling. Made Simple.</Trans>,
+    subtitle: <Trans>Want to model the new financing round for your company? Use Ledgy!</Trans>
+  },
+  {
+    name: 'investorRelations',
+    title: <Trans>Investor relations and equity management for startups</Trans>,
+    subtitle: (
+      <Trans>Share important documents with your investors, advisory board and employees.</Trans>
+    )
+  }
+];
+
+const experiment = typeof window !== 'undefined' ? sample(experiments) : experiments[0];
+
 const Header = ({ i18n, data }: Props) => {
+  useEffect(() => {
+    window.experiment = experiment.name;
+    if (window.ga) window.ga('set', 'dimension1', window.experiment);
+  }, []);
   return (
     <header className="header bg-ledgy home-banner px-1 text-left ">
       <div className="container">
         <div className="row gap-y mt-md-2 pb-4 pb-md-6">
           <div className="col-lg-6">
-            <h1 className="text-white mb-2 mb-sm-3">
-              <Trans>The New Standard in Equity Management</Trans>
-            </h1>
+            <h1 className="text-white mb-2 mb-sm-3">{experiment.title}</h1>
             <h5 className="text-white font-weight-light pb-4 pb-lg-6 mb-0">
-              <Trans>Made for startups, great for investors</Trans>
+              {experiment.subtitle}
             </h5>
 
             <div className="text-white pb-5 pb-lg-7 banner-text">
