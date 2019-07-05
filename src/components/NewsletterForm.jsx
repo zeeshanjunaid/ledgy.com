@@ -4,6 +4,8 @@ import * as React from 'react';
 import { Trans } from '@lingui/react';
 import 'isomorphic-fetch';
 
+import { trackSignup } from '../layouts/utils';
+
 export default class extends React.Component<
   Props,
   {
@@ -19,7 +21,9 @@ export default class extends React.Component<
   };
   handleSubmit = (e: any) => {
     const valid = this.re.test(this.state.email);
-    if (!valid) {
+    if (valid) {
+      trackSignup('newsletter');
+    } else {
       e.preventDefault();
       this.setState({ invalid: true });
     }

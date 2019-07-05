@@ -21,8 +21,8 @@ export const loadScript = (path: string): Promise<*> =>
     return (document.body && document.body.appendChild(script)) || reject();
   });
 
-export const trackSignup = () => {
-  if (window.ga) window.ga('send', 'event', 'signup', 'enterEmail');
+export const trackSignup = (type: string = 'clickSignup') => {
+  if (window.ga) window.ga('send', 'event', 'signup', type);
 };
 
 export const Title = (props: {
