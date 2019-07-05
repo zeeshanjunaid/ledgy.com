@@ -11,9 +11,7 @@ export default (props: LayoutProps) => (
       <div className="container text-center">
         <div className="row">
           <div className="col-12 col-lg-8 offset-lg-2">
-            <h1>
-              <Trans>Subscription confirmed</Trans>
-            </h1>
+            <h1>Subscription confirmed</h1>
           </div>
         </div>
       </div>
@@ -37,11 +35,8 @@ export default (props: LayoutProps) => (
                     href
                     to={`${props.prefix}/features`}
                   >
-                    <Trans>Continue exploring</Trans>
+                    Continue exploring
                   </Link>
-                  <a className="btn btn-round btn-primary btn-xl ml-md-1" href={appUrl}>
-                    <Trans>Go to Ledgy app</Trans>
-                  </a>
                 </div>
               </div>
             </div>

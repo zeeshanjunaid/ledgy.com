@@ -70,7 +70,11 @@ const Nav = (props: LayoutProps) => (
       </section>
 
       <div className="navbar-right">
-        <a className="btn btn-round btn-outline-light ml-lg-4 mr-2" href={`${appUrl}/login`}>
+        <a
+          className="btn btn-round btn-outline-light ml-lg-4 mr-2"
+          href={`${appUrl}/login`}
+          onClick={() => trackSignup('login')}
+        >
           <Trans>Log In</Trans>
         </a>
         <a
