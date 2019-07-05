@@ -63,7 +63,7 @@ const Testimonial = ({
 }: {
   img: Object,
   name: string,
-  description: React.Element,
+  description: React.Node,
   col: number
 }) => (
   <div

@@ -2,8 +2,6 @@
 
 import React from 'react';
 import { Link } from 'gatsby';
-import { Trans } from '@lingui/react';
-import { appUrl } from '../layouts/utils';
 
 export default (props: LayoutProps) => (
   <>

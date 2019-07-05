@@ -56,7 +56,7 @@ const enterprise = [
   ]
 ];
 
-const PlanFeatures = ({ features }: { features: Array<React.Element | boolean> }) => (
+const PlanFeatures = ({ features }: { features: Array<React.Node | boolean> }) => (
   <ul>
     {features.map(([i, description, detail, first]) => (
       <Li key={i}>
@@ -69,11 +69,11 @@ const PlanFeatures = ({ features }: { features: Array<React.Element | boolean> }
 
 const PricingColumn = (props: {
   name: string,
-  price: React.Element,
-  plan: Array<React.Element | boolean>,
-  buttonText: React.Element,
+  price: React.Node,
+  plan: Array<React.Node | boolean>,
+  buttonText: React.Node,
   popular?: boolean,
-  detail?: React.Element,
+  detail?: React.Node,
   enterprise?: boolean
 }) => (
   <div className="col-lg-4">
