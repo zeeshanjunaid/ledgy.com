@@ -1,9 +1,10 @@
 // @flow
 
-import * as React from 'react';
+import React, { useEffect } from 'react';
 import { withI18n, Trans } from '@lingui/react';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
+import sample from 'lodash/sample';
 
 import { FeatureLinks } from '../components/Feature';
 import SecurityRow from '../components/SecurityRow';
@@ -36,19 +37,21 @@ const experiments = [
   }
 ];
 
-const Header = ({ i18n, data }: Props) => {
-  const selectedExperiment = window.experiment
-    ? experiments.find(v => v.name === window.experiment)
-    : experiments[0];
+const experiment = typeof window !== 'undefined' ? sample(experiments) : experiments[0];
 
+const Header = ({ i18n, data }: Props) => {
+  useEffect(() => {
+    window.experiment = experiment.name;
+    if (window.ga) window.ga('set', 'dimension1', window.experiment);
+  }, []);
   return (
     <header className="header bg-ledgy home-banner px-1 text-left ">
       <div className="container">
         <div className="row gap-y mt-md-2 pb-4 pb-md-6">
           <div className="col-lg-6">
-            <h1 className="text-white mb-2 mb-sm-3">{selectedExperiment.title}</h1>
+            <h1 className="text-white mb-2 mb-sm-3">{experiment.title}</h1>
             <h5 className="text-white font-weight-light pb-4 pb-lg-6 mb-0">
-              {selectedExperiment.subtitle}
+              {experiment.subtitle}
             </h5>
 
             <div className="text-white pb-5 pb-lg-7 banner-text">
