@@ -802,7 +802,7 @@ msgid "Lost track of who owns how many shares in your startup? Let Ledgy deal wi
 msgstr "Perdu la vue d’ensemble de qui possède combien d'actions dans ta startup? Laisse Ledgy s'en occuper."
 
 #: src/layouts/team.jsx:113
-msgid "Luna is a model of the Saturn V rocket, which has been to space 13 times, and holds the record for largest payload to low Earth orbit. She‘s still under construction - <0>Ready to help?</0>"
+msgid "Luna is a model of the Saturn V rocket, which has been to space 13 times, and holds the record for largest payload to low Earth orbit. She’s still under construction - <0>Ready to help?</0>"
 msgstr "Luna est un modèle de la fusée Saturn V, qui a été dans l’espace 13 fois, et détient le record de la plus grande charge utile en orbite terrestre basse. Elle est toujours en construction - <0>Prêt à aider?</0>"
 
 #: src/pages/about-us.jsx:192

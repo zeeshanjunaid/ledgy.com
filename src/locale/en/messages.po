@@ -802,8 +802,8 @@ msgid "Lost track of who owns how many shares in your startup? Let Ledgy deal wi
 msgstr "Lost track of who owns how many shares in your startup? Let Ledgy deal with it."
 
 #: src/layouts/team.jsx:113
-msgid "Luna is a model of the Saturn V rocket, which has been to space 13 times, and holds the record for largest payload to low Earth orbit. She‘s still under construction - <0>Ready to help?</0>"
-msgstr "Luna is a model of the Saturn V rocket, which has been to space 13 times, and holds the record for largest payload to low Earth orbit. She‘s still under construction - <0>Ready to help?</0>"
+msgid "Luna is a model of the Saturn V rocket, which has been to space 13 times, and holds the record for largest payload to low Earth orbit. She’s still under construction - <0>Ready to help?</0>"
+msgstr "Luna is a model of the Saturn V rocket, which has been to space 13 times, and holds the record for largest payload to low Earth orbit. She’s still under construction - <0>Ready to help?</0>"
 
 #: src/pages/about-us.jsx:192
 msgid "M&A and private equity lawyer with a focus on start-up legal advise, Smartuplaw.ch"
