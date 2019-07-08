@@ -462,6 +462,10 @@ msgstr "Encrypted connection"
 msgid "Engage your employees"
 msgstr "Engage your employees"
 
+#: src/components/Markdown.jsx:72
+msgid "English"
+msgstr "English"
+
 #: src/components/SecurityRow.jsx:34
 msgid "Enjoy the highest security standards"
 msgstr "Enjoy the highest security standards"
@@ -553,9 +557,17 @@ msgstr "Founder of Meisser Economics, Bitcoin Association Switzerland, and Wuala
 msgid "Free"
 msgstr "Free"
 
+#: src/components/Markdown.jsx:74
+msgid "French"
+msgstr "French"
+
 #: src/layouts/index.jsx:230
 msgid "GDPR"
 msgstr "GDPR"
+
+#: src/components/Markdown.jsx:73
+msgid "German"
+msgstr "German"
 
 #: src/pages/index.jsx:76
 msgid "Get Started Free"
@@ -1161,7 +1173,7 @@ msgstr "Subscribe to the newsletter"
 msgid "Successful companies share regular updates with their stakeholders, holding themselves accountable"
 msgstr "Successful companies share regular updates with their stakeholders, holding themselves accountable"
 
-#: src/layouts/markdown.jsx:78
+#: src/layouts/markdown.jsx:67
 msgid "Suggest changes"
 msgstr "Suggest changes"
 
@@ -1239,9 +1251,9 @@ msgstr "They work with numbered shares and you can even run exit modeling with a
 msgid "This is a brief summary of the privacy policy. For the details, please read our <0>Privacy Policy</0>."
 msgstr "This is a brief summary of the privacy policy. For the details, please read our <0>Privacy Policy</0>."
 
-#: src/layouts/markdown.jsx:55
-msgid "This page is only available in English."
-msgstr "This page is only available in English."
+#: src/components/Markdown.jsx:80
+msgid "This page is only available in"
+msgstr "This page is only available in"
 
 #: src/pages/blog.jsx:62
 msgid "Thoughts on cap tables, financing rounds, and legal issues around running and managing a startup."
