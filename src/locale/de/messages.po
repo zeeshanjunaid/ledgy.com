@@ -6,7 +6,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Creation-Date: 2018-09-12T18:40:54.619Z\n"
-"PO-Revision-Date: 2019-07-05 15:02+0200\n"
+"PO-Revision-Date: 2019-07-08 15:44+0200\n"
 "Language: de\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: Timo Horstschäfer <timo@ledgy.com>\n"
@@ -520,13 +520,9 @@ msgstr "Funktionen"
 
 #: src/pages/features.jsx:70
 msgid "Featuring unlimited share classes, treasury shares, pooled investments, and automatic share numbering"
-msgstr "Mit beliebig vielen Anteilsklassen, Treasury Anteilen, gepoolten Investitionen und automatischer Aktiennummerierung"
+msgstr "Mit beliebig vielen Anteilsklassen, Treasury Anteilen, gepoolten Investitionen und automatischer Aktiennummerierung<<<<<<< HEAD"
 
-<<<<<<< HEAD
 #: src/pages/index.jsx:173
-=======
-#: src/pages/index.jsx:141
->>>>>>> 0a7bb2a... Reinstall missing translations after tangly rebase
 msgid "Finally, I have a reliable overview of all our shares, employee grants, and their legal documents. So much better than the Excel I used before."
 msgstr "Endlich habe ich eine zuverlässige Übersicht über all unsere Aktien, Mitarbeiterdarlehen und die rechtlichen Dokumente dazu. Das ist so viel besser als Excel, das ich früher benutzt habe."
 
@@ -594,7 +590,7 @@ msgstr "Vermeide kostspielige Fehler"
 msgid "Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant."
 msgstr "Erstelle deinen Cap Table und deine Mitarbeiterbeteiligungspläne von Anfang an richtig. Bringe deine Finanzierungsrunden zum Erfolg und motiviere deine Investoren und Mitarbeiter. Sei dir sicher, dass deine Daten gut aufgehoben sind."
 
-#: src/layouts/index.jsx:387
+#: src/layouts/index.jsx:386
 msgid "Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant. Try now for free!"
 msgstr "Erstelle deinen Cap Table und Mitarbeiterbeteiligungspläne von Anfang an richtig. Bringe deine Finanzierungsrunden zum Erfolg und motiviere deine Investoren und Mitarbeiter. Sei unbesorgt, dass deine Daten sicher und konform sind. Jetzt kostenlos testen!"
 
@@ -712,6 +708,10 @@ msgstr "Lade Gründer oder CFO ein, das Unternehmen zu verwalten und die Informa
 msgid "Invite your employees to track their stake and vesting in their Ledgy portfolio"
 msgstr "Lade deine Mitarbeiter dazu ein, ihre Beteiligung und Vesting-Pläne in ihrem Ledgy-Portfolio zu verfolgen"
 
+#: src/layouts/team.jsx:100
+msgid "Jahlela has a background in cognitive neuroscience, graduated from UC Berkeley, and founded a few startups before switching to full-time software engineering"
+msgstr "Jahlela hat einen Hintergrund in kognitiven Neurowissenschaften, hat an der UC Berkeley studiert und einige Start-ups gegründet, bevor sie zu Vollzeit zur Software-Entwicklung überging"
+
 #: src/pages/index.jsx:136
 msgid "Join hundreds of companies"
 msgstr "Schliesse dich hunderten Startups an"
@@ -800,7 +800,11 @@ msgstr "Anmelden"
 msgid "Lost track of who owns how many shares in your startup? Let Ledgy deal with it."
 msgstr "Hast du die Übersicht verloren, wem wie viele Aktien in deinem Startup gehören? Lass Ledgy sich darum kümmern."
 
-#: src/pages/about-us.jsx:189
+#: src/layouts/team.jsx:113
+msgid "Luna is a model of the Saturn V rocket, which has been to space 13 times, and holds the record for largest payload to low Earth orbit. She‘s still under construction - <0>Ready to help?</0>"
+msgstr "Luna ist ein Modell der Rakete Saturn V, welche 13 mal im Weltraum war und den Rekord für die höchste Nutzlast in die untere Erdumlaufbahn hält. Sie ist noch im Aufbau - <0>Willst du helfen?</0>"
+
+#: src/pages/about-us.jsx:192
 msgid "M&A and private equity lawyer with a focus on start-up legal advise, Smartuplaw.ch"
 msgstr "M&A- und Private-Equity-Anwältin mit Schwerpunkt auf Start-up Beratung, Smartuplaw.ch"
 
@@ -1195,15 +1199,10 @@ msgstr "Nutzungsbedingungen"
 
 #: src/pages/blog.jsx:70
 msgid "The Ledgy Blog"
-msgstr "Der Ledgy-Blog"
+msgstr "Der Ledgy-Blog<<<<<<< HEAD"
 
-<<<<<<< HEAD
-#: src/layouts/index.jsx:386
+#: src/layouts/index.jsx:385
 #: src/pages/index.jsx:16
-=======
-#: src/layouts/index.jsx:389
-#: src/pages/index.jsx:19
->>>>>>> 0a7bb2a... Reinstall missing translations after tangly rebase
 msgid "The New Standard in Equity Management"
 msgstr "Der Neue Standard des Equity Management"
 
@@ -1447,7 +1446,7 @@ msgstr "und Aktiennummerierung wird nativ unterstützt"
 msgid "by liquidation preferences"
 msgstr "durch Liquidationspräferenzen"
 
-#: src/layouts/index.jsx:395
+#: src/layouts/index.jsx:394
 msgid "cap table, stock ledger, share register, startup, modeling, financing round, equity, esop, phantom, option plan, virtual, portfolio, reporting, investors"
 msgstr "Cap Table, Aktienbuch, Aktienregister, Startup, Modellierung, Finanzierungsrunde, Exit, ESOP, VSOP, Beteiligungsplan, Unternehmensbeteiligung, Mitarbeiterbeteiligung, Optionspläne, virtuelle Beteiligung, Reporting, Investor, Portfolio"
 
