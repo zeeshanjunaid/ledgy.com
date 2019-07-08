@@ -13,10 +13,12 @@ import { Title, githubUrl, targetBlank } from '../layouts/utils';
 
 export default ({
   data,
-  pageContext
+  pageContext,
+  prefix
 }: {
   data: Object,
-  pageContext: { notLocalized?: boolean }
+  pageContext: { notLocalized?: boolean },
+  prefix: string
 }) => {
   const { frontmatter, code, fields } = data.mdx;
   const { notLocalized } = pageContext;
@@ -77,7 +79,7 @@ export default ({
                 </a>
               </small>
             </div>
-            {frontmatter.author && <Author name={frontmatter.author} />}
+            {frontmatter.author && <Author prefix={prefix} name={frontmatter.author} />}
           </div>
         </section>
       </main>

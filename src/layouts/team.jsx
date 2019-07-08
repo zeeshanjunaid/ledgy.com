@@ -3,6 +3,7 @@
 import React, { type Node } from 'react';
 import { Trans } from '@lingui/react';
 import { graphql } from 'gatsby';
+import { targetBlank } from './utils';
 
 export type AuthorProps = {|
   name: string,
@@ -13,7 +14,7 @@ export type AuthorProps = {|
   mail: string
 |};
 
-export const team: { [string]: AuthorProps } = {
+export const getWholeTeam = (props: Props): { [string]: AuthorProps } => ({
   timo: {
     name: 'Timo Horstschaefer',
     role: 'Co-Founder & CTO',
@@ -91,8 +92,37 @@ export const team: { [string]: AuthorProps } = {
     twitter: 'https://twitter.com/colmarius',
     linkedIn: 'https://www.linkedin.com/in/mariuscolacioiu',
     mail: 'marius@ledgy.com'
+  },
+  jahlela: {
+    name: 'Jahlela Hasle',
+    role: 'Developer & Neuroscientist',
+    description: (
+      <Trans>
+        Jahlela has a background in cognitive neuroscience, graduated from UC Berkeley, and founded
+        a few startups before switching to full-time software engineering
+      </Trans>
+    ),
+    twitter: 'https://twitter.com/jahlela',
+    linkedIn: 'https://www.linkedin.com/in/jahlelahasle',
+    mail: 'jahlela@ledgy.com'
+  },
+  luna: {
+    name: 'Luna',
+    role: 'Rocket & Trailblazer',
+    description: (
+      <Trans>
+        Luna is a model of the Saturn V rocket, which has been to space 13 times, and holds the
+        record for largest payload to low Earth orbit. She’s still under construction —{' '}
+        <a href={`${props.prefix}/jobs/`} {...targetBlank}>
+          Ready to help?
+        </a>
+      </Trans>
+    ),
+    twitter: 'https://twitter.com/hashtag/saturnv',
+    linkedIn: 'https://www.linkedin.com/company/nasa',
+    mail: 'contact@ledgy.com'
   }
-};
+});
 
 export const TeamFragment = graphql`
   fragment TeamFragment on Query {
@@ -122,6 +152,16 @@ export const TeamFragment = graphql`
       }
     }
     marius: imageSharp(fluid: { originalName: { regex: "/marius.jpg/" } }) {
+      fluid(maxWidth: 245, maxHeight: 245) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    jahlela: imageSharp(fluid: { originalName: { regex: "/jahlela.jpg/" } }) {
+      fluid(maxWidth: 245, maxHeight: 245) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    luna: imageSharp(fluid: { originalName: { regex: "/luna.jpg/" } }) {
       fluid(maxWidth: 245, maxHeight: 245) {
         ...GatsbyImageSharpFluid
       }

@@ -9,7 +9,7 @@ import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 import { Title } from '../layouts/utils';
-import { team, type AuthorProps } from '../layouts/team';
+import { getWholeTeam, type AuthorProps } from '../layouts/team';
 
 const Header = ({ i18n }: Props) => (
   <header className="header text-white bg-ledgy">
@@ -81,6 +81,7 @@ const Investor = ({
 
 const IndexPage = (props: Props) => {
   const { data, i18n } = props;
+  const team = getWholeTeam(props);
   return (
     <div>
       <Header {...props} />
@@ -121,6 +122,8 @@ const IndexPage = (props: Props) => {
               <Founder {...team.oriol} img={data.oriol} />
               <Founder {...team.jules} img={data.jules} />
               <Founder {...team.marius} img={data.marius} />
+              <Founder {...team.jahlela} img={data.jahlela} />
+              <Founder {...team.luna} img={data.luna} />
             </div>
           </div>
         </section>
