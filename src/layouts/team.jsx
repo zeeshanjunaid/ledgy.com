@@ -106,6 +106,19 @@ export const getWholeTeam = (props: Props): { [string]: AuthorProps } => ({
     linkedIn: 'https://www.linkedin.com/in/jahlelahasle',
     mail: 'jahlela@ledgy.com'
   },
+  spela: {
+    name: 'Špela Prijon',
+    role: 'Developer & Neuroscientist',
+    description: (
+      <Trans>
+        Jahlela has a background in cognitive neuroscience, graduated from UC Berkeley, and founded
+        a few startups before switching to full-time software engineering
+      </Trans>
+    ),
+    twitter: 'https://twitter.com/jahlela',
+    linkedIn: 'https://www.linkedin.com/in/jahlelahasle',
+    mail: 'jahlela@ledgy.com'
+  },
   luna: {
     name: 'Luna',
     role: 'Rocket & Trailblazer',
@@ -157,6 +170,11 @@ export const TeamFragment = graphql`
       }
     }
     jahlela: imageSharp(fluid: { originalName: { regex: "/jahlela.jpg/" } }) {
+      fluid(maxWidth: 245, maxHeight: 245) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    spela: imageSharp(fluid: { originalName: { regex: "/spela.jpg/" } }) {
       fluid(maxWidth: 245, maxHeight: 245) {
         ...GatsbyImageSharpFluid
       }
