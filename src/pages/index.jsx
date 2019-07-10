@@ -64,6 +64,7 @@ const Header = ({ i18n, data }: Props) => {
             <a
               className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-outline-light"
               href={demoUrl}
+              onClick={() => trackSignup('clickDemo')}
               {...targetBlank}
             >
               <Trans>See the Demo</Trans>
