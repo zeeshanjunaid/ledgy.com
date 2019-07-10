@@ -11,7 +11,7 @@ import { MDXProvider } from '@mdx-js/react';
 import { Author, Image, type ImageProps, LanguageHint } from '../components/Markdown';
 import { Title, githubUrl, targetBlank } from '../layouts/utils';
 
-export default ({ data, lang }: Props) => {
+export default ({ data, lang, prefix }: Props) => {
   const { frontmatter, code, fields } = data.mdx;
   const { siteUrl } = data.site.siteMetadata;
 

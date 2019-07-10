@@ -375,7 +375,7 @@ const TemplateWrapper = withI18n()((props: SiteProps) => (
     render={data => {
       const { i18n, lang } = props;
       const prefix = langPrefix(lang);
-      const { siteUrl, branch } = data.site.siteMetadata;
+      const { siteUrl } = data.site.siteMetadata;
       const thumbnailUrl = `${siteUrl}/thumbnail.png`;
       const { pathname } = props.location;
       const EnPathname = `${siteUrl}${pathname.startsWith('/de') ? pathname.substr(3) : pathname}`;
