@@ -114,10 +114,10 @@ h1 {
 .pricing-3 {
   max-width: 380px;
   @include media-breakpoint-up(lg) {
-    height: 1210px; 
+    height: 1210px;
   }
   @include media-breakpoint-up(xl) {
-    height: 840px; 
+    height: 840px;
   }
   li {
     position: relative;
@@ -132,10 +132,10 @@ h1 {
   }
   .pricing-top {
     @include media-breakpoint-up(lg) {
-      height: 150px; 
+      height: 150px;
     }
     @include media-breakpoint-up(xl) {
-      height: unset; 
+      height: unset;
     }
   }
 }
@@ -297,7 +297,7 @@ h1 {
   height: 100%;
   overflow: hidden;
   border-radius: 5px;
-  transition: 200ms; 
+  transition: 200ms;
   p {
     color: #495057;
     line-height: 27px;
@@ -330,6 +330,14 @@ h1 {
       content: '\2014';
       margin-right: 0.5rem;
     }
+  }
+}
+.testimonial-description {
+  @include media-breakpoint-up(lg) {
+    height: 200px
+  }
+  @include media-breakpoint-up(xl) {
+    height: 160px
   }
 }
 
