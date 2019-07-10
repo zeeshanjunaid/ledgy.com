@@ -86,7 +86,7 @@ exports.createPages = ({ graphql, actions }) => {
           createPage({
             path: `/${lang}${slug}`,
             component,
-            context: { id: node.id, notLocalized: true }
+            context: { id: node.id }
           })
         );
       });

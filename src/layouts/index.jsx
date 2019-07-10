@@ -373,8 +373,8 @@ const TemplateWrapper = withI18n()((props: SiteProps) => (
       }
     `}
     render={data => {
-      const { i18n } = props;
-      const prefix = langPrefix(props.lang);
+      const { i18n, lang } = props;
+      const prefix = langPrefix(lang);
       const { siteUrl } = data.site.siteMetadata;
       const thumbnailUrl = `${siteUrl}/thumbnail.png`;
       const { pathname } = props.location;
@@ -388,7 +388,7 @@ const TemplateWrapper = withI18n()((props: SiteProps) => (
           />
           <Initialize pathname={pathname} />
           <Helmet>
-            <html lang={props.lang} />
+            <html lang={lang} />
             <meta
               name="keywords"
               content={i18n.t`cap table, stock ledger, share register, startup, modeling, financing round, equity, esop, phantom, option plan, virtual, portfolio, reporting, investors`}
@@ -424,7 +424,7 @@ const TemplateWrapper = withI18n()((props: SiteProps) => (
             </noscript>
           </Helmet>
           <Nav {...props} prefix={prefix} />
-          {React.cloneElement(props.children, { prefix })}
+          {React.cloneElement(props.children, { prefix, lang })}
           <Footer {...props} prefix={prefix} />
         </div>
       );

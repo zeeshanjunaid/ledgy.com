@@ -8,28 +8,21 @@ import { faPen } from '@fortawesome/free-solid-svg-icons';
 import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 import { MDXProvider } from '@mdx-js/react';
 
-import { Author, Image, type ImageProps } from '../components/Markdown';
+import { Author, Image, type ImageProps, LanguageHint } from '../components/Markdown';
 import { Title, githubUrl, targetBlank } from '../layouts/utils';
 
-export default ({
-  data,
-  pageContext,
-  prefix
-}: {
-  data: Object,
-  pageContext: { notLocalized?: boolean },
-  prefix: string
-}) => {
+export default ({ data, lang, prefix }: Props) => {
   const { frontmatter, code, fields } = data.mdx;
-  const { notLocalized } = pageContext;
   const { siteUrl } = data.site.siteMetadata;
 
-  const img = ({ src, ...props }: {| src: string, ...ImageProps |}) => (
+  const img = (props: ImageProps) => (
     <Image
       {...props}
       img={
-        (frontmatter.images.find(i => i && i.childImageSharp.fluid.originalName === src) || {})
-          .childImageSharp
+        (
+          frontmatter.images.find(i => i && i.childImageSharp.fluid.originalName === props.src) ||
+          {}
+        ).childImageSharp
       }
     />
   );
@@ -50,11 +43,7 @@ export default ({
           <div className="row">
             <div className="col-12 col-lg-8 offset-lg-2">
               <h1>{frontmatter.title}</h1>
-              {notLocalized && (
-                <div className="text-center">
-                  <Trans>This page is only available in English.</Trans>
-                </div>
-              )}
+              <LanguageHint lang={lang} documentLang={frontmatter.language} />
             </div>
           </div>
         </div>
@@ -97,6 +86,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
+        language
         author
         date(formatString: "DD MMM YYYY")
         coverImage {
