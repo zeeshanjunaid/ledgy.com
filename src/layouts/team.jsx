@@ -111,8 +111,7 @@ export const getWholeTeam = (props: Props): { [string]: AuthorProps } => ({
     role: 'Developer & Neuroscientist',
     description: (
       <Trans>
-        Jahlela has a background in cognitive neuroscience, graduated from UC Berkeley, and founded
-        a few startups before switching to full-time software engineering
+        Špela found her passion for business development through her experiences co-founding a startup, and later as an early employee at a SaaS company. She holds a Waldorf teaching diploma, and a Master's degree in Pharmacy.
       </Trans>
     ),
     twitter: 'https://twitter.com/jahlela',
