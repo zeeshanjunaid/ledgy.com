@@ -170,11 +170,11 @@ msgstr "Automatically update the stakeholder list, transaction history, and cap 
 msgid "Available shares for transfer"
 msgstr "Available shares for transfer"
 
-#: src/pages/about-us.jsx:135
+#: src/pages/about-us.jsx:136
 msgid "Backed by"
 msgstr "Backed by"
 
-#: src/pages/about-us.jsx:147
+#: src/pages/about-us.jsx:148
 msgid "Backing the creators of our future since 1984"
 msgstr "Backing the creators of our future since 1984"
 
@@ -360,7 +360,7 @@ msgstr "Daily backups ensure nothing is ever lost"
 msgid "Data room, audit trail and read-only access for investors save you costly due diligence tools"
 msgstr "Data room, audit trail and read-only access for investors save you costly due diligence tools"
 
-#: src/pages/about-us.jsx:177
+#: src/pages/about-us.jsx:178
 msgid "Digital entrepreneur and investor. Security, crypto & privacy expert"
 msgstr "Digital entrepreneur and investor. Security, crypto & privacy expert"
 
@@ -474,11 +474,11 @@ msgstr "Enjoy the highest security standards"
 msgid "Enter your email…"
 msgstr "Enter your email…"
 
-#: src/pages/about-us.jsx:172
+#: src/pages/about-us.jsx:173
 msgid "Entrepreneur, business angel, founder of Doodle.com"
 msgstr "Entrepreneur, business angel, founder of Doodle.com"
 
-#: src/pages/about-us.jsx:157
+#: src/pages/about-us.jsx:158
 msgid "Entrepreneur, technologist, founder of Doodle.com"
 msgstr "Entrepreneur, technologist, founder of Doodle.com"
 
@@ -495,7 +495,7 @@ msgstr "Equity data is too important to be accidentally tweaked in a spreadsheet
 msgid "Equity plan management"
 msgstr "Equity plan management"
 
-#: src/pages/about-us.jsx:142
+#: src/pages/about-us.jsx:143
 msgid "Europe’s symbiosis of early-stage VC funds and private investor network"
 msgstr "Europe’s symbiosis of early-stage VC funds and private investor network"
 
@@ -549,7 +549,7 @@ msgstr "Flexible yet intuitive round modeling supporting convertibles, fixed emp
 msgid "For even better protection of accounts. And our implementation is <0>open source</0>!"
 msgstr "For even better protection of accounts. And our implementation is <0>open source</0>!"
 
-#: src/pages/about-us.jsx:182
+#: src/pages/about-us.jsx:183
 msgid "Founder of Meisser Economics, Bitcoin Association Switzerland, and Wuala"
 msgstr "Founder of Meisser Economics, Bitcoin Association Switzerland, and Wuala"
 
@@ -628,7 +628,7 @@ msgstr "Granular access rights, you control them"
 msgid "HTTP headers prevent cross-site scripting and code injection (<0>A+ rating</0>)"
 msgstr "HTTP headers prevent cross-site scripting and code injection (<0>A+ rating</0>)"
 
-#: src/pages/about-us.jsx:152
+#: src/pages/about-us.jsx:153
 msgid "Healthcare & technology venture capital since 2001"
 msgstr "Healthcare & technology venture capital since 2001"
 
@@ -690,7 +690,7 @@ msgstr "Intuitive, legally valid and error-free cap table from the beginning"
 msgid "Intuitive, legally valid and error-free cap table from the beginning, supporting all transaction types, unlimited share classes, pooled investments, and numbered shares."
 msgstr "Intuitive, legally valid and error-free cap table from the beginning, supporting all transaction types, unlimited share classes, pooled investments, and numbered shares."
 
-#: src/pages/about-us.jsx:187
+#: src/pages/about-us.jsx:188
 msgid "Investor & consultant (Farmy.ch, Flatfox.ch), founder of Students.ch"
 msgstr "Investor & consultant (Farmy.ch, Flatfox.ch), founder of Students.ch"
 
@@ -765,7 +765,7 @@ msgstr "Kpi chart"
 msgid "Language"
 msgstr "Language"
 
-#: src/pages/about-us.jsx:167
+#: src/pages/about-us.jsx:168
 msgid "Leading Spanish investor in early-stage technology startups"
 msgstr "Leading Spanish investor in early-stage technology startups"
 
@@ -813,11 +813,11 @@ msgstr "Log In"
 msgid "Lost track of who owns how many shares in your startup? Let Ledgy deal with it."
 msgstr "Lost track of who owns how many shares in your startup? Let Ledgy deal with it."
 
-#: src/layouts/team.jsx:113
+#: src/layouts/team.jsx:125
 msgid "Luna is a model of the Saturn V rocket, which has been to space 13 times, and holds the record for largest payload to low Earth orbit. She’s still under construction — <0>Ready to help?</0>"
 msgstr "Luna is a model of the Saturn V rocket, which has been to space 13 times, and holds the record for largest payload to low Earth orbit. She’s still under construction — <0>Ready to help?</0>"
 
-#: src/pages/about-us.jsx:192
+#: src/pages/about-us.jsx:193
 msgid "M&A and private equity lawyer with a focus on start-up legal advise, Smartuplaw.ch"
 msgstr "M&A and private equity lawyer with a focus on start-up legal advise, Smartuplaw.ch"
 
@@ -869,7 +869,7 @@ msgstr "Numbered shares"
 msgid "Numbers are checked for consistency, giving you the peace of mind that none go missing or are assigned twice"
 msgstr "Numbers are checked for consistency, giving you the peace of mind that none go missing or are assigned twice"
 
-#: src/pages/about-us.jsx:162
+#: src/pages/about-us.jsx:163
 msgid "One of the most active Swiss early-stage angel investors"
 msgstr "One of the most active Swiss early-stage angel investors"
 
@@ -1129,6 +1129,10 @@ msgstr "Space elevator"
 #: src/pages/features/captable.jsx:159
 msgid "Speed up your onboarding process with the bulk import feature"
 msgstr "Speed up your onboarding process with the bulk import feature"
+
+#: src/layouts/team.jsx:113
+msgid "Spela found her passion for business development through her experiences co-founding a startup, and as an early employee at a SaaS company. She holds a Waldorf teaching diploma, and a Master's degree in Pharmacy."
+msgstr "Spela found her passion for business development through her experiences co-founding a startup, and as an early employee at a SaaS company. She holds a Waldorf teaching diploma, and a Master's degree in Pharmacy."
 
 #: src/pages/features/captable.jsx:59
 #: src/pages/features/captable.jsx:157

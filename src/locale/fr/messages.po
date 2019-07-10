@@ -163,11 +163,11 @@ msgstr "Mise à jour automatique de la liste des actionnaires, de l’historique
 msgid "Available shares for transfer"
 msgstr "Actions disponibles pour transfert"
 
-#: src/pages/about-us.jsx:135
+#: src/pages/about-us.jsx:136
 msgid "Backed by"
 msgstr "Soutenu par"
 
-#: src/pages/about-us.jsx:147
+#: src/pages/about-us.jsx:148
 msgid "Backing the creators of our future since 1984"
 msgstr "Nous soutenons les créateurs de notre avenir depuis 1984"
 
@@ -346,7 +346,7 @@ msgstr "Des sauvegardes quotidiennes garantissent que rien n’est jamais perdu"
 msgid "Data room, audit trail and read-only access for investors save you costly due diligence tools"
 msgstr "Data room, piste d’audits et accès en lecture seule pour les investisseurs te permettent d’économiser des outils coûteux de diligence raisonnable"
 
-#: src/pages/about-us.jsx:177
+#: src/pages/about-us.jsx:178
 msgid "Digital entrepreneur and investor. Security, crypto & privacy expert"
 msgstr "Entrepreneur et investisseur en technologies digitales. Expert en sécurité et cryptographie"
 
@@ -455,11 +455,11 @@ msgstr "Bénéficie des plus hauts standards de sécurité"
 msgid "Enter your email…"
 msgstr "Entre ton adresse email…"
 
-#: src/pages/about-us.jsx:172
+#: src/pages/about-us.jsx:173
 msgid "Entrepreneur, business angel, founder of Doodle.com"
 msgstr "Entrepreneur, business angel, fondateur de Doodle.com"
 
-#: src/pages/about-us.jsx:157
+#: src/pages/about-us.jsx:158
 msgid "Entrepreneur, technologist, founder of Doodle.com"
 msgstr "Entrepreneur, technologist, fondateur de Doodle.com"
 
@@ -475,7 +475,7 @@ msgstr "Les données sur les actions sont trop importantes pour être modifiées
 msgid "Equity plan management"
 msgstr "Plan d’actionnariat"
 
-#: src/pages/about-us.jsx:142
+#: src/pages/about-us.jsx:143
 msgid "Europe’s symbiosis of early-stage VC funds and private investor network"
 msgstr "La symbiose européenne entre les fonds de capital-risque et le réseau d’investisseurs privés"
 
@@ -522,7 +522,7 @@ msgstr "Modélisation de rondes de financement flexible et intuitive, prenant en
 msgid "For even better protection of accounts. And our implementation is <0>open source</0>!"
 msgstr "Pour une meilleure protection des comptes. Et notre implémentation est <0>open source</0> !"
 
-#: src/pages/about-us.jsx:182
+#: src/pages/about-us.jsx:183
 msgid "Founder of Meisser Economics, Bitcoin Association Switzerland, and Wuala"
 msgstr "Fondateur de Meisser Economics, Bitcoin Association Switzerland, et Wuala"
 
@@ -600,7 +600,7 @@ msgstr "Droits d’accès personnalisés"
 msgid "HTTP headers prevent cross-site scripting and code injection (<0>A+ rating</0>)"
 msgstr "Les en-têtes HTTP empêchent les scripts intersites et l’injection de code (<0>A+ rating</0>)"
 
-#: src/pages/about-us.jsx:152
+#: src/pages/about-us.jsx:153
 msgid "Healthcare & technology venture capital since 2001"
 msgstr "Capital de risque dans le domaine de la santé et de la technologie depuis 2001"
 
@@ -661,7 +661,7 @@ msgstr "Cap table intuitif, juridiquement valide et exempt d’erreurs dès le d
 msgid "Intuitive, legally valid and error-free cap table from the beginning, supporting all transaction types, unlimited share classes, pooled investments, and numbered shares."
 msgstr "Cap table intuitif, juridiquement valide et exempt d’erreurs dès le début, prenant en charge tous les types de transaction, les catégories d’actions illimitées, les placements en pool et les actions numérotées."
 
-#: src/pages/about-us.jsx:187
+#: src/pages/about-us.jsx:188
 msgid "Investor & consultant (Farmy.ch, Flatfox.ch), founder of Students.ch"
 msgstr "Investisseur & consultant (Farmy.ch, Flatfox.ch), fondateur de Students.ch"
 
@@ -734,7 +734,7 @@ msgstr "Diagramme Kpi"
 msgid "Language"
 msgstr "Langue"
 
-#: src/pages/about-us.jsx:167
+#: src/pages/about-us.jsx:168
 msgid "Leading Spanish investor in early-stage technology startups"
 msgstr "Investisseur majeur en Espagne dans les tech startups en phase initiale"
 
@@ -782,11 +782,11 @@ msgstr "Connexion"
 msgid "Lost track of who owns how many shares in your startup? Let Ledgy deal with it."
 msgstr "Perdu la vue d’ensemble de qui possède combien d'actions dans ta startup? Laisse Ledgy s'en occuper."
 
-#: src/layouts/team.jsx:113
+#: src/layouts/team.jsx:125
 msgid "Luna is a model of the Saturn V rocket, which has been to space 13 times, and holds the record for largest payload to low Earth orbit. She’s still under construction — <0>Ready to help?</0>"
 msgstr "Luna est un modèle de la fusée Saturn V, qui a été dans l’espace 13 fois, et détient le record de la plus grande charge utile en orbite terrestre basse. Elle est toujours en construction — <0>Prêt à aider?</0>"
 
-#: src/pages/about-us.jsx:192
+#: src/pages/about-us.jsx:193
 msgid "M&A and private equity lawyer with a focus on start-up legal advise, Smartuplaw.ch"
 msgstr "Avocate en M&A et private equity, spécialisée dans le conseil juridique aux startups, Smartuplaw.ch"
 
@@ -838,7 +838,7 @@ msgstr "Actions numérotées"
 msgid "Numbers are checked for consistency, giving you the peace of mind that none go missing or are assigned twice"
 msgstr "La cohérence des numéros est vérifiée, ce qui te donne la tranquillité d’esprit qu’aucun numéro ne disparaît ou n’est attribué deux fois"
 
-#: src/pages/about-us.jsx:162
+#: src/pages/about-us.jsx:163
 msgid "One of the most active Swiss early-stage angel investors"
 msgstr "L’un des angel investors suisses les plus actifs en early-stage"
 
@@ -1084,8 +1084,14 @@ msgstr "Space elevator"
 msgid "Speed up your onboarding process with the bulk import feature"
 msgstr "Accélère l’import de tes données grâce à la fonction d’importation en masse"
 
-#: src/pages/features/captable.jsx:59 src/pages/features/captable.jsx:157
-#: src/pages/features/esop.jsx:54 src/pages/features/esop.jsx:152
+#: src/layouts/team.jsx:113
+msgid "Spela found her passion for business development through her experiences co-founding a startup, and as an early employee at a SaaS company. She holds a Waldorf teaching diploma, and a Master's degree in Pharmacy."
+msgstr "Spela s'est passionnée pour le business development à travers ses expériences en tant que co-fonder d'une start-up, et en tant qu'employée dans une entreprise SaaS. Elle est titulaire d'un diplôme d'enseignement Waldorf et d'une maîtrise en pharmacie."
+
+#: src/pages/features/captable.jsx:59
+#: src/pages/features/captable.jsx:157
+#: src/pages/features/esop.jsx:54
+#: src/pages/features/esop.jsx:152
 msgid "Spreadsheet importer"
 msgstr "Importateur de feuilles de calcul"
 
