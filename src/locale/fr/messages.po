@@ -780,7 +780,7 @@ msgstr "Connexion"
 
 #: src/pages/index.jsx:23
 msgid "Lost track of who owns how many shares in your startup? Let Ledgy deal with it."
-msgstr "Perdu la vue d’ensemble de qui possède combien d'actions dans ta startup? Laisse Ledgy s'en occuper."
+msgstr "Perdu la vue d’ensemble de qui possède combien d’actions dans ta startup? Laisse Ledgy s’en occuper."
 
 #: src/layouts/team.jsx:125
 msgid "Luna is a model of the Saturn V rocket, which has been to space 13 times, and holds the record for largest payload to low Earth orbit. She’s still under construction — <0>Ready to help?</0>"
@@ -1086,7 +1086,7 @@ msgstr "Accélère l’import de tes données grâce à la fonction d’importat
 
 #: src/layouts/team.jsx:113
 msgid "Spela found her passion for business development through her experiences co-founding a startup, and as an early employee at a SaaS company. She holds a Waldorf teaching diploma, and a Master’s degree in Pharmacy."
-msgstr "Spela s'est passionnée pour le business development à travers ses expériences en tant que co-fonder d'une start-up, et en tant qu'employée dans une entreprise SaaS. Elle est titulaire d'un diplôme d'enseignement Waldorf et d'une maîtrise en pharmacie."
+msgstr "Spela s’est passionnée pour le business development à travers ses expériences en tant que co-fonder d’une start-up, et en tant qu’employée dans une entreprise SaaS. Elle est titulaire d’un diplôme d’enseignement Waldorf et d’une maîtrise en pharmacie."
 
 #: src/pages/features/captable.jsx:59
 #: src/pages/features/captable.jsx:157
