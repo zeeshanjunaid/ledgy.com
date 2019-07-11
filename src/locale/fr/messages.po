@@ -1085,7 +1085,7 @@ msgid "Speed up your onboarding process with the bulk import feature"
 msgstr "Accélère l’import de tes données grâce à la fonction d’importation en masse"
 
 #: src/layouts/team.jsx:113
-msgid "Spela found her passion for business development through her experiences co-founding a startup, and as an early employee at a SaaS company. She holds a Waldorf teaching diploma, and a Master's degree in Pharmacy."
+msgid "Spela found her passion for business development through her experiences co-founding a startup, and as an early employee at a SaaS company. She holds a Waldorf teaching diploma, and a Master’s degree in Pharmacy."
 msgstr "Spela s'est passionnée pour le business development à travers ses expériences en tant que co-fonder d'une start-up, et en tant qu'employée dans une entreprise SaaS. Elle est titulaire d'un diplôme d'enseignement Waldorf et d'une maîtrise en pharmacie."
 
 #: src/pages/features/captable.jsx:59
