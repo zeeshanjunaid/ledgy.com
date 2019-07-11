@@ -123,6 +123,17 @@ const Reference = ({ img, name }: { img: Object, name: string }) => (
   </div>
 );
 
+const AsFeaturedIn = (props: Props) => (
+  <div className="black-and-white d-flex justify-content-center align-items-center">
+    <span className="mr-6">
+      <Trans>As featured in</Trans>
+    </span>
+    <Img {...props.data.forbes} alt="Forbes DACH" className="m-4" />
+    <Img {...props.data.wirtschaftsWoche} alt="Wirtschafts Woche" className="m-4" />
+    <Img {...props.data.theEconomist} alt="The Economist" className="m-4" />
+  </div>
+);
+
 const IndexPage = (props: Props) => (
   <div>
     <Header {...props} />
@@ -201,8 +212,10 @@ const IndexPage = (props: Props) => (
           </div>
 
           <Hr />
-
           <SecurityRow {...props} />
+
+          <Hr />
+          <AsFeaturedIn {...props} />
         </div>
       </section>
     </main>
@@ -253,6 +266,21 @@ export const pageQuery = graphql`
     }
     yamo: imageSharp(fluid: { originalName: { regex: "/yamo/" } }) {
       fixed(width: 70) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+    forbes: imageSharp(fluid: { originalName: { regex: "/forbes/" } }) {
+      fixed(width: 110) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+    theEconomist: imageSharp(fluid: { originalName: { regex: "/the-economist/" } }) {
+      fixed(width: 120) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+    wirtschaftsWoche: imageSharp(fluid: { originalName: { regex: "/wirtschafts-woche/" } }) {
+      fixed(width: 110) {
         ...GatsbyImageSharpFixed
       }
     }
