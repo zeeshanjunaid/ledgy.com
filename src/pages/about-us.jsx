@@ -123,6 +123,7 @@ const IndexPage = (props: Props) => {
               <Founder {...team.jules} img={data.jules} />
               <Founder {...team.marius} img={data.marius} />
               <Founder {...team.jahlela} img={data.jahlela} />
+              <Founder {...team.spela} img={data.spela} />
               <Founder {...team.luna} img={data.luna} />
             </div>
           </div>
