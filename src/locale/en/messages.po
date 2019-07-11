@@ -527,7 +527,7 @@ msgstr "Features"
 msgid "Featuring unlimited share classes, treasury shares, pooled investments, and automatic share numbering"
 msgstr "Featuring unlimited share classes, treasury shares, pooled investments, and automatic share numbering"
 
-#: src/pages/index.jsx:162
+#: src/pages/index.jsx:163
 msgid "Finally, I have a reliable overview of all our shares, employee grants, and their legal documents. So much better than the Excel I used before."
 msgstr "Finally, I have a reliable overview of all our shares, employee grants, and their legal documents. So much better than the Excel I used before."
 
@@ -537,7 +537,7 @@ msgstr "Finally, I have a reliable overview of all our shares, employee grants, 
 msgid "Financing round modeling"
 msgstr "Financing round modeling"
 
-#: src/pages/index.jsx:198
+#: src/pages/index.jsx:199
 msgid "Find out why they trust us"
 msgstr "Find out why they trust us"
 
@@ -654,7 +654,7 @@ msgstr "Holding confirmations"
 msgid "How we protect your information"
 msgstr "How we protect your information"
 
-#: src/pages/index.jsx:184
+#: src/pages/index.jsx:185
 msgid "I needed exactly that. Every founder should use Ledgy’s modeling tools for financing rounds!"
 msgstr "I needed exactly that. Every founder should use Ledgy’s modeling tools for financing rounds!"
 
@@ -1421,7 +1421,7 @@ msgstr "We live up to highest security standards. We improve them continuously. 
 msgid "We operate a <0>bug bounty</0> program on Federacy. Write us a message for an invitation."
 msgstr "We operate a <0>bug bounty</0> program on Federacy. Write us a message for an invitation."
 
-#: src/pages/index.jsx:173
+#: src/pages/index.jsx:174
 msgid "We started to use Ledgy’s solution while preparing a large and complex series C. It saved significant amount of time and headaches."
 msgstr "We started to use Ledgy’s solution while preparing a large and complex series C. It saved significant amount of time and headaches."
 
