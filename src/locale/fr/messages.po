@@ -1423,7 +1423,7 @@ msgstr "Nous avons un programme <0>bug bounty</0> sur Federacy. Ecris-nous pour 
 
 #: src/pages/index.jsx:174
 msgid "We started to use Ledgy’s solution while preparing a large and complex series C. It saved significant amount of time and headaches."
-msgstr "Nous avons commencé à utiliser Ledgy tout en préparant une grande et complexe série C. Cela a permis d'économiser beaucoup de temps et d'éviter des maux de tête considérables."
+msgstr "Nous avons commencé à utiliser Ledgy tout en préparant une grande et complexe série C. Cela a permis d’économiser beaucoup de temps et d’éviter des maux de tête considérables."
 
 #: src/pages/security.jsx:50
 msgid "We understand how sensitive equity information is for any business. That’s why your privacy and your data’s security is crucial to us. Here is what we do to protect your data."
