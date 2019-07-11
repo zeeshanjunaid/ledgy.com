@@ -108,9 +108,9 @@ const Testimonial = ({
     >
       <Img {...img} alt={name} />
     </div>
-    <div className="d-flex flex-column justify-content-between mt-4">
+    <div className="d-flex flex-column justify-content-between mt-4 h-100">
       <div className="testimonial-description">{description}</div>
-      <small className="text-light">{name}</small>
+      <small className="text-light mt-4">{name}</small>
     </div>
   </div>
 );

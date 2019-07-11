@@ -332,14 +332,6 @@ h1 {
     }
   }
 }
-.testimonial-description {
-  @include media-breakpoint-up(lg) {
-    height: 200px
-  }
-  @include media-breakpoint-up(xl) {
-    height: 160px
-  }
-}
 
 .testimonial-description::before {
   content: '“';
