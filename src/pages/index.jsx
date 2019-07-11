@@ -100,7 +100,7 @@ const Testimonial = ({
   col: number
 }) => (
   <div
-    className={`testimonial col-lg-${col} d-flex flex-column justify-content-start align-items-center`}
+    className={`testimonial col-lg-${col} d-flex flex-column justify-content-start align-items-center mb-4 mb-lg-0`}
   >
     <div
       className="d-flex align-items-center justify-content-center mt-4"
@@ -108,15 +108,15 @@ const Testimonial = ({
     >
       <Img {...img} alt={name} />
     </div>
-    <div className="d-flex flex-column justify-content-between mt-4" style={{ height: '150px' }}>
+    <div className="d-flex flex-column justify-content-between mt-4 h-100">
       <div className="testimonial-description">{description}</div>
-      <small className="text-light">{name}</small>
+      <small className="text-light mt-4">{name}</small>
     </div>
   </div>
 );
 
 const Reference = ({ img, name }: { img: Object, name: string }) => (
-  <div className="col-6 col-lg-3 pb-6 pb-lg-0">
+  <div className="col-12 col-md-6 col-lg-3 pb-6 pb-lg-0">
     <div className="d-flex justify-content-center">
       <Img {...img} alt={name} />
     </div>
@@ -143,7 +143,7 @@ const IndexPage = (props: Props) => (
             </p>
           </header>
 
-          <div className="my-8" />
+          <div className="my-6 my-lg-8" />
 
           <div className="row align-content-center">
             <Reference img={props.data.viu} name="VIU Eyeware" />
@@ -154,20 +154,9 @@ const IndexPage = (props: Props) => (
 
           <Hr marginX={10} />
 
-          <div className="row text-center">
+          <div className="row text-center justify-content-between">
             <Testimonial
-              col={6}
-              name="Tobias Gunzenhauser, CEO, Yamo"
-              img={props.data.yamo}
-              description={
-                <Trans>
-                  I needed exactly that. Every founder should use Ledgy’s modeling tools for
-                  financing rounds!
-                </Trans>
-              }
-            />
-            <Testimonial
-              col={6}
+              col={4}
               name="Christian Menzi, Sherpany"
               img={props.data.sherpany}
               description={
@@ -177,9 +166,31 @@ const IndexPage = (props: Props) => (
                 </Trans>
               }
             />
+            <Testimonial
+              col={4}
+              name="Laurent Grandidier, former CEO @ Xeltis"
+              img={props.data.xeltis}
+              description={
+                <Trans>
+                  We started to use Ledgy’s solution while preparing a large and complex series C.
+                  It saved significant amount of time and headaches.
+                </Trans>
+              }
+            />
+            <Testimonial
+              col={4}
+              name="Tobias Gunzenhauser, CEO @ Yamo"
+              img={props.data.yamo}
+              description={
+                <Trans>
+                  I needed exactly that. Every founder should use Ledgy’s modeling tools for
+                  financing rounds!
+                </Trans>
+              }
+            />
           </div>
 
-          <div className="mx-auto text-center pt-8 pb-4">
+          <div className="mx-auto text-center pt-4 pt-lg-8 pb-4">
             <Link
               href
               to={`${props.prefix}/features/`}
@@ -217,6 +228,11 @@ export const pageQuery = graphql`
     }
     cryptofinance: imageSharp(fluid: { originalName: { regex: "/cryptofinance/" } }) {
       fixed(width: 180) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+    xeltis: imageSharp(fluid: { originalName: { regex: "/xeltis/" } }) {
+      fixed(width: 150) {
         ...GatsbyImageSharpFixed
       }
     }
