@@ -111,7 +111,9 @@ export const getWholeTeam = (props: Props): { [string]: AuthorProps } => ({
     role: 'Business Development & Sailor',
     description: (
       <Trans>
-        Spela found her passion for business development through her experiences co-founding a startup, and as an early employee at a SaaS company. She holds a Waldorf teaching diploma, and a Master’s degree in Pharmacy.
+        Spela found her passion for business development through her experiences co-founding a
+        startup, and as an early employee at a SaaS company. She holds a Waldorf teaching diploma,
+        and a Master’s degree in Pharmacy.
       </Trans>
     ),
     twitter: 'https://twitter.com/spelzi',
