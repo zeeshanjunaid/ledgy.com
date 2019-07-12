@@ -43,7 +43,7 @@ export default ({ data, lang, prefix }: Props) => {
           <div className="row">
             <div className="col-12 col-lg-8 offset-lg-2">
               <h1>{frontmatter.title}</h1>
-              <LanguageHint lang={lang} documentLang={frontmatter.language} />
+              <LanguageHint lang={lang} documentLang={frontmatter.language || 'en'} />
             </div>
           </div>
         </div>
