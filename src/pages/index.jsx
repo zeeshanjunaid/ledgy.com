@@ -8,7 +8,16 @@ import sample from 'lodash/sample';
 
 import { FeatureLinks } from '../components/Feature';
 import SecurityRow from '../components/SecurityRow';
-import { demoUrl, targetBlank, Hr, appUrl, trackSignup } from '../layouts/utils';
+import {
+  demoUrl,
+  targetBlank,
+  Hr,
+  appUrl,
+  trackSignup,
+  forbesUrl,
+  economistUrl,
+  wirtschaftswocheUrl
+} from '../layouts/utils';
 
 const experiments = [
   {
@@ -123,6 +132,23 @@ const Reference = ({ img, name }: { img: Object, name: string }) => (
   </div>
 );
 
+const AsFeaturedIn = (props: Props) => (
+  <div className="black-and-white d-flex flex-column flex-md-row justify-content-center align-items-center">
+    <span className="m-6">
+      <Trans>As featured in</Trans>
+    </span>
+    <a href={forbesUrl} {...targetBlank}>
+      <Img {...props.data.forbes} alt="Forbes DACH" className="m-4" />
+    </a>
+    <a href={wirtschaftswocheUrl} {...targetBlank}>
+      <Img {...props.data.wirtschaftsWoche} alt="Wirtschafts Woche" className="m-4" />
+    </a>
+    <a href={economistUrl} {...targetBlank}>
+      <Img {...props.data.theEconomist} alt="The Economist" className="m-4" />
+    </a>
+  </div>
+);
+
 const IndexPage = (props: Props) => (
   <div>
     <Header {...props} />
@@ -201,8 +227,10 @@ const IndexPage = (props: Props) => (
           </div>
 
           <Hr />
-
           <SecurityRow {...props} />
+
+          <Hr />
+          <AsFeaturedIn {...props} />
         </div>
       </section>
     </main>
@@ -253,6 +281,21 @@ export const pageQuery = graphql`
     }
     yamo: imageSharp(fluid: { originalName: { regex: "/yamo/" } }) {
       fixed(width: 70) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+    forbes: imageSharp(fluid: { originalName: { regex: "/forbes/" } }) {
+      fixed(width: 110) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+    theEconomist: imageSharp(fluid: { originalName: { regex: "/the-economist/" } }) {
+      fixed(width: 120) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+    wirtschaftsWoche: imageSharp(fluid: { originalName: { regex: "/wirtschafts-woche/" } }) {
+      fixed(width: 110) {
         ...GatsbyImageSharpFixed
       }
     }

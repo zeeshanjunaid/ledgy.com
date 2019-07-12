@@ -9,6 +9,11 @@ export const name = 'Ledgy';
 export const appUrl = 'https://app.ledgy.com';
 export const demoUrl = 'https://demo.ledgy.com';
 export const githubUrl = 'https://github.com/morloy/ledgy.com/';
+export const forbesUrl = 'https://www.forbesdach.com/30-under-30.html';
+export const economistUrl =
+  'https://www.economist.com/business/2019/07/06/new-firms-help-startups-keep-track-of-their-owners';
+export const wirtschaftswocheUrl =
+  'https://gruender.wiwo.de/ledgy-plattform-fuer-beteiligungsmanagement-erhaelt-anschubfinanzierung/';
 
 export const targetBlank = { target: '_blank', rel: 'noopener noreferrer' };
 

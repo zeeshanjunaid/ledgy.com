@@ -137,6 +137,10 @@ msgstr "En tant que startup, fais preuve de professionnalisme à l’égard de t
 msgid "As easy as copying and pasting stakeholders, shares issues, or options"
 msgstr "Aussi simple que de copier-coller des actionnaires, des émissions d’actions ou d’options"
 
+#: src/pages/index.jsx:129
+msgid "As featured in"
+msgstr "Tel que présenté dans"
+
 #: src/pages/features.jsx:94
 msgid "Assess the impact of liquidation preferences with waterfall analysis and breakpoint charts"
 msgstr "Évalue l’impact des préférences de liquidation à l’aide d’une analyse en cascade et de tableaux de points de rupture"
@@ -527,7 +531,7 @@ msgstr "Fonctionalités"
 msgid "Featuring unlimited share classes, treasury shares, pooled investments, and automatic share numbering"
 msgstr "Avec un nombre illimité de catégories d’actions, d’actions autodétenues, de placements collectifs et de numérotation automatique des actions"
 
-#: src/pages/index.jsx:163
+#: src/pages/index.jsx:174
 msgid "Finally, I have a reliable overview of all our shares, employee grants, and their legal documents. So much better than the Excel I used before."
 msgstr "Enfin, j’ai une vue d’ensemble fiable de toutes nos actions, des attributions aux employés et de leurs documents juridiques. Tellement mieux que l’Excel que j’utilisais avant."
 
@@ -537,7 +541,7 @@ msgstr "Enfin, j’ai une vue d’ensemble fiable de toutes nos actions, des att
 msgid "Financing round modeling"
 msgstr "Modélisation"
 
-#: src/pages/index.jsx:199
+#: src/pages/index.jsx:210
 msgid "Find out why they trust us"
 msgstr "Découvre pourquoi ils nous font confiance"
 
@@ -654,7 +658,7 @@ msgstr "Confirmations de possession"
 msgid "How we protect your information"
 msgstr "Comment nous protégeons tes données personnelles"
 
-#: src/pages/index.jsx:185
+#: src/pages/index.jsx:196
 msgid "I needed exactly that. Every founder should use Ledgy’s modeling tools for financing rounds!"
 msgstr "C’est exactement ce dont j’avais besoin. Tous les fondateurs devraient utiliser les outils de modélisation de Ledgy pour leurs levées de fonds!"
 
@@ -725,7 +729,7 @@ msgstr "Invite tes employés à suivre leur part et leur vesting dans leur porte
 msgid "Jahlela has a background in cognitive neuroscience, graduated from UC Berkeley, and founded a few startups before switching to full-time software engineering"
 msgstr "Jahlela a une formation en neurosciences cognitives, est diplômée de l’Université de Berkeley et a fondé quelques start-ups avant de passer au génie logiciel à plein temps"
 
-#: src/pages/index.jsx:137
+#: src/pages/index.jsx:148
 msgid "Join hundreds of companies"
 msgstr "Rejoins des centaines d’entreprises"
 
@@ -1421,9 +1425,9 @@ msgstr "Nous respectons les normes de sécurité les plus élevées. Nous les am
 msgid "We operate a <0>bug bounty</0> program on Federacy. Write us a message for an invitation."
 msgstr "Nous avons un programme <0>bug bounty</0> sur Federacy. Ecris-nous pour recevoir une invitation."
 
-#: src/pages/index.jsx:174
+#: src/pages/index.jsx:185
 msgid "We started to use Ledgy’s solution while preparing a large and complex series C. It saved significant amount of time and headaches."
-msgstr "Nous avons commencé à utiliser Ledgy tout en préparant une grande et complexe série C. Cela a permis d'économiser beaucoup de temps et d'éviter des maux de tête considérables."
+msgstr "Nous avons commencé à utiliser Ledgy tout en préparant une grande et complexe série C. Cela a permis d’économiser beaucoup de temps et d’éviter des maux de tête considérables."
 
 #: src/pages/security.jsx:50
 msgid "We understand how sensitive equity information is for any business. That’s why your privacy and your data’s security is crucial to us. Here is what we do to protect your data."
@@ -1514,7 +1518,7 @@ msgstr "pour que tu puisse contrôler ce que les autres peuvent voir et faire"
 msgid "stopping the spreadsheet mess"
 msgstr "l’arrêt du désordre des feuilles de calcul"
 
-#: src/pages/index.jsx:140
+#: src/pages/index.jsx:151
 msgid "that already use Ledgy for their equity management and investor relations"
 msgstr "qui utilisent déjà Ledgy pour la gestion de leurs actions et leurs relations avec les investisseurs"
 

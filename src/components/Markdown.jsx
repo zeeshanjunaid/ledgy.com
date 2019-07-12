@@ -33,7 +33,7 @@ const About = ({ about, img }: {| about: AuthorProps, img: Object |}) => (
   </div>
 );
 
-export const Author = ({ name, ...props }: { name: string }) => {
+export const Author = ({ name, ...props }: {| name: string, ...Props |}) => {
   const team = getWholeTeam(props);
   return (
     <StaticQuery

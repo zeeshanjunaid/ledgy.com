@@ -136,6 +136,10 @@ msgstr "Als Startup, sei professionell gegenüber den Investoren, verfolge KPIs 
 msgid "As easy as copying and pasting stakeholders, shares issues, or options"
 msgstr "Ganz einfach Stakeholder, Emissionen oder Optionen aus Excel kopieren und einfügen"
 
+#: src/pages/index.jsx:129
+msgid "As featured in"
+msgstr "Erschienen in"
+
 #: src/pages/features.jsx:94
 msgid "Assess the impact of liquidation preferences with waterfall analysis and breakpoint charts"
 msgstr "Analysiere die Auswirkungen von Liquidationspräferenzen mit Wasserfall- und Breakpoint-Analysen"
@@ -526,7 +530,7 @@ msgstr "Funktionen"
 msgid "Featuring unlimited share classes, treasury shares, pooled investments, and automatic share numbering"
 msgstr "Mit beliebig vielen Anteilsklassen, Treasury Anteilen, gepoolten Investitionen und automatischer Aktiennummerierung"
 
-#: src/pages/index.jsx:163
+#: src/pages/index.jsx:174
 msgid "Finally, I have a reliable overview of all our shares, employee grants, and their legal documents. So much better than the Excel I used before."
 msgstr "Endlich habe ich eine zuverlässige Übersicht über all unsere Aktien, Mitarbeiterdarlehen und die rechtlichen Dokumente dazu. Das ist so viel besser als Excel, das ich früher benutzt habe."
 
@@ -536,7 +540,7 @@ msgstr "Endlich habe ich eine zuverlässige Übersicht über all unsere Aktien, 
 msgid "Financing round modeling"
 msgstr "Modellierung von Runden"
 
-#: src/pages/index.jsx:199
+#: src/pages/index.jsx:210
 msgid "Find out why they trust us"
 msgstr "Warum sie uns vertrauen"
 
@@ -653,7 +657,7 @@ msgstr "Besitzbestätigungen"
 msgid "How we protect your information"
 msgstr "Wie wir deine Informationen schützen"
 
-#: src/pages/index.jsx:185
+#: src/pages/index.jsx:196
 msgid "I needed exactly that. Every founder should use Ledgy’s modeling tools for financing rounds!"
 msgstr "Genau das hat mir gefehlt. Jeder Gründer sollte Ledgys Modellierungswerkzeug für Finanzierungsrunden benutzen!"
 
@@ -724,7 +728,7 @@ msgstr "Lade deine Mitarbeiter dazu ein, ihre Beteiligung und Vesting-Pläne in 
 msgid "Jahlela has a background in cognitive neuroscience, graduated from UC Berkeley, and founded a few startups before switching to full-time software engineering"
 msgstr "Jahlela hat einen Hintergrund in kognitiven Neurowissenschaften, hat an der UC Berkeley studiert und einige Start-ups gegründet, bevor sie zu Vollzeit zur Software-Entwicklung überging"
 
-#: src/pages/index.jsx:137
+#: src/pages/index.jsx:148
 msgid "Join hundreds of companies"
 msgstr "Schliesse dich hunderten Startups an"
 
@@ -1420,7 +1424,7 @@ msgstr "Wir erfüllen die höchsten Sicherheitsstandards. Und verbessern sie kon
 msgid "We operate a <0>bug bounty</0> program on Federacy. Write us a message for an invitation."
 msgstr "Wir betreiben ein <0>Bug Bounty</0>-Programm auf Federacy. Schreib’ uns eine Nachricht, um eine Einladung zu erhalten."
 
-#: src/pages/index.jsx:174
+#: src/pages/index.jsx:185
 msgid "We started to use Ledgy’s solution while preparing a large and complex series C. It saved significant amount of time and headaches."
 msgstr "Wir haben Ledgy zum ersten Mal bei der Vorbereitung einer komplexen Series C Runde verwendet. Es hat uns viel Zeit und Kopfschmerzen gespaart."
 
@@ -1515,7 +1519,7 @@ msgstr "du kontrollierst, was andere sehen und bearbeiten können"
 msgid "stopping the spreadsheet mess"
 msgstr "stoppe das Durcheinander in Tabellendokumenten"
 
-#: src/pages/index.jsx:140
+#: src/pages/index.jsx:151
 msgid "that already use Ledgy for their equity management and investor relations"
 msgstr "die Ledgy bereits für ihre Beteiligungen und Investor Relations nutzen"
 
