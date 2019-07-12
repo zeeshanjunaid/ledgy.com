@@ -133,8 +133,8 @@ const Reference = ({ img, name }: { img: Object, name: string }) => (
 );
 
 const AsFeaturedIn = (props: Props) => (
-  <div className="black-and-white d-flex justify-content-center align-items-center">
-    <span className="mr-6">
+  <div className="black-and-white d-flex flex-column flex-md-row justify-content-center align-items-center">
+    <span className="m-6">
       <Trans>As featured in</Trans>
     </span>
     <a href={forbesUrl} {...targetBlank}>
