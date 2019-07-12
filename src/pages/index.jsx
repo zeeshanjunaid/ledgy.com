@@ -8,7 +8,16 @@ import sample from 'lodash/sample';
 
 import { FeatureLinks } from '../components/Feature';
 import SecurityRow from '../components/SecurityRow';
-import { demoUrl, targetBlank, Hr, appUrl, trackSignup } from '../layouts/utils';
+import {
+  demoUrl,
+  targetBlank,
+  Hr,
+  appUrl,
+  trackSignup,
+  forbesUrl,
+  economistUrl,
+  wirtschaftswocheUrl
+} from '../layouts/utils';
 
 const experiments = [
   {
@@ -128,9 +137,15 @@ const AsFeaturedIn = (props: Props) => (
     <span className="mr-6">
       <Trans>As featured in</Trans>
     </span>
-    <Img {...props.data.forbes} alt="Forbes DACH" className="m-4" />
-    <Img {...props.data.wirtschaftsWoche} alt="Wirtschafts Woche" className="m-4" />
-    <Img {...props.data.theEconomist} alt="The Economist" className="m-4" />
+    <a href={forbesUrl} {...targetBlank}>
+      <Img {...props.data.forbes} alt="Forbes DACH" className="m-4" />
+    </a>
+    <a href={wirtschaftswocheUrl} {...targetBlank}>
+      <Img {...props.data.wirtschaftsWoche} alt="Wirtschafts Woche" className="m-4" />
+    </a>
+    <a href={economistUrl} {...targetBlank}>
+      <Img {...props.data.theEconomist} alt="The Economist" className="m-4" />
+    </a>
   </div>
 );
 
