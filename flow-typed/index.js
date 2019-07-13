@@ -11,4 +11,14 @@ declare type Props = {|
   data: Object
 |};
 
+declare type Page = {|
+  title: string,
+  description: string,
+  date?: Date,
+  author?: string,
+  markdown: { childMdx: { code: { body: string } } },
+  name: string,
+  language: 'en' | 'de' | 'fr'
+|};
+
 declare var graphql: any;

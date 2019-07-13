@@ -1,7 +1,5 @@
 const path = require('path');
 
-const { createFilePath } = require('gatsby-source-filesystem');
-
 const { languages, defaultLanguage } = require('./src/i18n-config');
 
 exports.onCreatePage = async ({ page, actions }) => {
@@ -24,18 +22,6 @@ exports.onCreatePage = async ({ page, actions }) => {
   });
 };
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
-  const { createNodeField } = actions;
-  if (node.internal.type === 'Mdx') {
-    const slug = createFilePath({ node, getNode, basePath: 'markdown' });
-    createNodeField({
-      node,
-      name: 'slug',
-      value: slug
-    });
-  }
-};
-
 exports.createPages = ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions;
   [
@@ -56,39 +42,25 @@ exports.createPages = ({ graphql, actions }) => {
   });
 
   const component = path.resolve('./src/layouts/markdown.jsx');
-  return new Promise((resolve, reject) => {
+  return new Promise(resolve => {
     graphql(`
       {
-        allMdx {
+        allContentfulBlog(limit: 1000) {
           edges {
             node {
-              id
-              fields {
-                slug
-              }
+              name
             }
           }
         }
       }
     `).then(result => {
-      if (result.errors) {
-        console.error(result.errors); // eslint-disable-line no-console
-        reject(result.errors);
-      }
-      result.data.allMdx.edges.forEach(({ node }) => {
-        const { slug } = node.fields;
-        createPage({
-          path: slug,
-          component,
-          context: { id: node.id }
-        });
-        languages.forEach(lang =>
-          createPage({
-            path: `/${lang}${slug}`,
-            component,
-            context: { id: node.id }
-          })
-        );
+      if (result.errors) throw result.errors;
+
+      result.data.allContentfulBlog.edges.forEach(({ node }) => {
+        console.log(node);
+        const { name } = node;
+        createPage({ path: name, component });
+        languages.forEach(lang => createPage({ path: `/${lang}/${name}`, component }));
       });
       resolve();
     });

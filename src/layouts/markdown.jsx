@@ -11,8 +11,9 @@ import { MDXProvider } from '@mdx-js/react';
 import { Author, Image, type ImageProps, LanguageHint } from '../components/Markdown';
 import { Title, githubUrl, targetBlank } from '../layouts/utils';
 
-export default ({ data, lang, prefix }: Props) => {
-  const { frontmatter, code, fields } = data.mdx;
+export default ({ data, lang, prefix }: {| ...Props, data: {| contentfulBlog: Page |} |}) => {
+  const { title, description, language, markdown, author } = data.contentfulBlog;
+  const frontmatter = {};
   const { siteUrl } = data.site.siteMetadata;
 
   const img = (props: ImageProps) => (
@@ -30,8 +31,8 @@ export default ({ data, lang, prefix }: Props) => {
   return (
     <div>
       <Title
-        title={frontmatter.title}
-        description={frontmatter.description}
+        title={title}
+        description={description}
         thumbnailUrl={
           frontmatter.coverImage
             ? `${siteUrl}${frontmatter.coverImage.childImageSharp.fixed.src}`
@@ -42,8 +43,8 @@ export default ({ data, lang, prefix }: Props) => {
         <div className="container text-center">
           <div className="row">
             <div className="col-12 col-lg-8 offset-lg-2">
-              <h1>{frontmatter.title}</h1>
-              <LanguageHint lang={lang} documentLang={frontmatter.language || 'en'} />
+              <h1>{title}</h1>
+              <LanguageHint lang={lang} documentLang={language || 'en'} />
             </div>
           </div>
         </div>
@@ -52,23 +53,11 @@ export default ({ data, lang, prefix }: Props) => {
         <section className="section">
           <div className="container container-small">
             <div className="markdown clearfix">
-              <MDXProvider components={{ Img: img }}>
-                <MDXRenderer>{code.body}</MDXRenderer>
+              <MDXProvider>
+                <MDXRenderer>{markdown.childMdx.code.body}</MDXRenderer>
               </MDXProvider>
             </div>
-            <div className="d-flex py-4">
-              {frontmatter.date && <small>{frontmatter.date}</small>}
-              <small className="ml-auto">
-                <a
-                  href={`${githubUrl}edit/master/src/markdown${fields.slug.slice(0, -1)}.mdx`}
-                  {...targetBlank}
-                >
-                  <FontAwesomeIcon icon={faPen} className="fs-12 mr-2" />
-                  <Trans>Suggest changes</Trans>
-                </a>
-              </small>
-            </div>
-            {frontmatter.author && <Author prefix={prefix} name={frontmatter.author} />}
+            {author && <Author prefix={prefix} name={author} />}
           </div>
         </section>
       </main>
@@ -78,36 +67,20 @@ export default ({ data, lang, prefix }: Props) => {
 
 export const pageQuery = graphql`
   query($id: String) {
-    mdx(id: { eq: $id }) {
+    contentfulBlog(id: { eq: $id }) {
       id
-      fields {
-        slug
-      }
-      frontmatter {
-        title
-        description
-        language
-        author
-        date(formatString: "DD MMM YYYY")
-        coverImage {
-          childImageSharp {
-            fixed(width: 1024, height: 536) {
-              src
-            }
+      name
+      title
+      description
+      language
+      date
+      author
+      markdown {
+        childMdx {
+          code {
+            body
           }
         }
-        images {
-          publicURL
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-              originalName
-            }
-          }
-        }
-      }
-      code {
-        body
       }
     }
     site {

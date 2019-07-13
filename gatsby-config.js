@@ -18,7 +18,14 @@ module.exports = {
     'gatsby-plugin-nprogress',
     'gatsby-plugin-sitemap',
     { resolve: 'gatsby-source-filesystem', options: { name: 'img', path: `${src}/img` } },
-    { resolve: 'gatsby-source-filesystem', options: { name: 'markdown', path: `${src}/markdown` } },
+    {
+      resolve: 'gatsby-source-contentful',
+      options: {
+        spaceId: 'ojxc8xtj0owo',
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        host: 'preview.contentful.com'
+      }
+    },
     {
       resolve: 'gatsby-mdx',
       options: {
