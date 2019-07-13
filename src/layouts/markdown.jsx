@@ -2,14 +2,11 @@
 
 import React from 'react';
 import { graphql } from 'gatsby';
-import { Trans } from '@lingui/react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPen } from '@fortawesome/free-solid-svg-icons';
 import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 import { MDXProvider } from '@mdx-js/react';
 
 import { Author, Image, type ImageProps, LanguageHint } from '../components/Markdown';
-import { Title, githubUrl, targetBlank } from '../layouts/utils';
+import { Title } from '../layouts/utils';
 
 export default ({ data, lang, prefix }: {| ...Props, data: {| contentfulBlog: Page |} |}) => {
   const { title, description, language, markdown, author } = data.contentfulBlog;
@@ -53,7 +50,7 @@ export default ({ data, lang, prefix }: {| ...Props, data: {| contentfulBlog: Pa
         <section className="section">
           <div className="container container-small">
             <div className="markdown clearfix">
-              <MDXProvider>
+              <MDXProvider components={{ Img: img }}>
                 <MDXRenderer>{markdown.childMdx.code.body}</MDXRenderer>
               </MDXProvider>
             </div>
