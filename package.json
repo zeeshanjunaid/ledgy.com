@@ -10,7 +10,7 @@
     "compile": "lingui compile",
     "build": "lingui compile && gatsby build",
     "serve": "npm run build && gatsby serve",
-    "start": "lingui compile && gatsby develop",
+    "start": "lingui compile && gatsby develop --port 8080",
     "test": "npm run extract && lingui compile --strict && eslint . --ext jsx,js && flow",
     "extract": "lingui extract --clean",
     "edit": "micro -l tcp://0.0.0.0:$(((RANDOM % 65535)+1025)) flask_editor.js"
