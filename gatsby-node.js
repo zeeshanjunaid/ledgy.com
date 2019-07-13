@@ -57,7 +57,6 @@ exports.createPages = ({ graphql, actions }) => {
       if (result.errors) throw result.errors;
 
       result.data.allContentfulBlog.edges.forEach(({ node }) => {
-        console.log(node);
         const { name } = node;
         createPage({ path: name, component });
         languages.forEach(lang => createPage({ path: `/${lang}/${name}`, component }));
