@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { graphql } from 'gatsby';
-import MDXRenderer from 'gatsby-mdx/mdx-renderer';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
 
 import { Author, Image, type ImageProps, LanguageHint } from '../components/Markdown';
@@ -51,7 +51,7 @@ export default ({ data, lang, prefix }: {| ...Props, data: {| contentfulBlog: Pa
           <div className="container container-small">
             <div className="markdown clearfix">
               <MDXProvider components={{ Img: img }}>
-                <MDXRenderer>{markdown.childMdx.code.body}</MDXRenderer>
+                <MDXRenderer>{markdown.childMdx.body}</MDXRenderer>
               </MDXProvider>
             </div>
             {author && <Author prefix={prefix} name={author} />}
@@ -74,9 +74,7 @@ export const pageQuery = graphql`
       author
       markdown {
         childMdx {
-          code {
-            body
-          }
+          body
         }
       }
     }

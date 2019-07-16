@@ -28,13 +28,8 @@ module.exports = {
       }
     },
     {
-      resolve: 'gatsby-mdx',
-      options: {
-        gatsbyRemarkPlugins: [
-          { resolve: 'gatsby-remark-katex' },
-          { resolve: 'gatsby-remark-prismjs' }
-        ]
-      }
+      resolve: 'gatsby-plugin-mdx',
+      options: { gatsbyRemarkPlugins: ['gatsby-remark-katex', 'gatsby-remark-prismjs'] }
     },
     'gatsby-plugin-catch-links',
     {
