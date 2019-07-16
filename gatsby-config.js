@@ -67,7 +67,7 @@ module.exports = {
             "font-src 'self' data: https://fonts.gstatic.com",
             "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://wchat.eu.freshchat.com/js/ https://snippets.freshchat.com/js/ https://www.googletagmanager.com/ https://www.google-analytics.com/ https://sjs.bizographics.com/ https://maps.googleapis.com/ https://www.linkedin.com/px/ https://px.ads.linkedin.com/",
             "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ https://wchat.eu.freshchat.com/css/ https://snippets.freshchat.com/css/ https://maps.googleapis.com/maps/api/",
-            "frame-src 'self' https://wchat.eu.freshchat.com/ https://ledgy.eu.webpush.freshchat.com/"
+            "frame-src 'self' https://wchat.eu.freshchat.com/ https://ledgy.eu.webpush.freshchat.com/ https://www.loom.com/"
           ].join('; '),
           'Referrer-Policy: strict-origin-when-cross-origin'
         ]
