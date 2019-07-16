@@ -22,7 +22,10 @@ const PostLink = ({
       <div className="row">
         <div className="col-md-3">
           <Link href to={to}>
-            <Img className="fit-cover" {...post.cover || defaultImage} />
+            <Img
+              className="fit-cover"
+              {...(post.cover ? post.cover.localFile.childImageSharp : defaultImage)}
+            />
           </Link>
         </div>
         <div className="col-md-9 p-5">
@@ -101,8 +104,10 @@ export const pageQuery = graphql`
           language
           date(formatString: "DD MMM YYYY")
           cover {
-            fluid(maxWidth: 200, maxHeight: 200, cropFocus: CENTER) {
-              ...GatsbyContentfulFluid
+            localFile {
+              childImageSharp {
+                ...CoverImage
+              }
             }
           }
         }
