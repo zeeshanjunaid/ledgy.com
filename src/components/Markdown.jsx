@@ -8,7 +8,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
-import { getUrlParams } from '../layouts/utils';
 import { getWholeTeam, getTeamImages, type AuthorProps } from '../layouts/team';
 
 const About = ({ about, img }: {| about: AuthorProps, img: Object |}) => (
@@ -40,7 +39,13 @@ export const Author = ({ name, prefix }: {| name: string, prefix: string |}) => 
   return <About about={team[name]} img={images[name]} />;
 };
 
-export const Image = ({ alt, src }: {| alt: string, src: string |}) => {
+export const getImageParams = (params?: string): { [string]: string } =>
+  (params || '').split(' ').reduce((res, v) => {
+    const [key, value] = v.split('=');
+    return { ...res, [key]: value };
+  }, {});
+
+export const Image = ({ alt, src, title }: {| alt: string, src: string, title?: string |}) => {
   const data = useStaticQuery(graphql`
     query {
       allContentfulAsset(limit: 1000) {
@@ -60,7 +65,7 @@ export const Image = ({ alt, src }: {| alt: string, src: string |}) => {
   `);
   const contentfulId = src.split('/')[4];
   const record = data.allContentfulAsset.nodes.find(v => v.contentful_id === contentfulId);
-  const { align, w } = getUrlParams(src);
+  const { align, w } = getImageParams(title);
   const img = record.localFile.childImageSharp;
   return (
     <figure

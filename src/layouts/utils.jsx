@@ -30,12 +30,6 @@ export const trackSignup = (type: string = 'clickSignup') => {
   if (window.ga) window.ga('send', 'event', 'signup', type);
 };
 
-export const getUrlParams = (url: string): { [string]: string } =>
-  (url.split('?')[1] || '').split('&').reduce((res, v) => {
-    const [key, value] = v.split('=');
-    return { ...res, [key]: value };
-  }, {});
-
 export const Title = (props: {
   title: string,
   section?: string,
