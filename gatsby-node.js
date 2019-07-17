@@ -60,7 +60,7 @@ exports.createPages = ({ graphql, actions }) => {
 
       result.data.allContentfulPage.edges.forEach(({ node }) => {
         const { id, slug, namespace } = node;
-        const pagePath = `${namespace}/${slug}/`;
+        const pagePath = `${namespace}${slug}/`;
         const context = { id };
         createPage({ path: pagePath, component, context });
         languages.forEach(lang => createPage({ path: `/${lang}${pagePath}`, component, context }));
