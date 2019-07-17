@@ -16,7 +16,7 @@ const PostLink = ({
   prefix: string,
   defaultImage: Object
 }) => {
-  const to = `${prefix}/${post.name}`;
+  const to = `${prefix}/${post.slug}`;
   return (
     <div className="card hover-shadow-5 bg-pale-secondary mb-5">
       <div className="row">
@@ -70,7 +70,7 @@ export default withI18n()(({ i18n, data, prefix }: Props) => (
     <main className="main-content">
       <section className="section">
         <div className="container">
-          {data.allContentfulBlog.edges.map(edge => (
+          {data.allContentfulPage.edges.map(edge => (
             <PostLink
               key={edge.node.id}
               post={edge.node}
@@ -94,11 +94,11 @@ export const pageQuery = graphql`
     ledgy: imageSharp(fluid: { originalName: { regex: "/ledgy.png/" } }) {
       ...CoverImage
     }
-    allContentfulBlog(sort: { order: DESC, fields: [date] }) {
+    allContentfulPage(sort: { order: DESC, fields: [date] }) {
       edges {
         node {
           id
-          name
+          slug
           title
           description
           language

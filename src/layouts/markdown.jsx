@@ -14,9 +14,9 @@ export default ({
   prefix
 }: {|
   ...Props,
-  data: {| contentfulBlog: Page, site: { siteMetadata: { siteUrl: string } } |}
+  data: {| contentfulPage: Page, site: { siteMetadata: { siteUrl: string } } |}
 |}) => {
-  const { title, description, language, markdown, author } = data.contentfulBlog;
+  const { title, description, language, content, author } = data.contentfulPage;
   const frontmatter = {};
   const { siteUrl } = data.site.siteMetadata;
 
@@ -46,7 +46,7 @@ export default ({
           <div className="container container-small">
             <div className="markdown clearfix">
               <MDXProvider components={{ img: Image }}>
-                <MDXRenderer>{markdown.childMdx.body}</MDXRenderer>
+                <MDXRenderer>{content.childMdx.body}</MDXRenderer>
               </MDXProvider>
             </div>
             {author && <Author prefix={prefix} name={author} />}
@@ -59,14 +59,14 @@ export default ({
 
 export const pageQuery = graphql`
   query($id: String!) {
-    contentfulBlog(id: { eq: $id }) {
-      name
+    contentfulPage(id: { eq: $id }) {
+      slug
       title
       description
       language
       date
       author
-      markdown {
+      content {
         childMdx {
           body
         }

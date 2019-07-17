@@ -45,11 +45,11 @@ exports.createPages = ({ graphql, actions }) => {
   return new Promise(resolve => {
     graphql(`
       {
-        allContentfulBlog(limit: 1000) {
+        allContentfulPage(limit: 1000) {
           edges {
             node {
               id
-              name
+              slug
             }
           }
         }
@@ -57,11 +57,11 @@ exports.createPages = ({ graphql, actions }) => {
     `).then(result => {
       if (result.errors) throw result.errors;
 
-      result.data.allContentfulBlog.edges.forEach(({ node }) => {
-        const { name, id } = node;
+      result.data.allContentfulPage.edges.forEach(({ node }) => {
+        const { slug, id } = node;
         const context = { id };
-        createPage({ path: name, component, context });
-        languages.forEach(lang => createPage({ path: `/${lang}/${name}`, component, context }));
+        createPage({ path: slug, component, context });
+        languages.forEach(lang => createPage({ path: `/${lang}/${slug}`, component, context }));
       });
       resolve();
     });
