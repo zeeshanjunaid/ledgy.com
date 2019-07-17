@@ -138,53 +138,59 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
   }
 });
 
+export const TeamFragment = graphql`
+  fragment TeamFragment on Query {
+    ben: imageSharp(fluid: { originalName: { regex: "/ben.jpg/" } }) {
+      fluid(maxWidth: 245, maxHeight: 245) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    yoko: imageSharp(fluid: { originalName: { regex: "/yoko.jpg/" } }) {
+      fluid(maxWidth: 245, maxHeight: 245) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    timo: imageSharp(fluid: { originalName: { regex: "/timo.jpg/" } }) {
+      fluid(maxWidth: 245, maxHeight: 245) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    oriol: imageSharp(fluid: { originalName: { regex: "/uri.jpg/" } }) {
+      fluid(maxWidth: 245, maxHeight: 245) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    jules: imageSharp(fluid: { originalName: { regex: "/jules.jpg/" } }) {
+      fluid(maxWidth: 245, maxHeight: 245) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    marius: imageSharp(fluid: { originalName: { regex: "/marius.jpg/" } }) {
+      fluid(maxWidth: 245, maxHeight: 245) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    jahlela: imageSharp(fluid: { originalName: { regex: "/jahlela.jpg/" } }) {
+      fluid(maxWidth: 245, maxHeight: 245) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    spela: imageSharp(fluid: { originalName: { regex: "/spela.jpg/" } }) {
+      fluid(maxWidth: 245, maxHeight: 245) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    luna: imageSharp(fluid: { originalName: { regex: "/luna.jpg/" } }) {
+      fluid(maxWidth: 245, maxHeight: 245) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+`;
+
 export const getTeamImages = () =>
   useStaticQuery(graphql`
     query {
-      ben: imageSharp(fluid: { originalName: { regex: "/ben.jpg/" } }) {
-        fluid(maxWidth: 245, maxHeight: 245) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-      yoko: imageSharp(fluid: { originalName: { regex: "/yoko.jpg/" } }) {
-        fluid(maxWidth: 245, maxHeight: 245) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-      timo: imageSharp(fluid: { originalName: { regex: "/timo.jpg/" } }) {
-        fluid(maxWidth: 245, maxHeight: 245) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-      oriol: imageSharp(fluid: { originalName: { regex: "/uri.jpg/" } }) {
-        fluid(maxWidth: 245, maxHeight: 245) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-      jules: imageSharp(fluid: { originalName: { regex: "/jules.jpg/" } }) {
-        fluid(maxWidth: 245, maxHeight: 245) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-      marius: imageSharp(fluid: { originalName: { regex: "/marius.jpg/" } }) {
-        fluid(maxWidth: 245, maxHeight: 245) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-      jahlela: imageSharp(fluid: { originalName: { regex: "/jahlela.jpg/" } }) {
-        fluid(maxWidth: 245, maxHeight: 245) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-      spela: imageSharp(fluid: { originalName: { regex: "/spela.jpg/" } }) {
-        fluid(maxWidth: 245, maxHeight: 245) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-      luna: imageSharp(fluid: { originalName: { regex: "/luna.jpg/" } }) {
-        fluid(maxWidth: 245, maxHeight: 245) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+      ...TeamFragment
     }
   `);
