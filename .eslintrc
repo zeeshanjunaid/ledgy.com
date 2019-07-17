@@ -13,12 +13,6 @@
     "browser": true
   },
   "rules": {
-    "object-curly-newline": [
-      "error",
-      {
-        "multiline": true
-      }
-    ],
     "react/require-default-props": "off",
     "prettier/prettier": [
       "error",
