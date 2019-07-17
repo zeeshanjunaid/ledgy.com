@@ -56,7 +56,11 @@ const enterprise = [
   ]
 ];
 
-const PlanFeatures = ({ features }: { features: Array<React.Node | boolean> }) => (
+const PlanFeatures = ({
+  features
+}: {
+  features: Array<[number, React.Node, ?React.Node, ?boolean]>
+}) => (
   <ul>
     {features.map(([i, description, detail, first]) => (
       <Li key={i}>

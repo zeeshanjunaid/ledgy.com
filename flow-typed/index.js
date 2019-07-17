@@ -24,7 +24,8 @@ declare type Page = {|
   author?: string,
   markdown: { childMdx: { body: string } },
   name: string,
-  language: 'en' | 'de' | 'fr'
+  language: 'en' | 'de' | 'fr',
+  cover?: Object
 |};
 
 declare var graphql: any;
