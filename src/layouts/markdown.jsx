@@ -63,9 +63,8 @@ export default ({ data, lang, prefix }: {| ...Props, data: {| contentfulBlog: Pa
 };
 
 export const pageQuery = graphql`
-  query($id: String) {
+  query($id: String!) {
     contentfulBlog(id: { eq: $id }) {
-      id
       name
       title
       description

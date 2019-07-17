@@ -16,7 +16,7 @@ declare type Page = {|
   description: string,
   date?: Date,
   author?: string,
-  markdown: { childMdx: { code: { body: string } } },
+  markdown: { childMdx: { body: string } },
   name: string,
   language: 'en' | 'de' | 'fr'
 |};

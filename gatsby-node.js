@@ -48,6 +48,7 @@ exports.createPages = ({ graphql, actions }) => {
         allContentfulBlog(limit: 1000) {
           edges {
             node {
+              id
               name
             }
           }
@@ -57,9 +58,10 @@ exports.createPages = ({ graphql, actions }) => {
       if (result.errors) throw result.errors;
 
       result.data.allContentfulBlog.edges.forEach(({ node }) => {
-        const { name } = node;
-        createPage({ path: name, component });
-        languages.forEach(lang => createPage({ path: `/${lang}/${name}`, component }));
+        const { name, id } = node;
+        const context = { id };
+        createPage({ path: name, component, context });
+        languages.forEach(lang => createPage({ path: `/${lang}/${name}`, component, context }));
       });
       resolve();
     });
