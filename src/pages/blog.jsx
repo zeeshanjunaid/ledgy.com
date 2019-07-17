@@ -94,7 +94,10 @@ export const pageQuery = graphql`
     ledgy: imageSharp(fluid: { originalName: { regex: "/ledgy.png/" } }) {
       ...CoverImage
     }
-    allContentfulPage(filter: { category: { eq: "blog" } }, sort: { order: DESC, fields: [date] }) {
+    allContentfulPage(
+      filter: { namespace: { eq: "/blog" } }
+      sort: { order: DESC, fields: [date] }
+    ) {
       edges {
         node {
           id

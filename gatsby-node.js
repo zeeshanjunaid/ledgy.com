@@ -50,7 +50,7 @@ exports.createPages = ({ graphql, actions }) => {
             node {
               id
               slug
-              category
+              namespace
             }
           }
         }
@@ -59,8 +59,8 @@ exports.createPages = ({ graphql, actions }) => {
       if (result.errors) throw result.errors;
 
       result.data.allContentfulPage.edges.forEach(({ node }) => {
-        const { id, slug, category } = node;
-        const pagePath = category === 'page' ? slug : `/${category}/${slug}/`;
+        const { id, slug, namespace } = node;
+        const pagePath = `${namespace}/${slug}/`;
         const context = { id };
         createPage({ path: pagePath, component, context });
         languages.forEach(lang => createPage({ path: `/${lang}${pagePath}`, component, context }));
