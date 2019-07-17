@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
+import { getUrlParams } from '../layouts/utils';
 import { getWholeTeam, getTeamImages, type AuthorProps } from '../layouts/team';
 
 const About = ({ about, img }: {| about: AuthorProps, img: Object |}) => (
@@ -39,14 +40,7 @@ export const Author = ({ name, prefix }: {| name: string, prefix: string |}) => 
   return <About about={team[name]} img={images[name]} />;
 };
 
-export type ImageProps = {|
-  id: string,
-  align?: string,
-  caption?: string,
-  size?: string
-|};
-
-export const Image = ({ id, align, caption, size, ...props }: ImageProps) => {
+export const Image = ({ alt, src }: {| alt: string, src: string |}) => {
   const data = useStaticQuery(graphql`
     query {
       allContentfulAsset(limit: 1000) {
@@ -64,18 +58,22 @@ export const Image = ({ id, align, caption, size, ...props }: ImageProps) => {
       }
     }
   `);
-  const record = data.allContentfulAsset.nodes.find(v => v.contentful_id === id);
+  const contentfulId = src.split('/')[4];
+  const record = data.allContentfulAsset.nodes.find(v => v.contentful_id === contentfulId);
+  const { align, w } = getUrlParams(src);
   const img = record.localFile.childImageSharp;
   return (
     <figure
       className={align ? `mx-auto float-md-${align} size-md-small m-6` : 'mx-auto my-6'}
-      style={size ? { width: `${size}px` } : {}}
+      style={w ? { width: `${w}px` } : {}}
     >
       <a href={img.fluid.src} data-provide="lightbox">
-        <Img {...img} {...props} />
+        <Img {...img} />
       </a>
-      {caption && (
-        <figcaption className="text-muted small px-3 font-weight-light mt-1">{caption}</figcaption>
+      {alt && (
+        <figcaption className="text-muted text-center px-4 font-weight-light mt-2">
+          {alt}
+        </figcaption>
       )}
     </figure>
   );

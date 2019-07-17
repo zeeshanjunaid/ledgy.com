@@ -45,7 +45,7 @@ export default ({
         <section className="section">
           <div className="container container-small">
             <div className="markdown clearfix">
-              <MDXProvider components={{ Image }}>
+              <MDXProvider components={{ img: Image }}>
                 <MDXRenderer>{markdown.childMdx.body}</MDXRenderer>
               </MDXProvider>
             </div>

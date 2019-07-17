@@ -29,7 +29,13 @@ module.exports = {
     },
     {
       resolve: 'gatsby-plugin-mdx',
-      options: { gatsbyRemarkPlugins: ['gatsby-remark-katex', 'gatsby-remark-prismjs'] }
+      options: {
+        gatsbyRemarkPlugins: [
+          'gatsby-remark-katex',
+          'gatsby-remark-prismjs',
+          'gatsby-remark-unwrap-images'
+        ]
+      }
     },
     'gatsby-plugin-catch-links',
     {
