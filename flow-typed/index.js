@@ -11,6 +11,12 @@ declare type Props = {|
   data: Object
 |};
 
+declare type LayoutProps = {|
+  ...Props,
+  lang: string,
+  location: { pathname: string }
+|};
+
 declare type Page = {|
   title: string,
   description: string,

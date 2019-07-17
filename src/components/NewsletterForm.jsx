@@ -6,13 +6,7 @@ import 'isomorphic-fetch';
 
 import { trackSignup } from '../layouts/utils';
 
-export default class extends React.Component<
-  Props,
-  {
-    email: string,
-    invalid: boolean
-  }
-> {
+export default class extends React.Component<LayoutProps, { email: string, invalid: boolean }> {
   state = { email: '', invalid: false };
   re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; // eslint-disable-line no-useless-escape
   handleChange = (e: SyntheticInputEvent<HTMLInputElement>) => {
