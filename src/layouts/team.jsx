@@ -14,7 +14,7 @@ export type AuthorProps = {|
   mail: string
 |};
 
-export const getWholeTeam = (props: Props): { [string]: AuthorProps } => ({
+export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
   timo: {
     name: 'Timo Horstschaefer',
     role: 'Co-Founder & CTO',
@@ -127,7 +127,7 @@ export const getWholeTeam = (props: Props): { [string]: AuthorProps } => ({
       <Trans>
         Luna is a model of the Saturn V rocket, which has been to space 13 times, and holds the
         record for largest payload to low Earth orbit. She’s still under construction —{' '}
-        <a href={`${props.prefix}/jobs/`} {...targetBlank}>
+        <a href={`${prefix}/jobs/`} {...targetBlank}>
           Ready to help?
         </a>
       </Trans>

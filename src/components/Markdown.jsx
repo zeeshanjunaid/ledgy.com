@@ -33,8 +33,8 @@ const About = ({ about, img }: {| about: AuthorProps, img: Object |}) => (
   </div>
 );
 
-export const Author = ({ name, ...props }: {| name: string, ...Props |}) => {
-  const team = getWholeTeam(props);
+export const Author = ({ name, prefix }: {| name: string, prefix: string |}) => {
+  const team = getWholeTeam(prefix);
   const images = getTeamImages();
   return <About about={team[name]} img={images[name]} />;
 };
