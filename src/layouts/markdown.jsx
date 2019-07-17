@@ -5,25 +5,20 @@ import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
 
-import { Author, Image, type ImageProps, LanguageHint } from '../components/Markdown';
+import { Author, Image, LanguageHint } from '../components/Markdown';
 import { Title } from '../layouts/utils';
 
-export default ({ data, lang, prefix }: {| ...Props, data: {| contentfulBlog: Page |} |}) => {
+export default ({
+  data,
+  lang,
+  prefix
+}: {|
+  ...Props,
+  data: {| contentfulBlog: Page, site: { siteMetadata: { siteUrl: string } } |}
+|}) => {
   const { title, description, language, markdown, author } = data.contentfulBlog;
   const frontmatter = {};
   const { siteUrl } = data.site.siteMetadata;
-
-  const img = (props: ImageProps) => (
-    <Image
-      {...props}
-      img={
-        (
-          frontmatter.images.find(i => i && i.childImageSharp.fluid.originalName === props.src) ||
-          {}
-        ).childImageSharp
-      }
-    />
-  );
 
   return (
     <div>
@@ -50,7 +45,7 @@ export default ({ data, lang, prefix }: {| ...Props, data: {| contentfulBlog: Pa
         <section className="section">
           <div className="container container-small">
             <div className="markdown clearfix">
-              <MDXProvider components={{ Img: img }}>
+              <MDXProvider components={{ Image }}>
                 <MDXRenderer>{markdown.childMdx.body}</MDXRenderer>
               </MDXProvider>
             </div>

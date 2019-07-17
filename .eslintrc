@@ -15,9 +15,11 @@
   "rules": {
     "object-curly-newline": [
       "error",
-      {        "multiline": true
+      {
+        "multiline": true
       }
     ],
+    "react/require-default-props": "off",
     "prettier/prettier": [
       "error",
       {
