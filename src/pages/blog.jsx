@@ -16,7 +16,7 @@ const PostLink = ({
   prefix: string,
   defaultImage: Object
 }) => {
-  const to = `${prefix}/${post.slug}`;
+  const to = `${prefix}/blog/${post.slug}`;
   return (
     <div className="card hover-shadow-5 bg-pale-secondary mb-5">
       <div className="row">
@@ -94,7 +94,7 @@ export const pageQuery = graphql`
     ledgy: imageSharp(fluid: { originalName: { regex: "/ledgy.png/" } }) {
       ...CoverImage
     }
-    allContentfulPage(sort: { order: DESC, fields: [date] }) {
+    allContentfulPage(filter: { category: { eq: "blog" } }, sort: { order: DESC, fields: [date] }) {
       edges {
         node {
           id
