@@ -95,7 +95,7 @@ export const pageQuery = graphql`
       ...CoverImage
     }
     allContentfulPage(
-      filter: { namespace: { eq: "/blog" } }
+      filter: { namespace: { eq: "/blog/" } }
       sort: { order: DESC, fields: [date] }
     ) {
       edges {
