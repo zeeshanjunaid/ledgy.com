@@ -16,7 +16,7 @@ const PostLink = ({
   prefix: string,
   defaultImage: Object
 }) => {
-  const to = `${prefix}/blog/${post.slug}`;
+  const to = `${prefix}/blog/${post.slug}/`;
   return (
     <div className="card hover-shadow-5 bg-pale-secondary mb-5">
       <div className="row">
