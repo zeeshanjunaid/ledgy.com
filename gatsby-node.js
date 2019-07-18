@@ -1,8 +1,14 @@
 const path = require('path');
 
-const { createFilePath } = require('gatsby-source-filesystem');
-
 const { languages, defaultLanguage } = require('./src/i18n-config');
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      modules: [path.resolve(__dirname, 'src'), 'node_modules']
+    }
+  });
+};
 
 exports.onCreatePage = async ({ page, actions }) => {
   const { createPage, deletePage } = actions;
@@ -24,18 +30,6 @@ exports.onCreatePage = async ({ page, actions }) => {
   });
 };
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
-  const { createNodeField } = actions;
-  if (node.internal.type === 'Mdx') {
-    const slug = createFilePath({ node, getNode, basePath: 'markdown' });
-    createNodeField({
-      node,
-      name: 'slug',
-      value: slug
-    });
-  }
-};
-
 exports.createPages = ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions;
   [
@@ -55,40 +49,29 @@ exports.createPages = ({ graphql, actions }) => {
     );
   });
 
-  const component = path.resolve('./src/layouts/markdown.jsx');
-  return new Promise((resolve, reject) => {
+  const component = path.resolve('./src/layouts/contentfulPage.jsx');
+  return new Promise(resolve => {
     graphql(`
       {
-        allMdx {
+        allContentfulPage(limit: 1000) {
           edges {
             node {
               id
-              fields {
-                slug
-              }
+              slug
+              namespace
             }
           }
         }
       }
     `).then(result => {
-      if (result.errors) {
-        console.error(result.errors); // eslint-disable-line no-console
-        reject(result.errors);
-      }
-      result.data.allMdx.edges.forEach(({ node }) => {
-        const { slug } = node.fields;
-        createPage({
-          path: slug,
-          component,
-          context: { id: node.id }
-        });
-        languages.forEach(lang =>
-          createPage({
-            path: `/${lang}${slug}`,
-            component,
-            context: { id: node.id }
-          })
-        );
+      if (result.errors) throw result.errors;
+
+      result.data.allContentfulPage.edges.forEach(({ node }) => {
+        const { id, slug, namespace } = node;
+        const pagePath = `${namespace}${slug}/`;
+        const context = { id };
+        createPage({ path: pagePath, component, context });
+        languages.forEach(lang => createPage({ path: `/${lang}${pagePath}`, component, context }));
       });
       resolve();
     });

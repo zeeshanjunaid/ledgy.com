@@ -1,6 +1,6 @@
 // @flow
 
-import React, { useEffect } from 'react';
+import React, { useEffect, type Node } from 'react';
 import { withI18n, Trans } from '@lingui/react';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
@@ -105,7 +105,7 @@ const Testimonial = ({
 }: {
   img: Object,
   name: string,
-  description: React.Node,
+  description: Node,
   col: number
 }) => (
   <div

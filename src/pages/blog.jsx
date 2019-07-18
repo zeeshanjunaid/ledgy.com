@@ -7,23 +7,16 @@ import Img from 'gatsby-image';
 
 import { Title, ChevronRight } from '../layouts/utils';
 
-type PostProps = {|
-  id: string,
-  fields: {| slug: string |},
-  excerpt: string,
-  frontmatter: {| date: string, title: string, description: string, coverImage: ?Object |}
-|};
-
 const PostLink = ({
   post,
   prefix,
   defaultImage
 }: {
-  post: PostProps,
+  post: Page,
   prefix: string,
   defaultImage: Object
 }) => {
-  const to = `${prefix}${post.fields.slug}`;
+  const to = `${prefix}/blog/${post.slug}/`;
   return (
     <div className="card hover-shadow-5 bg-pale-secondary mb-5">
       <div className="row">
@@ -31,7 +24,7 @@ const PostLink = ({
           <Link href to={to}>
             <Img
               className="fit-cover"
-              {...(post.frontmatter.coverImage || {}).childImageSharp || defaultImage}
+              {...(post.cover ? post.cover.localFile.childImageSharp : defaultImage)}
             />
           </Link>
         </div>
@@ -39,12 +32,12 @@ const PostLink = ({
           <div className="row mb-4 mr-0">
             <div className="col-md-10">
               <Link href to={to}>
-                <h5>{post.frontmatter.title}</h5>
+                <h5>{post.title}</h5>
               </Link>
             </div>
-            <small className="col-md-2 text-md-right text-muted">{post.frontmatter.date}</small>
+            <small className="col-md-2 text-md-right text-muted">{post.date}</small>
           </div>
-          <p className="mb-0">{post.frontmatter.description}</p>
+          <p className="mb-0">{post.description}</p>
           <Link className="small ml-auto" href to={to}>
             <Trans>Read more</Trans>
             <ChevronRight />
@@ -77,7 +70,7 @@ export default withI18n()(({ i18n, data, prefix }: Props) => (
     <main className="main-content">
       <section className="section">
         <div className="container">
-          {data.allMdx.edges.map(edge => (
+          {data.allContentfulPage.edges.map(edge => (
             <PostLink
               key={edge.node.id}
               post={edge.node}
@@ -101,23 +94,20 @@ export const pageQuery = graphql`
     ledgy: imageSharp(fluid: { originalName: { regex: "/ledgy.png/" } }) {
       ...CoverImage
     }
-    allMdx(
-      filter: { fields: { slug: { regex: "/^/blog//" } } }
-      sort: { order: DESC, fields: [frontmatter___date] }
+    allContentfulPage(
+      filter: { namespace: { eq: "/blog/" } }
+      sort: { order: DESC, fields: [date] }
     ) {
       edges {
         node {
           id
-          fields {
-            slug
-          }
-          excerpt(pruneLength: 250)
-          frontmatter {
-            date(formatString: "DD MMM YYYY")
-            title
-            description
-            coverImage {
-              publicURL
+          slug
+          title
+          description
+          language
+          date(formatString: "DD MMM YYYY")
+          cover {
+            localFile {
               childImageSharp {
                 ...CoverImage
               }

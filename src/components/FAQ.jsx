@@ -1,8 +1,10 @@
 // @flow
 
-import React from 'react';
+import React, { type Node } from 'react';
 
-export const Accordion = props => <div className="accordion my-4" {...props} />;
+export const Accordion = (props: { children: Node }) => (
+  <div className="accordion my-4" {...props} />
+);
 
 export const FAQ = ({
   id,
@@ -11,7 +13,7 @@ export const FAQ = ({
 }: {|
   id: string,
   question: string,
-  children: React.Node
+  children: Node
 |}) => {
   const isOpen = typeof window !== 'undefined' && window.top.location.hash === `#${id}`;
   return (

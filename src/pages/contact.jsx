@@ -1,6 +1,6 @@
 // @flow
 
-import * as React from 'react';
+import React from 'react';
 import { withI18n, Trans } from '@lingui/react';
 
 import { Title } from '../layouts/utils';

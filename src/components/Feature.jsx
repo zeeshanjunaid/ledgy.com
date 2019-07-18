@@ -1,6 +1,6 @@
 // @flow
 
-import * as React from 'react';
+import React, { type Node } from 'react';
 import { Trans } from '@lingui/react';
 import { Link, graphql } from 'gatsby';
 import Img from 'gatsby-image';
@@ -15,7 +15,7 @@ export const Feature = (props: {
   prefix: string,
   name: string,
   title?: string,
-  children: React.Node,
+  children: Node,
   url: string,
   left?: boolean,
   data: Object
@@ -105,7 +105,7 @@ export const FeatureLinks = ({
   </div>
 );
 
-export const FeatureLi = ({ children }: { children: React.Node }) => (
+export const FeatureLi = ({ children }: { children: Node }) => (
   <li className="media">
     <FontAwesomeIcon icon={faDotCircle} className="text-primary fa-xs mt-2" />
     <div className="media-body ml-4 mb-4">{children}</div>
@@ -115,11 +115,11 @@ export const FeatureLi = ({ children }: { children: React.Node }) => (
 export const FeatureList = (props: {
   textSize: string,
   imgSize: string,
-  header: React.Node,
-  features: Array<React.Node>,
-  img: React.Node,
+  header: Node,
+  features: Array<Node>,
+  img: Node,
   imgFirst?: boolean,
-  link?: React.Node,
+  link?: Node,
   id?: string
 }) => (
   <section className="section overflow-hidden p-0" id={props.id}>
@@ -151,8 +151,8 @@ export const FeatureList = (props: {
 FeatureList.defaultProps = { imgFirst: false, link: <React.Fragment />, id: '' };
 
 export const TopPageFeatureCard = (props: {
-  header: React.Node,
-  body: React.Node,
+  header: Node,
+  body: Node,
   icon: string,
   href: string
 }) => (

@@ -1,14 +1,14 @@
 // @flow
 
 import React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import { Trans } from '@lingui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
-import { getWholeTeam, type AuthorProps } from '../layouts/team';
+import { getWholeTeam, getTeamImages, type AuthorProps } from '../layouts/team';
 
 const About = ({ about, img }: {| about: AuthorProps, img: Object |}) => (
   <div className="about d-flex justify-content-center pt-3 mt-3">
@@ -33,40 +33,56 @@ const About = ({ about, img }: {| about: AuthorProps, img: Object |}) => (
   </div>
 );
 
-export const Author = ({ name, ...props }: {| name: string, ...Props |}) => {
-  const team = getWholeTeam(props);
-  return (
-    <StaticQuery
-      query={graphql`
-        query {
-          ...TeamFragment
-        }
-      `}
-      render={data => <About about={team[name]} img={data[name]} />}
-    />
-  );
+export const Author = ({ name, prefix }: {| name: string, prefix: string |}) => {
+  const team = getWholeTeam(prefix);
+  const images = getTeamImages();
+  return <About about={team[name]} img={images[name]} />;
 };
 
-export type ImageProps = {|
-  align: string,
-  caption: string,
-  size: string,
-  img: Object
-|};
+export const getImageParams = (params?: string): { [string]: string } =>
+  (params || '').split(' ').reduce((res, v) => {
+    const [key, value] = v.split('=');
+    return { ...res, [key]: value };
+  }, {});
 
-export const Image = ({ align, caption, size, img, ...props }: ImageProps) => (
-  <figure
-    className={align ? `mx-auto float-md-${align} size-md-small m-6` : 'mx-auto my-6'}
-    style={size ? { width: `${size}px` } : {}}
-  >
-    <a href={img.fluid.src} data-provide="lightbox">
-      <Img {...img} {...props} />
-    </a>
-    {caption && (
-      <figcaption className="text-muted small px-3 font-weight-light mt-1">{caption}</figcaption>
-    )}
-  </figure>
-);
+export const Image = ({ alt, src, title }: {| alt: string, src: string, title?: string |}) => {
+  const data = useStaticQuery(graphql`
+    query {
+      allContentfulAsset(limit: 1000) {
+        nodes {
+          contentful_id
+          localFile {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+                originalName
+              }
+            }
+          }
+        }
+      }
+    }
+  `);
+  const contentfulId = src.split('/')[4];
+  const record = data.allContentfulAsset.nodes.find(v => v.contentful_id === contentfulId);
+  const { align, w } = getImageParams(title);
+  const img = record.localFile.childImageSharp;
+  return (
+    <figure
+      className={align ? `mx-auto float-md-${align} size-md-small m-6` : 'mx-auto my-6'}
+      style={w ? { width: `${w}px` } : {}}
+    >
+      <a href={img.fluid.src} data-provide="lightbox">
+        <Img {...img} />
+      </a>
+      {alt && (
+        <figcaption className="text-muted text-center px-4 font-weight-light mt-2">
+          {alt}
+        </figcaption>
+      )}
+    </figure>
+  );
+};
 
 const languages = {
   en: <Trans>English</Trans>,

@@ -29,12 +29,6 @@ import logoInverse from '../img/logo_white.png';
 const showSubscribe = (pathname: string) =>
   !pathname.match(/contact/) && !pathname.match(/subscribed/);
 
-type LayoutProps = {
-  ...$Exact<Props>,
-  lang: string,
-  location: { pathname: string }
-};
-
 const Logo = (props: { prefix: string, inverse: boolean }) => (
   <Link href to={`${props.prefix}/#start`} className="navbar-brand">
     <img className="logo-dark" src={logoDefault} width={100} height={40} alt={name} />
@@ -361,7 +355,7 @@ const Initialize = ({ pathname }: {| pathname: string |}) => {
   return null;
 };
 
-const TemplateWrapper = withI18n()((props: SiteProps) => (
+const TemplateWrapper = withI18n()(({ children, ...props }: SiteProps) => (
   <StaticQuery
     query={graphql`
       query {
@@ -424,7 +418,7 @@ const TemplateWrapper = withI18n()((props: SiteProps) => (
             </noscript>
           </Helmet>
           <Nav {...props} prefix={prefix} />
-          {React.cloneElement(props.children, { prefix, lang })}
+          {React.cloneElement((children: Object), { prefix, lang })}
           <Footer {...props} prefix={prefix} />
         </div>
       );

@@ -1,4 +1,12 @@
-const { CONTEXT, URL, DEPLOY_PRIME_URL, NODE_ENV, BRANCH } = process.env;
+const {
+  CONTEXT,
+  URL,
+  DEPLOY_PRIME_URL,
+  NODE_ENV,
+  BRANCH,
+  CONTENTFUL_SPACE_ID,
+  CONTENTFUL_ACCESS_TOKEN
+} = process.env;
 const src = `${__dirname}/src`;
 
 module.exports = {
@@ -18,13 +26,22 @@ module.exports = {
     'gatsby-plugin-nprogress',
     'gatsby-plugin-sitemap',
     { resolve: 'gatsby-source-filesystem', options: { name: 'img', path: `${src}/img` } },
-    { resolve: 'gatsby-source-filesystem', options: { name: 'markdown', path: `${src}/markdown` } },
     {
-      resolve: 'gatsby-mdx',
+      resolve: 'gatsby-source-contentful',
+      options: {
+        spaceId: CONTENTFUL_SPACE_ID,
+        accessToken: CONTENTFUL_ACCESS_TOKEN,
+        host: BRANCH ? 'cdn.contentful.com' : 'preview.contentful.com',
+        downloadLocal: true
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-mdx',
       options: {
         gatsbyRemarkPlugins: [
-          { resolve: 'gatsby-remark-katex' },
-          { resolve: 'gatsby-remark-prismjs' }
+          'gatsby-remark-katex',
+          'gatsby-remark-prismjs',
+          'gatsby-remark-unwrap-images'
         ]
       }
     },

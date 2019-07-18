@@ -1,8 +1,8 @@
 // @flow
 
-import * as React from 'react';
+import React, { type Node } from 'react';
 
-export default ({ children }: { children: React.Node }) => (
+export default ({ children }: { children: Node }) => (
   <div className="container mb-6">
     <div className="col-md-9 mx-auto">{children}</div>
   </div>
