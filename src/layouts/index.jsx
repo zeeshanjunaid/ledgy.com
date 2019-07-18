@@ -74,7 +74,7 @@ const Nav = (props: LayoutProps) => (
         <a
           className="btn btn-round btn-light ml-lg-0 mr-2"
           href={`${appUrl}/signup`}
-          onClick={trackSignup}
+          onClick={() => trackSignup('clickSignup')}
         >
           <Trans>Sign up</Trans>
         </a>
