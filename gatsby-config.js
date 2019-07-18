@@ -1,4 +1,12 @@
-const { CONTEXT, URL, DEPLOY_PRIME_URL, NODE_ENV, BRANCH } = process.env;
+const {
+  CONTEXT,
+  URL,
+  DEPLOY_PRIME_URL,
+  NODE_ENV,
+  BRANCH,
+  CONTENTFUL_SPACE_ID,
+  CONTENTFUL_ACCESS_TOKEN
+} = process.env;
 const src = `${__dirname}/src`;
 
 module.exports = {
@@ -21,8 +29,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-contentful',
       options: {
-        spaceId: process.env.CONTENTFUL_ACCESS_TOKEN,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        spaceId: CONTENTFUL_SPACE_ID,
+        accessToken: CONTENTFUL_ACCESS_TOKEN,
         host: BRANCH ? 'cdn.contentful.com' : 'preview.contentful.com',
         downloadLocal: true
       }
