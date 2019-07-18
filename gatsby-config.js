@@ -21,7 +21,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-contentful',
       options: {
-        spaceId: 'ojxc8xtj0owo',
+        spaceId: process.env.CONTENTFUL_ACCESS_TOKEN,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
         host: BRANCH ? 'cdn.contentful.com' : 'preview.contentful.com',
         downloadLocal: true
