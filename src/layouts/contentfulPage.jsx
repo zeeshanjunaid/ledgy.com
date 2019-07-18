@@ -16,7 +16,7 @@ export default ({
   ...Props,
   data: {| contentfulPage: Page, site: { siteMetadata: { siteUrl: string } } |}
 |}) => {
-  const { title, description, language, content, author } = data.contentfulPage;
+  const { title, description, language, content, author, date } = data.contentfulPage;
   const frontmatter = {};
   const { siteUrl } = data.site.siteMetadata;
 
@@ -49,6 +49,7 @@ export default ({
                 <MDXRenderer>{content.childMdx.body}</MDXRenderer>
               </MDXProvider>
             </div>
+            <div className="d-flex py-4">{date && <small>{date}</small>}</div>
             {author && <Author prefix={prefix} name={author} />}
           </div>
         </section>
@@ -64,7 +65,7 @@ export const pageQuery = graphql`
       title
       description
       language
-      date
+      date(formatString: "DD MMM YYYY")
       author
       content {
         childMdx {
