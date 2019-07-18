@@ -2,6 +2,14 @@ const path = require('path');
 
 const { languages, defaultLanguage } = require('./src/i18n-config');
 
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      modules: [path.resolve(__dirname, 'src'), 'node_modules']
+    }
+  });
+};
+
 exports.onCreatePage = async ({ page, actions }) => {
   const { createPage, deletePage } = actions;
 
