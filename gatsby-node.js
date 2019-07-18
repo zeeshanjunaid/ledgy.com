@@ -41,7 +41,7 @@ exports.createPages = ({ graphql, actions }) => {
     );
   });
 
-  const component = path.resolve('./src/layouts/markdown.jsx');
+  const component = path.resolve('./src/layouts/contentfulPage.jsx');
   return new Promise(resolve => {
     graphql(`
       {

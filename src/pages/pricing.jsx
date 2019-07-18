@@ -1,6 +1,6 @@
 // @flow
 
-import * as React from 'react';
+import React, { type Node } from 'react';
 import { withI18n, Trans } from '@lingui/react';
 import { Link } from 'gatsby';
 
@@ -13,7 +13,8 @@ const Soon = () => (
   </small>
 );
 
-const standard = [
+declare type FeaturesList = mixed[][];
+const standard: FeaturesList = [
   [1, <Trans>Cap table management</Trans>, '', true],
   [2, <Trans>Reporting</Trans>, <Trans>Recurring reports, KPIs</Trans>],
   [3, <Trans>Financing round modeling</Trans>, <Trans>1 round, 1 scenario</Trans>],
@@ -25,7 +26,7 @@ const standard = [
   [9, <Trans>Two-factor authentication</Trans>]
 ];
 
-const premium = [
+const premium: FeaturesList = [
   [10, <Trans>All standard features</Trans>, '', true],
   [11, <Trans>Equity plan management</Trans>, <Trans>Any vesting schedule</Trans>],
   [12, <Trans>Financing round modeling</Trans>, <Trans>Multiple rounds, 3 scenarios</Trans>],
@@ -36,7 +37,7 @@ const premium = [
   [17, <Trans>Breakpoint & exit analyses</Trans>]
 ];
 
-const enterprise = [
+const enterprise: FeaturesList = [
   [18, <Trans>All Premium features</Trans>, '', true],
   [19, <Trans>Priority support</Trans>, <Trans>Phone & chat, onboarding</Trans>],
   [20, <Trans>Financing round modeling</Trans>, <Trans>Unlimited rounds & scenarios</Trans>],
@@ -56,13 +57,9 @@ const enterprise = [
   ]
 ];
 
-const PlanFeatures = ({
-  features
-}: {
-  features: Array<[number, React.Node, ?React.Node, ?boolean]>
-}) => (
+const PlanFeatures = ({ features }: { features: FeaturesList }) => (
   <ul>
-    {features.map(([i, description, detail, first]) => (
+    {features.map(([i, description, detail, first]: any) => (
       <Li key={i}>
         {first ? <strong>{description}</strong> : description}
         {detail && <Detail>{detail}</Detail>}
@@ -73,11 +70,11 @@ const PlanFeatures = ({
 
 const PricingColumn = (props: {
   name: string,
-  price: React.Node,
-  plan: Array<React.Node | boolean>,
-  buttonText: React.Node,
+  price: Node,
+  plan: FeaturesList,
+  buttonText: Node,
   popular?: boolean,
-  detail?: React.Node,
+  detail?: Node,
   enterprise?: boolean
 }) => (
   <div className="col-lg-4">

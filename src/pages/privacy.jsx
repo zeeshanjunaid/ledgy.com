@@ -1,6 +1,6 @@
 // @flow
 
-import * as React from 'react';
+import React from 'react';
 import { Link } from 'gatsby';
 import { withI18n, Trans } from '@lingui/react';
 import {

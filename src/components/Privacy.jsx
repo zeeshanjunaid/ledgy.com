@@ -1,6 +1,6 @@
 // @flow
 
-import * as React from 'react';
+import React, { type Node } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const PrivacyElement = ({
@@ -10,8 +10,8 @@ export const PrivacyElement = ({
   size
 }: {
   icon: string,
-  title: string | React.Node,
-  body?: string | React.Node,
+  title: string | Node,
+  body?: string | Node,
   size?: string
 }) => (
   <div className={`col-12 col-lg-${String(size)}`}>
@@ -26,6 +26,6 @@ export const PrivacyElement = ({
 );
 PrivacyElement.defaultProps = { body: '', size: '12' };
 
-export const PrivacyRow = ({ children }: { children: Array<React.Node> }) => (
+export const PrivacyRow = ({ children }: { children: Array<Node> }) => (
   <div className="row gap-y my-4">{children}</div>
 );

@@ -20,7 +20,7 @@ declare type LayoutProps = {|
 declare type Page = {|
   title: string,
   description: string,
-  date?: Date,
+  date?: string,
   author?: string,
   content: { childMdx: { body: string } },
   slug: string,
