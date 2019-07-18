@@ -45,9 +45,11 @@ export default ({
         <section className="section">
           <div className="container container-small">
             <div className="markdown clearfix">
-              <MDXProvider components={{ img: Image }}>
-                <MDXRenderer>{content.childMdx.body}</MDXRenderer>
-              </MDXProvider>
+              {content && (
+                <MDXProvider components={{ img: Image }}>
+                  <MDXRenderer>{content.childMdx.body}</MDXRenderer>
+                </MDXProvider>
+              )}
             </div>
             <div className="d-flex py-4">{date && <small>{date}</small>}</div>
             {author && <Author prefix={prefix} name={author} />}
