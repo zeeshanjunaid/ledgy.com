@@ -23,7 +23,7 @@ module.exports = {
       options: {
         spaceId: 'ojxc8xtj0owo',
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-        host: 'preview.contentful.com',
+        host: BRANCH ? 'cdn.contentful.com' : 'preview.contentful.com',
         downloadLocal: true
       }
     },
