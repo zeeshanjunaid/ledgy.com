@@ -100,7 +100,7 @@ const IndexPage = (props: Props) => {
                   </Trans>
                 </p>
               </div>
-              <div className="col-12 col-lg-6 p-50 align-self-center" data-aos="fade-left">
+              <div className="col-12 col-lg-6 p-50 align-self-center">
                 <Img {...data.mission} className="shadow-3" alt={i18n.t`Space elevator`} />
               </div>
             </div>
