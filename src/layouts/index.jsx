@@ -226,19 +226,19 @@ const Footer = (props: LayoutProps) => (
             </Link>
           </div>
         </div>
-        <div className="col-12 col-md-2 pl-6 order-md-1">
+        <div className="col-12 col-md-3 pl-6 order-md-1">
           <Link href to={`${props.prefix}/#start`} className="navbar-brand">
             <img className="logo-light" src={logoInverse} width={100} height={40} alt={name} />
           </Link>
 
           <div className="social my-2">
             {[
+              ['https://blog.ledgy.com', faMedium, 'Medium'],
+              ['https://www.youtube.com/channel/UCRkvNQptxoE-ckmTsrme1_w', faYoutube, 'YouTube'],
               ['https://twitter.com/Ledgy', faTwitter, 'Twitter'],
               ['https://www.linkedin.com/company/ledgy', faLinkedin, 'LinkedIn'],
               ['https://https://www.facebook.com/LedgyCom/.com/Ledgy', faFacebook, 'Facebook'],
-              ['https://angel.co/ledgy', faAngellist, 'AngelList'],
-              ['https://blog.ledgy.com', faMedium, 'Medium'],
-              ['https://www.youtube.com/channel/UCRkvNQptxoE-ckmTsrme1_w', faYoutube, 'YouTube']
+              ['https://angel.co/ledgy', faAngellist, 'AngelList']
             ].map(([href, icon, title]) => (
               <a href={href} key={title} {...targetBlank}>
                 <FontAwesomeIcon icon={icon} title={title} />
