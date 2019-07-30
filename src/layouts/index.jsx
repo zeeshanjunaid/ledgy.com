@@ -10,7 +10,8 @@ import {
   faFacebook,
   faLinkedin,
   faAngellist,
-  faMedium
+  faMedium,
+  faYoutube
 } from '@fortawesome/free-brands-svg-icons';
 import 'typeface-roboto-slab'; // eslint-disable-line import/extensions
 import 'typeface-work-sans'; // eslint-disable-line import/extensions
@@ -236,7 +237,8 @@ const Footer = (props: LayoutProps) => (
               ['https://www.linkedin.com/company/ledgy', faLinkedin, 'LinkedIn'],
               ['https://https://www.facebook.com/LedgyCom/.com/Ledgy', faFacebook, 'Facebook'],
               ['https://angel.co/ledgy', faAngellist, 'AngelList'],
-              ['https://blog.ledgy.com', faMedium, 'Medium']
+              ['https://blog.ledgy.com', faMedium, 'Medium'],
+              ['https://www.youtube.com/channel/UCRkvNQptxoE-ckmTsrme1_w', faYoutube, 'YouTube']
             ].map(([href, icon, title]) => (
               <a href={href} key={title} {...targetBlank}>
                 <FontAwesomeIcon icon={icon} title={title} />
