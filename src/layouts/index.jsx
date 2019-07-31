@@ -10,7 +10,7 @@ import {
   faFacebook,
   faLinkedin,
   faAngellist,
-  faMedium
+  faYoutube
 } from '@fortawesome/free-brands-svg-icons';
 import 'typeface-roboto-slab'; // eslint-disable-line import/extensions
 import 'typeface-work-sans'; // eslint-disable-line import/extensions
@@ -232,11 +232,11 @@ const Footer = (props: LayoutProps) => (
 
           <div className="social my-2">
             {[
+              ['https://www.youtube.com/channel/UCRkvNQptxoE-ckmTsrme1_w', faYoutube, 'YouTube'],
               ['https://twitter.com/Ledgy', faTwitter, 'Twitter'],
               ['https://www.linkedin.com/company/ledgy', faLinkedin, 'LinkedIn'],
-              ['https://https://www.facebook.com/LedgyCom/.com/Ledgy', faFacebook, 'Facebook'],
-              ['https://angel.co/ledgy', faAngellist, 'AngelList'],
-              ['https://blog.ledgy.com', faMedium, 'Medium']
+              ['https://www.facebook.com/ledgyCom/', faFacebook, 'Facebook'],
+              ['https://angel.co/ledgy', faAngellist, 'AngelList']
             ].map(([href, icon, title]) => (
               <a href={href} key={title} {...targetBlank}>
                 <FontAwesomeIcon icon={icon} title={title} />
