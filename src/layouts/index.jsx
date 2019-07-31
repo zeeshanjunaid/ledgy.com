@@ -233,7 +233,6 @@ const Footer = (props: LayoutProps) => (
 
           <div className="social my-2">
             {[
-              ['https://blog.ledgy.com', faMedium, 'Medium'],
               ['https://www.youtube.com/channel/UCRkvNQptxoE-ckmTsrme1_w', faYoutube, 'YouTube'],
               ['https://twitter.com/Ledgy', faTwitter, 'Twitter'],
               ['https://www.linkedin.com/company/ledgy', faLinkedin, 'LinkedIn'],
