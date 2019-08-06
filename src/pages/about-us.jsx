@@ -87,24 +87,12 @@ const IndexPage = (props: Props) => {
       <Header {...props} />
       <main className="main-content">
         <section className="section py-150 bg-gray">
-          <div className="container">
-            <div className="row">
-              <div className="col-12 col-lg-6 pl-50 pr-80">
-                <p className="lead">
-                  <Trans>
-                    We empower entrepreneurs with tools for their financing rounds and for engaging
-                    their investors and employees. Today, this involves a lot of paperwork, high
-                    costs, and slow, intransparent processes. We make this a breeze for both
-                    companies and shareholders, establishing a new standard to manage and exchange
-                    securities in private companies.
-                  </Trans>
-                </p>
-              </div>
-              <div className="col-12 col-lg-6 p-50 align-self-center">
-                <Img {...data.mission} className="shadow-3" alt={i18n.t`Space elevator`} />
-              </div>
-            </div>
-          </div>
+          <p className="lead">
+            <Trans>
+              We believe that entrepreneurship is the main driver of positive change in the world.
+              That is why we build beautiful and easy to use software for startups.
+            </Trans>
+          </p>
         </section>
 
         <section className="section">
