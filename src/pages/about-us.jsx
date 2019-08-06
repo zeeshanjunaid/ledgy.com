@@ -196,12 +196,6 @@ export const pageQuery = graphql`
   query {
     ...TeamFragment
 
-    mission: imageSharp(fluid: { originalName: { regex: "/mission/" } }) {
-      fluid(maxWidth: 600) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-
     btov: imageSharp(fluid: { originalName: { regex: "/btov.png/" } }) {
       fixed(width: 128, height: 128) {
         ...GatsbyImageSharpFixed
