@@ -30,7 +30,7 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
   },
   yoko: {
     name: 'Yoko Spirig',
-    role: 'Co-Founder & CPO',
+    role: 'Co-Founder & CEO',
     description: (
       <Trans>
         Yoko graduated from ETH and Oxford and was president of Swissloop, enabling the team to win
@@ -43,7 +43,7 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
   },
   ben: {
     name: 'Ben Brandt',
-    role: 'Co-Founder & CEO',
+    role: 'Co-Founder & CPO',
     description: (
       <Trans>
         Ben has extensive experience in project management and has worked for two years as
