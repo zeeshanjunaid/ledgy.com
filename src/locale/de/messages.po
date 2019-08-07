@@ -6,7 +6,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Creation-Date: 2018-09-12T18:40:54.619Z\n"
-"PO-Revision-Date: 2019-08-07 10:57+0200\n"
+"PO-Revision-Date: 2019-08-07 11:30+0200\n"
 "Language: de\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: Timo Horstschäfer <timo@ledgy.com>\n"
@@ -1346,7 +1346,7 @@ msgstr "Du möchtest eine neue Finanzierungsrunde für dein Startup modellieren?
 
 #: src/pages/about-us.jsx:93
 msgid "We believe that entrepreneurship is the main driver of positive change in the world.<0/>That is why we build beautiful and intuitive software for startups, helping them be more successful."
-msgstr "Wir sind überzeugt, dass Unternehmertum der Haupttreiber für positive Veränderungen in der Welt ist.<0 />Deshalb bauen wir schöne und intuitive Software für Startups, um ihnen zu helfen erfolgreicher zu sein."
+msgstr "Wir sind überzeugt, dass Unternehmertum der Haupttreiber für positive Veränderungen in der Welt ist.<0/>Deshalb bauen wir schöne und intuitive Software für Startups, um ihnen zu helfen erfolgreicher zu sein."
 
 #: src/pages/privacy.jsx:48
 msgid "We comply with the Swiss Federal Act on Data Protection (FADP) and the General Data Protection Regulation (GDPR). Read more about <0>GDPR compliance</0>."
