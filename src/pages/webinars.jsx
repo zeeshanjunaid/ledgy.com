@@ -7,22 +7,23 @@ import { graphql } from 'gatsby';
 import { ContentHeader, ContentBody, PostLink } from '../layouts/contentDiffusion';
 import { Title } from '../layouts/utils';
 
-export default withI18n()(({ i18n, data, prefix }: Props) => (
+export default withI18n()(({ i18n, data }: Props) => (
   <div>
     <Title
-      title={i18n.t`Blog`}
-      description={i18n.t`Thoughts on cap tables, financing rounds, and legal issues around running and managing a startup.`}
+      title={i18n.t`Webinars`}
+      description={i18n.t`Webinars on cap tables, financing rounds, and legal issues around running and managing a startup.`}
     />
 
-    <ContentHeader heading={i18n.t`The Ledgy Blog`} />
+    <ContentHeader heading={i18n.t`Ledgy Webinars`} />
 
     <ContentBody>
-      {data.allContentfulPage.edges.map(edge => {
-        const { slug } = edge.node;
+      {data.allContentfulWebinar.edges.map(edge => {
+        const { youtube } = edge.node;
         return (
           <PostLink
+            external
             key={edge.node.id}
-            to={`${prefix}/blog/${slug}`}
+            to={youtube}
             post={edge.node}
             defaultImage={data.ledgy}
           />
@@ -42,25 +43,14 @@ export const pageQuery = graphql`
     ledgy: imageSharp(fluid: { originalName: { regex: "/ledgy.png/" } }) {
       ...CoverImage
     }
-    allContentfulPage(
-      filter: { namespace: { eq: "/blog/" } }
-      sort: { order: DESC, fields: [date] }
-    ) {
+    allContentfulWebinar(sort: { order: DESC, fields: [date] }) {
       edges {
         node {
           id
-          slug
           title
           description
-          language
           date(formatString: "DD MMM YYYY")
-          cover {
-            localFile {
-              childImageSharp {
-                ...CoverImage
-              }
-            }
-          }
+          youtube
         }
       }
     }
