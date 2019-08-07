@@ -163,14 +163,9 @@ const Footer = (props: LayoutProps) => (
       <div className="row gap-y justify-content-md-center">
         <FooterCol order={2}>
           <FooterColBody title={<Trans>Company</Trans>}>
-            {companyLinks.map((link, i) => (
-              <Link
-                className="nav-link"
-                href
-                to={`${props.prefix}/${link[1]}/`}
-                key={`${i}-${link[1]}`}
-              >
-                {link[0]}
+            {companyLinks.map(([label, link], i) => (
+              <Link className="nav-link" href to={`${props.prefix}/${link}/`} key={`${i}-${link}`}>
+                {label}
               </Link>
             ))}
           </FooterColBody>
@@ -178,26 +173,16 @@ const Footer = (props: LayoutProps) => (
 
         <FooterCol order={4}>
           <FooterColBody title={<Trans>Help</Trans>}>
-            {helpLinks.map((lnik, i) => (
-              <Link
-                className="nav-link"
-                href
-                to={`${props.prefix}/${lnik[1]}/`}
-                key={`${i}-${lnik[1]}`}
-              >
-                {lnik[0]}
+            {helpLinks.map(([label, link], i) => (
+              <Link className="nav-link" href to={`${props.prefix}/${link}/`} key={`${i}-${link}`}>
+                {label}
               </Link>
             ))}
           </FooterColBody>
           <FooterColBody title={<Trans>Blog</Trans>}>
-            {blogLinks.map((link, i) => (
-              <Link
-                className="nav-link"
-                href
-                to={`${props.prefix}/${link[1]}/`}
-                key={`${i}-${link[1]}`}
-              >
-                {link[0]}
+            {blogLinks.map(([label, link], i) => (
+              <Link className="nav-link" href to={`${props.prefix}/${link}/`} key={`${i}-${link}`}>
+                {label}
               </Link>
             ))}
           </FooterColBody>
@@ -205,14 +190,9 @@ const Footer = (props: LayoutProps) => (
 
         <FooterCol order={3}>
           <FooterColBody title={<Trans>Product</Trans>}>
-            {productLinks.map((link, i) => (
-              <Link
-                className="nav-link"
-                href
-                to={`${props.prefix}/${link[1]}/`}
-                key={`${i}-${link[1]}`}
-              >
-                {link[0]}
+            {productLinks.map(([label, link], i) => (
+              <Link className="nav-link" href to={`${props.prefix}/${link}/`} key={`${i}-${link}`}>
+                {label}
               </Link>
             ))}
           </FooterColBody>
@@ -220,14 +200,9 @@ const Footer = (props: LayoutProps) => (
 
         <FooterCol order={5}>
           <FooterColBody title={<Trans>Legal</Trans>}>
-            {legalLinks.map((link, i) => (
-              <Link
-                className="nav-link"
-                href
-                to={`${props.prefix}/${link[1]}/`}
-                key={`${i}-${link[1]}`}
-              >
-                {link[0]}
+            {legalLinks.map(([label, link], i) => (
+              <Link className="nav-link" href to={`${props.prefix}/${link}/`} key={`${i}-${link}`}>
+                {label}
               </Link>
             ))}
           </FooterColBody>
