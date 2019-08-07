@@ -127,7 +127,7 @@ const blogLinks = [
 
 const productLinks = [
   [<Trans>Features</Trans>, 'features'],
-  [<Trans>Captable</Trans>, 'features/captable'],
+  [<Trans>Cap Table</Trans>, 'features/captable'],
   [<Trans>Modeling</Trans>, 'features/modeling'],
   [<Trans>Employee Incentives</Trans>, 'features/esop'],
   [<Trans>Due Diligence</Trans>, 'features/collaboration'],

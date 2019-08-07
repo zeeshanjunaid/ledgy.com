@@ -208,7 +208,7 @@ msgstr "Blockchain notary"
 
 #: src/layouts/index.jsx:60
 #: src/layouts/index.jsx:108
-#: src/layouts/index.jsx:192
+#: src/layouts/index.jsx:182
 #: src/pages/blog.jsx:13
 msgid "Blog"
 msgstr "Blog"
@@ -241,6 +241,10 @@ msgstr "Bulk entry options"
 msgid "Calculates waterfall analysis of liquidation preferences across all rounds"
 msgstr "Calculates waterfall analysis of liquidation preferences across all rounds"
 
+#: src/layouts/index.jsx:130
+msgid "Cap Table"
+msgstr "Cap Table"
+
 #: src/components/Feature.jsx:99
 #: src/pages/features.jsx:58
 msgid "Cap Table Management"
@@ -253,10 +257,6 @@ msgstr "Cap table during round modeling"
 #: src/pages/pricing.jsx:18
 msgid "Cap table management"
 msgstr "Cap table management"
-
-#: src/layouts/index.jsx:130
-msgid "Captable"
-msgstr "Captable"
 
 #: src/layouts/index.jsx:112
 msgid "Career"
@@ -615,7 +615,7 @@ msgstr "Get the calculations right"
 msgid "Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant."
 msgstr "Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant."
 
-#: src/layouts/index.jsx:388
+#: src/layouts/index.jsx:363
 msgid "Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant. Try now for free!"
 msgstr "Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant. Try now for free!"
 
@@ -644,7 +644,7 @@ msgstr "HTTP headers prevent cross-site scripting and code injection (<0>A+ rati
 msgid "Healthcare & technology venture capital since 2001"
 msgstr "Healthcare & technology venture capital since 2001"
 
-#: src/layouts/index.jsx:180
+#: src/layouts/index.jsx:175
 msgid "Help"
 msgstr "Help"
 
@@ -777,7 +777,7 @@ msgstr "Key performance indicators"
 msgid "Kpi chart"
 msgstr "Kpi chart"
 
-#: src/layouts/index.jsx:264
+#: src/layouts/index.jsx:239
 msgid "Language"
 msgstr "Language"
 
@@ -809,7 +809,7 @@ msgstr "Ledgy makes it easy to simulate an investment with a pro-rata distributi
 msgid "Ledgy scales with your needs. Free for startups, powerful for grown-ups."
 msgstr "Ledgy scales with your needs. Free for startups, powerful for grown-ups."
 
-#: src/layouts/index.jsx:222
+#: src/layouts/index.jsx:202
 msgid "Legal"
 msgstr "Legal"
 
@@ -979,7 +979,7 @@ msgstr "Privacy made in Europe. Because your equity data is not for everyone."
 msgid "Pro-rata distribution"
 msgstr "Pro-rata distribution"
 
-#: src/layouts/index.jsx:207
+#: src/layouts/index.jsx:192
 msgid "Product"
 msgstr "Product"
 
@@ -1238,7 +1238,7 @@ msgstr "Terms of Service"
 msgid "The Ledgy Blog"
 msgstr "The Ledgy Blog"
 
-#: src/layouts/index.jsx:387
+#: src/layouts/index.jsx:362
 #: src/pages/index.jsx:25
 msgid "The New Standard in Equity Management"
 msgstr "The New Standard in Equity Management"
@@ -1494,7 +1494,7 @@ msgstr "and numbered shares are natively supported"
 msgid "by liquidation preferences"
 msgstr "by liquidation preferences"
 
-#: src/layouts/index.jsx:396
+#: src/layouts/index.jsx:371
 msgid "cap table, stock ledger, share register, startup, modeling, financing round, equity, esop, phantom, option plan, virtual, portfolio, reporting, investors"
 msgstr "cap table, stock ledger, share register, startup, modeling, financing round, equity, esop, phantom, option plan, virtual, portfolio, reporting, investors"
 
