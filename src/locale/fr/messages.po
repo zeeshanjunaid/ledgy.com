@@ -1347,7 +1347,7 @@ msgstr "Tu veux modéliser la nouvelle levée de fonds pour ton entreprise? Util
 
 #: src/pages/about-us.jsx:91
 msgid "We believe that entrepreneurship is the main driver of positive change in the world. That is why we build beautiful and easy to use software for startups."
-msgstr "Nous croyons que l'entrepreneuriat est le principal moteur du changement positif dans le monde. C'est pourquoi nous construisons des logiciels beaux et faciles à utiliser pour les startups."
+msgstr "Nous croyons que l'entrepreneuriat est le principal moteur de changement positif dans le monde. C'est pourquoi nous construisons des logiciels intuitifs et faciles à utiliser pour les startups."
 
 #: src/pages/privacy.jsx:48
 msgid "We comply with the Swiss Federal Act on Data Protection (FADP) and the General Data Protection Regulation (GDPR). Read more about <0>GDPR compliance</0>."
