@@ -18,14 +18,10 @@ export default withI18n()(({ i18n, data, prefix }: Props) => (
 
     <ContentBody>
       {data.allContentfulPage.edges.map(edge => {
-        const { slug } = edge.node;
+        const { node } = edge;
+        const { id, slug } = node;
         return (
-          <PostLink
-            key={edge.node.id}
-            to={`${prefix}/blog/${slug}`}
-            post={edge.node}
-            defaultImage={data.ledgy}
-          />
+          <PostLink key={id} to={`${prefix}/blog/${slug}`} post={node} defaultImage={data.ledgy} />
         );
       })}
     </ContentBody>

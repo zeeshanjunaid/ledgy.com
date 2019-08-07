@@ -18,16 +18,9 @@ export default withI18n()(({ i18n, data }: Props) => (
 
     <ContentBody>
       {data.allContentfulWebinar.edges.map(edge => {
-        const { youtube } = edge.node;
-        return (
-          <PostLink
-            external
-            key={edge.node.id}
-            to={youtube}
-            post={edge.node}
-            defaultImage={data.ledgy}
-          />
-        );
+        const { node } = edge;
+        const { id, youtube } = node;
+        return <PostLink external key={id} to={youtube} post={node} defaultImage={data.ledgy} />;
       })}
     </ContentBody>
   </div>
