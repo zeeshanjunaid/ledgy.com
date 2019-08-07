@@ -51,6 +51,13 @@ export const pageQuery = graphql`
           description
           date(formatString: "DD MMM YYYY")
           youtube
+          cover {
+            localFile {
+              childImageSharp {
+                ...CoverImage
+              }
+            }
+          }
         }
       }
     }
