@@ -92,7 +92,10 @@ const IndexPage = (props: Props) => {
               <p className="lead">
                 <Trans>
                   We believe that entrepreneurship is the main driver of positive change in the
-                  world. That is why we build beautiful and easy to use software for startups.
+                  world.
+                  <br />
+                  That is why we build beautiful and intuitive software for startups, helping them
+                  be more successful.
                 </Trans>
               </p>
             </div>
