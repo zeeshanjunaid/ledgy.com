@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 // @flow
 
 import React, { useEffect, type Node } from 'react';
@@ -83,6 +84,64 @@ const Nav = (props: LayoutProps) => (
   </nav>
 );
 
+const FooterCol = ({
+  order,
+  children,
+  wide
+}: {
+  order: number,
+  children: Node,
+  wide?: boolean
+}) => <div className={`col-${wide ? 12 : 6} col-md-2 pl-6 order-md-${order}`}>{children}</div>;
+
+const FooterColBody = ({ title, children }: { title: Node, children: Array<Node> }) => (
+  <>
+    <h6 className="mb-4 mt-1">
+      <strong>{title}</strong>
+    </h6>
+    <div className="nav flex-column">{children}</div>
+  </>
+);
+
+const companyLinks = [
+  [<Trans>About us</Trans>, 'about-us'],
+  [<Trans>Blog</Trans>, 'blog'],
+  [<Trans>Webinars</Trans>, 'webinars'],
+  [<Trans>Security</Trans>, 'security'],
+  [<Trans>Privacy</Trans>, 'privacy'],
+  [<Trans>Career</Trans>, 'jobs'],
+  [<Trans>Contact & Imprint</Trans>, 'contact']
+];
+
+const helpLinks = [
+  [<Trans>Getting Started</Trans>, 'help/getting-started'],
+  [<Trans>FAQ</Trans>, 'help/faq'],
+  [<Trans>ESOP Templates</Trans>, 'help/employee-participation-guide']
+];
+
+const blogLinks = [
+  [<Trans>Option Pools</Trans>, 'blog/pre-and-post-money-option-pools'],
+  [<Trans>Convertible Loans</Trans>, 'blog/convertible-loans'],
+  [<Trans>KPIs & Reports</Trans>, 'updates/kpis-and-reports']
+];
+
+const productLinks = [
+  [<Trans>Features</Trans>, 'features'],
+  [<Trans>Captable</Trans>, 'features/captable'],
+  [<Trans>Modeling</Trans>, 'features/modeling'],
+  [<Trans>Employee Incentives</Trans>, 'features/esop'],
+  [<Trans>Due Diligence</Trans>, 'features/collaboration'],
+  [<Trans>Investors</Trans>, 'features/investors'],
+  [<Trans>Pricing</Trans>, 'pricing']
+];
+
+const legalLinks = [
+  [<Trans>Terms of Service</Trans>, 'legal/terms'],
+  [<Trans>Privacy Policy</Trans>, 'legal/privacy-policy'],
+  [<Trans>Cookie Policy</Trans>, 'legal/cookie-policy'],
+  [<Trans>GDPR</Trans>, 'legal/gdpr']
+];
+
 const Footer = (props: LayoutProps) => (
   <div>
     {showSubscribe(props.location.pathname) && (
@@ -102,130 +161,79 @@ const Footer = (props: LayoutProps) => (
     )}
     <footer className="footer pb-9 pt-7 py-md-7 px-4 text-white">
       <div className="row gap-y justify-content-md-center">
-        <div className="col-6 col-md-2 pl-6 order-md-2">
-          <h6 className="mb-4 mt-1">
-            <strong>
-              <Trans>Company</Trans>
-            </strong>
-          </h6>
-          <div className="nav flex-column">
-            <Link className="nav-link" href to={`${props.prefix}/about-us/`}>
-              <Trans>About us</Trans>
-            </Link>
-            <Link className="nav-link" href to={`${props.prefix}/blog/`}>
-              <Trans>Blog</Trans>
-            </Link>
-            <Link className="nav-link" href to={`${props.prefix}/security/`}>
-              <Trans>Security</Trans>
-            </Link>
-            <Link className="nav-link" href to={`${props.prefix}/privacy/`}>
-              <Trans>Privacy</Trans>
-            </Link>
-            <Link className="nav-link" href to={`${props.prefix}/jobs/`}>
-              <Trans>Career</Trans>
-            </Link>
-            <Link className="nav-link" href to={`${props.prefix}/contact/`}>
-              <Trans>Contact & Imprint</Trans>
-            </Link>
-          </div>
-        </div>
+        <FooterCol order={2}>
+          <FooterColBody title={<Trans>Company</Trans>}>
+            {companyLinks.map((link, i) => (
+              <Link
+                className="nav-link"
+                href
+                to={`${props.prefix}/${link[1]}/`}
+                key={`${i}-${link[1]}`}
+              >
+                {link[0]}
+              </Link>
+            ))}
+          </FooterColBody>
+        </FooterCol>
 
-        <div className="col-6 col-md-2 pl-6 order-md-4">
-          <h6 className="mb-4 mt-1">
-            <strong>
-              <Trans>Help</Trans>
-            </strong>
-          </h6>
-          <div className="nav flex-column">
-            <Link className="nav-link" href to={`${props.prefix}/help/getting-started/`}>
-              <Trans>Getting Started</Trans>
-            </Link>
-            <Link className="nav-link" href to={`${props.prefix}/help/faq/`}>
-              <Trans>FAQ</Trans>
-            </Link>
-            <Link
-              className="nav-link"
-              href
-              to={`${props.prefix}/help/employee-participation-guide/`}
-            >
-              ESOP Templates
-            </Link>
-          </div>
-          <h6 className="mb-4 mt-1">
-            <strong>
-              <Trans>Blog</Trans>
-            </strong>
-          </h6>
-          <div className="nav flex-column">
-            <Link
-              className="nav-link"
-              href
-              to={`${props.prefix}/blog/pre-and-post-money-option-pools/`}
-            >
-              Option Pools
-            </Link>
-            <Link className="nav-link" href to={`${props.prefix}/blog/convertible-loans/`}>
-              Convertible Loans
-            </Link>
-            <Link className="nav-link" href to={`${props.prefix}/updates/kpis-and-reports/`}>
-              KPIs & Reports
-            </Link>
-          </div>
-        </div>
+        <FooterCol order={4}>
+          <FooterColBody title={<Trans>Help</Trans>}>
+            {helpLinks.map((lnik, i) => (
+              <Link
+                className="nav-link"
+                href
+                to={`${props.prefix}/${lnik[1]}/`}
+                key={`${i}-${lnik[1]}`}
+              >
+                {lnik[0]}
+              </Link>
+            ))}
+          </FooterColBody>
+          <FooterColBody title={<Trans>Blog</Trans>}>
+            {blogLinks.map((link, i) => (
+              <Link
+                className="nav-link"
+                href
+                to={`${props.prefix}/${link[1]}/`}
+                key={`${i}-${link[1]}`}
+              >
+                {link[0]}
+              </Link>
+            ))}
+          </FooterColBody>
+        </FooterCol>
 
-        <div className="col-6 col-md-2 pl-6 order-md-3">
-          <h6 className="mb-4 mt-1">
-            <strong>
-              <Trans>Product</Trans>
-            </strong>
-          </h6>
-          <div className="nav flex-column">
-            <Link className="nav-link" href to={`${props.prefix}/features/`}>
-              <Trans>Features</Trans>
-            </Link>
-            <Link className="nav-link" href to={`${props.prefix}/features/captable/`}>
-              <Trans>Cap Table</Trans>
-            </Link>
-            <Link className="nav-link" href to={`${props.prefix}/features/modeling/`}>
-              <Trans>Modeling</Trans>
-            </Link>
-            <Link className="nav-link" href to={`${props.prefix}/features/esop/`}>
-              <Trans>Employee Incentives</Trans>
-            </Link>
-            <Link className="nav-link" href to={`${props.prefix}/features/collaboration/`}>
-              <Trans>Due Diligence</Trans>
-            </Link>
-            <Link className="nav-link" href to={`${props.prefix}/features/investors/`}>
-              <Trans>Investors</Trans>
-            </Link>
-            <Link className="nav-link" href to={`${props.prefix}/pricing/`}>
-              <Trans>Pricing</Trans>
-            </Link>
-          </div>
-        </div>
+        <FooterCol order={3}>
+          <FooterColBody title={<Trans>Product</Trans>}>
+            {productLinks.map((link, i) => (
+              <Link
+                className="nav-link"
+                href
+                to={`${props.prefix}/${link[1]}/`}
+                key={`${i}-${link[1]}`}
+              >
+                {link[0]}
+              </Link>
+            ))}
+          </FooterColBody>
+        </FooterCol>
 
-        <div className="col-6 col-md-2 pl-6 order-md-4">
-          <h6 className="mb-4 mt-1">
-            <strong>
-              <Trans>Legal</Trans>
-            </strong>
-          </h6>
-          <div className="nav flex-column">
-            <Link className="nav-link" href to={`${props.prefix}/legal/terms/`}>
-              <Trans>Terms of Service</Trans>
-            </Link>
-            <Link className="nav-link" href to={`${props.prefix}/legal/privacy-policy/`}>
-              <Trans>Privacy Policy</Trans>
-            </Link>
-            <Link className="nav-link" href to={`${props.prefix}/legal/cookie-policy/`}>
-              <Trans>Cookie Policy</Trans>
-            </Link>
-            <Link className="nav-link" href to={`${props.prefix}/legal/gdpr/`}>
-              <Trans>GDPR</Trans>
-            </Link>
-          </div>
-        </div>
-        <div className="col-12 col-md-2 pl-6 order-md-1">
+        <FooterCol order={5}>
+          <FooterColBody title={<Trans>Legal</Trans>}>
+            {legalLinks.map((link, i) => (
+              <Link
+                className="nav-link"
+                href
+                to={`${props.prefix}/${link[1]}/`}
+                key={`${i}-${link[1]}`}
+              >
+                {link[0]}
+              </Link>
+            ))}
+          </FooterColBody>
+        </FooterCol>
+
+        <FooterCol order={1} wide>
           <Link href to={`${props.prefix}/#start`} className="navbar-brand">
             <img className="logo-light" src={logoInverse} width={100} height={40} alt={name} />
           </Link>
@@ -289,7 +297,7 @@ const Footer = (props: LayoutProps) => (
               </div>
             </div>
           </div>
-        </div>
+        </FooterCol>
       </div>
       <div data-provide="map" />
     </footer>
