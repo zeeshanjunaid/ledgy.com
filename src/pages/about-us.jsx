@@ -87,12 +87,16 @@ const IndexPage = (props: Props) => {
       <Header {...props} />
       <main className="main-content">
         <section className="section py-150 bg-gray">
-          <p className="lead">
-            <Trans>
-              We believe that entrepreneurship is the main driver of positive change in the world.
-              That is why we build beautiful and easy to use software for startups.
-            </Trans>
-          </p>
+          <div className="container text-center">
+            <div className="row">
+              <p className="lead">
+                <Trans>
+                  We believe that entrepreneurship is the main driver of positive change in the
+                  world. That is why we build beautiful and easy to use software for startups.
+                </Trans>
+              </p>
+            </div>
+          </div>
         </section>
 
         <section className="section">
