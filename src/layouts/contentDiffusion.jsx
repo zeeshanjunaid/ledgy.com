@@ -72,9 +72,7 @@ export const PostLink = ({
               )}
             </div>
             <small className="col-md-2 text-md-right text-muted">{post.date}</small>
-            <div className="col-12">
-              <p className="mb-0">{description}</p>
-            </div>
+            <div className="col-12">{description}</div>
             <div className="col-12 mt-auto">
               {external ? (
                 <a href={to} {...targetBlank}>
