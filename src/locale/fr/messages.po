@@ -328,11 +328,11 @@ msgstr "Convertir en transactions"
 
 #: src/layouts/index.jsx:124
 msgid "Convertible Loans"
-msgstr "Billet convertible"
+msgstr "Billets convertibles"
 
 #: src/pages/pricing.jsx:25
 msgid "Convertibles"
-msgstr "Billet convertible"
+msgstr "Billets convertibles"
 
 #: src/layouts/index.jsx:141
 msgid "Cookie Policy"
@@ -785,7 +785,7 @@ msgstr "En savoir plus sur la gestion documentaire"
 
 #: src/pages/webinars.jsx:17
 msgid "Ledgy Webinars"
-msgstr "Webinaires Ledgy"
+msgstr "Webinars Ledgy"
 
 #: src/pages/features/modeling.jsx:129
 msgid "Ledgy makes it easy to simulate an investment with a pro-rata distribution"
@@ -1428,11 +1428,11 @@ msgstr "Nous comprenons à quel point les informations relatives aux actions son
 #: src/layouts/index.jsx:109
 #: src/pages/webinars.jsx:13
 msgid "Webinars"
-msgstr "Webinaires"
+msgstr "Webinars"
 
 #: src/pages/webinars.jsx:14
 msgid "Webinars on cap tables, financing rounds, and legal issues around running and managing a startup."
-msgstr "Webinaires sur les cap tables, les rondes de financement et les questions juridiques relatives à la gestion d’une startup."
+msgstr "Webinars sur les cap tables, les rondes de financement et les questions juridiques relatives à la gestion d’une startup."
 
 #: src/pages/features/investors.jsx:113
 msgid "Weekly email notifications if the startups publish new information"

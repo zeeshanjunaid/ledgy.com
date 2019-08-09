@@ -784,7 +784,7 @@ msgstr "Erfahre mehr über Dokumentenverwaltung"
 
 #: src/pages/webinars.jsx:17
 msgid "Ledgy Webinars"
-msgstr "Ledgy Webinaire"
+msgstr "Ledgy Webinars"
 
 #: src/pages/features/modeling.jsx:129
 msgid "Ledgy makes it easy to simulate an investment with a pro-rata distribution"
@@ -1427,11 +1427,11 @@ msgstr "Uns ist bewusst, wie sensibel und vertraulich der Cap Table für jede Fi
 #: src/layouts/index.jsx:109
 #: src/pages/webinars.jsx:13
 msgid "Webinars"
-msgstr "Webinare"
+msgstr "Webinars"
 
 #: src/pages/webinars.jsx:14
 msgid "Webinars on cap tables, financing rounds, and legal issues around running and managing a startup."
-msgstr "Webinare zum Cap Table, Finanzierungsrunden und rechtlichen Fragen rund um das Leiten und Managen eines Startups."
+msgstr "Webinars zum Cap Table, Finanzierungsrunden und rechtlichen Fragen rund um das Leiten und Managen eines Startups."
 
 #: src/pages/features/investors.jsx:113
 msgid "Weekly email notifications if the startups publish new information"
