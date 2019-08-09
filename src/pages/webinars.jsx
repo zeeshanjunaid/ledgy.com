@@ -3,6 +3,8 @@
 import React from 'react';
 import { withI18n } from '@lingui/react';
 import { graphql } from 'gatsby';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
+import { MDXProvider } from '@mdx-js/react';
 
 import { ContentHeader, ContentBody, PostLink } from '../layouts/contentDiffusion';
 import { Title } from '../layouts/utils';
@@ -19,8 +21,21 @@ export default withI18n()(({ i18n, data }: Props) => (
     <ContentBody>
       {data.allContentfulWebinar.edges.map(edge => {
         const { node } = edge;
-        const { id, youtube } = node;
-        return <PostLink external key={id} to={youtube} post={node} defaultImage={data.ledgy} />;
+        const { id, youtube, description } = node;
+        return (
+          <PostLink
+            external
+            key={id}
+            to={youtube}
+            post={node}
+            defaultImage={data.ledgy}
+            description={
+              <MDXProvider>
+                <MDXRenderer>{description.childMdx.body}</MDXRenderer>
+              </MDXProvider>
+            }
+          />
+        );
       })}
     </ContentBody>
   </div>
@@ -41,9 +56,13 @@ export const pageQuery = graphql`
         node {
           id
           title
-          description
           date(formatString: "DD MMM YYYY")
           youtube
+          description {
+            childMdx {
+              body
+            }
+          }
           cover {
             localFile {
               childImageSharp {

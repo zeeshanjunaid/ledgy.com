@@ -31,12 +31,14 @@ export const PostLink = ({
   post,
   to,
   defaultImage,
-  external
+  external,
+  description
 }: {
   post: Page,
   to: string,
   defaultImage: Object,
-  external?: boolean
+  external?: boolean,
+  description: string | Node
 }) => {
   return (
     <div className="card hover-shadow-5 bg-pale-secondary mb-5">
@@ -59,7 +61,7 @@ export const PostLink = ({
           )}
         </div>
         <div className="col-md-9 p-5">
-          <div className="row mb-4 mr-0">
+          <div className="row h-100 mr-0">
             <div className="col-md-10">
               {external ? (
                 <h5>{post.title}</h5>
@@ -70,21 +72,23 @@ export const PostLink = ({
               )}
             </div>
             <small className="col-md-2 text-md-right text-muted">{post.date}</small>
+            <div className="col-12">
+              <p className="mb-0">{description}</p>
+            </div>
+            <div className="col-12 mt-auto">
+              {external ? (
+                <a href={to} {...targetBlank}>
+                  <Trans>See video</Trans>
+                  <ChevronRight />
+                </a>
+              ) : (
+                <Link className="small" href to={to}>
+                  <Trans>Read more</Trans>
+                  <ChevronRight />
+                </Link>
+              )}
+            </div>
           </div>
-          <p className="mb-0">{post.description}</p>
-          {external ? (
-            <a className="ml-auto" href={to} {...targetBlank}>
-              <small>
-                <Trans>See video</Trans>
-              </small>
-              <ChevronRight />
-            </a>
-          ) : (
-            <Link className="small ml-auto" href to={to}>
-              <Trans>Read more</Trans>
-              <ChevronRight />
-            </Link>
-          )}
         </div>
       </div>
     </div>
