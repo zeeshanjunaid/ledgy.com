@@ -4,6 +4,8 @@ import React, { type Node } from 'react';
 import { Helmet } from 'react-helmet';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { Trans } from '@lingui/react';
+import sample from 'lodash/sample';
 
 export const name = 'Ledgy';
 export const appUrl = 'https://app.ledgy.com';
@@ -89,3 +91,25 @@ export const animateTablet = () => {
     }
   }, 50);
 };
+
+export const CTAExperiments = [
+  {
+    name: 'freeForever',
+    title: <Trans>Free forever with 50MB storage</Trans>,
+    CTA: <Trans>Get started</Trans>
+  },
+  {
+    name: 'stakeholders',
+    title: <Trans>Help your stakeholders stay up to date</Trans>,
+    CTA: <Trans>Get started</Trans>
+  },
+  {
+    name: 'peaceOfMind',
+    title: <Trans>Find peace of mind with a better cap table tool</Trans>,
+    CTA: <Trans>Get started</Trans>
+  }
+];
+
+// eslint-disable-next-line import/prefer-default-export
+export const CTAExperiment =
+  typeof window !== 'undefined' ? sample(CTAExperiments) : CTAExperiments[0];

@@ -325,6 +325,24 @@ h1 {
   }
 }
 
+.cta-banner {
+  font-size: 34px;
+  display: flex;
+
+  @include media-breakpoint-down(sm) {
+    p {
+      font-size: 22px;
+      width: 100%;
+      text-align: center;
+    }
+
+    a {
+      width: 100%;
+    }
+  }
+
+}
+
 .testimonial {
   line-height: 1.8;
   small {
