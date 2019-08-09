@@ -174,11 +174,11 @@ msgstr "Automatically update the stakeholder list, transaction history, and cap 
 msgid "Available shares for transfer"
 msgstr "Available shares for transfer"
 
-#: src/pages/about-us.jsx:131
+#: src/pages/about-us.jsx:128
 msgid "Backed by"
 msgstr "Backed by"
 
-#: src/pages/about-us.jsx:143
+#: src/pages/about-us.jsx:140
 msgid "Backing the creators of our future since 1984"
 msgstr "Backing the creators of our future since 1984"
 
@@ -364,7 +364,7 @@ msgstr "Daily backups ensure nothing is ever lost"
 msgid "Data room, audit trail and read-only access for investors save you costly due diligence tools"
 msgstr "Data room, audit trail and read-only access for investors save you costly due diligence tools"
 
-#: src/pages/about-us.jsx:173
+#: src/pages/about-us.jsx:170
 msgid "Digital entrepreneur and investor. Security, crypto & privacy expert"
 msgstr "Digital entrepreneur and investor. Security, crypto & privacy expert"
 
@@ -478,11 +478,11 @@ msgstr "Enjoy the highest security standards"
 msgid "Enter your email…"
 msgstr "Enter your email…"
 
-#: src/pages/about-us.jsx:168
+#: src/pages/about-us.jsx:165
 msgid "Entrepreneur, business angel, founder of Doodle.com"
 msgstr "Entrepreneur, business angel, founder of Doodle.com"
 
-#: src/pages/about-us.jsx:153
+#: src/pages/about-us.jsx:150
 msgid "Entrepreneur, technologist, founder of Doodle.com"
 msgstr "Entrepreneur, technologist, founder of Doodle.com"
 
@@ -499,7 +499,7 @@ msgstr "Equity data is too important to be accidentally tweaked in a spreadsheet
 msgid "Equity plan management"
 msgstr "Equity plan management"
 
-#: src/pages/about-us.jsx:138
+#: src/pages/about-us.jsx:135
 msgid "Europe’s symbiosis of early-stage VC funds and private investor network"
 msgstr "Europe’s symbiosis of early-stage VC funds and private investor network"
 
@@ -553,7 +553,7 @@ msgstr "Flexible yet intuitive round modeling supporting convertibles, fixed emp
 msgid "For even better protection of accounts. And our implementation is <0>open source</0>!"
 msgstr "For even better protection of accounts. And our implementation is <0>open source</0>!"
 
-#: src/pages/about-us.jsx:178
+#: src/pages/about-us.jsx:175
 msgid "Founder of Meisser Economics, Bitcoin Association Switzerland, and Wuala"
 msgstr "Founder of Meisser Economics, Bitcoin Association Switzerland, and Wuala"
 
@@ -632,7 +632,7 @@ msgstr "Granular access rights, you control them"
 msgid "HTTP headers prevent cross-site scripting and code injection (<0>A+ rating</0>)"
 msgstr "HTTP headers prevent cross-site scripting and code injection (<0>A+ rating</0>)"
 
-#: src/pages/about-us.jsx:148
+#: src/pages/about-us.jsx:145
 msgid "Healthcare & technology venture capital since 2001"
 msgstr "Healthcare & technology venture capital since 2001"
 
@@ -694,7 +694,7 @@ msgstr "Intuitive, legally valid and error-free cap table from the beginning"
 msgid "Intuitive, legally valid and error-free cap table from the beginning, supporting all transaction types, unlimited share classes, pooled investments, and numbered shares."
 msgstr "Intuitive, legally valid and error-free cap table from the beginning, supporting all transaction types, unlimited share classes, pooled investments, and numbered shares."
 
-#: src/pages/about-us.jsx:183
+#: src/pages/about-us.jsx:180
 msgid "Investor & consultant (Farmy.ch, Flatfox.ch), founder of Students.ch"
 msgstr "Investor & consultant (Farmy.ch, Flatfox.ch), founder of Students.ch"
 
@@ -769,7 +769,7 @@ msgstr "Kpi chart"
 msgid "Language"
 msgstr "Language"
 
-#: src/pages/about-us.jsx:163
+#: src/pages/about-us.jsx:160
 msgid "Leading Spanish investor in early-stage technology startups"
 msgstr "Leading Spanish investor in early-stage technology startups"
 
@@ -821,7 +821,7 @@ msgstr "Lost track of who owns how many shares in your startup? Let Ledgy deal w
 msgid "Luna is a model of the Saturn V rocket, which has been to space 13 times, and holds the record for largest payload to low Earth orbit. She’s still under construction — <0>Ready to help?</0>"
 msgstr "Luna is a model of the Saturn V rocket, which has been to space 13 times, and holds the record for largest payload to low Earth orbit. She’s still under construction — <0>Ready to help?</0>"
 
-#: src/pages/about-us.jsx:188
+#: src/pages/about-us.jsx:185
 msgid "M&A and private equity lawyer with a focus on start-up legal advise, Smartuplaw.ch"
 msgstr "M&A and private equity lawyer with a focus on start-up legal advise, Smartuplaw.ch"
 
@@ -873,7 +873,7 @@ msgstr "Numbered shares"
 msgid "Numbers are checked for consistency, giving you the peace of mind that none go missing or are assigned twice"
 msgstr "Numbers are checked for consistency, giving you the peace of mind that none go missing or are assigned twice"
 
-#: src/pages/about-us.jsx:158
+#: src/pages/about-us.jsx:155
 msgid "One of the most active Swiss early-stage angel investors"
 msgstr "One of the most active Swiss early-stage angel investors"
 
@@ -1198,7 +1198,7 @@ msgstr "Supports non-participating, participating with and without a cap, and in
 msgid "Switzerland"
 msgstr "Switzerland"
 
-#: src/pages/about-us.jsx:109
+#: src/pages/about-us.jsx:106
 msgid "Team"
 msgstr "Team"
 
@@ -1397,7 +1397,7 @@ msgstr "Visualizations help you understand what happens"
 msgid "Want to model the new financing round for your company? Use Ledgy!"
 msgstr "Want to model the new financing round for your company? Use Ledgy!"
 
-#: src/pages/about-us.jsx:93
+#: src/pages/about-us.jsx:92
 msgid "We believe that entrepreneurship is the main driver of positive change in the world.<0/>That is why we build beautiful and intuitive software for startups, helping them be more successful."
 msgstr "We believe that entrepreneurship is the main driver of positive change in the world.<0/>That is why we build beautiful and intuitive software for startups, helping them be more successful."
 
@@ -1438,8 +1438,8 @@ msgid "When in round modeling, the cap table below shows the distribution after 
 msgstr "When in round modeling, the cap table below shows the distribution after the round"
 
 #: src/layouts/team.jsx:35
-msgid "Yoko graduated from ETH and Oxford and was president of Swissloop, enabling the team to win the 3rd price at the SpaceX Hyperloop competition"
-msgstr "Yoko graduated from ETH and Oxford and was president of Swissloop, enabling the team to win the 3rd price at the SpaceX Hyperloop competition"
+msgid "Yoko studied Physics at ETHZ, the University of Oxford and CERN. She was also project lead of Swissloop, helping to build the first Hyperloop pod in Switzerland."
+msgstr "Yoko studied Physics at ETHZ, the University of Oxford and CERN. She was also project lead of Swissloop, helping to build the first Hyperloop pod in Switzerland."
 
 #: src/pages/pricing.jsx:186
 msgid "You get a <0>20% discount</0> on Premium if your startup helps reducing carbon emissions.<1/><2>Write us</2> about your impact to see if you qualify."

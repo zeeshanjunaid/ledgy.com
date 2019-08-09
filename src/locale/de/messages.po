@@ -6,12 +6,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Creation-Date: 2018-09-12T18:40:54.619Z\n"
-"PO-Revision-Date: 2019-08-07 11:30+0200\n"
+"PO-Revision-Date: 2019-08-09 17:06+0200\n"
 "Language: de\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: Timo Horstschäfer <timo@ledgy.com>\n"
 "Language-Team: \n"
-"X-Generator: Poedit 2.2.3\n"
+"X-Generator: Poedit 2.2.1\n"
 
 #: src/pages/pricing.jsx:20
 msgid "1 round, 1 scenario"
@@ -166,11 +166,11 @@ msgstr "Automatische Aktualisierung der Stakeholderliste, der Transaktionshistor
 msgid "Available shares for transfer"
 msgstr "Verfügbare Aktien für die Übertragung"
 
-#: src/pages/about-us.jsx:131
+#: src/pages/about-us.jsx:128
 msgid "Backed by"
 msgstr "Unterstützt von"
 
-#: src/pages/about-us.jsx:143
+#: src/pages/about-us.jsx:140
 msgid "Backing the creators of our future since 1984"
 msgstr "Backing the creators of our future since 1984"
 
@@ -349,7 +349,7 @@ msgstr "Tägliche Backups stellen sicher, dass nichts verloren gehen kann"
 msgid "Data room, audit trail and read-only access for investors save you costly due diligence tools"
 msgstr "Datenraum, Audit-Trail und schreibgeschützter Zugriff für Investoren ersparen dir teure Due-Diligence Tools"
 
-#: src/pages/about-us.jsx:173
+#: src/pages/about-us.jsx:170
 msgid "Digital entrepreneur and investor. Security, crypto & privacy expert"
 msgstr "Digital Entrepreneur und Investor. Security-, Crypto- & Privacy-Experte"
 
@@ -458,11 +458,11 @@ msgstr "Geniesse die höchsten Sicherheitsstandards"
 msgid "Enter your email…"
 msgstr "Gebe deine E-Mail-Adresse ein…"
 
-#: src/pages/about-us.jsx:168
+#: src/pages/about-us.jsx:165
 msgid "Entrepreneur, business angel, founder of Doodle.com"
 msgstr "Unternehmer, Business Angel, Gründer von Doodle.com"
 
-#: src/pages/about-us.jsx:153
+#: src/pages/about-us.jsx:150
 msgid "Entrepreneur, technologist, founder of Doodle.com"
 msgstr "Unternehmer, Technologe, Gründer von Doodle.com"
 
@@ -478,7 +478,7 @@ msgstr "Beteiligungsdaten sind zu wichtig, um sie versehentlich in einem Tabelle
 msgid "Equity plan management"
 msgstr "Beteiligungspläne"
 
-#: src/pages/about-us.jsx:138
+#: src/pages/about-us.jsx:135
 msgid "Europe’s symbiosis of early-stage VC funds and private investor network"
 msgstr "Europe’s symbiosis of early-stage VC funds and private investor network"
 
@@ -525,7 +525,7 @@ msgstr "Flexible und dennoch intuitive Rundenmodellierung, welche Wandeldarlehen
 msgid "For even better protection of accounts. And our implementation is <0>open source</0>!"
 msgstr "Für noch mehr Sicherheit der Nutzerkonten. Übrigens, unsere Implementierung ist <0>Open Source</0>!"
 
-#: src/pages/about-us.jsx:178
+#: src/pages/about-us.jsx:175
 msgid "Founder of Meisser Economics, Bitcoin Association Switzerland, and Wuala"
 msgstr "Gründer von Meisser Economics, Bitcoin Association Schweiz und Wuala"
 
@@ -603,7 +603,7 @@ msgstr "Granulare Zugriffsrechte, du hast die Kontrolle"
 msgid "HTTP headers prevent cross-site scripting and code injection (<0>A+ rating</0>)"
 msgstr "HTTP-Header verhindern Cross-Site-Scripting und Code-Injection (<0>A+-Rating</0>)"
 
-#: src/pages/about-us.jsx:148
+#: src/pages/about-us.jsx:145
 msgid "Healthcare & technology venture capital since 2001"
 msgstr "Healthcare & technology venture capital since 2001"
 
@@ -664,7 +664,7 @@ msgstr "Intuitiver, rechtsgültiger und fehlerfreier Cap Table von Anfang an"
 msgid "Intuitive, legally valid and error-free cap table from the beginning, supporting all transaction types, unlimited share classes, pooled investments, and numbered shares."
 msgstr "Intuitive, rechtsgültige und fehlerfreie Cap Tables von Anfang an, die alle Transaktionsarten, unbegrenzte Aktienklassen, gepoolte Anlagen und nummerierte Aktien unterstützt."
 
-#: src/pages/about-us.jsx:183
+#: src/pages/about-us.jsx:180
 msgid "Investor & consultant (Farmy.ch, Flatfox.ch), founder of Students.ch"
 msgstr "Investor & Berater (Farmy.ch, Flatfox.ch), Gründer von Students.ch"
 
@@ -737,7 +737,7 @@ msgstr "KPI-Diagramm"
 msgid "Language"
 msgstr "Sprache"
 
-#: src/pages/about-us.jsx:163
+#: src/pages/about-us.jsx:160
 msgid "Leading Spanish investor in early-stage technology startups"
 msgstr "Der führende Investor aus Spanien im Early Stage-Segment"
 
@@ -789,7 +789,7 @@ msgstr "Hast du die Übersicht verloren, wem wie viele Aktien in deinem Startup 
 msgid "Luna is a model of the Saturn V rocket, which has been to space 13 times, and holds the record for largest payload to low Earth orbit. She’s still under construction — <0>Ready to help?</0>"
 msgstr "Luna ist ein Modell der Rakete Saturn V, welche 13 mal im Weltraum war und den Rekord für die höchste Nutzlast in die untere Erdumlaufbahn hält. Sie ist noch im Aufbau — <0>Willst du helfen?</0>"
 
-#: src/pages/about-us.jsx:188
+#: src/pages/about-us.jsx:185
 msgid "M&A and private equity lawyer with a focus on start-up legal advise, Smartuplaw.ch"
 msgstr "M&A- und Private-Equity-Anwältin mit Schwerpunkt auf Start-up Beratung, Smartuplaw.ch"
 
@@ -841,7 +841,7 @@ msgstr "Aktiennummerierung"
 msgid "Numbers are checked for consistency, giving you the peace of mind that none go missing or are assigned twice"
 msgstr "Die Nummerierung wird auf Konsistenz geprüft, was dir die Gewissheit gibt, dass keine verloren geht oder doppelt vergeben wird"
 
-#: src/pages/about-us.jsx:158
+#: src/pages/about-us.jsx:155
 msgid "One of the most active Swiss early-stage angel investors"
 msgstr "Einer der aktivsten Schweizer Angel-Investoren für Early Stage"
 
@@ -1148,7 +1148,7 @@ msgstr "Unterstützt Non-participating, Participating mit und ohne Cap, sowie Zi
 msgid "Switzerland"
 msgstr "Schweiz"
 
-#: src/pages/about-us.jsx:109
+#: src/pages/about-us.jsx:106
 msgid "Team"
 msgstr "Team"
 
@@ -1344,7 +1344,7 @@ msgstr "Grafiken helfen dir zu verstehen, was passiert"
 msgid "Want to model the new financing round for your company? Use Ledgy!"
 msgstr "Du möchtest eine neue Finanzierungsrunde für dein Startup modellieren? Nutze Ledgy!"
 
-#: src/pages/about-us.jsx:93
+#: src/pages/about-us.jsx:92
 msgid "We believe that entrepreneurship is the main driver of positive change in the world.<0/>That is why we build beautiful and intuitive software for startups, helping them be more successful."
 msgstr "Wir sind überzeugt, dass Unternehmertum der Haupttreiber für positive Veränderungen in der Welt ist.<0/>Deshalb bauen wir schöne und intuitive Software für Startups, um ihnen zu helfen erfolgreicher zu sein."
 
@@ -1385,8 +1385,8 @@ msgid "When in round modeling, the cap table below shows the distribution after 
 msgstr "Bei der Rundenmodellierung zeigt der Cap Table die Verteilung danach"
 
 #: src/layouts/team.jsx:35
-msgid "Yoko graduated from ETH and Oxford and was president of Swissloop, enabling the team to win the 3rd price at the SpaceX Hyperloop competition"
-msgstr "Yoko hat ihren Physik Master an der ETH und in Oxford gemacht und war Präsident von Swissloop, wo sie dem Team zum dritten Platz beim SpaceX Hyperloop Wettbewerb verholfen hat"
+msgid "Yoko studied Physics at ETHZ, the University of Oxford and CERN. She was also project lead of Swissloop, helping to build the first Hyperloop pod in Switzerland."
+msgstr "Yoko hat Physik an der ETHZ, der University of Oxford und dem CERN studiert. Sie war auch Projektleiterin von Swissloop und half beim Bau des ersten Hyperloop-Pods der Schweiz."
 
 #: src/pages/pricing.jsx:186
 msgid "You get a <0>20% discount</0> on Premium if your startup helps reducing carbon emissions.<1/><2>Write us</2> about your impact to see if you qualify."
