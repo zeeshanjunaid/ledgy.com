@@ -30,11 +30,11 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
   },
   yoko: {
     name: 'Yoko Spirig',
-    role: 'Co-Founder & CPO',
+    role: 'Co-Founder & CEO',
     description: (
       <Trans>
-        Yoko graduated from ETH and Oxford and was president of Swissloop, enabling the team to win
-        the 3rd price at the SpaceX Hyperloop competition
+        Yoko studied Physics at ETHZ, the University of Oxford and CERN. She was also project lead
+        of Swissloop, helping to build the first Hyperloop pod in Switzerland.
       </Trans>
     ),
     twitter: 'https://twitter.com/YokoSpirig',
@@ -43,7 +43,7 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
   },
   ben: {
     name: 'Ben Brandt',
-    role: 'Co-Founder & CEO',
+    role: 'Co-Founder & CPO',
     description: (
       <Trans>
         Ben has extensive experience in project management and has worked for two years as
