@@ -41,7 +41,7 @@ export const PostLink = ({
   description: string | Node
 }) => {
   return (
-    <div className="card hover-shadow-5 bg-pale-secondary mb-5">
+    <div className="card hover-shadow-5 bg-pale-secondary mb-6">
       <div className="row">
         <div className="col-md-3">
           {external ? (
