@@ -2,7 +2,7 @@
 
 import React, { type Node } from 'react';
 import { Trans } from '@lingui/react';
-import { Link } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 
 import { ChevronRight, targetBlank } from '../layouts/utils';
@@ -77,7 +77,7 @@ export const PostLink = ({
             <div className="col-12 mt-auto">
               {external ? (
                 <a href={to} {...targetBlank}>
-                  <Trans>See video</Trans>
+                  <Trans>Watch now</Trans>
                   <ChevronRight />
                 </a>
               ) : (
@@ -93,3 +93,11 @@ export const PostLink = ({
     </div>
   );
 };
+
+export const CoverImageFragment = graphql`
+  fragment CoverImage on ImageSharp {
+    fluid(maxWidth: 200, maxHeight: 200, cropFocus: CENTER) {
+      ...GatsbyImageSharpFluid
+    }
+  }
+`;

@@ -6,7 +6,7 @@ import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
 
-import { ContentHeader, ContentBody, PostLink } from '../layouts/contentDiffusion';
+import { ContentHeader, ContentBody, PostLink } from '../components/Content';
 import { Title } from '../layouts/utils';
 
 export default withI18n()(({ i18n, data }: Props) => (
@@ -42,11 +42,6 @@ export default withI18n()(({ i18n, data }: Props) => (
 ));
 
 export const pageQuery = graphql`
-  fragment CoverImage on ImageSharp {
-    fluid(maxWidth: 200, maxHeight: 200, cropFocus: CENTER) {
-      ...GatsbyImageSharpFluid
-    }
-  }
   query {
     ledgy: imageSharp(fluid: { originalName: { regex: "/ledgy.png/" } }) {
       ...CoverImage
