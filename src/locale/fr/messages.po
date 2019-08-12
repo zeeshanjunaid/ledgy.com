@@ -90,7 +90,8 @@ msgstr "Ajouter un vesting"
 msgid "Add vesting or inverse vesting to any transaction"
 msgstr "Ajouter un vesting à toute transaction"
 
-#: src/pages/features/modeling.jsx:53 src/pages/features/modeling.jsx:111
+#: src/pages/features/modeling.jsx:53
+#: src/pages/features/modeling.jsx:111
 msgid "Adjust your simulations"
 msgstr "Ajuste tes simulations"
 
@@ -106,7 +107,8 @@ msgstr "Toutes les données sont stockées chez un prestataire <0>indépendant <
 msgid "All standard features"
 msgstr "Les fonctions standard"
 
-#: src/components/Feature.jsx:89 src/pages/features.jsx:23
+#: src/components/Feature.jsx:89
+#: src/pages/features.jsx:23
 msgid "All you need in one place"
 msgstr "Tout ce dont tu as besoin au même endroit"
 
@@ -151,7 +153,8 @@ msgstr "Chez Ledgy, nous prenons ta sécurité au sérieux. Des mots de passe s�
 msgid "Attach doc to transaction"
 msgstr "Joindre le document à la transaction"
 
-#: src/pages/features/captable.jsx:53 src/pages/features/captable.jsx:136
+#: src/pages/features/captable.jsx:53
+#: src/pages/features/captable.jsx:136
 msgid "Attach documents"
 msgstr "Joins des documents"
 
@@ -267,7 +270,8 @@ msgstr "Choisis de n’afficher que les pools ou la vue détaillée avec les par
 msgid "Coding since high school, Timo got an award for the best master thesis in computer science and worked one year as a computer engineer in robotics"
 msgstr "Codant depuis le lycée, Timo a obtenu un prix pour le meilleur mémoire de maîtrise en informatique et a travaillé un an comme ingénieur en robotique"
 
-#: src/components/Feature.jsx:101 src/pages/features/collaboration.jsx:20
+#: src/components/Feature.jsx:101
+#: src/pages/features/collaboration.jsx:20
 #: src/pages/features.jsx:104
 msgid "Collaboration & Due Diligence"
 msgstr "Collaboration et diligence raisonnable"
@@ -280,7 +284,8 @@ msgstr "Prochainement"
 msgid "Company"
 msgstr "Société"
 
-#: src/pages/features/modeling.jsx:47 src/pages/features/modeling.jsx:95
+#: src/pages/features/modeling.jsx:47
+#: src/pages/features/modeling.jsx:95
 #: src/pages/features/modeling.jsx:105
 msgid "Compare and share scenarios"
 msgstr "Compare et partage des scénarios"
@@ -293,7 +298,8 @@ msgstr "Complète ton portefeuille"
 msgid "Comprehensive transaction history"
 msgstr "Historique complet des transactions"
 
-#: src/pages/contact.jsx:10 src/pages/contact.jsx:74
+#: src/pages/contact.jsx:10
+#: src/pages/contact.jsx:74
 msgid "Contact"
 msgstr "Contact"
 
@@ -366,7 +372,8 @@ msgstr "Data room, piste d’audits et accès en lecture seule pour les investis
 msgid "Digital entrepreneur and investor. Security, crypto & privacy expert"
 msgstr "Entrepreneur et investisseur en technologies digitales. Expert en sécurité et cryptographie"
 
-#: src/pages/features/esop.jsx:137 src/pages/features/modeling.jsx:140
+#: src/pages/features/esop.jsx:137
+#: src/pages/features/modeling.jsx:140
 msgid "Diluted cap table"
 msgstr "Cap table dilué"
 
@@ -452,7 +459,8 @@ msgstr "Notification par e-mail d’évènement de complétion de vesting immine
 msgid "Employee Incentives"
 msgstr "Participation des employés"
 
-#: src/components/Feature.jsx:98 src/pages/features/esop.jsx:25
+#: src/components/Feature.jsx:98
+#: src/pages/features/esop.jsx:25
 #: src/pages/features.jsx:33
 msgid "Employee Participation Plans"
 msgstr "Plans de participation des employés"
@@ -461,7 +469,8 @@ msgstr "Plans de participation des employés"
 msgid "Encrypted connection"
 msgstr "Connexion cryptée"
 
-#: src/pages/features/esop.jsx:48 src/pages/features/esop.jsx:109
+#: src/pages/features/esop.jsx:48
+#: src/pages/features/esop.jsx:109
 msgid "Engage your employees"
 msgstr "Mobilise tes employés"
 
@@ -485,7 +494,8 @@ msgstr "Entrepreneur, business angel, fondateur de Doodle.com"
 msgid "Entrepreneur, technologist, founder of Doodle.com"
 msgstr "Entrepreneur, technologist, fondateur de Doodle.com"
 
-#: src/pages/privacy.jsx:77 src/pages/privacy.jsx:129
+#: src/pages/privacy.jsx:77
+#: src/pages/privacy.jsx:129
 msgid "Equity data"
 msgstr "Données sur les capitaux propres"
 
@@ -505,7 +515,8 @@ msgstr "La symbiose européenne entre les fonds de capital-risque et le réseau 
 msgid "Every company has KPIs, and investors love seeing them in real-time"
 msgstr "Chaque entreprise a des indicateurs de performance clés, et les investisseurs adorent les voir en temps réel"
 
-#: src/pages/features/modeling.jsx:173 src/pages/features/modeling.jsx:186
+#: src/pages/features/modeling.jsx:173
+#: src/pages/features/modeling.jsx:186
 msgid "Exit modeling"
 msgstr "Modélisation de stratégie de sortie"
 
@@ -594,7 +605,8 @@ msgstr "Commencer"
 msgid "Get started in minutes with the copy-paste spreadsheet importer"
 msgstr "Démarre en quelques minutes avec un simple copier-coller dans l’importateur de fichiers excel"
 
-#: src/pages/features/modeling.jsx:41 src/pages/features/modeling.jsx:76
+#: src/pages/features/modeling.jsx:41
+#: src/pages/features/modeling.jsx:76
 #: src/pages/features/modeling.jsx:88
 msgid "Get the calculations right"
 msgstr "Effectue les bons calculs"
@@ -694,8 +706,10 @@ msgstr "Cap table intuitif, juridiquement valide et exempt d’erreurs dès le d
 msgid "Investor & consultant (Farmy.ch, Flatfox.ch), founder of Students.ch"
 msgstr "Investisseur & consultant (Farmy.ch, Flatfox.ch), fondateur de Students.ch"
 
-#: src/components/Feature.jsx:102 src/pages/features/investors.jsx:20
-#: src/pages/features/investors.jsx:30 src/pages/features.jsx:126
+#: src/components/Feature.jsx:102
+#: src/pages/features/investors.jsx:20
+#: src/pages/features/investors.jsx:30
+#: src/pages/features.jsx:126
 msgid "Investor Relations & Portfolio"
 msgstr "Relations investisseurs et portfolio"
 
@@ -783,7 +797,7 @@ msgstr "En savoir plus sur la collaboration"
 msgid "Learn more about document management"
 msgstr "En savoir plus sur la gestion documentaire"
 
-#: src/pages/webinars.jsx:17
+#: src/pages/webinars.jsx:19
 msgid "Ledgy Webinars"
 msgstr "Webinars Ledgy"
 
@@ -925,7 +939,8 @@ msgstr "Investissement en fond commun"
 msgid "Pooled investments are common in many countries, Ledgy helps you keep them organized"
 msgstr "Les placements collectifs en pool sont courants dans de nombreux pays, Ledgy t’aide à les garder organisés"
 
-#: src/pages/features/investors.jsx:59 src/pages/features/investors.jsx:122
+#: src/pages/features/investors.jsx:59
+#: src/pages/features/investors.jsx:122
 #: src/pages/features/investors.jsx:128
 msgid "Portfolio history"
 msgstr "Historique du portefeuille"
@@ -955,7 +970,8 @@ msgstr "Politique de confidentialité"
 msgid "Privacy made in Europe"
 msgstr "Privacy made in Europe"
 
-#: src/pages/privacy.jsx:22 src/pages/privacy.jsx:45
+#: src/pages/privacy.jsx:22
+#: src/pages/privacy.jsx:45
 msgid "Privacy made in Europe. Because your equity data is not for everyone."
 msgstr "Confidentialité made in Europe. Parce que tes données ne doivent pas être accessible à tout le monde."
 
@@ -967,7 +983,8 @@ msgstr "Distribution au prorata"
 msgid "Product"
 msgstr "Produit"
 
-#: src/pages/features/investors.jsx:53 src/pages/features/investors.jsx:109
+#: src/pages/features/investors.jsx:53
+#: src/pages/features/investors.jsx:109
 msgid "Professional portfolio"
 msgstr "Portefeuille professionnel"
 
@@ -1001,7 +1018,8 @@ msgstr "Lire plus"
 msgid "Record of edits"
 msgstr "Registre des modifications"
 
-#: src/pages/features/investors.jsx:41 src/pages/features/investors.jsx:76
+#: src/pages/features/investors.jsx:41
+#: src/pages/features/investors.jsx:76
 msgid "Recurring reports"
 msgstr "Rapports récurrents"
 
@@ -1017,7 +1035,8 @@ msgstr "Rapport"
 msgid "Reporting"
 msgstr "Rapport"
 
-#: src/components/Feature.jsx:100 src/pages/features.jsx:80
+#: src/components/Feature.jsx:100
+#: src/pages/features.jsx:80
 msgid "Round & Exit Modeling"
 msgstr "Modélisation de levée de fonds et de sorties"
 
@@ -1025,11 +1044,13 @@ msgstr "Modélisation de levée de fonds et de sorties"
 msgid "Round Modeling"
 msgstr "Modélisation de levée de fonds"
 
-#: src/pages/index.jsx:30 src/pages/index.jsx:37
+#: src/pages/index.jsx:30
+#: src/pages/index.jsx:37
 msgid "Round Modeling. Made Simple."
 msgstr "Modélise tes levées de fonds. Simplement."
 
-#: src/pages/features/modeling.jsx:20 src/pages/features/modeling.jsx:30
+#: src/pages/features/modeling.jsx:20
+#: src/pages/features/modeling.jsx:30
 msgid "Round and Exit Modeling"
 msgstr "Modélisation de levée de fonds et de sorties"
 
@@ -1081,7 +1102,7 @@ msgstr "Vois combien d’actions doivent être réservées pour un pool d’empl
 msgid "See the Demo"
 msgstr "Voir la démo"
 
-#: src/layouts/contentDiffusion.jsx:78
+#: src/layouts/contentDiffusion.jsx:79
 msgid "See video"
 msgstr "Voir la vidéo"
 
@@ -1137,8 +1158,10 @@ msgstr "Accélère l’import de tes données grâce à la fonction d’importat
 msgid "Spela found her passion for business development through her experiences co-founding a startup, and as an early employee at a SaaS company. She holds a Waldorf teaching diploma, and a Master’s degree in Pharmacy."
 msgstr "Spela s’est passionnée pour le business development à travers ses expériences en tant que co-fonder d’une start-up, et en tant qu’employée dans une entreprise SaaS. Elle est titulaire d’un diplôme d’enseignement Waldorf et d’une maîtrise en pharmacie."
 
-#: src/pages/features/captable.jsx:59 src/pages/features/captable.jsx:157
-#: src/pages/features/esop.jsx:54 src/pages/features/esop.jsx:152
+#: src/pages/features/captable.jsx:59
+#: src/pages/features/captable.jsx:157
+#: src/pages/features/esop.jsx:54
+#: src/pages/features/esop.jsx:152
 msgid "Spreadsheet importer"
 msgstr "Importateur de feuilles de calcul"
 
@@ -1276,7 +1299,8 @@ msgstr "Suis de les exercices, les résiliations et les expirations"
 msgid "Track your valuations and understand the history in terms of percentage and number of shares"
 msgstr "Suis tes évaluations et comprends l’historique en termes de pourcentage et de nombre d’actions"
 
-#: src/pages/features/captable.jsx:41 src/pages/features/captable.jsx:76
+#: src/pages/features/captable.jsx:41
+#: src/pages/features/captable.jsx:76
 msgid "Transaction-based"
 msgstr "Basé sur les transactions"
 
@@ -1426,11 +1450,11 @@ msgid "We understand how sensitive equity information is for any business. That�
 msgstr "Nous comprenons à quel point les informations relatives aux actions sont sensibles pour n’importe quelle entreprise. C’est pourquoi la protection de ta vie privée et la sécurité de tes données sont cruciales pour nous. Voici ce que nous faisons pour protéger tes données."
 
 #: src/layouts/index.jsx:109
-#: src/pages/webinars.jsx:13
+#: src/pages/webinars.jsx:15
 msgid "Webinars"
 msgstr "Webinars"
 
-#: src/pages/webinars.jsx:14
+#: src/pages/webinars.jsx:16
 msgid "Webinars on cap tables, financing rounds, and legal issues around running and managing a startup."
 msgstr "Webinars sur les cap tables, les rondes de financement et les questions juridiques relatives à la gestion d’une startup."
 
@@ -1498,7 +1522,8 @@ msgstr "modélisation d’une nouvelle ronde de financement, y compris les bille
 msgid "per stakeholder per month"
 msgstr "par stakeholder par mois"
 
-#: src/pages/features/captable.jsx:60 src/pages/features/esop.jsx:55
+#: src/pages/features/captable.jsx:60
+#: src/pages/features/esop.jsx:55
 msgid "save time and focus on what matters"
 msgstr "gagne du temps et concentre-toi sur ce qui compte"
 

@@ -797,7 +797,7 @@ msgstr "Learn more about collaboration"
 msgid "Learn more about document management"
 msgstr "Learn more about document management"
 
-#: src/pages/webinars.jsx:17
+#: src/pages/webinars.jsx:19
 msgid "Ledgy Webinars"
 msgstr "Ledgy Webinars"
 
@@ -1102,7 +1102,7 @@ msgstr "See how many shares have to be reserved for a fixed percentage employee 
 msgid "See the Demo"
 msgstr "See the Demo"
 
-#: src/layouts/contentDiffusion.jsx:78
+#: src/layouts/contentDiffusion.jsx:79
 msgid "See video"
 msgstr "See video"
 
@@ -1450,11 +1450,11 @@ msgid "We understand how sensitive equity information is for any business. That�
 msgstr "We understand how sensitive equity information is for any business. That’s why your privacy and your data’s security is crucial to us. Here is what we do to protect your data."
 
 #: src/layouts/index.jsx:109
-#: src/pages/webinars.jsx:13
+#: src/pages/webinars.jsx:15
 msgid "Webinars"
 msgstr "Webinars"
 
-#: src/pages/webinars.jsx:14
+#: src/pages/webinars.jsx:16
 msgid "Webinars on cap tables, financing rounds, and legal issues around running and managing a startup."
 msgstr "Webinars on cap tables, financing rounds, and legal issues around running and managing a startup."
 
