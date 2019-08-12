@@ -7,7 +7,7 @@ import Img from 'gatsby-image';
 
 import { ChevronRight, targetBlank } from '../layouts/utils';
 
-export const ContentHeader = ({ heading }: { heading: string }) => (
+export const ContentHeader = ({ heading }: {| heading: string |}) => (
   <header className="header text-white bg-ledgy">
     <div className="container text-center">
       <div className="row">
@@ -19,7 +19,7 @@ export const ContentHeader = ({ heading }: { heading: string }) => (
   </header>
 );
 
-export const ContentBody = ({ children }: { children: Array<Node> }) => (
+export const ContentBody = ({ children }: {| children: Array<Node> |}) => (
   <main className="main-content">
     <section className="section">
       <div className="container">{children}</div>
@@ -33,30 +33,31 @@ export const PostLink = ({
   defaultImage,
   external,
   description
-}: {
+}: {|
   post: Page,
   to: string,
   defaultImage: Object,
   external?: boolean,
   description: string | Node
-}) => {
+|}) => {
+  const image = (
+    <Img
+      className="fit-cover"
+      {...(post.cover ? post.cover.localFile.childImageSharp : defaultImage)}
+    />
+  );
+  const title = <h5>{post.title}</h5>;
   return (
     <div className="card hover-shadow-5 bg-pale-secondary mb-6">
       <div className="row">
         <div className="col-md-3">
           {external ? (
             <a href={to} {...targetBlank}>
-              <Img
-                className="fit-cover"
-                {...(post.cover ? post.cover.localFile.childImageSharp : defaultImage)}
-              />
+              {image}
             </a>
           ) : (
             <Link href to={to}>
-              <Img
-                className="fit-cover"
-                {...(post.cover ? post.cover.localFile.childImageSharp : defaultImage)}
-              />
+              {image}
             </Link>
           )}
         </div>
@@ -64,10 +65,10 @@ export const PostLink = ({
           <div className="row h-100 mr-0">
             <div className="col-md-10">
               {external ? (
-                <h5>{post.title}</h5>
+                title
               ) : (
                 <Link href to={to}>
-                  <h5>{post.title}</h5>
+                  {title}
                 </Link>
               )}
             </div>
