@@ -36,9 +36,7 @@ export default withI18n()(({ i18n, data, prefix }: Props) => (
 
 export const pageQuery = graphql`
   query {
-    ledgy: imageSharp(fluid: { originalName: { regex: "/ledgy.png/" } }) {
-      ...CoverImage
-    }
+    ...DefaultCover
     allContentfulPage(
       filter: { namespace: { eq: "/blog/" } }
       sort: { order: DESC, fields: [date] }

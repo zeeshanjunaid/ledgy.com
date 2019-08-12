@@ -43,9 +43,7 @@ export default withI18n()(({ i18n, data }: Props) => (
 
 export const pageQuery = graphql`
   query {
-    ledgy: imageSharp(fluid: { originalName: { regex: "/ledgy.png/" } }) {
-      ...CoverImage
-    }
+    ...DefaultCover
     allContentfulWebinar(sort: { order: DESC, fields: [date] }) {
       edges {
         node {

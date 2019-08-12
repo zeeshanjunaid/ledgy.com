@@ -100,4 +100,9 @@ export const CoverImageFragment = graphql`
       ...GatsbyImageSharpFluid
     }
   }
+  fragment DefaultCover on Query {
+    ledgy: imageSharp(fluid: { originalName: { regex: "/ledgy.png/" } }) {
+      ...CoverImage
+    }
+  }
 `;
