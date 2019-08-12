@@ -12,6 +12,7 @@ import {
   faAngellist,
   faYoutube
 } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import 'typeface-roboto-slab'; // eslint-disable-line import/extensions
 import 'typeface-work-sans'; // eslint-disable-line import/extensions
 import 'katex/dist/katex.min.css';
@@ -250,7 +251,7 @@ const Footer = (props: LayoutProps) => {
               <img className="logo-light" src={logoInverse} width={100} height={40} alt={name} />
             </Link>
 
-            <div className="social my-2">
+            <div className="social mt-2">
               {[
                 ['https://www.youtube.com/channel/UCRkvNQptxoE-ckmTsrme1_w', faYoutube, 'YouTube'],
                 ['https://twitter.com/Ledgy', faTwitter, 'Twitter'],
@@ -262,6 +263,16 @@ const Footer = (props: LayoutProps) => {
                   <FontAwesomeIcon icon={icon} title={title} />
                 </a>
               ))}
+            </div>
+            <div className="newsletter-signup-CTA">
+              <a
+                className="btn btn-round btn-light"
+                href="https://ledgy.us16.list-manage.com/subscribe/post?u=d6181c123b4d20b2104c4652f&id=c9cfbb11a6"
+                {...targetBlank}
+              >
+                <FontAwesomeIcon className="newsletter-icon" icon={faEnvelope} title="Newsletter" />{' '}
+                Newsletter
+              </a>
             </div>
             <div className="mt-4">
               <div className="dropdown">
