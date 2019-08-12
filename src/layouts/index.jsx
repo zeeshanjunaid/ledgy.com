@@ -1,4 +1,3 @@
-/* eslint-disable react/no-array-index-key */
 // @flow
 
 import React, { useEffect, type Node } from 'react';
@@ -163,8 +162,8 @@ const Footer = (props: LayoutProps) => (
       <div className="row gap-y justify-content-md-center">
         <FooterCol order={2}>
           <FooterColBody title={<Trans>Company</Trans>}>
-            {companyLinks.map(([label, link], i) => (
-              <Link className="nav-link" href to={`${props.prefix}/${link}/`} key={`${i}-${link}`}>
+            {companyLinks.map(([label, link]) => (
+              <Link className="nav-link" href to={`${props.prefix}/${link}/`} key={link}>
                 {label}
               </Link>
             ))}
@@ -173,15 +172,15 @@ const Footer = (props: LayoutProps) => (
 
         <FooterCol order={4}>
           <FooterColBody title={<Trans>Help</Trans>}>
-            {helpLinks.map(([label, link], i) => (
-              <Link className="nav-link" href to={`${props.prefix}/${link}/`} key={`${i}-${link}`}>
+            {helpLinks.map(([label, link]) => (
+              <Link className="nav-link" href to={`${props.prefix}/${link}/`} key={link}>
                 {label}
               </Link>
             ))}
           </FooterColBody>
           <FooterColBody title={<Trans>Blog</Trans>}>
-            {blogLinks.map(([label, link], i) => (
-              <Link className="nav-link" href to={`${props.prefix}/${link}/`} key={`${i}-${link}`}>
+            {blogLinks.map(([label, link]) => (
+              <Link className="nav-link" href to={`${props.prefix}/${link}/`} key={link}>
                 {label}
               </Link>
             ))}
@@ -190,8 +189,8 @@ const Footer = (props: LayoutProps) => (
 
         <FooterCol order={3}>
           <FooterColBody title={<Trans>Product</Trans>}>
-            {productLinks.map(([label, link], i) => (
-              <Link className="nav-link" href to={`${props.prefix}/${link}/`} key={`${i}-${link}`}>
+            {productLinks.map(([label, link]) => (
+              <Link className="nav-link" href to={`${props.prefix}/${link}/`} key={link}>
                 {label}
               </Link>
             ))}
@@ -200,8 +199,8 @@ const Footer = (props: LayoutProps) => (
 
         <FooterCol order={5}>
           <FooterColBody title={<Trans>Legal</Trans>}>
-            {legalLinks.map(([label, link], i) => (
-              <Link className="nav-link" href to={`${props.prefix}/${link}/`} key={`${i}-${link}`}>
+            {legalLinks.map(([label, link]) => (
+              <Link className="nav-link" href to={`${props.prefix}/${link}/`} key={link}>
                 {label}
               </Link>
             ))}
