@@ -143,8 +143,8 @@ const companyLinks = [
   [<Trans>Contact & Imprint</Trans>, 'contact']
 ];
 const helpLinks = [
+  [<Trans>Help Center</Trans>, 'help-center'],
   [<Trans>Getting Started</Trans>, 'help/getting-started'],
-  [<Trans>FAQ</Trans>, 'help/faq'],
   [<Trans>ESOP Templates</Trans>, 'help/employee-participation-guide']
 ];
 const blogLinks = [
