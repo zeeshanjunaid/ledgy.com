@@ -4,6 +4,7 @@ import React, { useEffect, type Node } from 'react';
 import { StaticQuery, graphql, Link } from 'gatsby';
 import { I18nProvider, withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
+import sample from 'lodash/sample';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faTwitter,
@@ -19,7 +20,7 @@ import 'katex/dist/katex.min.css';
 import 'prism-themes/themes/prism-ghcolors.css';
 
 import {
-  callToActionExperiment,
+  callToActionExperiments,
   Title,
   name,
   appUrl,
@@ -89,26 +90,30 @@ const Nav = (props: LayoutProps) => (
   </nav>
 );
 
-const CTABanner = () => (
-  <section className="section bg-pale-secondary">
-    <div className="container cta-banner d-flex py-md-4">
-      <div className="row mx-auto">
-        <p className="mb-4 mb-md-0 text-center">{callToActionExperiment.title}</p>
+const CTABanner = () => {
+  const experiment =
+    typeof window !== 'undefined' ? sample(callToActionExperiments) : callToActionExperiments[0];
+  return (
+    <section className="section bg-pale-secondary">
+      <div className="container cta-banner d-flex py-md-4">
+        <div className="row mx-auto">
+          <p className="mb-4 mb-md-0 text-center">{experiment.title}</p>
 
-        <a
-          className="btn btn-lg btn-primary mx-5 ml-md-5 mr-md-0"
-          href={`${appUrl}/signup`}
-          onClick={() => {
-            if (window.ga) window.ga('set', 'dimension1', callToActionExperiment.name);
-            trackSignup('clickSignup');
-          }}
-        >
-          {callToActionExperiment.CTA}
-        </a>
+          <a
+            className="btn btn-lg btn-primary mx-5 ml-md-5 mr-md-0"
+            href={`${appUrl}/signup`}
+            onClick={() => {
+              if (window.ga) window.ga('set', 'dimension1', experiment.name);
+              trackSignup('clickSignup');
+            }}
+          >
+            <Trans>Get started</Trans>
+          </a>
+        </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 const Footer = (props: LayoutProps) => (
   <div>
