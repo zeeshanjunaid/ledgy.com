@@ -89,35 +89,28 @@ const Nav = (props: LayoutProps) => (
   </nav>
 );
 
-const CTABanner = () => {
-  useEffect(() => {
-    window.callToActionExperiment = callToActionExperiment.name;
-    if (window.ga) window.ga('set', 'dimension1', window.callToActionExperiment);
-  }, []);
-  return (
-    <section className="section bg-pale-secondary">
-      <div className="container cta-banner py-md-4">
-        <div className="row mx-auto">
-          <p className="mb-4 mb-md-0">{callToActionExperiment.title}</p>
+const CTABanner = () => (
+  <section className="section bg-pale-secondary">
+    <div className="container cta-banner d-flex py-md-4">
+      <div className="row mx-auto">
+        <p className="mb-4 mb-md-0 text-center">{callToActionExperiment.title}</p>
 
-          <a
-            className="btn btn-lg btn-primary mx-5 ml-md-5 mr-md-0"
-            href={`${appUrl}/signup`}
-            onClick={() => trackSignup('clickSignup')}
-          >
-            {callToActionExperiment.CTA}
-          </a>
-        </div>
+        <a
+          className="btn btn-lg btn-primary mx-5 ml-md-5 mr-md-0"
+          href={`${appUrl}/signup`}
+          onClick={() => {
+            if (window.ga) window.ga('set', 'dimension1', callToActionExperiment.name);
+            trackSignup('clickSignup');
+          }}
+        >
+          {callToActionExperiment.CTA}
+        </a>
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 const Footer = (props: LayoutProps) => {
-  useEffect(() => {
-    window.callToActionExperiment = callToActionExperiment.name;
-    if (window.ga) window.ga('set', 'dimension1', window.callToActionExperiment);
-  }, []);
   return (
     <div>
       <CTABanner {...props} />
