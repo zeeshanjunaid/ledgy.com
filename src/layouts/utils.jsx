@@ -92,7 +92,7 @@ export const animateTablet = () => {
   }, 50);
 };
 
-export const CTAExperiments = [
+export const callToActionExperiments = [
   {
     name: 'freeForever',
     title: <Trans>Free forever with 50MB storage</Trans>,
@@ -107,9 +107,14 @@ export const CTAExperiments = [
     name: 'peaceOfMind',
     title: <Trans>Find peace of mind with a better cap table tool</Trans>,
     CTA: <Trans>Get started</Trans>
+  },
+  {
+    name: 'yourCapTable',
+    title: <Trans>Your cap table, free forever</Trans>,
+    CTA: <Trans>Get started</Trans>
   }
 ];
 
 // eslint-disable-next-line import/prefer-default-export
-export const CTAExperiment =
-  typeof window !== 'undefined' ? sample(CTAExperiments) : CTAExperiments[0];
+export const callToActionExperiment =
+  typeof window !== 'undefined' ? sample(callToActionExperiments) : callToActionExperiments[0];

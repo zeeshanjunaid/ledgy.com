@@ -19,7 +19,7 @@ import 'katex/dist/katex.min.css';
 import 'prism-themes/themes/prism-ghcolors.css';
 
 import {
-  CTAExperiment,
+  callToActionExperiment,
   Title,
   name,
   appUrl,
@@ -91,21 +91,21 @@ const Nav = (props: LayoutProps) => (
 
 const CTABanner = () => {
   useEffect(() => {
-    window.CTAexperiment = CTAExperiment.name;
-    if (window.ga) window.ga('set', 'dimension1', window.CTAexperiment);
+    window.callToActionExperiment = callToActionExperiment.name;
+    if (window.ga) window.ga('set', 'dimension1', window.callToActionExperiment);
   }, []);
   return (
     <section className="section bg-pale-secondary">
       <div className="container cta-banner py-md-4">
         <div className="row mx-auto">
-          <p className="mb-4 mb-md-0">{CTAExperiment.title}</p>
+          <p className="mb-4 mb-md-0">{callToActionExperiment.title}</p>
 
           <a
             className="btn btn-lg btn-primary mx-5 ml-md-5 mr-md-0"
             href={`${appUrl}/signup`}
             onClick={() => trackSignup('clickSignup')}
           >
-            {CTAExperiment.CTA}
+            {callToActionExperiment.CTA}
           </a>
         </div>
       </div>
@@ -115,8 +115,8 @@ const CTABanner = () => {
 
 const Footer = (props: LayoutProps) => {
   useEffect(() => {
-    window.CTAExperiment = CTAExperiment.name;
-    if (window.ga) window.ga('set', 'dimension1', window.CTAExperiment);
+    window.callToActionExperiment = callToActionExperiment.name;
+    if (window.ga) window.ga('set', 'dimension1', window.callToActionExperiment);
   }, []);
   return (
     <div>
