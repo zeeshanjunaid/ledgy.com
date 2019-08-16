@@ -264,7 +264,7 @@ const Footer = (props: LayoutProps) => {
                 {...targetBlank}
               >
                 <FontAwesomeIcon className="newsletter-icon" icon={faEnvelope} title="Newsletter" />{' '}
-                Newsletter
+                <Trans>Newsletter</Trans>
               </a>
             </div>
             <div className="mt-4">
