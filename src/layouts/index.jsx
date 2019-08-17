@@ -97,10 +97,10 @@ const CTABanner = () => {
     <section className="section bg-pale-secondary">
       <div className="container cta-banner d-flex py-md-4">
         <div className="row mx-auto">
-          <p className="mb-4 mb-md-0 text-center">{experiment.title}</p>
+          <p className="px-3 mb-4 mb-lg-0 mx-auto mr-lg-4 text-center">{experiment.title}</p>
 
           <a
-            className="btn btn-lg btn-primary mx-5 ml-md-5 mr-md-0"
+            className="btn btn-lg btn-primary mx-3 mx-md-auto"
             href={`${appUrl}/signup`}
             onClick={() => {
               if (window.ga) window.ga('set', 'dimension1', experiment.name);
@@ -267,7 +267,11 @@ const Footer = (props: LayoutProps) => (
               href="https://ledgy.us16.list-manage.com/subscribe/post?u=d6181c123b4d20b2104c4652f&id=c9cfbb11a6"
               {...targetBlank}
             >
-              <FontAwesomeIcon className="newsletter-icon" icon={faEnvelope} title="Newsletter" />{' '}
+              <FontAwesomeIcon
+                className="newsletter-icon mr-2"
+                icon={faEnvelope}
+                title="Newsletter"
+              />{' '}
               <Trans>Newsletter</Trans>
             </a>
           </div>
