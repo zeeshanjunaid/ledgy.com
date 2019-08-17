@@ -91,7 +91,6 @@ module.exports = {
       }
     },
     { resolve: 'gatsby-plugin-netlify-cache', options: { cachePublic: true } },
-    { resolve: 'gatsby-plugin-sri', options: { hash: 'sha512' } },
     'gatsby-plugin-offline'
   ]
 };
