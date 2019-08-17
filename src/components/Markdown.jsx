@@ -70,7 +70,7 @@ export const Image = ({ alt, src, title }: {| alt: string, src: string, title?: 
   return (
     <figure
       className={align ? `mx-auto float-md-${align} size-md-small m-6` : 'mx-auto my-6'}
-      style={w ? { width: `${w}px` } : {}}
+      style={w ? { maxWidth: `${w}px` } : {}}
     >
       <a href={img.fluid.src} data-provide="lightbox">
         <Img {...img} />
