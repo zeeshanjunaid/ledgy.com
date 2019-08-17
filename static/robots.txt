@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://www.ledgy.com/sitemap.xml
+Sitemap: https://ledgy.com/sitemap.xml

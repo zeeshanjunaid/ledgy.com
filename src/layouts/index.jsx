@@ -429,7 +429,7 @@ console.log(`
 ==========================
 
 Looking for a job?
-https://www.ledgy.com/jobs
+https://ledgy.com/jobs
 
 ==========================
 `);

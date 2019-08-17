@@ -1,6 +1,6 @@
-## The missing accounting software for your equity – www.ledgy.com
+## The missing accounting software for your equity – ledgy.com
 Stay on top of your vesting schedules, options, phantom plans and convertible loans.
-Get fast insights for financing rounds or exit negotiations with build-in modeling.
+Get fast insights for financing rounds or exit negotiations with built-in modeling.
 
 ## Built with
 * [GatsbyJS](https://github.com/gatsbyjs/gatsby)
