@@ -1,7 +1,7 @@
 // @flow
 
 import React, { useEffect, type Node } from 'react';
-import { StaticQuery, graphql, Link, navigate } from 'gatsby';
+import { StaticQuery, graphql, Link } from 'gatsby';
 import { I18nProvider, withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -17,17 +17,8 @@ import 'typeface-work-sans'; // eslint-disable-line import/extensions
 import 'katex/dist/katex.min.css';
 import 'prism-themes/themes/prism-ghcolors.css';
 
-import {
-  Title,
-  name,
-  appUrl,
-  loadScript,
-  targetBlank,
-  animateTablet,
-  trackSignup,
-  isBrowser
-} from './utils';
-import { catalogs, langFromPath, langPrefix, getLocale, deprefix } from '../i18n-config';
+import { Title, name, appUrl, loadScript, targetBlank, animateTablet, trackSignup } from './utils';
+import { catalogs, langFromPath, langPrefix, deprefix } from '../i18n-config';
 import NewsletterForm from '../components/NewsletterForm';
 
 import '../assets/scss/page.scss';
@@ -414,12 +405,7 @@ const TemplateWrapper = withI18n()(({ children, ...props }: SiteProps) => (
 ));
 
 export default (props: {| location: {| pathname: string |} |}) => {
-  const { pathname } = props.location;
-  const lang = langFromPath(pathname);
-
-  if (isBrowser && getLocale() === 'de' && !pathname.startsWith('/de')) {
-    navigate(`/de${pathname}`);
-  }
+  const lang = langFromPath(props.location.pathname);
   return (
     <I18nProvider language={lang} catalogs={catalogs}>
       <TemplateWrapper {...props} lang={lang} />
