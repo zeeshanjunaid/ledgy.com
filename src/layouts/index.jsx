@@ -419,7 +419,6 @@ export default (props: {| location: {| pathname: string |} |}) => {
 
   if (isBrowser && getLocale() === 'de' && !pathname.startsWith('/de')) {
     navigate(`/de${pathname}`);
-    return null;
   }
   return (
     <I18nProvider language={lang} catalogs={catalogs}>
