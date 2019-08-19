@@ -27,7 +27,8 @@ import {
   loadScript,
   targetBlank,
   animateTablet,
-  trackSignup
+  trackSignup,
+  isBrowser
 } from './utils';
 import { catalogs, langFromPath, langPrefix, deprefix } from '../i18n-config';
 
@@ -91,8 +92,7 @@ const Nav = (props: LayoutProps) => (
 );
 
 const CTABanner = () => {
-  const experiment =
-    typeof window !== 'undefined' ? sample(callToActionExperiments) : callToActionExperiments[0];
+  const experiment = isBrowser ? sample(callToActionExperiments) : callToActionExperiments[0];
   return (
     <section className="section bg-pale-secondary">
       <div className="container cta-banner d-flex py-md-4">
@@ -243,7 +243,7 @@ const Footer = (props: LayoutProps) => (
                 className="newsletter-icon mr-2"
                 icon={faEnvelope}
                 title="Newsletter"
-              />{' '}
+              />
               <Trans>Newsletter</Trans>
             </a>
           </div>
