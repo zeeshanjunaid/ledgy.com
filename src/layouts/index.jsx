@@ -103,7 +103,7 @@ const CTABanner = () => {
             className="btn btn-lg btn-primary mx-3 mx-md-auto"
             href={`${appUrl}/signup`}
             onClick={() => {
-              if (window.ga) window.ga('set', 'dimension1', experiment.name);
+              if (window.ga) window.ga('set', 'dimension2', experiment.name);
               trackSignup('clickSignup');
             }}
           >
