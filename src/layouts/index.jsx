@@ -285,16 +285,12 @@ type SiteProps = {
   location: { pathname: string }
 };
 
-const Initialize = ({ pathname }: {| pathname: string |}) => {
+const Initialize = () => {
   useEffect(() => {
     animateTablet();
     setTimeout(async () => {
       require('../assets/js/page'); // eslint-disable-line global-require
       require('../assets/js/script'); // eslint-disable-line global-require
-
-      if (getLocale() === 'de' && !pathname.startsWith('/de')) {
-        navigate(`/de${pathname}`);
-      }
 
       await loadScript('https://wchat.eu.freshchat.com/js/widget.js');
       window.fcSettings = {
@@ -362,7 +358,7 @@ const TemplateWrapper = withI18n()(({ children, ...props }: SiteProps) => (
             description={i18n.t`Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant. Try now for free!`}
             thumbnailUrl={thumbnailUrl}
           />
-          <Initialize pathname={pathname} />
+          <Initialize />
           <Helmet>
             <html lang={lang} />
             <meta
@@ -409,7 +405,13 @@ const TemplateWrapper = withI18n()(({ children, ...props }: SiteProps) => (
 ));
 
 export default (props: {| location: {| pathname: string |} |}) => {
-  const lang = langFromPath(props.location.pathname);
+  const { pathname } = props.location;
+  const lang = langFromPath(pathname);
+
+  if (getLocale() === 'de' && !pathname.startsWith('/de')) {
+    navigate(`/de${pathname}`);
+    return null;
+  }
   return (
     <I18nProvider language={lang} catalogs={catalogs}>
       <TemplateWrapper {...props} lang={lang} />
