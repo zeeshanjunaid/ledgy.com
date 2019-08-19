@@ -25,7 +25,7 @@ const helpLinks = [
   ],
   [
     <Trans>FAQ</Trans>,
-    <Trans>Find answers to most of your questions about Ledgy</Trans>,
+    <Trans>Find answers to your most common questions about Ledgy</Trans>,
     'help/faq',
     faQuestionCircle
   ],
