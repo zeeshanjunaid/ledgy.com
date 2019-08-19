@@ -349,8 +349,7 @@ const TemplateWrapper = withI18n()(({ children, ...props }: SiteProps) => (
       const prefix = langPrefix(lang);
       const { siteUrl } = data.site.siteMetadata;
       const thumbnailUrl = `${siteUrl}/thumbnail.png`;
-      const { pathname } = props.location;
-      const EnPathname = `${siteUrl}${pathname.startsWith('/de') ? pathname.substr(3) : pathname}`;
+      const pathname = deprefix(props.location.pathname);
       return (
         <div>
           <Title
@@ -375,13 +374,10 @@ const TemplateWrapper = withI18n()(({ children, ...props }: SiteProps) => (
             <meta name="twitter:site" content="@Ledgy" />
             <meta name="twitter:card" content="summary_large_image" />
 
-            <link rel="alternate" href={EnPathname} hrefLang="x-default" />
-            <link rel="alternate" href={EnPathname} hrefLang="en" />
-            <link
-              rel="alternate"
-              href={`${siteUrl}${pathname.startsWith('/de') ? '' : '/de'}${pathname}`}
-              hrefLang="de"
-            />
+            <link rel="alternate" href={`${siteUrl}${pathname}`} hrefLang="x-default" />
+            <link rel="alternate" href={`${siteUrl}${pathname}`} hrefLang="en" />
+            <link rel="alternate" href={`${siteUrl}/de${pathname}`} hrefLang="de" />
+            <link rel="alternate" href={`${siteUrl}/fr${pathname}`} hrefLang="fr" />
 
             {/* Disable AOS for Google */}
             <noscript>
