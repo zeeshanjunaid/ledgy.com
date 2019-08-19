@@ -4,6 +4,7 @@ import React, { type Node } from 'react';
 import { Helmet } from 'react-helmet';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { Trans } from '@lingui/react';
 
 export const name = 'Ledgy';
 export const appUrl = 'https://app.ledgy.com';
@@ -89,3 +90,10 @@ export const animateTablet = () => {
     }
   }, 50);
 };
+
+export const callToActionExperiments = [
+  { name: 'freeForever', title: <Trans>Free forever with 50MB storage</Trans> },
+  { name: 'stakeholders', title: <Trans>Help your stakeholders stay up to date</Trans> },
+  { name: 'peaceOfMind', title: <Trans>Find peace of mind with a better cap table tool</Trans> },
+  { name: 'yourCapTable', title: <Trans>Your cap table, free forever</Trans> }
+];

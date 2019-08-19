@@ -4,7 +4,9 @@ import React, { useEffect, type Node } from 'react';
 import { StaticQuery, graphql, Link } from 'gatsby';
 import { I18nProvider, withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
+import sample from 'lodash/sample';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import {
   faTwitter,
   faFacebook,
@@ -17,17 +19,23 @@ import 'typeface-work-sans'; // eslint-disable-line import/extensions
 import 'katex/dist/katex.min.css';
 import 'prism-themes/themes/prism-ghcolors.css';
 
-import { Title, name, appUrl, loadScript, targetBlank, animateTablet, trackSignup } from './utils';
+import {
+  callToActionExperiments,
+  Title,
+  name,
+  appUrl,
+  loadScript,
+  targetBlank,
+  animateTablet,
+  trackSignup,
+  isBrowser
+} from './utils';
 import { catalogs, langFromPath, langPrefix, deprefix } from '../i18n-config';
-import NewsletterForm from '../components/NewsletterForm';
 
 import '../assets/scss/page.scss';
 
 import logoDefault from '../img/logo_black.png';
 import logoInverse from '../img/logo_white.png';
-
-const showSubscribe = (pathname: string) =>
-  !pathname.match(/contact/) && !pathname.match(/subscribed/);
 
 const Logo = (props: { prefix: string, inverse: boolean }) => (
   <Link href to={`${props.prefix}/#start`} className="navbar-brand">
@@ -83,6 +91,30 @@ const Nav = (props: LayoutProps) => (
   </nav>
 );
 
+const CTABanner = () => {
+  const experiment = isBrowser ? sample(callToActionExperiments) : callToActionExperiments[0];
+  return (
+    <section className="section bg-pale-secondary">
+      <div className="container cta-banner d-flex py-md-4">
+        <div className="row mx-auto">
+          <p className="px-3 mb-4 mb-lg-0 mx-auto mr-lg-4 text-center">{experiment.title}</p>
+
+          <a
+            className="btn btn-lg btn-primary mx-3 mx-md-auto"
+            href={`${appUrl}/signup`}
+            onClick={() => {
+              if (window.ga) window.ga('set', 'dimension1', experiment.name);
+              trackSignup('clickSignup');
+            }}
+          >
+            <Trans>Get started</Trans>
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const FooterCol = ({
   order,
   children,
@@ -101,7 +133,6 @@ const FooterColBody = ({ title, children }: { title: Node, children: Array<Node>
     <div className="nav flex-column">{children}</div>
   </>
 );
-
 const companyLinks = [
   [<Trans>About us</Trans>, 'about-us'],
   [<Trans>Blog</Trans>, 'blog'],
@@ -111,19 +142,16 @@ const companyLinks = [
   [<Trans>Career</Trans>, 'jobs'],
   [<Trans>Contact & Imprint</Trans>, 'contact']
 ];
-
 const helpLinks = [
   [<Trans>Getting Started</Trans>, 'help/getting-started'],
   [<Trans>FAQ</Trans>, 'help/faq'],
   [<Trans>ESOP Templates</Trans>, 'help/employee-participation-guide']
 ];
-
 const blogLinks = [
   [<Trans>Option Pools</Trans>, 'blog/pre-and-post-money-option-pools'],
   [<Trans>Convertible Loans</Trans>, 'blog/convertible-loans'],
   [<Trans>KPIs & Reports</Trans>, 'updates/kpis-and-reports']
 ];
-
 const productLinks = [
   [<Trans>Features</Trans>, 'features'],
   [<Trans>Cap Table</Trans>, 'features/captable'],
@@ -133,7 +161,6 @@ const productLinks = [
   [<Trans>Investors</Trans>, 'features/investors'],
   [<Trans>Pricing</Trans>, 'pricing']
 ];
-
 const legalLinks = [
   [<Trans>Terms of Service</Trans>, 'legal/terms'],
   [<Trans>Privacy Policy</Trans>, 'legal/privacy-policy'],
@@ -143,21 +170,7 @@ const legalLinks = [
 
 const Footer = (props: LayoutProps) => (
   <div>
-    {showSubscribe(props.location.pathname) && (
-      <section className="section bg-pale-secondary">
-        <div className="container text-center newsletter py-md-7">
-          <h2>
-            <Trans>Subscribe to the newsletter</Trans>
-          </h2>
-
-          <p className="text-muted">
-            <Trans>for monthly updates on new features and start-up resources</Trans>
-          </p>
-
-          <NewsletterForm {...props} />
-        </div>
-      </section>
-    )}
+    <CTABanner {...props} />
     <footer className="footer pb-9 pt-7 py-md-7 px-4 text-white">
       <div className="row gap-y justify-content-md-center">
         <FooterCol order={2}>
@@ -169,7 +182,6 @@ const Footer = (props: LayoutProps) => (
             ))}
           </FooterColBody>
         </FooterCol>
-
         <FooterCol order={4}>
           <FooterColBody title={<Trans>Help</Trans>}>
             {helpLinks.map(([label, link]) => (
@@ -186,7 +198,6 @@ const Footer = (props: LayoutProps) => (
             ))}
           </FooterColBody>
         </FooterCol>
-
         <FooterCol order={3}>
           <FooterColBody title={<Trans>Product</Trans>}>
             {productLinks.map(([label, link]) => (
@@ -196,7 +207,6 @@ const Footer = (props: LayoutProps) => (
             ))}
           </FooterColBody>
         </FooterCol>
-
         <FooterCol order={5}>
           <FooterColBody title={<Trans>Legal</Trans>}>
             {legalLinks.map(([label, link]) => (
@@ -206,13 +216,11 @@ const Footer = (props: LayoutProps) => (
             ))}
           </FooterColBody>
         </FooterCol>
-
         <FooterCol order={1} wide>
           <Link href to={`${props.prefix}/#start`} className="navbar-brand">
             <img className="logo-light" src={logoInverse} width={100} height={40} alt={name} />
           </Link>
-
-          <div className="social my-2">
+          <div className="social mt-2">
             {[
               ['https://www.youtube.com/channel/UCRkvNQptxoE-ckmTsrme1_w', faYoutube, 'YouTube'],
               ['https://twitter.com/Ledgy', faTwitter, 'Twitter'],
@@ -224,6 +232,20 @@ const Footer = (props: LayoutProps) => (
                 <FontAwesomeIcon icon={icon} title={title} />
               </a>
             ))}
+          </div>
+          <div className="newsletter-signup-CTA">
+            <a
+              className="btn btn-round btn-light"
+              href="https://ledgy.us16.list-manage.com/subscribe/post?u=d6181c123b4d20b2104c4652f&id=c9cfbb11a6"
+              {...targetBlank}
+            >
+              <FontAwesomeIcon
+                className="newsletter-icon mr-2"
+                icon={faEnvelope}
+                title="Newsletter"
+              />
+              <Trans>Newsletter</Trans>
+            </a>
           </div>
           <div className="mt-4">
             <div className="dropdown">

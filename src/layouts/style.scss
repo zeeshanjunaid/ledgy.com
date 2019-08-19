@@ -293,7 +293,26 @@ h1 {
   .nav-link:hover {
     color: white !important;
   }
+
+  .newsletter-signup-CTA {
+    a {
+      width: max-content;
+      .newsletter-icon {
+        @include media-breakpoint-down(md) {
+          display: initial;
+        }
+        @include media-breakpoint-up(md) {
+          display: none;
+        }
+        @include media-breakpoint-up(lg) {
+          display: initial;
+        }
+      }
+    }
+  }
 }
+
+
 
 .top-page-feature-card {
   padding: 30px 30px 30px 20px;
@@ -323,6 +342,22 @@ h1 {
     transform: translateY(-2px);
     transition: 200ms;
   }
+}
+
+.cta-banner {
+  font-size: 34px;
+
+  @include media-breakpoint-down(sm) {
+    p {
+      font-size: 22px;
+      width: 100%;
+    }
+
+    a {
+      width: 100%;
+    }
+  }
+
 }
 
 .testimonial {
