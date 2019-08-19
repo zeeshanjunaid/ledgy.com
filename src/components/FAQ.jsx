@@ -1,6 +1,7 @@
 // @flow
 
 import React, { type Node } from 'react';
+import { isBrowser } from '../layouts/utils';
 
 export const Accordion = (props: { children: Node }) => (
   <div className="accordion my-4" {...props} />
@@ -15,7 +16,7 @@ export const FAQ = ({
   question: string,
   children: Node
 |}) => {
-  const isOpen = typeof window !== 'undefined' && window.top.location.hash === `#${id}`;
+  const isOpen = isBrowser && window.top.location.hash === `#${id}`;
   return (
     <div className="card mb-0">
       <h6 className="card-title mt-0 bg-white" id={id}>

@@ -1,7 +1,7 @@
 // @flow
 
 import React, { useEffect, type Node } from 'react';
-import { StaticQuery, graphql, Link, navigate } from 'gatsby';
+import { StaticQuery, graphql, Link } from 'gatsby';
 import { I18nProvider, withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -18,7 +18,7 @@ import 'katex/dist/katex.min.css';
 import 'prism-themes/themes/prism-ghcolors.css';
 
 import { Title, name, appUrl, loadScript, targetBlank, animateTablet, trackSignup } from './utils';
-import { catalogs, langFromPath, langPrefix, getLocale, deprefix } from '../i18n-config';
+import { catalogs, langFromPath, langPrefix, deprefix } from '../i18n-config';
 import NewsletterForm from '../components/NewsletterForm';
 
 import '../assets/scss/page.scss';
@@ -285,16 +285,12 @@ type SiteProps = {
   location: { pathname: string }
 };
 
-const Initialize = ({ pathname }: {| pathname: string |}) => {
+const Initialize = () => {
   useEffect(() => {
     animateTablet();
     setTimeout(async () => {
       require('../assets/js/page'); // eslint-disable-line global-require
       require('../assets/js/script'); // eslint-disable-line global-require
-
-      if (getLocale() === 'de' && !pathname.startsWith('/de')) {
-        navigate(`/de${pathname}`);
-      }
 
       await loadScript('https://wchat.eu.freshchat.com/js/widget.js');
       window.fcSettings = {
@@ -353,8 +349,7 @@ const TemplateWrapper = withI18n()(({ children, ...props }: SiteProps) => (
       const prefix = langPrefix(lang);
       const { siteUrl } = data.site.siteMetadata;
       const thumbnailUrl = `${siteUrl}/thumbnail.png`;
-      const { pathname } = props.location;
-      const EnPathname = `${siteUrl}${pathname.startsWith('/de') ? pathname.substr(3) : pathname}`;
+      const pathname = deprefix(props.location.pathname);
       return (
         <div>
           <Title
@@ -362,7 +357,7 @@ const TemplateWrapper = withI18n()(({ children, ...props }: SiteProps) => (
             description={i18n.t`Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant. Try now for free!`}
             thumbnailUrl={thumbnailUrl}
           />
-          <Initialize pathname={pathname} />
+          <Initialize />
           <Helmet>
             <html lang={lang} />
             <meta
@@ -379,13 +374,10 @@ const TemplateWrapper = withI18n()(({ children, ...props }: SiteProps) => (
             <meta name="twitter:site" content="@Ledgy" />
             <meta name="twitter:card" content="summary_large_image" />
 
-            <link rel="alternate" href={EnPathname} hrefLang="x-default" />
-            <link rel="alternate" href={EnPathname} hrefLang="en" />
-            <link
-              rel="alternate"
-              href={`${siteUrl}${pathname.startsWith('/de') ? '' : '/de'}${pathname}`}
-              hrefLang="de"
-            />
+            <link rel="alternate" href={`${siteUrl}${pathname}`} hrefLang="x-default" />
+            <link rel="alternate" href={`${siteUrl}${pathname}`} hrefLang="en" />
+            <link rel="alternate" href={`${siteUrl}/de${pathname}`} hrefLang="de" />
+            <link rel="alternate" href={`${siteUrl}/fr${pathname}`} hrefLang="fr" />
 
             {/* Disable AOS for Google */}
             <noscript>
