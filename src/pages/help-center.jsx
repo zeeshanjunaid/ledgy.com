@@ -25,7 +25,7 @@ const helpLinks = [
   ],
   [
     <Trans>FAQ</Trans>,
-    <Trans>Discover all our features and when to use them</Trans>,
+    <Trans>Find answers to most of your questions about Ledgy</Trans>,
     'help/faq',
     faQuestionCircle
   ],
@@ -38,7 +38,7 @@ const helpLinks = [
   [
     <Trans>Blog</Trans>,
     <Trans>
-      Follow real-world experinces of startups, learn about term sheet negotiations, and much more
+      Follow experiences of real-world startups, learn about term sheet negotiations, and much more
     </Trans>,
     'blog',
     faPencilRuler
@@ -61,8 +61,8 @@ const HelpCenter = ({ i18n, prefix }: Props) => (
   <>
     <header className="header text-white bg-ledgy">
       <Title
-        title={i18n.t`Help center`}
-        description={i18n.t`Let Ledgy's help center guide you on every single aspect of your company's equity management`}
+        title={i18n.t`Help Center`}
+        description={i18n.t`Let Ledgy’s help center guide you on every single aspect of your company’s equity management`}
       />
 
       <div className="container text-center">

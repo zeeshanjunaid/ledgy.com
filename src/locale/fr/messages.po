@@ -386,7 +386,6 @@ msgstr "Cap table dilué"
 msgid "Discover all features"
 msgstr "Découvre les fonctionnalités"
 
-#: src/pages/help-center.jsx:28
 #: src/pages/help-center.jsx:34
 msgid "Discover all our features and when to use them"
 msgstr ""
@@ -568,6 +567,10 @@ msgstr "Enfin, j’ai une vue d’ensemble fiable de toutes nos actions, des att
 msgid "Financing round modeling"
 msgstr "Modélisation"
 
+#: src/pages/help-center.jsx:28
+msgid "Find answers to most of your questions about Ledgy"
+msgstr ""
+
 #: src/pages/index.jsx:225
 msgid "Find out why they trust us"
 msgstr "Découvre pourquoi ils nous font confiance"
@@ -581,7 +584,7 @@ msgid "Flexible yet intuitive round modeling supporting convertibles, fixed empl
 msgstr "Modélisation de rondes de financement flexible et intuitive, prenant en charge les billets convertibles, les pools d’employés et la distribution au prorata"
 
 #: src/pages/help-center.jsx:40
-msgid "Follow real-world experinces of startups, learn about term sheet negotiations, and much more"
+msgid "Follow experiences of real-world startups, learn about term sheet negotiations, and much more"
 msgstr ""
 
 #: src/pages/security.jsx:94
@@ -688,11 +691,8 @@ msgstr "Aide"
 msgid "Help your stakeholders stay up to date"
 msgstr "Aide tes actionnaires à rester à jour"
 #: src/layouts/index.jsx:116
-msgid "Help Center"
-msgstr ""
-
 #: src/pages/help-center.jsx:64
-msgid "Help center"
+msgid "Help Center"
 msgstr ""
 
 #: src/pages/contact.jsx:19
@@ -869,7 +869,7 @@ msgid "Legal documents associated with the transactions at your fingertips"
 msgstr "Les documents juridiques associés aux transactions à portée de main"
 
 #: src/pages/help-center.jsx:65
-msgid "Let Ledgy's help center guide you on every single aspect of your company's equity management"
+msgid "Let Ledgy’s help center guide you on every single aspect of your company’s equity management"
 msgstr ""
 
 #: src/pages/contact.jsx:16

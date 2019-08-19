@@ -386,7 +386,6 @@ msgstr "Diluted cap table"
 msgid "Discover all features"
 msgstr "Discover all features"
 
-#: src/pages/help-center.jsx:28
 #: src/pages/help-center.jsx:34
 msgid "Discover all our features and when to use them"
 msgstr "Discover all our features and when to use them"
@@ -568,6 +567,10 @@ msgstr "Finally, I have a reliable overview of all our shares, employee grants, 
 msgid "Financing round modeling"
 msgstr "Financing round modeling"
 
+#: src/pages/help-center.jsx:28
+msgid "Find answers to most of your questions about Ledgy"
+msgstr "Find answers to most of your questions about Ledgy"
+
 #: src/pages/index.jsx:225
 msgid "Find out why they trust us"
 msgstr "Find out why they trust us"
@@ -581,8 +584,8 @@ msgid "Flexible yet intuitive round modeling supporting convertibles, fixed empl
 msgstr "Flexible yet intuitive round modeling supporting convertibles, fixed employee pools, and pro-rata distribution"
 
 #: src/pages/help-center.jsx:40
-msgid "Follow real-world experinces of startups, learn about term sheet negotiations, and much more"
-msgstr "Follow real-world experinces of startups, learn about term sheet negotiations, and much more"
+msgid "Follow experiences of real-world startups, learn about term sheet negotiations, and much more"
+msgstr "Follow experiences of real-world startups, learn about term sheet negotiations, and much more"
 
 #: src/pages/security.jsx:94
 msgid "For even better protection of accounts. And our implementation is <0>open source</0>!"
@@ -689,12 +692,9 @@ msgid "Help your stakeholders stay up to date"
 msgstr "Help your stakeholders stay up to date"
 
 #: src/layouts/index.jsx:116
+#: src/pages/help-center.jsx:64
 msgid "Help Center"
 msgstr "Help Center"
-
-#: src/pages/help-center.jsx:64
-msgid "Help center"
-msgstr "Help center"
 
 #: src/pages/contact.jsx:19
 msgid "Here are the ways you can contact us with any questions you have"
@@ -870,8 +870,8 @@ msgid "Legal documents associated with the transactions at your fingertips"
 msgstr "Legal documents associated with the transactions at your fingertips"
 
 #: src/pages/help-center.jsx:65
-msgid "Let Ledgy's help center guide you on every single aspect of your company's equity management"
-msgstr "Let Ledgy's help center guide you on every single aspect of your company's equity management"
+msgid "Let Ledgy’s help center guide you on every single aspect of your company’s equity management"
+msgstr "Let Ledgy’s help center guide you on every single aspect of your company’s equity management"
 
 #: src/pages/contact.jsx:16
 msgid "Let’s Get In Touch"
