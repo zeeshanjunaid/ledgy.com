@@ -17,7 +17,16 @@ import 'typeface-work-sans'; // eslint-disable-line import/extensions
 import 'katex/dist/katex.min.css';
 import 'prism-themes/themes/prism-ghcolors.css';
 
-import { Title, name, appUrl, loadScript, targetBlank, animateTablet, trackSignup } from './utils';
+import {
+  Title,
+  name,
+  appUrl,
+  loadScript,
+  targetBlank,
+  animateTablet,
+  trackSignup,
+  isBrowser
+} from './utils';
 import { catalogs, langFromPath, langPrefix, getLocale, deprefix } from '../i18n-config';
 import NewsletterForm from '../components/NewsletterForm';
 
@@ -408,7 +417,7 @@ export default (props: {| location: {| pathname: string |} |}) => {
   const { pathname } = props.location;
   const lang = langFromPath(pathname);
 
-  if (getLocale() === 'de' && !pathname.startsWith('/de')) {
+  if (isBrowser && getLocale() === 'de' && !pathname.startsWith('/de')) {
     navigate(`/de${pathname}`);
     return null;
   }

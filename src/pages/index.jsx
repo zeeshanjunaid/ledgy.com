@@ -16,7 +16,8 @@ import {
   trackSignup,
   forbesUrl,
   economistUrl,
-  wirtschaftswocheUrl
+  wirtschaftswocheUrl,
+  isBrowser
 } from '../layouts/utils';
 
 const experiments = [
@@ -46,7 +47,7 @@ const experiments = [
   }
 ];
 
-const experiment = typeof window !== 'undefined' ? sample(experiments) : experiments[0];
+const experiment = isBrowser ? sample(experiments) : experiments[0];
 
 const Header = ({ i18n, data }: Props) => {
   useEffect(() => {

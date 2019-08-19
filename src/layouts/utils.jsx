@@ -17,6 +17,8 @@ export const wirtschaftswocheUrl =
 
 export const targetBlank = { target: '_blank', rel: 'noopener noreferrer' };
 
+export const isBrowser = typeof window !== 'undefined';
+
 export const loadScript = (path: string): Promise<*> =>
   new Promise((resolve, reject) => {
     const script = document.createElement('script');
