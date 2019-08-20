@@ -186,10 +186,6 @@ msgstr "Backing the creators of our future since 1984"
 msgid "Backups"
 msgstr "Backups"
 
-#: src/pages/help-center.jsx:117
-msgid "Basics of Pre- and Post-Money Option Pools"
-msgstr "Basics of Pre- and Post-Money Option Pools"
-
 #: src/pages/features.jsx:129
 msgid "Be professional towards your investors as a startup"
 msgstr "Be professional towards your investors as a startup"
@@ -210,11 +206,11 @@ msgstr "Blockchain certification"
 msgid "Blockchain notary"
 msgstr "Blockchain notary"
 
-#: src/layouts/index.jsx:52
+#: src/layouts/index.jsx:53
 #: src/layouts/index.jsx:141
 #: src/layouts/index.jsx:196
 #: src/pages/blog.jsx:13
-#: src/pages/help-center.jsx:39
+#: src/pages/help.jsx:39
 msgid "Blog"
 msgstr "Blog"
 
@@ -386,7 +382,7 @@ msgstr "Diluted cap table"
 msgid "Discover all features"
 msgstr "Discover all features"
 
-#: src/pages/help-center.jsx:34
+#: src/pages/help.jsx:34
 msgid "Discover all our features and when to use them"
 msgstr "Discover all our features and when to use them"
 
@@ -420,7 +416,7 @@ msgstr "Document workflow <0/>"
 msgid "Does your startup tackle the climate crisis?"
 msgstr "Does your startup tackle the climate crisis?"
 
-#: src/pages/help-center.jsx:48
+#: src/pages/help.jsx:48
 msgid "Download and use our ESOP template"
 msgstr "Download and use our ESOP template"
 
@@ -478,10 +474,6 @@ msgstr "Employee Incentives"
 msgid "Employee Participation Plans"
 msgstr "Employee Participation Plans"
 
-#: src/pages/help-center.jsx:107
-msgid "Employee Participation Plans: Webinar by Ledgy and Kellerhals Carrard"
-msgstr "Employee Participation Plans: Webinar by Ledgy and Kellerhals Carrard"
-
 #: src/pages/security.jsx:124
 msgid "Encrypted connection"
 msgstr "Encrypted connection"
@@ -537,7 +529,7 @@ msgstr "Every company has KPIs, and investors love seeing them in real-time"
 msgid "Exit modeling"
 msgstr "Exit modeling"
 
-#: src/pages/help-center.jsx:27
+#: src/pages/help.jsx:27
 msgid "FAQ"
 msgstr "FAQ"
 
@@ -549,7 +541,7 @@ msgstr "FAQ"
 #: src/pages/features/investors.jsx:21
 #: src/pages/features/modeling.jsx:21
 #: src/pages/features.jsx:14
-#: src/pages/help-center.jsx:33
+#: src/pages/help.jsx:33
 msgid "Features"
 msgstr "Features"
 
@@ -567,7 +559,7 @@ msgstr "Finally, I have a reliable overview of all our shares, employee grants, 
 msgid "Financing round modeling"
 msgstr "Financing round modeling"
 
-#: src/pages/help-center.jsx:28
+#: src/pages/help.jsx:28
 msgid "Find answers to your most common questions about Ledgy"
 msgstr "Find answers to your most common questions about Ledgy"
 
@@ -583,7 +575,7 @@ msgstr "Find peace of mind with a better cap table tool"
 msgid "Flexible yet intuitive round modeling supporting convertibles, fixed employee pools, and pro-rata distribution"
 msgstr "Flexible yet intuitive round modeling supporting convertibles, fixed employee pools, and pro-rata distribution"
 
-#: src/pages/help-center.jsx:40
+#: src/pages/help.jsx:40
 msgid "Follow experiences of real-world startups, learn about term sheet negotiations, and much more"
 msgstr "Follow experiences of real-world startups, learn about term sheet negotiations, and much more"
 
@@ -655,7 +647,7 @@ msgid "Get your cap table and employee participation plans right, from the begin
 msgstr "Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant. Try now for free!"
 
 #: src/layouts/index.jsx:150
-#: src/pages/help-center.jsx:21
+#: src/pages/help.jsx:21
 msgid "Getting Started"
 msgstr "Getting Started"
 
@@ -680,12 +672,13 @@ msgstr "HTTP headers prevent cross-site scripting and code injection (<0>A+ rati
 msgid "Healthcare & technology venture capital since 2001"
 msgstr "Healthcare & technology venture capital since 2001"
 
+#: src/layouts/index.jsx:52
+#: src/layouts/index.jsx:149
 #: src/layouts/index.jsx:189
 msgid "Help"
 msgstr "Help"
 
-#: src/layouts/index.jsx:149
-#: src/pages/help-center.jsx:64
+#: src/pages/help.jsx:64
 msgid "Help Center"
 msgstr "Help Center"
 
@@ -707,7 +700,7 @@ msgstr "Holding confirmation"
 msgid "Holding confirmations"
 msgstr "Holding confirmations"
 
-#: src/pages/help-center.jsx:72
+#: src/pages/help.jsx:72
 msgid "How can we help?"
 msgstr "How can we help?"
 
@@ -866,7 +859,7 @@ msgstr "Legal"
 msgid "Legal documents associated with the transactions at your fingertips"
 msgstr "Legal documents associated with the transactions at your fingertips"
 
-#: src/pages/help-center.jsx:65
+#: src/pages/help.jsx:65
 msgid "Let Ledgy’s help center guide you on every single aspect of your company’s equity management"
 msgstr "Let Ledgy’s help center guide you on every single aspect of your company’s equity management"
 
@@ -996,7 +989,7 @@ msgstr "Pooled investments"
 msgid "Pooled investments are common in many countries, Ledgy helps you keep them organized"
 msgstr "Pooled investments are common in many countries, Ledgy helps you keep them organized"
 
-#: src/pages/help-center.jsx:100
+#: src/pages/help.jsx:100
 msgid "Popular content"
 msgstr "Popular content"
 
@@ -1095,10 +1088,6 @@ msgstr "Report"
 #: src/pages/pricing.jsx:19
 msgid "Reporting"
 msgstr "Reporting"
-
-#: src/layouts/index.jsx:53
-msgid "Resources"
-msgstr "Resources"
 
 #: src/components/Feature.jsx:100
 #: src/pages/features.jsx:80
@@ -1287,7 +1276,7 @@ msgstr "Team"
 msgid "Technical data"
 msgstr "Technical data"
 
-#: src/pages/help-center.jsx:47
+#: src/pages/help.jsx:47
 msgid "Templates"
 msgstr "Templates"
 
@@ -1303,10 +1292,6 @@ msgstr "The Ledgy Blog"
 #: src/pages/index.jsx:26
 msgid "The New Standard in Equity Management"
 msgstr "The New Standard in Equity Management"
-
-#: src/pages/help-center.jsx:112
-msgid "The Power of Round Modeling: Webinar by Ledgy"
-msgstr "The Power of Round Modeling: Webinar by Ledgy"
 
 #: src/pages/security.jsx:111
 msgid "The code is always reviewed by at least one other engineer"
@@ -1482,7 +1467,7 @@ msgstr "View the cap table in legal or economic terms"
 msgid "Visualizations help you understand what happens"
 msgstr "Visualizations help you understand what happens"
 
-#: src/pages/help-center.jsx:22
+#: src/pages/help.jsx:22
 msgid "Walk through the basics of setting up your Ledgy account"
 msgstr "Walk through the basics of setting up your Ledgy account"
 
@@ -1490,7 +1475,7 @@ msgstr "Walk through the basics of setting up your Ledgy account"
 msgid "Want to model the new financing round for your company? Use Ledgy!"
 msgstr "Want to model the new financing round for your company? Use Ledgy!"
 
-#: src/pages/help-center.jsx:54
+#: src/pages/help.jsx:54
 msgid "Watch live-recorded videos with educational content for the startup world"
 msgstr "Watch live-recorded videos with educational content for the startup world"
 
@@ -1527,7 +1512,7 @@ msgid "We understand how sensitive equity information is for any business. That�
 msgstr "We understand how sensitive equity information is for any business. That’s why your privacy and your data’s security is crucial to us. Here is what we do to protect your data."
 
 #: src/layouts/index.jsx:142
-#: src/pages/help-center.jsx:53
+#: src/pages/help.jsx:53
 #: src/pages/webinars.jsx:15
 msgid "Webinars"
 msgstr "Webinars"

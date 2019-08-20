@@ -134,21 +134,19 @@ const Reference = ({ img, name }: { img: Object, name: string }) => (
 );
 
 const AsFeaturedIn = (props: Props) => (
-  <div className="black-and-white d-flex flex-column justify-content-center align-items-center">
+  <div className="black-and-white d-flex flex-column flex-md-row justify-content-center align-items-center">
     <span className="m-3 text-light">
       <Trans>As featured in</Trans>
     </span>
-    <div className="d-flex align-items-center">
-      <a href={forbesUrl} {...targetBlank}>
-        <Img {...props.data.forbes} alt="Forbes DACH" className="m-4" />
-      </a>
-      <a href={wirtschaftswocheUrl} {...targetBlank}>
-        <Img {...props.data.wirtschaftsWoche} alt="Wirtschafts Woche" className="m-4" />
-      </a>
-      <a href={economistUrl} {...targetBlank}>
-        <Img {...props.data.theEconomist} alt="The Economist" className="m-4" />
-      </a>
-    </div>
+    <a href={forbesUrl} {...targetBlank}>
+      <Img {...props.data.forbes} alt="Forbes DACH" className="m-4" />
+    </a>
+    <a href={wirtschaftswocheUrl} {...targetBlank}>
+      <Img {...props.data.wirtschaftsWoche} alt="Wirtschafts Woche" className="m-4" />
+    </a>
+    <a href={economistUrl} {...targetBlank}>
+      <Img {...props.data.theEconomist} alt="The Economist" className="m-4" />
+    </a>
   </div>
 );
 
