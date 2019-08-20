@@ -46,6 +46,13 @@ const Logo = (props: { prefix: string, inverse: boolean }) => (
   </Link>
 );
 
+const navbarLinks = [
+  [<Trans>Features</Trans>, 'features'],
+  [<Trans>Pricing</Trans>, 'pricing'],
+  [<Trans>Blog</Trans>, 'blog'],
+  [<Trans>Resources</Trans>, 'help-center']
+];
+
 const Nav = (props: LayoutProps) => (
   <nav className="navbar navbar-expand-lg navbar-light navbar-stick-dark" data-navbar="sticky">
     <div className="container flex-nowrap">
@@ -57,15 +64,11 @@ const Nav = (props: LayoutProps) => (
       <section className="navbar-mobile">
         <h6 className="d-sm-none">Ledgy</h6>
         <nav className="nav nav-navbar ml-auto">
-          <Link className="nav-link" href to={`${props.prefix}/features/`}>
-            <Trans>Features</Trans>
-          </Link>
-          <Link className="nav-link" href to={`${props.prefix}/pricing/`}>
-            <Trans>Pricing</Trans>
-          </Link>
-          <Link className="nav-link" href to={`${props.prefix}/blog/`}>
-            <Trans>Blog</Trans>
-          </Link>
+          {navbarLinks.map(([label, to]) => (
+            <Link className="nav-link" key={to} href to={`${props.prefix}/${to}/`}>
+              {label}
+            </Link>
+          ))}
         </nav>
 
         <span className="navbar-divider" />
