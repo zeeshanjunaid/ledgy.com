@@ -92,7 +92,7 @@ export const animateTablet = () => {
 };
 
 export const callToActionExperiments = [
-  { name: 'freeForever', title: <Trans>Free forever with 50MB storage</Trans> },
+  { name: 'freeForever', title: <Trans>Free forever with 50 MB storage</Trans> },
   { name: 'stakeholders', title: <Trans>Help your stakeholders stay up to date</Trans> },
   { name: 'peaceOfMind', title: <Trans>Find peace of mind with a better cap table tool</Trans> },
   { name: 'yourCapTable', title: <Trans>Your cap table, free forever</Trans> }

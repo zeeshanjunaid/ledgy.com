@@ -344,20 +344,11 @@ h1 {
   }
 }
 
-.cta-banner {
-  font-size: 34px;
-
+.cta-button {
+  font-size: 18px;
   @include media-breakpoint-down(sm) {
-    p {
-      font-size: 22px;
-      width: 100%;
-    }
-
-    a {
-      width: 100%;
-    }
+    width: 75%;
   }
-
 }
 
 .testimonial {

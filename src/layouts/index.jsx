@@ -46,6 +46,13 @@ const Logo = (props: { prefix: string, inverse: boolean }) => (
   </Link>
 );
 
+const navbarLinks = [
+  [<Trans>Features</Trans>, 'features'],
+  [<Trans>Pricing</Trans>, 'pricing'],
+  [<Trans>Help</Trans>, 'help'],
+  [<Trans>Blog</Trans>, 'blog']
+];
+
 const Nav = (props: LayoutProps) => (
   <nav className="navbar navbar-expand-lg navbar-light navbar-stick-dark" data-navbar="sticky">
     <div className="container flex-nowrap">
@@ -57,15 +64,11 @@ const Nav = (props: LayoutProps) => (
       <section className="navbar-mobile">
         <h6 className="d-sm-none">Ledgy</h6>
         <nav className="nav nav-navbar ml-auto">
-          <Link className="nav-link" href to={`${props.prefix}/features/`}>
-            <Trans>Features</Trans>
-          </Link>
-          <Link className="nav-link" href to={`${props.prefix}/pricing/`}>
-            <Trans>Pricing</Trans>
-          </Link>
-          <Link className="nav-link" href to={`${props.prefix}/blog/`}>
-            <Trans>Blog</Trans>
-          </Link>
+          {navbarLinks.map(([label, to]) => (
+            <Link className="nav-link" key={to} href to={`${props.prefix}/${to}/`}>
+              {label}
+            </Link>
+          ))}
         </nav>
 
         <span className="navbar-divider" />
@@ -95,12 +98,12 @@ const CTABanner = () => {
   const experiment = isBrowser ? sample(callToActionExperiments) : callToActionExperiments[0];
   return (
     <section className="section bg-pale-secondary">
-      <div className="container cta-banner d-flex py-md-4">
-        <div className="row mx-auto">
-          <p className="px-3 mb-4 mb-lg-0 mx-auto mr-lg-4 text-center">{experiment.title}</p>
+      <div className="container py-md-4">
+        <div className="row m-0 w-100 justify-content-center align-items-center">
+          <h4 className="m-3 text-center">{experiment.title}</h4>
 
           <a
-            className="btn btn-lg btn-primary mx-3 mx-md-auto"
+            className="cta-button m-3 btn btn-lg btn-round btn-primary align-self-center"
             href={`${appUrl}/signup`}
             onClick={() => {
               if (window.ga) window.ga('set', 'dimension2', experiment.name);
@@ -143,8 +146,8 @@ const companyLinks = [
   [<Trans>Contact & Imprint</Trans>, 'contact']
 ];
 const helpLinks = [
+  [<Trans>Help</Trans>, 'help'],
   [<Trans>Getting Started</Trans>, 'help/getting-started'],
-  [<Trans>FAQ</Trans>, 'help/faq'],
   [<Trans>ESOP Templates</Trans>, 'help/employee-participation-guide']
 ];
 const blogLinks = [
@@ -183,7 +186,7 @@ const Footer = (props: LayoutProps) => (
           </FooterColBody>
         </FooterCol>
         <FooterCol order={4}>
-          <FooterColBody title={<Trans>Help</Trans>}>
+          <FooterColBody title={<Trans>Resources</Trans>}>
             {helpLinks.map(([label, link]) => (
               <Link className="nav-link" href to={`${props.prefix}/${link}/`} key={link}>
                 {label}

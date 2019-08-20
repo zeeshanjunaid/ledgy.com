@@ -50,7 +50,7 @@ msgstr "A certificate of each document is automatically stored on the bitcoin bl
 msgid "A stakeholder is any holder of shares, (phantom) options, warrants, or convertibles.<0/>It does not include the company treasury or incentive pools."
 msgstr "A stakeholder is any holder of shares, (phantom) options, warrants, or convertibles.<0/>It does not include the company treasury or incentive pools."
 
-#: src/layouts/index.jsx:127
+#: src/layouts/index.jsx:140
 #: src/pages/about-us.jsx:17
 #: src/pages/about-us.jsx:25
 msgid "About us"
@@ -137,7 +137,7 @@ msgstr "As a startup, be professional towards your investors, track KPIs, write 
 msgid "As easy as copying and pasting stakeholders, shares issues, or options"
 msgstr "As easy as copying and pasting stakeholders, shares issues, or options"
 
-#: src/pages/index.jsx:138
+#: src/pages/index.jsx:139
 msgid "As featured in"
 msgstr "As featured in"
 
@@ -206,10 +206,11 @@ msgstr "Blockchain certification"
 msgid "Blockchain notary"
 msgstr "Blockchain notary"
 
-#: src/layouts/index.jsx:65
-#: src/layouts/index.jsx:130
-#: src/layouts/index.jsx:170
-#: src/pages/blog.jsx:54
+#: src/layouts/index.jsx:53
+#: src/layouts/index.jsx:141
+#: src/layouts/index.jsx:196
+#: src/pages/blog.jsx:13
+#: src/pages/help.jsx:39
 msgid "Blog"
 msgstr "Blog"
 
@@ -241,7 +242,7 @@ msgstr "Bulk entry options"
 msgid "Calculates waterfall analysis of liquidation preferences across all rounds"
 msgstr "Calculates waterfall analysis of liquidation preferences across all rounds"
 
-#: src/layouts/index.jsx:201
+#: src/layouts/index.jsx:160
 msgid "Cap Table"
 msgstr "Cap Table"
 
@@ -258,7 +259,7 @@ msgstr "Cap table during round modeling"
 msgid "Cap table management"
 msgstr "Cap table management"
 
-#: src/layouts/index.jsx:139
+#: src/layouts/index.jsx:145
 msgid "Career"
 msgstr "Career"
 
@@ -280,7 +281,7 @@ msgstr "Collaboration & Due Diligence"
 msgid "Coming soon"
 msgstr "Coming soon"
 
-#: src/layouts/index.jsx:122
+#: src/layouts/index.jsx:180
 msgid "Company"
 msgstr "Company"
 
@@ -303,7 +304,7 @@ msgstr "Comprehensive transaction history"
 msgid "Contact"
 msgstr "Contact"
 
-#: src/layouts/index.jsx:142
+#: src/layouts/index.jsx:146
 msgid "Contact & Imprint"
 msgstr "Contact & Imprint"
 
@@ -332,7 +333,7 @@ msgstr "Convert the final scenario in just two clicks"
 msgid "Convert to transactions"
 msgstr "Convert to transactions"
 
-#: src/layouts/index.jsx:123
+#: src/layouts/index.jsx:155
 msgid "Convertible Loans"
 msgstr "Convertible Loans"
 
@@ -340,7 +341,7 @@ msgstr "Convertible Loans"
 msgid "Convertibles"
 msgstr "Convertibles"
 
-#: src/layouts/index.jsx:235
+#: src/layouts/index.jsx:170
 msgid "Cookie Policy"
 msgstr "Cookie Policy"
 
@@ -381,6 +382,10 @@ msgstr "Diluted cap table"
 msgid "Discover all features"
 msgstr "Discover all features"
 
+#: src/pages/help.jsx:34
+msgid "Discover all our features and when to use them"
+msgstr "Discover all our features and when to use them"
+
 #: src/components/Feature.jsx:91
 msgid "Discover more about Ledgy"
 msgstr "Discover more about Ledgy"
@@ -411,11 +416,15 @@ msgstr "Document workflow <0/>"
 msgid "Does your startup tackle the climate crisis?"
 msgstr "Does your startup tackle the climate crisis?"
 
+#: src/pages/help.jsx:48
+msgid "Download and use our ESOP template"
+msgstr "Download and use our ESOP template"
+
 #: src/pages/features/collaboration.jsx:171
 msgid "Download holding confirmations with a single click"
 msgstr "Download holding confirmations with a single click"
 
-#: src/layouts/index.jsx:210
+#: src/layouts/index.jsx:163
 msgid "Due Diligence"
 msgstr "Due Diligence"
 
@@ -435,7 +444,7 @@ msgstr "During his studies in engineering as an excellent scholar at ETH Zurich,
 msgid "ESOP"
 msgstr "ESOP"
 
-#: src/layouts/index.jsx:118
+#: src/layouts/index.jsx:151
 msgid "ESOP Templates"
 msgstr "ESOP Templates"
 
@@ -455,7 +464,7 @@ msgstr "Electronic signatures <0/>"
 msgid "Email notification about upcoming vesting event"
 msgstr "Email notification about upcoming vesting event"
 
-#: src/layouts/index.jsx:207
+#: src/layouts/index.jsx:162
 msgid "Employee Incentives"
 msgstr "Employee Incentives"
 
@@ -520,18 +529,19 @@ msgstr "Every company has KPIs, and investors love seeing them in real-time"
 msgid "Exit modeling"
 msgstr "Exit modeling"
 
-#: src/layouts/index.jsx:158
+#: src/pages/help.jsx:27
 msgid "FAQ"
 msgstr "FAQ"
 
-#: src/layouts/index.jsx:59
-#: src/layouts/index.jsx:198
+#: src/layouts/index.jsx:50
+#: src/layouts/index.jsx:159
 #: src/pages/features/captable.jsx:21
 #: src/pages/features/collaboration.jsx:21
 #: src/pages/features/esop.jsx:16
 #: src/pages/features/investors.jsx:21
 #: src/pages/features/modeling.jsx:21
 #: src/pages/features.jsx:14
+#: src/pages/help.jsx:33
 msgid "Features"
 msgstr "Features"
 
@@ -539,7 +549,7 @@ msgstr "Features"
 msgid "Featuring unlimited share classes, treasury shares, pooled investments, and automatic share numbering"
 msgstr "Featuring unlimited share classes, treasury shares, pooled investments, and automatic share numbering"
 
-#: src/pages/index.jsx:189
+#: src/pages/index.jsx:190
 msgid "Finally, I have a reliable overview of all our shares, employee grants, and their legal documents. So much better than the Excel I used before."
 msgstr "Finally, I have a reliable overview of all our shares, employee grants, and their legal documents. So much better than the Excel I used before."
 
@@ -549,17 +559,25 @@ msgstr "Finally, I have a reliable overview of all our shares, employee grants, 
 msgid "Financing round modeling"
 msgstr "Financing round modeling"
 
-#: src/pages/index.jsx:225
+#: src/pages/help.jsx:28
+msgid "Find answers to your most common questions about Ledgy"
+msgstr "Find answers to your most common questions about Ledgy"
+
+#: src/pages/index.jsx:226
 msgid "Find out why they trust us"
 msgstr "Find out why they trust us"
 
-#: src/layouts/utils.jsx:106
+#: src/layouts/utils.jsx:97
 msgid "Find peace of mind with a better cap table tool"
 msgstr "Find peace of mind with a better cap table tool"
 
 #: src/pages/features.jsx:88
 msgid "Flexible yet intuitive round modeling supporting convertibles, fixed employee pools, and pro-rata distribution"
 msgstr "Flexible yet intuitive round modeling supporting convertibles, fixed employee pools, and pro-rata distribution"
+
+#: src/pages/help.jsx:40
+msgid "Follow experiences of real-world startups, learn about term sheet negotiations, and much more"
+msgstr "Follow experiences of real-world startups, learn about term sheet negotiations, and much more"
 
 #: src/pages/security.jsx:94
 msgid "For even better protection of accounts. And our implementation is <0>open source</0>!"
@@ -573,15 +591,15 @@ msgstr "Founder of Meisser Economics, Bitcoin Association Switzerland, and Wuala
 msgid "Free"
 msgstr "Free"
 
-#: src/layouts/utils.jsx:96
-msgid "Free forever with 50MB storage"
-msgstr "Free forever with 50MB storage"
+#: src/layouts/utils.jsx:95
+msgid "Free forever with 50 MB storage"
+msgstr "Free forever with 50 MB storage"
 
 #: src/components/Markdown.jsx:90
 msgid "French"
 msgstr "French"
 
-#: src/layouts/index.jsx:238
+#: src/layouts/index.jsx:171
 msgid "GDPR"
 msgstr "GDPR"
 
@@ -589,7 +607,7 @@ msgstr "GDPR"
 msgid "German"
 msgstr "German"
 
-#: src/pages/index.jsx:86
+#: src/pages/index.jsx:87
 msgid "Get Started Free"
 msgstr "Get Started Free"
 
@@ -605,10 +623,7 @@ msgstr "Get notified of important vesting and expiry events and engage your empl
 msgid "Get notified two weeks before a cliff or vesting ends or a grant expires to not miss using your participation plan for engaging your employees"
 msgstr "Get notified two weeks before a cliff or vesting ends or a grant expires to not miss using your participation plan for engaging your employees"
 
-#: src/layouts/utils.jsx:97
-#: src/layouts/utils.jsx:102
-#: src/layouts/utils.jsx:107
-#: src/layouts/utils.jsx:112
+#: src/layouts/index.jsx:113
 #: src/pages/pricing.jsx:145
 msgid "Get started"
 msgstr "Get started"
@@ -623,15 +638,16 @@ msgstr "Get started in minutes with the copy-paste spreadsheet importer"
 msgid "Get the calculations right"
 msgstr "Get the calculations right"
 
-#: src/pages/index.jsx:67
+#: src/pages/index.jsx:68
 msgid "Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant."
 msgstr "Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant."
 
-#: src/layouts/index.jsx:409
+#: src/layouts/index.jsx:382
 msgid "Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant. Try now for free!"
 msgstr "Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant. Try now for free!"
 
-#: src/layouts/index.jsx:155
+#: src/layouts/index.jsx:150
+#: src/pages/help.jsx:21
 msgid "Getting Started"
 msgstr "Getting Started"
 
@@ -656,11 +672,16 @@ msgstr "HTTP headers prevent cross-site scripting and code injection (<0>A+ rati
 msgid "Healthcare & technology venture capital since 2001"
 msgstr "Healthcare & technology venture capital since 2001"
 
-#: src/layouts/index.jsx:150
+#: src/layouts/index.jsx:52
+#: src/layouts/index.jsx:149
 msgid "Help"
 msgstr "Help"
 
-#: src/layouts/utils.jsx:101
+#: src/pages/help.jsx:64
+msgid "Help Center"
+msgstr "Help Center"
+
+#: src/layouts/utils.jsx:96
 msgid "Help your stakeholders stay up to date"
 msgstr "Help your stakeholders stay up to date"
 
@@ -678,11 +699,15 @@ msgstr "Holding confirmation"
 msgid "Holding confirmations"
 msgstr "Holding confirmations"
 
+#: src/pages/help.jsx:72
+msgid "How can we help?"
+msgstr "How can we help?"
+
 #: src/pages/privacy.jsx:104
 msgid "How we protect your information"
 msgstr "How we protect your information"
 
-#: src/pages/index.jsx:211
+#: src/pages/index.jsx:212
 msgid "I needed exactly that. Every founder should use Ledgy’s modeling tools for financing rounds!"
 msgstr "I needed exactly that. Every founder should use Ledgy’s modeling tools for financing rounds!"
 
@@ -733,11 +758,11 @@ msgstr "Investor Relations & Portfolio"
 msgid "Investor portfolio"
 msgstr "Investor portfolio"
 
-#: src/pages/index.jsx:42
+#: src/pages/index.jsx:43
 msgid "Investor relations and equity management for startups"
 msgstr "Investor relations and equity management for startups"
 
-#: src/layouts/index.jsx:213
+#: src/layouts/index.jsx:164
 msgid "Investors"
 msgstr "Investors"
 
@@ -753,7 +778,7 @@ msgstr "Invite your employees to track their stake and vesting in their Ledgy po
 msgid "Jahlela has a background in cognitive neuroscience, graduated from UC Berkeley, and founded a few startups before switching to full-time software engineering"
 msgstr "Jahlela has a background in cognitive neuroscience, graduated from UC Berkeley, and founded a few startups before switching to full-time software engineering"
 
-#: src/pages/index.jsx:163
+#: src/pages/index.jsx:164
 msgid "Join hundreds of companies"
 msgstr "Join hundreds of companies"
 
@@ -769,7 +794,7 @@ msgstr "KPI chart"
 msgid "KPIs"
 msgstr "KPIs"
 
-#: src/layouts/index.jsx:124
+#: src/layouts/index.jsx:156
 msgid "KPIs & Reports"
 msgstr "KPIs & Reports"
 
@@ -793,7 +818,7 @@ msgstr "Key performance indicators"
 msgid "Kpi chart"
 msgstr "Kpi chart"
 
-#: src/layouts/index.jsx:280
+#: src/layouts/index.jsx:263
 msgid "Language"
 msgstr "Language"
 
@@ -825,13 +850,17 @@ msgstr "Ledgy makes it easy to simulate an investment with a pro-rata distributi
 msgid "Ledgy scales with your needs. Free for startups, powerful for grown-ups."
 msgstr "Ledgy scales with your needs. Free for startups, powerful for grown-ups."
 
-#: src/layouts/index.jsx:224
+#: src/layouts/index.jsx:214
 msgid "Legal"
 msgstr "Legal"
 
 #: src/pages/features/investors.jsx:125
 msgid "Legal documents associated with the transactions at your fingertips"
 msgstr "Legal documents associated with the transactions at your fingertips"
+
+#: src/pages/help.jsx:65
+msgid "Let Ledgy’s help center guide you on every single aspect of your company’s equity management"
+msgstr "Let Ledgy’s help center guide you on every single aspect of your company’s equity management"
 
 #: src/pages/contact.jsx:16
 msgid "Let’s Get In Touch"
@@ -841,11 +870,11 @@ msgstr "Let’s Get In Touch"
 msgid "Liquidation preferences"
 msgstr "Liquidation preferences"
 
-#: src/layouts/index.jsx:78
+#: src/layouts/index.jsx:83
 msgid "Log In"
 msgstr "Log In"
 
-#: src/pages/index.jsx:32
+#: src/pages/index.jsx:33
 msgid "Lost track of who owns how many shares in your startup? Let Ledgy deal with it."
 msgstr "Lost track of who owns how many shares in your startup? Let Ledgy deal with it."
 
@@ -857,7 +886,7 @@ msgstr "Luna is a model of the Saturn V rocket, which has been to space 13 times
 msgid "M&A and private equity lawyer with a focus on start-up legal advise, Smartuplaw.ch"
 msgstr "M&A and private equity lawyer with a focus on start-up legal advise, Smartuplaw.ch"
 
-#: src/pages/index.jsx:26
+#: src/pages/index.jsx:27
 msgid "Made for startups, great for investors"
 msgstr "Made for startups, great for investors"
 
@@ -877,7 +906,7 @@ msgstr "Marius has a background in computer science, graduated from Milan Univer
 msgid "Meet the team behind Ledgy that went out to help startups thrive. Learn more about the people who trust in us."
 msgstr "Meet the team behind Ledgy that went out to help startups thrive. Learn more about the people who trust in us."
 
-#: src/layouts/index.jsx:204
+#: src/layouts/index.jsx:161
 msgid "Modeling"
 msgstr "Modeling"
 
@@ -889,7 +918,7 @@ msgstr "Multiple rounds, 3 scenarios"
 msgid "Name, email, address and any other details you provide. Provision of our services and management of your subscription. Providing you with updates about our services"
 msgstr "Name, email, address and any other details you provide. Provision of our services and management of your subscription. Providing you with updates about our services"
 
-#: src/layouts/index.jsx:267
+#: src/layouts/index.jsx:250
 msgid "Newsletter"
 msgstr "Newsletter"
 
@@ -917,7 +946,7 @@ msgstr "One of the most active Swiss early-stage angel investors"
 msgid "Oops. This email address is invalid."
 msgstr "Oops. This email address is invalid."
 
-#: src/layouts/index.jsx:122
+#: src/layouts/index.jsx:154
 msgid "Option Pools"
 msgstr "Option Pools"
 
@@ -959,14 +988,18 @@ msgstr "Pooled investments"
 msgid "Pooled investments are common in many countries, Ledgy helps you keep them organized"
 msgstr "Pooled investments are common in many countries, Ledgy helps you keep them organized"
 
+#: src/pages/help.jsx:100
+msgid "Popular content"
+msgstr "Popular content"
+
 #: src/pages/features/investors.jsx:59
 #: src/pages/features/investors.jsx:122
 #: src/pages/features/investors.jsx:128
 msgid "Portfolio history"
 msgstr "Portfolio history"
 
-#: src/layouts/index.jsx:62
-#: src/layouts/index.jsx:216
+#: src/layouts/index.jsx:51
+#: src/layouts/index.jsx:165
 #: src/pages/pricing.jsx:122
 #: src/pages/pricing.jsx:131
 msgid "Pricing"
@@ -976,13 +1009,13 @@ msgstr "Pricing"
 msgid "Priority support"
 msgstr "Priority support"
 
-#: src/layouts/index.jsx:136
+#: src/layouts/index.jsx:144
 #: src/pages/privacy.jsx:21
 #: src/pages/privacy.jsx:29
 msgid "Privacy"
 msgstr "Privacy"
 
-#: src/layouts/index.jsx:232
+#: src/layouts/index.jsx:169
 msgid "Privacy Policy"
 msgstr "Privacy Policy"
 
@@ -999,7 +1032,7 @@ msgstr "Privacy made in Europe. Because your equity data is not for everyone."
 msgid "Pro-rata distribution"
 msgstr "Pro-rata distribution"
 
-#: src/layouts/index.jsx:193
+#: src/layouts/index.jsx:205
 msgid "Product"
 msgstr "Product"
 
@@ -1055,6 +1088,10 @@ msgstr "Report"
 msgid "Reporting"
 msgstr "Reporting"
 
+#: src/layouts/index.jsx:189
+msgid "Resources"
+msgstr "Resources"
+
 #: src/components/Feature.jsx:100
 #: src/pages/features.jsx:80
 msgid "Round & Exit Modeling"
@@ -1064,8 +1101,8 @@ msgstr "Round & Exit Modeling"
 msgid "Round Modeling"
 msgstr "Round Modeling"
 
-#: src/pages/index.jsx:30
-#: src/pages/index.jsx:37
+#: src/pages/index.jsx:31
+#: src/pages/index.jsx:38
 msgid "Round Modeling. Made Simple."
 msgstr "Round Modeling. Made Simple."
 
@@ -1094,7 +1131,7 @@ msgstr "Save on costly due diligence tools"
 msgid "Save time in future due diligence by attaching legal documents to their transactions, making them searchable by the transaction information"
 msgstr "Save time in future due diligence by attaching legal documents to their transactions, making them searchable by the transaction information"
 
-#: src/pages/index.jsx:91
+#: src/pages/index.jsx:92
 msgid "Screenshot of the Ledgy app"
 msgstr "Screenshot of the Ledgy app"
 
@@ -1107,7 +1144,7 @@ msgstr "Secure data room"
 msgid "Secure data room, audit trail and read-only access for investors; save costly due diligence tools."
 msgstr "Secure data room, audit trail and read-only access for investors; save costly due diligence tools."
 
-#: src/layouts/index.jsx:133
+#: src/layouts/index.jsx:143
 #: src/pages/privacy.jsx:109
 #: src/pages/security.jsx:25
 #: src/pages/security.jsx:33
@@ -1118,7 +1155,7 @@ msgstr "Security"
 msgid "See how many shares have to be reserved for a fixed percentage employee pool"
 msgstr "See how many shares have to be reserved for a fixed percentage employee pool"
 
-#: src/pages/index.jsx:79
+#: src/pages/index.jsx:80
 msgid "See the Demo"
 msgstr "See the Demo"
 
@@ -1134,7 +1171,7 @@ msgstr "Server call rate limit"
 msgid "Set your company up for future due diligences, saving you hours of work and lawyer costs"
 msgstr "Set your company up for future due diligences, saving you hours of work and lawyer costs"
 
-#: src/pages/index.jsx:44
+#: src/pages/index.jsx:45
 msgid "Share important documents with your investors, advisory board and employees."
 msgstr "Share important documents with your investors, advisory board and employees."
 
@@ -1158,7 +1195,7 @@ msgstr "Share your scenarios as pdf, including valuations, investments, converti
 msgid "Show cap table fully diluted"
 msgstr "Show cap table fully diluted"
 
-#: src/layouts/index.jsx:85
+#: src/layouts/index.jsx:90
 msgid "Sign up"
 msgstr "Sign up"
 
@@ -1242,7 +1279,11 @@ msgstr "Team"
 msgid "Technical data"
 msgstr "Technical data"
 
-#: src/layouts/index.jsx:229
+#: src/pages/help.jsx:47
+msgid "Templates"
+msgstr "Templates"
+
+#: src/layouts/index.jsx:168
 msgid "Terms of Service"
 msgstr "Terms of Service"
 
@@ -1250,8 +1291,8 @@ msgstr "Terms of Service"
 msgid "The Ledgy Blog"
 msgstr "The Ledgy Blog"
 
-#: src/layouts/index.jsx:408
-#: src/pages/index.jsx:25
+#: src/layouts/index.jsx:381
+#: src/pages/index.jsx:26
 msgid "The New Standard in Equity Management"
 msgstr "The New Standard in Equity Management"
 
@@ -1429,9 +1470,17 @@ msgstr "View the cap table in legal or economic terms"
 msgid "Visualizations help you understand what happens"
 msgstr "Visualizations help you understand what happens"
 
-#: src/pages/index.jsx:38
+#: src/pages/help.jsx:22
+msgid "Walk through the basics of setting up your Ledgy account"
+msgstr "Walk through the basics of setting up your Ledgy account"
+
+#: src/pages/index.jsx:39
 msgid "Want to model the new financing round for your company? Use Ledgy!"
 msgstr "Want to model the new financing round for your company? Use Ledgy!"
+
+#: src/pages/help.jsx:54
+msgid "Watch live-recorded videos with educational content for the startup world"
+msgstr "Watch live-recorded videos with educational content for the startup world"
 
 #: src/components/Content.jsx:80
 msgid "Watch now"
@@ -1457,7 +1506,7 @@ msgstr "We live up to highest security standards. We improve them continuously. 
 msgid "We operate a <0>bug bounty</0> program on Federacy. Write us a message for an invitation."
 msgstr "We operate a <0>bug bounty</0> program on Federacy. Write us a message for an invitation."
 
-#: src/pages/index.jsx:200
+#: src/pages/index.jsx:201
 msgid "We started to use Ledgy’s solution while preparing a large and complex series C. It saved significant amount of time and headaches."
 msgstr "We started to use Ledgy’s solution while preparing a large and complex series C. It saved significant amount of time and headaches."
 
@@ -1465,7 +1514,8 @@ msgstr "We started to use Ledgy’s solution while preparing a large and complex
 msgid "We understand how sensitive equity information is for any business. That’s why your privacy and your data’s security is crucial to us. Here is what we do to protect your data."
 msgstr "We understand how sensitive equity information is for any business. That’s why your privacy and your data’s security is crucial to us. Here is what we do to protect your data."
 
-#: src/layouts/index.jsx:108
+#: src/layouts/index.jsx:142
+#: src/pages/help.jsx:53
 #: src/pages/webinars.jsx:15
 msgid "Webinars"
 msgstr "Webinars"
@@ -1494,7 +1544,7 @@ msgstr "Yoko studied Physics at ETHZ, the University of Oxford and CERN. She was
 msgid "You get a <0>20% discount</0> on Premium if your startup helps reducing carbon emissions.<1/><2>Write us</2> about your impact to see if you qualify."
 msgstr "You get a <0>20% discount</0> on Premium if your startup helps reducing carbon emissions.<1/><2>Write us</2> about your impact to see if you qualify."
 
-#: src/layouts/utils.jsx:111
+#: src/layouts/utils.jsx:98
 msgid "Your cap table, free forever"
 msgstr "Your cap table, free forever"
 
@@ -1514,7 +1564,7 @@ msgstr "and numbered shares are natively supported"
 msgid "by liquidation preferences"
 msgstr "by liquidation preferences"
 
-#: src/layouts/index.jsx:417
+#: src/layouts/index.jsx:390
 msgid "cap table, stock ledger, share register, startup, modeling, financing round, equity, esop, phantom, option plan, virtual, portfolio, reporting, investors"
 msgstr "cap table, stock ledger, share register, startup, modeling, financing round, equity, esop, phantom, option plan, virtual, portfolio, reporting, investors"
 
@@ -1559,7 +1609,7 @@ msgstr "so you control what others can see and do"
 msgid "stopping the spreadsheet mess"
 msgstr "stopping the spreadsheet mess"
 
-#: src/pages/index.jsx:166
+#: src/pages/index.jsx:167
 msgid "that already use Ledgy for their equity management and investor relations"
 msgstr "that already use Ledgy for their equity management and investor relations"
 
