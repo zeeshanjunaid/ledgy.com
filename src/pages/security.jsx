@@ -56,6 +56,13 @@ const IndexPage = ({ i18n, ...props }: Object) => (
 
             <div className="row gap-y my-5">
               <PrivacyElement
+                icon={faGlobeEurope}
+                title={i18n.t`Swiss data protection`}
+                body={<Trans>All data is stored in a secure Swiss data center</Trans>}
+                size="6"
+              />
+
+              <PrivacyElement
                 icon={faKey}
                 title={i18n.t`Strong passwords`}
                 body={
@@ -172,21 +179,6 @@ const IndexPage = ({ i18n, ...props }: Object) => (
                       bug bounty
                     </a>{' '}
                     program on Federacy. Write us a message for an invitation.
-                  </Trans>
-                }
-                size="6"
-              />
-
-              <PrivacyElement
-                icon={faGlobeEurope}
-                title={i18n.t`EU data protection`}
-                body={
-                  <Trans>
-                    All data is stored at an{' '}
-                    <a {...targetBlank} href="https://www.clever-cloud.com/en/security">
-                      independent provider
-                    </a>{' '}
-                    in France
                   </Trans>
                 }
                 size="6"
