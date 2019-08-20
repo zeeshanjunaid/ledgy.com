@@ -104,17 +104,17 @@ const HelpCenter = ({ i18n, prefix }: Props) => (
                 href="https://www.youtube.com/watch?v=JbiAK2SVwHA&list=PLltwxYxG5b6fCAqvomPFc-E049R1HXzNl"
                 {...targetBlank}
               >
-                <Trans>Employee Participation Plans: Webinar by Ledgy and Kellerhals Carrard</Trans>
+                Employee Participation Plans: Webinar by Ledgy and Kellerhals Carrard
               </a>
             </p>
             <p>
               <a href="https://www.youtube.com/watch?v=7oh_fDsDDYs" {...targetBlank}>
-                <Trans>The Power of Round Modeling: Webinar by Ledgy</Trans>
+                The Power of Round Modeling: Webinar by Ledgy
               </a>
             </p>
             <p>
               <Link href to={`${prefix}/blog/pre-and-post-money-option-pools`}>
-                <Trans>Basics of Pre- and Post-Money Option Pools</Trans>
+                Basics of Pre- and Post-Money Option Pools
               </Link>
             </p>
           </div>

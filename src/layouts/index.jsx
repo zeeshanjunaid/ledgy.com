@@ -49,8 +49,8 @@ const Logo = (props: { prefix: string, inverse: boolean }) => (
 const navbarLinks = [
   [<Trans>Features</Trans>, 'features'],
   [<Trans>Pricing</Trans>, 'pricing'],
-  [<Trans>Blog</Trans>, 'blog'],
-  [<Trans>Resources</Trans>, 'help-center']
+  [<Trans>Help</Trans>, 'help'],
+  [<Trans>Blog</Trans>, 'blog']
 ];
 
 const Nav = (props: LayoutProps) => (
@@ -146,7 +146,7 @@ const companyLinks = [
   [<Trans>Contact & Imprint</Trans>, 'contact']
 ];
 const helpLinks = [
-  [<Trans>Help Center</Trans>, 'help-center'],
+  [<Trans>Help</Trans>, 'help'],
   [<Trans>Getting Started</Trans>, 'help/getting-started'],
   [<Trans>ESOP Templates</Trans>, 'help/employee-participation-guide']
 ];
