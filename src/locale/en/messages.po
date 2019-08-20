@@ -549,7 +549,7 @@ msgstr "Features"
 msgid "Featuring unlimited share classes, treasury shares, pooled investments, and automatic share numbering"
 msgstr "Featuring unlimited share classes, treasury shares, pooled investments, and automatic share numbering"
 
-#: src/pages/index.jsx:192
+#: src/pages/index.jsx:190
 msgid "Finally, I have a reliable overview of all our shares, employee grants, and their legal documents. So much better than the Excel I used before."
 msgstr "Finally, I have a reliable overview of all our shares, employee grants, and their legal documents. So much better than the Excel I used before."
 
@@ -563,7 +563,7 @@ msgstr "Financing round modeling"
 msgid "Find answers to your most common questions about Ledgy"
 msgstr "Find answers to your most common questions about Ledgy"
 
-#: src/pages/index.jsx:228
+#: src/pages/index.jsx:226
 msgid "Find out why they trust us"
 msgstr "Find out why they trust us"
 
@@ -674,7 +674,6 @@ msgstr "Healthcare & technology venture capital since 2001"
 
 #: src/layouts/index.jsx:52
 #: src/layouts/index.jsx:149
-#: src/layouts/index.jsx:189
 msgid "Help"
 msgstr "Help"
 
@@ -708,7 +707,7 @@ msgstr "How can we help?"
 msgid "How we protect your information"
 msgstr "How we protect your information"
 
-#: src/pages/index.jsx:214
+#: src/pages/index.jsx:212
 msgid "I needed exactly that. Every founder should use Ledgy’s modeling tools for financing rounds!"
 msgstr "I needed exactly that. Every founder should use Ledgy’s modeling tools for financing rounds!"
 
@@ -779,7 +778,7 @@ msgstr "Invite your employees to track their stake and vesting in their Ledgy po
 msgid "Jahlela has a background in cognitive neuroscience, graduated from UC Berkeley, and founded a few startups before switching to full-time software engineering"
 msgstr "Jahlela has a background in cognitive neuroscience, graduated from UC Berkeley, and founded a few startups before switching to full-time software engineering"
 
-#: src/pages/index.jsx:166
+#: src/pages/index.jsx:164
 msgid "Join hundreds of companies"
 msgstr "Join hundreds of companies"
 
@@ -1088,6 +1087,10 @@ msgstr "Report"
 #: src/pages/pricing.jsx:19
 msgid "Reporting"
 msgstr "Reporting"
+
+#: src/layouts/index.jsx:189
+msgid "Resources"
+msgstr "Resources"
 
 #: src/components/Feature.jsx:100
 #: src/pages/features.jsx:80
@@ -1503,7 +1506,7 @@ msgstr "We live up to highest security standards. We improve them continuously. 
 msgid "We operate a <0>bug bounty</0> program on Federacy. Write us a message for an invitation."
 msgstr "We operate a <0>bug bounty</0> program on Federacy. Write us a message for an invitation."
 
-#: src/pages/index.jsx:203
+#: src/pages/index.jsx:201
 msgid "We started to use Ledgy’s solution while preparing a large and complex series C. It saved significant amount of time and headaches."
 msgstr "We started to use Ledgy’s solution while preparing a large and complex series C. It saved significant amount of time and headaches."
 
@@ -1606,7 +1609,7 @@ msgstr "so you control what others can see and do"
 msgid "stopping the spreadsheet mess"
 msgstr "stopping the spreadsheet mess"
 
-#: src/pages/index.jsx:169
+#: src/pages/index.jsx:167
 msgid "that already use Ledgy for their equity management and investor relations"
 msgstr "that already use Ledgy for their equity management and investor relations"
 

@@ -549,7 +549,7 @@ msgstr "Fonctionalités"
 msgid "Featuring unlimited share classes, treasury shares, pooled investments, and automatic share numbering"
 msgstr "Avec un nombre illimité de catégories d’actions, d’actions autodétenues, de placements collectifs et de numérotation automatique des actions"
 
-#: src/pages/index.jsx:192
+#: src/pages/index.jsx:190
 msgid "Finally, I have a reliable overview of all our shares, employee grants, and their legal documents. So much better than the Excel I used before."
 msgstr "Enfin, j’ai une vue d’ensemble fiable de toutes nos actions, des attributions aux employés et de leurs documents juridiques. Tellement mieux que l’Excel que j’utilisais avant."
 
@@ -563,7 +563,7 @@ msgstr "Modélisation"
 msgid "Find answers to your most common questions about Ledgy"
 msgstr "Trouve les réponses à tes questions les plus fréquentes sur Ledgy"
 
-#: src/pages/index.jsx:228
+#: src/pages/index.jsx:226
 msgid "Find out why they trust us"
 msgstr "Découvre pourquoi ils nous font confiance"
 
@@ -674,7 +674,6 @@ msgstr "Capital de risque dans le domaine de la santé et de la technologie depu
 
 #: src/layouts/index.jsx:52
 #: src/layouts/index.jsx:149
-#: src/layouts/index.jsx:189
 msgid "Help"
 msgstr "Aide"
 
@@ -708,7 +707,7 @@ msgstr "Comment pouvons-nous vous aider ?"
 msgid "How we protect your information"
 msgstr "Comment nous protégeons tes données personnelles"
 
-#: src/pages/index.jsx:214
+#: src/pages/index.jsx:212
 msgid "I needed exactly that. Every founder should use Ledgy’s modeling tools for financing rounds!"
 msgstr "C’est exactement ce dont j’avais besoin. Tous les fondateurs devraient utiliser les outils de modélisation de Ledgy pour leurs levées de fonds!"
 
@@ -779,7 +778,7 @@ msgstr "Invite tes employés à suivre leur part et leur vesting dans leur porte
 msgid "Jahlela has a background in cognitive neuroscience, graduated from UC Berkeley, and founded a few startups before switching to full-time software engineering"
 msgstr "Jahlela a une formation en neurosciences cognitives, est diplômée de l’Université de Berkeley et a fondé quelques start-ups avant de passer au génie logiciel à plein temps"
 
-#: src/pages/index.jsx:166
+#: src/pages/index.jsx:164
 msgid "Join hundreds of companies"
 msgstr "Rejoins des centaines d’entreprises"
 
@@ -1088,6 +1087,10 @@ msgstr "Rapport"
 #: src/pages/pricing.jsx:19
 msgid "Reporting"
 msgstr "Rapport"
+
+#: src/layouts/index.jsx:189
+msgid "Resources"
+msgstr "Ressources"
 
 #: src/components/Feature.jsx:100
 #: src/pages/features.jsx:80
@@ -1503,7 +1506,7 @@ msgstr "Nous respectons les normes de sécurité les plus élevées. Nous les am
 msgid "We operate a <0>bug bounty</0> program on Federacy. Write us a message for an invitation."
 msgstr "Nous avons un programme <0>bug bounty</0> sur Federacy. Ecris-nous pour recevoir une invitation."
 
-#: src/pages/index.jsx:203
+#: src/pages/index.jsx:201
 msgid "We started to use Ledgy’s solution while preparing a large and complex series C. It saved significant amount of time and headaches."
 msgstr "Nous avons commencé à utiliser Ledgy tout en préparant une grande et complexe série C. Cela a permis d’économiser beaucoup de temps et d’éviter des maux de tête considérables."
 
@@ -1606,7 +1609,7 @@ msgstr "pour que tu puisse contrôler ce que les autres peuvent voir et faire"
 msgid "stopping the spreadsheet mess"
 msgstr "l’arrêt du désordre des feuilles de calcul"
 
-#: src/pages/index.jsx:169
+#: src/pages/index.jsx:167
 msgid "that already use Ledgy for their equity management and investor relations"
 msgstr "qui utilisent déjà Ledgy pour la gestion de leurs actions et leurs relations avec les investisseurs"
 

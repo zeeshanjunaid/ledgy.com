@@ -186,7 +186,7 @@ const Footer = (props: LayoutProps) => (
           </FooterColBody>
         </FooterCol>
         <FooterCol order={4}>
-          <FooterColBody title={<Trans>Help</Trans>}>
+          <FooterColBody title={<Trans>Resources</Trans>}>
             {helpLinks.map(([label, link]) => (
               <Link className="nav-link" href to={`${props.prefix}/${link}/`} key={link}>
                 {label}
@@ -237,7 +237,7 @@ const Footer = (props: LayoutProps) => (
             ))}
           </div>
           <div className="newsletter-signup-CTA">
-            <button
+            <a
               className="btn btn-round btn-light"
               href="https://ledgy.us16.list-manage.com/subscribe/post?u=d6181c123b4d20b2104c4652f&id=c9cfbb11a6"
               {...targetBlank}
@@ -248,7 +248,7 @@ const Footer = (props: LayoutProps) => (
                 title="Newsletter"
               />
               <Trans>Newsletter</Trans>
-            </button>
+            </a>
           </div>
           <div className="mt-4">
             <div className="dropdown">
