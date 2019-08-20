@@ -98,12 +98,12 @@ const CTABanner = () => {
   const experiment = isBrowser ? sample(callToActionExperiments) : callToActionExperiments[0];
   return (
     <section className="section bg-pale-secondary">
-      <div className="container cta-banner d-flex py-md-4">
-        <div className="row mx-auto">
-          <p className="px-3 mb-4 mb-lg-0 mx-auto mr-lg-4 text-center">{experiment.title}</p>
+      <div className="container py-md-4">
+        <div className="row w-100 justify-content-center align-items-center">
+          <h4 className="m-3 text-center">{experiment.title}</h4>
 
           <a
-            className="btn btn-lg btn-primary mx-3 mx-md-auto"
+            className="cta-button m-3 btn btn-lg btn-round btn-primary align-self-center"
             href={`${appUrl}/signup`}
             onClick={() => {
               if (window.ga) window.ga('set', 'dimension2', experiment.name);
