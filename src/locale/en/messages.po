@@ -600,8 +600,8 @@ msgid "Free"
 msgstr "Free"
 
 #: src/layouts/utils.jsx:95
-msgid "Free forever with 50MB storage"
-msgstr "Free forever with 50MB storage"
+msgid "Free forever with 50 MB storage"
+msgstr "Free forever with 50 MB storage"
 
 #: src/components/Markdown.jsx:90
 msgid "French"

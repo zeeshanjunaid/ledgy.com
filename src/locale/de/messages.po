@@ -591,8 +591,8 @@ msgid "Free"
 msgstr "Gratis"
 
 #: src/layouts/utils.jsx:95
-msgid "Free forever with 50MB storage"
-msgstr "Für immer kostenlos mit 50MB Speicherplatz"
+msgid "Free forever with 50 MB storage"
+msgstr "Für immer kostenlos mit 50 MB Speicherplatz"
 
 #: src/components/Markdown.jsx:90
 msgid "French"
