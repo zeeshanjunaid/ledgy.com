@@ -99,7 +99,7 @@ const CTABanner = () => {
   return (
     <section className="section bg-pale-secondary">
       <div className="container py-md-4">
-        <div className="row w-100 justify-content-center align-items-center">
+        <div className="row m-0 w-100 justify-content-center align-items-center">
           <h4 className="m-3 text-center">{experiment.title}</h4>
 
           <a
@@ -237,7 +237,7 @@ const Footer = (props: LayoutProps) => (
             ))}
           </div>
           <div className="newsletter-signup-CTA">
-            <a
+            <button
               className="btn btn-round btn-light"
               href="https://ledgy.us16.list-manage.com/subscribe/post?u=d6181c123b4d20b2104c4652f&id=c9cfbb11a6"
               {...targetBlank}
@@ -248,7 +248,7 @@ const Footer = (props: LayoutProps) => (
                 title="Newsletter"
               />
               <Trans>Newsletter</Trans>
-            </a>
+            </button>
           </div>
           <div className="mt-4">
             <div className="dropdown">
