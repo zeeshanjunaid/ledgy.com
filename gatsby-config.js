@@ -86,7 +86,8 @@ module.exports = {
             "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ https://wchat.eu.freshchat.com/css/ https://snippets.freshchat.com/css/ https://maps.googleapis.com/maps/api/",
             "frame-src 'self' https://wchat.eu.freshchat.com/ https://ledgy.eu.webpush.freshchat.com/ https://www.youtube.com/"
           ].join('; '),
-          'Referrer-Policy: strict-origin-when-cross-origin'
+          'Referrer-Policy: strict-origin-when-cross-origin',
+          'Access-Control-Allow-Origin: https://www.ledgy.com'
         ]
       }
     },
