@@ -87,7 +87,7 @@ module.exports = {
             "frame-src 'self' https://wchat.eu.freshchat.com/ https://ledgy.eu.webpush.freshchat.com/ https://www.youtube.com/"
           ].join('; '),
           'Referrer-Policy: strict-origin-when-cross-origin',
-          'Access-Control-Allow-Origin: https://www.ledgy.com https://ledgy.com'
+          'Access-Control-Allow-Origin: *'
         ]
       }
     },
