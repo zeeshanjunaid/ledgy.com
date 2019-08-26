@@ -89,7 +89,8 @@ module.exports = {
               "connect-src 'self' https://maps.gstatic.com https://maps.googleapis.com https://snippets.freshchat.com https://www.google-analytics.com https://wchat.eu.freshchat.com"
             ].join('; '),
             'Referrer-Policy: strict-origin-when-cross-origin',
-            'Access-Control-Allow-Origin: https://www.ledgy.com'
+            'Access-Control-Allow-Origin: https://www.ledgy.com',
+            'Access-Control-Allow-Credentials: true'
           ]
         }
       }
