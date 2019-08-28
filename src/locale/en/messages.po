@@ -62,10 +62,6 @@ msgstr "About us"
 msgid "Access rights"
 msgstr "Access rights"
 
-#: src/pages/features/investors.jsx:137
-msgid "Add an investment, if a company is not using Ledgy yet to complete your portfolio"
-msgstr "Add an investment, if a company is not using Ledgy yet to complete your portfolio"
-
 #: src/pages/features/esop.jsx:86
 msgid "Add an option pool"
 msgstr "Add an option pool"
@@ -77,10 +73,6 @@ msgstr "Add any number of scenarios to compare different possibilities"
 #: src/pages/features/modeling.jsx:78
 msgid "Add convertibles with cap, discount, and interest and see how they convert during the next round"
 msgstr "Add convertibles with cap, discount, and interest and see how they convert during the next round"
-
-#: src/pages/features/investors.jsx:145
-msgid "Add portfolio investment"
-msgstr "Add portfolio investment"
 
 #: src/pages/features/esop.jsx:102
 msgid "Add vesting"
@@ -290,10 +282,6 @@ msgstr "Company"
 #: src/pages/features/modeling.jsx:105
 msgid "Compare and share scenarios"
 msgstr "Compare and share scenarios"
-
-#: src/pages/features/investors.jsx:135
-msgid "Complete your portfolio"
-msgstr "Complete your portfolio"
 
 #: src/pages/features/investors.jsx:124
 msgid "Comprehensive transaction history"
@@ -765,10 +753,6 @@ msgstr "Investor relations and equity management for startups"
 #: src/layouts/index.jsx:164
 msgid "Investors"
 msgstr "Investors"
-
-#: src/pages/features/investors.jsx:140
-msgid "Invite the founder or CFO to claim the company and keep the information up-to-date"
-msgstr "Invite the founder or CFO to claim the company and keep the information up-to-date"
 
 #: src/pages/features/esop.jsx:115
 msgid "Invite your employees to track their stake and vesting in their Ledgy portfolio"

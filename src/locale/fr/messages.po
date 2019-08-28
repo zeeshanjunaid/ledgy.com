@@ -62,10 +62,6 @@ msgstr "À propos de nous"
 msgid "Access rights"
 msgstr "Droits d’accès"
 
-#: src/pages/features/investors.jsx:137
-msgid "Add an investment, if a company is not using Ledgy yet to complete your portfolio"
-msgstr "Ajoute un investissement, si une entreprise n’utilise pas encore Ledgy afin de compléter ton portefeuille"
-
 #: src/pages/features/esop.jsx:86
 msgid "Add an option pool"
 msgstr "Ajouter un pool d’options"
@@ -77,10 +73,6 @@ msgstr "Ajoute un nombre illimité de scénarios pour comparer différentes poss
 #: src/pages/features/modeling.jsx:78
 msgid "Add convertibles with cap, discount, and interest and see how they convert during the next round"
 msgstr "Ajoute des billets convertibles avec plafond, rabais et intérêts et vois comment ils se convertissent lors de la prochaine levée de fonds"
-
-#: src/pages/features/investors.jsx:145
-msgid "Add portfolio investment"
-msgstr "Ajouter un investissement"
 
 #: src/pages/features/esop.jsx:102
 msgid "Add vesting"
@@ -290,10 +282,6 @@ msgstr "Société"
 #: src/pages/features/modeling.jsx:105
 msgid "Compare and share scenarios"
 msgstr "Compare et partage des scénarios"
-
-#: src/pages/features/investors.jsx:135
-msgid "Complete your portfolio"
-msgstr "Complète ton portefeuille"
 
 #: src/pages/features/investors.jsx:124
 msgid "Comprehensive transaction history"
@@ -765,10 +753,6 @@ msgstr "Gestion d’actions et de relations aux investisseurs pour startups"
 #: src/layouts/index.jsx:164
 msgid "Investors"
 msgstr "Investisseurs"
-
-#: src/pages/features/investors.jsx:140
-msgid "Invite the founder or CFO to claim the company and keep the information up-to-date"
-msgstr "Invite le fondateur ou le directeur financier au compte de l’entreprise et à tenir les informations à jour"
 
 #: src/pages/features/esop.jsx:115
 msgid "Invite your employees to track their stake and vesting in their Ledgy portfolio"

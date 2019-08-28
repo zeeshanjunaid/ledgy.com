@@ -130,21 +130,6 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         id="portfolioHistory"
       />
 
-      <FeatureList
-        textSize="5"
-        header={<Trans>Complete your portfolio</Trans>}
-        features={[
-          <Trans>
-            Add an investment, if a company is not using Ledgy yet to complete your portfolio
-          </Trans>,
-          <Trans>
-            Invite the founder or CFO to claim the company and keep the information up-to-date
-          </Trans>
-        ]}
-        imgSize="7"
-        img={<Img {...props.data.addInvestment} alt={i18n.t`Add portfolio investment`} />}
-      />
-
       <section className="section overflow-hidden pt-2">
         <div className="container text-left">
           <FeatureLinks {...props} i18n={i18n} page="investors" />
@@ -165,11 +150,6 @@ export const pageQuery = graphql`
       }
     }
     dashboardHistory: imageSharp(fluid: { originalName: { regex: "/dashboard-history.png/" } }) {
-      fluid(maxWidth: 800) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-    addInvestment: imageSharp(fluid: { originalName: { regex: "/add-investment.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
