@@ -19,7 +19,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
     <Title
       title={i18n.t`Intuitive and correct from the beginning`}
       section={i18n.t`Features`}
-      description={i18n.t`Intuitive, legally valid and error-free cap table from the beginning, supporting all transaction types, unlimited share classes, pooled investments, and numbered shares.`}
+      description={i18n.t`Intuitive, legally valid, and error-free cap table from the beginning, supporting all transaction types, unlimited share classes, pooled investments, and numbered shares.`}
     />
 
     <header className="header text-white bg-ledgy">

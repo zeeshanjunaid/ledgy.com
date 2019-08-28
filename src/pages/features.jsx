@@ -33,11 +33,11 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           <Feature {...props} name={i18n.t`Employee Participation Plans`} url="esop">
             <ul className="pl-0 pt-2">
               <FeatureLi>
-                <Trans>Save hours of work by getting rid of manual spreadsheet processes</Trans>
+                <Trans>Save hours of manual work by getting rid of complicated spreadsheets</Trans>
               </FeatureLi>
               <FeatureLi>
                 <Trans>
-                  Supports everything from pools to options, phantom options, warrants, vested
+                  Supports everything from pools to options, to phantom options, warrants, vested
                   stock, and inverse vesting
                 </Trans>
               </FeatureLi>
@@ -58,18 +58,18 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           <Feature {...props} name={i18n.t`Cap Table Management`} url="captable" left>
             <ul className="pl-0 pt-2">
               <FeatureLi>
-                <Trans>Intuitive, legally valid and error-free cap table from the beginning</Trans>
+                <Trans>Intuitive, legally valid, and error-free cap table from the beginning</Trans>
               </FeatureLi>
               <FeatureLi>
                 <Trans>
-                  Transaction-based supporting any type like issuance, transfer, convertibles, stock
-                  split, share destruction, valuations
+                  Support for many transaction types, including issuance, transfer, convertibles,
+                  stock split, share destruction, and valuations
                 </Trans>
               </FeatureLi>
               <FeatureLi>
                 <Trans>
                   Featuring unlimited share classes, treasury shares, pooled investments, and
-                  automatic share numbering
+                  automatic numbered shares
                 </Trans>
               </FeatureLi>
             </ul>
@@ -86,8 +86,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               </FeatureLi>
               <FeatureLi>
                 <Trans>
-                  Flexible yet intuitive round modeling supporting convertibles, fixed employee
-                  pools, and pro-rata distribution
+                  Flexible, yet intuitive round modeling with support for convertibles, fixed
+                  employee pools, and pro-rata distribution
                 </Trans>
               </FeatureLi>
               <FeatureLi>
@@ -104,18 +104,18 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           <Feature {...props} name={i18n.t`Collaboration & Due Diligence`} url="collaboration" left>
             <ul className="pl-0 pt-2">
               <FeatureLi>
-                <Trans>Granular access rights, you control them</Trans>
+                <Trans>Granular access rights — You are in control</Trans>
               </FeatureLi>
               <FeatureLi>
                 <Trans>
-                  Data room, audit trail and read-only access for investors save you costly due
-                  diligence tools
+                  Read-only access for investors, a secure data room for document sharing, and audit
+                  trails eliminate the need for costly due diligence tools
                 </Trans>
               </FeatureLi>
               <FeatureLi>
                 <Trans>
                   Save time in future due diligence by attaching legal documents to their
-                  transactions, making them searchable by the transaction information
+                  transactions, making them easily searchable by transaction information
                 </Trans>
               </FeatureLi>
             </ul>
@@ -130,18 +130,18 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               </FeatureLi>
               <FeatureLi>
                 <Trans>
-                  Track KPIs, write recurring reports and share them with your investors
+                  Track KPIs, write recurring reports, and share them with your investors
                 </Trans>
               </FeatureLi>
               <FeatureLi>
                 <Trans>
-                  The simplest and most time-efficient way to manage the portfolio as an investor
+                  The simplest and most time-efficient way to manage portfolios as an investor
                 </Trans>
               </FeatureLi>
               <FeatureLi>
                 <Trans>
-                  Get equity and reporting updates from your portfolio in one place, from
-                  transaction history to legal documents, valuations, KPIs and reports
+                  Get equity and reporting updates from your portfolio in one place, including
+                  transaction history, valuations, legal documents, KPIs, and reports
                 </Trans>
               </FeatureLi>
             </ul>

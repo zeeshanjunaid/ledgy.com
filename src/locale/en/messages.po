@@ -353,10 +353,6 @@ msgstr "Create option or phantom pools reserved for employees and keep track of 
 msgid "Daily backups ensure nothing is ever lost"
 msgstr "Daily backups ensure nothing is ever lost"
 
-#: src/pages/features.jsx:110
-msgid "Data room, audit trail and read-only access for investors save you costly due diligence tools"
-msgstr "Data room, audit trail and read-only access for investors save you costly due diligence tools"
-
 #: src/pages/about-us.jsx:170
 msgid "Digital entrepreneur and investor. Security, crypto & privacy expert"
 msgstr "Digital entrepreneur and investor. Security, crypto & privacy expert"
@@ -534,8 +530,8 @@ msgid "Features"
 msgstr "Features"
 
 #: src/pages/features.jsx:70
-msgid "Featuring unlimited share classes, treasury shares, pooled investments, and automatic share numbering"
-msgstr "Featuring unlimited share classes, treasury shares, pooled investments, and automatic share numbering"
+msgid "Featuring unlimited share classes, treasury shares, pooled investments, and automatic numbered shares"
+msgstr "Featuring unlimited share classes, treasury shares, pooled investments, and automatic numbered shares"
 
 #: src/pages/index.jsx:190
 msgid "Finally, I have a reliable overview of all our shares, employee grants, and their legal documents. So much better than the Excel I used before."
@@ -560,8 +556,8 @@ msgid "Find peace of mind with a better cap table tool"
 msgstr "Find peace of mind with a better cap table tool"
 
 #: src/pages/features.jsx:88
-msgid "Flexible yet intuitive round modeling supporting convertibles, fixed employee pools, and pro-rata distribution"
-msgstr "Flexible yet intuitive round modeling supporting convertibles, fixed employee pools, and pro-rata distribution"
+msgid "Flexible, yet intuitive round modeling with support for convertibles, fixed employee pools, and pro-rata distribution"
+msgstr "Flexible, yet intuitive round modeling with support for convertibles, fixed employee pools, and pro-rata distribution"
 
 #: src/pages/help.jsx:40
 msgid "Follow experiences of real-world startups, learn about term sheet negotiations, and much more"
@@ -600,8 +596,8 @@ msgid "Get Started Free"
 msgstr "Get Started Free"
 
 #: src/pages/features.jsx:142
-msgid "Get equity and reporting updates from your portfolio in one place, from transaction history to legal documents, valuations, KPIs and reports"
-msgstr "Get equity and reporting updates from your portfolio in one place, from transaction history to legal documents, valuations, KPIs and reports"
+msgid "Get equity and reporting updates from your portfolio in one place, including transaction history, valuations, legal documents, KPIs, and reports"
+msgstr "Get equity and reporting updates from your portfolio in one place, including transaction history, valuations, legal documents, KPIs, and reports"
 
 #: src/pages/features.jsx:48
 msgid "Get notified of important vesting and expiry events and engage your employees by inviting them to track their stake on Ledgy"
@@ -649,8 +645,8 @@ msgid "Granular access rights"
 msgstr "Granular access rights"
 
 #: src/pages/features.jsx:107
-msgid "Granular access rights, you control them"
-msgstr "Granular access rights, you control them"
+msgid "Granular access rights — You are in control"
+msgstr "Granular access rights — You are in control"
 
 #: src/pages/security.jsx:144
 msgid "HTTP headers prevent cross-site scripting and code injection (<0>A+ rating</0>)"
@@ -724,12 +720,12 @@ msgid "Intuitive and correct from the beginning"
 msgstr "Intuitive and correct from the beginning"
 
 #: src/pages/features.jsx:61
-msgid "Intuitive, legally valid and error-free cap table from the beginning"
-msgstr "Intuitive, legally valid and error-free cap table from the beginning"
+msgid "Intuitive, legally valid, and error-free cap table from the beginning"
+msgstr "Intuitive, legally valid, and error-free cap table from the beginning"
 
 #: src/pages/features/captable.jsx:22
-msgid "Intuitive, legally valid and error-free cap table from the beginning, supporting all transaction types, unlimited share classes, pooled investments, and numbered shares."
-msgstr "Intuitive, legally valid and error-free cap table from the beginning, supporting all transaction types, unlimited share classes, pooled investments, and numbered shares."
+msgid "Intuitive, legally valid, and error-free cap table from the beginning, supporting all transaction types, unlimited share classes, pooled investments, and numbered shares."
+msgstr "Intuitive, legally valid, and error-free cap table from the beginning, supporting all transaction types, unlimited share classes, pooled investments, and numbered shares."
 
 #: src/pages/about-us.jsx:180
 msgid "Investor & consultant (Farmy.ch, Flatfox.ch), founder of Students.ch"
@@ -1051,6 +1047,10 @@ msgstr "Quickly pull up legal documents by the information of their linked trans
 msgid "Read more"
 msgstr "Read more"
 
+#: src/pages/features.jsx:110
+msgid "Read-only access for investors, a secure data room for document sharing, and audit trails eliminate the need for costly due diligence tools"
+msgstr "Read-only access for investors, a secure data room for document sharing, and audit trails eliminate the need for costly due diligence tools"
+
 #: src/pages/features/collaboration.jsx:164
 msgid "Record of edits"
 msgstr "Record of edits"
@@ -1100,8 +1100,8 @@ msgid "Rounded share price, or exact to 10 decimals"
 msgstr "Rounded share price, or exact to 10 decimals"
 
 #: src/pages/features.jsx:36
-msgid "Save hours of work by getting rid of manual spreadsheet processes"
-msgstr "Save hours of work by getting rid of manual spreadsheet processes"
+msgid "Save hours of manual work by getting rid of complicated spreadsheets"
+msgstr "Save hours of manual work by getting rid of complicated spreadsheets"
 
 #: src/pages/features/esop.jsx:17
 msgid "Save hours of work by getting rid of manual spreadsheet processes, keep track of any vesting schedule, get notified of important vesting and expiry events, get started in minutes with the spreadsheet importer."
@@ -1112,8 +1112,8 @@ msgid "Save on costly due diligence tools"
 msgstr "Save on costly due diligence tools"
 
 #: src/pages/features.jsx:116
-msgid "Save time in future due diligence by attaching legal documents to their transactions, making them searchable by the transaction information"
-msgstr "Save time in future due diligence by attaching legal documents to their transactions, making them searchable by the transaction information"
+msgid "Save time in future due diligence by attaching legal documents to their transactions, making them easily searchable by transaction information"
+msgstr "Save time in future due diligence by attaching legal documents to their transactions, making them easily searchable by transaction information"
 
 #: src/pages/index.jsx:92
 msgid "Screenshot of the Ledgy app"
@@ -1234,14 +1234,18 @@ msgstr "Subscribe"
 msgid "Successful companies share regular updates with their stakeholders, holding themselves accountable"
 msgstr "Successful companies share regular updates with their stakeholders, holding themselves accountable"
 
+#: src/pages/features.jsx:64
+msgid "Support for many transaction types, including issuance, transfer, convertibles, stock split, share destruction, and valuations"
+msgstr "Support for many transaction types, including issuance, transfer, convertibles, stock split, share destruction, and valuations"
+
 #: src/pages/features/esop.jsx:36
 #: src/pages/features/esop.jsx:74
 msgid "Supports everything"
 msgstr "Supports everything"
 
 #: src/pages/features.jsx:39
-msgid "Supports everything from pools to options, phantom options, warrants, vested stock, and inverse vesting"
-msgstr "Supports everything from pools to options, phantom options, warrants, vested stock, and inverse vesting"
+msgid "Supports everything from pools to options, to phantom options, warrants, vested stock, and inverse vesting"
+msgstr "Supports everything from pools to options, to phantom options, warrants, vested stock, and inverse vesting"
 
 #: src/pages/features/captable.jsx:82
 msgid "Supports issuance, transfer, convertibles, stock split, valuations, treasury shares, unlimited share classes and more"
@@ -1289,8 +1293,8 @@ msgid "The frequency of server calls is limited to prevent brute-force attacks"
 msgstr "The frequency of server calls is limited to prevent brute-force attacks"
 
 #: src/pages/features.jsx:137
-msgid "The simplest and most time-efficient way to manage the portfolio as an investor"
-msgstr "The simplest and most time-efficient way to manage the portfolio as an investor"
+msgid "The simplest and most time-efficient way to manage portfolios as an investor"
+msgstr "The simplest and most time-efficient way to manage portfolios as an investor"
 
 #: src/pages/security.jsx:126
 msgid "The site is accessible only through HTTPS (<0>A+ rating</0>)"
@@ -1321,8 +1325,8 @@ msgid "Thoughts on cap tables, financing rounds, and legal issues around running
 msgstr "Thoughts on cap tables, financing rounds, and legal issues around running and managing a startup."
 
 #: src/pages/features.jsx:132
-msgid "Track KPIs, write recurring reports and share them with your investors"
-msgstr "Track KPIs, write recurring reports and share them with your investors"
+msgid "Track KPIs, write recurring reports, and share them with your investors"
+msgstr "Track KPIs, write recurring reports, and share them with your investors"
 
 #: src/pages/features/esop.jsx:42
 msgid "Track any vesting schedule"
@@ -1344,10 +1348,6 @@ msgstr "Transaction-based"
 #: src/pages/features/captable.jsx:78
 msgid "Transaction-based cap table, setting it up for future due diligence, saving you hours of work and lawyer costs"
 msgstr "Transaction-based cap table, setting it up for future due diligence, saving you hours of work and lawyer costs"
-
-#: src/pages/features.jsx:64
-msgid "Transaction-based supporting any type like issuance, transfer, convertibles, stock split, share destruction, valuations"
-msgstr "Transaction-based supporting any type like issuance, transfer, convertibles, stock split, share destruction, valuations"
 
 #: src/pages/features/collaboration.jsx:53
 msgid "Transparent history"

@@ -6,7 +6,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Creation-Date: 2018-09-12T18:40:54.619Z\n"
-"PO-Revision-Date: 2019-08-20 14:00+0200\n"
+"PO-Revision-Date: 2019-08-28 11:43+0200\n"
 "Language: de\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: Timo Horstschäfer <timo@ledgy.com>\n"
@@ -352,10 +352,6 @@ msgstr "Erstelle Options- oder Phantompools, die für Mitarbeiter reserviert sin
 msgid "Daily backups ensure nothing is ever lost"
 msgstr "Tägliche Backups stellen sicher, dass nichts verloren gehen kann"
 
-#: src/pages/features.jsx:110
-msgid "Data room, audit trail and read-only access for investors save you costly due diligence tools"
-msgstr "Datenraum, Audit-Trail und schreibgeschützter Zugriff für Investoren ersparen dir teure Due-Diligence Tools"
-
 #: src/pages/about-us.jsx:170
 msgid "Digital entrepreneur and investor. Security, crypto & privacy expert"
 msgstr "Digital Entrepreneur und Investor. Security-, Crypto- & Privacy-Experte"
@@ -533,7 +529,7 @@ msgid "Features"
 msgstr "Funktionen"
 
 #: src/pages/features.jsx:70
-msgid "Featuring unlimited share classes, treasury shares, pooled investments, and automatic share numbering"
+msgid "Featuring unlimited share classes, treasury shares, pooled investments, and automatic numbered shares"
 msgstr "Mit beliebig vielen Anteilsklassen, Treasury Anteilen, gepoolten Investitionen und automatischer Aktiennummerierung"
 
 #: src/pages/index.jsx:190
@@ -559,7 +555,7 @@ msgid "Find peace of mind with a better cap table tool"
 msgstr "Behalte den Überblick mit einem besserem Cap Table Tool"
 
 #: src/pages/features.jsx:88
-msgid "Flexible yet intuitive round modeling supporting convertibles, fixed employee pools, and pro-rata distribution"
+msgid "Flexible, yet intuitive round modeling with support for convertibles, fixed employee pools, and pro-rata distribution"
 msgstr "Flexible und dennoch intuitive Rundenmodellierung, welche Wandeldarlehen, feste Mitarbeiterpools und pro-rata Verteilungen unterstützt"
 
 #: src/pages/help.jsx:40
@@ -599,7 +595,7 @@ msgid "Get Started Free"
 msgstr "Kostenlos starten"
 
 #: src/pages/features.jsx:142
-msgid "Get equity and reporting updates from your portfolio in one place, from transaction history to legal documents, valuations, KPIs and reports"
+msgid "Get equity and reporting updates from your portfolio in one place, including transaction history, valuations, legal documents, KPIs, and reports"
 msgstr "Das Portfolio als zentraler Ort für Informationen zu deinen Beteiligungen, von der Transaktionshistorie über rechtliche Dokumente, Bewertungen, bis hin zu KPIs und Reports"
 
 #: src/pages/features.jsx:48
@@ -648,7 +644,7 @@ msgid "Granular access rights"
 msgstr "Granulare Zugriffsrechte"
 
 #: src/pages/features.jsx:107
-msgid "Granular access rights, you control them"
+msgid "Granular access rights — You are in control"
 msgstr "Granulare Zugriffsrechte, du hast die Kontrolle"
 
 #: src/pages/security.jsx:144
@@ -723,11 +719,11 @@ msgid "Intuitive and correct from the beginning"
 msgstr "Intuitiv und richtig von Beginn an"
 
 #: src/pages/features.jsx:61
-msgid "Intuitive, legally valid and error-free cap table from the beginning"
+msgid "Intuitive, legally valid, and error-free cap table from the beginning"
 msgstr "Intuitiver, rechtsgültiger und fehlerfreier Cap Table von Anfang an"
 
 #: src/pages/features/captable.jsx:22
-msgid "Intuitive, legally valid and error-free cap table from the beginning, supporting all transaction types, unlimited share classes, pooled investments, and numbered shares."
+msgid "Intuitive, legally valid, and error-free cap table from the beginning, supporting all transaction types, unlimited share classes, pooled investments, and numbered shares."
 msgstr "Intuitive, rechtsgültige und fehlerfreie Cap Tables von Anfang an, die alle Transaktionsarten, unbegrenzte Aktienklassen, gepoolte Anlagen und nummerierte Aktien unterstützt."
 
 #: src/pages/about-us.jsx:180
@@ -1050,6 +1046,10 @@ msgstr "Finde Dokumente anhand der Informationen der verknüpften Transaktionen"
 msgid "Read more"
 msgstr "Mehr erfahren"
 
+#: src/pages/features.jsx:110
+msgid "Read-only access for investors, a secure data room for document sharing, and audit trails eliminate the need for costly due diligence tools"
+msgstr "Datenraum, Audit-Trail und schreibgeschützter Zugriff für Investoren ersparen dir teure Due-Diligence Tools"
+
 #: src/pages/features/collaboration.jsx:164
 msgid "Record of edits"
 msgstr "Historie der Änderungen"
@@ -1099,7 +1099,7 @@ msgid "Rounded share price, or exact to 10 decimals"
 msgstr "Wähle zwischen gerundeten oder auf 10 Dezimalstellen exakten Preis"
 
 #: src/pages/features.jsx:36
-msgid "Save hours of work by getting rid of manual spreadsheet processes"
+msgid "Save hours of manual work by getting rid of complicated spreadsheets"
 msgstr "Spare Stunden an Arbeit, indem du manuelle Excel Prozesse loswirst"
 
 #: src/pages/features/esop.jsx:17
@@ -1111,7 +1111,7 @@ msgid "Save on costly due diligence tools"
 msgstr "Spare dir kostspielige Due-Diligence Tools"
 
 #: src/pages/features.jsx:116
-msgid "Save time in future due diligence by attaching legal documents to their transactions, making them searchable by the transaction information"
+msgid "Save time in future due diligence by attaching legal documents to their transactions, making them easily searchable by transaction information"
 msgstr "Spare Zeit bei zukünftigen Due-Diligence-Prüfungen, indem du an alle Transaktionen die relevanten rechtlichen Dokumente anhängst, welche später ganz einfach gefunden und aufgerufen werden können"
 
 #: src/pages/index.jsx:92
@@ -1233,13 +1233,17 @@ msgstr "Abonnieren"
 msgid "Successful companies share regular updates with their stakeholders, holding themselves accountable"
 msgstr "Erfolgreiche Unternehmen teilen regelmäßig Updates mit ihren Stakeholdern"
 
+#: src/pages/features.jsx:64
+msgid "Support for many transaction types, including issuance, transfer, convertibles, stock split, share destruction, and valuations"
+msgstr "Transaktionsbasiert, mit Unterstützung von allen Typen angefangen bei der Ausgabe von Anteilen, Übertragung, Wandelanleihen, Bewertungen, bis hin zu Aktiensplit und Aktienvernichtung"
+
 #: src/pages/features/esop.jsx:36
 #: src/pages/features/esop.jsx:74
 msgid "Supports everything"
 msgstr "Unterstützt alles"
 
 #: src/pages/features.jsx:39
-msgid "Supports everything from pools to options, phantom options, warrants, vested stock, and inverse vesting"
+msgid "Supports everything from pools to options, to phantom options, warrants, vested stock, and inverse vesting"
 msgstr "Unterstützt alles von Pools über Optionen, Phantomoptionen, Warrants, gevestete Anteile bis hin zu inversem Vesting"
 
 #: src/pages/features/captable.jsx:82
@@ -1288,7 +1292,7 @@ msgid "The frequency of server calls is limited to prevent brute-force attacks"
 msgstr "Die Anzahl an Server-Anfragen ist beschränkt, um Brute-Force-Attacken zu verhindern"
 
 #: src/pages/features.jsx:137
-msgid "The simplest and most time-efficient way to manage the portfolio as an investor"
+msgid "The simplest and most time-efficient way to manage portfolios as an investor"
 msgstr "Der einfachste und zeitsparendste Weg, sein Portfolio als Investor zu verwalten"
 
 #: src/pages/security.jsx:126
@@ -1320,7 +1324,7 @@ msgid "Thoughts on cap tables, financing rounds, and legal issues around running
 msgstr "Gedanken zum Cap Table, Finanzierungsrunden und rechtlichen Fragen rund um das Leiten und Managen eines Startups."
 
 #: src/pages/features.jsx:132
-msgid "Track KPIs, write recurring reports and share them with your investors"
+msgid "Track KPIs, write recurring reports, and share them with your investors"
 msgstr "Erfasse KPIs, schreibe regelmässige Berichte und teile sie mit deinen Investoren"
 
 #: src/pages/features/esop.jsx:42
@@ -1343,10 +1347,6 @@ msgstr "Transaktionsbasiert"
 #: src/pages/features/captable.jsx:78
 msgid "Transaction-based cap table, setting it up for future due diligence, saving you hours of work and lawyer costs"
 msgstr "Transaktionsbasierter Cap Table, der für zukünftige Due-Diligence vorbereitet und dadurch Zeit und Anwaltskosten spart"
-
-#: src/pages/features.jsx:64
-msgid "Transaction-based supporting any type like issuance, transfer, convertibles, stock split, share destruction, valuations"
-msgstr "Transaktionsbasiert, mit Unterstützung von allen Typen angefangen bei der Ausgabe von Anteilen, Übertragung, Wandelanleihen, Bewertungen, bis hin zu Aktiensplit und Aktienvernichtung"
 
 #: src/pages/features/collaboration.jsx:53
 msgid "Transparent history"
