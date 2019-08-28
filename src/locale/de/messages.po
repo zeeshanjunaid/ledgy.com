@@ -6,7 +6,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Creation-Date: 2018-09-12T18:40:54.619Z\n"
-"PO-Revision-Date: 2019-08-28 16:52+0200\n"
+"PO-Revision-Date: 2019-08-28 17:32+0200\n"
 "Language: de\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: Timo Horstschäfer <timo@ledgy.com>\n"
@@ -1524,10 +1524,8 @@ msgid "Yoko studied Physics at ETHZ, the University of Oxford and CERN. She was 
 msgstr "Yoko hat Physik an der ETHZ, der University of Oxford und dem CERN studiert. Sie war auch Projektleiterin von Swissloop und half beim Bau des ersten Hyperloop-Pods der Schweiz."
 
 #: src/pages/pricing.jsx:186
-msgid "You get a <0>20% discount</0> on Premium if your startup helps reducing carbon emissions.<1/><2>Write us</2> about your impact to see if you qualify."
-msgstr ""
-"Du bekommst <0>20% Discount</0> auf den Premium-Plan, wenn dein Startup nachweislich Emissionen reduziert.<1/>\n"
-"<2>Schreib’ uns</2> über deinen Impact, um herauszufinden, ob das auf dein Startup zutrifft."
+msgid "You get a <0>20% discount</0> on Premium if your startup helps reduce carbon emissions.<1/><2>Write us</2> about your impact to see if you qualify."
+msgstr "Du bekommst <0>20% Discount</0> auf den Premium-Plan, wenn dein Startup nachweislich Emissionen reduziert.<1/><2>Schreib uns</2> über deinen Impact, um herauszufinden, ob das auf dein Startup zutrifft."
 
 #: src/layouts/utils.jsx:98
 msgid "Your cap table, free forever"

@@ -1525,7 +1525,7 @@ msgid "Yoko studied Physics at ETHZ, the University of Oxford and CERN. She was 
 msgstr "Yoko a étudié la physique à l'EPFZ, à l'Université d'Oxford et au CERN. Elle a également été présidente de Swissloop, aidant à construire le premier Hyperloop pod de Suisse."
 
 #: src/pages/pricing.jsx:186
-msgid "You get a <0>20% discount</0> on Premium if your startup helps reducing carbon emissions.<1/><2>Write us</2> about your impact to see if you qualify."
+msgid "You get a <0>20% discount</0> on Premium if your startup helps reduce carbon emissions.<1/><2>Write us</2> about your impact to see if you qualify."
 msgstr "Tu bénéficies d’un <0>rabais de 20 %</0> sur Premium si ta startup contribue à réduire les émissions de carbone.<1/><2>Écris-nous</2> au sujet de ton impact pour voir si tu es admissible."
 
 #: src/layouts/utils.jsx:98
