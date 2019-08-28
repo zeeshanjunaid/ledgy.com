@@ -35,16 +35,20 @@ msgid "<0>Admin</0> Full control over the company for your co-founders"
 msgstr "<0>Admin</0> Contrôle total de l’entreprise pour tes cofondateurs"
 
 #: src/pages/features/collaboration.jsx:85
-msgid "<0>Portfolio</0> See only the own stake in their <1>portfolio<2/></1>"
+msgid "<0>Portfolio</0> Only see only their own<1>portfolio<2/></1>stake"
 msgstr "<0>Portfolio</0> Voir uniquement la participation personnelle dans son <1>portefeuille d’investissement<2/></1>"
 
 #: src/pages/features/collaboration.jsx:82
 msgid "<0>View</0> See all cap table info in a read-only mode for due diligences"
 msgstr "<0>View</0> Voir toutes les informations du cap table en mode lecture seule pour les diligences raisonnables"
 
-#: src/pages/features/collaboration.jsx:143
-msgid "A certificate of each document is automatically stored on the bitcoin blockchain when uploading"
-msgstr "Un certificat de chaque document est automatiquement stocké sur la bitcoin blockchain lors du téléchargement"
+#: src/pages/features/collaboration.jsx:144
+msgid "A certificate of each document is automatically stored on the Bitcoin blockchain when it is uploaded"
+msgstr "Un certificat de chaque document est automatiquement stocké sur la Bitcoin blockchain lors du téléchargement"
+
+#: src/pages/features/collaboration.jsx:22
+msgid "A secure data room, audit trail, and read-only access for investors means saving on costly due diligence tools."
+msgstr "Data room sécurisée, piste d’audits et accès en lecture seule pour les investisseurs; économise sur les outils coûteux de diligence raisonnable."
 
 #: src/pages/pricing.jsx:166
 msgid "A stakeholder is any holder of shares, (phantom) options, warrants, or convertibles.<0/>It does not include the company treasury or incentive pools."
@@ -108,12 +112,12 @@ msgstr "Tout ce dont tu as besoin au même endroit"
 msgid "All you need in one place: Employee participation plan management, round and exit modeling, due diligence tools and investor relations."
 msgstr "Tout ce dont te as besoin au même endroit: Gestion des plans de participation des employés, modélisation des rondes de financement et des sorties, outils de diligences raisonnables et relations avec les investisseurs."
 
-#: src/pages/features/investors.jsx:111
+#: src/pages/features/investors.jsx:109
 msgid "Always up-to-date portfolio, curated by your startups"
 msgstr "Portefeuille toujours à jour, géré par tes startups"
 
 #: src/pages/features/captable.jsx:86
-msgid "Analyze it by stakeholder, share class, stakeholder group and view it with all, outstanding or diluted shares"
+msgid "Analyze your cap table by stakeholder, share class, or stakeholder group, and view it with outstanding or diluted shares"
 msgstr "Analyse-le par actionnaire, catégorie d’actions, groupe d’actionnaires et visualise-le avec toutes les actions en circulation ou diluées"
 
 #: src/pages/features/esop.jsx:92
@@ -124,10 +128,6 @@ msgstr "Tout calendrier de vesting"
 #: src/pages/features/investors.jsx:22
 msgid "As a startup, be professional towards your investors, track KPIs, write recurring reports. As an investor, this is the simplest and most time-efficient way to manage your portfolio."
 msgstr "En tant que startup, fais preuve de professionnalisme à l’égard de tes investisseurs, suis les indicateurs de performance clés et rédige tes rapports mensuels. En tant qu’investisseur, c’est la façon la plus simple et la plus rapide de gérer ton portefeuille d’investissement."
-
-#: src/pages/features/captable.jsx:160
-msgid "As easy as copying and pasting stakeholders, shares issues, or options"
-msgstr "Aussi simple que de copier-coller des actionnaires, des émissions d’actions ou d’options"
 
 #: src/pages/index.jsx:139
 msgid "As featured in"
@@ -155,8 +155,8 @@ msgid "Attach your KPIs and any documents"
 msgstr "Joins tes indicateurs de performance clé et tout autre document"
 
 #: src/pages/features/captable.jsx:102
-msgid "Auto-assign share numbers for all your transactions; Ledgy will determine the next available ones"
-msgstr "Attribution automatique des numéros d’actions pour toutes tes transactions; Ledgy déterminera les prochains numéros disponibles"
+msgid "Auto-assign share numbers for all your transactions. Ledgy will determine the next available numbers"
+msgstr "Attribution automatique des numéros d’actions pour toutes tes transactions. Ledgy déterminera les prochains numéros disponibles"
 
 #: src/pages/features/modeling.jsx:161
 msgid "Automatically update the stakeholder list, transaction history, and cap table after the round is finished"
@@ -190,11 +190,11 @@ msgstr "Parce que tes données ne doivent pas être accessible à tout le monde"
 msgid "Ben has extensive experience in project management and has worked for two years as software-engineer in an ETH research group"
 msgstr "Ben a étudié la physique à l’ETH Zürich ainsi qu’à l’ENS de Paris et a également travaillé pendant deux ans en tant que software engineer en Java dans un groupe de recherche de l’ETHZ"
 
-#: src/pages/features/collaboration.jsx:138
+#: src/pages/features/collaboration.jsx:139
 msgid "Blockchain certification"
 msgstr "Certification Blockchain"
 
-#: src/pages/features/collaboration.jsx:152
+#: src/pages/features/collaboration.jsx:153
 msgid "Blockchain notary"
 msgstr "Notaire Blockchain"
 
@@ -255,6 +255,10 @@ msgstr "Gestion du cap table"
 msgid "Career"
 msgstr "Carrière"
 
+#: src/pages/features/modeling.jsx:85
+msgid "Choose between pre- or post-money valuation"
+msgstr "Utilise l’évaluation de l’entreprise avant ou après la levée de fonds"
+
 #: src/pages/features/esop.jsx:140
 msgid "Choose to only show pools or the detailed view with the grants distributed to their holders"
 msgstr "Choisis de n’afficher que les pools ou la vue détaillée avec les parts distribuées à leurs détenteurs"
@@ -283,7 +287,7 @@ msgstr "Société"
 msgid "Compare and share scenarios"
 msgstr "Compare et partage des scénarios"
 
-#: src/pages/features/investors.jsx:124
+#: src/pages/features/investors.jsx:122
 msgid "Comprehensive transaction history"
 msgstr "Historique complet des transactions"
 
@@ -382,7 +386,7 @@ msgstr "Distribue les fonds au prorata de l’investissement"
 msgid "Document links"
 msgstr "Liens aux documents"
 
-#: src/pages/features/collaboration.jsx:113
+#: src/pages/features/collaboration.jsx:114
 msgid "Document management"
 msgstr "Gestion des documents"
 
@@ -404,7 +408,7 @@ msgstr "Ta startup contribue-t-elle à la lutte contre le changement climatique?
 msgid "Download and use our ESOP template"
 msgstr "Télécharge et utilise notre modèle ESOP"
 
-#: src/pages/features/collaboration.jsx:171
+#: src/pages/features/collaboration.jsx:172
 msgid "Download holding confirmations with a single click"
 msgstr "Télécharge les confirmations de possession d’un simple clic"
 
@@ -416,7 +420,7 @@ msgstr "Diligence raisonnable"
 msgid "Due Diligence and Collaboration"
 msgstr "Diligence raisonnable et collaboration"
 
-#: src/pages/features/collaboration.jsx:120
+#: src/pages/features/collaboration.jsx:121
 msgid "Due diligence history"
 msgstr "Historique de la diligence raisonnable"
 
@@ -436,7 +440,7 @@ msgstr "ESOP Templates"
 msgid "EU data protection"
 msgstr "Protection des données de l’UE"
 
-#: src/pages/features/collaboration.jsx:158
+#: src/pages/features/collaboration.jsx:159
 msgid "Edit log"
 msgstr "Modifier l’historique d’édition"
 
@@ -467,6 +471,10 @@ msgstr "Connexion cryptée"
 msgid "Engage your employees"
 msgstr "Mobilise tes employés"
 
+#: src/pages/features/esop.jsx:111
+msgid "Engage your employees with notifications two weeks before a cliff, vesting, or grant event"
+msgstr "Sois avisé deux semaines avant la fin d’une période de vesting ou de l’expiration d’options"
+
 #: src/components/Markdown.jsx:88
 msgid "English"
 msgstr "Anglais"
@@ -492,7 +500,7 @@ msgstr "Entrepreneur, technologist, fondateur de Doodle.com"
 msgid "Equity data"
 msgstr "Données sur les capitaux propres"
 
-#: src/pages/features/collaboration.jsx:160
+#: src/pages/features/collaboration.jsx:161
 msgid "Equity data is too important to be accidentally tweaked in a spreadsheet"
 msgstr "Les données sur les actions sont trop importantes pour être modifiées accidentellement dans une feuille de calcul"
 
@@ -504,7 +512,7 @@ msgstr "Plan d’actionnariat"
 msgid "Europe’s symbiosis of early-stage VC funds and private investor network"
 msgstr "La symbiose européenne entre les fonds de capital-risque et le réseau d’investisseurs privés"
 
-#: src/pages/features/investors.jsx:97
+#: src/pages/features/investors.jsx:95
 msgid "Every company has KPIs, and investors love seeing them in real-time"
 msgstr "Chaque entreprise a des indicateurs de performance clés, et les investisseurs adorent les voir en temps réel"
 
@@ -603,10 +611,6 @@ msgstr "Obtiens des mises à jour sur tes investissements et les rapports mensue
 msgid "Get notified of important vesting and expiry events and engage your employees by inviting them to track their stake on Ledgy"
 msgstr "Sois informé des événements importants liés au vesting et à l’expiration et engage tes employés en les invitant à suivre la valeur de leurs parts sur Ledgy"
 
-#: src/pages/features/esop.jsx:111
-msgid "Get notified two weeks before a cliff or vesting ends or a grant expires to not miss using your participation plan for engaging your employees"
-msgstr "Sois avisé deux semaines avant la fin d’une période de vesting ou de l’expiration d’options"
-
 #: src/layouts/index.jsx:113
 #: src/pages/pricing.jsx:145
 msgid "Get started"
@@ -673,12 +677,12 @@ msgstr "Aide tes actionnaires à rester à jour"
 msgid "Here are the ways you can contact us with any questions you have"
 msgstr "Voici comment tu peux nous contacter si tu as des questions"
 
-#: src/pages/features/collaboration.jsx:178
+#: src/pages/features/collaboration.jsx:179
 msgid "Holding confirmation"
 msgstr "Confirmation de possession"
 
 #: src/pages/features/collaboration.jsx:59
-#: src/pages/features/collaboration.jsx:169
+#: src/pages/features/collaboration.jsx:170
 #: src/pages/pricing.jsx:23
 msgid "Holding confirmations"
 msgstr "Confirmations de possession"
@@ -738,7 +742,7 @@ msgstr "Investisseur & consultant (Farmy.ch, Flatfox.ch), fondateur de Students.
 msgid "Investor Relations & Portfolio"
 msgstr "Relations investisseurs et portfolio"
 
-#: src/pages/features/investors.jsx:116
+#: src/pages/features/investors.jsx:114
 msgid "Investor portfolio"
 msgstr "Portefeuille d’investisseurs"
 
@@ -754,6 +758,10 @@ msgstr "Investisseurs"
 msgid "Invite your employees to track their stake and vesting in their Ledgy portfolio"
 msgstr "Invite tes employés à suivre leur part et leur vesting dans leur portefeuille Ledgy"
 
+#: src/pages/features/captable.jsx:160
+msgid "It’s as easy as copying and pasting stakeholders, shares issues, or options"
+msgstr "Aussi simple que de copier-coller des actionnaires, des émissions d’actions ou d’options"
+
 #: src/layouts/team.jsx:100
 msgid "Jahlela has a background in cognitive neuroscience, graduated from UC Berkeley, and founded a few startups before switching to full-time software engineering"
 msgstr "Jahlela a une formation en neurosciences cognitives, est diplômée de l’Université de Berkeley et a fondé quelques start-ups avant de passer au génie logiciel à plein temps"
@@ -762,7 +770,7 @@ msgstr "Jahlela a une formation en neurosciences cognitives, est diplômée de l
 msgid "Join hundreds of companies"
 msgstr "Rejoins des centaines d’entreprises"
 
-#: src/pages/features/investors.jsx:98
+#: src/pages/features/investors.jsx:96
 msgid "Just copy-paste expected and actual values and customize the plots"
 msgstr "Il suffit de copier-coller les valeurs attendues et réelles et de personnaliser les graphiques"
 
@@ -778,7 +786,7 @@ msgstr "ICP"
 msgid "KPIs & Reports"
 msgstr "KPIs & Reports"
 
-#: src/pages/features/investors.jsx:112
+#: src/pages/features/investors.jsx:110
 msgid "Keep an eye on your investments, their value and multiple"
 msgstr "Garde un œil sur tes placements, leur valeur et leur multiple"
 
@@ -786,15 +794,15 @@ msgstr "Garde un œil sur tes placements, leur valeur et leur multiple"
 msgid "Keep track of any vesting schedule"
 msgstr "Suis tout calendrier de vesting"
 
-#: src/pages/features/collaboration.jsx:161
+#: src/pages/features/collaboration.jsx:162
 msgid "Keep track of who edited what and hold admins accountable"
 msgstr "Garde une trace de qui a édité quoi et tiens les administrateurs responsables"
 
-#: src/pages/features/investors.jsx:95
+#: src/pages/features/investors.jsx:93
 msgid "Key performance indicators"
 msgstr "Indicateurs clés de performance"
 
-#: src/pages/features/investors.jsx:102
+#: src/pages/features/investors.jsx:100
 msgid "Kpi chart"
 msgstr "Diagramme Kpi"
 
@@ -834,7 +842,7 @@ msgstr "Ledgy s’adapte à tes besoins. Gratuit pour les startups, puissant pou
 msgid "Legal"
 msgstr "Légal"
 
-#: src/pages/features/investors.jsx:125
+#: src/pages/features/investors.jsx:123
 msgid "Legal documents associated with the transactions at your fingertips"
 msgstr "Les documents juridiques associés aux transactions à portée de main"
 
@@ -870,7 +878,7 @@ msgstr "Avocate en M&A et private equity, spécialisée dans le conseil juridiqu
 msgid "Made for startups, great for investors"
 msgstr "Conçu pour les startups, idéal pour les investisseurs"
 
-#: src/pages/features/collaboration.jsx:104
+#: src/pages/features/collaboration.jsx:105
 msgid "Make linked documents accessible to stakeholders involved in the transaction"
 msgstr "Rendre les documents liés aux transactions accessibles aux actionnaires impliqués dans la transaction"
 
@@ -951,7 +959,7 @@ msgid "Phone & chat, onboarding"
 msgstr "Téléphone et chat"
 
 #: src/pages/features/modeling.jsx:113
-msgid "Play around with founder- or investor-friendly settings, let convertibles and pools dilute all or only the existing shareholders"
+msgid "Play around with founder- and investor-friendly settings. Let convertibles and pools dilute for all potential shareholders or for only the existing shareholders"
 msgstr "Joue avec les paramètres qui favorisent différents actionnaires, vois l’effet de la dilution sur tous les actionnaires ou seulement sur les actionnaires existants par les billets convertibles et les pools"
 
 #: src/pages/features/captable.jsx:129
@@ -965,16 +973,16 @@ msgid "Pooled investments"
 msgstr "Investissements en fond commun"
 
 #: src/pages/features/captable.jsx:119
-msgid "Pooled investments are common in many countries, Ledgy helps you keep them organized"
-msgstr "Les placements collectifs en pool sont courants dans de nombreux pays, Ledgy t’aide à les garder organisés"
+msgid "Pooled investments are common in many countries. Ledgy helps you keep them organized"
+msgstr "Les placements collectifs en pool sont courants dans de nombreux pays. Ledgy t’aide à les garder organisés"
 
 #: src/pages/help.jsx:100
 msgid "Popular content"
 msgstr "Contenu populaire"
 
 #: src/pages/features/investors.jsx:59
-#: src/pages/features/investors.jsx:122
-#: src/pages/features/investors.jsx:128
+#: src/pages/features/investors.jsx:120
+#: src/pages/features/investors.jsx:126
 msgid "Portfolio history"
 msgstr "Historique du portefeuille"
 
@@ -1017,11 +1025,11 @@ msgid "Product"
 msgstr "Produit"
 
 #: src/pages/features/investors.jsx:53
-#: src/pages/features/investors.jsx:109
+#: src/pages/features/investors.jsx:107
 msgid "Professional portfolio"
 msgstr "Portefeuille professionnel"
 
-#: src/pages/features/collaboration.jsx:103
+#: src/pages/features/collaboration.jsx:104
 msgid "Prove your transactions by linking their respective legal documents"
 msgstr "Prouve tes transactions en y reliant leurs documents légaux respectifs"
 
@@ -1029,11 +1037,7 @@ msgstr "Prouve tes transactions en y reliant leurs documents légaux respectifs"
 msgid "Prove your transactions with their respective legal documents"
 msgstr "Prouve tes transactions avec leurs documents légaux respectifs"
 
-#: src/pages/features/investors.jsx:84
-msgid "Publish your reports once done, which will share them with your selected stakeholders"
-msgstr "Publie tes rapports une fois terminés, qui seront partagé avec les actionnaires que tu auras sélectionnés"
-
-#: src/pages/features/collaboration.jsx:107
+#: src/pages/features/collaboration.jsx:108
 msgid "Quickly pull up documents by the information of their linked transactions; for example, all of a specific stakeholder, share class or date range"
 msgstr "Accédez rapidement aux documents à travers les transactions qui y sont liées; par exemple, tout ce qui concerne un actionnaire particulier, une classe d’actions ou une plage de dates spécifiques"
 
@@ -1051,7 +1055,7 @@ msgstr "Lire plus"
 msgid "Read-only access for investors, a secure data room for document sharing, and audit trails eliminate the need for costly due diligence tools"
 msgstr "Data room, piste d’audits et accès en lecture seule pour les investisseurs te permettent d’économiser des outils coûteux de diligence raisonnable"
 
-#: src/pages/features/collaboration.jsx:164
+#: src/pages/features/collaboration.jsx:165
 msgid "Record of edits"
 msgstr "Registre des modifications"
 
@@ -1064,7 +1068,7 @@ msgstr "Rapports récurrents"
 msgid "Recurring reports, KPIs"
 msgstr "Rapports récurrents, ICP"
 
-#: src/pages/features/investors.jsx:89
+#: src/pages/features/investors.jsx:87
 msgid "Report"
 msgstr "Rapport"
 
@@ -1107,7 +1111,7 @@ msgstr "Gagne des heures de travail en te débarrassant des processus manuels de
 msgid "Save hours of work by getting rid of manual spreadsheet processes, keep track of any vesting schedule, get notified of important vesting and expiry events, get started in minutes with the spreadsheet importer."
 msgstr "Épargne-toi des heures de travail en te débarrassant des processus manuels de fichiers excel, garde une trace de tout calendrier de vesting, sois avisé des événements importants de vesting et d’expiration, commence en quelques minutes avec l’importateur de fichiers excel."
 
-#: src/pages/features/collaboration.jsx:102
+#: src/pages/features/collaboration.jsx:103
 msgid "Save on costly due diligence tools"
 msgstr "Économise sur des outils coûteux de diligence raisonnable"
 
@@ -1120,13 +1124,9 @@ msgid "Screenshot of the Ledgy app"
 msgstr "Capture d’écran de l’application Ledgy"
 
 #: src/pages/features/collaboration.jsx:47
-#: src/pages/features/collaboration.jsx:100
+#: src/pages/features/collaboration.jsx:101
 msgid "Secure data room"
 msgstr "Data room sécurisée"
-
-#: src/pages/features/collaboration.jsx:22
-msgid "Secure data room, audit trail and read-only access for investors; save costly due diligence tools."
-msgstr "Data room sécurisée, piste d’audits et accès en lecture seule pour les investisseurs; économise sur les outils coûteux de diligence raisonnable."
 
 #: src/layouts/index.jsx:143
 #: src/pages/privacy.jsx:109
@@ -1151,7 +1151,7 @@ msgstr "Consulte tes pools et tes participations d’employés dans le cap table
 msgid "Server call rate limit"
 msgstr "Limite du taux d’appel au serveur"
 
-#: src/pages/features/collaboration.jsx:122
+#: src/pages/features/collaboration.jsx:123
 msgid "Set your company up for future due diligences, saving you hours of work and lawyer costs"
 msgstr "Prépare ton entreprise pour les diligences raisonnables futures, ce qui te permettra d’économiser des heures de travail et des frais d’avocat"
 
@@ -1167,13 +1167,17 @@ msgstr "Vérification du nombre d’actions"
 msgid "Share the documents attached with the stakeholders of this transaction"
 msgstr "Partage les documents joints avec les actionnaires de cette transaction"
 
-#: src/pages/features/investors.jsx:99
+#: src/pages/features/investors.jsx:97
 msgid "Share them with individual stakeholders or with stakeholder groups"
 msgstr "Partage-les avec des actionnaires individuels ou avec des groupes d’actionnaires"
 
+#: src/pages/features/investors.jsx:84
+msgid "Share your published reports with selected stakeholders"
+msgstr "Publie tes rapports une fois terminés, qui seront partagé avec les actionnaires que tu auras sélectionnés"
+
 #: src/pages/features/modeling.jsx:99
-msgid "Share your scenarios as pdf, including valuations, investments, convertibles, amount of shares, and cap table"
-msgstr "Partage tes scénarios au format pdf, y compris les évaluations de ton entreprise, les investissements, les billets convertibles, le nombre d’actions et le cap table"
+msgid "Share your scenarios as a PDF, including valuations, investments, convertibles, amount of shares, and cap table"
+msgstr "Partage tes scénarios au format PDF, y compris les évaluations de ton entreprise, les investissements, les billets convertibles, le nombre d’actions et le cap table"
 
 #: src/pages/features/esop.jsx:146
 msgid "Show cap table fully diluted"
@@ -1206,7 +1210,7 @@ msgstr "Importateur de feuilles de calcul"
 msgid "Stakeholder information, company information, share ledger transaction history, other cap table details. Equity data and all related information is used exclusively for the provision of the services"
 msgstr "Informations sur les actionnaires, informations sur la société, historique des transactions dans le registre des actions, autres détails sur le cap table. Les données relatives aux actions et toutes les informations relatives sont utilisées exclusivement pour la fourniture des services"
 
-#: src/pages/features/collaboration.jsx:94
+#: src/pages/features/collaboration.jsx:95
 msgid "Stakeholders access rights"
 msgstr "Droits d’accès des actionnaires"
 
@@ -1300,11 +1304,11 @@ msgstr "La façon la plus simple et la plus rapide de gérer le portefeuille en 
 msgid "The site is accessible only through HTTPS (<0>A+ rating</0>)"
 msgstr "Le site n’est accessible que par HTTPS (<0>A+ rating</0>)"
 
-#: src/pages/features/collaboration.jsx:125
+#: src/pages/features/collaboration.jsx:126
 msgid "The transaction-based cap table allows browsing through the history"
 msgstr "Le cap table basé sur les transactions permet de parcourir l’historique"
 
-#: src/pages/features/collaboration.jsx:172
+#: src/pages/features/collaboration.jsx:173
 msgid "They will list all assets owned by the stakeholder and optionally include a tax value of the shares"
 msgstr "Ils énuméreront tous les actifs détenus par l’actionnaire et incluront facultativement une valeur fiscale des actions"
 
@@ -1336,7 +1340,7 @@ msgstr "Aies un suivi sur les calendriers de vesting"
 msgid "Track exercise, termination and expiration"
 msgstr "Suis de les exercices, les résiliations et les expirations"
 
-#: src/pages/features/collaboration.jsx:126
+#: src/pages/features/collaboration.jsx:127
 msgid "Track your valuations and understand the history in terms of percentage and number of shares"
 msgstr "Suis tes évaluations et comprends l’historique en termes de pourcentage et de nombre d’actions"
 
@@ -1346,7 +1350,7 @@ msgid "Transaction-based"
 msgstr "Basé sur les transactions"
 
 #: src/pages/features/captable.jsx:78
-msgid "Transaction-based cap table, setting it up for future due diligence, saving you hours of work and lawyer costs"
+msgid "Transaction-based cap table prepares you for future due diligence, saving you hours of work and lawyer costs"
 msgstr "Cap table basé sur les transactions, l’établissant ainsi pour de futures diligence raisonnables, te permettant d’économiser des heures de travail et des frais d’avocat"
 
 #: src/pages/features/collaboration.jsx:53
@@ -1386,7 +1390,7 @@ msgstr "Comprends l’impact de dilution de la levée de fonds"
 msgid "Understand the impact of liquidation preferences"
 msgstr "Comprends l’impact des préférences de liquidation"
 
-#: src/pages/features/collaboration.jsx:140
+#: src/pages/features/collaboration.jsx:141
 msgid "Unforgeable proof that your documents were not modified since the certification"
 msgstr "Preuve irréfutable que tes documents n’ont pas été modifiés depuis la certification"
 
@@ -1414,10 +1418,6 @@ msgstr "Jusqu’à 500 Mo"
 msgid "Usage statistics and usage profile"
 msgstr "Statistiques d’utilisation et profil d’utilisation"
 
-#: src/pages/features/modeling.jsx:85
-msgid "Use pre- or post-money valuation and see the respective other"
-msgstr "Utilise l’évaluation de l’entreprise avant ou après la levée de fonds"
-
 #: src/pages/features/esop.jsx:95
 msgid "Use simple linear vesting with duration, interval and cliff, define your own custom vesting schedule, or select a preset"
 msgstr "Utilise un vesting linéaire simple avec une durée, un intervalle et un cliff, définis ton propre vesting personnalisé ou sélectionne un préréglage"
@@ -1430,7 +1430,7 @@ msgstr "Les utilisateurs doivent définir un mot de passe <0>sécurisé </0>"
 msgid "Uses your existing cap table percentages to distribute a fixed amount"
 msgstr "Utilise tes pourcentages du cap table existant pour répartir un montant fixe"
 
-#: src/pages/features/collaboration.jsx:147
+#: src/pages/features/collaboration.jsx:148
 msgid "Using Ledgy from the beginning thus builds a new level of due diligence history"
 msgstr "L’utilisation de Ledgy dès le début permet ainsi de construire un nouveau niveau d’historique de diligence raisonnable"
 
@@ -1438,7 +1438,7 @@ msgstr "L’utilisation de Ledgy dès le début permet ainsi de construire un no
 msgid "VAT number"
 msgstr "Numéro de TVA"
 
-#: src/pages/features/collaboration.jsx:132
+#: src/pages/features/collaboration.jsx:133
 msgid "Valuation"
 msgstr "Valeur de l’entreprise"
 
@@ -1508,7 +1508,7 @@ msgstr "Webinars"
 msgid "Webinars on cap tables, financing rounds, and legal issues around running and managing a startup."
 msgstr "Webinars sur les cap tables, les rondes de financement et les questions juridiques relatives à la gestion d’une startup."
 
-#: src/pages/features/investors.jsx:113
+#: src/pages/features/investors.jsx:111
 msgid "Weekly email notifications if the startups publish new information"
 msgstr "Notifications hebdomadaires par e-mail si les startups publient de nouvelles informations"
 
@@ -1614,7 +1614,7 @@ msgid "to prove your transactions"
 msgstr "pour prouver tes transactions"
 
 #: src/pages/features/investors.jsx:54
-msgid "to stay up to date with all your investments"
+msgid "to stay up-to-date with all your investments"
 msgstr "afin de rester au courant de tous tes investissements"
 
 #: src/pages/features/modeling.jsx:48
