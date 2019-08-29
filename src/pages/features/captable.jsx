@@ -85,7 +85,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           </Trans>,
           <Trans>
             Analyze your cap table by stakeholder, share class, or stakeholder group, and view it
-            with outstanding or diluted shares
+            with outstanding, diluted, or all shares
           </Trans>
         ]}
         imgSize="7"
@@ -100,8 +100,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         features={[
           <Trans>In some countries numbering shares is necessary, and it can be a real pain</Trans>,
           <Trans>
-            Auto-assign share numbers for all your transactions. Ledgy will determine the next
-            available numbers
+            Auto-assign share numbers for all your transactions. Ledgy will determine the next ones
+            available
           </Trans>,
           <Trans>
             Numbers are checked for consistency, giving you the peace of mind that none go missing

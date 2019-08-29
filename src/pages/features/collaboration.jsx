@@ -83,7 +83,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             <strong>View</strong> See all cap table info in a read-only mode for due diligences
           </Trans>,
           <Trans>
-            <strong>Portfolio</strong> Only see only their own
+            <strong>Portfolio</strong> Only see their own
             <Link href to={`${props.prefix}/features/investors/`}>
               portfolio
               <ChevronRight />

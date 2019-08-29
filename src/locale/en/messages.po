@@ -35,8 +35,8 @@ msgid "<0>Admin</0> Full control over the company for your co-founders"
 msgstr "<0>Admin</0> Full control over the company for your co-founders"
 
 #: src/pages/features/collaboration.jsx:85
-msgid "<0>Portfolio</0> Only see only their own<1>portfolio<2/></1>stake"
-msgstr "<0>Portfolio</0> Only see only their own<1>portfolio<2/></1>stake"
+msgid "<0>Portfolio</0> Only see their own<1>portfolio<2/></1>stake"
+msgstr "<0>Portfolio</0> Only see their own<1>portfolio<2/></1>stake"
 
 #: src/pages/features/collaboration.jsx:82
 msgid "<0>View</0> See all cap table info in a read-only mode for due diligences"
@@ -117,8 +117,8 @@ msgid "Always up-to-date portfolio, curated by your startups"
 msgstr "Always up-to-date portfolio, curated by your startups"
 
 #: src/pages/features/captable.jsx:86
-msgid "Analyze your cap table by stakeholder, share class, or stakeholder group, and view it with outstanding or diluted shares"
-msgstr "Analyze your cap table by stakeholder, share class, or stakeholder group, and view it with outstanding or diluted shares"
+msgid "Analyze your cap table by stakeholder, share class, or stakeholder group, and view it with outstanding, diluted, or all shares"
+msgstr "Analyze your cap table by stakeholder, share class, or stakeholder group, and view it with outstanding, diluted, or all shares"
 
 #: src/pages/features/esop.jsx:92
 #: src/pages/pricing.jsx:31
@@ -155,8 +155,8 @@ msgid "Attach your KPIs and any documents"
 msgstr "Attach your KPIs and any documents"
 
 #: src/pages/features/captable.jsx:102
-msgid "Auto-assign share numbers for all your transactions. Ledgy will determine the next available numbers"
-msgstr "Auto-assign share numbers for all your transactions. Ledgy will determine the next available numbers"
+msgid "Auto-assign share numbers for all your transactions. Ledgy will determine the next ones available"
+msgstr "Auto-assign share numbers for all your transactions. Ledgy will determine the next ones available"
 
 #: src/pages/features/modeling.jsx:161
 msgid "Automatically update the stakeholder list, transaction history, and cap table after the round is finished"
@@ -256,8 +256,8 @@ msgid "Career"
 msgstr "Career"
 
 #: src/pages/features/modeling.jsx:85
-msgid "Choose between pre- or post-money valuation"
-msgstr "Choose between pre- or post-money valuation"
+msgid "Choose between pre- and post-money valuations"
+msgstr "Choose between pre- and post-money valuations"
 
 #: src/pages/features/esop.jsx:140
 msgid "Choose to only show pools or the detailed view with the grants distributed to their holders"
@@ -538,8 +538,8 @@ msgid "Features"
 msgstr "Features"
 
 #: src/pages/features.jsx:70
-msgid "Featuring unlimited share classes, treasury shares, pooled investments, and automatic numbered shares"
-msgstr "Featuring unlimited share classes, treasury shares, pooled investments, and automatic numbered shares"
+msgid "Featuring unlimited share classes, treasury shares, pooled investments, and automatically numbered shares"
+msgstr "Featuring unlimited share classes, treasury shares, pooled investments, and automatically numbered shares"
 
 #: src/pages/index.jsx:190
 msgid "Finally, I have a reliable overview of all our shares, employee grants, and their legal documents. So much better than the Excel I used before."
@@ -959,8 +959,8 @@ msgid "Phone & chat, onboarding"
 msgstr "Phone & chat, onboarding"
 
 #: src/pages/features/modeling.jsx:113
-msgid "Play around with founder- and investor-friendly settings. Let convertibles and pools dilute for all potential shareholders or for only the existing shareholders"
-msgstr "Play around with founder- and investor-friendly settings. Let convertibles and pools dilute for all potential shareholders or for only the existing shareholders"
+msgid "Play around with founder- and investor-friendly settings. Let convertibles and pools dilute for all potential stakeholders or for only the existing stakeholders"
+msgstr "Play around with founder- and investor-friendly settings. Let convertibles and pools dilute for all potential stakeholders or for only the existing stakeholders"
 
 #: src/pages/features/captable.jsx:129
 msgid "Pooled investment"
@@ -1248,8 +1248,8 @@ msgid "Supports everything"
 msgstr "Supports everything"
 
 #: src/pages/features.jsx:39
-msgid "Supports everything from pools to options, to phantom options, warrants, vested stock, and inverse vesting"
-msgstr "Supports everything from pools to options, to phantom options, warrants, vested stock, and inverse vesting"
+msgid "Supports everything: pools, options, phantom options, warrants, vested stocks, and inverse vesting"
+msgstr "Supports everything: pools, options, phantom options, warrants, vested stocks, and inverse vesting"
 
 #: src/pages/features/captable.jsx:82
 msgid "Supports issuance, transfer, convertibles, stock split, valuations, treasury shares, unlimited share classes and more"

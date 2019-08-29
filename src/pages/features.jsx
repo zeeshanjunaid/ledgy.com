@@ -37,8 +37,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               </FeatureLi>
               <FeatureLi>
                 <Trans>
-                  Supports everything from pools to options, to phantom options, warrants, vested
-                  stock, and inverse vesting
+                  Supports everything: pools, options, phantom options, warrants, vested stocks, and
+                  inverse vesting
                 </Trans>
               </FeatureLi>
               <FeatureLi>
@@ -69,7 +69,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <FeatureLi>
                 <Trans>
                   Featuring unlimited share classes, treasury shares, pooled investments, and
-                  automatic numbered shares
+                  automatically numbered shares
                 </Trans>
               </FeatureLi>
             </ul>

@@ -6,7 +6,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Creation-Date: 2018-09-12T18:40:54.619Z\n"
-"PO-Revision-Date: 2019-08-28 17:32+0200\n"
+"PO-Revision-Date: 2019-08-29 15:04+0200\n"
 "Language: de\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: Timo Horstschäfer <timo@ledgy.com>\n"
@@ -34,7 +34,7 @@ msgid "<0>Admin</0> Full control over the company for your co-founders"
 msgstr "<0>Admin</0> Volle Kontrolle über das Unternehmen für dein Mitgründer"
 
 #: src/pages/features/collaboration.jsx:85
-msgid "<0>Portfolio</0> Only see only their own<1>portfolio<2/></1>stake"
+msgid "<0>Portfolio</0> Only see their own<1>portfolio<2/></1>stake"
 msgstr "<0>Portfolio</0> Sehe nur die eigene Beteiligung in deinem <1>Portfolio</1><2/>"
 
 #: src/pages/features/collaboration.jsx:82
@@ -116,7 +116,7 @@ msgid "Always up-to-date portfolio, curated by your startups"
 msgstr "Ein stets aktuelles Portfolio, von deinen Start-ups gepflegt"
 
 #: src/pages/features/captable.jsx:86
-msgid "Analyze your cap table by stakeholder, share class, or stakeholder group, and view it with outstanding or diluted shares"
+msgid "Analyze your cap table by stakeholder, share class, or stakeholder group, and view it with outstanding, diluted, or all shares"
 msgstr "Analysiere nach Stakeholder, Aktienklasse, Stakeholdergruppe, nur mit ausstehenden Anteilen oder verwässert"
 
 #: src/pages/features/esop.jsx:92
@@ -154,7 +154,7 @@ msgid "Attach your KPIs and any documents"
 msgstr "Füge dem Bericht KPIs und Dokumente bei"
 
 #: src/pages/features/captable.jsx:102
-msgid "Auto-assign share numbers for all your transactions. Ledgy will determine the next available numbers"
+msgid "Auto-assign share numbers for all your transactions. Ledgy will determine the next ones available"
 msgstr "Automatische Zuweisung von Aktiennummern für alle Ihre Transaktionen; Ledgy ermittelt die nächsten verfügbaren"
 
 #: src/pages/features/modeling.jsx:161
@@ -255,7 +255,7 @@ msgid "Career"
 msgstr "Karriere"
 
 #: src/pages/features/modeling.jsx:85
-msgid "Choose between pre- or post-money valuation"
+msgid "Choose between pre- and post-money valuations"
 msgstr "Verwende Pre- oder Post-Money-Bewertung"
 
 #: src/pages/features/esop.jsx:140
@@ -537,7 +537,7 @@ msgid "Features"
 msgstr "Funktionen"
 
 #: src/pages/features.jsx:70
-msgid "Featuring unlimited share classes, treasury shares, pooled investments, and automatic numbered shares"
+msgid "Featuring unlimited share classes, treasury shares, pooled investments, and automatically numbered shares"
 msgstr "Mit beliebig vielen Anteilsklassen, Treasury Anteilen, gepoolten Investitionen und automatischer Aktiennummerierung"
 
 #: src/pages/index.jsx:190
@@ -958,7 +958,7 @@ msgid "Phone & chat, onboarding"
 msgstr "Telefon & Chat, Onboarding"
 
 #: src/pages/features/modeling.jsx:113
-msgid "Play around with founder- and investor-friendly settings. Let convertibles and pools dilute for all potential shareholders or for only the existing shareholders"
+msgid "Play around with founder- and investor-friendly settings. Let convertibles and pools dilute for all potential stakeholders or for only the existing stakeholders"
 msgstr "Experimentiere mit gründer- und investorenfreundlichen Rahmenbedingungen, lasse Wandeldarlehen und Pools alle oder nur bestehende Anteilseigner verwässern"
 
 #: src/pages/features/captable.jsx:129
@@ -1247,7 +1247,7 @@ msgid "Supports everything"
 msgstr "Unterstützt alles"
 
 #: src/pages/features.jsx:39
-msgid "Supports everything from pools to options, to phantom options, warrants, vested stock, and inverse vesting"
+msgid "Supports everything: pools, options, phantom options, warrants, vested stocks, and inverse vesting"
 msgstr "Unterstützt alles von Pools über Optionen, Phantomoptionen, Warrants, gevestete Anteile bis hin zu inversem Vesting"
 
 #: src/pages/features/captable.jsx:82

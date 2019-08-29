@@ -35,7 +35,7 @@ msgid "<0>Admin</0> Full control over the company for your co-founders"
 msgstr "<0>Admin</0> Contrôle total de l’entreprise pour tes cofondateurs"
 
 #: src/pages/features/collaboration.jsx:85
-msgid "<0>Portfolio</0> Only see only their own<1>portfolio<2/></1>stake"
+msgid "<0>Portfolio</0> Only see their own<1>portfolio<2/></1>stake"
 msgstr "<0>Portfolio</0> Voir uniquement la participation personnelle dans son <1>portefeuille d’investissement<2/></1>"
 
 #: src/pages/features/collaboration.jsx:82
@@ -117,7 +117,7 @@ msgid "Always up-to-date portfolio, curated by your startups"
 msgstr "Portefeuille toujours à jour, géré par tes startups"
 
 #: src/pages/features/captable.jsx:86
-msgid "Analyze your cap table by stakeholder, share class, or stakeholder group, and view it with outstanding or diluted shares"
+msgid "Analyze your cap table by stakeholder, share class, or stakeholder group, and view it with outstanding, diluted, or all shares"
 msgstr "Analyse-le par actionnaire, catégorie d’actions, groupe d’actionnaires et visualise-le avec toutes les actions en circulation ou diluées"
 
 #: src/pages/features/esop.jsx:92
@@ -155,7 +155,7 @@ msgid "Attach your KPIs and any documents"
 msgstr "Joins tes indicateurs de performance clé et tout autre document"
 
 #: src/pages/features/captable.jsx:102
-msgid "Auto-assign share numbers for all your transactions. Ledgy will determine the next available numbers"
+msgid "Auto-assign share numbers for all your transactions. Ledgy will determine the next ones available"
 msgstr "Attribution automatique des numéros d’actions pour toutes tes transactions. Ledgy déterminera les prochains numéros disponibles"
 
 #: src/pages/features/modeling.jsx:161
@@ -256,7 +256,7 @@ msgid "Career"
 msgstr "Carrière"
 
 #: src/pages/features/modeling.jsx:85
-msgid "Choose between pre- or post-money valuation"
+msgid "Choose between pre- and post-money valuations"
 msgstr "Utilise l’évaluation de l’entreprise avant ou après la levée de fonds"
 
 #: src/pages/features/esop.jsx:140
@@ -538,7 +538,7 @@ msgid "Features"
 msgstr "Fonctionalités"
 
 #: src/pages/features.jsx:70
-msgid "Featuring unlimited share classes, treasury shares, pooled investments, and automatic numbered shares"
+msgid "Featuring unlimited share classes, treasury shares, pooled investments, and automatically numbered shares"
 msgstr "Avec un nombre illimité de catégories d’actions, d’actions autodétenues, de placements collectifs et de numérotation automatique des actions"
 
 #: src/pages/index.jsx:190
@@ -959,7 +959,7 @@ msgid "Phone & chat, onboarding"
 msgstr "Téléphone et chat"
 
 #: src/pages/features/modeling.jsx:113
-msgid "Play around with founder- and investor-friendly settings. Let convertibles and pools dilute for all potential shareholders or for only the existing shareholders"
+msgid "Play around with founder- and investor-friendly settings. Let convertibles and pools dilute for all potential stakeholders or for only the existing stakeholders"
 msgstr "Joue avec les paramètres qui favorisent différents actionnaires, vois l’effet de la dilution sur tous les actionnaires ou seulement sur les actionnaires existants par les billets convertibles et les pools"
 
 #: src/pages/features/captable.jsx:129
@@ -1248,8 +1248,8 @@ msgid "Supports everything"
 msgstr "Tout est pris en charge"
 
 #: src/pages/features.jsx:39
-msgid "Supports everything from pools to options, to phantom options, warrants, vested stock, and inverse vesting"
-msgstr "Prise en charge de tout type de transaction comme l’émission, le transfert, les convertibles, le fractionnement d’actions, la destruction d’actions, l’évaluation, etc"
+msgid "Supports everything: pools, options, phantom options, warrants, vested stocks, and inverse vesting"
+msgstr "Prise en charge de tout, des pools aux options, en passant par les options, les options virtuelles, les bons de souscription, les actions avec vesting"
 
 #: src/pages/features/captable.jsx:82
 msgid "Supports issuance, transfer, convertibles, stock split, valuations, treasury shares, unlimited share classes and more"

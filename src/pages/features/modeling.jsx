@@ -82,7 +82,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           <Trans>
             See how many shares have to be reserved for a fixed percentage employee pool
           </Trans>,
-          <Trans>Choose between pre- or post-money valuation</Trans>
+          <Trans>Choose between pre- and post-money valuations</Trans>
         ]}
         imgSize="7"
         img={<Img {...props.data.convertibleForm} alt={i18n.t`Get the calculations right`} />}
@@ -112,7 +112,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         features={[
           <Trans>
             Play around with founder- and investor-friendly settings. Let convertibles and pools
-            dilute for all potential shareholders or for only the existing shareholders
+            dilute for all potential stakeholders or for only the existing stakeholders
           </Trans>,
           <Trans>Rounded share price, or exact to 10 decimals</Trans>
         ]}
