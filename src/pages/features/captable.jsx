@@ -19,7 +19,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
     <Title
       title={i18n.t`Intuitive and correct from the beginning`}
       section={i18n.t`Features`}
-      description={i18n.t`Intuitive, legally valid and error-free cap table from the beginning, supporting all transaction types, unlimited share classes, pooled investments, and numbered shares.`}
+      description={i18n.t`Intuitive, legally valid, and error-free cap table from the beginning, supporting all transaction types, unlimited share classes, pooled investments, and numbered shares.`}
     />
 
     <header className="header text-white bg-ledgy">
@@ -76,7 +76,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         header={<Trans>Transaction-based</Trans>}
         features={[
           <Trans>
-            Transaction-based cap table, setting it up for future due diligence, saving you hours of
+            Transaction-based cap table prepares you for future due diligence, saving you hours of
             work and lawyer costs
           </Trans>,
           <Trans>
@@ -84,8 +84,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             unlimited share classes and more
           </Trans>,
           <Trans>
-            Analyze it by stakeholder, share class, stakeholder group and view it with all,
-            outstanding or diluted shares
+            Analyze your cap table by stakeholder, share class, or stakeholder group, and view it
+            with outstanding, diluted, or all shares
           </Trans>
         ]}
         imgSize="7"
@@ -100,8 +100,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         features={[
           <Trans>In some countries numbering shares is necessary, and it can be a real pain</Trans>,
           <Trans>
-            Auto-assign share numbers for all your transactions; Ledgy will determine the next
-            available ones
+            Auto-assign share numbers for all your transactions. Ledgy will determine the next ones
+            available
           </Trans>,
           <Trans>
             Numbers are checked for consistency, giving you the peace of mind that none go missing
@@ -117,7 +117,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         header={<Trans>Pooled investments</Trans>}
         features={[
           <Trans>
-            Pooled investments are common in many countries, Ledgy helps you keep them organized
+            Pooled investments are common in many countries. Ledgy helps you keep them organized
           </Trans>,
           <Trans>View the cap table in legal or economic terms</Trans>,
           <Trans>
@@ -157,7 +157,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         header={<Trans>Spreadsheet importer</Trans>}
         features={[
           <Trans>Speed up your onboarding process with the bulk import feature</Trans>,
-          <Trans>As easy as copying and pasting stakeholders, shares issues, or options</Trans>
+          <Trans>It’s as easy as copying and pasting stakeholders, shares issues, or options</Trans>
         ]}
         imgSize="8"
         img={<Img {...props.data.bulkEntry} alt={i18n.t`Bulk entry`} />}

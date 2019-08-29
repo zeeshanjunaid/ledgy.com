@@ -184,7 +184,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </h5>
             <p>
               <Trans>
-                You get a <strong>20% discount</strong> on Premium if your startup helps reducing
+                You get a <strong>20% discount</strong> on Premium if your startup helps reduce
                 carbon emissions.
                 <br />
                 <a href="mailto:contact@ledgy.com?subject=Premium Eco-Friendly Discount Application">

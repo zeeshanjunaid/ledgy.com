@@ -109,8 +109,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         header={<Trans>Engage your employees</Trans>}
         features={[
           <Trans>
-            Get notified two weeks before a cliff or vesting ends or a grant expires to not miss
-            using your participation plan for engaging your employees
+            Engage your employees with notifications two weeks before a cliff, vesting, or grant
+            event
           </Trans>,
           <Trans>
             Invite your employees to track their stake and vesting in their Ledgy portfolio

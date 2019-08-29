@@ -19,7 +19,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
     <Title
       title={i18n.t`Collaboration & Due Diligence`}
       section={i18n.t`Features`}
-      description={i18n.t`Secure data room, audit trail and read-only access for investors; save costly due diligence tools.`}
+      description={i18n.t`A secure data room, audit trail, and read-only access for investors means saving on costly due diligence tools.`}
     />
 
     <header className="header text-white bg-ledgy">
@@ -83,11 +83,12 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             <strong>View</strong> See all cap table info in a read-only mode for due diligences
           </Trans>,
           <Trans>
-            <strong>Portfolio</strong> See only the own stake in their{' '}
+            <strong>Portfolio</strong> Only see their own
             <Link href to={`${props.prefix}/features/investors/`}>
               portfolio
               <ChevronRight />
             </Link>
+            stake
           </Trans>
         ]}
         imgSize="7"
@@ -141,8 +142,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             Unforgeable proof that your documents were not modified since the certification
           </Trans>,
           <Trans>
-            A certificate of each document is automatically stored on the bitcoin blockchain when
-            uploading
+            A certificate of each document is automatically stored on the Bitcoin blockchain when it
+            is uploaded
           </Trans>,
           <Trans>
             Using Ledgy from the beginning thus builds a new level of due diligence history

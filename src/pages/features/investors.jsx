@@ -51,7 +51,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             />
             <TopPageFeatureCard
               header={<Trans>Professional portfolio</Trans>}
-              body={<Trans>to stay up to date with all your investments</Trans>}
+              body={<Trans>to stay up-to-date with all your investments</Trans>}
               icon={faListAlt}
               href="#professional"
             />
@@ -81,9 +81,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           </Trans>,
           <Trans>Style your reports to your needs with the rich-text editor</Trans>,
           <Trans>Attach your KPIs and any documents</Trans>,
-          <Trans>
-            Publish your reports once done, which will share them with your selected stakeholders
-          </Trans>
+          <Trans>Share your published reports with selected stakeholders</Trans>
         ]}
         imgSize="7"
         img={<Img {...props.data.reportExample} alt={i18n.t`Report`} />}
