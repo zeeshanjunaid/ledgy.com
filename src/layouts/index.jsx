@@ -147,8 +147,8 @@ const companyLinks = [
 ];
 const helpLinks = [
   [<Trans>Help Center</Trans>, 'help'],
-  [<Trans>Glossary</Trans>, 'glossary'],
   [<Trans>Getting Started</Trans>, 'help/getting-started'],
+  [<Trans>Glossary</Trans>, 'glossary'],
   [<Trans>ESOP Templates</Trans>, 'help/employee-participation-guide']
 ];
 const blogLinks = [

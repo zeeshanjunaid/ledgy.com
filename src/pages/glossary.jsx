@@ -11,29 +11,26 @@ import { Title } from '../layouts/utils';
 import { Accordion, AccordionItem } from '../components/Accordion';
 
 export default withI18n()(({ i18n, data }: Props) => {
+  const accordionItems = data.allContentfulGlossary.edges.map(edge => {
+    const { slug, title, description } = edge.node;
+    return (
+      <AccordionItem id={slug} key={slug} title={title}>
+        <MDXProvider>
+          <MDXRenderer>{description.childMdx.body}</MDXRenderer>
+        </MDXProvider>
+      </AccordionItem>
+    );
+  });
+
   return (
     <div>
       <Title
         title={i18n.t`Glossary`}
         description={i18n.t`Definitions for industry terms relating to cap tables, financing rounds, and legal topics for startups.`}
       />
-
       <ContentHeader heading={i18n.t`Glossary`} />
-
       <ContentBody>
-        Hello, this is the Glossary!
-        <Accordion>
-          {data.allContentfulGlossary.edges.map(edge => {
-            const { title, description } = edge.node;
-            return (
-              <AccordionItem id={title} key={title} title={title}>
-                <MDXProvider>
-                  <MDXRenderer>{description.childMdx.body}</MDXRenderer>
-                </MDXProvider>
-              </AccordionItem>
-            );
-          })}
-        </Accordion>
+        <Accordion>{accordionItems}</Accordion>
       </ContentBody>
     </div>
   );
@@ -41,10 +38,10 @@ export default withI18n()(({ i18n, data }: Props) => {
 
 export const pageQuery = graphql`
   query {
-    allContentfulGlossary(sort: { order: DESC, fields: [title] }) {
+    allContentfulGlossary(sort: { order: ASC, fields: [title] }) {
       edges {
         node {
-          id
+          slug
           title
           description {
             childMdx {

@@ -19,7 +19,7 @@ export const ContentHeader = ({ heading }: {| heading: string |}) => (
   </header>
 );
 
-export const ContentBody = ({ children }: {| children: Array<Node> |}) => (
+export const ContentBody = ({ children }: {| children: Node | Array<Node> |}) => (
   <main className="main-content">
     <section className="section">
       <div className="container">{children}</div>
