@@ -8,10 +8,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faHiking,
   faQuestionCircle,
-  faCogs,
   faPencilRuler,
   faListAlt,
-  faVideo
+  faVideo,
+  faBook
 } from '@fortawesome/free-solid-svg-icons';
 
 import { Title, Hr, targetBlank } from '../layouts/utils';
@@ -30,10 +30,10 @@ const helpLinks = [
     faQuestionCircle
   ],
   [
-    <Trans>Features</Trans>,
-    <Trans>Discover all our features and when to use them</Trans>,
-    'features',
-    faCogs
+    <Trans>Glossary</Trans>,
+    <Trans>Quick explanations for investment lingo to get you started</Trans>,
+    'help/glossary',
+    faBook
   ],
   [
     <Trans>Blog</Trans>,

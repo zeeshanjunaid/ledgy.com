@@ -146,7 +146,8 @@ const companyLinks = [
   [<Trans>Contact & Imprint</Trans>, 'contact']
 ];
 const helpLinks = [
-  [<Trans>Help</Trans>, 'help'],
+  [<Trans>Help Center</Trans>, 'help'],
+  [<Trans>Glossary</Trans>, 'glossary'],
   [<Trans>Getting Started</Trans>, 'help/getting-started'],
   [<Trans>ESOP Templates</Trans>, 'help/employee-participation-guide']
 ];
