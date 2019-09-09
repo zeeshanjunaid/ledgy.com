@@ -32,7 +32,7 @@ const helpLinks = [
   [
     <Trans>Glossary</Trans>,
     <Trans>Quick explanations for investment lingo to get you started</Trans>,
-    'help/glossary',
+    'glossary',
     faBook
   ],
   [

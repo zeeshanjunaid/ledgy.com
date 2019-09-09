@@ -8,6 +8,7 @@ import { MDXProvider } from '@mdx-js/react';
 
 import { ContentHeader, ContentBody } from '../components/Content';
 import { Title } from '../layouts/utils';
+import { Accordion, AccordionItem } from '../components/Accordion';
 
 export default withI18n()(({ i18n, data }: Props) => {
   return (
@@ -21,18 +22,18 @@ export default withI18n()(({ i18n, data }: Props) => {
 
       <ContentBody>
         Hello, this is the Glossary!
-        {data.allContentfulGlossary.edges.map(edge => {
-          const { node } = edge;
-          const { title, description } = node;
-          return (
-            <span key={title}>
-              <h1>{title}</h1>
-              <MDXProvider>
-                <MDXRenderer>{description.childMdx.body}</MDXRenderer>
-              </MDXProvider>
-            </span>
-          );
-        })}
+        <Accordion>
+          {data.allContentfulGlossary.edges.map(edge => {
+            const { title, description } = edge.node;
+            return (
+              <AccordionItem id={title} key={title} title={title}>
+                <MDXProvider>
+                  <MDXRenderer>{description.childMdx.body}</MDXRenderer>
+                </MDXProvider>
+              </AccordionItem>
+            );
+          })}
+        </Accordion>
       </ContentBody>
     </div>
   );
