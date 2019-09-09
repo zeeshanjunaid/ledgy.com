@@ -242,7 +242,7 @@ const Footer = (props: LayoutProps) => (
           <div className="newsletter-signup-CTA">
             <Modal
               title="Sign up for the Ledgy newsletter"
-              trigger={
+              buttonText={
                 <>
                   <FontAwesomeIcon
                     className="newsletter-icon mr-2"
@@ -260,8 +260,10 @@ const Footer = (props: LayoutProps) => (
                   icon={faEnvelope}
                   title="Newsletter"
                 />
-                Receive important feature updates, exclusive webinar invitations, and
-                promotions/offers
+                <Trans>
+                  Receive important feature updates, exclusive webinar invitations, and
+                  promotions/offers
+                </Trans>
               </p>
               <NewsletterForm {...props} />
             </Modal>

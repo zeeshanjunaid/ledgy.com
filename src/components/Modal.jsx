@@ -1,19 +1,20 @@
 // @flow
 
 import React, { type Node } from 'react';
+import { Trans } from '@lingui/react';
 
 export default ({
   children,
   title = '',
   button,
-  trigger = 'Learn more',
+  buttonText = '',
   hideFooter = false,
   onSave
 }: {|
   children?: Node,
   title?: string,
   button?: Node,
-  trigger?: Node,
+  buttonText?: Node,
   hideFooter?: boolean,
   onSave?: () => void
 |}) => {
@@ -27,7 +28,7 @@ export default ({
           data-toggle="modal"
           data-target="#customModal"
         >
-          {trigger}
+          {buttonText}
         </button>
       )}
 
@@ -52,12 +53,12 @@ export default ({
             <div className="modal-body text-dark">{children}</div>
             {!hideFooter && (
               <div className="modal-footer">
-                <button type="button" className="btn btn-secondary" data-dismiss="modal">
-                  Close
+                <button type="button" className="btn btn-round btn-secondary" data-dismiss="modal">
+                  <Trans>Close</Trans>
                 </button>
                 {onSave && (
-                  <button type="button" className="btn btn-primary">
-                    Save changes
+                  <button type="button" className="btn btn-round btn-primary">
+                    <Trans>Save changes</Trans>
                   </button>
                 )}
               </div>
