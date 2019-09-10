@@ -6,7 +6,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Creation-Date: 2018-09-12T18:40:54.619Z\n"
-"PO-Revision-Date: 2019-08-29 15:04+0200\n"
+"PO-Revision-Date: 2019-09-10 10:33+0200\n"
 "Language: de\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: Timo Horstschäfer <timo@ledgy.com>\n"
@@ -358,7 +358,7 @@ msgstr "Tägliche Backups stellen sicher, dass nichts verloren gehen kann"
 
 #: src/pages/glossary.jsx:29
 msgid "Definitions for industry terms relating to cap tables, financing rounds, and legal topics for startups."
-msgstr ""
+msgstr "Definitionen von Fachbegriffen zu Cap Tables, Finanzierungsrunden und rechtlichen Themen für Startups."
 
 #: src/pages/about-us.jsx:170
 msgid "Digital entrepreneur and investor. Security, crypto & privacy expert"
@@ -642,7 +642,7 @@ msgstr "Erste Schritte"
 #: src/pages/glossary.jsx:31
 #: src/pages/help.jsx:33
 msgid "Glossary"
-msgstr ""
+msgstr "Glossar"
 
 #: src/pages/features/esop.jsx:80
 msgid "Grant options, phantom options, warrants or add inverse vesting to stock transactions"
@@ -1044,7 +1044,7 @@ msgstr "Belege deine Transaktionen mit den entsprechenden rechtlichen Dokumenten
 
 #: src/pages/help.jsx:34
 msgid "Quick explanations for investment lingo to get you started"
-msgstr ""
+msgstr "Kurze Erklärungen für den Fachjargon von Investitionen, um den Einstieg zu erleichtern"
 
 #: src/pages/features/collaboration.jsx:108
 msgid "Quickly pull up documents by the information of their linked transactions; for example, all of a specific stakeholder, share class or date range"
