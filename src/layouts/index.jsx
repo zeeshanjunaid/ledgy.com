@@ -34,8 +34,10 @@ import { catalogs, langFromPath, langPrefix, deprefix } from '../i18n-config';
 
 import '../assets/scss/page.scss';
 
+import Modal from '../components/Modal';
 import logoDefault from '../img/logo_black.png';
 import logoInverse from '../img/logo_white.png';
+import NewsletterForm from '../components/NewsletterForm';
 
 const Logo = (props: { prefix: string, inverse: boolean }) => (
   <Link href to={`${props.prefix}/#start`} className="navbar-brand">
@@ -238,18 +240,29 @@ const Footer = (props: LayoutProps) => (
             ))}
           </div>
           <div className="newsletter-signup-CTA">
-            <a
-              className="btn btn-round btn-light"
-              href="https://ledgy.us16.list-manage.com/subscribe/post?u=d6181c123b4d20b2104c4652f&id=c9cfbb11a6"
-              {...targetBlank}
+            <Modal
+              id="newsletter-signup"
+              title={<Trans>Sign up for the Ledgy newsletter</Trans>}
+              buttonText={
+                <>
+                  <FontAwesomeIcon
+                    className="newsletter-icon mr-2"
+                    icon={faEnvelope}
+                    title="Newsletter"
+                  />
+                  <Trans>Newsletter</Trans>
+                </>
+              }
+              hideFooter
             >
-              <FontAwesomeIcon
-                className="newsletter-icon mr-2"
-                icon={faEnvelope}
-                title="Newsletter"
-              />
-              <Trans>Newsletter</Trans>
-            </a>
+              <p className="text-dark my-5">
+                <Trans>
+                  Receive important feature updates, exclusive webinar invitations, and
+                  promotions/offers
+                </Trans>
+              </p>
+              <NewsletterForm {...props} />
+            </Modal>
           </div>
           <div className="mt-4">
             <div className="dropdown">
