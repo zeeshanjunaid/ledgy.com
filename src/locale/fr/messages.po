@@ -200,7 +200,7 @@ msgstr "Notaire Blockchain"
 
 #: src/layouts/index.jsx:53
 #: src/layouts/index.jsx:141
-#: src/layouts/index.jsx:196
+#: src/layouts/index.jsx:197
 #: src/pages/blog.jsx:13
 #: src/pages/help.jsx:39
 msgid "Blog"
@@ -234,7 +234,7 @@ msgstr "Options d’entrée en bloc"
 msgid "Calculates waterfall analysis of liquidation preferences across all rounds"
 msgstr "Calcule l’analyse en cascade des préférences de liquidation à travers toutes les levées de fonds"
 
-#: src/layouts/index.jsx:160
+#: src/layouts/index.jsx:161
 msgid "Cap Table"
 msgstr "Cap Table"
 
@@ -277,7 +277,7 @@ msgstr "Collaboration et diligence raisonnable"
 msgid "Coming soon"
 msgstr "Prochainement"
 
-#: src/layouts/index.jsx:180
+#: src/layouts/index.jsx:181
 msgid "Company"
 msgstr "Société"
 
@@ -325,7 +325,7 @@ msgstr "Convertis le scénario final en seulement deux clics"
 msgid "Convert to transactions"
 msgstr "Convertir en transactions"
 
-#: src/layouts/index.jsx:155
+#: src/layouts/index.jsx:156
 msgid "Convertible Loans"
 msgstr "Billets convertibles"
 
@@ -333,7 +333,7 @@ msgstr "Billets convertibles"
 msgid "Convertibles"
 msgstr "Billets convertibles"
 
-#: src/layouts/index.jsx:170
+#: src/layouts/index.jsx:171
 msgid "Cookie Policy"
 msgstr "Politique de Cookies"
 
@@ -357,6 +357,10 @@ msgstr "Crée des pools d’options ou des pools virtuels réservés aux employ�
 msgid "Daily backups ensure nothing is ever lost"
 msgstr "Des sauvegardes quotidiennes garantissent que rien n’est jamais perdu"
 
+#: src/pages/glossary.jsx:29
+msgid "Definitions for industry terms relating to cap tables, financing rounds, and legal topics for startups."
+msgstr "Définitions pour termes relatifs aux cap tables, levées de fonds et questions juridiques pour startups."
+
 #: src/pages/about-us.jsx:170
 msgid "Digital entrepreneur and investor. Security, crypto & privacy expert"
 msgstr "Entrepreneur et investisseur en technologies digitales. Expert en sécurité et cryptographie"
@@ -369,10 +373,6 @@ msgstr "Cap table dilué"
 #: src/pages/pricing.jsx:174
 msgid "Discover all features"
 msgstr "Découvre les fonctionnalités"
-
-#: src/pages/help.jsx:34
-msgid "Discover all our features and when to use them"
-msgstr "Découvre toutes nos fonctionnalités et quand les utiliser"
 
 #: src/components/Feature.jsx:91
 msgid "Discover more about Ledgy"
@@ -412,7 +412,7 @@ msgstr "Télécharge et utilise notre modèle ESOP"
 msgid "Download holding confirmations with a single click"
 msgstr "Télécharge les confirmations de possession d’un simple clic"
 
-#: src/layouts/index.jsx:163
+#: src/layouts/index.jsx:164
 msgid "Due Diligence"
 msgstr "Diligence raisonnable"
 
@@ -432,7 +432,7 @@ msgstr "Pendant ses études d’ingénieur à l’ETH Zurich, Jules a commencé 
 msgid "ESOP"
 msgstr "ESOP"
 
-#: src/layouts/index.jsx:151
+#: src/layouts/index.jsx:152
 msgid "ESOP Templates"
 msgstr "ESOP Templates"
 
@@ -452,7 +452,7 @@ msgstr "Signatures électroniques <0/>"
 msgid "Email notification about upcoming vesting event"
 msgstr "Notification par e-mail d’évènement de complétion de vesting imminent"
 
-#: src/layouts/index.jsx:162
+#: src/layouts/index.jsx:163
 msgid "Employee Incentives"
 msgstr "Participation des employés"
 
@@ -526,14 +526,13 @@ msgid "FAQ"
 msgstr "FAQ"
 
 #: src/layouts/index.jsx:50
-#: src/layouts/index.jsx:159
+#: src/layouts/index.jsx:160
 #: src/pages/features/captable.jsx:21
 #: src/pages/features/collaboration.jsx:21
 #: src/pages/features/esop.jsx:16
 #: src/pages/features/investors.jsx:21
 #: src/pages/features/modeling.jsx:21
 #: src/pages/features.jsx:14
-#: src/pages/help.jsx:33
 msgid "Features"
 msgstr "Fonctionalités"
 
@@ -591,7 +590,7 @@ msgstr "Gratuit pour toujours avec 50 Mo de stockage"
 msgid "French"
 msgstr "Français"
 
-#: src/layouts/index.jsx:171
+#: src/layouts/index.jsx:172
 msgid "GDPR"
 msgstr "RGPD"
 
@@ -630,7 +629,7 @@ msgstr "Effectue les bons calculs"
 msgid "Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant."
 msgstr "Bien comprendre ton cap table et tes plans d’actionnariat, dès le début. Fais de tes levées de fond un succès et mobilise tes investisseurs et tes employés. Sois sûr que tes données soient en sécurité."
 
-#: src/layouts/index.jsx:382
+#: src/layouts/index.jsx:383
 msgid "Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant. Try now for free!"
 msgstr "Configure ton cap table et tes plans d’actionnariat des employés correctement, dès le début. Fais de tes levées de fonds un succès et mobilise tes investisseurs et tes employés. Aies la tranquillité d’esprit que tes données sont sûres et conformes. Essaye maintenant gratuitement !"
 
@@ -638,6 +637,13 @@ msgstr "Configure ton cap table et tes plans d’actionnariat des employés corr
 #: src/pages/help.jsx:21
 msgid "Getting Started"
 msgstr "Commencer"
+
+#: src/layouts/index.jsx:151
+#: src/pages/glossary.jsx:28
+#: src/pages/glossary.jsx:31
+#: src/pages/help.jsx:33
+msgid "Glossary"
+msgstr "Glossaire"
 
 #: src/pages/features/esop.jsx:80
 msgid "Grant options, phantom options, warrants or add inverse vesting to stock transactions"
@@ -661,10 +667,10 @@ msgid "Healthcare & technology venture capital since 2001"
 msgstr "Capital de risque dans le domaine de la santé et de la technologie depuis 2001"
 
 #: src/layouts/index.jsx:52
-#: src/layouts/index.jsx:149
 msgid "Help"
 msgstr "Aide"
 
+#: src/layouts/index.jsx:149
 #: src/pages/help.jsx:64
 msgid "Help Center"
 msgstr "Centre d’aide"
@@ -750,7 +756,7 @@ msgstr "Portefeuille d’investisseurs"
 msgid "Investor relations and equity management for startups"
 msgstr "Gestion d’actions et de relations aux investisseurs pour startups"
 
-#: src/layouts/index.jsx:164
+#: src/layouts/index.jsx:165
 msgid "Investors"
 msgstr "Investisseurs"
 
@@ -782,7 +788,7 @@ msgstr "Graphique des ICP"
 msgid "KPIs"
 msgstr "ICP"
 
-#: src/layouts/index.jsx:156
+#: src/layouts/index.jsx:157
 msgid "KPIs & Reports"
 msgstr "KPIs & Reports"
 
@@ -806,7 +812,7 @@ msgstr "Indicateurs clés de performance"
 msgid "Kpi chart"
 msgstr "Diagramme Kpi"
 
-#: src/layouts/index.jsx:263
+#: src/layouts/index.jsx:264
 msgid "Language"
 msgstr "Langue"
 
@@ -838,7 +844,7 @@ msgstr "Ledgy facilite la simulation d’un investissement avec une distribution
 msgid "Ledgy scales with your needs. Free for startups, powerful for grown-ups."
 msgstr "Ledgy s’adapte à tes besoins. Gratuit pour les startups, puissant pour les scale-ups."
 
-#: src/layouts/index.jsx:214
+#: src/layouts/index.jsx:215
 msgid "Legal"
 msgstr "Légal"
 
@@ -894,7 +900,7 @@ msgstr "Marius a une formation en informatique, est diplômé de l’Université
 msgid "Meet the team behind Ledgy that went out to help startups thrive. Learn more about the people who trust in us."
 msgstr "Rencontre l’équipe derrière Ledgy qui pour mission d’aider les startups à prospérer. En savoir plus sur les personnes qui nous font confiance."
 
-#: src/layouts/index.jsx:161
+#: src/layouts/index.jsx:162
 msgid "Modeling"
 msgstr "Modélisation"
 
@@ -906,7 +912,7 @@ msgstr "3 scénarios"
 msgid "Name, email, address and any other details you provide. Provision of our services and management of your subscription. Providing you with updates about our services"
 msgstr "Nom, adresse email, adresse et tout autre renseignement que tu nous fournis. Prestation de nos services et gestion de ton abonnement. Te fournir des mises à jour sur nos services"
 
-#: src/layouts/index.jsx:250
+#: src/layouts/index.jsx:251
 msgid "Newsletter"
 msgstr "Newsletter"
 
@@ -934,7 +940,7 @@ msgstr "L’un des angel investors suisses les plus actifs en early-stage"
 msgid "Oops. This email address is invalid."
 msgstr "Oups. Cette adresse e-mail n’est pas valide."
 
-#: src/layouts/index.jsx:154
+#: src/layouts/index.jsx:155
 msgid "Option Pools"
 msgstr "Option Pools"
 
@@ -987,7 +993,7 @@ msgid "Portfolio history"
 msgstr "Historique du portefeuille"
 
 #: src/layouts/index.jsx:51
-#: src/layouts/index.jsx:165
+#: src/layouts/index.jsx:166
 #: src/pages/pricing.jsx:122
 #: src/pages/pricing.jsx:131
 msgid "Pricing"
@@ -1003,7 +1009,7 @@ msgstr "Support prioritaire"
 msgid "Privacy"
 msgstr "Confidentialité"
 
-#: src/layouts/index.jsx:169
+#: src/layouts/index.jsx:170
 msgid "Privacy Policy"
 msgstr "Politique de confidentialité"
 
@@ -1020,7 +1026,7 @@ msgstr "Confidentialité made in Europe. Parce que tes données ne doivent pas �
 msgid "Pro-rata distribution"
 msgstr "Distribution au prorata"
 
-#: src/layouts/index.jsx:205
+#: src/layouts/index.jsx:206
 msgid "Product"
 msgstr "Produit"
 
@@ -1036,6 +1042,10 @@ msgstr "Prouve tes transactions en y reliant leurs documents légaux respectifs"
 #: src/pages/features/captable.jsx:138
 msgid "Prove your transactions with their respective legal documents"
 msgstr "Prouve tes transactions avec leurs documents légaux respectifs"
+
+#: src/pages/help.jsx:34
+msgid "Quick explanations for investment lingo to get you started"
+msgstr "Explications rapides et claires sur le jargon du domaine de l’investissement pour t’aider à démarrer"
 
 #: src/pages/features/collaboration.jsx:108
 msgid "Quickly pull up documents by the information of their linked transactions; for example, all of a specific stakeholder, share class or date range"
@@ -1076,7 +1086,7 @@ msgstr "Rapport"
 msgid "Reporting"
 msgstr "Rapport"
 
-#: src/layouts/index.jsx:189
+#: src/layouts/index.jsx:190
 msgid "Resources"
 msgstr "Ressources"
 
@@ -1275,7 +1285,7 @@ msgstr "Données Techniques"
 msgid "Templates"
 msgstr "Modèles"
 
-#: src/layouts/index.jsx:168
+#: src/layouts/index.jsx:169
 msgid "Terms of Service"
 msgstr "Conditions d’utilisation"
 
@@ -1283,7 +1293,7 @@ msgstr "Conditions d’utilisation"
 msgid "The Ledgy Blog"
 msgstr "Le Blog Ledgy"
 
-#: src/layouts/index.jsx:381
+#: src/layouts/index.jsx:382
 #: src/pages/index.jsx:26
 msgid "The New Standard in Equity Management"
 msgstr "Le nouveau standard en gestion d’actions"
@@ -1548,7 +1558,7 @@ msgstr "et les actions numérotées sont soutenues nativement"
 msgid "by liquidation preferences"
 msgstr "préférences de liquidation"
 
-#: src/layouts/index.jsx:390
+#: src/layouts/index.jsx:391
 msgid "cap table, stock ledger, share register, startup, modeling, financing round, equity, esop, phantom, option plan, virtual, portfolio, reporting, investors"
 msgstr "cap table, registre d’actions, startup, modélisation, ronde de financement, levée de fonds, actions, esop, plan d’options, virtuel, portefeuille, reporting, investisseurs, plan d’options"
 
