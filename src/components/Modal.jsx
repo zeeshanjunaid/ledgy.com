@@ -12,7 +12,7 @@ export default ({
   onSave
 }: {|
   children?: Node,
-  title?: string,
+  title?: string | Node,
   button?: Node,
   buttonText?: Node,
   hideFooter?: boolean,

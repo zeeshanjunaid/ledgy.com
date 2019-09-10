@@ -6,7 +6,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Creation-Date: 2018-09-12T18:40:54.619Z\n"
-"PO-Revision-Date: 2019-09-10 10:33+0200\n"
+"PO-Revision-Date: 2019-09-10 10:22+0200\n"
 "Language: de\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: Timo Horstschäfer <timo@ledgy.com>\n"
@@ -632,7 +632,7 @@ msgstr "Vermeide kostspielige Fehler"
 msgid "Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant."
 msgstr "Erstelle deinen Cap Table und deine Mitarbeiterbeteiligungspläne von Anfang an richtig. Bringe deine Finanzierungsrunden zum Erfolg und motiviere deine Investoren und Mitarbeiter. Sei dir sicher, dass deine Daten gut aufgehoben sind."
 
-#: src/layouts/index.jsx:399
+#: src/layouts/index.jsx:394
 msgid "Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant. Try now for free!"
 msgstr "Erstelle deinen Cap Table und Mitarbeiterbeteiligungspläne von Anfang an richtig. Bringe deine Finanzierungsrunden zum Erfolg und motiviere deine Investoren und Mitarbeiter. Sei unbesorgt, dass deine Daten sicher und konform sind. Jetzt kostenlos testen!"
 
@@ -816,7 +816,7 @@ msgstr "Key performance indicators"
 msgid "Kpi chart"
 msgstr "KPI-Diagramm"
 
-#: src/layouts/index.jsx:280
+#: src/layouts/index.jsx:275
 msgid "Language"
 msgstr "Sprache"
 
@@ -1069,7 +1069,7 @@ msgstr "Mehr erfahren"
 msgid "Read-only access for investors, a secure data room for document sharing, and audit trails eliminate the need for costly due diligence tools"
 msgstr "Datenraum, Audit-Trail und schreibgeschützter Zugriff für Investoren ersparen dir teure Due-Diligence Tools"
 
-#: src/layouts/index.jsx:262
+#: src/layouts/index.jsx:257
 msgid "Receive important feature updates, exclusive webinar invitations, and promotions/offers"
 msgstr "Erhalten wichtige Updates zu neuen Features, exklusive Webinar-Einladungen und Promotion/Angebote"
 
@@ -1209,6 +1209,10 @@ msgstr "Fully-diluted Ansicht des Cap Tables"
 msgid "Sign up"
 msgstr "Registrieren"
 
+#: src/layouts/index.jsx:243
+msgid "Sign up for the Ledgy newsletter"
+msgstr "Jetzt für den Ledgy-Newsletter anmelden"
+
 #: src/pages/features/modeling.jsx:120
 msgid "Simulation settings"
 msgstr "Simulationseinstellungen"
@@ -1305,7 +1309,7 @@ msgstr "Nutzungsbedingungen"
 msgid "The Ledgy Blog"
 msgstr "Der Ledgy-Blog"
 
-#: src/layouts/index.jsx:398
+#: src/layouts/index.jsx:393
 #: src/pages/index.jsx:26
 msgid "The New Standard in Equity Management"
 msgstr "Der Neue Standard des Equity Management"
@@ -1570,7 +1574,7 @@ msgstr "und Aktiennummerierung wird nativ unterstützt"
 msgid "by liquidation preferences"
 msgstr "durch Liquidationspräferenzen"
 
-#: src/layouts/index.jsx:407
+#: src/layouts/index.jsx:402
 msgid "cap table, stock ledger, share register, startup, modeling, financing round, equity, esop, phantom, option plan, virtual, portfolio, reporting, investors"
 msgstr "Cap Table, Aktienbuch, Aktienregister, Startup, Modellierung, Finanzierungsrunde, Exit, ESOP, VSOP, Beteiligungsplan, Unternehmensbeteiligung, Mitarbeiterbeteiligung, Optionspläne, virtuelle Beteiligung, Reporting, Investor, Portfolio"
 

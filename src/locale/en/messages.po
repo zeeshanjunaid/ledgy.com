@@ -633,7 +633,7 @@ msgstr "Get the calculations right"
 msgid "Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant."
 msgstr "Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant."
 
-#: src/layouts/index.jsx:399
+#: src/layouts/index.jsx:394
 msgid "Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant. Try now for free!"
 msgstr "Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant. Try now for free!"
 
@@ -817,7 +817,7 @@ msgstr "Key performance indicators"
 msgid "Kpi chart"
 msgstr "Kpi chart"
 
-#: src/layouts/index.jsx:280
+#: src/layouts/index.jsx:275
 msgid "Language"
 msgstr "Language"
 
@@ -1070,7 +1070,7 @@ msgstr "Read more"
 msgid "Read-only access for investors, a secure data room for document sharing, and audit trails eliminate the need for costly due diligence tools"
 msgstr "Read-only access for investors, a secure data room for document sharing, and audit trails eliminate the need for costly due diligence tools"
 
-#: src/layouts/index.jsx:262
+#: src/layouts/index.jsx:257
 msgid "Receive important feature updates, exclusive webinar invitations, and promotions/offers"
 msgstr "Receive important feature updates, exclusive webinar invitations, and promotions/offers"
 
@@ -1210,6 +1210,10 @@ msgstr "Show cap table fully diluted"
 msgid "Sign up"
 msgstr "Sign up"
 
+#: src/layouts/index.jsx:243
+msgid "Sign up for the Ledgy newsletter"
+msgstr "Sign up for the Ledgy newsletter"
+
 #: src/pages/features/modeling.jsx:120
 msgid "Simulation settings"
 msgstr "Simulation settings"
@@ -1306,7 +1310,7 @@ msgstr "Terms of Service"
 msgid "The Ledgy Blog"
 msgstr "The Ledgy Blog"
 
-#: src/layouts/index.jsx:398
+#: src/layouts/index.jsx:393
 #: src/pages/index.jsx:26
 msgid "The New Standard in Equity Management"
 msgstr "The New Standard in Equity Management"
@@ -1571,7 +1575,7 @@ msgstr "and numbered shares are natively supported"
 msgid "by liquidation preferences"
 msgstr "by liquidation preferences"
 
-#: src/layouts/index.jsx:407
+#: src/layouts/index.jsx:402
 msgid "cap table, stock ledger, share register, startup, modeling, financing round, equity, esop, phantom, option plan, virtual, portfolio, reporting, investors"
 msgstr "cap table, stock ledger, share register, startup, modeling, financing round, equity, esop, phantom, option plan, virtual, portfolio, reporting, investors"
 

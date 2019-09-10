@@ -241,7 +241,7 @@ const Footer = (props: LayoutProps) => (
           </div>
           <div className="newsletter-signup-CTA">
             <Modal
-              title="Sign up for the Ledgy newsletter"
+              title={<Trans>Sign up for the Ledgy newsletter</Trans>}
               buttonText={
                 <>
                   <FontAwesomeIcon
@@ -254,12 +254,7 @@ const Footer = (props: LayoutProps) => (
               }
               hideFooter
             >
-              <p className="text-dark">
-                <FontAwesomeIcon
-                  className="newsletter-icon mr-2"
-                  icon={faEnvelope}
-                  title="Newsletter"
-                />
+              <p className="text-dark my-5">
                 <Trans>
                   Receive important feature updates, exclusive webinar invitations, and
                   promotions/offers
