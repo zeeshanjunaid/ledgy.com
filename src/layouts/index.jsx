@@ -241,6 +241,7 @@ const Footer = (props: LayoutProps) => (
           </div>
           <div className="newsletter-signup-CTA">
             <Modal
+              id="newsletter-signup"
               title={<Trans>Sign up for the Ledgy newsletter</Trans>}
               buttonText={
                 <>

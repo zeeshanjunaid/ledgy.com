@@ -4,6 +4,7 @@ import React, { type Node } from 'react';
 import { Trans } from '@lingui/react';
 
 export default ({
+  id,
   children,
   title = '',
   button,
@@ -11,6 +12,7 @@ export default ({
   hideFooter = false,
   onSave
 }: {|
+  id: string,
   children?: Node,
   title?: string | Node,
   button?: Node,
@@ -26,7 +28,7 @@ export default ({
           type="button"
           className="btn btn-round btn-light"
           data-toggle="modal"
-          data-target="#customModal"
+          data-target={`#${id}`}
         >
           {buttonText}
         </button>
@@ -34,7 +36,7 @@ export default ({
 
       <div
         className="modal fade"
-        id="customModal"
+        id={id}
         tabIndex="-1"
         role="dialog"
         aria-labelledby="customModalLabel"
