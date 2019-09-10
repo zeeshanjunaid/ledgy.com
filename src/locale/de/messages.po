@@ -264,7 +264,7 @@ msgstr "Wähle aus, ob nur Pools oder die Detailansicht mit den ausgegebenen Gra
 
 #: src/components/Modal.jsx:57
 msgid "Close"
-msgstr ""
+msgstr "Abbrechen"
 
 #: src/layouts/team.jsx:22
 msgid "Coding since high school, Timo got an award for the best master thesis in computer science and worked one year as a computer engineer in robotics"
@@ -1071,7 +1071,7 @@ msgstr "Datenraum, Audit-Trail und schreibgeschützter Zugriff für Investoren e
 
 #: src/layouts/index.jsx:262
 msgid "Receive important feature updates, exclusive webinar invitations, and promotions/offers"
-msgstr ""
+msgstr "Erhalten wichtige Updates zu neuen Features, exklusive Webinar-Einladungen und Promotion/Angebote"
 
 #: src/pages/features/collaboration.jsx:165
 msgid "Record of edits"
@@ -1123,7 +1123,7 @@ msgstr "Wähle zwischen gerundeten oder auf 10 Dezimalstellen exakten Preis"
 
 #: src/components/Modal.jsx:61
 msgid "Save changes"
-msgstr ""
+msgstr "Speichern"
 
 #: src/pages/features.jsx:36
 msgid "Save hours of manual work by getting rid of complicated spreadsheets"
