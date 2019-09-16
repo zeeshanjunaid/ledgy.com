@@ -165,6 +165,7 @@ const productLinks = [
   [<Trans>Employee Incentives</Trans>, 'features/esop'],
   [<Trans>Due Diligence</Trans>, 'features/collaboration'],
   [<Trans>Investors</Trans>, 'features/investors'],
+  [<Trans>Tokenization</Trans>, 'features/tokenization'],
   [<Trans>Pricing</Trans>, 'pricing']
 ];
 const legalLinks = [
