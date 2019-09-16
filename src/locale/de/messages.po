@@ -199,7 +199,7 @@ msgstr "Blockchain-Notar"
 
 #: src/layouts/index.jsx:55
 #: src/layouts/index.jsx:143
-#: src/layouts/index.jsx:199
+#: src/layouts/index.jsx:200
 #: src/pages/blog.jsx:13
 #: src/pages/help.jsx:39
 msgid "Blog"
@@ -262,7 +262,7 @@ msgstr "Verwende Pre- oder Post-Money-Bewertung"
 msgid "Choose to only show pools or the detailed view with the grants distributed to their holders"
 msgstr "Wähle aus, ob nur Pools oder die Detailansicht mit den ausgegebenen Grants angezeigt werden sollen"
 
-#: src/components/Modal.jsx:57
+#: src/components/Modal.jsx:59
 msgid "Close"
 msgstr "Abbrechen"
 
@@ -280,7 +280,7 @@ msgstr "Zusammenarbeit & Due Diligence"
 msgid "Coming soon"
 msgstr "Bald verfügbar"
 
-#: src/layouts/index.jsx:183
+#: src/layouts/index.jsx:184
 msgid "Company"
 msgstr "Unternehmen"
 
@@ -336,7 +336,7 @@ msgstr "Convertible Loans"
 msgid "Convertibles"
 msgstr "Wandeldarlehen"
 
-#: src/layouts/index.jsx:173
+#: src/layouts/index.jsx:174
 msgid "Cookie Policy"
 msgstr "Cookie-Richtlinie"
 
@@ -593,7 +593,7 @@ msgstr "Für immer kostenlos mit 50 MB Speicherplatz"
 msgid "French"
 msgstr "Französisch"
 
-#: src/layouts/index.jsx:174
+#: src/layouts/index.jsx:175
 msgid "GDPR"
 msgstr "GDPR"
 
@@ -632,7 +632,7 @@ msgstr "Vermeide kostspielige Fehler"
 msgid "Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant."
 msgstr "Erstelle deinen Cap Table und deine Mitarbeiterbeteiligungspläne von Anfang an richtig. Bringe deine Finanzierungsrunden zum Erfolg und motiviere deine Investoren und Mitarbeiter. Sei dir sicher, dass deine Daten gut aufgehoben sind."
 
-#: src/layouts/index.jsx:395
+#: src/layouts/index.jsx:397
 msgid "Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant. Try now for free!"
 msgstr "Erstelle deinen Cap Table und Mitarbeiterbeteiligungspläne von Anfang an richtig. Bringe deine Finanzierungsrunden zum Erfolg und motiviere deine Investoren und Mitarbeiter. Sei unbesorgt, dass deine Daten sicher und konform sind. Jetzt kostenlos testen!"
 
@@ -815,7 +815,7 @@ msgstr "Key performance indicators"
 msgid "Kpi chart"
 msgstr "KPI-Diagramm"
 
-#: src/layouts/index.jsx:276
+#: src/layouts/index.jsx:278
 msgid "Language"
 msgstr "Sprache"
 
@@ -847,7 +847,7 @@ msgstr "Ledgy macht es einfach, eine Investition mit einer pro-rata Verteilung z
 msgid "Ledgy scales with your needs. Free for startups, powerful for grown-ups."
 msgstr "Ledgy skaliert mit deinen Anforderungen. Kostenlos für Startups, leistungsstark für größere Firmen."
 
-#: src/layouts/index.jsx:217
+#: src/layouts/index.jsx:218
 msgid "Legal"
 msgstr "Legal"
 
@@ -915,7 +915,7 @@ msgstr "Mehrere Runden, 3 Szenarien"
 msgid "Name, email, address and any other details you provide. Provision of our services and management of your subscription. Providing you with updates about our services"
 msgstr "Name, E-Mail, Adresse und alle anderen Angaben, die du machst. Für die Bereitstellung unserer Dienstleistungen und Verwaltung deines Abonnements. Wir informieren dich über Neuigkeiten zu unseren Dienstleistungen"
 
-#: src/layouts/index.jsx:252
+#: src/layouts/index.jsx:254
 msgid "Newsletter"
 msgstr "Newsletter"
 
@@ -996,7 +996,7 @@ msgid "Portfolio history"
 msgstr "Portfolio-Historie"
 
 #: src/layouts/index.jsx:53
-#: src/layouts/index.jsx:168
+#: src/layouts/index.jsx:169
 #: src/pages/pricing.jsx:122
 #: src/pages/pricing.jsx:131
 msgid "Pricing"
@@ -1012,7 +1012,7 @@ msgstr "Prioritätssupport"
 msgid "Privacy"
 msgstr "Datenschutz"
 
-#: src/layouts/index.jsx:172
+#: src/layouts/index.jsx:173
 msgid "Privacy Policy"
 msgstr "Datenschutzrichtlinie"
 
@@ -1029,7 +1029,7 @@ msgstr "Datenschutz made in Europe. Weil deine Beteiligungsdaten nicht jeder ken
 msgid "Pro-rata distribution"
 msgstr "Pro-rata Verteilung"
 
-#: src/layouts/index.jsx:208
+#: src/layouts/index.jsx:209
 msgid "Product"
 msgstr "Produkt"
 
@@ -1068,7 +1068,7 @@ msgstr "Mehr erfahren"
 msgid "Read-only access for investors, a secure data room for document sharing, and audit trails eliminate the need for costly due diligence tools"
 msgstr "Datenraum, Audit-Trail und schreibgeschützter Zugriff für Investoren ersparen dir teure Due-Diligence Tools"
 
-#: src/layouts/index.jsx:258
+#: src/layouts/index.jsx:260
 msgid "Receive important feature updates, exclusive webinar invitations, and promotions/offers"
 msgstr "Erhalten wichtige Updates zu neuen Features, exklusive Webinar-Einladungen und Promotion/Angebote"
 
@@ -1093,7 +1093,7 @@ msgstr "Bericht"
 msgid "Reporting"
 msgstr "Reporting"
 
-#: src/layouts/index.jsx:192
+#: src/layouts/index.jsx:193
 msgid "Resources"
 msgstr "Ressourcen"
 
@@ -1120,7 +1120,7 @@ msgstr "Modellierung von Finanzierungsrunden und Exits"
 msgid "Rounded share price, or exact to 10 decimals"
 msgstr "Wähle zwischen gerundeten oder auf 10 Dezimalstellen exakten Preis"
 
-#: src/components/Modal.jsx:61
+#: src/components/Modal.jsx:63
 msgid "Save changes"
 msgstr "Speichern"
 
@@ -1208,7 +1208,7 @@ msgstr "Fully-diluted Ansicht des Cap Tables"
 msgid "Sign up"
 msgstr "Registrieren"
 
-#: src/layouts/index.jsx:244
+#: src/layouts/index.jsx:246
 msgid "Sign up for the Ledgy newsletter"
 msgstr "Jetzt für den Ledgy-Newsletter anmelden"
 
@@ -1300,7 +1300,7 @@ msgstr "Technische Daten"
 msgid "Templates"
 msgstr "Templates"
 
-#: src/layouts/index.jsx:171
+#: src/layouts/index.jsx:172
 msgid "Terms of Service"
 msgstr "Nutzungsbedingungen"
 
@@ -1308,7 +1308,7 @@ msgstr "Nutzungsbedingungen"
 msgid "The Ledgy Blog"
 msgstr "Der Ledgy-Blog"
 
-#: src/layouts/index.jsx:394
+#: src/layouts/index.jsx:396
 #: src/pages/index.jsx:26
 msgid "The New Standard in Equity Management"
 msgstr "Der Neue Standard des Equity Management"
@@ -1352,6 +1352,10 @@ msgstr "Diese Seite ist nur verfügbar auf:"
 #: src/pages/blog.jsx:14
 msgid "Thoughts on cap tables, financing rounds, and legal issues around running and managing a startup."
 msgstr "Gedanken zum Cap Table, Finanzierungsrunden und rechtlichen Fragen rund um das Leiten und Managen eines Startups."
+
+#: src/layouts/index.jsx:168
+msgid "Tokenization"
+msgstr "Tokenisierung"
 
 #: src/pages/features.jsx:132
 msgid "Track KPIs, write recurring reports, and share them with your investors"
@@ -1573,7 +1577,7 @@ msgstr "und Aktiennummerierung wird nativ unterstützt"
 msgid "by liquidation preferences"
 msgstr "durch Liquidationspräferenzen"
 
-#: src/layouts/index.jsx:403
+#: src/layouts/index.jsx:405
 msgid "cap table, stock ledger, share register, startup, modeling, financing round, equity, esop, phantom, option plan, virtual, portfolio, reporting, investors"
 msgstr "Cap Table, Aktienbuch, Aktienregister, Startup, Modellierung, Finanzierungsrunde, Exit, ESOP, VSOP, Beteiligungsplan, Unternehmensbeteiligung, Mitarbeiterbeteiligung, Optionspläne, virtuelle Beteiligung, Reporting, Investor, Portfolio"
 
