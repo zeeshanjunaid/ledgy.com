@@ -15,6 +15,7 @@ export const economistUrl =
   'https://www.economist.com/business/2019/07/06/new-firms-help-startups-keep-track-of-their-owners';
 export const wirtschaftswocheUrl =
   'https://gruender.wiwo.de/ledgy-plattform-fuer-beteiligungsmanagement-erhaelt-anschubfinanzierung/';
+export const top100Url = 'https://www.top100startups.swiss/index.cfm?page=136340';
 
 export const targetBlank = { target: '_blank', rel: 'noopener noreferrer' };
 

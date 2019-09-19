@@ -17,6 +17,7 @@ import {
   forbesUrl,
   economistUrl,
   wirtschaftswocheUrl,
+  top100Url,
   isBrowser
 } from '../layouts/utils';
 
@@ -146,6 +147,9 @@ const AsFeaturedIn = (props: Props) => (
     </a>
     <a href={economistUrl} {...targetBlank}>
       <Img {...props.data.theEconomist} alt="The Economist" className="m-4" />
+    </a>
+    <a href={top100Url} {...targetBlank}>
+      <Img {...props.data.top100} alt="TOP 100 Swiss Startup Award" className="m-4" />
     </a>
   </div>
 );
@@ -297,6 +301,11 @@ export const pageQuery = graphql`
     }
     wirtschaftsWoche: imageSharp(fluid: { originalName: { regex: "/wirtschafts-woche/" } }) {
       fixed(width: 110) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+    top100: imageSharp(fluid: { originalName: { regex: "/top100/" } }) {
+      fixed(width: 120) {
         ...GatsbyImageSharpFixed
       }
     }
