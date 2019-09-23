@@ -8,7 +8,7 @@ exports.onServiceWorkerUpdateReady = () => window.location.reload(true);
 
 if (window.ga) {
   window.ga('require', 'linker');
-  window.ga('linker:autoLink', ['app.ledgy.com', 'demo.ledgy.com']);
+  window.ga('linker:autoLink', ['app.ledgy.com', 'demo.ledgy.com', 'calculator.ledgy.com']);
   window.ga(tracker => {
     window.clientId = tracker.get('clientId');
   });
