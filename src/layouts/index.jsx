@@ -77,6 +77,9 @@ const Nav = (props: LayoutProps) => (
       </section>
 
       <div className="navbar-right">
+        <Link className="btn btn-round btn-success ml-lg-4" href to={`${props.prefix}/calculator/`}>
+          <Trans>Calculator</Trans>
+        </Link>
         <a
           className="btn btn-round btn-outline-light ml-lg-4 mr-2"
           href={`${appUrl}/login`}

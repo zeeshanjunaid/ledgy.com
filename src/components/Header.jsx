@@ -1,8 +1,6 @@
 // @flow
 
 import React from 'react';
-import { Trans } from '@lingui/react';
-import Img from 'gatsby-image';
 import { LanguageHint } from '../components/Markdown';
 import { calculatorUrl, targetBlank, appUrl, trackSignup } from '../layouts/utils';
 
@@ -63,7 +61,7 @@ export const CalculatorHeader = () => {
               </ol>
             </div>
             <a
-              className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-light"
+              className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-success"
               href={calculatorUrl}
               onClick={() => trackSignup('clickCalculator')}
               {...targetBlank}
