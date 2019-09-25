@@ -103,7 +103,6 @@ const CTABanner = () => {
       <div className="container py-md-4">
         <div className="row m-0 w-100 justify-content-center align-items-center">
           <h4 className="m-3 text-center">{experiment.title}</h4>
-
           <a
             className="cta-button m-3 btn btn-lg btn-round btn-primary align-self-center"
             href={`${appUrl}/signup`}
@@ -151,7 +150,8 @@ const helpLinks = [
   [<Trans>Help Center</Trans>, 'help'],
   [<Trans>Getting Started</Trans>, 'help/getting-started'],
   [<Trans>Glossary</Trans>, 'glossary'],
-  [<Trans>ESOP Templates</Trans>, 'help/employee-participation-guide']
+  [<Trans>ESOP Templates</Trans>, 'help/employee-participation-guide'],
+  [<Trans>Round Calculator</Trans>, 'calculator']
 ];
 const blogLinks = [
   [<Trans>Option Pools</Trans>, 'blog/pre-and-post-money-option-pools'],
