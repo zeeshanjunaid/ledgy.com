@@ -78,16 +78,12 @@ const Nav = (props: LayoutProps) => (
 
       <div className="navbar-right">
         {!props.location.pathname.includes('calculator') && (
-          <Link
-            className="btn btn-round btn-outline-light mr-2"
-            href
-            to={`${props.prefix}/calculator/`}
-          >
+          <Link className="btn btn-round btn-outline-light" href to={`${props.prefix}/calculator/`}>
             <Trans>Calculator</Trans>
           </Link>
         )}
         <a
-          className="btn btn-round btn-outline-light ml-lg-4 mr-2"
+          className="btn btn-round btn-outline-light mx-2"
           href={`${appUrl}/login`}
           onClick={() => trackSignup('login')}
         >
