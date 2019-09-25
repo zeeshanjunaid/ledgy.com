@@ -90,7 +90,7 @@ const Header = ({ i18n, data }: Props) => {
           </div>
           <div className="col-lg-6">
             <div id="tablet-ledgy" data-aos="fade-up">
-              <Img {...data.laptop} alt={i18n.t`Screenshot of the Ledgy app`} />
+              <Img {...data.tablet} alt={i18n.t`Screenshot of the Ledgy app`} />
             </div>
           </div>
         </div>
@@ -249,7 +249,7 @@ export const pageQuery = graphql`
   query {
     ...FeaturesFragment
 
-    laptop: imageSharp(fluid: { originalName: { regex: "/tablet-history.png/" } }) {
+    tablet: imageSharp(fluid: { originalName: { regex: "/tablet-history.png/" } }) {
       fluid(maxWidth: 2000) {
         ...GatsbyImageSharpFluid_noBase64
       }

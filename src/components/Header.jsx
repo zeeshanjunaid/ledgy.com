@@ -1,6 +1,7 @@
 // @flow
 
 import React from 'react';
+import Img from 'gatsby-image';
 import { LanguageHint } from '../components/Markdown';
 import { calculatorUrl, targetBlank, appUrl, trackSignup } from '../layouts/utils';
 
@@ -27,7 +28,7 @@ export const DefaultHeader = ({
   );
 };
 
-export const CalculatorHeader = () => {
+export const CalculatorHeader = ({ data }: { data: any }) => {
   return (
     <header className="header bg-ledgy home-banner calculator-banner px-1 text-left">
       <div className="container">
@@ -40,7 +41,7 @@ export const CalculatorHeader = () => {
               With this calculator you can:
             </h5>
 
-            <div className="text-white pb-5 pb-lg-7 banner-text">
+            <div className="text-white banner-text">
               <ol>
                 <li>
                   See <strong>who owns what</strong> after fundraising
@@ -59,39 +60,32 @@ export const CalculatorHeader = () => {
                   employee pools
                 </li>
               </ol>
+              <div className="pt-4">
+                <a
+                  className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-light"
+                  href={calculatorUrl}
+                  onClick={() => trackSignup('clickCalculator')}
+                  {...targetBlank}
+                >
+                  Launch Calculator
+                </a>
+                <a
+                  className="btn btn-block d-sm-inline btn-xl mx-1"
+                  href={`${appUrl}/signup`}
+                  onClick={() => trackSignup('clickProductHunt')}
+                >
+                  <img
+                    src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=169028&amp;theme=light"
+                    alt="Subscriptions by Cashfree - A comprehensive recurring payment solution for India 🇮🇳 | Product Hunt Embed"
+                    className="product-hunt-logo"
+                  />
+                </a>
+              </div>
             </div>
-            <a
-              className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-success"
-              href={calculatorUrl}
-              onClick={() => trackSignup('clickCalculator')}
-              {...targetBlank}
-            >
-              Launch Calculator
-            </a>
-            <a
-              className="d-sm-inline btn-xl mx-1"
-              href={`${appUrl}/signup`}
-              onClick={() => trackSignup('clickProductHunt')}
-            >
-              <img
-                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=169028&amp;theme=light"
-                alt="Subscriptions by Cashfree - A comprehensive recurring payment solution for India 🇮🇳 | Product Hunt Embed"
-                style={{ width: '25%', height: '25%' }}
-              />
-            </a>
           </div>
           <div className="col-lg-6">
-            <div id="tablet-ledgy" data-aos="fade-up">
-              <a
-                className="d-sm-inline mx-auto"
-                href="https://www.producthunt.com/posts/subscriptions-by-cashfree?utm_source=badge-featured&amp;utm_medium=badge&amp;utm_souce=badge-subscriptions-by-cashfree"
-              >
-                <img
-                  src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=169028&amp;theme=light"
-                  alt="Subscriptions by Cashfree - A comprehensive recurring payment solution for India 🇮🇳 | Product Hunt Embed"
-                  style={{ width: '50%', height: '50%' }}
-                />
-              </a>
+            <div className="calculator" data-aos="fade-up">
+              <Img {...data.calculator} alt="Financing Round Calculator" />
             </div>
           </div>
         </div>

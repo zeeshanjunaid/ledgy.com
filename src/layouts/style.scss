@@ -253,6 +253,32 @@ $markdown-spacer: $markdown-font-size;
   }
 }
 
+.calculator {
+  margin-top: 15%;
+  @include media-breakpoint-up(lg) {
+    width: 115%;
+  }
+}
+
+.product-hunt-logo {
+  width: 50%;
+  @include media-breakpoint-up(sm) {
+    width: 30%;
+  }
+  @include media-breakpoint-up(xl) {
+    width: 35%;
+  }
+}
+
+.calculator-video {
+  width: 90vw;
+  height: 210px;
+  @include media-breakpoint-up(md) {
+    height: 315px;
+    width: 560px;
+  }
+}
+
 .home-banner {
   @include media-breakpoint-up(xl) {
     @media(orientation:landscape) {

@@ -30,7 +30,11 @@ export default ({
         description={description}
         thumbnailUrl={cover ? `${siteUrl}${cover.localFile.childImageSharp.fixed.src}` : ''}
       />
-      {showCalculatorHeader ? <CalculatorHeader /> : <DefaultHeader lang={lang} data={data} />}
+      {showCalculatorHeader ? (
+        <CalculatorHeader data={data} />
+      ) : (
+        <DefaultHeader lang={lang} data={data} />
+      )}
       <main className="main-content">
         <section className="section">
           <div className="container container-small">
@@ -78,6 +82,11 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         siteUrl
+      }
+    }
+    calculator: imageSharp(fluid: { originalName: { regex: "/calculator.png/" } }) {
+      fluid(maxWidth: 2000) {
+        ...GatsbyImageSharpFluid_noBase64
       }
     }
   }
