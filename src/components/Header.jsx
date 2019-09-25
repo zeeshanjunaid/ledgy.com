@@ -31,13 +31,11 @@ export const DefaultHeader = ({
 
 export const CalculatorHeader = () => {
   return (
-    <header className="header bg-ledgy home-banner px-1 text-left ">
+    <header className="header bg-ledgy home-banner calculator-banner px-1 text-left">
       <div className="container">
         <div className="row gap-y mt-md-2 pb-4 pb-md-6">
           <div className="col-lg-6">
-            <h1 className="text-white mb-2 mb-sm-3">
-              The calculator you need if you’re getting ready to raise capital
-            </h1>
+            <h1 className="text-white mb-2 mb-sm-3">The calculator you need for raising capital</h1>
             <h5 className="text-white font-weight-light pb-4 pb-lg-6 mb-0">
               With this calculator you can:
             </h5>
@@ -67,19 +65,29 @@ export const CalculatorHeader = () => {
               <Trans>Go to Calculator</Trans>
             </a>
             <a
-              className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-light"
+              className="d-sm-inline btn-xl mx-1"
               href={`${appUrl}/signup`}
               onClick={() => trackSignup('clickProductHunt')}
             >
-              <Trans>Product Hunt</Trans>
+              <img
+                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=169028&amp;theme=light"
+                alt="Subscriptions by Cashfree - A comprehensive recurring payment solution for India 🇮🇳 | Product Hunt Embed"
+                style={{ width: '25%', height: '25%' }}
+              />
             </a>
           </div>
           <div className="col-lg-6">
             <div id="tablet-ledgy" data-aos="fade-up">
-              <Img
-                src="https://cdn.vox-cdn.com/thumbor/e_Tlj6lWt2q-vRLEaUd17_tCtnE=/0x0:3797x2539/1520x1013/filters:focal(1596x967:2202x1573):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/53504317/GettyImages_630805159.0.jpg"
-                alt="Ledgy financing round calculator"
-              />
+              <a
+                className="d-sm-inline mx-auto"
+                href="https://www.producthunt.com/posts/subscriptions-by-cashfree?utm_source=badge-featured&amp;utm_medium=badge&amp;utm_souce=badge-subscriptions-by-cashfree"
+              >
+                <img
+                  src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=169028&amp;theme=light"
+                  alt="Subscriptions by Cashfree - A comprehensive recurring payment solution for India 🇮🇳 | Product Hunt Embed"
+                  style={{ width: '50%', height: '50%' }}
+                />
+              </a>
             </div>
           </div>
         </div>

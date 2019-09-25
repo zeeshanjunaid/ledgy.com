@@ -17,10 +17,10 @@ export default ({
   ...Props,
   data: {| contentfulPage: Page, site: { siteMetadata: { siteUrl: string } } |}
 |}) => {
-  const { title, description, content, author, date, cover } = data.contentfulPage; // const { id, title, description, language, content, author, date, cover } = data.contentfulPage;
+  const { id, slug, title, description, content, author, date, cover } = data.contentfulPage;
   const { siteUrl } = data.site.siteMetadata;
-
-  const showCalculatorHeader = true; // const showCalculatorHeader = id === 'cfcd898c-876a-55cd-befe-3918b0753a5c';
+  const showCalculatorHeader =
+    id === 'cfcd898c-876a-55cd-befe-3918b0753a5c' || slug === 'calculator';
 
   return (
     <div>

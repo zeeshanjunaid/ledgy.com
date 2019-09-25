@@ -18,6 +18,7 @@ declare type LayoutProps = {|
 |};
 
 declare type Page = {|
+  id: Id,
   title: string,
   description: string,
   date?: string,
