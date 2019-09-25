@@ -48,7 +48,10 @@ const Logo = (props: { prefix: string, inverse: boolean }) => (
   </Link>
 );
 
-const navbarLinks = [
+const navbarLinks = (props: LayoutProps) => [
+  ...(!props.location.pathname.includes('calculator')
+    ? [[<Trans>Calculator</Trans>, 'calculator']]
+    : []),
   [<Trans>Features</Trans>, 'features'],
   [<Trans>Pricing</Trans>, 'pricing'],
   [<Trans>Help</Trans>, 'help'],
@@ -66,7 +69,7 @@ const Nav = (props: LayoutProps) => (
       <section className="navbar-mobile">
         <h6 className="d-sm-none">Ledgy</h6>
         <nav className="nav nav-navbar ml-auto">
-          {navbarLinks.map(([label, to]) => (
+          {navbarLinks(props).map(([label, to]) => (
             <Link className="nav-link" key={to} href to={`${props.prefix}/${to}/`}>
               {label}
             </Link>
@@ -77,11 +80,6 @@ const Nav = (props: LayoutProps) => (
       </section>
 
       <div className="navbar-right">
-        {!props.location.pathname.includes('calculator') && (
-          <Link className="btn btn-round btn-outline-light" href to={`${props.prefix}/calculator/`}>
-            <Trans>Calculator</Trans>
-          </Link>
-        )}
         <a
           className="btn btn-round btn-outline-light mx-2"
           href={`${appUrl}/login`}

@@ -35,7 +35,7 @@ export const CalculatorHeader = ({ data }: { data: any }) => {
         <div className="row gap-y mt-md-2 pb-4 pb-md-6">
           <div className="col-lg-6">
             <h1 className="text-white mb-2 mb-sm-3">
-              This is the calculator you need if you’re getting ready to raise capital
+              This is the calculator you need if you’re raising capital
             </h1>
             <h5 className="text-white font-weight-light pb-4 mb-0">
               With this calculator you can:
@@ -53,16 +53,16 @@ export const CalculatorHeader = ({ data }: { data: any }) => {
                   Understand common <strong>fundraising terms</strong>
                 </li>
                 <li>
-                  Model your company’s cap table through <strong>multiple funding rounds</strong>
+                  Model your cap table through <strong>multiple funding rounds</strong>
                 </li>
                 <li>
                   Compare dilution results when adding <strong>convertible loans</strong> and
-                  employee pools
+                  <strong> employee pools</strong>
                 </li>
               </ol>
               <div className="pt-4">
                 <a
-                  className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-light"
+                  className="btn btn-block d-sm-inline btn-xl my-2 mx-1 btn-round btn-light"
                   href={calculatorUrl}
                   onClick={() => trackSignup('clickCalculator')}
                   {...targetBlank}
@@ -70,13 +70,13 @@ export const CalculatorHeader = ({ data }: { data: any }) => {
                   Launch Calculator
                 </a>
                 <a
-                  className="btn btn-block d-sm-inline btn-xl mx-1"
+                  className="btn btn-block d-sm-inline btn-xl mx-1 shadow-none"
                   href={`${appUrl}/signup`}
                   onClick={() => trackSignup('clickProductHunt')}
                 >
                   <img
                     src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=169028&amp;theme=light"
-                    alt="Subscriptions by Cashfree - A comprehensive recurring payment solution for India 🇮🇳 | Product Hunt Embed"
+                    alt="Featured in Product Hunt"
                     className="product-hunt-logo"
                   />
                 </a>
