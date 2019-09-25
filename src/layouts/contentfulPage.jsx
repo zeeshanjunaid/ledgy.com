@@ -5,7 +5,8 @@ import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
 
-import { Author, Image, LanguageHint } from '../components/Markdown';
+import { Author, Image } from '../components/Markdown';
+import { DefaultHeader, CalculatorHeader } from '../components/Header';
 import { Title } from '../layouts/utils';
 
 export default ({
@@ -16,8 +17,10 @@ export default ({
   ...Props,
   data: {| contentfulPage: Page, site: { siteMetadata: { siteUrl: string } } |}
 |}) => {
-  const { title, description, language, content, author, date, cover } = data.contentfulPage;
+  const { title, description, content, author, date, cover } = data.contentfulPage; // const { id, title, description, language, content, author, date, cover } = data.contentfulPage;
   const { siteUrl } = data.site.siteMetadata;
+
+  const showCalculatorHeader = true; // const showCalculatorHeader = id === 'cfcd898c-876a-55cd-befe-3918b0753a5c';
 
   return (
     <div>
@@ -26,16 +29,7 @@ export default ({
         description={description}
         thumbnailUrl={cover ? `${siteUrl}${cover.localFile.childImageSharp.fixed.src}` : ''}
       />
-      <header className="header text-white bg-ledgy">
-        <div className="container text-center">
-          <div className="row">
-            <div className="col-12 col-lg-8 offset-lg-2">
-              <h1>{title}</h1>
-              <LanguageHint lang={lang} documentLang={language || 'en'} />
-            </div>
-          </div>
-        </div>
-      </header>
+      {showCalculatorHeader ? <CalculatorHeader /> : <DefaultHeader lang={lang} data={data} />}
       <main className="main-content">
         <section className="section">
           <div className="container container-small">
@@ -58,6 +52,7 @@ export default ({
 export const pageQuery = graphql`
   query($id: String!) {
     contentfulPage(id: { eq: $id }) {
+      id
       slug
       title
       description

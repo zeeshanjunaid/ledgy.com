@@ -9,6 +9,7 @@ import { Trans } from '@lingui/react';
 export const name = 'Ledgy';
 export const appUrl = 'https://app.ledgy.com';
 export const demoUrl = 'https://demo.ledgy.com';
+export const calculatorUrl = 'https://calculator.ledgy.com';
 export const githubUrl = 'https://github.com/morloy/ledgy.com/';
 export const forbesUrl = 'https://www.forbesdach.com/30-under-30.html';
 export const economistUrl =
