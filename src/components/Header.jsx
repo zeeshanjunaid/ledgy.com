@@ -62,7 +62,7 @@ export const CalculatorHeader = () => {
               onClick={() => trackSignup('clickCalculator')}
               {...targetBlank}
             >
-              <Trans>Launch Calculator</Trans>
+              Launch Calculator
             </a>
             <a
               className="d-sm-inline btn-xl mx-1"
