@@ -35,24 +35,30 @@ export const CalculatorHeader = () => {
       <div className="container">
         <div className="row gap-y mt-md-2 pb-4 pb-md-6">
           <div className="col-lg-6">
-            <h1 className="text-white mb-2 mb-sm-3">The calculator you need for raising capital</h1>
-            <h5 className="text-white font-weight-light pb-4 pb-lg-6 mb-0">
+            <h1 className="text-white mb-2 mb-sm-3">
+              This is the calculator you need if you’re getting ready to raise capital
+            </h1>
+            <h5 className="text-white font-weight-light pb-4 mb-0">
               With this calculator you can:
             </h5>
 
             <div className="text-white pb-5 pb-lg-7 banner-text">
               <ol>
                 <li>
-                  See <b>who owns how many shares</b> after fundraising
-                </li>
-                <li>Do calculations that can only be solved numerically</li>
-                <li>
-                  Model across <b>multiple funding rounds</b>
+                  See <strong>who owns what</strong> after fundraising
                 </li>
                 <li>
-                  <b>Compare</b> different funding scenarios—high valuation, low valuation,
-                  down-round, pre- vs post-money valuation, share dilution because of convertibles
-                  or pools…
+                  Look more professional during <strong>term sheet negotiations</strong>
+                </li>
+                <li>
+                  Understand common <strong>fundraising terms</strong>
+                </li>
+                <li>
+                  Model your company’s cap table through <strong>multiple funding rounds</strong>
+                </li>
+                <li>
+                  Compare dilution results when adding <strong>convertible loans</strong> and
+                  employee pools
                 </li>
               </ol>
             </div>
