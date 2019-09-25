@@ -9,6 +9,8 @@ import { Author, Image } from '../components/Markdown';
 import { DefaultHeader, CalculatorHeader } from '../components/Header';
 import { Title } from '../layouts/utils';
 
+const CALCULATOR_ID = 'cfcd898c-876a-55cd-befe-3918b0753a5c';
+
 export default ({
   data,
   lang,
@@ -17,10 +19,9 @@ export default ({
   ...Props,
   data: {| contentfulPage: Page, site: { siteMetadata: { siteUrl: string } } |}
 |}) => {
-  const { id, slug, title, description, content, author, date, cover } = data.contentfulPage;
+  const { id, title, description, content, author, date, cover } = data.contentfulPage;
   const { siteUrl } = data.site.siteMetadata;
-  const showCalculatorHeader =
-    id === 'cfcd898c-876a-55cd-befe-3918b0753a5c' || slug === 'calculator';
+  const showCalculatorHeader = id === CALCULATOR_ID;
 
   return (
     <div>

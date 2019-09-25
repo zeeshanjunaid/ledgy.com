@@ -50,19 +50,19 @@ export const CalculatorHeader = () => {
                   Model across <b>multiple funding rounds</b>
                 </li>
                 <li>
-                  <b>Compare</b> different funding scenarios - high valuation, low valuation,
-                  down-round, pre vs post-money valuation, share dilution because of convertibles or
-                  pools...
+                  <b>Compare</b> different funding scenarios—high valuation, low valuation,
+                  down-round, pre- vs post-money valuation, share dilution because of convertibles
+                  or pools…
                 </li>
               </ol>
             </div>
             <a
-              className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-outline-light"
+              className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-light"
               href={calculatorUrl}
               onClick={() => trackSignup('clickCalculator')}
               {...targetBlank}
             >
-              <Trans>Go to Calculator</Trans>
+              <Trans>Launch Calculator</Trans>
             </a>
             <a
               className="d-sm-inline btn-xl mx-1"
