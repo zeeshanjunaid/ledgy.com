@@ -4,7 +4,6 @@ import React from 'react';
 import { withI18n } from '@lingui/react';
 import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
-import { MDXProvider } from '@mdx-js/react';
 
 import { ContentHeader, ContentBody } from '../components/Content';
 import { Title } from '../layouts/utils';
@@ -15,9 +14,7 @@ export default withI18n()(({ i18n, data }: Props) => {
     const { slug, title, description } = edge.node;
     return (
       <AccordionItem id={slug} key={slug} title={title}>
-        <MDXProvider>
-          <MDXRenderer>{description.childMdx.body}</MDXRenderer>
-        </MDXProvider>
+        <MDXRenderer>{description.childMdx.body}</MDXRenderer>
       </AccordionItem>
     );
   });
