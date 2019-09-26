@@ -6,7 +6,7 @@ import { I18nProvider, withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
 import sample from 'lodash/sample';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faCalculator } from '@fortawesome/free-solid-svg-icons';
 import {
   faTwitter,
   faFacebook,
@@ -38,6 +38,7 @@ import Modal from '../components/Modal';
 import logoDefault from '../img/logo_black.png';
 import logoInverse from '../img/logo_white.png';
 import NewsletterForm from '../components/NewsletterForm';
+import PublicityBanner from '../components/PublicityBanner';
 
 const Logo = (props: { prefix: string, inverse: boolean }) => (
   <Link href to={`${props.prefix}/#start`} className="navbar-brand">
@@ -376,42 +377,24 @@ const Initialize = () => {
   return null;
 };
 
-const FollowUsContest = ({
-  prefix,
-  setBannerOpen
-}: {
-  prefix: string,
-  setBannerOpen: boolean => void
-}) => (
-  <div className="follow-us-banner position-fixed text-center bg-white border border-gray rounded p-4">
-    Follow us on{' '}
-    <a href="https://twitter.com/Ledgy" {...targetBlank}>
-      <FontAwesomeIcon icon={faTwitter} className="mr-1" title="Twitter" />
-      Twitter
-    </a>{' '}
-    for a chance to get a 20% discount on{' '}
-    <Link href to={`${prefix}/pricing`}>
-      Ledgy Premium
-    </Link>
-    <div>
-      <small>
-        <Link
-          href
-          to={`${prefix}/social-media-contest`}
-          className="text-muted font-weight-light"
-          onClick={() => setBannerOpen(false)}
-        >
-          Learn more...
-        </Link>
-      </small>
-    </div>
-    <button
-      className="follow-us-banner--button position-absolute bg-transparent border-0 p-2 p-lg-4 rounded-circle"
-      onClick={() => setBannerOpen(false)}
-    >
-      ×
-    </button>
-  </div>
+const ProductHuntBanner = ({ setBannerOpen }: {| setBannerOpen: boolean => void |}) => (
+  <PublicityBanner
+    setBannerOpen={setBannerOpen}
+    text={
+      <div className="px-6">
+        <span role="img" aria-label="wave" className="mr-1">
+          👋
+        </span>
+        What’s new? We launched our startup
+        <a href="https://www.producthunt.com/posts/startup-fundraising-calculator" {...targetBlank}>
+          {' '}
+          Fundraising Calculator
+          <FontAwesomeIcon icon={faCalculator} className="mx-1 text-light" title="Calculator" />
+        </a>
+        on Product Hunt today.
+      </div>
+    }
+  />
 );
 
 const TemplateWrapper = withI18n()(({ children, ...props }: SiteProps) => (
@@ -474,7 +457,7 @@ const TemplateWrapper = withI18n()(({ children, ...props }: SiteProps) => (
             </noscript>
           </Helmet>
           <Nav {...props} prefix={prefix} />
-          {isBannerOpen && <FollowUsContest prefix={prefix} setBannerOpen={setBannerOpen} />}
+          {isBannerOpen && <ProductHuntBanner setBannerOpen={setBannerOpen} />}
           {React.cloneElement((children: Object), { prefix, lang })}
           <Footer {...props} prefix={prefix} />
         </div>
