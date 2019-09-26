@@ -6,7 +6,7 @@ import { I18nProvider, withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
 import sample from 'lodash/sample';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faCalculator } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import {
   faTwitter,
   faFacebook,
@@ -389,8 +389,7 @@ const ProductHuntBanner = ({ setBannerOpen }: {| setBannerOpen: boolean => void 
         <a href="https://www.producthunt.com/posts/startup-fundraising-calculator" {...targetBlank}>
           {' '}
           Fundraising Calculator
-          <FontAwesomeIcon icon={faCalculator} className="mx-1 text-light" title="Calculator" />
-        </a>
+        </a>{' '}
         on Product Hunt today!
       </div>
     }
