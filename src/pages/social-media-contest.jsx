@@ -1,7 +1,7 @@
 // @flow
 
 import React from 'react';
-import { withI18n, Trans } from '@lingui/react';
+import { withI18n } from '@lingui/react';
 
 import { Title, Header, targetBlank } from '../layouts/utils';
 
@@ -9,9 +9,9 @@ const SocialMediaContest = ({ i18n }: Props) => (
   <>
     <Title
       title={i18n.t`Follow us`}
-      description={i18n.t`Follow us on social media for a chance to get awesome discounts on Ledgy Premium`}
+      description="Follow us on social media for a chance to get awesome discounts on Ledgy Premium"
     />
-    <Header text={<Trans>Social media contest</Trans>} />
+    <Header text={<>Social media contest</>} />
 
     <main className="main-content">
       <div className="section">
