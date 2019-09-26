@@ -1,12 +1,12 @@
 // @flow
 
-import React, { useEffect, type Node } from 'react';
+import React, { useEffect, type Node, useState } from 'react';
 import { StaticQuery, graphql, Link } from 'gatsby';
 import { I18nProvider, withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
 import sample from 'lodash/sample';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faCalculator } from '@fortawesome/free-solid-svg-icons';
 import {
   faTwitter,
   faFacebook,
@@ -38,6 +38,7 @@ import Modal from '../components/Modal';
 import logoDefault from '../img/logo_black.png';
 import logoInverse from '../img/logo_white.png';
 import NewsletterForm from '../components/NewsletterForm';
+import PublicityBanner from '../components/PublicityBanner';
 
 const Logo = (props: { prefix: string, inverse: boolean }) => (
   <Link href to={`${props.prefix}/#start`} className="navbar-brand">
@@ -376,6 +377,26 @@ const Initialize = () => {
   return null;
 };
 
+const ProductHuntBanner = ({ setBannerOpen }: {| setBannerOpen: boolean => void |}) => (
+  <PublicityBanner
+    setBannerOpen={setBannerOpen}
+    text={
+      <div className="px-6">
+        <span role="img" aria-label="wave" className="mr-1">
+          👋
+        </span>
+        What’s new? We launched our startup
+        <a href="https://www.producthunt.com/posts/startup-fundraising-calculator" {...targetBlank}>
+          {' '}
+          Fundraising Calculator
+          <FontAwesomeIcon icon={faCalculator} className="mx-1 text-light" title="Calculator" />
+        </a>
+        on Product Hunt today!
+      </div>
+    }
+  />
+);
+
 const TemplateWrapper = withI18n()(({ children, ...props }: SiteProps) => (
   <StaticQuery
     query={graphql`
@@ -393,6 +414,7 @@ const TemplateWrapper = withI18n()(({ children, ...props }: SiteProps) => (
       const { siteUrl } = data.site.siteMetadata;
       const thumbnailUrl = `${siteUrl}/thumbnail.png`;
       const pathname = deprefix(props.location.pathname);
+      const [isBannerOpen, setBannerOpen] = useState(pathname.slice(1) !== 'social-media-contest');
       return (
         <div>
           <Title
@@ -435,6 +457,7 @@ const TemplateWrapper = withI18n()(({ children, ...props }: SiteProps) => (
             </noscript>
           </Helmet>
           <Nav {...props} prefix={prefix} />
+          {isBannerOpen && <ProductHuntBanner setBannerOpen={setBannerOpen} />}
           {React.cloneElement((children: Object), { prefix, lang })}
           <Footer {...props} prefix={prefix} />
         </div>
