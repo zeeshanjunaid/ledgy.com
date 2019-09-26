@@ -80,7 +80,7 @@ module.exports = {
           '/*': [
             [
               "Content-Security-Policy: default-src 'self'",
-              "img-src 'self' data: https://csi.gstatic.com https://www.google-analytics.com https://maps.gstatic.com https://maps.googleapis.com https://stats.g.doubleclick.net",
+              "img-src 'self' data: https://api.producthunt.com https://csi.gstatic.com https://www.google-analytics.com https://maps.gstatic.com https://maps.googleapis.com https://stats.g.doubleclick.net",
               "object-src 'none'",
               "font-src 'self' data: https://fonts.gstatic.com",
               "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://wchat.eu.freshchat.com/js/ https://snippets.freshchat.com/js/ https://www.googletagmanager.com/ https://www.google-analytics.com https://sjs.bizographics.com/ https://maps.googleapis.com",
