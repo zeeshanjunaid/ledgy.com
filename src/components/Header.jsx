@@ -3,7 +3,7 @@
 import React from 'react';
 import Img from 'gatsby-image';
 import { LanguageHint } from '../components/Markdown';
-import { calculatorUrl, targetBlank, appUrl, trackSignup } from '../layouts/utils';
+import { calculatorUrl, targetBlank, trackSignup } from '../layouts/utils';
 
 export const DefaultHeader = ({
   data,
