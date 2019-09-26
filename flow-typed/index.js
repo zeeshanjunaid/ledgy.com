@@ -18,11 +18,12 @@ declare type LayoutProps = {|
 |};
 
 declare type Page = {|
+  id: string,
   title: string,
   description: string,
   date?: string,
   author?: string,
-  content: { childMdx: { body: string } },
+  content: {| childMdx: {| body: string |} |},
   slug: string,
   language: 'en' | 'de' | 'fr',
   cover?: Object

@@ -48,7 +48,10 @@ const Logo = (props: { prefix: string, inverse: boolean }) => (
   </Link>
 );
 
-const navbarLinks = [
+const navbarLinks = (props: LayoutProps) => [
+  ...(!props.location.pathname.includes('calculator')
+    ? [[<Trans>Calculator</Trans>, 'calculator']]
+    : []),
   [<Trans>Features</Trans>, 'features'],
   [<Trans>Pricing</Trans>, 'pricing'],
   [<Trans>Help</Trans>, 'help'],
@@ -66,7 +69,7 @@ const Nav = (props: LayoutProps) => (
       <section className="navbar-mobile">
         <h6 className="d-sm-none">Ledgy</h6>
         <nav className="nav nav-navbar ml-auto">
-          {navbarLinks.map(([label, to]) => (
+          {navbarLinks(props).map(([label, to]) => (
             <Link className="nav-link" key={to} href to={`${props.prefix}/${to}/`}>
               {label}
             </Link>
@@ -78,7 +81,7 @@ const Nav = (props: LayoutProps) => (
 
       <div className="navbar-right">
         <a
-          className="btn btn-round btn-outline-light ml-lg-4 mr-2"
+          className="btn btn-round btn-outline-light mx-2"
           href={`${appUrl}/login`}
           onClick={() => trackSignup('login')}
         >
@@ -103,7 +106,6 @@ const CTABanner = () => {
       <div className="container py-md-4">
         <div className="row m-0 w-100 justify-content-center align-items-center">
           <h4 className="m-3 text-center">{experiment.title}</h4>
-
           <a
             className="cta-button m-3 btn btn-lg btn-round btn-primary align-self-center"
             href={`${appUrl}/signup`}
@@ -151,7 +153,8 @@ const helpLinks = [
   [<Trans>Help Center</Trans>, 'help'],
   [<Trans>Getting Started</Trans>, 'help/getting-started'],
   [<Trans>Glossary</Trans>, 'glossary'],
-  [<Trans>ESOP Templates</Trans>, 'help/employee-participation-guide']
+  [<Trans>ESOP Templates</Trans>, 'help/employee-participation-guide'],
+  [<Trans>Round Calculator</Trans>, 'calculator']
 ];
 const blogLinks = [
   [<Trans>Option Pools</Trans>, 'blog/pre-and-post-money-option-pools'],

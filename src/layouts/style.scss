@@ -93,6 +93,10 @@ h1 {
   max-width: 500px;
 }
 
+.calculator-banner h1, .banner-text {
+  max-width: 800px;
+}
+
 .section-header p {
   font-size: inherit;
 }
@@ -246,6 +250,32 @@ $markdown-spacer: $markdown-font-size;
   @include media-breakpoint-up(xl) {
     margin-top: 10%;
     width: 115%;
+  }
+}
+
+.calculator {
+  margin-top: 15%;
+  @include media-breakpoint-up(lg) {
+    width: 110%;
+  }
+}
+
+.product-hunt-logo {
+  width: 50%;
+  @include media-breakpoint-up(sm) {
+    width: 30%;
+  }
+  @include media-breakpoint-up(xl) {
+    width: 35%;
+  }
+}
+
+.calculator-video {
+  width: 90vw;
+  height: 210px;
+  @include media-breakpoint-up(md) {
+    height: 315px;
+    width: 560px;
   }
 }
 
