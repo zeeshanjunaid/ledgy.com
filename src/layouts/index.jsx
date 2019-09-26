@@ -391,7 +391,7 @@ const ProductHuntBanner = ({ setBannerOpen }: {| setBannerOpen: boolean => void 
           Fundraising Calculator
           <FontAwesomeIcon icon={faCalculator} className="mx-1 text-light" title="Calculator" />
         </a>
-        on Product Hunt today.
+        on Product Hunt today!
       </div>
     }
   />
