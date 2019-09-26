@@ -17,13 +17,15 @@ declare type LayoutProps = {|
   location: { pathname: string }
 |};
 
+declare type Mdx = {| childMdx: {| body: string |} |};
+
 declare type Page = {|
   id: string,
   title: string,
   description: string,
   date?: string,
   author?: string,
-  content: {| childMdx: {| body: string |} |},
+  content: Mdx,
   slug: string,
   language: 'en' | 'de' | 'fr',
   cover?: Object

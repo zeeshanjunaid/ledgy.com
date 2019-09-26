@@ -4,7 +4,6 @@ import React from 'react';
 import { withI18n } from '@lingui/react';
 import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
-import { MDXProvider } from '@mdx-js/react';
 
 import { ContentHeader, ContentBody, PostLink } from '../components/Content';
 import { Title } from '../layouts/utils';
@@ -29,11 +28,7 @@ export default withI18n()(({ i18n, data }: Props) => (
             to={youtube}
             post={node}
             defaultImage={data.ledgy}
-            description={
-              <MDXProvider>
-                <MDXRenderer>{description.childMdx.body}</MDXRenderer>
-              </MDXProvider>
-            }
+            description={<MDXRenderer>{description.childMdx.body}</MDXRenderer>}
           />
         );
       })}
