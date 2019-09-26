@@ -67,16 +67,17 @@ export const CalculatorHeader = ({ data }: { data: any }) => {
                   onClick={() => trackSignup('clickCalculator')}
                   {...targetBlank}
                 >
-                  Launch Calculator
+                  Launch the Calculator
                 </a>
                 <a
                   className="btn btn-block d-sm-inline btn-xl mx-1 shadow-none"
-                  href={`${appUrl}/signup`}
+                  href="https://www.producthunt.com/posts/startup-fundraising-calculator?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-startup-fundraising-calculator"
+                  {...targetBlank}
                   onClick={() => trackSignup('clickProductHunt')}
                 >
                   <img
-                    src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=169028&amp;theme=light"
-                    alt="Featured in Product Hunt"
+                    src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=169181&theme=light"
+                    alt="Startup Fundraising Calculator - The calculator you need if you're raising money. | Product Hunt Embed"
                     className="product-hunt-logo"
                   />
                 </a>
