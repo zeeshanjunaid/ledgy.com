@@ -46,7 +46,7 @@ export default () => {
     `
   );
   const banner = result.allContentfulBanner.edges.find(isVisibleNow);
-  if (!banner) return null;
+  if (!banner) return <div />;
 
   return <Banner content={banner.node.content} hide={() => setShow(false)} />;
 };
