@@ -165,7 +165,7 @@ const IndexPage = ({ i18n, ...props }: Object) => (
               <PrivacyElement
                 icon={faDatabase}
                 title={i18n.t`Backups`}
-                body={i18n.t`Daily backups ensure nothing is ever lost`}
+                body={i18n.t`Regular encrypted backups ensure nothing is ever lost`}
                 size="6"
               />
 

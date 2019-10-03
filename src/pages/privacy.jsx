@@ -19,7 +19,7 @@ const Header = ({ i18n }: Props) => (
   <header className="header text-white bg-ledgy">
     <Title
       title={i18n.t`Privacy`}
-      description={i18n.t`Privacy made in Europe. Because your equity data is not for everyone.`}
+      description={i18n.t`Privacy made in Switzerland. Because your equity data is not for everyone.`}
     />
 
     <div className="container text-center">
@@ -42,7 +42,9 @@ const IndexPage = ({ i18n, ...props }: Props) => (
       <div className="section">
         <Section>
           <p>
-            <Trans>Privacy made in Europe. Because your equity data is not for everyone.</Trans>
+            <Trans>
+              Privacy made in Switzerland. Because your equity data is not for everyone.
+            </Trans>
           </p>
           <p>
             <Trans>
