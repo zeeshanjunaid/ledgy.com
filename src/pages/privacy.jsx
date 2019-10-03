@@ -129,7 +129,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
             <PrivacyElement
               icon={faChartPie}
               title={i18n.t`Equity data`}
-              body={i18n.t`Nobody has any access to the equity data you provide. They are stored in Switzerland, a country with the highest privacy standards. Your stakeholders have no access and don’t get emails before you explicitly invite them.`}
+              body={i18n.t`Nobody has any access to the equity data you provide. Data is stored in Switzerland, a country with the highest privacy standards. Your stakeholders have no access and get no emails until you explicitly invite them.`}
               size="6"
             />
           </PrivacyRow>

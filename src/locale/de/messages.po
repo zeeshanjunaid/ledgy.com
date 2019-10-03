@@ -916,7 +916,7 @@ msgid "Newsletter"
 msgstr "Newsletter"
 
 #: src/pages/privacy.jsx:132
-msgid "Nobody has any access to the equity data you provide. They are stored in Switzerland, a country with the highest privacy standards. Your stakeholders have no access and don’t get emails before you explicitly invite them."
+msgid "Nobody has any access to the equity data you provide. Data is stored in Switzerland, a country with the highest privacy standards. Your stakeholders have no access and get no emails until you explicitly invite them."
 msgstr ""
 
 #: src/pages/pricing.jsx:35
