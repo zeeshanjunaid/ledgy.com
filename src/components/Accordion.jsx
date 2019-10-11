@@ -16,7 +16,7 @@ export const AccordionItem = ({
   title: string,
   children: Node
 |}) => {
-  const isOpen = isBrowser && window.top.location.hash === `#${id}-body`;
+  const isOpen = isBrowser && window.top.location.hash === `#${id}`;
   return (
     <div className="card mb-0">
       <h6 className="card-title mt-0 bg-white" id={id}>
