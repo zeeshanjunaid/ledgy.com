@@ -13,7 +13,7 @@ export default (props: Props) => (
     <div className="col-md-6 col-xl-5 offset-xl-1">
       <FontAwesomeIcon icon={faShieldAlt} className="text-primary mb-2" size="3x" />
       <h5>
-        <Trans>Privacy made in Europe</Trans>
+        <Trans>Privacy made in Switzerland</Trans>
       </h5>
       <p>
         <Trans>Because your equity data is not for everyone</Trans>
