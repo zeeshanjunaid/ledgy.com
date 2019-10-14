@@ -4,7 +4,7 @@ msgstr ""
 "Mime-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.3\n"
+"X-Generator: Poedit 2.2.1\n"
 "Language: fr\n"
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
@@ -976,7 +976,7 @@ msgstr "Confidentialité made in Switzerland"
 
 #: src/pages/privacy.jsx:22 src/pages/privacy.jsx:45
 msgid "Privacy made in Switzerland. Because your equity data is not for everyone."
-msgstr "Confidentialité made in Switzerland. Parce que vos données d'équité ne sont pas pour tout le monde."
+msgstr "Confidentialité made in Switzerland. Parce que vos données d’actionnariat ne sont pas pour tout le monde."
 
 #: src/pages/features/modeling.jsx:127
 msgid "Pro-rata distribution"
@@ -1184,7 +1184,7 @@ msgstr "Importateur de feuilles de calcul"
 
 #: src/pages/privacy.jsx:80
 msgid "Stakeholder information, company information, share ledger transaction history, other cap table details. Equity data and all related information is used exclusively for the provision of the services"
-msgstr "Informations sur les actionnaires, informations sur la société, historique des transactions dans le registre des actions, autres détails sur le cap table. Les données relatives aux actions et toutes les informations relatives sont utilisées exclusivement pour la fourniture des services"
+msgstr "Informations sur les actionnaires, informations sur la société, historique des transactions dans le registre des actions, autres détails sur le cap table. Les données relatives aux actions et toutes les informations relatives sont utilisées exclusivement pour garantir les meilleurs services"
 
 #: src/pages/features/collaboration.jsx:95
 msgid "Stakeholders access rights"
@@ -1236,7 +1236,7 @@ msgstr "Soutien les paiements d’intérêts et les paiements d’intérêts san
 
 #: src/pages/security.jsx:60
 msgid "Swiss data protection"
-msgstr "Protection data suisse"
+msgstr "Protection de données suisse"
 
 #: src/pages/contact.jsx:65
 msgid "Switzerland"
