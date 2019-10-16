@@ -1,56 +1,75 @@
 // @flow
 
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 import { Trans } from '@lingui/react';
 import Img from 'gatsby-image';
 import sample from 'lodash/sample';
 
 import { demoUrl, targetBlank, appUrl, trackSignup, isBrowser } from '../layouts/utils';
 
-const oldExperiments = [
-  {
-    name: 'master',
-    title: <Trans>The New Standard in Equity Management</Trans>,
-    subtitle: <Trans>Made for startups, great for investors</Trans>
+const languageMap = {
+  en: {
+    title: 'titleEn',
+    subtitle: 'subtitleEn'
   },
-  {
-    name: 'lostTrack',
-    title: <Trans>Round Modeling. Made Simple.</Trans>,
-    subtitle: (
-      <Trans>Lost track of who owns how many shares in your startup? Let Ledgy deal with it.</Trans>
-    )
+  de: {
+    title: 'titleDe',
+    subtitle: 'subtitleDe'
   },
-  {
-    name: 'modelFinancingRound',
-    title: <Trans>Round Modeling. Made Simple.</Trans>,
-    subtitle: <Trans>Want to model the new financing round for your company? Use Ledgy!</Trans>
-  },
-  {
-    name: 'investorRelations',
-    title: <Trans>Investor relations and equity management for startups</Trans>,
-    subtitle: (
-      <Trans>Share important documents with your investors, advisory board and employees.</Trans>
-    )
+  fr: {
+    title: 'titleFr',
+    subtitle: 'subtitleFr'
   }
-];
+};
 
-const getExperiment = () => {
-  const experiment = isBrowser ? sample(oldExperiments) : oldExperiments[0];
-  return experiment;
+const getExperiment = (experiments, lang) => {
+  const sampledExperiment = isBrowser ? sample(experiments) : experiments[0];
+  const { title, subtitle } = languageMap[lang];
+  return {
+    name: sampledExperiment.name,
+    title: sampledExperiment[title],
+    subtitle: sampledExperiment[subtitle]
+  };
 };
 
 // eslint-disable-next-line import/prefer-default-export
-export const HomePageHeader = ({ i18n, data }: Props) => {
-  const experiment = getExperiment();
+export const HomePageHeader = ({ i18n, data, lang }: Props) => {
+  const headers = useStaticQuery(
+    graphql`
+      {
+        allContentfulLandingPage {
+          edges {
+            node {
+              id
+              name
+              titleEn
+              titleDe
+              titleFr
+              subtitleEn
+              subtitleDe
+              subtitleFr
+            }
+          }
+        }
+      }
+    `
+  );
+  const experiments = headers.allContentfulLandingPage.edges.map(edge => edge.node);
+  const { title, subtitle, name } = getExperiment(experiments, lang);
+
+  useEffect(() => {
+    window.experiment = name;
+    if (window.ga) window.ga('set', 'dimension1', window.experiment);
+  }, []);
+
   return (
     <header className="header bg-ledgy home-banner px-1 text-left ">
       <div className="container">
         <div className="row gap-y mt-md-2 pb-4 pb-md-6">
           <div className="col-lg-6">
-            <h1 className="text-white mb-2 mb-sm-3">{experiment.title}</h1>
-            <h5 className="text-white font-weight-light pb-4 pb-lg-6 mb-0">
-              {experiment.subtitle}
-            </h5>
+            <h1 className="text-white mb-2 mb-sm-3">{title}</h1>
+            <h5 className="text-white font-weight-light pb-4 pb-lg-6 mb-0">{subtitle}</h5>
 
             <div className="text-white pb-5 pb-lg-7 banner-text">
               <Trans>
