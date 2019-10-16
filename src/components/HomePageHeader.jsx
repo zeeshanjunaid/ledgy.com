@@ -70,14 +70,6 @@ export const HomePageHeader = ({ i18n, data, lang }: Props) => {
           <div className="col-lg-6">
             <h1 className="text-white mb-2 mb-sm-3">{title}</h1>
             <h5 className="text-white font-weight-light pb-4 pb-lg-6 mb-0">{subtitle}</h5>
-
-            <div className="text-white pb-5 pb-lg-7 banner-text">
-              <Trans>
-                Get your cap table and employee participation plans right, from the beginning. Make
-                your financing rounds a success and engage your investors and employees. Know your
-                data is safe and compliant.
-              </Trans>
-            </div>
             <a
               className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-outline-light"
               href={demoUrl}
