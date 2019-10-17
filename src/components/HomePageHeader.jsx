@@ -26,7 +26,7 @@ const languageMap = {
 type ExperimentKeys = {
   name: string,
   titleKey: string,
-  subtitleKey: Node
+  subtitleKey: string
 };
 
 type Experiment = {
