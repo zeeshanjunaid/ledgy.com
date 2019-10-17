@@ -10,26 +10,38 @@ import { demoUrl, targetBlank, appUrl, trackSignup, isBrowser } from '../layouts
 
 const languageMap = {
   en: {
-    title: 'titleEn',
-    subtitle: 'subtitleEn'
+    titleKey: 'titleEn',
+    subtitleKey: 'subtitleEn'
   },
   de: {
-    title: 'titleDe',
-    subtitle: 'subtitleDe'
+    titleKey: 'titleDe',
+    subtitleKey: 'subtitleDe'
   },
   fr: {
-    title: 'titleFr',
-    subtitle: 'subtitleFr'
+    titleKey: 'titleFr',
+    subtitleKey: 'subtitleFr'
   }
 };
 
-const getExperiment = (experiments, lang) => {
+type ExperimentKeys = {
+  name: string,
+  titleKey: string,
+  subtitleKey: Node
+};
+
+type Experiment = {
+  name: string,
+  title: string,
+  subtitle: string
+};
+
+const getExperiment = (experiments: ExperimentKeys[], lang: string): Experiment => {
   const sampledExperiment = isBrowser ? sample(experiments) : experiments[0];
-  const { title, subtitle } = languageMap[lang];
+  const { titleKey, subtitleKey } = languageMap[lang];
   return {
     name: sampledExperiment.name,
-    title: sampledExperiment[title],
-    subtitle: sampledExperiment[subtitle]
+    title: sampledExperiment[titleKey],
+    subtitle: sampledExperiment[subtitleKey]
   };
 };
 
