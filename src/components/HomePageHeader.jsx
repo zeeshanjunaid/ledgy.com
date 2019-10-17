@@ -75,24 +75,28 @@ export const HomePageHeader = ({ i18n, data, lang }: Props) => {
     <header className="header bg-ledgy home-banner px-1 text-left ">
       <div className="container">
         <div className="row gap-y mt-md-2 pb-4 pb-md-6">
-          <div className="col-lg-6">
-            <h1 className="text-white mb-2 mb-sm-3">{title}</h1>
-            <h5 className="text-white font-weight-light pb-4 pb-lg-6 mb-0">{subtitle}</h5>
-            <a
-              className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-outline-light"
-              href={demoUrl}
-              onClick={() => trackSignup('clickDemo')}
-              {...targetBlank}
-            >
-              <Trans>See the Demo</Trans>
-            </a>
-            <a
-              className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-light"
-              href={`${appUrl}/signup`}
-              onClick={trackSignup}
-            >
-              <Trans>Get Started Free</Trans>
-            </a>
+          <div className="col-lg-6 d-flex flex-column justify-content-center">
+            <div className="mt-md-n6 mb-md-4">
+              <h1 className="text-white mb-2 mb-sm-3">{title}</h1>
+              <p className="big-text text-white font-weight-light">{subtitle}</p>
+            </div>
+            <div>
+              <a
+                className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-outline-light"
+                href={demoUrl}
+                onClick={() => trackSignup('clickDemo')}
+                {...targetBlank}
+              >
+                <Trans>See the Demo</Trans>
+              </a>
+              <a
+                className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-light"
+                href={`${appUrl}/signup`}
+                onClick={trackSignup}
+              >
+                <Trans>Get Started Free</Trans>
+              </a>
+            </div>
           </div>
           <div className="col-lg-6">
             <div id="tablet-ledgy" data-aos="fade-up">

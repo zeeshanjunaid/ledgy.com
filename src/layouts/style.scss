@@ -37,6 +37,15 @@ li > a {
   color: $gray-100;
 }
 
+.big-text {
+  font-size: 18px;
+  line-height: 1.8rem;
+  @include media-breakpoint-up(md) {
+    font-size: 24px;
+    line-height: 2.2rem;
+  }
+}
+
 .bg-ledgy {
   background-image: linear-gradient(to right bottom, #053a5e, #005e85, #0086a9, #00afc9);;
   overflow: hidden;
