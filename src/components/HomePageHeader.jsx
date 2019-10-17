@@ -8,25 +8,19 @@ import sample from 'lodash/sample';
 
 import { demoUrl, targetBlank, appUrl, trackSignup, isBrowser } from '../layouts/utils';
 
-const languageMap = {
+const languageKeys = {
   en: {
-    titleKey: 'titleEn',
-    subtitleKey: 'subtitleEn'
+    title: 'titleEn',
+    subtitle: 'subtitleEn'
   },
   de: {
-    titleKey: 'titleDe',
-    subtitleKey: 'subtitleDe'
+    title: 'titleDe',
+    subtitle: 'subtitleDe'
   },
   fr: {
-    titleKey: 'titleFr',
-    subtitleKey: 'subtitleFr'
+    title: 'titleFr',
+    subtitle: 'subtitleFr'
   }
-};
-
-type ExperimentKeys = {
-  name: string,
-  titleKey: string,
-  subtitleKey: string
 };
 
 type Experiment = {
@@ -35,9 +29,11 @@ type Experiment = {
   subtitle: string
 };
 
+type ExperimentKeys = Experiment;
+
 const getExperiment = (experiments: ExperimentKeys[], lang: string): Experiment => {
   const sampledExperiment = isBrowser ? sample(experiments) : experiments[0];
-  const { titleKey, subtitleKey } = languageMap[lang];
+  const { title: titleKey, subtitle: subtitleKey } = languageKeys[lang];
   return {
     name: sampledExperiment.name,
     title: sampledExperiment[titleKey],
