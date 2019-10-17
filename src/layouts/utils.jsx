@@ -86,8 +86,7 @@ export const animateTablet = () => {
       const banner = document.querySelector('header');
       const { scrollY } = window;
       if (tablet && banner && scrollY <= banner.clientHeight) {
-        tablet.style.transform = `rotateZ(${scrollY / -70}deg) translateY(${scrollY /
-          35}%) skew(-${scrollY / 140}deg)`;
+        tablet.style.transform = `translateY(${scrollY / 50}%)`;
       }
     }
   }, 50);
