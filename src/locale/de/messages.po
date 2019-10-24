@@ -6,7 +6,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Creation-Date: 2018-09-12T18:40:54.619Z\n"
-"PO-Revision-Date: 2019-10-11 20:39+0200\n"
+"PO-Revision-Date: 2019-10-24 08:50+0200\n"
 "Language: de\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: Timo Horstschäfer <timo@ledgy.com>\n"
@@ -47,7 +47,7 @@ msgstr "Für jedes Dokument wird beim Hochladen automatisch ein Zertifikat auf d
 
 #: src/pages/features/collaboration.jsx:22
 msgid "A secure data room, audit trail, and read-only access for investors means saving on costly due diligence tools."
-msgstr "Für jedes Dokument wird beim Hochladen automatisch ein Zertifikat auf der Bitcoin-Blockchain gespeichert"
+msgstr "Für jedes Dokument wird beim Hochladen automatisch ein Zertifikat auf der Bitcoin-Blockchain gespeichert."
 
 #: src/pages/pricing.jsx:166
 msgid "A stakeholder is any holder of shares, (phantom) options, warrants, or convertibles.<0/>It does not include the company treasury or incentive pools."
@@ -122,7 +122,7 @@ msgstr "Beliebiges Vesting"
 msgid "As a startup, be professional towards your investors, track KPIs, write recurring reports. As an investor, this is the simplest and most time-efficient way to manage your portfolio."
 msgstr "Als Startup, sei professionell gegenüber den Investoren, verfolge KPIs und schreibe wiederkehrende Reports. Als Investor ist dies der einfachste und zeiteffizienteste Weg dein Portfolio zu verwalten."
 
-#: src/pages/index.jsx:140
+#: src/pages/index.jsx:58
 msgid "As featured in"
 msgstr "Erschienen in"
 
@@ -474,6 +474,10 @@ msgstr "Unternehmer, Business Angel, Gründer von Doodle.com"
 msgid "Entrepreneur, technologist, founder of Doodle.com"
 msgstr "Unternehmer, Technologe, Gründer von Doodle.com"
 
+#: src/layouts/index.jsx:400
+msgid "Equity done right"
+msgstr "Beteiligungen richtig verwaltet"
+
 #: src/pages/privacy.jsx:79 src/pages/privacy.jsx:131
 msgid "Equity data"
 msgstr "Aktiendaten"
@@ -513,7 +517,7 @@ msgstr "Funktionen"
 msgid "Featuring unlimited share classes, treasury shares, pooled investments, and automatically numbered shares"
 msgstr "Mit beliebig vielen Anteilsklassen, Treasury Anteilen, gepoolten Investitionen und automatischer Aktiennummerierung"
 
-#: src/pages/index.jsx:194
+#: src/pages/index.jsx:113
 msgid "Finally, I have a reliable overview of all our shares, employee grants, and their legal documents. So much better than the Excel I used before."
 msgstr "Endlich habe ich eine zuverlässige Übersicht über all unsere Aktien, Mitarbeiterdarlehen und die rechtlichen Dokumente dazu. Das ist so viel besser als Excel, das ich früher benutzt habe."
 
@@ -525,11 +529,11 @@ msgstr "Modellierung von Runden"
 msgid "Find answers to your most common questions about Ledgy"
 msgstr "Hier findest du Antworten auf die häufigsten Fragen zu Ledgy"
 
-#: src/pages/index.jsx:230
+#: src/pages/index.jsx:149
 msgid "Find out why they trust us"
 msgstr "Warum sie uns vertrauen"
 
-#: src/layouts/utils.jsx:99
+#: src/layouts/utils.jsx:98
 msgid "Find peace of mind with a better cap table tool"
 msgstr "Behalte den Überblick mit einem besserem Cap Table Tool"
 
@@ -553,7 +557,7 @@ msgstr "Gründer von Meisser Economics, Bitcoin Association Schweiz und Wuala"
 msgid "Free"
 msgstr "Gratis"
 
-#: src/layouts/utils.jsx:97
+#: src/layouts/utils.jsx:96
 msgid "Free forever with 50 MB storage"
 msgstr "Für immer kostenlos mit 50 MB Speicherplatz"
 
@@ -569,7 +573,7 @@ msgstr "GDPR"
 msgid "German"
 msgstr "Deutsch"
 
-#: src/pages/index.jsx:88
+#: src/components/HomePageHeader.jsx:97
 msgid "Get Started Free"
 msgstr "Kostenlos starten"
 
@@ -593,10 +597,6 @@ msgstr "Lege in wenigen Minuten mit dem Copy-Paste-Tool für bestehende Tabellen
 #: src/pages/features/modeling.jsx:88
 msgid "Get the calculations right"
 msgstr "Vermeide kostspielige Fehler"
-
-#: src/pages/index.jsx:69
-msgid "Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant."
-msgstr "Erstelle deinen Cap Table und deine Mitarbeiterbeteiligungspläne von Anfang an richtig. Bringe deine Finanzierungsrunden zum Erfolg und motiviere deine Investoren und Mitarbeiter. Sei dir sicher, dass deine Daten gut aufgehoben sind."
 
 #: src/layouts/index.jsx:401
 msgid "Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant. Try now for free!"
@@ -640,7 +640,7 @@ msgstr "Hilfe"
 msgid "Help Center"
 msgstr "Help Center"
 
-#: src/layouts/utils.jsx:98
+#: src/layouts/utils.jsx:97
 msgid "Help your stakeholders stay up to date"
 msgstr "Halte deine Stakeholder auf dem Laufenden"
 
@@ -665,7 +665,7 @@ msgstr "Wie können wir helfen?"
 msgid "How we protect your information"
 msgstr "Wie wir deine Informationen schützen"
 
-#: src/pages/index.jsx:216
+#: src/pages/index.jsx:135
 msgid "I needed exactly that. Every founder should use Ledgy’s modeling tools for financing rounds!"
 msgstr "Genau das habe ich gesucht. Jeder Gründer sollte Ledgys Modellierungswerkzeug für Finanzierungsrunden benutzen!"
 
@@ -714,10 +714,6 @@ msgstr "Investor Relations & Portfolio"
 msgid "Investor portfolio"
 msgstr "Investoren-Portfolio"
 
-#: src/pages/index.jsx:44
-msgid "Investor relations and equity management for startups"
-msgstr "Investor Relations und Equity Management für Startups"
-
 #: src/layouts/index.jsx:171
 msgid "Investors"
 msgstr "Investor Relations"
@@ -734,7 +730,7 @@ msgstr "Ganz einfach Stakeholder, Emissionen oder Optionen aus Excel kopieren un
 msgid "Jahlela has a background in cognitive neuroscience, graduated from UC Berkeley, and founded a few startups before switching to full-time software engineering"
 msgstr "Jahlela hat einen Hintergrund in kognitiven Neurowissenschaften, hat an der UC Berkeley studiert und einige Start-ups gegründet, bevor sie zu Vollzeit zur Software-Entwicklung überging"
 
-#: src/pages/index.jsx:168
+#: src/pages/index.jsx:87
 msgid "Join hundreds of companies"
 msgstr "Schliesse dich hunderten Startups an"
 
@@ -830,10 +826,6 @@ msgstr "Liquidationspräferenzen"
 msgid "Log In"
 msgstr "Anmelden"
 
-#: src/pages/index.jsx:34
-msgid "Lost track of who owns how many shares in your startup? Let Ledgy deal with it."
-msgstr "Hast du die Übersicht verloren, wem wie viele Aktien in deinem Startup gehören? Lass Ledgy sich darum kümmern."
-
 #: src/layouts/team.jsx:127
 msgid "Luna is a model of the Saturn V rocket, which has been to space 13 times, and holds the record for largest payload to low Earth orbit. She’s still under construction — <0>Ready to help?</0>"
 msgstr "Luna ist ein Modell der Rakete Saturn V, welche 13 mal im Weltraum war und den Rekord für die höchste Nutzlast in die untere Erdumlaufbahn hält. Sie ist noch im Aufbau — <0>Willst du helfen?</0>"
@@ -841,10 +833,6 @@ msgstr "Luna ist ein Modell der Rakete Saturn V, welche 13 mal im Weltraum war u
 #: src/pages/about-us.jsx:185
 msgid "M&A and private equity lawyer with a focus on start-up legal advise, Smartuplaw.ch"
 msgstr "M&A- und Private-Equity-Anwältin mit Schwerpunkt auf Start-up Beratung, Smartuplaw.ch"
-
-#: src/pages/index.jsx:28
-msgid "Made for startups, great for investors"
-msgstr "Gemacht für Startups, perfekt für Investoren"
 
 #: src/pages/features/collaboration.jsx:105
 msgid "Make linked documents accessible to stakeholders involved in the transaction"
@@ -1062,10 +1050,6 @@ msgstr "Finanzierungsrechner"
 msgid "Round Modeling"
 msgstr "Round Modeling"
 
-#: src/pages/index.jsx:32 src/pages/index.jsx:39
-msgid "Round Modeling. Made Simple."
-msgstr "Runden-Modellierung. Ganz Einfach."
-
 #: src/pages/features/modeling.jsx:20 src/pages/features/modeling.jsx:30
 msgid "Round and Exit Modeling"
 msgstr "Modellierung von Finanzierungsrunden und Exits"
@@ -1094,7 +1078,7 @@ msgstr "Spare dir kostspielige Due-Diligence Tools"
 msgid "Save time in future due diligence by attaching legal documents to their transactions, making them easily searchable by transaction information"
 msgstr "Spare Zeit bei zukünftigen Due-Diligence-Prüfungen, indem du an alle Transaktionen die relevanten rechtlichen Dokumente anhängst, welche später ganz einfach gefunden und aufgerufen werden können"
 
-#: src/pages/index.jsx:93
+#: src/components/HomePageHeader.jsx:103
 msgid "Screenshot of the Ledgy app"
 msgstr "Screenshot der Ledgy-App"
 
@@ -1112,7 +1096,7 @@ msgstr "Sicherheit"
 msgid "See how many shares have to be reserved for a fixed percentage employee pool"
 msgstr "Finde heraus, wie viele Aktien für einen festen prozentualen Mitarbeiterpool reserviert werden müssen"
 
-#: src/pages/index.jsx:81
+#: src/components/HomePageHeader.jsx:90
 msgid "See the Demo"
 msgstr "Demo ansehen"
 
@@ -1127,10 +1111,6 @@ msgstr "Limitierung der Server-Anfragen"
 #: src/pages/features/collaboration.jsx:123
 msgid "Set your company up for future due diligences, saving you hours of work and lawyer costs"
 msgstr "Bereite dein Unternehmen auf zukünftige Due-Diligence-Prüfungen vor und spare dir Arbeitszeit und Anwaltskosten"
-
-#: src/pages/index.jsx:46
-msgid "Share important documents with your investors, advisory board and employees."
-msgstr "Teile wichtige Dokumente mit deinen Investoren, Verwaltungsrat und Mitarbeitern."
 
 #: src/pages/features/captable.jsx:112
 msgid "Share number checking"
@@ -1261,10 +1241,6 @@ msgstr "Nutzungsbedingungen"
 msgid "The Ledgy Blog"
 msgstr "Der Ledgy-Blog"
 
-#: src/layouts/index.jsx:400 src/pages/index.jsx:27
-msgid "The New Standard in Equity Management"
-msgstr "Der Neue Standard des Equity Management"
-
 #: src/pages/security.jsx:118
 msgid "The code is always reviewed by at least one other engineer"
 msgstr "Jede Zeile Code wird immer von mindestens einem weiteren Entwickler geprüft"
@@ -1299,7 +1275,7 @@ msgstr "Dies ist eine kurze Zusammenfassung der Datenschutzerklärung. Für Deta
 
 #: src/components/Markdown.jsx:96
 msgid "This page is only available in"
-msgstr "Diese Seite ist nur verfügbar auf:"
+msgstr "Diese Seite ist nur verfügbar auf"
 
 #: src/pages/blog.jsx:14
 msgid "Thoughts on cap tables, financing rounds, and legal issues around running and managing a startup."
@@ -1437,10 +1413,6 @@ msgstr "Grafiken helfen dir zu verstehen, was passiert"
 msgid "Walk through the basics of setting up your Ledgy account"
 msgstr "Gehe durch die Grundlagen der Einrichtung deines Ledgy-Accounts"
 
-#: src/pages/index.jsx:40
-msgid "Want to model the new financing round for your company? Use Ledgy!"
-msgstr "Du möchtest eine neue Finanzierungsrunde für dein Startup modellieren? Nutze Ledgy!"
-
 #: src/pages/help.jsx:54
 msgid "Watch live-recorded videos with educational content for the startup world"
 msgstr "Schaue dir live aufgezeichnete Videos mit Lerninhalten für die Startup-Welt an"
@@ -1469,7 +1441,7 @@ msgstr "Wir erfüllen die höchsten Sicherheitsstandards. Und verbessern sie kon
 msgid "We operate a <0>bug bounty</0> program on Federacy. Write us a message for an invitation."
 msgstr "Wir betreiben ein <0>Bug Bounty</0>-Programm auf Federacy. Schreib’ uns eine Nachricht, um eine Einladung zu erhalten."
 
-#: src/pages/index.jsx:205
+#: src/pages/index.jsx:124
 msgid "We started to use Ledgy’s solution while preparing a large and complex series C. It saved significant amount of time and headaches."
 msgstr "Wir haben Ledgy zum ersten Mal bei der Vorbereitung einer komplexen Series C Runde verwendet. Es hat uns viel Zeit und Kopfschmerzen gespart."
 
@@ -1505,7 +1477,7 @@ msgstr "Yoko hat Physik an der ETHZ, der University of Oxford und dem CERN studi
 msgid "You get a <0>20% discount</0> on Premium if your startup helps reduce carbon emissions.<1/><2>Write us</2> about your impact to see if you qualify."
 msgstr "Du bekommst <0>20% Discount</0> auf den Premium-Plan, wenn dein Startup nachweislich Emissionen reduziert.<1/><2>Schreib uns</2> über deinen Impact, um herauszufinden, ob das auf dein Startup zutrifft."
 
-#: src/layouts/utils.jsx:100
+#: src/layouts/utils.jsx:99
 msgid "Your cap table, free forever"
 msgstr "Dein Cap Table, für immer kostenlos"
 
@@ -1569,7 +1541,7 @@ msgstr "du kontrollierst, was andere sehen und bearbeiten können"
 msgid "stopping the spreadsheet mess"
 msgstr "stoppe das Durcheinander in Tabellendokumenten"
 
-#: src/pages/index.jsx:171
+#: src/pages/index.jsx:90
 msgid "that already use Ledgy for their equity management and investor relations"
 msgstr "die Ledgy bereits für ihre Beteiligungen und Investor Relations nutzen"
 
