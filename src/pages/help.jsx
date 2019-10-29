@@ -45,8 +45,10 @@ const helpLinks = [
   ],
   [
     <Trans>Templates</Trans>,
-    <Trans>Download and use our ESOP template</Trans>,
-    'help/employee-participation-guide',
+    <Trans>
+      Set up your equity plan with our guides and law firm partnerships with little cost and time
+    </Trans>,
+    'templates',
     faListAlt
   ],
   [

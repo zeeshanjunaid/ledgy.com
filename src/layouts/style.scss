@@ -41,7 +41,7 @@ li > a {
   font-size: 18px;
   line-height: 1.8rem;
   @include media-breakpoint-up(md) {
-    font-size: 24px;
+    font-size: 22px;
     line-height: 2.2rem;
   }
 }
@@ -283,6 +283,12 @@ $markdown-spacer: $markdown-font-size;
     }
   @include media-breakpoint-up(xl) {
     margin-top: 10%;
+    width: 115%;
+  }
+}
+
+#mac-templates {
+  @include media-breakpoint-up(lg) {
     width: 115%;
   }
 }

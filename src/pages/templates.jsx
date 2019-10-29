@@ -3,6 +3,7 @@
 import React from 'react';
 import { Trans } from '@lingui/react';
 import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
 import { HeaderLayout } from '../components/HomePageHeader';
 import { targetBlank, appUrl, trackSignup } from '../layouts/utils';
@@ -10,11 +11,12 @@ import { targetBlank, appUrl, trackSignup } from '../layouts/utils';
 export default (props: Props) => {
   return (
     <HeaderLayout
-      title={<Trans>ESOP & PSOP Templates</Trans>}
+      title={<Trans>Employee Participation Plan Templates</Trans>}
       subtitle={
         <Trans>
-          Download your employee participation plan templates in a click, or use our term sheet
-          generator to customize blah blah
+          Get free templates from top Swiss and German law firms for your employee participation
+          plans. Use the Ledgy Term Sheet Generator to easily draft a document with the conditions
+          of your participation plans
         </Trans>
       }
       buttonOneProps={{
@@ -23,22 +25,23 @@ export default (props: Props) => {
         ...targetBlank
       }}
       buttonOneText={<Trans>Launch Templates</Trans>}
-      buttonTwoProps={{ href: `${props.prefix}/help/` }}
+      buttonTwoProps={{ href: `${props.prefix}/templates/esop-vs-psop` }}
       buttonTwoText={<Trans>Learn More</Trans>}
       image={
-        <div id="tablet-ledgy" data-aos="fade-up">
-          {/* <Img {...data.tablet} alt={i18n.t`Screenshot of the Ledgy app`} /> */}
-          hi!
+        <div id="mac-templates" data-aos="fade-up">
+          <Img {...props.data.templates} alt="Templates" />
         </div>
       }
     />
   );
 };
 
-// export const PageQuery = graphql`
-//   {
-//     query {
-
-//     }
-//   }
-// `;
+export const PageQuery = graphql`
+  query {
+    templates: imageSharp(fluid: { originalName: { regex: "/mac-templates.png/" } }) {
+      fluid(maxWidth: 1000) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+`;
