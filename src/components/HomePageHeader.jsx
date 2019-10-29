@@ -41,23 +41,21 @@ const getExperiment = (experiments: ExperimentKeys[], lang: string): Experiment 
   };
 };
 
+declare type HeaderButton = {| props: Object, text: Node |};
+
 export const HeaderLayout = ({
   title,
   subtitle,
-  buttonOneProps,
-  buttonOneText,
-  buttonTwoProps,
-  buttonTwoText,
+  buttonOne,
+  buttonTwo,
   image
-}: {
+}: {|
   title: Node | string,
   subtitle: Node | string,
-  buttonOneProps: Object,
-  buttonOneText: Node,
-  buttonTwoProps: Object,
-  buttonTwoText: Node,
+  buttonOne: HeaderButton,
+  buttonTwo: HeaderButton,
   image: Node
-}) => (
+|}) => (
   <header className="header bg-ledgy home-banner px-1 text-left ">
     <div className="container">
       <div className="row gap-y mt-md-2 pb-4 pb-md-6">
@@ -69,15 +67,15 @@ export const HeaderLayout = ({
           <div>
             <a
               className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-outline-light"
-              {...buttonOneProps}
+              {...buttonOne.props}
             >
-              {buttonOneText}
+              {buttonOne.text}
             </a>
             <a
               className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-light"
-              {...buttonTwoProps}
+              {...buttonTwo.props}
             >
-              {buttonTwoText}
+              {buttonTwo.text}
             </a>
           </div>
         </div>
@@ -117,14 +115,20 @@ export const HomePageHeader = ({ i18n, data, lang }: Props) => {
     if (window.ga) window.ga('set', 'dimension1', window.experiment);
   }, []);
 
+  const buttonOne = {
+    props: { href: demoUrl, onClick: () => trackSignup('clickDemo'), ...targetBlank },
+    text: <Trans>See the Demo</Trans>
+  };
+  const buttonTwo = {
+    props: { href: `${appUrl}/signup`, onClick: trackSignup, ...targetBlank },
+    text: <Trans>Get Started Free</Trans>
+  };
   return (
     <HeaderLayout
       title={title}
       subtitle={subtitle}
-      buttonOneProps={{ href: demoUrl, onClick: () => trackSignup('clickDemo'), ...targetBlank }}
-      buttonOneText={<Trans>See the Demo</Trans>}
-      buttonTwoProps={{ href: `${appUrl}/signup`, onClick: trackSignup, ...targetBlank }}
-      buttonTwoText={<Trans>Get Started Free</Trans>}
+      buttonOne={buttonOne}
+      buttonTwo={buttonTwo}
       image={
         <div id="tablet-ledgy" data-aos="fade-up">
           <Img {...data.tablet} alt={i18n.t`Screenshot of the Ledgy app`} />

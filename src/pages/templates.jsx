@@ -9,6 +9,18 @@ import { HeaderLayout } from '../components/HomePageHeader';
 import { targetBlank, appUrl, trackSignup } from '../layouts/utils';
 
 export default (props: Props) => {
+  const buttonOne = {
+    props: {
+      href: `${appUrl}/templates`,
+      onClick: () => trackSignup('clickTemplates'),
+      ...targetBlank
+    },
+    text: <Trans>Launch Templates</Trans>
+  };
+  const buttonTwo = {
+    props: { href: `${props.prefix}/templates/esop-vs-psop` },
+    text: <Trans>Learn More</Trans>
+  };
   return (
     <HeaderLayout
       title={<Trans>Employee Participation Plan Templates</Trans>}
@@ -19,14 +31,8 @@ export default (props: Props) => {
           of your participation plans
         </Trans>
       }
-      buttonOneProps={{
-        href: `${appUrl}/templates`,
-        onClick: () => trackSignup('clickTemplates'),
-        ...targetBlank
-      }}
-      buttonOneText={<Trans>Launch Templates</Trans>}
-      buttonTwoProps={{ href: `${props.prefix}/templates/esop-vs-psop` }}
-      buttonTwoText={<Trans>Learn More</Trans>}
+      buttonOne={buttonOne}
+      buttonTwo={buttonTwo}
       image={
         <div id="mac-templates" data-aos="fade-up">
           <Img {...props.data.templates} alt="Templates" />
