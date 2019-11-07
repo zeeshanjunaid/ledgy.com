@@ -120,6 +120,19 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
     linkedIn: 'https://www.linkedin.com/in/spelaprijon',
     mail: 'spela@ledgy.com'
   },
+  armon: {
+    name: 'Armon Bättig',
+    role: 'Growth Hacker & Michelin Chef',
+    description: (
+      <Trans>
+        Worked 5 years as a chef before he majored in food engineering and getting a masters degree
+        in Management, Technology, and Economics at ETH Zurich and HKUST.
+      </Trans>
+    ),
+    twitter: 'https://twitter.com/ArmonBattig',
+    linkedIn: 'https://www.linkedin.com/in/armon-baettig',
+    mail: 'armon@ledgy.com'
+  },
   luna: {
     name: 'Luna',
     role: 'Rocket & Trailblazer',
@@ -176,6 +189,11 @@ export const TeamFragment = graphql`
       }
     }
     spela: imageSharp(fluid: { originalName: { regex: "/spela.jpg/" } }) {
+      fluid(maxWidth: 245, maxHeight: 245) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    armon: imageSharp(fluid: { originalName: { regex: "/armon.jpg/" } }) {
       fluid(maxWidth: 245, maxHeight: 245) {
         ...GatsbyImageSharpFluid
       }
