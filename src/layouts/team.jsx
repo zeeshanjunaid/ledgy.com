@@ -126,7 +126,7 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
     description: (
       <Trans>
         Worked 5 years as a chef before he majored in food engineering and getting a masters degree
-        in Management, Technology, and Economics at ETH Zurich and HKUST.
+        in Management, Technology, and Economics at ETH Zurich and HKUST
       </Trans>
     ),
     twitter: 'https://twitter.com/ArmonBattig',
