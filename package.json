@@ -8,7 +8,7 @@
   "main": "n/a",
   "scripts": {
     "compile": "lingui compile",
-    "build": "lingui compile && gatsby build",
+    "build": "./build.sh",
     "serve": "npm run build && gatsby serve",
     "start": "./start.sh",
     "test": "npm run extract && lingui compile --strict && eslint . --ext jsx,js && flow",
