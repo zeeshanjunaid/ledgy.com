@@ -1541,7 +1541,7 @@ msgid "Yoko studied Physics at ETHZ, the University of Oxford and CERN. She was 
 msgstr "Yoko a étudié la physique à l’EPFZ, à l’Université d’Oxford et au CERN. Elle a également été présidente de Swissloop, aidant à construire le premier Hyperloop pod de Suisse."
 
 #: src/pages/pricing.jsx:205
-msgid "You can get Ledgy for half the price for first year. <0>Send us a message</0> and you’ll receive a discount."
+msgid "Only pay half the price during your first year on Ledgy. <0>Send us a message</0> and you’ll receive a discount."
 msgstr "Tu peux obtenir Ledgy pour la moitié du prix durant une année. <0>Envois-nous un message</0> et tu recevras une remise."
 
 #: src/pages/pricing.jsx:189

@@ -203,7 +203,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                 </h5>
                 <p>
                   <Trans>
-                    You can get Ledgy for half the price for first year.{' '}
+                    Only pay half the price during your first year on Ledgy.{' '}
                     <a href="mailto:sales@ledgy.com?subject=Startup Discount Application">
                       Send us a message
                     </a>{' '}
