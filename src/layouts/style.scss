@@ -104,6 +104,10 @@ h1 {
 
 .loader-banner {
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $navbar-light-color;
 }
 
 .calculator-banner h1, .banner-text {
