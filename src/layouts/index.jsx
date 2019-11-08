@@ -39,6 +39,7 @@ import logoDefault from '../img/logo_black.png';
 import logoInverse from '../img/logo_white.png';
 import NewsletterForm from '../components/NewsletterForm';
 import PublicityBanner from '../components/PublicityBanner';
+import Loader from '../components/Loader';
 
 const Logo = (props: { prefix: string, inverse: boolean }) => (
   <Link href to={`${props.prefix}/#start`} className="navbar-brand">
@@ -394,6 +395,7 @@ const TemplateWrapper = withI18n()(({ children, ...props }: SiteProps) => (
       const { siteUrl } = data.site.siteMetadata;
       const thumbnailUrl = `${siteUrl}/thumbnail.png`;
       const pathname = deprefix(props.location.pathname);
+      const isAppShell = pathname === '/offline-plugin-app-shell-fallback/';
       return (
         <div>
           <Title
@@ -436,6 +438,7 @@ const TemplateWrapper = withI18n()(({ children, ...props }: SiteProps) => (
             </noscript>
           </Helmet>
           <Nav {...props} prefix={prefix} />
+          {isAppShell && <Loader />}
           <PublicityBanner />
           {React.cloneElement((children: Object), { prefix, lang })}
           <Footer {...props} prefix={prefix} />
