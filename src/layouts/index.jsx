@@ -336,6 +336,7 @@ const Initialize = () => {
     setTimeout(async () => {
       require('../assets/js/page'); // eslint-disable-line global-require
       require('../assets/js/script'); // eslint-disable-line global-require
+      require('../assets/js/hotjar'); // eslint-disable-line global-require
 
       await loadScript('https://wchat.eu.freshchat.com/js/widget.js');
       window.fcSettings = {
