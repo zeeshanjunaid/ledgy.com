@@ -175,24 +175,44 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                 <ChevronRight />
               </Link>
             </p>
+
             <hr className="my-8" />
-            <h5>
-              <Trans>Does your startup tackle the climate crisis?</Trans>{' '}
-              <span role="img" aria-label="earth">
-                🌍
-              </span>
-            </h5>
-            <p>
-              <Trans>
-                You get a <strong>20% discount</strong> on Premium if your startup helps reduce
-                carbon emissions.
-                <br />
-                <a href="mailto:contact@ledgy.com?subject=Premium Eco-Friendly Discount Application">
-                  Write us
-                </a>{' '}
-                about your impact to see if you qualify.
-              </Trans>
-            </p>
+            <div className="row">
+              <div className="col-12 col-lg-6">
+                <h5>
+                  <Trans>Do you tackle the climate crisis?</Trans>{' '}
+                  <span role="img" aria-label="earth">
+                    🌍
+                  </span>
+                </h5>
+                <p>
+                  <Trans>
+                    You get a <strong>20% discount</strong> on Premium if your startup helps reduce
+                    carbon emissions.{' '}
+                    <a href="mailto:sales@ledgy.com?subject=Eco-Friendly Discount Application">
+                      Tell us about your impact!
+                    </a>
+                  </Trans>
+                </p>
+              </div>
+              <div className="col-12 col-lg-6">
+                <h5>
+                  <Trans>Do you have less than $5m in funding?</Trans>{' '}
+                  <span role="img" aria-label="rocket">
+                    🚀
+                  </span>
+                </h5>
+                <p>
+                  <Trans>
+                    You can get Ledgy for half the price for first year.{' '}
+                    <a href="mailto:sales@ledgy.com?subject=Startup Discount Application">
+                      Send us a message
+                    </a>{' '}
+                    and you’ll receive a discount.
+                  </Trans>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
