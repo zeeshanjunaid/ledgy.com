@@ -102,6 +102,23 @@ h1 {
   max-width: 500px;
 }
 
+.loader-banner {
+  height: 100vh;
+  color: $navbar-light-color;
+  svg {
+    width: 4rem;
+    animation: rotation 2s infinite linear;
+  }
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
 .calculator-banner h1, .banner-text {
   max-width: 800px;
 }
