@@ -9,7 +9,6 @@ export default () => (
       focusable="false"
       data-prefix="fas"
       data-icon="circle-notch"
-      className="svg-inline--fa fa-circle-notch fa-w-16 fa-spin fa-4x "
       role="img"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 512 512"
