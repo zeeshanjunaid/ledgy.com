@@ -187,8 +187,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                 </h5>
                 <p>
                   <Trans>
-                    You get a <strong>20% discount</strong> on Premium if your startup helps reduce
-                    carbon emissions.{' '}
+                    You get a 20% discount on Premium if your startup helps reduce carbon emissions.{' '}
                     <a href="mailto:sales@ledgy.com?subject=Eco-Friendly Discount Application">
                       Tell us about your impact!
                     </a>
@@ -197,7 +196,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               </div>
               <div className="col-12 col-lg-6">
                 <h5>
-                  <Trans>Do you have less than $5m in funding?</Trans>{' '}
+                  <Trans>Do you have less than €5m in funding?</Trans>{' '}
                   <span role="img" aria-label="rocket">
                     🚀
                   </span>
