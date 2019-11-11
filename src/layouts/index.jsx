@@ -50,12 +50,10 @@ const Logo = (props: { prefix: string, inverse: boolean }) => (
   </Link>
 );
 
-const navbarLinks = (props: LayoutProps) => [
-  ...(!props.location.pathname.includes('calculator')
-    ? [[<Trans>Calculator</Trans>, 'calculator']]
-    : []),
+const navbarLinks = () => [
   [<Trans>Features</Trans>, 'features'],
   [<Trans>Pricing</Trans>, 'pricing'],
+  [<Trans>Partners</Trans>, 'partners'],
   [<Trans>Help</Trans>, 'help'],
   [<Trans>Blog</Trans>, 'blog']
 ];
@@ -71,7 +69,7 @@ const Nav = (props: LayoutProps) => (
       <section className="navbar-mobile">
         <h6 className="d-sm-none">Ledgy</h6>
         <nav className="nav nav-navbar ml-auto">
-          {navbarLinks(props).map(([label, to]) => (
+          {navbarLinks().map(([label, to]) => (
             <Link className="nav-link" key={to} href to={`${props.prefix}/${to}/`}>
               {label}
             </Link>
