@@ -143,6 +143,7 @@ const FooterColBody = ({ title, children }: { title: Node, children: Array<Node>
 const companyLinks = [
   [<Trans>About us</Trans>, 'about-us'],
   [<Trans>Blog</Trans>, 'blog'],
+  [<Trans>Partners</Trans>, 'partners'],
   [<Trans>Webinars</Trans>, 'webinars'],
   [<Trans>Security</Trans>, 'security'],
   [<Trans>Privacy</Trans>, 'privacy'],
