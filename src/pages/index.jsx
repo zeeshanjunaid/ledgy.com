@@ -99,7 +99,7 @@ const IndexPage = (props: Props) => (
             <Reference img={props.data.viu} name="VIU Eyeware" />
             <Reference img={props.data.frontify} name="Frontify" />
             <Reference img={props.data.cryptofinance} name="Crypto Finance AG" />
-            <Reference img={props.data.allthings} name="Allthings Technologies" />
+            <Reference img={props.data.nakd} name="NA-KD" />
           </div>
 
           <Hr marginX={10} />
@@ -194,6 +194,11 @@ export const pageQuery = graphql`
       }
     }
     frontify: imageSharp(fluid: { originalName: { regex: "/frontify/" } }) {
+      fixed(width: 150) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+    nakd: imageSharp(fluid: { originalName: { regex: "/nakd/" } }) {
       fixed(width: 150) {
         ...GatsbyImageSharpFixed
       }
