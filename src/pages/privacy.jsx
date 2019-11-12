@@ -35,7 +35,7 @@ const Header = ({ i18n }: Props) => (
 );
 
 const IndexPage = ({ i18n, ...props }: Props) => (
-  <React.Fragment>
+  <>
     <Header i18n={i18n} {...props} />
 
     <main className="main-content">
@@ -136,7 +136,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
         </Section>
       </div>
     </main>
-  </React.Fragment>
+  </>
 );
 
 export default withI18n()(IndexPage);

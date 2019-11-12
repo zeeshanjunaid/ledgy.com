@@ -12,7 +12,7 @@ import {
 } from '../components/partners';
 
 const IndexPage = ({ i18n, ...props }: Props) => (
-  <React.Fragment>
+  <>
     <LawyerHeader i18n={i18n} {...props} />
 
     <main className="main-content pb-0">
@@ -23,7 +23,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
       </div>
       <LawyerCTABanner />
     </main>
-  </React.Fragment>
+  </>
 );
 
 export default withI18n()(IndexPage);
