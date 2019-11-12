@@ -11,15 +11,15 @@ import {
   LawyerHeader
 } from '../components/partners';
 
-const IndexPage = ({ i18n, ...props }: Props) => (
+const IndexPage = ({ ...props }: Props) => (
   <>
-    <LawyerHeader i18n={i18n} {...props} />
+    <LawyerHeader {...props} />
 
     <main className="main-content pb-0">
       <div className="section pb-0">
         <SwissPartners />
         <CollaborationBanner />
-        <UniqueSellingPropositions />
+        <UniqueSellingPropositions {...props} />
       </div>
       <LawyerCTABanner />
     </main>
