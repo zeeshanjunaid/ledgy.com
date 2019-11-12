@@ -6,9 +6,9 @@ const compact = require('lodash/fp/compact');
 
 const languages = ['en', 'de', 'fr'];
 const catalogs = {
-  en: require('./locale/en/messages'), // eslint-disable-line global-require
-  de: require('./locale/de/messages'), // eslint-disable-line global-require
-  fr: require('./locale/fr/messages') // eslint-disable-line global-require
+  en: require('./locale/en/messages'), // eslint-disable-line
+  de: require('./locale/de/messages'), // eslint-disable-line
+  fr: require('./locale/fr/messages') // eslint-disable-line
 };
 
 const defaultLanguage = 'en';
