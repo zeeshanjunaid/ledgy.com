@@ -4,7 +4,8 @@ import React from 'react';
 import { withI18n, Trans } from '@lingui/react';
 
 import Section from '../components/Section';
-import { Title } from '../layouts/utils';
+import { Title, targetBlank } from '../layouts/utils';
+import { FullWidthBanner } from '../components/FullWidthBanner';
 
 const Header = ({ i18n }: Props) => (
   <header className="header text-white bg-ledgy">
@@ -30,7 +31,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
     <Header i18n={i18n} {...props} />
 
     <main className="main-content">
-      <div className="section">
+      <div className="section pb-0">
         <Section>
           <h2 className="text-center">
             <Trans>Swiss Law Partners</Trans>
@@ -67,9 +68,20 @@ const IndexPage = ({ i18n, ...props }: Props) => (
           <i>USPs go here</i>
         </Section>
 
-        <Section>
-          <i>CTA bar goes here</i>
-        </Section>
+        <FullWidthBanner>
+          <div className="container">
+            <div className="row m-0 w-100 justify-content-center align-items-center">
+              <h4 className="m-3 text-center">Are you a lawyer wanting to partner with us?</h4>
+              <a
+                className="cta-button m-3 btn btn-lg btn-round btn-primary align-self-center"
+                href="mailto:sales@ledgy.com?subject=Law Firm Collaboration"
+                {...targetBlank}
+              >
+                <Trans>Apply</Trans>
+              </a>
+            </div>
+          </div>
+        </FullWidthBanner>
       </div>
     </main>
   </React.Fragment>

@@ -123,6 +123,11 @@ h1 {
   max-width: 800px;
 }
 
+.full-width-banner {
+  width: 100%;
+  background-color: $color-bg-light-blue;
+}
+
 .section-header p {
   font-size: inherit;
 }
