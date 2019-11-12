@@ -14,10 +14,9 @@ import {
 const IndexPage = ({ ...props }: Props) => (
   <>
     <LawyerHeader {...props} />
-
     <main className="main-content pb-0">
-      <div className="section pb-0">
-        <SwissPartners />
+      <div className="section py-0">
+        <SwissPartners {...props} />
         <CollaborationBanner />
         <UniqueSellingPropositions {...props} />
       </div>
@@ -27,3 +26,14 @@ const IndexPage = ({ ...props }: Props) => (
 );
 
 export default withI18n()(IndexPage);
+
+// eslint-disable-next-line no-undef
+export const pageQuery = graphql`
+  query {
+    nakd: imageSharp(fluid: { originalName: { regex: "/nakd/" } }) {
+      fixed(width: 150) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
+`;
