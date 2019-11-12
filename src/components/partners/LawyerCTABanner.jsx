@@ -9,7 +9,7 @@ import { FullWidthBanner } from '../FullWidthBanner';
 // eslint-disable-next-line import/prefer-default-export
 export const LawyerCTABanner = () => (
   <FullWidthBanner>
-    <div className="container">
+    <div className="container py-4">
       <div className="row m-0 w-100 justify-content-center align-items-center">
         <h5 className="m-3 text-center">Are you a lawyer wanting to partner with us?</h5>
         <a
