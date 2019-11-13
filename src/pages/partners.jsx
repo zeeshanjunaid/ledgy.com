@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { withI18n } from '@lingui/react';
+import { graphql } from 'gatsby';
 
 import {
   LawyerCTABanner,
@@ -27,11 +28,20 @@ const IndexPage = ({ ...props }: Props) => (
 
 export default withI18n()(IndexPage);
 
-// eslint-disable-next-line no-undef
 export const pageQuery = graphql`
   query {
-    nakd: imageSharp(fluid: { originalName: { regex: "/nakd/" } }) {
-      fixed(width: 150) {
+    kellerhalsCarrard: imageSharp(fluid: { originalName: { regex: "/kellerhals-carrard.png/" } }) {
+      fixed(height: 100) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+    smartup: imageSharp(fluid: { originalName: { regex: "/smartuplaw.png/" } }) {
+      fixed(height: 100) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+    lexr: imageSharp(fluid: { originalName: { regex: "/lexr.png/" } }) {
+      fixed(height: 100) {
         ...GatsbyImageSharpFixed
       }
     }
