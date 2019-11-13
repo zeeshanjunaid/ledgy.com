@@ -31,17 +31,17 @@ export default withI18n()(IndexPage);
 export const pageQuery = graphql`
   query {
     kellerhalsCarrard: imageSharp(fluid: { originalName: { regex: "/kellerhals-carrard.png/" } }) {
-      fixed(height: 100) {
+      fixed(width: 100) {
         ...GatsbyImageSharpFixed
       }
     }
     smartup: imageSharp(fluid: { originalName: { regex: "/smartuplaw.png/" } }) {
-      fixed(height: 100) {
+      fixed(width: 100) {
         ...GatsbyImageSharpFixed
       }
     }
     lexr: imageSharp(fluid: { originalName: { regex: "/lexr.png/" } }) {
-      fixed(height: 100) {
+      fixed(width: 100) {
         ...GatsbyImageSharpFixed
       }
     }

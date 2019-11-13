@@ -386,6 +386,17 @@ $markdown-spacer: $markdown-font-size;
 
 
 
+.partner-card {
+  height: 200px;
+  max-width: 250px;
+  overflow: hidden;
+  border-radius: 5px;
+  a {
+    font-size: 0.75rem;
+  }
+}
+
+
 .top-page-feature-card {
   padding: 30px 30px 30px 20px;
   height: 100%;

@@ -10,25 +10,18 @@ export const SwissPartners = (props: Props) => (
     <h5 className="text-center pb-4">
       <Trans>Swiss Law Partners</Trans>
     </h5>
-    <div className="d-flex">
+    <div className="row d-flex container justify-content-between">
       <PartnerCard
-        firmName="Kellerhals Carrard"
         logo={props.data.kellerhalsCarrard}
         email="startup-desk@kellerhals-carrard.ch"
         website="http://kellerhals-carrard.ch"
       />
       <PartnerCard
-        firmName="Smartup"
         logo={props.data.smartup}
         email="walder@smartuplaw.ch"
         website="http://smartuplaw.ch"
       />
-      <PartnerCard
-        firmName="Lexr"
-        logo={props.data.lexr}
-        email="contact@lexr.ch"
-        website="https://lexr.ch"
-      />
+      <PartnerCard logo={props.data.lexr} email="contact@lexr.ch" website="https://lexr.ch" />
     </div>
   </div>
 );
