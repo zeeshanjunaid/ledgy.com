@@ -11,7 +11,7 @@ const ulClasses = 'width-fit-content text-left pb-0 mb-0 mx-auto';
 // eslint-disable-next-line import/prefer-default-export
 export const UniqueSellingPropositions = (props: Props) => (
   <div className="container pt-6 pb-4">
-    <h5 className="text-center">
+    <h5 className="mt-6 text-center">
       <Trans>The Smoothest Experience for Startups and Lawyers</Trans>
     </h5>
     <div className="row gap-y text-center my-5">

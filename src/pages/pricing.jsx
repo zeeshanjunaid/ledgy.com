@@ -29,7 +29,7 @@ const standard: FeaturesList = [
 const premium: FeaturesList = [
   [10, <Trans>All standard features</Trans>, '', true],
   [11, <Trans>Equity plan management</Trans>, <Trans>Any vesting schedule</Trans>],
-  [12, <Trans>Financing round modeling</Trans>, <Trans>Multiple rounds, 3 scenarios</Trans>],
+  [12, <Trans>Financing round modeling</Trans>, <Trans>Unlimited rounds, 3 scenarios</Trans>],
   [13, <Trans>Access rights</Trans>, <Trans>4 admins, view-only access</Trans>],
   [14, <Trans>Document storage</Trans>, <Trans>Up to 500 MB</Trans>],
   [15, <Trans>Notifications</Trans>, <Trans>Vesting, expiry, maturity</Trans>],

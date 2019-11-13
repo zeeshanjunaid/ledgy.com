@@ -12,13 +12,13 @@ export const CollaborationBanner = () => (
       <div className="col col-8 col-lg-6 offset-2 offset-lg-3">
         <p className="text-center">
           <Trans>
-            Startup law is a unique maze, and getting the advice you need is crucial to avoid costly
-            legal mistakes.
+            Startup law is a unique maze, and getting the advice you need is <b>crucial</b> to avoid
+            costly legal mistakes.
           </Trans>
         </p>
         <p className="text-center">
           <Trans>
-            Our partners will collaborate with you on Ledgy and also offer special offers to Ledgy
+            Our partners will collaborate with you on Ledgy and have special offers for Ledgy
             clients.
           </Trans>
         </p>
