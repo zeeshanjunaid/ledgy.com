@@ -397,6 +397,9 @@ $markdown-spacer: $markdown-font-size;
   a {
     font-size: 0.75rem;
   }
+  img {
+    object-fit: unset !important;
+  }
 }
 
 
