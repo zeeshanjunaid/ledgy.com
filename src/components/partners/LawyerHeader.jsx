@@ -5,7 +5,6 @@ import { Trans } from '@lingui/react';
 
 import { Title } from '../../layouts/utils';
 
-// eslint-disable-next-line import/prefer-default-export
 export const LawyerHeader = ({ i18n }: Props) => (
   <header className="header text-white bg-ledgy">
     <Title

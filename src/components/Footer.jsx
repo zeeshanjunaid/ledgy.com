@@ -80,7 +80,6 @@ const legalLinks = [
   [<Trans>GDPR</Trans>, 'legal/gdpr']
 ];
 
-// eslint-disable-next-line import/prefer-default-export
 export const Footer = (props: LayoutProps) => {
   const isPartners = props.location.pathname.includes('partners');
 

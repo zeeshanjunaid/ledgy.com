@@ -8,7 +8,6 @@ import ReadMore from '../ReadMore';
 const readMoreWrapperClasses = 'col-10 offset-1 col-md-8 offset-md-2 col-lg-4 offset-lg-0';
 const ulClasses = 'width-fit-content text-left pb-0 mb-0 mx-auto';
 
-// eslint-disable-next-line import/prefer-default-export
 export const UniqueSellingPropositions = (props: Props) => (
   <div className="container pt-6 pb-4">
     <h5 className="mt-6 text-center">

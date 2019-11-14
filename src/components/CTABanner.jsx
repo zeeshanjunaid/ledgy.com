@@ -6,7 +6,6 @@ import sample from 'lodash/sample';
 import { Trans } from '@lingui/react';
 import { callToActionExperiments, trackSignup, isBrowser, appUrl } from '../layouts/utils';
 
-// eslint-disable-next-line import/prefer-default-export
 export const CTABanner = () => {
   const experiment = isBrowser ? sample(callToActionExperiments) : callToActionExperiments[0];
   return (

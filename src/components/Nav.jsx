@@ -25,7 +25,6 @@ const navbarLinks = () => [
   [<Trans>Blog</Trans>, 'blog']
 ];
 
-// eslint-disable-next-line import/prefer-default-export
 export const Nav = (props: LayoutProps) => (
   <nav className="navbar navbar-expand-lg navbar-light navbar-stick-dark" data-navbar="sticky">
     <div className="container flex-nowrap">

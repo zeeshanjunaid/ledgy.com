@@ -6,7 +6,6 @@ import { Trans } from '@lingui/react';
 import { targetBlank } from '../../layouts/utils';
 import { FullWidthBanner } from '../FullWidthBanner';
 
-// eslint-disable-next-line import/prefer-default-export
 export const LawyerCTABanner = () => (
   <FullWidthBanner>
     <div className="container py-4">

@@ -7,7 +7,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faLink } from '@fortawesome/free-solid-svg-icons';
 import { targetBlank } from '../../layouts/utils';
 
-// eslint-disable-next-line import/prefer-default-export
 export const PartnerCard = (props: { logo: Object, email: string, website: string }) => {
   const { logo, email, website } = props;
   return (

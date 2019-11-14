@@ -5,7 +5,6 @@ import { Trans } from '@lingui/react';
 
 import { FullWidthBanner } from '../FullWidthBanner';
 
-// eslint-disable-next-line import/prefer-default-export
 export const CollaborationBanner = () => (
   <FullWidthBanner>
     <div className="container">

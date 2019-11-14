@@ -4,7 +4,6 @@ import React from 'react';
 import { Trans } from '@lingui/react';
 import { PartnerCard } from './PartnerCard';
 
-// eslint-disable-next-line import/prefer-default-export
 export const SwissPartners = (props: Props) => (
   <div className="container py-6">
     <h5 className="text-center pb-4">
