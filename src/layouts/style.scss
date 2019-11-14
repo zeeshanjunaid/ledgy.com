@@ -98,6 +98,10 @@ h1 {
   }
 }
 
+.width-fit-content {
+  width: fit-content;
+}
+
 .home-banner h1, .banner-text {
   max-width: 500px;
 }
@@ -121,6 +125,10 @@ h1 {
 
 .calculator-banner h1, .banner-text {
   max-width: 800px;
+}
+
+.full-width-banner {
+  background-color: $color-bg-light-blue;
 }
 
 .section-header p {
@@ -380,6 +388,19 @@ $markdown-spacer: $markdown-font-size;
 }
 
 
+.partner-card {
+  height: 200px;
+  max-width: 250px;
+  overflow: hidden;
+  border-radius: 5px;
+  a {
+    font-size: 0.75rem;
+  }
+  img {
+    object-fit: unset !important;
+  }
+}
+
 
 .top-page-feature-card {
   padding: 30px 30px 30px 20px;
@@ -402,6 +423,9 @@ $markdown-spacer: $markdown-font-size;
   }
 }
 
+.partner-usp li {
+  line-height: 2rem;
+}
 
 .hover-translateY {
   transition: 200ms;

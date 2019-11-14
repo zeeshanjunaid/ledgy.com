@@ -41,7 +41,6 @@ const getExperiment = (experiments: ExperimentKeys[], lang: string): Experiment 
   };
 };
 
-// eslint-disable-next-line import/prefer-default-export
 export const HomePageHeader = ({ i18n, data, lang }: Props) => {
   const headers = useStaticQuery(
     graphql`

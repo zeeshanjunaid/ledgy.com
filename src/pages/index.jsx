@@ -45,10 +45,8 @@ const Testimonial = ({
 );
 
 const Reference = ({ img, name }: { img: Object, name: string }) => (
-  <div className="col-12 col-md-6 col-lg-3 pb-6 pb-lg-0">
-    <div className="d-flex justify-content-center">
-      <Img {...img} alt={name} />
-    </div>
+  <div className="col-12 col-md-6 col-lg-3 pb-6 pb-lg-0 d-flex justify-content-center align-items-center">
+    <Img {...img} alt={name} />
   </div>
 );
 
