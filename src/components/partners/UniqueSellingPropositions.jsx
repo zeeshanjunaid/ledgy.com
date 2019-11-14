@@ -5,7 +5,7 @@ import { Trans } from '@lingui/react';
 import { faCompass, faChartLine, faDollarSign } from '@fortawesome/free-solid-svg-icons';
 import ReadMore from '../ReadMore';
 
-const readMoreWrapperClasses = 'col-10 offset-1 col-smd-8 offset-md-2 col-lg-4 offset-lg-0';
+const readMoreWrapperClasses = 'col-10 offset-1 col-md-8 offset-md-2 col-lg-4 offset-lg-0';
 const ulClasses = 'width-fit-content text-left pb-0 mb-0 mx-auto';
 
 // eslint-disable-next-line import/prefer-default-export
