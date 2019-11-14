@@ -128,7 +128,6 @@ h1 {
 }
 
 .full-width-banner {
-  width: 100%;
   background-color: $color-bg-light-blue;
 }
 
@@ -424,6 +423,9 @@ $markdown-spacer: $markdown-font-size;
   }
 }
 
+.partner-usp li {
+  line-height: 2rem;
+}
 
 .hover-translateY {
   transition: 200ms;

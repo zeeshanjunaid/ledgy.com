@@ -15,14 +15,14 @@ export default (props: { icon: string, title: string, subtitle: Node, url: strin
       <h5>
         <Trans>{title}</Trans>
       </h5>
-      <p>
+      <>
         <Trans>{subtitle}</Trans>
         <br />
         <Link href to={url}>
           <Trans>Read more</Trans>
           <ChevronRight />
         </Link>
-      </p>
+      </>
     </>
   );
 };
