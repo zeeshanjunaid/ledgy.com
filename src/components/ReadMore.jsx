@@ -7,16 +7,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { ChevronRight } from '../layouts/utils';
 
-export default (props: { icon: string, title: string, subtitle: Node, url: string }) => {
+export const ReadMore = (props: { icon: string, title: Node, subtitle: Node, url: string }) => {
   const { icon, title, subtitle, url } = props;
   return (
     <>
       <FontAwesomeIcon icon={icon} className="text-primary mb-2" size="2x" />
-      <h5>
-        <Trans>{title}</Trans>
-      </h5>
+      <h5>{title}</h5>
       <>
-        <Trans>{subtitle}</Trans>
+        {subtitle}
         <br />
         <Link href to={url}>
           <Trans>Read more</Trans>

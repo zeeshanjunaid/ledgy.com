@@ -3,7 +3,7 @@
 import React from 'react';
 import { Trans } from '@lingui/react';
 import { faCompass, faChartLine, faDollarSign } from '@fortawesome/free-solid-svg-icons';
-import ReadMore from '../ReadMore';
+import { ReadMore } from '../ReadMore';
 
 const readMoreWrapperClasses =
   'col-10 offset-1 col-md-8 offset-md-2 col-lg-4 offset-lg-0 mb-4 mb-md-6 my-lg-4';
@@ -18,7 +18,7 @@ export const UniqueSellingPropositions = (props: Props) => (
       <div className={readMoreWrapperClasses}>
         <ReadMore
           icon={faCompass}
-          title="Single source of truth"
+          title={<Trans>Single source of truth</Trans>}
           subtitle={
             <ul className={ulClasses}>
               <li>
@@ -39,7 +39,7 @@ export const UniqueSellingPropositions = (props: Props) => (
       <div className={readMoreWrapperClasses}>
         <ReadMore
           icon={faChartLine}
-          title="Powerful modeling insights"
+          title={<Trans>Powerful modeling insights</Trans>}
           subtitle={
             <ul className={ulClasses}>
               <li>
@@ -57,7 +57,7 @@ export const UniqueSellingPropositions = (props: Props) => (
       <div className={readMoreWrapperClasses}>
         <ReadMore
           icon={faDollarSign}
-          title="Faster due diligence"
+          title={<Trans>Faster due diligence</Trans>}
           subtitle={
             <ul className={ulClasses}>
               <li>
