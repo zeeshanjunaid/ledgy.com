@@ -6,10 +6,10 @@ import { PartnerCard } from './PartnerCard';
 
 export const SwissPartners = (props: Props) => (
   <div className="container py-6">
-    <h5 className="text-center pb-4">
+    <h5 className="text-center pb-6">
       <Trans>Swiss Law Partners</Trans>
     </h5>
-    <div className="row d-flex container justify-content-between">
+    <div className="row d-flex container mx-auto justify-content-between">
       <PartnerCard
         logo={props.data.kellerhalsCarrard}
         email="startup-desk@kellerhals-carrard.ch"
