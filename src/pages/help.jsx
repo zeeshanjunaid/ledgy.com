@@ -48,7 +48,7 @@ const helpLinks = [
     <Trans>
       Set up your equity plan with our guides and law firm partnerships with little cost and time
     </Trans>,
-    'templates',
+    'equity-plans',
     faListAlt
   ],
   [
