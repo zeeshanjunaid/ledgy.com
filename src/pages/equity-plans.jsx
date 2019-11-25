@@ -11,6 +11,7 @@ import { targetBlank, appUrl, trackSignup, Title } from '../layouts/utils';
 const EquityPlans = ({ i18n, data }: Props) => {
   const title = i18n.t`Equity Plan Templates`;
   const description = i18n.t`Get free templates from top Swiss and German law firms for your employee participation plans (ESOP). Use the Ledgy Term Sheet Generator to easily draft a document with the conditions of your participation plans`;
+  const { siteUrl } = data.site.siteMetadata;
   const buttonOne = {
     props: {
       href: `${appUrl}/templates`,
@@ -21,7 +22,11 @@ const EquityPlans = ({ i18n, data }: Props) => {
   };
   return (
     <>
-      <Title title={title} description={description} />
+      <Title
+        title={title}
+        description={description}
+        thumbnailUrl={`${siteUrl}/banners/equity-plans.png`}
+      />
       <HeaderLayout
         title={title}
         subtitle={description}
@@ -43,6 +48,11 @@ export const PageQuery = graphql`
     templates: imageSharp(fluid: { originalName: { regex: "/mac-templates.png/" } }) {
       fluid(maxWidth: 1000) {
         ...GatsbyImageSharpFluid
+      }
+    }
+    site {
+      siteMetadata {
+        siteUrl
       }
     }
   }
