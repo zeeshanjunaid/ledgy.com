@@ -23,7 +23,7 @@ const isVisibleNow = ({ node }: {| node: {| startAt: string, endAt: string |} |}
 
 export default () => {
   const [show, setShow] = useState(true);
-  if (!show) return null;
+  if (!show) return <div />;
 
   const result = useStaticQuery(
     graphql`
