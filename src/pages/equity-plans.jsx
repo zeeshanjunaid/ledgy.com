@@ -1,14 +1,14 @@
 // @flow
 
 import React from 'react';
-import { Trans } from '@lingui/react';
+import { Trans, withI18n } from '@lingui/react';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 import { HeaderLayout } from '../components/HomePageHeader';
-import { targetBlank, appUrl, trackSignup } from '../layouts/utils';
+import { targetBlank, appUrl, trackSignup, Title } from '../layouts/utils';
 
-export default (props: Props) => {
+const EquityPlans = ({ i18n, data }: Props) => {
   const buttonOne = {
     props: {
       href: `${appUrl}/templates`,
@@ -18,24 +18,29 @@ export default (props: Props) => {
     text: <Trans>Get Early Access</Trans>
   };
   return (
-    <HeaderLayout
-      title={<Trans>Employee Participation Plan Templates</Trans>}
-      subtitle={
-        <Trans>
-          Get free templates from top Swiss and German law firms for your employee participation
-          plans. Use the Ledgy Term Sheet Generator to easily draft a document with the conditions
-          of your participation plans
-        </Trans>
-      }
-      buttonOne={buttonOne}
-      image={
-        <div id="mac-templates" data-aos="fade-up">
-          <Img {...props.data.templates} alt="Templates" />
-        </div>
-      }
-    />
+    <>
+      <Title title={i18n.t`Equity Plan Templates`} />
+      <HeaderLayout
+        title={<Trans>Equity Plan Templates</Trans>}
+        subtitle={
+          <Trans>
+            Get free templates from top Swiss and German law firms for your employee participation
+            plans (ESOP). Use the Ledgy Term Sheet Generator to easily draft a document with the
+            conditions of your participation plans
+          </Trans>
+        }
+        buttonOne={buttonOne}
+        image={
+          <div id="mac-templates" data-aos="fade-up">
+            <Img {...data.templates} alt="Templates" />
+          </div>
+        }
+      />
+    </>
   );
 };
+
+export default withI18n()(EquityPlans);
 
 export const PageQuery = graphql`
   query {
