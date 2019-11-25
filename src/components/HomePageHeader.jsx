@@ -53,7 +53,7 @@ export const HeaderLayout = ({
   title: Node | string,
   subtitle: Node | string,
   buttonOne: HeaderButton,
-  buttonTwo: HeaderButton,
+  buttonTwo?: HeaderButton,
   image: Node
 |}) => (
   <header className="header bg-ledgy home-banner px-1 text-left ">
@@ -66,17 +66,21 @@ export const HeaderLayout = ({
           </div>
           <div>
             <a
-              className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-outline-light"
+              className={`btn btn-block d-sm-inline btn-xl mx-1 btn-round ${
+                buttonTwo ? 'btn-outline-light' : 'btn-light'
+              }`}
               {...buttonOne.props}
             >
               {buttonOne.text}
             </a>
-            <a
-              className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-light"
-              {...buttonTwo.props}
-            >
-              {buttonTwo.text}
-            </a>
+            {!!buttonTwo && (
+              <a
+                className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-light"
+                {...buttonTwo.props}
+              >
+                {buttonTwo.text}
+              </a>
+            )}
           </div>
         </div>
         <div className="col-lg-6">{image}</div>

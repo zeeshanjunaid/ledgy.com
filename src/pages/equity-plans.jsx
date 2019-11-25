@@ -15,11 +15,7 @@ export default (props: Props) => {
       onClick: () => trackSignup('clickTemplates'),
       ...targetBlank
     },
-    text: <Trans>Launch Templates</Trans>
-  };
-  const buttonTwo = {
-    props: { href: `${props.prefix}/templates/esop-vs-psop` },
-    text: <Trans>Learn More</Trans>
+    text: <Trans>Get Early Access</Trans>
   };
   return (
     <HeaderLayout
@@ -32,7 +28,6 @@ export default (props: Props) => {
         </Trans>
       }
       buttonOne={buttonOne}
-      buttonTwo={buttonTwo}
       image={
         <div id="mac-templates" data-aos="fade-up">
           <Img {...props.data.templates} alt="Templates" />
