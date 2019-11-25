@@ -9,6 +9,8 @@ import { HeaderLayout } from '../components/HomePageHeader';
 import { targetBlank, appUrl, trackSignup, Title } from '../layouts/utils';
 
 const EquityPlans = ({ i18n, data }: Props) => {
+  const title = i18n.t`Equity Plan Templates`;
+  const description = i18n.t`Get free templates from top Swiss and German law firms for your employee participation plans (ESOP). Use the Ledgy Term Sheet Generator to easily draft a document with the conditions of your participation plans`;
   const buttonOne = {
     props: {
       href: `${appUrl}/templates`,
@@ -19,16 +21,10 @@ const EquityPlans = ({ i18n, data }: Props) => {
   };
   return (
     <>
-      <Title title={i18n.t`Equity Plan Templates`} />
+      <Title title={title} description={description} />
       <HeaderLayout
-        title={<Trans>Equity Plan Templates</Trans>}
-        subtitle={
-          <Trans>
-            Get free templates from top Swiss and German law firms for your employee participation
-            plans (ESOP). Use the Ledgy Term Sheet Generator to easily draft a document with the
-            conditions of your participation plans
-          </Trans>
-        }
+        title={title}
+        subtitle={description}
         buttonOne={buttonOne}
         image={
           <div id="mac-templates" data-aos="fade-up">
