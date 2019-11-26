@@ -287,12 +287,6 @@ $markdown-spacer: $markdown-font-size;
   }
 }
 
-#mac-templates {
-  @include media-breakpoint-up(lg) {
-    width: 115%;
-  }
-}
-
 .calculator {
   margin-top: 15%;
   @include media-breakpoint-up(lg) {

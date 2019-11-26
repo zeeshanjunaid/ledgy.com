@@ -13,7 +13,7 @@ export const AccordionItem = ({
   children
 }: {|
   id: string,
-  title: string,
+  title: string | Node,
   children: Node
 |}) => {
   const isOpen = isBrowser && window.top.location.hash === `#${id}`;
