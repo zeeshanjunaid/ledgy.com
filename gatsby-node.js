@@ -1,4 +1,5 @@
 const path = require('path');
+const { redirects } = require('./src/redirects');
 
 const { languages, defaultLanguage } = require('./src/i18n-config');
 
@@ -32,21 +33,18 @@ exports.onCreatePage = async ({ page, actions }) => {
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions;
-  [
-    ['/esop', '/help/employee-participation-guide/'],
-    ['/esop/', '/help/employee-participation-guide/'],
-    ['/ESOP', '/help/employee-participation-guide/'],
-    ['/ESOP/', '/help/employee-participation-guide/']
-  ].forEach(([fromPath, toPath]) => {
+  redirects.forEach(([from, toPath]) => {
     const redirectInBrowser = true;
-    createRedirect({ fromPath, toPath, redirectInBrowser });
-    languages.forEach(lang =>
-      createRedirect({
-        fromPath: `/${lang}${fromPath}`,
-        toPath: `/${lang}${toPath}`,
-        redirectInBrowser
-      })
-    );
+    [from, `${from}/`].forEach(fromPath => {
+      createRedirect({ fromPath, toPath, redirectInBrowser });
+      languages.forEach(lang =>
+        createRedirect({
+          fromPath: `/${lang}${fromPath}`,
+          toPath: `/${lang}${toPath}`,
+          redirectInBrowser
+        })
+      );
+    });
   });
 
   const component = path.resolve('./src/layouts/contentfulPage.jsx');
