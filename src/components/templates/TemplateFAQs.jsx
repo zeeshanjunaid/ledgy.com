@@ -57,11 +57,11 @@ export const TemplateFAQs = (): Node => {
   ));
 
   return (
-    <>
+    <div className="row-small mx-auto">
       <h2 className="text-center">
         <Trans>FAQs</Trans>
       </h2>
       <Accordion>{accordionItems}</Accordion>
-    </>
+    </div>
   );
 };
