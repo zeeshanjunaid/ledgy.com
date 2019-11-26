@@ -188,6 +188,10 @@ h1 {
   max-width: 832.5px;
 }
 
+.row-small {
+  max-width: 832.5px;
+}
+
 .about {
   border-top: 1px solid $gray-200;
 
@@ -287,10 +291,12 @@ $markdown-spacer: $markdown-font-size;
   }
 }
 
-#mac-templates {
-  @include media-breakpoint-up(lg) {
-    width: 115%;
-  }
+.circle-badge {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: $color-primary;
+  color: $gray-100;
 }
 
 .calculator {

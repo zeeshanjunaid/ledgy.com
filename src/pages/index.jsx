@@ -1,6 +1,6 @@
 // @flow
 
-import React, { type Node } from 'react';
+import React from 'react';
 import { withI18n, Trans } from '@lingui/react';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
@@ -16,33 +16,7 @@ import {
   top100Url
 } from '../layouts/utils';
 import { HomePageHeader } from '../components/HomePageHeader';
-
-const Testimonial = ({
-  img,
-  name,
-  description,
-  col
-}: {
-  img: Object,
-  name: string,
-  description: Node,
-  col: number
-}) => (
-  <div
-    className={`testimonial col-lg-${col} d-flex flex-column justify-content-start align-items-center mb-4 mb-lg-0`}
-  >
-    <div
-      className="d-flex align-items-center justify-content-center mt-4"
-      style={{ minHeight: '80px' }}
-    >
-      <Img {...img} alt={name} />
-    </div>
-    <div className="d-flex flex-column justify-content-between mt-4 h-100">
-      <div className="testimonial-description">{description}</div>
-      <small className="text-light mt-4">{name}</small>
-    </div>
-  </div>
-);
+import { Testimonial } from '../components/Testimonial';
 
 const Reference = ({ img, name }: { img: Object, name: string }) => (
   <div className="col-12 col-md-6 col-lg-3 pb-6 pb-lg-0 d-flex justify-content-center align-items-center">
