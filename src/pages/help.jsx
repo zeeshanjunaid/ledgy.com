@@ -49,7 +49,7 @@ const helpLinks = [
       Set up your employee participation plan with our guides and law firm partnerships with little
       cost and time
     </Trans>,
-    'employee-participation-plans',
+    'employee-participation-plan-templates',
     faListAlt
   ],
   [
