@@ -1,5 +1,7 @@
+const esopTemplates = '/employee-participation-plan-templates/';
+
 exports.redirects = [
-  ['/esop', '/employee-participation-plans/'],
-  ['/psop', '/employee-participation-plans/'],
-  ['/equity-plans', '/employee-participation-plans/']
+  ['/esop', esopTemplates],
+  ['/psop', esopTemplates],
+  ['/equity-plans', esopTemplates]
 ];

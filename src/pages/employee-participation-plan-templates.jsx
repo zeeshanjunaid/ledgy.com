@@ -9,8 +9,8 @@ import { HeaderLayout } from '../components/HomePageHeader';
 import { targetBlank, appUrl, trackSignup, Title } from '../layouts/utils';
 
 const EquityPlans = ({ i18n, data }: Props) => {
-  const title = i18n.t`Equity Plan Templates`;
-  const description = i18n.t`Get free templates from top Swiss and German law firms for your employee participation plans (ESOP). Use the Ledgy Term Sheet Generator to easily draft a document with the conditions of your participation plans`;
+  const title = i18n.t`Employee Participation Plan Templates`;
+  const description = i18n.t`Get free templates from top Swiss and German law firms for your employee participation plans. Use the Ledgy term sheet guide to easily draft a document with the conditions of your participation plans.`;
   const { siteUrl } = data.site.siteMetadata;
   const buttonOne = {
     props: {
