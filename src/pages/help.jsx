@@ -46,9 +46,10 @@ const helpLinks = [
   [
     <Trans>Templates</Trans>,
     <Trans>
-      Set up your equity plan with our guides and law firm partnerships with little cost and time
+      Set up your employee participation plan with our guides and law firm partnerships with little
+      cost and time
     </Trans>,
-    'equity-plans',
+    'employee-participation-plans',
     faListAlt
   ],
   [
