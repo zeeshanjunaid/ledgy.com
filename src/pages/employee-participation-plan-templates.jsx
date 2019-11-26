@@ -8,7 +8,7 @@ import Img from 'gatsby-image';
 import { ContentBody } from '../components/Content';
 import { HeaderLayout } from '../components/HomePageHeader';
 import { targetBlank, appUrl, trackSignup, Title } from '../layouts/utils';
-import { TemplateFAQs } from '../components/templates';
+import { TemplateFAQs, Testimonials } from '../components/templates';
 
 const EquityPlans = ({ i18n, data }: Props) => {
   const title = i18n.t`Employee Participation Plan Templates`;
@@ -40,7 +40,10 @@ const EquityPlans = ({ i18n, data }: Props) => {
         }
       />
       <ContentBody>
-        <TemplateFAQs />
+        <>
+          <Testimonials data={data} />
+          <TemplateFAQs />
+        </>
       </ContentBody>
     </>
   );
@@ -53,6 +56,16 @@ export const PageQuery = graphql`
     templates: imageSharp(fluid: { originalName: { regex: "/mac-templates.png/" } }) {
       fluid(maxWidth: 1000) {
         ...GatsbyImageSharpFluid
+      }
+    }
+    rivero: imageSharp(fluid: { originalName: { regex: "/rivero/" } }) {
+      fixed(width: 80) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+    roomPriceGenie: imageSharp(fluid: { originalName: { regex: "/room-price-genie/" } }) {
+      fixed(width: 150) {
+        ...GatsbyImageSharpFixed
       }
     }
     site {

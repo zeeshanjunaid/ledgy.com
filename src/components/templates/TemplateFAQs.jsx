@@ -1,6 +1,6 @@
 // @flow
 
-import React from 'react';
+import React, { type Node } from 'react';
 import { Trans } from '@lingui/react';
 
 import { Accordion, AccordionItem } from '../Accordion';
@@ -49,7 +49,7 @@ const QUESTIONS = [
   }
 ];
 
-export const TemplateFAQs = () => {
+export const TemplateFAQs = (): Node => {
   const accordionItems = QUESTIONS.map(({ slug, question, answer }) => (
     <AccordionItem id={slug} key={slug} title={question}>
       {answer}
