@@ -8,7 +8,7 @@ import Img from 'gatsby-image';
 import { ContentBody } from '../components/Content';
 import { HeaderLayout } from '../components/HomePageHeader';
 import { targetBlank, appUrl, trackSignup, Title } from '../layouts/utils';
-import { TemplateFAQs, Testimonials } from '../components/templates';
+import { TemplateFAQs, Testimonials, Instructions } from '../components/templates';
 
 const EquityPlans = ({ i18n, data }: Props) => {
   const title = i18n.t`Employee Participation Plan Templates`;
@@ -41,6 +41,7 @@ const EquityPlans = ({ i18n, data }: Props) => {
       />
       <ContentBody>
         <>
+          <Instructions />
           <Testimonials data={data} />
           <TemplateFAQs />
         </>

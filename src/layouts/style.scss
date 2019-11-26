@@ -287,6 +287,14 @@ $markdown-spacer: $markdown-font-size;
   }
 }
 
+.circle-badge {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: $color-primary;
+  color: $gray-100;
+}
+
 .calculator {
   margin-top: 15%;
   @include media-breakpoint-up(lg) {
