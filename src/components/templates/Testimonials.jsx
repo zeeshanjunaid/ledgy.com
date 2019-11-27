@@ -62,6 +62,7 @@ export const Testimonials = ({ data, i18n }: Object): Node => {
           col={12}
           name={i18n.t`Dominic Jacquesson, VP Talent @ Index Ventures, a VC that founded the Not Optional initiative`}
           img={data.notoptional}
+          minHeight={0}
           description={
             <Trans>
               Any initiative that makes it easier for companies and employees to increase their use

@@ -324,6 +324,15 @@ $markdown-spacer: $markdown-font-size;
   }
 }
 
+.embed {
+  width: 90vw;
+  height: 210px;
+  @include media-breakpoint-up(md) {
+    height: 395px;
+    width: 700px;
+  }
+}
+
 .calculator-video {
   width: 90vw;
   height: 210px;
