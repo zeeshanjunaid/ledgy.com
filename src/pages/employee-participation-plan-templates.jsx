@@ -58,7 +58,7 @@ const EquityPlans = ({ i18n, data }: Props) => {
         <>
           <Instructions />
           <CallToAction />
-          <Testimonials data={data} />
+          <Testimonials data={data} i18n={i18n} />
           <TemplateFAQs />
           <SignaturesComingSoon data={data} />
         </>
@@ -87,6 +87,11 @@ export const PageQuery = graphql`
       }
     }
     taylorwessing: imageSharp(fluid: { originalName: { regex: "/taylorwessing/" } }) {
+      fixed(width: 190) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+    notoptional: imageSharp(fluid: { originalName: { regex: "/notoptional/" } }) {
       fixed(width: 190) {
         ...GatsbyImageSharpFixed
       }

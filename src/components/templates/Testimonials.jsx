@@ -5,7 +5,7 @@ import { Trans } from '@lingui/react';
 
 import { Testimonial } from '../Testimonial';
 
-export const Testimonials = ({ data }: Object): Node => {
+export const Testimonials = ({ data, i18n }: Object): Node => {
   const TESTIMONIALS = [
     {
       name: 'Maria Weiers, Partner @ Taylor Wessing',
@@ -54,5 +54,25 @@ export const Testimonials = ({ data }: Object): Node => {
     />
   ));
 
-  return <div className="row text-center justify-content-between pb-6">{testimonials}</div>;
+  return (
+    <div className="py-6">
+      <div className="row text-center justify-content-between mb-6">{testimonials}</div>
+      <div className="row text-center justify-content-center">
+        <Testimonial
+          col={12}
+          name={i18n.t`Dominic Jacquesson, VP Talent @ Index Ventures, a VC that founded the Not Optional initiative`}
+          img={data.notoptional}
+          description={
+            <Trans>
+              Any initiative that makes it easier for companies and employees to increase their use
+              of stock options is a welcome one. We applaud Ledgy for helping entrepreneurs in
+              Germany to set up robust and fair virtual stock option schemes. Our hope is that
+              legislators in Germany will make reforming stock option policies a priority in 2020,
+              allowing employees to receive real stock options, not just virtual ones.
+            </Trans>
+          }
+        />
+      </div>
+    </div>
+  );
 };
