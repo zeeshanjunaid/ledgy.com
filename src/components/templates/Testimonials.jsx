@@ -19,32 +19,22 @@ export const Testimonials = ({ data }: Object): Node => {
       rounded: true
     },
     {
-      name: 'Ari, CEO RoomPriceGenie.com',
+      name: 'Dr. Thomas Gemmeke, Head of Legal @ Baker Tilly',
       description: (
         <Trans>
-          Ledgy’s templates helped us getting started really fast with setting up our ESOP and gave
-          us a solid and trusted basis to start from.
+          Employee participation plans are key to taking a startup to the next level. We combined
+          our legal expertise and PSOP templates together with Ledgy, so that German startups can
+          reward their talented employees.
         </Trans>
       ),
-      img: data.roomPriceGenie,
-      rounded: false
-    },
-    {
-      name: 'Thomas Weber, Rivero.Tech',
-      description: (
-        <Trans>
-          Ledgy’s templates helped us learn about the structure and content of an ESOP to be well
-          prepared for our first meeting with our lawyer.
-        </Trans>
-      ),
-      img: data.rivero,
+      img: data.bakertilly,
       rounded: false
     }
   ];
 
   const testimonials = TESTIMONIALS.map(({ name, description, img, rounded }) => (
     <Testimonial
-      col={4}
+      col={5}
       key={name}
       name={name}
       img={img}
