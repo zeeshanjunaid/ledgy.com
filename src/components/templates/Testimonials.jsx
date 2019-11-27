@@ -19,7 +19,7 @@ export const Testimonials = ({ data, i18n }: Object): Node => {
       rounded: false
     },
     {
-      name: 'Johannes Reck, CEO GetYourGuide',
+      name: 'Johannes Reck, CEO @ GetYourGuide',
       description: (
         <Trans>
           Without employee participation plans, companies miss the opportunity to incentivize young
@@ -56,7 +56,7 @@ export const Testimonials = ({ data, i18n }: Object): Node => {
 
   return (
     <div className="py-6">
-      <div className="row text-center justify-content-between mb-6">{testimonials}</div>
+      <div className="row text-center justify-content-between mb-3">{testimonials}</div>
       <div className="row text-center justify-content-center">
         <Testimonial
           col={12}
