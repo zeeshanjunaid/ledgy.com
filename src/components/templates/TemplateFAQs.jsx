@@ -57,7 +57,7 @@ export const TemplateFAQs = (): Node => {
   ));
 
   return (
-    <div className="row-small mx-auto">
+    <div className="row-small mx-auto my-6">
       <h2 className="text-center">
         <Trans>FAQs</Trans>
       </h2>

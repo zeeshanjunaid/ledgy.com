@@ -48,16 +48,18 @@ export const HeaderLayout = ({
   subtitle,
   buttonOne,
   buttonTwo,
+  customButton,
   image
 }: {|
   title: Node | string,
   subtitle: Node | string,
   buttonOne: HeaderButton,
   buttonTwo?: HeaderButton,
+  customButton?: Node,
   image: Node
 |}) => (
-  <header className="header bg-ledgy home-banner px-1 text-left ">
-    <div className="container">
+  <header className="header bg-ledgy d-flex home-banner px-1 text-left ">
+    <div className="container my-auto">
       <div className="row gap-y mt-md-2 pb-4 pb-md-6">
         <div className="col-lg-6 d-flex flex-column justify-content-center">
           <div className="mt-md-n6 mb-md-4">
@@ -81,9 +83,10 @@ export const HeaderLayout = ({
                 {buttonTwo.text}
               </a>
             )}
+            {customButton}
           </div>
         </div>
-        <div className="col-lg-6">{image}</div>
+        <div className="col-lg-6 d-flex flex-column justify-content-center">{image}</div>
       </div>
     </div>
   </header>

@@ -204,6 +204,14 @@ h1 {
   }
 }
 
+#signatories-coming-soon {
+  .gatsby-image-wrapper {
+    width: 100%;
+    min-width: 300px;
+    max-width: 1000px;
+  }
+}
+
 $markdown-font-size: 1.2rem;
 $markdown-spacer: $markdown-font-size;
 

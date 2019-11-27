@@ -1,0 +1,27 @@
+// @flow
+
+import React from 'react';
+import { targetBlank, trackSignup } from '../layouts/utils';
+
+export const ProductHuntButton = ({
+  productHuntLink,
+  trackSignupKey,
+  altText
+}: {
+  productHuntLink: string,
+  trackSignupKey: string,
+  altText: string
+}) => (
+  <a
+    className="btn btn-block d-sm-inline btn-xl mx-1 shadow-none"
+    href={productHuntLink}
+    {...targetBlank}
+    onClick={() => trackSignup(trackSignupKey)}
+  >
+    <img
+      src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=169181&theme=light"
+      alt={altText}
+      className="product-hunt-logo"
+    />
+  </a>
+);
