@@ -13,7 +13,8 @@ import {
   Testimonials,
   Instructions,
   CallToAction,
-  SignaturesComingSoon
+  SignaturesComingSoon,
+  Video
 } from '../components/templates';
 import { ProductHuntButton } from '../components/ProductHuntButton';
 
@@ -59,6 +60,7 @@ const EquityPlans = ({ i18n, data }: Props) => {
           <Instructions />
           <CallToAction />
           <Testimonials data={data} i18n={i18n} />
+          <Video />
           <TemplateFAQs />
           <SignaturesComingSoon data={data} />
         </>

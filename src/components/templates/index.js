@@ -5,3 +5,4 @@ export * from './Instructions';
 export * from './SignaturesComingSoon';
 export * from './TemplateFAQs';
 export * from './Testimonials';
+export * from './Video';
