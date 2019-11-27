@@ -4,6 +4,7 @@ import React from 'react';
 import Img from 'gatsby-image';
 import { LanguageHint } from '../components/Markdown';
 import { calculatorUrl, targetBlank, trackSignup } from '../layouts/utils';
+import { ProductHuntButton } from './ProductHuntButton';
 
 export const DefaultHeader = ({
   data,
@@ -69,18 +70,11 @@ export const CalculatorHeader = ({ data }: { data: any }) => {
                 >
                   Launch the Calculator
                 </a>
-                <a
-                  className="btn btn-block d-sm-inline btn-xl mx-1 shadow-none"
-                  href="https://www.producthunt.com/posts/startup-fundraising-calculator?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-startup-fundraising-calculator"
-                  {...targetBlank}
-                  onClick={() => trackSignup('clickProductHunt')}
-                >
-                  <img
-                    src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=169181&theme=light"
-                    alt="Startup Fundraising Calculator - The calculator you need if you're raising money. | Product Hunt Embed"
-                    className="product-hunt-logo"
-                  />
-                </a>
+                <ProductHuntButton
+                  productHuntLink="https://www.producthunt.com/posts/startup-fundraising-calculator?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-startup-fundraising-calculator"
+                  trackSignupKey="clickProductHunt"
+                  altText="Startup Fundraising Calculator - The calculator you need if you're raising money. | Product Hunt Embed"
+                />
               </div>
             </div>
           </div>
