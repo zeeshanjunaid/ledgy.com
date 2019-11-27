@@ -86,7 +86,7 @@ export const HeaderLayout = ({
             {customButton}
           </div>
         </div>
-        <div className="col-lg-6">{image}</div>
+        <div className="col-lg-6 d-flex flex-column justify-content-center">{image}</div>
       </div>
     </div>
   </header>

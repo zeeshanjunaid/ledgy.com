@@ -8,7 +8,13 @@ import Img from 'gatsby-image';
 import { ContentBody } from '../components/Content';
 import { HeaderLayout } from '../components/HomePageHeader';
 import { targetBlank, appUrl, trackSignup, Title } from '../layouts/utils';
-import { TemplateFAQs, Testimonials, Instructions, CallToAction } from '../components/templates';
+import {
+  TemplateFAQs,
+  Testimonials,
+  Instructions,
+  CallToAction,
+  SignaturesComingSoon
+} from '../components/templates';
 import { ProductHuntButton } from '../components/ProductHuntButton';
 
 const EquityPlans = ({ i18n, data }: Props) => {
@@ -54,6 +60,7 @@ const EquityPlans = ({ i18n, data }: Props) => {
           <CallToAction />
           <Testimonials data={data} />
           <TemplateFAQs />
+          <SignaturesComingSoon data={data} />
         </>
       </ContentBody>
     </>
@@ -65,6 +72,11 @@ export default withI18n()(EquityPlans);
 export const PageQuery = graphql`
   query {
     templates: imageSharp(fluid: { originalName: { regex: "/mac-templates.png/" } }) {
+      fluid(maxWidth: 1000) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    signatures: imageSharp(fluid: { originalName: { regex: "/signatures-coming-soon.png/" } }) {
       fluid(maxWidth: 1000) {
         ...GatsbyImageSharpFluid
       }
