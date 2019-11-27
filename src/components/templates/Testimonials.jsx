@@ -8,6 +8,17 @@ import { Testimonial } from '../Testimonial';
 export const Testimonials = ({ data }: Object): Node => {
   const TESTIMONIALS = [
     {
+      name: 'Maria Weiers, Partner @ Taylor Wessing',
+      description: (
+        <Trans>
+          The powerful synergy of our law firm’s expertise and Ledgy’s founder-oriented technology
+          is paving the way to spread knowledge on how to involve employees in a startup’s success.
+        </Trans>
+      ),
+      img: data.taylorwessing,
+      rounded: false
+    },
+    {
       name: 'Johannes Reck, CEO GetYourGuide',
       description: (
         <Trans>
@@ -34,7 +45,7 @@ export const Testimonials = ({ data }: Object): Node => {
 
   const testimonials = TESTIMONIALS.map(({ name, description, img, rounded }) => (
     <Testimonial
-      col={5}
+      col={4}
       key={name}
       name={name}
       img={img}

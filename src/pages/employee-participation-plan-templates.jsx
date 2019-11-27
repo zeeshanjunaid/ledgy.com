@@ -82,7 +82,12 @@ export const PageQuery = graphql`
       }
     }
     bakertilly: imageSharp(fluid: { originalName: { regex: "/bakertilly/" } }) {
-      fixed(width: 200) {
+      fixed(width: 190) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+    taylorwessing: imageSharp(fluid: { originalName: { regex: "/taylorwessing/" } }) {
+      fixed(width: 190) {
         ...GatsbyImageSharpFixed
       }
     }
