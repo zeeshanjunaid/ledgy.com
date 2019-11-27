@@ -11,8 +11,8 @@ export const Testimonials = ({ data }: Object): Node => {
       name: 'Johannes Reck, CEO GetYourGuide',
       description: (
         <Trans>
-          Without employee participation, companies lack the opportunity to incentivize young people
-          to work in a startup and also profit from its success.
+          Without employee participation plans, companies miss the opportunity to incentivize young
+          people to work in a startup by profiting from its success.
         </Trans>
       ),
       img: data.reck,
