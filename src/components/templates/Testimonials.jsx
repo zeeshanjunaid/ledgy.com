@@ -8,6 +8,28 @@ import { Testimonial } from '../Testimonial';
 export const Testimonials = ({ data, i18n }: Object): Node => {
   const TESTIMONIALS = [
     {
+      name: 'Johannes Reck, CEO @ GetYourGuide',
+      description: (
+        <Trans>
+          Without employee participation plans, companies miss the opportunity to incentivize young
+          people to work in a startup by profiting from its success.
+        </Trans>
+      ),
+      img: data.johannesreck,
+      rounded: true
+    },
+    {
+      name: 'Christian Reber, CEO @ Pitch',
+      description: (
+        <Trans>
+          I want everyone in the company to participate in its success from the beginning. In the US
+          this is already the norm, but in Germany, it’s still complicated.
+        </Trans>
+      ),
+      img: data.christianreber,
+      rounded: true
+    },
+    {
       name: 'Maria Weiers, Partner @ Taylor Wessing',
       description: (
         <Trans>
@@ -17,17 +39,6 @@ export const Testimonials = ({ data, i18n }: Object): Node => {
       ),
       img: data.taylorwessing,
       rounded: false
-    },
-    {
-      name: 'Johannes Reck, CEO @ GetYourGuide',
-      description: (
-        <Trans>
-          Without employee participation plans, companies miss the opportunity to incentivize young
-          people to work in a startup by profiting from its success.
-        </Trans>
-      ),
-      img: data.reck,
-      rounded: true
     },
     {
       name: 'Dr. Thomas Gemmeke, Head of Legal @ Baker Tilly',
@@ -45,7 +56,7 @@ export const Testimonials = ({ data, i18n }: Object): Node => {
 
   const testimonials = TESTIMONIALS.map(({ name, description, img, rounded }) => (
     <Testimonial
-      col={4}
+      col={5}
       key={name}
       name={name}
       img={img}
@@ -56,10 +67,10 @@ export const Testimonials = ({ data, i18n }: Object): Node => {
 
   return (
     <div className="py-6">
-      <div className="row text-center justify-content-between mb-3">{testimonials}</div>
+      <div className="row text-center justify-content-center mb-3">{testimonials}</div>
       <div className="row text-center justify-content-center">
         <Testimonial
-          col={12}
+          col={10}
           name={i18n.t`Dominic Jacquesson, VP Talent @ Index Ventures, a VC that founded the Not Optional initiative`}
           img={data.notoptional}
           minHeight={0}
