@@ -98,7 +98,12 @@ export const PageQuery = graphql`
         ...GatsbyImageSharpFixed
       }
     }
-    reck: imageSharp(fluid: { originalName: { regex: "/reck/" } }) {
+    johannesreck: imageSharp(fluid: { originalName: { regex: "/johannesreck/" } }) {
+      fixed(width: 100) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+    christianreber: imageSharp(fluid: { originalName: { regex: "/christianreber/" } }) {
       fixed(width: 100) {
         ...GatsbyImageSharpFixed
       }
