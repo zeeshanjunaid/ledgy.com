@@ -8,6 +8,17 @@ import { Testimonial } from '../Testimonial';
 export const Testimonials = ({ data }: Object): Node => {
   const TESTIMONIALS = [
     {
+      name: 'Johannes Reck, CEO GetYourGuide',
+      description: (
+        <Trans>
+          Without employee participation, companies lack the opportunity to incentivize young people
+          to work in a startup and also profit from its success.
+        </Trans>
+      ),
+      img: data.reck,
+      rounded: true
+    },
+    {
       name: 'Ari, CEO RoomPriceGenie.com',
       description: (
         <Trans>
@@ -15,7 +26,8 @@ export const Testimonials = ({ data }: Object): Node => {
           us a solid and trusted basis to start from.
         </Trans>
       ),
-      img: data.roomPriceGenie
+      img: data.roomPriceGenie,
+      rounded: false
     },
     {
       name: 'Thomas Weber, Rivero.Tech',
@@ -25,12 +37,20 @@ export const Testimonials = ({ data }: Object): Node => {
           prepared for our first meeting with our lawyer.
         </Trans>
       ),
-      img: data.rivero
+      img: data.rivero,
+      rounded: false
     }
   ];
 
-  const testimonials = TESTIMONIALS.map(({ name, description, img }) => (
-    <Testimonial col={5} key={name} name={name} img={img} description={description} />
+  const testimonials = TESTIMONIALS.map(({ name, description, img, rounded }) => (
+    <Testimonial
+      col={4}
+      key={name}
+      name={name}
+      img={img}
+      description={description}
+      rounded={rounded}
+    />
   ));
 
   return <div className="row text-center justify-content-between pb-6">{testimonials}</div>;

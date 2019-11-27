@@ -70,6 +70,11 @@ export const PageQuery = graphql`
         ...GatsbyImageSharpFixed
       }
     }
+    reck: imageSharp(fluid: { originalName: { regex: "/reck/" } }) {
+      fixed(width: 100) {
+        ...GatsbyImageSharpFixed
+      }
+    }
     site {
       siteMetadata {
         siteUrl
