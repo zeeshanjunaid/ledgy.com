@@ -16,8 +16,7 @@ const STEPS = [
   [
     3,
     <Trans>
-      Our interactive guide will help you understand and select terms for your employee
-      participation plan
+      Send your customized template and term sheet to your lawyer—or to one of our trusted partners
     </Trans>
   ],
   [
