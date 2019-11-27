@@ -60,13 +60,13 @@ export const PageQuery = graphql`
         ...GatsbyImageSharpFluid
       }
     }
-    rivero: imageSharp(fluid: { originalName: { regex: "/rivero/" } }) {
-      fixed(width: 80) {
+    bakertilly: imageSharp(fluid: { originalName: { regex: "/bakertilly/" } }) {
+      fixed(width: 200) {
         ...GatsbyImageSharpFixed
       }
     }
-    roomPriceGenie: imageSharp(fluid: { originalName: { regex: "/room-price-genie/" } }) {
-      fixed(width: 150) {
+    reck: imageSharp(fluid: { originalName: { regex: "/reck/" } }) {
+      fixed(width: 100) {
         ...GatsbyImageSharpFixed
       }
     }
