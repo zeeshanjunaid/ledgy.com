@@ -23,9 +23,8 @@ export const Testimonials = ({ data, i18n }: Object): Node => {
       name: 'Janina Mütze, CEO @ Civey',
       description: (
         <Trans>
-          I am convinced companies grow thanks to the people they attract and employ. Option
-          programs have proven to be sustainable incentives and build mutual trust. Let’s reduce
-          complexity and enable founders to let their members be part of the companies’ success
+          I am convinced companies grow thanks to the people they attract and employ. Let’s reduce
+          complexity and enable founders to let their members be part of the companies’ success.
         </Trans>
       ),
       url: 'https://civey.com/',
