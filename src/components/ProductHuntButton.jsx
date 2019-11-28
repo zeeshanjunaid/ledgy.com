@@ -6,10 +6,12 @@ import { targetBlank, trackSignup } from '../layouts/utils';
 export const ProductHuntButton = ({
   productHuntLink,
   trackSignupKey,
+  postId,
   altText
 }: {
   productHuntLink: string,
   trackSignupKey: string,
+  postId: string,
   altText: string
 }) => (
   <a
@@ -19,7 +21,7 @@ export const ProductHuntButton = ({
     onClick={() => trackSignup(trackSignupKey)}
   >
     <img
-      src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=169181&theme=light"
+      src={`https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=${postId}&theme=light`}
       alt={altText}
       className="product-hunt-logo"
     />

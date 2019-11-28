@@ -34,6 +34,7 @@ const EquityPlans = ({ i18n, data }: Props) => {
     <ProductHuntButton
       productHuntLink="https://www.producthunt.com/posts/employee-participation-plan-templates?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-startup-fundraising-calculator"
       trackSignupKey="clickProductHuntESOP"
+      postId="175968"
       altText="Free Employee Participation Plan Templates - Using Ledgy! | Product Hunt Embed"
     />
   );
