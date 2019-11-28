@@ -37,7 +37,7 @@ const Banner = (props: { title: Node, url: string, trackingName: Node, CTAText: 
 };
 
 export const CTABanner = ({ location }: LayoutProps) => {
-  if (location.pathname === '/employee-participation-plan-templates/') {
+  if (location.pathname.includes('/employee-participation-plan-templates/')) {
     return (
       <Banner
         title={<Trans>Free employee participation plan templates</Trans>}
