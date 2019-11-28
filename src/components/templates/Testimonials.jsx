@@ -20,7 +20,7 @@ export const Testimonials = ({ data, i18n }: Object): Node => {
       rounded: true
     },
     {
-      name: 'Janina Mütze, CEO @ Civey',
+      name: 'Janina Mütze, Vice Chairman @ German Startup Association',
       description: (
         <Trans>
           I am convinced companies grow thanks to the people they attract and employ. Let’s reduce
