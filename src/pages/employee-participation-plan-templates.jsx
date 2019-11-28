@@ -109,7 +109,7 @@ export const PageQuery = graphql`
         ...GatsbyImageSharpFixed
       }
     }
-    janinamuetze: imageSharp(fluid: { originalName: { regex: "/janinamuetze/" } }) {
+    janinamutze: imageSharp(fluid: { originalName: { regex: "/janinamutze/" } }) {
       fixed(width: 100) {
         ...GatsbyImageSharpFixed
       }

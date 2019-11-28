@@ -29,7 +29,7 @@ export const Testimonials = ({ data, i18n }: Object): Node => {
         </Trans>
       ),
       url: 'https://civey.com/',
-      img: data.janinamuetze,
+      img: data.janinamutze,
       rounded: true
     },
     {
