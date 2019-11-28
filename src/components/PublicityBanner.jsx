@@ -38,6 +38,7 @@ export default ({ pathname }: {| pathname: string |}) => {
   if (!show) return <div />;
 
   const isPsopLaunchPage = pathname === '/employee-participation-plan-templates/';
+  if (isPsopLaunchPage) return null;
 
   return <Banner isPsopPage={isPsopLaunchPage} hide={() => setShow(false)} />;
 };
