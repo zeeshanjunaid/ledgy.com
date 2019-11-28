@@ -46,6 +46,21 @@ const QUESTIONS = [
         <Trans>- Our Swiss law partners: Kellerhals Carrard, Wenger Vieli, Lexr</Trans>
       </>
     )
+  },
+  {
+    slug: 'next-countries',
+    question: <Trans>When can I have a template for my country?</Trans>,
+    answer: (
+      <>
+        <Trans>
+          We are looking forward to expanding these templates across Europe. Sign up for our
+          newsletter, so you’ll be the first to know when we launch in your country{' '}
+          <span role="img" aria-label="rocketship">
+            🚀
+          </span>
+        </Trans>
+      </>
+    )
   }
 ];
 
