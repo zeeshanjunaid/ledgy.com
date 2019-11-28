@@ -10,9 +10,11 @@ export default ({
   button,
   buttonText = '',
   hideFooter = false,
+  titleClassNames = '',
   onSave
 }: {|
   id: string,
+  titleClassNames?: string,
   children?: Node,
   title?: string | Node,
   button?: Node,
@@ -45,10 +47,15 @@ export default ({
         <div className="modal-dialog" role="document">
           <div className="modal-content">
             <div className="modal-header bg-primary d-flex align-items-center justify-content-center">
-              <h5 className="modal-title" id="customModalLabel">
+              <h5 className={`modal-title ${titleClassNames}`} id="customModalLabel">
                 {title}
               </h5>
-              <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+              <button
+                type="button"
+                className={`close ${titleClassNames}`}
+                data-dismiss="modal"
+                aria-label="Close"
+              >
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
