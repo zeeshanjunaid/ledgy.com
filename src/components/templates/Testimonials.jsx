@@ -76,7 +76,7 @@ export const Testimonials = ({ data, i18n }: Object): Node => {
       <div className="row text-center justify-content-center">
         <Testimonial
           col={10}
-          name={i18n.t`Dominic Jacquesson, VP Talent @ Index Ventures, a VC that founded the Not Optional initiative`}
+          name={i18n.t`Dominic Jacquesson, VP Talent @ Index Ventures, a VC who founded the Not Optional initiative`}
           img={data.notoptional}
           url="https://notoptional.eu/en/"
           minHeight={0}
