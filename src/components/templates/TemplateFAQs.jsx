@@ -58,16 +58,16 @@ const getQuestions = (props: Props) => [
       <>
         <Trans>
           We are looking forward to expanding these templates across Europe. Sign up for our
-          newsletter, so you’ll be the first to know when we launch in your country{' '}
-          <span role="img" aria-label="rocketship">
-            🚀
-          </span>
-        </Trans>
+          newsletter, so you’ll be the first to know when we launch in your country
+        </Trans>{' '}
+        <span role="img" aria-label="rocketship">
+          🚀
+        </span>
         <br />
         <div className="d-flex justify-content-center my-5">
           <Modal
             id="psop-newsletter-signup"
-            titleClasses="text-white"
+            titleClassNames="text-white"
             title={<Trans>Sign up for the Ledgy newsletter</Trans>}
             buttonText={
               <>
