@@ -109,6 +109,11 @@ export const PageQuery = graphql`
         ...GatsbyImageSharpFixed
       }
     }
+    janinamuetze: imageSharp(fluid: { originalName: { regex: "/janinamuetze/" } }) {
+      fixed(width: 100) {
+        ...GatsbyImageSharpFixed
+      }
+    }
     site {
       siteMetadata {
         siteUrl
