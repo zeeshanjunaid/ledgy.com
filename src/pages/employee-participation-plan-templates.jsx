@@ -32,7 +32,7 @@ const EquityPlans = ({ i18n, data }: Props) => {
   };
   const productHuntLaunchButton = (
     <ProductHuntButton
-      productHuntLink="https://www.producthunt.com/posts/startup-fundraising-calculator?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-startup-fundraising-calculator"
+      productHuntLink="https://www.producthunt.com/posts/employee-participation-plan-templates?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-startup-fundraising-calculator"
       trackSignupKey="clickProductHuntESOP"
       altText="Free Employee Participation Plan Templates - Using Ledgy! | Product Hunt Embed"
     />
