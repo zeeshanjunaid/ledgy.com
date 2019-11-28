@@ -527,7 +527,7 @@ $markdown-spacer: $markdown-font-size;
   right: 0;
   color: $gray-700;
   @include media-breakpoint-up(lg) {
-    top: 50%;
+    top: 25%;
     transform: translate(0, -50%);
     right: 8px;
   }

@@ -4,9 +4,13 @@ import React, { useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-const Banner = ({ content, hide }: { content: Mdx, hide: () => void }) => (
-  <div className="publicity-banner position-fixed text-center bg-white border border-gray rounded p-4">
-    <MDXRenderer>{content.childMdx.body}</MDXRenderer>
+const Banner = ({ content, hide }: { content: ?Mdx, hide: () => void }) => (
+  <div
+    className={`publicity-banner position-fixed text-center bg-white border border-gray rounded p-4 ${
+      !content ? 'd-none' : ''
+    }`}
+  >
+    {!!content && <MDXRenderer>{content.childMdx.body}</MDXRenderer>}
     <button
       className="publicity-banner--button position-absolute bg-transparent border-0 p-2 p-lg-4 rounded-circle"
       onClick={hide}
@@ -21,7 +25,7 @@ const isVisibleNow = ({ node }: {| node: {| startAt: string, endAt: string |} |}
   return new Date(node.startAt).getTime() <= now && new Date(node.endAt).getTime() >= now;
 };
 
-export default () => {
+export default ({ pathname }: {| pathname: string |}) => {
   const [show, setShow] = useState(true);
   if (!show) return <div />;
 
@@ -45,8 +49,10 @@ export default () => {
       }
     `
   );
-  const banner = result.allContentfulBanner.edges.find(isVisibleNow);
-  if (!banner) return <div />;
 
-  return <Banner content={banner.node.content} hide={() => setShow(false)} />;
+  const banner = result.allContentfulBanner.edges.find(isVisibleNow);
+  const isPsopLaunchPage = pathname === '/employee-participation-plan-templates/';
+  const content = banner && !isPsopLaunchPage ? banner.node.content : null;
+
+  return <Banner content={content} hide={() => setShow(false)} />;
 };
