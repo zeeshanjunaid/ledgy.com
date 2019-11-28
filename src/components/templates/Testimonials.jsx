@@ -20,6 +20,18 @@ export const Testimonials = ({ data, i18n }: Object): Node => {
       rounded: true
     },
     {
+      name: 'Janina Mütze, CEO @ Civey',
+      description: (
+        <Trans>
+          I am convinced companies grow thanks to the people they attract and employ. Let’s reduce
+          complexity and enable founders to let their members be part of the companies’ success.
+        </Trans>
+      ),
+      url: 'https://civey.com/',
+      img: data.janinamutze,
+      rounded: true
+    },
+    {
       name: 'Christian Reber, CEO @ Pitch',
       description: (
         <Trans>
@@ -60,7 +72,7 @@ export const Testimonials = ({ data, i18n }: Object): Node => {
 
   const testimonials = TESTIMONIALS.map(({ name, description, url, img, rounded }) => (
     <Testimonial
-      col={5}
+      col={rounded ? 4 : 5}
       key={name}
       name={name}
       url={url}
