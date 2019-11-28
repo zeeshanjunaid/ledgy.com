@@ -55,7 +55,7 @@ const helpLinks = [
   [<Trans>Help Center</Trans>, 'help'],
   [<Trans>Getting Started</Trans>, 'help/getting-started'],
   [<Trans>Glossary</Trans>, 'glossary'],
-  [<Trans>ESOP Templates</Trans>, 'help/employee-participation-guide'],
+  [<Trans>ESOP Templates</Trans>, 'employee-participation-plan-templates'],
   [<Trans>Round Calculator</Trans>, 'calculator']
 ];
 const blogLinks = [
