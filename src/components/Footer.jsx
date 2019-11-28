@@ -80,12 +80,12 @@ const legalLinks = [
   [<Trans>GDPR</Trans>, 'legal/gdpr']
 ];
 
-export const Footer = (props: LayoutProps) => {
-  const isPartners = props.location.pathname.includes('partners');
+export const Footer = ({ location, ...props }: LayoutProps) => {
+  const isPartners = location.pathname.includes('partners');
 
   return (
     <div>
-      {isPartners ? '' : <CTABanner {...props} />}
+      {isPartners ? '' : <CTABanner location={location} {...props} />}
       <footer className="footer pb-9 pt-7 py-md-7 px-4 text-white">
         <div className="row gap-y justify-content-md-center">
           <FooterCol order={2}>
@@ -190,11 +190,7 @@ export const Footer = (props: LayoutProps) => {
                   aria-labelledby="dropdownMenuButton"
                   style={{ minWidth: '7rem' }}
                 >
-                  <Link
-                    className="dropdown-item d-flex"
-                    to={deprefix(props.location.pathname)}
-                    href
-                  >
+                  <Link className="dropdown-item d-flex" to={deprefix(location.pathname)} href>
                     <span className="mr-1" role="img" aria-label="English">
                       🍔
                     </span>
@@ -202,7 +198,7 @@ export const Footer = (props: LayoutProps) => {
                   </Link>
                   <Link
                     className="dropdown-item d-flex"
-                    to={`/de${deprefix(props.location.pathname)}`}
+                    to={`/de${deprefix(location.pathname)}`}
                     href
                   >
                     <span className="mr-1" role="img" aria-label="Deutsch">
@@ -212,7 +208,7 @@ export const Footer = (props: LayoutProps) => {
                   </Link>
                   <Link
                     className="dropdown-item d-flex"
-                    to={`/fr${deprefix(props.location.pathname)}`}
+                    to={`/fr${deprefix(location.pathname)}`}
                     href
                   >
                     <span className="mr-1" role="img" aria-label="Français">

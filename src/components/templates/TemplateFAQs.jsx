@@ -3,9 +3,13 @@
 import React, { type Node } from 'react';
 import { Trans } from '@lingui/react';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { Accordion, AccordionItem } from '../Accordion';
+import NewsletterForm from '../NewsletterForm';
+import Modal from '../Modal';
 
-const QUESTIONS = [
+const getQuestions = (props: Props) => [
   {
     slug: 'why-use-these-templates',
     question: <Trans>Why use these templates?</Trans>,
@@ -59,13 +63,46 @@ const QUESTIONS = [
             🚀
           </span>
         </Trans>
+        <br />
+        <div className="d-flex justify-content-center my-5">
+          <Modal
+            id="psop-newsletter-signup"
+            titleClasses="text-white"
+            title={<Trans>Sign up for the Ledgy newsletter</Trans>}
+            buttonText={
+              <>
+                <FontAwesomeIcon
+                  className="newsletter-icon mr-2"
+                  icon={faEnvelope}
+                  title="Newsletter"
+                />
+                <Trans>Subscribe</Trans>
+              </>
+            }
+            hideFooter
+          >
+            <p className="text-dark my-3">
+              <Trans>
+                Receive important feature updates, exclusive webinar invitations, and
+                promotions/offers.
+              </Trans>
+              <br />
+              <br />
+              <Trans>
+                Plus, you will be at the top of the list for announcements about new employee
+                participation plan templates.
+              </Trans>
+            </p>
+            <NewsletterForm {...props} />
+          </Modal>
+        </div>
       </>
     )
   }
 ];
 
-export const TemplateFAQs = (): Node => {
-  const accordionItems = QUESTIONS.map(({ slug, question, answer }) => (
+export const TemplateFAQs = (props: Props): Node => {
+  const accordionItems = getQuestions(props).map(({ slug, question, answer }) => (
     <AccordionItem id={slug} key={slug} title={question}>
       {answer}
     </AccordionItem>

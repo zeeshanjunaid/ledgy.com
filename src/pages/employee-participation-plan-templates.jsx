@@ -18,7 +18,8 @@ import {
 } from '../components/templates';
 import { ProductHuntButton } from '../components/ProductHuntButton';
 
-const EquityPlans = ({ i18n, data, lang }: Props) => {
+const EquityPlans = (props: Props) => {
+  const { i18n, data, lang } = props;
   const title = i18n.t`Employee Participation Plan Templates`;
   const description = i18n.t`Get free templates from top Swiss and German law firms for your employee participation plans. Use the Ledgy term sheet guide to easily draft a document with the conditions of your participation plans.`;
   const { siteUrl } = data.site.siteMetadata;
@@ -63,7 +64,7 @@ const EquityPlans = ({ i18n, data, lang }: Props) => {
           <CallToAction />
           <Testimonials data={data} i18n={i18n} />
           <Video />
-          <TemplateFAQs />
+          <TemplateFAQs {...props} />
           <SignaturesComingSoon data={data} />
         </>
       </ContentBody>
