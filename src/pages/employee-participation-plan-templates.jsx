@@ -18,7 +18,7 @@ import {
 } from '../components/templates';
 import { ProductHuntButton } from '../components/ProductHuntButton';
 
-const EquityPlans = ({ i18n, data }: Props) => {
+const EquityPlans = ({ i18n, data, lang }: Props) => {
   const title = i18n.t`Employee Participation Plan Templates`;
   const description = i18n.t`Get free templates from top Swiss and German law firms for your employee participation plans. Use the Ledgy term sheet guide to easily draft a document with the conditions of your participation plans.`;
   const { siteUrl } = data.site.siteMetadata;
@@ -38,6 +38,7 @@ const EquityPlans = ({ i18n, data }: Props) => {
       altText="Free Employee Participation Plan Templates - Using Ledgy! | Product Hunt Embed"
     />
   );
+  const isGerman = lang === 'de';
   return (
     <>
       <Title
@@ -52,7 +53,7 @@ const EquityPlans = ({ i18n, data }: Props) => {
         customButton={productHuntLaunchButton}
         image={
           <div id="mac-templates" data-aos="fade-up">
-            <Img {...data.templates} alt="Templates" />
+            <Img {...(isGerman ? data.templatesDe : data.templates)} alt="Templates" />
           </div>
         }
       />
@@ -75,6 +76,11 @@ export default withI18n()(EquityPlans);
 export const PageQuery = graphql`
   query {
     templates: imageSharp(fluid: { originalName: { regex: "/mac-templates.png/" } }) {
+      fluid(maxWidth: 1000) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    templatesDe: imageSharp(fluid: { originalName: { regex: "/mac-templates-de.png/" } }) {
       fluid(maxWidth: 1000) {
         ...GatsbyImageSharpFluid
       }
