@@ -21,7 +21,7 @@ export const SignaturesComingSoon = ({ data }: Object): Node => {
         <h6 className="w-100">
           <Trans>Sign grants online in seconds</Trans>
         </h6>
-        <div className="row row-small mx-auto text-left">
+        <div className="row row-small mx-auto text-left flex-column">
           {STEPS.map(([step, text]) => (
             <div className="media my-4" key={step}>
               <CircleBadge>{step}</CircleBadge>
