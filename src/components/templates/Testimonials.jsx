@@ -15,6 +15,7 @@ export const Testimonials = ({ data, i18n }: Object): Node => {
           people to work in a startup by profiting from its success.
         </Trans>
       ),
+      url: 'https://press.getyourguide.com/executive-team',
       img: data.johannesreck,
       rounded: true
     },
@@ -26,6 +27,7 @@ export const Testimonials = ({ data, i18n }: Object): Node => {
           this is already the norm, but in Germany, it’s still complicated.
         </Trans>
       ),
+      url: 'https://pitch.com/',
       img: data.christianreber,
       rounded: true
     },
@@ -37,6 +39,7 @@ export const Testimonials = ({ data, i18n }: Object): Node => {
           is paving the way to spread knowledge on how to involve employees in a startup’s success.
         </Trans>
       ),
+      url: 'https://deutschland.taylorwessing.com/en/home',
       img: data.taylorwessing,
       rounded: false
     },
@@ -49,16 +52,18 @@ export const Testimonials = ({ data, i18n }: Object): Node => {
           reward their talented employees.
         </Trans>
       ),
+      url: 'https://www.bakertilly.global/en/',
       img: data.bakertilly,
       rounded: false
     }
   ];
 
-  const testimonials = TESTIMONIALS.map(({ name, description, img, rounded }) => (
+  const testimonials = TESTIMONIALS.map(({ name, description, url, img, rounded }) => (
     <Testimonial
       col={5}
       key={name}
       name={name}
+      url={url}
       img={img}
       description={description}
       rounded={rounded}
@@ -71,8 +76,9 @@ export const Testimonials = ({ data, i18n }: Object): Node => {
       <div className="row text-center justify-content-center">
         <Testimonial
           col={10}
-          name={i18n.t`Dominic Jacquesson, VP Talent @ Index Ventures, a VC that founded the Not Optional initiative`}
+          name={i18n.t`Dominic Jacquesson, VP Talent @ Index Ventures, a VC who founded the Not Optional initiative`}
           img={data.notoptional}
+          url="https://notoptional.eu/en/"
           minHeight={0}
           description={
             <Trans>

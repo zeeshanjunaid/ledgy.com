@@ -2,12 +2,14 @@
 
 import React, { type Node } from 'react';
 import Img from 'gatsby-image';
+import { targetBlank } from '../layouts/utils';
 
 export const Testimonial = ({
   img,
   name,
   description,
   col,
+  url,
   rounded,
   minHeight = 80
 }: {
@@ -15,6 +17,7 @@ export const Testimonial = ({
   name: string,
   description: Node,
   col: number,
+  url?: string,
   rounded?: boolean,
   minHeight?: number
 }) => (
@@ -25,7 +28,9 @@ export const Testimonial = ({
       className="d-flex align-items-center justify-content-center mt-4"
       style={minHeight ? { minHeight } : {}}
     >
-      <Img {...img} alt={name} className={rounded ? 'avatar' : ''} />
+      <a {...targetBlank} href={url}>
+        <Img {...img} alt={name} className={rounded ? 'avatar' : ''} />
+      </a>
     </div>
     <div className="d-flex flex-column justify-content-between mt-4 h-100">
       <div className="testimonial-description">{description}</div>
