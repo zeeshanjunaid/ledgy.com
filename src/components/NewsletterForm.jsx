@@ -1,12 +1,27 @@
 // @flow
 
-import React from 'react';
+import React, { Component } from 'react';
 import { Trans } from '@lingui/react';
 import 'isomorphic-fetch';
 
 import { trackSignup } from '../layouts/utils';
 
-export default class extends React.Component<Props, { email: string, invalid: boolean }> {
+const MIXPANEL_TOKEN = '7f124dd9a799a7c687dc38ee554d9876';
+
+const generateEncodedJSON = (email, token) => {
+  const mixpanelObject = {
+    $token: token,
+    $distinct_id: email,
+    $set: {
+      $email: email
+    }
+  };
+  return btoa(JSON.stringify(mixpanelObject));
+};
+
+const generateMixpanelUrl = data => `https://api.mixpanel.com/engage/?data=${data}`;
+
+export default class extends Component<Props, { email: string, invalid: boolean }> {
   state = { email: '', invalid: false };
   re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; // eslint-disable-line no-useless-escape
   handleChange = (e: SyntheticInputEvent<HTMLInputElement>) => {
@@ -14,11 +29,14 @@ export default class extends React.Component<Props, { email: string, invalid: bo
     this.setState({ email: e.target.value, invalid: false });
   };
   handleSubmit = (e: any) => {
-    const valid = this.re.test(this.state.email);
+    e.preventDefault();
+    const { email } = this.state;
+    const valid = this.re.test(email);
     if (valid) {
+      const mixpanelJSON = generateEncodedJSON(email, MIXPANEL_TOKEN);
+      const mixpanelUrl = generateMixpanelUrl(mixpanelJSON);
       trackSignup('newsletter');
     } else {
-      e.preventDefault();
       this.setState({ invalid: true });
     }
   };
@@ -26,13 +44,7 @@ export default class extends React.Component<Props, { email: string, invalid: bo
     const { i18n } = this.props;
     return (
       <>
-        <form
-          action="https://ledgy.us16.list-manage.com/subscribe/post?u=d6181c123b4d20b2104c4652f&amp;id=c9cfbb11a6"
-          method="post"
-          className="input-round py-5"
-          onSubmit={this.handleSubmit}
-          noValidate
-        >
+        <form method="post" className="input-round py-5" onSubmit={this.handleSubmit} noValidate>
           <div className="form-group input-group bg-white gap-y p-2 mb-0">
             <input
               type="email"
