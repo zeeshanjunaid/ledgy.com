@@ -36,9 +36,9 @@ export default class extends Component<Props, { email: string, invalid: boolean 
     if (valid) {
       const mixpanelJSON = generateBase64EncodedJSON(email, MIXPANEL_TOKEN);
       const url = generateMixpanelUrl(mixpanelJSON);
-      const response = await fetch(url);
       console.log(mixpanelUrl);
       console.log(url);
+      const response = await fetch(url);
       console.log(response);
       if (response.status === 200) {
         console.log('submitted');
