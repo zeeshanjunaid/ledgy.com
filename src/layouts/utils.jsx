@@ -18,6 +18,9 @@ export const wirtschaftswocheUrl =
   'https://gruender.wiwo.de/ledgy-plattform-fuer-beteiligungsmanagement-erhaelt-anschubfinanzierung/';
 export const top100Url = 'https://www.top100startups.swiss/index.cfm?page=136340';
 
+const isNetlify = process && process.env.CONTEXT === 'production';
+export const mixpanelUrl = isNetlify ? '/api' : 'https://api.mixpanel.com';
+
 export const targetBlank = { target: '_blank', rel: 'noopener noreferrer' };
 
 export const isBrowser = typeof window !== 'undefined';

@@ -4,22 +4,23 @@ import React, { Component } from 'react';
 import { Trans } from '@lingui/react';
 import 'isomorphic-fetch';
 
-import { trackSignup } from '../layouts/utils';
+import { trackSignup, mixpanelUrl } from '../layouts/utils';
 
 const MIXPANEL_TOKEN = '7f124dd9a799a7c687dc38ee554d9876';
 
-const generateEncodedJSON = (email, token) => {
+const generateBase64EncodedJSON = (email, token) => {
   const mixpanelObject = {
     $token: token,
     $distinct_id: email,
     $set: {
+      $first_name: email,
       $email: email
     }
   };
   return btoa(JSON.stringify(mixpanelObject));
 };
 
-const generateMixpanelUrl = data => `https://api.mixpanel.com/engage/?data=${data}`;
+const generateMixpanelUrl = data => `${mixpanelUrl}/engage/?data=${data}`;
 
 export default class extends Component<Props, { email: string, invalid: boolean }> {
   state = { email: '', invalid: false };
@@ -28,14 +29,21 @@ export default class extends Component<Props, { email: string, invalid: boolean 
     e.preventDefault();
     this.setState({ email: e.target.value, invalid: false });
   };
-  handleSubmit = (e: any) => {
+  handleSubmit = async (e: any) => {
     e.preventDefault();
     const { email } = this.state;
     const valid = this.re.test(email);
     if (valid) {
-      const mixpanelJSON = generateEncodedJSON(email, MIXPANEL_TOKEN);
+      const mixpanelJSON = generateBase64EncodedJSON(email, MIXPANEL_TOKEN);
       const mixpanelUrl = generateMixpanelUrl(mixpanelJSON);
-      trackSignup('newsletter');
+      const response = await fetch(mixpanelUrl);
+      if (response.status === 200) {
+        console.log('submitted');
+        console.log(response);
+      } else {
+        console.log('error');
+      }
+      // trackSignup('newsletter');
     } else {
       this.setState({ invalid: true });
     }
