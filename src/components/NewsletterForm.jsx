@@ -35,11 +35,13 @@ export default class extends Component<Props, { email: string, invalid: boolean 
     const valid = this.re.test(email);
     if (valid) {
       const mixpanelJSON = generateBase64EncodedJSON(email, MIXPANEL_TOKEN);
-      const mixpanelUrl = generateMixpanelUrl(mixpanelJSON);
-      const response = await fetch(mixpanelUrl);
+      const url = generateMixpanelUrl(mixpanelJSON);
+      const response = await fetch(url);
+      console.log(mixpanelUrl);
+      console.log(url);
+      console.log(response);
       if (response.status === 200) {
         console.log('submitted');
-        console.log(response);
       } else {
         console.log('error');
       }
