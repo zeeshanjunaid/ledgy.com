@@ -66,7 +66,6 @@ export default class extends Component<Props, { email: string, invalid: boolean 
             <button
               type="submit"
               name="subscribe"
-              id="mc-embedded-subscribe"
               className="btn btn-primary btn-round btn-xl ml-2"
             >
               <Trans>Subscribe</Trans>
