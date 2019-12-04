@@ -33,10 +33,13 @@ const generateMixpanelUrl = data => `${mixpanelUrl}/engage/?data=${data}`;
 
 const removeModalFromDOM = () => {
   const modal = document.getElementById('newsletter-signup');
-  if (modal) modal.classList.remove('show');
+  if (modal) {
+    modal.classList.remove('show');
+    modal.setAttribute('aria-hidden', 'true');
+    modal.setAttribute('style', 'display: none');
+  }
   const backdrop = document.querySelector('.modal-backdrop');
   if (backdrop && backdrop.parentNode) backdrop.parentNode.removeChild(backdrop);
-  if (document.body) document.body.className = '';
 };
 
 export default class extends Component<Props, { email: string, ...FormStatus }> {
