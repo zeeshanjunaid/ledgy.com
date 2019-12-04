@@ -15,7 +15,7 @@ const LOADING = 'loading';
 const INVALID = 'invalid';
 const ERROR = 'error';
 
-const MIXPANEL_TOKEN = '7f124dd9a799a7c687dc38ee554d9876';
+const MIXPANEL_TOKEN = '258b9724a7ad7271dd2e3e3440bb68fd';
 
 const generateBase64EncodedJSON = (email, token) => {
   const mixpanelObject = {
