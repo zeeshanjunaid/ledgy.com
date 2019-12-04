@@ -6,6 +6,13 @@ import 'isomorphic-fetch';
 
 import { trackSignup, mixpanelUrl } from '../layouts/utils';
 
+declare type FormStatus = {| status: 'idle' | 'loading' | 'invalid' | 'error' | 'submitted' |};
+const IDLE = 'idle';
+const LOADING = 'loading';
+const INVALID = 'invalid';
+const ERROR = 'error';
+const SUBMITTED = 'submitted';
+
 const MIXPANEL_TOKEN = '7f124dd9a799a7c687dc38ee554d9876';
 
 const generateBase64EncodedJSON = (email, token) => {
@@ -22,40 +29,46 @@ const generateBase64EncodedJSON = (email, token) => {
 
 const generateMixpanelUrl = data => `${mixpanelUrl}/engage/?data=${data}`;
 
-export default class extends Component<Props, { email: string, invalid: boolean }> {
-  state = { email: '', invalid: false };
+export default class extends Component<Props, { email: string, ...FormStatus }> {
+  state = { email: '', status: IDLE };
   re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; // eslint-disable-line no-useless-escape
   handleChange = (e: SyntheticInputEvent<HTMLInputElement>) => {
     e.preventDefault();
-    this.setState({ email: e.target.value, invalid: false });
+    this.setState({ email: e.target.value });
   };
   handleSubmit = async (e: any) => {
     e.preventDefault();
+    this.setState({ status: LOADING });
     const { email } = this.state;
     const valid = this.re.test(email);
     if (valid) {
       const mixpanelJSON = generateBase64EncodedJSON(email, MIXPANEL_TOKEN);
       const url = generateMixpanelUrl(mixpanelJSON);
-      console.log(mixpanelUrl);
-      console.log(url);
-      const response = await fetch(url);
-      console.log(response);
-      if (response.status === 200) {
-        console.log('submitted');
-      } else {
-        console.log('error');
+      try {
+        const response = await fetch(url);
+        if (response.status === 200) {
+          this.setState({ status: SUBMITTED });
+        } else {
+          this.setState({ status: ERROR });
+        }
+      } catch (error) {
+        this.setState({ status: ERROR });
       }
       // trackSignup('newsletter');
     } else {
-      this.setState({ invalid: true });
+      this.setState({ status: INVALID });
     }
   };
   render = () => {
-    const { i18n } = this.props;
+    const { props, state } = this;
+    const { status } = state;
+    const { i18n } = props;
+    const invalid = status === INVALID;
+    const error = status === ERROR;
     return (
       <>
         <form method="post" className="input-round py-5" onSubmit={this.handleSubmit} noValidate>
-          <div className="form-group input-group bg-white gap-y p-2 mb-0">
+          <div className="form-group input-group bg-white gap-y p-2 mb-2">
             <input
               type="email"
               name="EMAIL"
@@ -71,9 +84,12 @@ export default class extends Component<Props, { email: string, invalid: boolean 
               <Trans>Subscribe</Trans>
             </button>
           </div>
-          <small className={`text-danger ${this.state.invalid ? '' : 'invisible'}`}>
-            <Trans>Oops. This email address is invalid.</Trans>
-          </small>
+          {(invalid || error) && (
+            <small className="text-danger">
+              Oops. {invalid && <Trans> This email address is invalid.</Trans>}
+              {error && <Trans> Something went wrong, please try again.</Trans>}
+            </small>
+          )}
         </form>
       </>
     );
