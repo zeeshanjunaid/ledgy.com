@@ -3,6 +3,8 @@
 import React, { Component } from 'react';
 import { Trans } from '@lingui/react';
 import 'isomorphic-fetch';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { trackSignup, mixpanelUrl } from '../layouts/utils';
 
@@ -83,7 +85,11 @@ export default class extends Component<Props, { email: string, ...FormStatus }> 
               className="btn btn-primary btn-round btn-xl ml-2"
               disabled={invalid || error || loading}
             >
-              <Trans>Subscribe</Trans>
+              {loading ? (
+                <FontAwesomeIcon icon={faSpinner} className="fa-lg spin" />
+              ) : (
+                <Trans>Subscribe</Trans>
+              )}
             </button>
           </div>
           <div style={{ minHeight: '30px' }}>
