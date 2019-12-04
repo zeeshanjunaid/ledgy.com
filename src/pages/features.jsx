@@ -55,7 +55,37 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <Hr />
 
-          <Feature {...props} name={i18n.t`Cap Table Management`} url="captable" left>
+          <Feature {...props} name={i18n.t`Digital Signatures & Templating`} url="signatures" left>
+            <ul className="pl-0 pt-2">
+              <FeatureLi>
+                <Trans>
+                  Sign documents online using Qualified Electronic Signatures (QES): The highest
+                  standard in digital signatures
+                </Trans>
+              </FeatureLi>
+              <FeatureLi>
+                <Trans>
+                  Request stakeholder signatures with a single click: easy for one stakeholder, easy
+                  for 100
+                </Trans>
+              </FeatureLi>
+              <FeatureLi>
+                <Trans>
+                  Create legal documents from Word templates using stakeholder and transaction data
+                </Trans>
+              </FeatureLi>
+              <FeatureLi>
+                <Trans>
+                  Build signature workflows to issue fully-compliant option grants online without
+                  printing a single sheet of paper
+                </Trans>
+              </FeatureLi>
+            </ul>
+          </Feature>
+
+          <Hr />
+
+          <Feature {...props} name={i18n.t`Cap Table Management`} url="captable">
             <ul className="pl-0 pt-2">
               <FeatureLi>
                 <Trans>Intuitive, legally valid, and error-free cap table from the beginning</Trans>
@@ -77,7 +107,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <Hr />
 
-          <Feature {...props} name={i18n.t`Round & Exit Modeling`} url="modeling">
+          <Feature {...props} name={i18n.t`Round & Exit Modeling`} url="modeling" left>
             <ul className="pl-0 pt-2">
               <FeatureLi>
                 <Trans>
@@ -101,7 +131,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <Hr />
 
-          <Feature {...props} name={i18n.t`Collaboration & Due Diligence`} url="collaboration" left>
+          <Feature {...props} name={i18n.t`Collaboration & Due Diligence`} url="collaboration">
             <ul className="pl-0 pt-2">
               <FeatureLi>
                 <Trans>Granular access rights — You are in control</Trans>
@@ -123,7 +153,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <Hr />
 
-          <Feature {...props} name={i18n.t`Investor Relations & Portfolio`} url="investors">
+          <Feature {...props} name={i18n.t`Investor Relations & Portfolio`} url="investors" left>
             <ul className="pl-0 pt-2">
               <FeatureLi>
                 <Trans>Be professional towards your investors as a startup</Trans>

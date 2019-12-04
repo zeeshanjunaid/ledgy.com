@@ -179,6 +179,11 @@ export const FeaturesFragment = graphql`
         ...GatsbyImageSharpFluid
       }
     }
+    signatures: imageSharp(fluid: { originalName: { regex: "/signatures.png/" } }) {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid
+      }
+    }
     captable: imageSharp(fluid: { originalName: { regex: "/captable.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
