@@ -5,15 +5,15 @@ import { Trans } from '@lingui/react';
 import 'isomorphic-fetch';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { navigate } from 'gatsby';
 
 import { trackSignup, mixpanelUrl } from '../layouts/utils';
 
-declare type FormStatus = {| status: 'idle' | 'loading' | 'invalid' | 'error' | 'submitted' |};
+declare type FormStatus = {| status: 'idle' | 'loading' | 'invalid' | 'error' |};
 const IDLE = 'idle';
 const LOADING = 'loading';
 const INVALID = 'invalid';
 const ERROR = 'error';
-const SUBMITTED = 'submitted';
 
 const MIXPANEL_TOKEN = '7f124dd9a799a7c687dc38ee554d9876';
 
@@ -30,6 +30,14 @@ const generateBase64EncodedJSON = (email, token) => {
 };
 
 const generateMixpanelUrl = data => `${mixpanelUrl}/engage/?data=${data}`;
+
+const removeModalFromDOM = () => {
+  const modal = document.getElementById('newsletter-signup');
+  if (modal) modal.classList.remove('show');
+  const backdrop = document.querySelector('.modal-backdrop');
+  if (backdrop && backdrop.parentNode) backdrop.parentNode.removeChild(backdrop);
+  if (document.body) document.body.className = '';
+};
 
 export default class extends Component<Props, { email: string, ...FormStatus }> {
   state = { email: '', status: IDLE };
@@ -49,14 +57,16 @@ export default class extends Component<Props, { email: string, ...FormStatus }> 
       try {
         const response = await fetch(url);
         if (response.status === 200) {
-          this.setState({ status: SUBMITTED });
+          this.setState({ email: '', status: IDLE });
+          removeModalFromDOM();
+          navigate('/subscribed');
         } else {
           this.setState({ status: ERROR });
         }
       } catch (error) {
         this.setState({ status: ERROR });
       }
-      // trackSignup('newsletter');
+      trackSignup('newsletter');
     } else {
       this.setState({ status: INVALID });
     }
@@ -78,12 +88,14 @@ export default class extends Component<Props, { email: string, ...FormStatus }> 
               className="form-control"
               placeholder={i18n.t`Enter your email…`}
               onChange={this.handleChange}
+              value={this.state.email}
             />
             <button
               type="submit"
               name="subscribe"
               className="btn btn-primary btn-round btn-xl ml-2"
               disabled={invalid || error || loading}
+              style={{ minWidth: '110px' }}
             >
               {loading ? (
                 <FontAwesomeIcon icon={faSpinner} className="fa-lg spin" />
