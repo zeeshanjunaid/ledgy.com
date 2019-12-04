@@ -92,7 +92,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         textSize="5"
         header={<Trans>Key performance indicators</Trans>}
         features={[
-          <Trans>Every company has KPIs, and investors love seeing them in real-time</Trans>,
+          <Trans>Every company has KPIs, and investors love seeing them in real time</Trans>,
           <Trans>Just copy-paste expected and actual values and customize the plots</Trans>,
           <Trans>Share them with individual stakeholders or with stakeholder groups</Trans>
         ]}

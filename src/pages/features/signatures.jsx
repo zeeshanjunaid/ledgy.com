@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { withI18n, Trans } from '@lingui/react';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import {
   faRandom,
@@ -12,7 +12,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 import { FeatureLinks, FeatureList, TopPageFeatureCard } from '../../components/Feature';
-import { Title, ChevronRight } from '../../layouts/utils';
+import { Title } from '../../layouts/utils';
 
 export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
@@ -45,7 +45,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                 </Trans>
               }
               icon={faCertificate}
-              href="#signature"
+              href="#qes"
             />
             <TopPageFeatureCard
               header={<Trans>Request signatures in seconds</Trans>}
@@ -56,7 +56,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                 </Trans>
               }
               icon={faEnvelope}
-              href="#track"
+              href="#invite"
             />
             <TopPageFeatureCard
               header={<Trans>Create legal documents from templates</Trans>}
@@ -67,7 +67,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                 </Trans>
               }
               icon={faFileContract}
-              href="#legalDocs"
+              href="#templates"
             />
             <TopPageFeatureCard
               header={<Trans>Streamline your signature flows</Trans>}
@@ -95,92 +95,100 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
       <FeatureList
         textSize="5"
-        header={<Trans>Supports everything</Trans>}
+        header={<Trans>Qualified Electronic Signatures (QES)</Trans>}
         features={[
           <Trans>
-            Create option or phantom pools reserved for employees and keep track of how much is
-            granted, available, vested and exercised
+            <strong>The highest legal standard</strong> in digital signatures, same as signing on
+            paper
           </Trans>,
           <Trans>
-            Grant options, phantom options, warrants or add inverse vesting to stock transactions
-          </Trans>,
-          <Trans>Track exercise, termination and expiration</Trans>
-        ]}
-        imgSize="7"
-        img={<Img {...props.data.addOption} alt={i18n.t`Add an option pool`} />}
-        id="support"
-      />
-
-      <FeatureList
-        textSize="5"
-        header={<Trans>Any vesting schedule</Trans>}
-        features={[
-          <Trans>Add vesting or inverse vesting to any transaction</Trans>,
-          <Trans>
-            Use simple linear vesting with duration, interval and cliff, define your own custom
-            vesting schedule, or select a preset
-          </Trans>,
-          <Trans>Visualizations help you understand what happens</Trans>
-        ]}
-        imgSize="7"
-        img={<Img {...props.data.addVesting} alt={i18n.t`Add vesting`} />}
-        imgFirst
-        id="vesting"
-      />
-
-      <FeatureList
-        textSize="5"
-        header={<Trans>Engage your employees</Trans>}
-        features={[
-          <Trans>
-            Engage your employees with notifications two weeks before a cliff, vesting, or grant
-            event
+            <strong>Approved by the EU</strong> (eIDAS regulation) through our partner Skribble
           </Trans>,
           <Trans>
-            Invite your employees to track their stake and vesting in their Ledgy portfolio
+            <strong>Secure video identification</strong> of the signatory by trusted authority
+          </Trans>,
+          <Trans>
+            <strong>Mobile-friendly</strong>: let your stakeholders sign documents on the go
           </Trans>
+        ]}
+        imgSize="7"
+        img={<Img {...props.data.addOption} alt={i18n.t`Legal electronic signatures`} />}
+        id="qes"
+      />
+
+      <FeatureList
+        textSize="5"
+        header={<Trans>Request signatures in seconds</Trans>}
+        features={[
+          <Trans>
+            <strong>Request mutiple signatures in a single click</strong>, instead of manually
+            filling, sending, sorting, and tracking documents or even printed contracts
+          </Trans>,
+          <Trans>
+            <strong>Keep track of who already signed</strong> and who is still missing
+          </Trans>,
+          <Trans>
+            <strong>Get rid of tedious paperwork</strong> and make your stakeholders happy
+          </Trans>,
+          <Trans>
+            <strong>All in one place</strong>: The whole signing process happens on the Ledgy
+            platform
+          </Trans>
+        ]}
+        imgSize="7"
+        img={<Img {...props.data.addVesting} alt={i18n.t`Blazing-fast signatures`} />}
+        imgFirst
+        id="invite"
+      />
+
+      <FeatureList
+        textSize="5"
+        header={<Trans>Document templating</Trans>}
+        features={[
+          <Trans>
+            <strong>Create legal contracts</strong> with a single click from your own Word templates
+          </Trans>,
+          <Trans>
+            <strong>Automatically fill in variables</strong> like stakeholder profiles and
+            transaction data
+          </Trans>,
+          /* eslint-disable */
+          <Trans>
+            <strong>Easy to use</strong>: simply typing “{`\{stakeholder.name\}`}” will become the name of your
+            stakeholder
+          </Trans>
+          /* eslint-enable */
         ]}
         imgSize="7"
         img={
           <Img
             {...props.data.notificationEmail}
-            alt={i18n.t`Email notification about upcoming vesting event`}
+            alt={i18n.t`Automatically generate legally-valid contracts with easy templates`}
           />
         }
-        link={
-          <Link href to={`${props.prefix}/features/collaboration/`}>
-            <Trans>Learn more about collaboration</Trans>
-            <ChevronRight />
-          </Link>
-        }
-        id="engage"
+        id="templates"
       />
 
       <FeatureList
         textSize="5"
-        header={<Trans>Diluted cap table</Trans>}
+        header={<Trans>Signing workflows</Trans>}
         features={[
-          <Trans>See your pools and employee participation grants in the cap table</Trans>,
           <Trans>
-            Choose to only show pools or the detailed view with the grants distributed to their
-            holders
+            <strong>Build fully-compliant option grants</strong> and onboard your new employees in
+            seconds
+          </Trans>,
+          <Trans>
+            <strong>Enable secondary trades</strong> with streamlined stock transfers
+          </Trans>,
+          <Trans>
+            <strong>Automate compliance</strong> by documenting transactions with their required
+            legal contracts
           </Trans>
         ]}
         imgSize="7"
         img={<Img {...props.data.dilutedTable} alt={i18n.t`Show cap table fully diluted`} />}
         imgFirst
-      />
-
-      <FeatureList
-        textSize="4"
-        header={<Trans>Spreadsheet importer</Trans>}
-        features={[
-          <Trans>Get started in minutes with the copy-paste spreadsheet importer</Trans>,
-          <Trans>Copy-pasting employee grants from your existing spreadsheet</Trans>
-        ]}
-        imgSize="8"
-        img={<Img {...props.data.bulkEntryOptions} alt={i18n.t`Bulk entry options`} />}
-        id="spreadsheet"
+        id="flows"
       />
 
       <section className="section overflow-hidden pt-2">
