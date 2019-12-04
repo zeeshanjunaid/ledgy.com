@@ -66,6 +66,10 @@ li > a {
   &:focus, &:active {
     box-shadow: none !important;
   }
+  &:disabled:hover {
+    box-shadow: none !important;
+    transform: none !important;
+  }
 }
 .nav-navbar .nav-link,
 .btn {
@@ -115,6 +119,11 @@ h1 {
     animation: rotation 2s infinite linear;
   }
 }
+
+.spin {
+  animation: rotation 2s infinite linear;
+}
+
 @keyframes rotation {
   from {
     transform: rotate(0deg);
