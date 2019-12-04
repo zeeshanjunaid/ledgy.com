@@ -34,7 +34,7 @@ export default class extends Component<Props, { email: string, ...FormStatus }> 
   re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; // eslint-disable-line no-useless-escape
   handleChange = (e: SyntheticInputEvent<HTMLInputElement>) => {
     e.preventDefault();
-    this.setState({ email: e.target.value });
+    this.setState({ email: e.target.value, status: IDLE });
   };
   handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -65,6 +65,7 @@ export default class extends Component<Props, { email: string, ...FormStatus }> 
     const { i18n } = props;
     const invalid = status === INVALID;
     const error = status === ERROR;
+    const loading = status === LOADING;
     return (
       <>
         <form method="post" className="input-round py-5" onSubmit={this.handleSubmit} noValidate>
@@ -80,16 +81,17 @@ export default class extends Component<Props, { email: string, ...FormStatus }> 
               type="submit"
               name="subscribe"
               className="btn btn-primary btn-round btn-xl ml-2"
+              disabled={invalid || error || loading}
             >
               <Trans>Subscribe</Trans>
             </button>
           </div>
-          {(invalid || error) && (
+          <div style={{ minHeight: '30px' }}>
             <small className="text-danger">
-              Oops. {invalid && <Trans> This email address is invalid.</Trans>}
-              {error && <Trans> Something went wrong, please try again.</Trans>}
+              {invalid && <Trans>Oops. This email address is invalid.</Trans>}
+              {error && <Trans>Oops. Something went wrong, please try again.</Trans>}
             </small>
-          )}
+          </div>
         </form>
       </>
     );

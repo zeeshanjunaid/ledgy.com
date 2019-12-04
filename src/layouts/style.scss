@@ -66,6 +66,10 @@ li > a {
   &:focus, &:active {
     box-shadow: none !important;
   }
+  &:disabled:hover {
+    box-shadow: none !important;
+    transform: none !important;
+  }
 }
 .nav-navbar .nav-link,
 .btn {
