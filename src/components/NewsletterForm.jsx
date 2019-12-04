@@ -60,6 +60,7 @@ export default class extends Component<Props, { email: string, ...FormStatus }> 
       try {
         const response = await fetch(url);
         if (response.status === 200) {
+          trackSignup('newsletter');
           this.setState({ email: '', status: IDLE });
           removeModalFromDOM();
           navigate('/subscribed');
@@ -69,7 +70,6 @@ export default class extends Component<Props, { email: string, ...FormStatus }> 
       } catch (error) {
         this.setState({ status: ERROR });
       }
-      trackSignup('newsletter');
     } else {
       this.setState({ status: INVALID });
     }
