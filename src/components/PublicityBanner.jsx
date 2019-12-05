@@ -31,6 +31,6 @@ export default ({ pathname }: {| pathname: string |}) => {
   const [show, setShow] = useState(true);
   if (!show) return <div />;
 
-  const isSignaturesPage = pathname === '/features/signatures';
+  const isSignaturesPage = pathname.includes('features/signatures');
   return <Banner isSignaturesPage={isSignaturesPage} hide={() => setShow(false)} />;
 };
