@@ -91,18 +91,15 @@ export default withI18n()((props: Props) => {
             </div>
 
             <div className="row gap-y">
-              <div className="col-md-12 mx-auto mb-5" data-aos="fade-up">
-                <Img
-                  {...data.incentivesPage}
-                  alt={i18n.t`Overview over vested, granted and exercised incentives`}
-                />
+              <div className="col-md-12 mx-auto mt-3 mb-5" data-aos="fade-up">
+                <Img {...data.signaturesPage} alt={i18n.t`Overview of the signatures page`} />
               </div>
             </div>
           </div>
         </section>
 
         <FeatureList
-          textSize="5"
+          textSize="6"
           header={<Trans>Qualified Electronic Signatures (QES)</Trans>}
           features={[
             <Trans>
@@ -119,13 +116,13 @@ export default withI18n()((props: Props) => {
               <strong>Mobile-friendly</strong>: let your stakeholders sign documents on the go
             </Trans>
           ]}
-          imgSize="7"
-          img={<Img {...data.addOption} alt={i18n.t`Legal electronic signatures`} />}
+          imgSize="6"
+          img={<Img {...data.skribble} alt={i18n.t`Legal electronic signatures`} />}
           id="qes"
         />
 
         <FeatureList
-          textSize="5"
+          textSize="6"
           header={<Trans>Request signatures in seconds</Trans>}
           features={[
             <Trans>
@@ -143,14 +140,14 @@ export default withI18n()((props: Props) => {
               platform
             </Trans>
           ]}
-          imgSize="7"
-          img={<Img {...data.addVesting} alt={i18n.t`Blazing-fast signatures`} />}
+          imgSize="6"
+          img={<Img {...data.signingForm} alt={i18n.t`Blazing-fast signatures`} />}
           imgFirst
           id="invite"
         />
 
         <FeatureList
-          textSize="5"
+          textSize="6"
           header={<Trans>Document templating</Trans>}
           features={[
             <Trans>
@@ -168,10 +165,10 @@ export default withI18n()((props: Props) => {
           </Trans>
           /* eslint-enable */
           ]}
-          imgSize="7"
+          imgSize="6"
           img={
             <Img
-              {...data.notificationEmail}
+              {...data.documentTemplate}
               alt={i18n.t`Automatically generate legally-valid contracts with easy templates`}
             />
           }
@@ -195,12 +192,12 @@ export default withI18n()((props: Props) => {
             </Trans>
           ]}
           imgSize="7"
-          img={<Img {...data.dilutedTable} alt={i18n.t`Show cap table fully diluted`} />}
+          img={<Img {...data.signingWorkflows} alt={i18n.t`Show cap table fully diluted`} />}
           imgFirst
           id="flows"
         />
 
-        <section className="section bg-pale-secondary" id="earlyAccess">
+        <section className="section bg-pale-secondary mt-7" id="earlyAccess">
           <div className="container py-md-4">
             <div className="row m-0 w-100 justify-content-center align-items-center">
               <h4 className="m-3 text-center">
@@ -228,32 +225,27 @@ export const pageQuery = graphql`
   query {
     ...FeaturesFragment
 
-    incentivesPage: imageSharp(fluid: { originalName: { regex: "/incentives-overview.png/" } }) {
+    signaturesPage: imageSharp(fluid: { originalName: { regex: "/signatures-page.png/" } }) {
       fluid(maxWidth: 900) {
         ...GatsbyImageSharpFluid
       }
     }
-    addVesting: imageSharp(fluid: { originalName: { regex: "/add-vesting.png/" } }) {
+    skribble: imageSharp(fluid: { originalName: { regex: "/skribble.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
     }
-    addOption: imageSharp(fluid: { originalName: { regex: "/add-option.png/" } }) {
+    signingForm: imageSharp(fluid: { originalName: { regex: "/signing-form.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
     }
-    dilutedTable: imageSharp(fluid: { originalName: { regex: "/option-diluted-captable.png/" } }) {
+    documentTemplate: imageSharp(fluid: { originalName: { regex: "/document-template.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
     }
-    notificationEmail: imageSharp(fluid: { originalName: { regex: "/notification-email.png/" } }) {
-      fluid(maxWidth: 800) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-    bulkEntryOptions: imageSharp(fluid: { originalName: { regex: "/bulk-entry-options.png/" } }) {
+    signingWorkflows: imageSharp(fluid: { originalName: { regex: "/signing-workflows.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
