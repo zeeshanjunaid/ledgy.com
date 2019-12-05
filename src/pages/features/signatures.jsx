@@ -17,12 +17,14 @@ import SignupForm from '../../components/SignupForm';
 
 export default withI18n()((props: Props) => {
   const { i18n, data } = props;
+  const { siteUrl } = data.site.siteMetadata;
   return (
     <div>
       <Title
         title={i18n.t`Signatures`}
         section={i18n.t`Features`}
         description={i18n.t`Sign your legally-binding equity paperwork fully online`}
+        thumbnailUrl={`${siteUrl}/banners/electronic-signatures.png`}
       />
 
       <header className="header text-white bg-ledgy">
@@ -246,6 +248,11 @@ export const pageQuery = graphql`
     signingWorkflows: imageSharp(fluid: { originalName: { regex: "/signing-workflows.png/" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
+      }
+    }
+    site {
+      siteMetadata {
+        siteUrl
       }
     }
   }
