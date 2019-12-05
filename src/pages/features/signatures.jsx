@@ -203,7 +203,7 @@ export default withI18n()((props: Props) => {
               <h4 className="m-4 text-center">
                 <Trans>Sign up for early access</Trans>
               </h4>
-              <NewsletterForm {...props} />
+              <NewsletterForm {...props} trackingInfo="workflowBetaRequest" />
             </div>
           </div>
         </section>

@@ -15,8 +15,10 @@ const LOADING = 'loading';
 const INVALID = 'invalid';
 const ERROR = 'error';
 
-const generateBase64EncodedJSON = (email, token) => {
-  const mixpanelObject = {
+const encodeBase64 = JsonObject => btoa(JSON.stringify(JsonObject));
+
+const generateBase64SignupJSON = (email, token) => {
+  const mixpanelEngageObject = {
     $token: token,
     $distinct_id: email,
     $set: {
@@ -24,10 +26,21 @@ const generateBase64EncodedJSON = (email, token) => {
       $email: email
     }
   };
-  return btoa(JSON.stringify(mixpanelObject));
+  return encodeBase64(mixpanelEngageObject);
 };
 
-const generateMixpanelUrl = data => `${mixpanelUrl}/engage/?data=${data}`;
+const generateBase64TrackingJSON = (email, token, trackingInfo) => {
+  const mixpanelTrackingObject = {
+    event: trackingInfo,
+    properties: {
+      distinct_id: email,
+      token
+    }
+  };
+  return encodeBase64(mixpanelTrackingObject);
+};
+
+const generateMixpanelUrl = (data, endpoint) => `${mixpanelUrl}/${endpoint}/?data=${data}`;
 
 const removeModalFromDOM = () => {
   const modal = document.getElementById('newsletter-signup');
@@ -40,7 +53,10 @@ const removeModalFromDOM = () => {
   if (backdrop && backdrop.parentNode) backdrop.parentNode.removeChild(backdrop);
 };
 
-export default class extends Component<Props, { email: string, ...FormStatus }> {
+export default class extends Component<
+  {| ...Props, trackingInfo: string |},
+  { email: string, ...FormStatus }
+> {
   state = { email: '', status: IDLE };
   re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; // eslint-disable-line no-useless-escape
   handleChange = (e: SyntheticInputEvent<HTMLInputElement>) => {
@@ -53,15 +69,20 @@ export default class extends Component<Props, { email: string, ...FormStatus }> 
     const { email } = this.state;
     const valid = this.re.test(email);
     if (valid) {
-      const mixpanelJSON = generateBase64EncodedJSON(email, MIXPANEL_TOKEN);
-      const url = generateMixpanelUrl(mixpanelJSON);
+      const mixpanelSignupJSON = generateBase64SignupJSON(email, MIXPANEL_TOKEN);
+      const signupUrl = generateMixpanelUrl(mixpanelSignupJSON, 'engage');
+
       try {
-        const response = await fetch(url);
-        // second fetch to create an event (action the user takes)
-        // user.workflowBetaRequest
-        // user.newsletterSignup for regular newsletter signup
-        if (response.status === 200) {
-          trackSignup('newsletter');
+        const signupResponse = await fetch(signupUrl);
+        if (signupResponse.status === 200) {
+          trackSignup(this.props.trackingInfo); // google analytics
+          const mixpanelTrackingJSON = generateBase64TrackingJSON(
+            email,
+            MIXPANEL_TOKEN,
+            `user.${this.props.trackingInfo}`
+          );
+          const mixpanelTrackingUrl = generateMixpanelUrl(mixpanelTrackingJSON, 'track');
+          await fetch(mixpanelTrackingUrl);
           this.setState({ email: '', status: IDLE });
           removeModalFromDOM();
           navigate('/subscribed');
