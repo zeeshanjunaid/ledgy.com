@@ -546,3 +546,8 @@ $markdown-spacer: $markdown-font-size;
     transition: 200ms;
   }
 }
+
+.form-error-message {
+  bottom: -30px;
+  left: 25px;
+}

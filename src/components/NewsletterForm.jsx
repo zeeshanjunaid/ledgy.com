@@ -16,6 +16,7 @@ const INVALID = 'invalid';
 const ERROR = 'error';
 
 const MIXPANEL_TOKEN = '258b9724a7ad7271dd2e3e3440bb68fd';
+// check for isNetlify and use production vs dev token
 
 const generateBase64EncodedJSON = (email, token) => {
   const mixpanelObject = {
@@ -59,6 +60,9 @@ export default class extends Component<Props, { email: string, ...FormStatus }> 
       const url = generateMixpanelUrl(mixpanelJSON);
       try {
         const response = await fetch(url);
+        // second fetch to create an event (action the user takes)
+        // user.workflowBetaRequest
+        // user.newsletterSignup for regular newsletter signup
         if (response.status === 200) {
           trackSignup('newsletter');
           this.setState({ email: '', status: IDLE });
@@ -83,8 +87,8 @@ export default class extends Component<Props, { email: string, ...FormStatus }> 
     const loading = status === LOADING;
     return (
       <>
-        <form method="post" className="input-round py-5" onSubmit={this.handleSubmit} noValidate>
-          <div className="form-group input-group bg-white gap-y p-2 mb-2">
+        <form method="post" className="input-round py-4" onSubmit={this.handleSubmit} noValidate>
+          <div className="form-group input-group bg-white p-2 my-4 position-relative">
             <input
               type="email"
               name="EMAIL"
@@ -106,9 +110,7 @@ export default class extends Component<Props, { email: string, ...FormStatus }> 
                 <Trans>Subscribe</Trans>
               )}
             </button>
-          </div>
-          <div style={{ minHeight: '30px' }}>
-            <small className="text-danger">
+            <small className="text-danger position-absolute form-error-message">
               {invalid && <Trans>Oops. This email address is invalid.</Trans>}
               {error && <Trans>Oops. Something went wrong, please try again.</Trans>}
             </small>

@@ -200,12 +200,10 @@ export default withI18n()((props: Props) => {
         <section className="section bg-pale-secondary mt-7" id="earlyAccess">
           <div className="container py-md-4">
             <div className="row m-0 w-100 justify-content-center align-items-center">
-              <h4 className="m-3 text-center">
+              <h4 className="m-4 text-center">
                 <Trans>Sign up for early access</Trans>
               </h4>
-              <div className="mt-7 ml-2">
-                <NewsletterForm {...props} />
-              </div>
+              <NewsletterForm {...props} />
             </div>
           </div>
         </section>

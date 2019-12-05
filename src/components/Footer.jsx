@@ -164,7 +164,7 @@ export const Footer = ({ location, ...props }: LayoutProps) => {
                 }
                 hideFooter
               >
-                <p className="text-dark my-5">
+                <p className="text-dark my-4">
                   <Trans>
                     Receive important feature updates, exclusive webinar invitations, and
                     promotions/offers
