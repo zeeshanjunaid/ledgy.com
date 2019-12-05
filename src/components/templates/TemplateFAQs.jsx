@@ -6,7 +6,7 @@ import { Trans } from '@lingui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { Accordion, AccordionItem } from '../Accordion';
-import NewsletterForm from '../NewsletterForm';
+import SignupForm from '../SignupForm';
 import Modal from '../Modal';
 
 const getQuestions = (props: Props) => [
@@ -93,7 +93,7 @@ const getQuestions = (props: Props) => [
                 participation plan templates.
               </Trans>
             </p>
-            <NewsletterForm {...props} trackingInfo="newsletter" />
+            <SignupForm {...props} trackingInfo="newsletter" />
           </Modal>
         </div>
       </>

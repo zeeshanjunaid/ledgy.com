@@ -13,7 +13,7 @@ import {
 
 import { FeatureLinks, FeatureList, TopPageFeatureCard } from '../../components/Feature';
 import { Title } from '../../layouts/utils';
-import NewsletterForm from '../../components/NewsletterForm';
+import SignupForm from '../../components/SignupForm';
 
 export default withI18n()((props: Props) => {
   const { i18n, data } = props;
@@ -203,7 +203,7 @@ export default withI18n()((props: Props) => {
               <h4 className="m-4 text-center">
                 <Trans>Sign up for early access</Trans>
               </h4>
-              <NewsletterForm {...props} trackingInfo="workflowBetaRequest" />
+              <SignupForm {...props} trackingInfo="workflowBetaRequest" />
             </div>
           </div>
         </section>
