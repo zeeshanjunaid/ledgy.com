@@ -50,12 +50,10 @@ const FeatureLink = (props: {
   data: Object
 }) =>
   props.page !== props.url && (
-    <div
-      className={`px-2 col-6 ${props.page === 'index' ? 'col-md-4 col-lg-2' : 'col-md-3 col-lg-3'}`}
-    >
+    <div className="px-2 col-6 col-md-4">
       <Link href to={`${props.prefix}/features/${props.url}/`}>
         <div className="card border hover-shadow-8 hover-translateY">
-          <div className="card-body mb-0 pb-0 px-2 h-125">
+          <div className="card-body mb-0 pb-0 px-2 h-90px">
             <h6 className="card-title text-center">{props.name}</h6>
           </div>
           <div className="mx-auto" style={{ height: '8rem', width: '8rem' }}>
@@ -94,8 +92,9 @@ export const FeatureLinks = ({
     </header>
 
     <div className="container custom-container">
-      <div className="row gap-y justify-content-center">
+      <div className="row gap-y px-lg-7 justify-content-center">
         <FeatureLink {...props} name={i18n.t`Employee Participation Plans`} url="esop" />
+        <FeatureLink {...props} name={i18n.t`Digital signatures`} url="signatures" />
         <FeatureLink {...props} name={i18n.t`Cap Table Management`} url="captable" />
         <FeatureLink {...props} name={i18n.t`Round & Exit Modeling`} url="modeling" />
         <FeatureLink {...props} name={i18n.t`Collaboration & Due Diligence`} url="collaboration" />

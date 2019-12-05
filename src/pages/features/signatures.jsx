@@ -212,7 +212,7 @@ export default withI18n()((props: Props) => {
 
         <section className="section overflow-hidden pt-2">
           <div className="container text-left">
-            <FeatureLinks {...props} i18n={i18n} page="esop" />
+            <FeatureLinks {...props} i18n={i18n} page="signatures" />
           </div>
         </section>
       </main>
