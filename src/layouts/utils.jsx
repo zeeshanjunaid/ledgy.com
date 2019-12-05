@@ -20,6 +20,9 @@ export const top100Url = 'https://www.top100startups.swiss/index.cfm?page=136340
 
 const isNetlify = typeof window !== 'undefined' && window.location.hostname !== 'localhost';
 export const mixpanelUrl = isNetlify ? '/api' : 'https://api.mixpanel.com';
+export const MIXPANEL_TOKEN = isNetlify
+  ? '258b9724a7ad7271dd2e3e3440bb68fd'
+  : '7f124dd9a799a7c687dc38ee554d9876';
 
 export const targetBlank = { target: '_blank', rel: 'noopener noreferrer' };
 

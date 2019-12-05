@@ -7,16 +7,13 @@ import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { navigate } from 'gatsby';
 
-import { trackSignup, mixpanelUrl } from '../layouts/utils';
+import { trackSignup, mixpanelUrl, MIXPANEL_TOKEN } from '../layouts/utils';
 
 declare type FormStatus = {| status: 'idle' | 'loading' | 'invalid' | 'error' |};
 const IDLE = 'idle';
 const LOADING = 'loading';
 const INVALID = 'invalid';
 const ERROR = 'error';
-
-const MIXPANEL_TOKEN = '258b9724a7ad7271dd2e3e3440bb68fd';
-// check for isNetlify and use production vs dev token
 
 const generateBase64EncodedJSON = (email, token) => {
   const mixpanelObject = {
