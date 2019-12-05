@@ -53,6 +53,17 @@ const removeModalFromDOM = () => {
   if (backdrop && backdrop.parentNode) backdrop.parentNode.removeChild(backdrop);
 };
 
+const track = async (email: string, trackingInfo: string) => {
+  trackSignup(trackingInfo); // google analytics
+  const mixpanelTrackingJSON = generateBase64TrackingJSON(
+    email,
+    MIXPANEL_TOKEN,
+    `user.${trackingInfo}`
+  );
+  const mixpanelTrackingUrl = generateMixpanelUrl(mixpanelTrackingJSON, 'track');
+  await fetch(mixpanelTrackingUrl);
+};
+
 export default class extends Component<
   {| ...Props, trackingInfo: string |},
   { email: string, ...FormStatus }
@@ -75,14 +86,8 @@ export default class extends Component<
       try {
         const signupResponse = await fetch(signupUrl);
         if (signupResponse.status === 200) {
-          trackSignup(this.props.trackingInfo); // google analytics
-          const mixpanelTrackingJSON = generateBase64TrackingJSON(
-            email,
-            MIXPANEL_TOKEN,
-            `user.${this.props.trackingInfo}`
-          );
-          const mixpanelTrackingUrl = generateMixpanelUrl(mixpanelTrackingJSON, 'track');
-          await fetch(mixpanelTrackingUrl);
+          track(email, this.props.trackingInfo);
+
           this.setState({ email: '', status: IDLE });
           removeModalFromDOM();
           navigate('/subscribed');
