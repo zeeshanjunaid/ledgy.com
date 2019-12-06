@@ -170,7 +170,7 @@ export const Footer = ({ location, ...props }: LayoutProps) => {
                     promotions/offers
                   </Trans>
                 </p>
-                <SignupForm {...props} trackingInfo="newsletter" />
+                <SignupForm {...props} trackingEvent="newsletter" />
               </Modal>
             </div>
             <div className="mt-4">

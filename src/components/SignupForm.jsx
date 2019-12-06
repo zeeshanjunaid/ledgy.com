@@ -29,9 +29,9 @@ const generateBase64SignupJSON = (email, token) => {
   return encodeBase64(mixpanelEngageObject);
 };
 
-const generateBase64TrackingJSON = (email, token, trackingInfo) => {
+const generateBase64TrackingJSON = (email, token, trackingEvent) => {
   const mixpanelTrackingObject = {
-    event: trackingInfo,
+    event: trackingEvent,
     properties: {
       distinct_id: email,
       token
@@ -53,19 +53,19 @@ const removeModalFromDOM = () => {
   if (backdrop && backdrop.parentNode) backdrop.parentNode.removeChild(backdrop);
 };
 
-const track = async (email: string, trackingInfo: string) => {
-  trackSignup(trackingInfo); // google analytics
+const track = async (email: string, trackingEvent: string) => {
+  trackSignup(trackingEvent); // google analytics
   const mixpanelTrackingJSON = generateBase64TrackingJSON(
     email,
     MIXPANEL_TOKEN,
-    `user.${trackingInfo}`
+    `user.${trackingEvent}`
   );
   const mixpanelTrackingUrl = generateMixpanelUrl(mixpanelTrackingJSON, 'track');
   await fetch(mixpanelTrackingUrl);
 };
 
 export default class extends Component<
-  {| ...Props, trackingInfo: string |},
+  {| ...Props, trackingEvent: string |},
   { email: string, ...FormStatus }
 > {
   state = { email: '', status: IDLE };
@@ -86,7 +86,7 @@ export default class extends Component<
       try {
         const signupResponse = await fetch(signupUrl);
         if (signupResponse.status === 200) {
-          track(email, this.props.trackingInfo);
+          track(email, this.props.trackingEvent);
 
           this.setState({ email: '', status: IDLE });
           removeModalFromDOM();

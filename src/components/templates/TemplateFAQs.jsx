@@ -93,7 +93,7 @@ const getQuestions = (props: Props) => [
                 participation plan templates.
               </Trans>
             </p>
-            <SignupForm {...props} trackingInfo="newsletter" />
+            <SignupForm {...props} trackingEvent="newsletter" />
           </Modal>
         </div>
       </>
