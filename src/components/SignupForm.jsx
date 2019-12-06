@@ -51,6 +51,13 @@ const removeModalFromDOM = () => {
   }
   const backdrop = document.querySelector('.modal-backdrop');
   if (backdrop && backdrop.parentNode) backdrop.parentNode.removeChild(backdrop);
+  if (document && document.body) document.body.classList.remove('modal-open');
+};
+
+const signup = async (email: string) => {
+  const mixpanelSignupJSON = generateBase64SignupJSON(email, MIXPANEL_TOKEN);
+  const signupUrl = generateMixpanelUrl(mixpanelSignupJSON, 'engage');
+  return fetch(signupUrl);
 };
 
 const track = async (email: string, trackingEvent: string) => {
@@ -80,14 +87,10 @@ export default class extends Component<
     const { email } = this.state;
     const valid = this.re.test(email);
     if (valid) {
-      const mixpanelSignupJSON = generateBase64SignupJSON(email, MIXPANEL_TOKEN);
-      const signupUrl = generateMixpanelUrl(mixpanelSignupJSON, 'engage');
-
       try {
-        const signupResponse = await fetch(signupUrl);
+        const signupResponse = await signup(email);
         if (signupResponse.status === 200) {
           track(email, this.props.trackingEvent);
-
           this.setState({ email: '', status: IDLE });
           removeModalFromDOM();
           navigate('/subscribed');
