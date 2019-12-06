@@ -7,7 +7,7 @@ import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { navigate } from 'gatsby';
 
-import { trackSignup, mixpanelUrl } from '../layouts/utils';
+import { trackSignup, mixpanelUrl, MIXPANEL_TOKEN } from '../layouts/utils';
 
 declare type FormStatus = {| status: 'idle' | 'loading' | 'invalid' | 'error' |};
 const IDLE = 'idle';
@@ -15,10 +15,10 @@ const LOADING = 'loading';
 const INVALID = 'invalid';
 const ERROR = 'error';
 
-const MIXPANEL_TOKEN = '258b9724a7ad7271dd2e3e3440bb68fd';
+const encodeBase64 = JsonObject => btoa(JSON.stringify(JsonObject));
 
-const generateBase64EncodedJSON = (email, token) => {
-  const mixpanelObject = {
+const generateBase64SignupJSON = (email, token) => {
+  const mixpanelEngageObject = {
     $token: token,
     $distinct_id: email,
     $set: {
@@ -26,10 +26,21 @@ const generateBase64EncodedJSON = (email, token) => {
       $email: email
     }
   };
-  return btoa(JSON.stringify(mixpanelObject));
+  return encodeBase64(mixpanelEngageObject);
 };
 
-const generateMixpanelUrl = data => `${mixpanelUrl}/engage/?data=${data}`;
+const generateBase64TrackingJSON = (email, token, trackingEvent) => {
+  const mixpanelTrackingObject = {
+    event: trackingEvent,
+    properties: {
+      distinct_id: email,
+      token
+    }
+  };
+  return encodeBase64(mixpanelTrackingObject);
+};
+
+const generateMixpanelUrl = (data, endpoint) => `${mixpanelUrl}/${endpoint}/?data=${data}`;
 
 const removeModalFromDOM = () => {
   const modal = document.getElementById('newsletter-signup');
@@ -40,9 +51,30 @@ const removeModalFromDOM = () => {
   }
   const backdrop = document.querySelector('.modal-backdrop');
   if (backdrop && backdrop.parentNode) backdrop.parentNode.removeChild(backdrop);
+  if (document && document.body) document.body.classList.remove('modal-open');
 };
 
-export default class extends Component<Props, { email: string, ...FormStatus }> {
+const signup = async (email: string) => {
+  const mixpanelSignupJSON = generateBase64SignupJSON(email, MIXPANEL_TOKEN);
+  const signupUrl = generateMixpanelUrl(mixpanelSignupJSON, 'engage');
+  return fetch(signupUrl);
+};
+
+const track = async (email: string, trackingEvent: string) => {
+  trackSignup(trackingEvent); // google analytics
+  const mixpanelTrackingJSON = generateBase64TrackingJSON(
+    email,
+    MIXPANEL_TOKEN,
+    `user.${trackingEvent}`
+  );
+  const mixpanelTrackingUrl = generateMixpanelUrl(mixpanelTrackingJSON, 'track');
+  await fetch(mixpanelTrackingUrl);
+};
+
+export default class extends Component<
+  {| ...Props, trackingEvent: string |},
+  { email: string, ...FormStatus }
+> {
   state = { email: '', status: IDLE };
   re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; // eslint-disable-line no-useless-escape
   handleChange = (e: SyntheticInputEvent<HTMLInputElement>) => {
@@ -55,11 +87,10 @@ export default class extends Component<Props, { email: string, ...FormStatus }> 
     const { email } = this.state;
     const valid = this.re.test(email);
     if (valid) {
-      const mixpanelJSON = generateBase64EncodedJSON(email, MIXPANEL_TOKEN);
-      const url = generateMixpanelUrl(mixpanelJSON);
       try {
-        const response = await fetch(url);
-        if (response.status === 200) {
+        const signupResponse = await signup(email);
+        if (signupResponse.status === 200) {
+          track(email, this.props.trackingEvent);
           this.setState({ email: '', status: IDLE });
           removeModalFromDOM();
           navigate('/subscribed');
@@ -69,7 +100,6 @@ export default class extends Component<Props, { email: string, ...FormStatus }> 
       } catch (error) {
         this.setState({ status: ERROR });
       }
-      trackSignup('newsletter');
     } else {
       this.setState({ status: INVALID });
     }
@@ -83,8 +113,8 @@ export default class extends Component<Props, { email: string, ...FormStatus }> 
     const loading = status === LOADING;
     return (
       <>
-        <form method="post" className="input-round py-5" onSubmit={this.handleSubmit} noValidate>
-          <div className="form-group input-group bg-white gap-y p-2 mb-2">
+        <form method="post" className="input-round py-4" onSubmit={this.handleSubmit} noValidate>
+          <div className="form-group input-group bg-white p-2 my-4 position-relative">
             <input
               type="email"
               name="EMAIL"
@@ -106,9 +136,7 @@ export default class extends Component<Props, { email: string, ...FormStatus }> 
                 <Trans>Subscribe</Trans>
               )}
             </button>
-          </div>
-          <div style={{ minHeight: '30px' }}>
-            <small className="text-danger">
+            <small className="text-danger position-absolute form-error-message">
               {invalid && <Trans>Oops. This email address is invalid.</Trans>}
               {error && <Trans>Oops. Something went wrong, please try again.</Trans>}
             </small>

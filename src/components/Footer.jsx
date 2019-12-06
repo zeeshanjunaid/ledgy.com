@@ -20,7 +20,7 @@ import '../assets/scss/page.scss';
 
 import Modal from '../components/Modal';
 import logoInverse from '../img/logo_white.png';
-import NewsletterForm from '../components/NewsletterForm';
+import SignupForm from '../components/SignupForm';
 import { CTABanner } from '../components/CTABanner';
 
 const FooterCol = ({
@@ -164,13 +164,13 @@ export const Footer = ({ location, ...props }: LayoutProps) => {
                 }
                 hideFooter
               >
-                <p className="text-dark my-5">
+                <p className="text-dark my-4">
                   <Trans>
                     Receive important feature updates, exclusive webinar invitations, and
                     promotions/offers
                   </Trans>
                 </p>
-                <NewsletterForm {...props} />
+                <SignupForm {...props} trackingEvent="newsletter" />
               </Modal>
             </div>
             <div className="mt-4">
