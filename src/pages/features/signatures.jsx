@@ -162,7 +162,7 @@ export default withI18n()((props: Props) => {
             </Trans>,
           /* eslint-disable */
           <Trans>
-            <strong>Easy to use</strong>: simply typing “{`\{stakeholder.name\}`}” will become the name of your
+            <strong>Easy to use</strong>: simply typing “{"{stakeholder.name}"}” will become the name of your
             stakeholder
           </Trans>
           /* eslint-enable */
