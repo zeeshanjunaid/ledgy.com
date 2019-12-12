@@ -94,7 +94,7 @@ export const FeatureLinks = ({
     <div className="container custom-container">
       <div className="row gap-y px-lg-7 justify-content-center">
         <FeatureLink {...props} name={i18n.t`Employee Participation Plans`} url="esop" />
-        <FeatureLink {...props} name={i18n.t`Digital signatures`} url="signatures" />
+        <FeatureLink {...props} name={i18n.t`Digital Signatures`} url="signatures" />
         <FeatureLink {...props} name={i18n.t`Cap Table Management`} url="captable" />
         <FeatureLink {...props} name={i18n.t`Round & Exit Modeling`} url="modeling" />
         <FeatureLink {...props} name={i18n.t`Collaboration & Due Diligence`} url="collaboration" />

@@ -32,6 +32,18 @@ export const Testimonials = ({ data, i18n }: Object): Node => {
       rounded: true
     },
     {
+      name: 'Dr. Tamaz Georgadze, CEO @ Raisin',
+      description: (
+        <Trans>
+          We can’t compete for the best global talent without having a broad and easy-to-handle
+          employee participation scheme.
+        </Trans>
+      ),
+      url: 'https://www.raisin.com/',
+      img: data.tamazgeorgadze,
+      rounded: true
+    },
+    {
       name: 'Christian Reber, CEO @ Pitch',
       description: (
         <Trans>
@@ -72,7 +84,7 @@ export const Testimonials = ({ data, i18n }: Object): Node => {
 
   const testimonials = TESTIMONIALS.map(({ name, description, url, img, rounded }) => (
     <Testimonial
-      col={rounded ? 4 : 5}
+      col={rounded ? 3 : 5}
       key={name}
       name={name}
       url={url}

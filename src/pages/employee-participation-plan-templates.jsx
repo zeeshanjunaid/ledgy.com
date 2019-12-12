@@ -116,6 +116,11 @@ export const PageQuery = graphql`
         ...GatsbyImageSharpFixed
       }
     }
+    tamazgeorgadze: imageSharp(fluid: { originalName: { regex: "/tamazgeorgadze/" } }) {
+      fixed(width: 100) {
+        ...GatsbyImageSharpFixed
+      }
+    }
     janinamutze: imageSharp(fluid: { originalName: { regex: "/janinamutze/" } }) {
       fixed(width: 100) {
         ...GatsbyImageSharpFixed
