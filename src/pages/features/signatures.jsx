@@ -18,6 +18,7 @@ import SignupForm from '../../components/SignupForm';
 export default withI18n()((props: Props) => {
   const { i18n, data } = props;
   const { siteUrl } = data.site.siteMetadata;
+  const stakeholderName = '{stakeholder.name}';
   return (
     <div>
       <Title
@@ -160,12 +161,10 @@ export default withI18n()((props: Props) => {
               <strong>Automatically fill in variables</strong> like stakeholder profiles and
               transaction data
             </Trans>,
-          /* eslint-disable */
-          <Trans>
-            <strong>Easy to use</strong>: simply typing “{"{stakeholder.name}"}” will become the name of your
-            stakeholder
-          </Trans>
-          /* eslint-enable */
+            <Trans>
+              <strong>Easy to use</strong>: simply typing “{stakeholderName}” will become the name
+              of your stakeholder
+            </Trans>
           ]}
           imgSize="6"
           img={
