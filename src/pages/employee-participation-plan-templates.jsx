@@ -7,7 +7,8 @@ import Img from 'gatsby-image';
 
 import { ContentBody } from '../components/Content';
 import { HeaderLayout } from '../components/HomePageHeader';
-import { targetBlank, appUrl, trackSignupGoogleAnalytics, Title } from '../layouts/utils';
+import { trackSignupGoogleAnalytics, Title } from '../layouts/utils';
+import { targetBlank, appUrl } from '../helpers';
 import {
   TemplateFAQs,
   Testimonials,

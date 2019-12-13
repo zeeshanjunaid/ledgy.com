@@ -17,7 +17,8 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 import { PrivacyElement } from '../components/Privacy';
-import { Title, targetBlank } from '../layouts/utils';
+import { Title } from '../layouts/utils';
+import { targetBlank } from '../helpers';
 
 const Header = ({ i18n }: Props) => (
   <header className="header text-white bg-ledgy">

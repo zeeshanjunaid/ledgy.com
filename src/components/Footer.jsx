@@ -13,7 +13,7 @@ import {
   faAngellist,
   faYoutube
 } from '@fortawesome/free-brands-svg-icons';
-import { name, targetBlank } from '../layouts/utils';
+import { name, targetBlank } from '../helpers';
 import { deprefix } from '../i18n-config';
 
 import '../assets/scss/page.scss';

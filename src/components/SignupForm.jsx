@@ -7,7 +7,7 @@ import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { navigate } from 'gatsby';
 
-import { EMAIL_REGEX } from '../layouts/utils';
+import { EMAIL_REGEX } from '../helpers';
 
 import { removeModalFromDOM, signupOnMixpanel, trackOnMixpanel } from './lib';
 

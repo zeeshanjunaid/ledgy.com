@@ -14,7 +14,8 @@ import {
   faBook
 } from '@fortawesome/free-solid-svg-icons';
 
-import { Title, Hr, targetBlank } from '../layouts/utils';
+import { Title, Hr } from '../layouts/utils';
+import { targetBlank } from '../helpers';
 
 const helpLinks = [
   [

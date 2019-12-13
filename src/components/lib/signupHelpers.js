@@ -1,6 +1,7 @@
 // @flow
 
-import { trackSignupGoogleAnalytics, mixpanelUrl, MIXPANEL_TOKEN } from '../../layouts/utils';
+import { trackSignupGoogleAnalytics } from '../../layouts/utils';
+import { mixpanelUrl, MIXPANEL_TOKEN } from '../../helpers';
 
 const encodeBase64 = JsonObject => btoa(JSON.stringify(JsonObject));
 

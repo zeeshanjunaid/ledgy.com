@@ -2,7 +2,7 @@
 
 import React, { type Node } from 'react';
 import Img from 'gatsby-image';
-import { targetBlank } from '../layouts/utils';
+import { targetBlank } from '../helpers';
 
 export const Testimonial = ({
   img,

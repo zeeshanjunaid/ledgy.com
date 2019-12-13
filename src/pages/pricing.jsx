@@ -4,7 +4,8 @@ import React, { type Node } from 'react';
 import { withI18n, Trans } from '@lingui/react';
 import { Link } from 'gatsby';
 
-import { Title, Li, ChevronRight, appUrl, trackSignupGoogleAnalytics } from '../layouts/utils';
+import { Title, Li, ChevronRight, trackSignupGoogleAnalytics } from '../layouts/utils';
+import { appUrl } from '../helpers';
 
 const Detail = props => <small className="d-block text-light mt-1" {...props} />;
 const Soon = () => (
