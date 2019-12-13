@@ -555,3 +555,19 @@ $markdown-spacer: $markdown-font-size;
   bottom: -30px;
   left: 25px;
 }
+
+.multi-button {
+  flex: 1 1 0px;
+  font-size: 16px;
+  color: #999999;
+  &:first-of-type {
+    border-radius: 10rem 0 0 10rem;
+  }
+  &:last-of-type {
+    border-radius: 0 10rem 10rem 0;
+  }
+}
+
+button.multi-button.bg-primary:focus {
+  background: $color-primary !important;
+}
