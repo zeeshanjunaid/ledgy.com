@@ -63,6 +63,10 @@ export default ({ pathname }: {| pathname: string |}) => {
   if (!banner) return null;
 
   const { content, hideOnPage } = banner.node;
-  const isVisible = isVisibleNow(banner) && show && !pathname.includes(hideOnPage);
-  return <Banner content={content} isVisible={isVisible} hide={() => setShow(false)} />;
+
+  const hide = () => setShow(false);
+  const isVisible = isVisibleNow(banner) && show;
+  if (isVisible && pathname.includes(hideOnPage)) hide();
+
+  return <Banner content={content} isVisible={isVisible} hide={hide} />;
 };
