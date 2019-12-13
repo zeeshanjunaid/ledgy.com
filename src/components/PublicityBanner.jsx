@@ -1,25 +1,28 @@
 // @flow
 
 import React, { useState } from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-const Banner = ({ isSignaturesPage, hide }: { isSignaturesPage: boolean, hide: () => void }) => (
+const Banner = ({
+  content,
+  isVisible,
+  hide
+}: {|
+  content: Mdx,
+  isVisible: boolean,
+  hide: () => void
+|}) => (
   <div
-    className={`publicity-banner position-fixed text-center bg-white border border-gray rounded p-4 ${
-      isSignaturesPage ? 'd-none' : ''
+    className={`publicity-banner position-fixed text-center bg-white border border-gray rounded ${
+      !isVisible ? 'd-none' : ''
     }`}
   >
-    <p>
-      <strong>Get early access to Digital Signatures & Document Templating</strong>{' '}
-      <span className="ml-1" role="img" aria-label="Signature">
-        📝
-      </span>
-    </p>
-    <p>Sign your legally-binding equity paperwork fully online</p>
-    <p>
-      <a href="/features/signatures">Learn More</a>
-    </p>
+    <div className="m-4 pt-4 pt-md-0">
+      <MDXRenderer>{content.childMdx.body}</MDXRenderer>
+    </div>
     <button
-      className="publicity-banner--button position-absolute bg-transparent border-0 p-2 p-lg-4 rounded-circle"
+      className="publicity-banner--button position-absolute bg-transparent border-0 p-4 rounded-circle"
       onClick={hide}
     >
       ×
@@ -27,10 +30,39 @@ const Banner = ({ isSignaturesPage, hide }: { isSignaturesPage: boolean, hide: (
   </div>
 );
 
+const isVisibleNow = ({ node }: {| node: {| startAt: string, endAt: string |} |}) => {
+  const now = Date.now();
+  return new Date(node.startAt).getTime() <= now && new Date(node.endAt).getTime() >= now;
+};
+
 export default ({ pathname }: {| pathname: string |}) => {
   const [show, setShow] = useState(true);
-  if (!show) return <div />;
 
-  const isSignaturesPage = pathname.includes('features/signatures');
-  return <Banner isSignaturesPage={isSignaturesPage} hide={() => setShow(false)} />;
+  const result = useStaticQuery(
+    graphql`
+      {
+        allContentfulBanner {
+          edges {
+            node {
+              title
+              hideOnPage
+              startAt
+              endAt
+              content {
+                childMdx {
+                  body
+                }
+              }
+            }
+          }
+        }
+      }
+    `
+  );
+  const [banner] = result.allContentfulBanner.edges;
+  if (!banner) return null;
+
+  const { content, hideOnPage } = banner.node;
+  const isVisible = isVisibleNow(banner) && show && !pathname.includes(hideOnPage);
+  return <Banner content={content} isVisible={isVisible} hide={() => setShow(false)} />;
 };
