@@ -4,7 +4,8 @@ import React, { type Node } from 'react';
 import { withI18n, Trans } from '@lingui/react';
 import { Link } from 'gatsby';
 
-import { Title, Li, ChevronRight, appUrl, trackSignup } from '../layouts/utils';
+import { Title, Li, ChevronRight } from '../layouts/utils';
+import { appUrl, trackSignupGoogleAnalytics } from '../helpers';
 
 const Detail = props => <small className="d-block text-light mt-1" {...props} />;
 const Soon = () => (
@@ -102,7 +103,7 @@ const PricingColumn = (props: {
         <div className="text-center mb-3">
           <a
             href={props.enterprise ? 'mailto:sales@ledgy.com' : `${appUrl}/signup`}
-            onClick={props.enterprise ? () => null : trackSignup}
+            onClick={props.enterprise ? () => null : trackSignupGoogleAnalytics}
             className={`btn btn-round btn-xl ${
               props.popular ? 'btn-primary' : 'btn-outline-primary'
             }`}

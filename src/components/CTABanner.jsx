@@ -4,13 +4,8 @@ import React, { type Node } from 'react';
 
 import sample from 'lodash/sample';
 import { Trans } from '@lingui/react';
-import {
-  callToActionExperiments,
-  trackSignup,
-  isBrowser,
-  appUrl,
-  targetBlank
-} from '../layouts/utils';
+import { callToActionExperiments } from '../layouts/utils';
+import { isBrowser, appUrl, targetBlank, trackSignupGoogleAnalytics } from '../helpers';
 
 const Banner = (props: { title: Node, url: string, trackingName: Node, CTAText: Node }) => {
   const { title, url, trackingName, CTAText } = props;
@@ -25,7 +20,7 @@ const Banner = (props: { title: Node, url: string, trackingName: Node, CTAText: 
             href={url}
             onClick={() => {
               if (window.ga) window.ga('set', 'dimension2', { trackingName });
-              trackSignup('clickSignup');
+              trackSignupGoogleAnalytics('clickSignup');
             }}
           >
             {CTAText}

@@ -2,8 +2,9 @@
 
 import React from 'react';
 import Img from 'gatsby-image';
+
 import { LanguageHint } from '../components/Markdown';
-import { calculatorUrl, targetBlank, trackSignup } from '../layouts/utils';
+import { calculatorUrl, targetBlank, trackSignupGoogleAnalytics } from '../helpers';
 import { ProductHuntButton } from './ProductHuntButton';
 
 export const DefaultHeader = ({
@@ -65,7 +66,7 @@ export const CalculatorHeader = ({ data }: { data: any }) => {
                 <a
                   className="btn btn-block d-sm-inline btn-xl my-2 mx-1 btn-round btn-light"
                   href={calculatorUrl}
-                  onClick={() => trackSignup('clickCalculator')}
+                  onClick={() => trackSignupGoogleAnalytics('clickCalculator')}
                   {...targetBlank}
                 >
                   Launch the Calculator

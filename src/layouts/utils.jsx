@@ -5,41 +5,7 @@ import { Helmet } from 'react-helmet';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { Trans } from '@lingui/react';
-
-export const name = 'Ledgy';
-export const appUrl = 'https://app.ledgy.com';
-export const demoUrl = 'https://demo.ledgy.com';
-export const calculatorUrl = 'https://calculator.ledgy.com';
-export const githubUrl = 'https://github.com/morloy/ledgy.com/';
-export const forbesUrl = 'https://www.forbesdach.com/30-under-30.html';
-export const economistUrl =
-  'https://www.economist.com/business/2019/07/06/new-firms-help-startups-keep-track-of-their-owners';
-export const wirtschaftswocheUrl =
-  'https://gruender.wiwo.de/ledgy-plattform-fuer-beteiligungsmanagement-erhaelt-anschubfinanzierung/';
-export const top100Url = 'https://www.top100startups.swiss/index.cfm?page=136340';
-
-const isNetlify = typeof window !== 'undefined' && window.location.hostname !== 'localhost';
-export const mixpanelUrl = isNetlify ? '/api' : 'https://api.mixpanel.com';
-export const MIXPANEL_TOKEN = isNetlify
-  ? '258b9724a7ad7271dd2e3e3440bb68fd'
-  : '7f124dd9a799a7c687dc38ee554d9876';
-
-export const targetBlank = { target: '_blank', rel: 'noopener noreferrer' };
-
-export const isBrowser = typeof window !== 'undefined';
-
-export const loadScript = (path: string): Promise<*> =>
-  new Promise((resolve, reject) => {
-    const script = document.createElement('script');
-    script.src = path;
-    script.async = true;
-    script.onload = resolve;
-    return (document.body && document.body.appendChild(script)) || reject();
-  });
-
-export const trackSignup = (type: string) => {
-  if (window.ga) window.ga('send', 'event', 'signup', type);
-};
+import { name } from '../helpers';
 
 export const Title = (props: {
   title: string,
@@ -79,24 +45,6 @@ export const Hr = ({ marginX }: { marginX?: number }) => (
   <hr className={`my-5 my-md-7 ${marginX ? `mx-md-${marginX}` : ''}`} />
 );
 Hr.defaultProps = { marginX: 0 };
-
-export const animateTablet = () => {
-  let scrolling = false;
-  window.onscroll = () => {
-    scrolling = true;
-  };
-  setInterval(() => {
-    if (scrolling) {
-      scrolling = false;
-      const tablet = document.getElementById('tablet-ledgy');
-      const banner = document.querySelector('header');
-      const { scrollY } = window;
-      if (tablet && banner && scrollY <= banner.clientHeight) {
-        tablet.style.transform = `translateY(${scrollY / 50}%)`;
-      }
-    }
-  }, 50);
-};
 
 export const callToActionExperiments = [
   { name: 'freeForever', title: <Trans>Free forever with 50 MB storage</Trans> },
