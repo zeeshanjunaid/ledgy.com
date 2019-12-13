@@ -263,6 +263,10 @@ $markdown-spacer: $markdown-font-size;
   strong {
     font-weight: 400;
   }
+  .lead {
+    font-size: 1.4rem;
+    margin-bottom: map-get($spacers, 7);
+  }
   .katex {
     font-size: 1em;
   }
