@@ -9,7 +9,8 @@ import 'typeface-work-sans'; // eslint-disable-line import/extensions
 import 'katex/dist/katex.min.css';
 import 'prism-themes/themes/prism-ghcolors.css';
 
-import { Title, name, loadScript, animateTablet } from './utils';
+import { name, loadScript, animateTablet } from '../helpers';
+import { Title } from './utils';
 import { catalogs, langFromPath, langPrefix, deprefix } from '../i18n-config';
 
 import '../assets/scss/page.scss';

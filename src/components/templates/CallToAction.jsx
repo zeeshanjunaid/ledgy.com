@@ -2,7 +2,7 @@
 
 import React, { type Node } from 'react';
 import { Trans } from '@lingui/react';
-import { targetBlank } from '../../layouts/utils';
+import { targetBlank } from '../../helpers';
 
 export const CallToAction = (): Node => {
   return (

@@ -5,7 +5,7 @@ import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
 
-import { Author, Image } from '../components/Markdown';
+import { Author, Image, Lead } from '../components/Markdown';
 import { DefaultHeader, CalculatorHeader } from '../components/Header';
 import { Title } from '../layouts/utils';
 
@@ -40,7 +40,7 @@ export default ({
           <div className="container container-small">
             <div className="markdown clearfix">
               {content && (
-                <MDXProvider components={{ img: Image }}>
+                <MDXProvider components={{ img: Image, Lead }}>
                   <MDXRenderer>{content.childMdx.body}</MDXRenderer>
                 </MDXProvider>
               )}

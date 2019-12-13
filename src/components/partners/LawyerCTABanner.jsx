@@ -3,7 +3,7 @@
 import React from 'react';
 import { Trans } from '@lingui/react';
 
-import { targetBlank } from '../../layouts/utils';
+import { targetBlank } from '../../helpers';
 import { FullWidthBanner } from '../FullWidthBanner';
 
 export const LawyerCTABanner = () => (

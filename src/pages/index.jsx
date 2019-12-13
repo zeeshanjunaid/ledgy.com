@@ -7,14 +7,8 @@ import Img from 'gatsby-image';
 
 import { FeatureLinks } from '../components/Feature';
 import SecurityRow from '../components/SecurityRow';
-import {
-  targetBlank,
-  Hr,
-  forbesUrl,
-  economistUrl,
-  wirtschaftswocheUrl,
-  top100Url
-} from '../layouts/utils';
+import { Hr } from '../layouts/utils';
+import { targetBlank, forbesUrl, economistUrl, wirtschaftswocheUrl, top100Url } from '../helpers';
 import { HomePageHeader } from '../components/HomePageHeader';
 import { Testimonial } from '../components/Testimonial';
 

@@ -3,7 +3,7 @@
 import React, { type Node } from 'react';
 import { Trans } from '@lingui/react';
 import { graphql, useStaticQuery } from 'gatsby';
-import { targetBlank } from './utils';
+import { targetBlank } from '../helpers';
 
 export type AuthorProps = {|
   name: string,

@@ -6,7 +6,7 @@ import { Trans } from '@lingui/react';
 import Img from 'gatsby-image';
 import sample from 'lodash/sample';
 
-import { demoUrl, targetBlank, appUrl, trackSignup, isBrowser } from '../layouts/utils';
+import { demoUrl, targetBlank, appUrl, isBrowser, trackSignupGoogleAnalytics } from '../helpers';
 
 const languageKeys = {
   en: {
@@ -123,11 +123,15 @@ export const HomePageHeader = ({ i18n, data, lang }: Props) => {
   }, []);
 
   const buttonOne = {
-    props: { href: demoUrl, onClick: () => trackSignup('clickDemo'), ...targetBlank },
+    props: {
+      href: demoUrl,
+      onClick: () => trackSignupGoogleAnalytics('clickDemo'),
+      ...targetBlank
+    },
     text: <Trans>See the Demo</Trans>
   };
   const buttonTwo = {
-    props: { href: `${appUrl}/signup`, onClick: trackSignup, ...targetBlank },
+    props: { href: `${appUrl}/signup`, onClick: trackSignupGoogleAnalytics, ...targetBlank },
     text: <Trans>Get Started Free</Trans>
   };
   return (

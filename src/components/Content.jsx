@@ -5,7 +5,8 @@ import { Trans } from '@lingui/react';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 
-import { ChevronRight, targetBlank } from '../layouts/utils';
+import { ChevronRight } from '../layouts/utils';
+import { targetBlank } from '../helpers';
 
 export const ContentHeader = ({ heading }: {| heading: string |}) => (
   <header className="header text-white bg-ledgy">
