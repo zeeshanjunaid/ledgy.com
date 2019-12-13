@@ -4,14 +4,26 @@ import React, { useState, type Node } from 'react';
 import { Trans } from '@lingui/react';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { navigate } from 'gatsby';
 
-import { IDLE, LOADING, INVALID, ERROR, EMAIL_REGEX } from '../helpers';
+import {
+  IDLE,
+  LOADING,
+  INVALID,
+  ERROR,
+  EMAIL_REGEX,
+  SUBMITTED,
+  removeModalFromDOM,
+  demoUrl
+} from '../helpers';
 
 import Modal from './Modal';
 
-const companySizes = ['1–10', '11–50', '51–100', '101–250', '251+'];
+const COMPANY_SIZES = ['1–10', '11–50', '51–100', '101–250', '251+'];
+const SMALL_COMPANY_SIZES = COMPANY_SIZES.slice(0, 2);
 const INVALID_EMAIL = `${INVALID}-email`;
 const INVALID_STATE = `${INVALID}-state`;
+const isSmallCompany = companySize => SMALL_COMPANY_SIZES.includes(companySize);
 
 declare type FormStatus = {|
   status: 'idle' | 'loading' | 'invalid-email' | 'invalid-state' | 'error'
@@ -42,10 +54,15 @@ const Input = ({
   </div>
 );
 
-const handleSubmit = (e, state, setFormStatus) => {
+const encodeBody = data =>
+  Object.keys(data)
+    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+    .join('&');
+
+const handleSubmit = async (e, state, setFormStatus) => {
   e.preventDefault();
   setFormStatus(LOADING);
-  const { email } = state;
+  const { email, companySize } = state;
   const missingField = Object.values(state).some(field => !field);
   if (missingField) {
     setFormStatus(INVALID_STATE);
@@ -54,6 +71,23 @@ const handleSubmit = (e, state, setFormStatus) => {
   const validEmail = EMAIL_REGEX.test(email);
   if (!validEmail) {
     setFormStatus(INVALID_EMAIL);
+    return;
+  }
+  const response = await fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: encodeBody({ 'form-name': 'request-demo', ...state })
+  });
+  if (response.status === 200) {
+    setFormStatus(SUBMITTED);
+    removeModalFromDOM();
+    if (isSmallCompany(companySize)) {
+      navigate(demoUrl);
+    } else {
+      setFormStatus(SUBMITTED);
+    }
+  } else {
+    setFormStatus(ERROR);
   }
 };
 
@@ -69,7 +103,11 @@ const RequestDemoForm = () => {
   const invalidState = formStatus === INVALID_STATE;
   const error = formStatus === ERROR;
   const loading = formStatus === LOADING;
-  return (
+  const submitted = formStatus === SUBMITTED;
+
+  return submitted ? (
+    <div>We’ll be in touch shortly</div>
+  ) : (
     <form
       method="post"
       className="input-round py-4"
@@ -103,7 +141,7 @@ const RequestDemoForm = () => {
 
       <Label text={<Trans>Number of employees</Trans>} />
       <div className="d-flex mt-2 mb-4">
-        {companySizes.map(size => (
+        {COMPANY_SIZES.map(size => (
           <button
             type="button"
             key={size}
@@ -123,7 +161,7 @@ const RequestDemoForm = () => {
         <small className="text-danger form-error-message">
           {invalidState && <Trans>Please fill out all fields</Trans>}
           {invalidEmail && <Trans>Oops. This email address is invalid.</Trans>}
-          {error && <Trans>Oops. Something went wrong, please try again.</Trans>}
+          {error && <Trans>Something went wrong, please try again.</Trans>}
         </small>
         <button
           type="submit"
