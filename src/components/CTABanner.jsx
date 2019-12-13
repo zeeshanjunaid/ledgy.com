@@ -6,7 +6,7 @@ import sample from 'lodash/sample';
 import { Trans } from '@lingui/react';
 import {
   callToActionExperiments,
-  trackSignup,
+  trackSignupGoogleAnalytics,
   isBrowser,
   appUrl,
   targetBlank
@@ -25,7 +25,7 @@ const Banner = (props: { title: Node, url: string, trackingName: Node, CTAText: 
             href={url}
             onClick={() => {
               if (window.ga) window.ga('set', 'dimension2', { trackingName });
-              trackSignup('clickSignup');
+              trackSignupGoogleAnalytics('clickSignup');
             }}
           >
             {CTAText}

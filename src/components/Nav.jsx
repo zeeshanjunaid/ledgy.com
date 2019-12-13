@@ -4,7 +4,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { Trans } from '@lingui/react';
 
-import { name, appUrl, trackSignup } from '../layouts/utils';
+import { name, appUrl, trackSignupGoogleAnalytics } from '../layouts/utils';
 import logoDefault from '../img/logo_black.png';
 import logoInverse from '../img/logo_white.png';
 
@@ -50,14 +50,14 @@ export const Nav = (props: LayoutProps) => (
         <a
           className="btn btn-round btn-outline-light mx-2"
           href={`${appUrl}/login`}
-          onClick={() => trackSignup('login')}
+          onClick={() => trackSignupGoogleAnalytics('login')}
         >
           <Trans>Log In</Trans>
         </a>
         <a
           className="btn btn-round btn-light ml-lg-0 mr-2"
           href={`${appUrl}/signup`}
-          onClick={() => trackSignup('clickSignup')}
+          onClick={() => trackSignupGoogleAnalytics('clickSignup')}
         >
           <Trans>Sign up</Trans>
         </a>

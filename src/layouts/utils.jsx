@@ -37,9 +37,11 @@ export const loadScript = (path: string): Promise<*> =>
     return (document.body && document.body.appendChild(script)) || reject();
   });
 
-export const trackSignup = (type: string) => {
+export const trackSignupGoogleAnalytics = (type: string) => {
   if (window.ga) window.ga('send', 'event', 'signup', type);
 };
+
+export const EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; // eslint-disable-line no-useless-escape
 
 export const Title = (props: {
   title: string,

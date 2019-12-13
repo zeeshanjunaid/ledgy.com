@@ -7,7 +7,9 @@ import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { navigate } from 'gatsby';
 
-import { trackSignup, mixpanelUrl, MIXPANEL_TOKEN } from '../layouts/utils';
+import { EMAIL_REGEX } from '../layouts/utils';
+
+import { removeModalFromDOM, signupOnMixpanel, trackOnMixpanel } from './lib';
 
 declare type FormStatus = {| status: 'idle' | 'loading' | 'invalid' | 'error' |};
 const IDLE = 'idle';
@@ -15,68 +17,11 @@ const LOADING = 'loading';
 const INVALID = 'invalid';
 const ERROR = 'error';
 
-const encodeBase64 = JsonObject => btoa(JSON.stringify(JsonObject));
-
-const generateBase64SignupJSON = (email, token) => {
-  const mixpanelEngageObject = {
-    $token: token,
-    $distinct_id: email,
-    $set: {
-      $first_name: email,
-      $email: email
-    }
-  };
-  return encodeBase64(mixpanelEngageObject);
-};
-
-const generateBase64TrackingJSON = (email, token, trackingEvent) => {
-  const mixpanelTrackingObject = {
-    event: trackingEvent,
-    properties: {
-      distinct_id: email,
-      token
-    }
-  };
-  return encodeBase64(mixpanelTrackingObject);
-};
-
-const generateMixpanelUrl = (data, endpoint) => `${mixpanelUrl}/${endpoint}/?data=${data}`;
-
-const removeModalFromDOM = () => {
-  const modal = document.getElementById('newsletter-signup');
-  if (modal) {
-    modal.classList.remove('show');
-    modal.setAttribute('aria-hidden', 'true');
-    modal.setAttribute('style', 'display: none');
-  }
-  const backdrop = document.querySelector('.modal-backdrop');
-  if (backdrop && backdrop.parentNode) backdrop.parentNode.removeChild(backdrop);
-  if (document && document.body) document.body.classList.remove('modal-open');
-};
-
-const signup = async (email: string) => {
-  const mixpanelSignupJSON = generateBase64SignupJSON(email, MIXPANEL_TOKEN);
-  const signupUrl = generateMixpanelUrl(mixpanelSignupJSON, 'engage');
-  return fetch(signupUrl);
-};
-
-const track = async (email: string, trackingEvent: string) => {
-  trackSignup(trackingEvent); // google analytics
-  const mixpanelTrackingJSON = generateBase64TrackingJSON(
-    email,
-    MIXPANEL_TOKEN,
-    `user.${trackingEvent}`
-  );
-  const mixpanelTrackingUrl = generateMixpanelUrl(mixpanelTrackingJSON, 'track');
-  await fetch(mixpanelTrackingUrl);
-};
-
 export default class extends Component<
   {| ...Props, trackingEvent: string |},
   { email: string, ...FormStatus }
 > {
   state = { email: '', status: IDLE };
-  re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; // eslint-disable-line no-useless-escape
   handleChange = (e: SyntheticInputEvent<HTMLInputElement>) => {
     e.preventDefault();
     this.setState({ email: e.target.value, status: IDLE });
@@ -85,12 +30,12 @@ export default class extends Component<
     e.preventDefault();
     this.setState({ status: LOADING });
     const { email } = this.state;
-    const valid = this.re.test(email);
+    const valid = EMAIL_REGEX.test(email);
     if (valid) {
       try {
-        const signupResponse = await signup(email);
+        const signupResponse = await signupOnMixpanel(email);
         if (signupResponse.status === 200) {
-          track(email, this.props.trackingEvent);
+          trackOnMixpanel(email, this.props.trackingEvent);
           this.setState({ email: '', status: IDLE });
           removeModalFromDOM();
           navigate('/subscribed');
