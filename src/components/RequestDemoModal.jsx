@@ -12,12 +12,30 @@ import Modal from './Modal';
 const companySizes = ['1–10', '11–50', '51–100', '101–250', '251+'];
 
 const Label = ({ text }: { text: Node }) => <span>{text}</span>;
+const Input = ({
+  state,
+  setState,
+  placeholder
+}: {
+  state: string,
+  setState: string => void,
+  placeholder: string
+}) => (
+  <div className="form-group input-group bg-white p-2 mt-2 mb-4">
+    <input
+      className="form-control"
+      placeholder={placeholder}
+      onChange={e => setState(e.target.value)}
+      value={state}
+    />
+  </div>
+);
 
 const handleSubmit = e => {
   e.preventDefault();
 };
 
-const Form = () => {
+const RequestDemoForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [companyName, setCompanyName] = useState('');
@@ -35,33 +53,13 @@ const Form = () => {
       data-netlify="true"
     >
       <Label text={<Trans>Your name</Trans>} />
-      <div className="form-group input-group bg-white p-2 mt-2 mb-4">
-        <input
-          className="form-control"
-          placeholder="Elon Must"
-          onChange={e => setName(e.target.value)}
-          value={name}
-        />
-      </div>
+      <Input state={name} setState={setName} placeholder="Elon Must" />
+
       <Label text={<Trans>Your email</Trans>} />
-      <div className="form-group input-group bg-white p-2 mt-2 mb-4">
-        <input
-          type="email"
-          className="form-control"
-          placeholder="elon@must.com"
-          onChange={e => setEmail(e.target.value)}
-          value={email}
-        />
-      </div>
+      <Input state={email} setState={setEmail} placeholder="elon@must.com" />
+
       <Label text={<Trans>Name of your company</Trans>} />
-      <div className="form-group input-group bg-white p-2 mt-2 mb-4">
-        <input
-          className="form-control"
-          placeholder="SpaceY"
-          onChange={e => setCompanyName(e.target.value)}
-          value={companyName}
-        />
-      </div>
+      <Input state={companyName} setState={setCompanyName} placeholder="SpaceY" />
 
       <Label text={<Trans>Number of employees</Trans>} />
       <div className="d-flex mt-2 mb-4">
@@ -100,18 +98,18 @@ const Form = () => {
   );
 };
 
-export const AccessDemoForm = () => (
+export const RequestDemoModal = () => (
   <Modal
     id="demo-access"
     titleClassNames="text-white"
     title={<Trans>Request a demo</Trans>}
-    buttonText={<Trans>See the Demo</Trans>}
+    buttonText={<Trans>Get a Demo</Trans>}
     buttonClassName="btn-outline-light d-sm-inline btn-xl mx-1"
     hideFooter
   >
     <p className="text-dark m-0">
       <Trans>Please fill out the information below to get a demo</Trans>
     </p>
-    <Form />
+    <RequestDemoForm />
   </Modal>
 );

@@ -8,7 +8,7 @@ import sample from 'lodash/sample';
 
 import { targetBlank, appUrl, isBrowser, trackSignupGoogleAnalytics } from '../helpers';
 import { HeaderLayout } from './HeaderLayout';
-import { AccessDemoForm } from './AccessDemoForm';
+import { RequestDemoModal } from './RequestDemoModal';
 
 const languageKeys = {
   en: {
@@ -82,7 +82,7 @@ export const HomePageHeader = ({ i18n, data, lang }: Props) => {
     <HeaderLayout
       title={title}
       subtitle={subtitle}
-      buttonOne={{ modal: <AccessDemoForm />, props: {}, text: '' }}
+      buttonOne={{ modal: <RequestDemoModal />, props: {}, text: '' }}
       buttonTwo={buttonTwo}
       image={
         <div id="tablet-ledgy" data-aos="fade-up">
