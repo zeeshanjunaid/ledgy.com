@@ -1,6 +1,6 @@
 // @flow
 
-import React from 'react';
+import React, { type Node } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import { Trans } from '@lingui/react';
@@ -96,3 +96,5 @@ export const LanguageHint = ({ lang, documentLang }: {| lang: string, documentLa
       <Trans>This page is only available in</Trans> {languages[documentLang]}
     </div>
   );
+
+export const Lead = ({ children }: {| children: Node |}) => <p className="lead">{children}</p>;
