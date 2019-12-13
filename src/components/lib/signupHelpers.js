@@ -1,7 +1,6 @@
 // @flow
 
-import { trackSignupGoogleAnalytics } from '../../layouts/utils';
-import { mixpanelUrl, MIXPANEL_TOKEN } from '../../helpers';
+import { mixpanelUrl, MIXPANEL_TOKEN, trackSignupGoogleAnalytics } from '../../helpers';
 
 const encodeBase64 = JsonObject => btoa(JSON.stringify(JsonObject));
 
@@ -29,18 +28,6 @@ const generateBase64TrackingJSON = (email: string, token: string, trackingEvent:
 };
 
 const generateMixpanelUrl = (data, endpoint) => `${mixpanelUrl}/${endpoint}/?data=${data}`;
-
-export const removeModalFromDOM = () => {
-  const modal = document.getElementById('newsletter-signup');
-  if (modal) {
-    modal.classList.remove('show');
-    modal.setAttribute('aria-hidden', 'true');
-    modal.setAttribute('style', 'display: none');
-  }
-  const backdrop = document.querySelector('.modal-backdrop');
-  if (backdrop && backdrop.parentNode) backdrop.parentNode.removeChild(backdrop);
-  if (document && document.body) document.body.classList.remove('modal-open');
-};
 
 export const signupOnMixpanel = async (email: string) => {
   const mixpanelSignupJSON = generateBase64SignupJSON(email, MIXPANEL_TOKEN);

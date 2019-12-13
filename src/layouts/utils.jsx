@@ -7,19 +7,6 @@ import { faCheck, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { Trans } from '@lingui/react';
 import { name } from '../helpers';
 
-export const loadScript = (path: string): Promise<*> =>
-  new Promise((resolve, reject) => {
-    const script = document.createElement('script');
-    script.src = path;
-    script.async = true;
-    script.onload = resolve;
-    return (document.body && document.body.appendChild(script)) || reject();
-  });
-
-export const trackSignupGoogleAnalytics = (type: string) => {
-  if (window.ga) window.ga('send', 'event', 'signup', type);
-};
-
 export const Title = (props: {
   title: string,
   section?: string,
@@ -58,24 +45,6 @@ export const Hr = ({ marginX }: { marginX?: number }) => (
   <hr className={`my-5 my-md-7 ${marginX ? `mx-md-${marginX}` : ''}`} />
 );
 Hr.defaultProps = { marginX: 0 };
-
-export const animateTablet = () => {
-  let scrolling = false;
-  window.onscroll = () => {
-    scrolling = true;
-  };
-  setInterval(() => {
-    if (scrolling) {
-      scrolling = false;
-      const tablet = document.getElementById('tablet-ledgy');
-      const banner = document.querySelector('header');
-      const { scrollY } = window;
-      if (tablet && banner && scrollY <= banner.clientHeight) {
-        tablet.style.transform = `translateY(${scrollY / 50}%)`;
-      }
-    }
-  }, 50);
-};
 
 export const callToActionExperiments = [
   { name: 'freeForever', title: <Trans>Free forever with 50 MB storage</Trans> },

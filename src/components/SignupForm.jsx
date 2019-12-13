@@ -7,9 +7,9 @@ import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { navigate } from 'gatsby';
 
-import { EMAIL_REGEX } from '../helpers';
+import { EMAIL_REGEX, removeModalFromDOM } from '../helpers';
 
-import { removeModalFromDOM, signupOnMixpanel, trackOnMixpanel } from './lib';
+import { signupOnMixpanel, trackOnMixpanel } from './lib';
 
 declare type FormStatus = {| status: 'idle' | 'loading' | 'invalid' | 'error' |};
 const IDLE = 'idle';

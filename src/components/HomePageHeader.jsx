@@ -6,8 +6,7 @@ import { Trans } from '@lingui/react';
 import Img from 'gatsby-image';
 import sample from 'lodash/sample';
 
-import { trackSignupGoogleAnalytics } from '../layouts/utils';
-import { demoUrl, targetBlank, appUrl, isBrowser } from '../helpers';
+import { demoUrl, targetBlank, appUrl, isBrowser, trackSignupGoogleAnalytics } from '../helpers';
 
 const languageKeys = {
   en: {

@@ -1,8 +1,7 @@
 // @flow
 
 import React from 'react';
-import { trackSignupGoogleAnalytics } from '../layouts/utils';
-import { targetBlank } from '../helpers';
+import { targetBlank, trackSignupGoogleAnalytics } from '../helpers';
 
 export const ProductHuntButton = ({
   productHuntLink,

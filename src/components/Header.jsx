@@ -2,10 +2,10 @@
 
 import React from 'react';
 import Img from 'gatsby-image';
+
 import { LanguageHint } from '../components/Markdown';
-import { trackSignupGoogleAnalytics } from '../layouts/utils';
+import { calculatorUrl, targetBlank, trackSignupGoogleAnalytics } from '../helpers';
 import { ProductHuntButton } from './ProductHuntButton';
-import { calculatorUrl, targetBlank } from '../helpers';
 
 export const DefaultHeader = ({
   data,

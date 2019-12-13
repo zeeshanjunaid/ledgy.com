@@ -4,8 +4,8 @@ import React, { type Node } from 'react';
 
 import sample from 'lodash/sample';
 import { Trans } from '@lingui/react';
-import { callToActionExperiments, trackSignupGoogleAnalytics } from '../layouts/utils';
-import { isBrowser, appUrl, targetBlank } from '../helpers';
+import { callToActionExperiments } from '../layouts/utils';
+import { isBrowser, appUrl, targetBlank, trackSignupGoogleAnalytics } from '../helpers';
 
 const Banner = (props: { title: Node, url: string, trackingName: Node, CTAText: Node }) => {
   const { title, url, trackingName, CTAText } = props;
