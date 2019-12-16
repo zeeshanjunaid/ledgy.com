@@ -6,7 +6,8 @@ import {
   removeModalFromDOM,
   SMALL_COMPANY_SIZES,
   FORM_STATES,
-  isFieldMissing
+  isFieldMissing,
+  NETLIFY_DEMO_FORM_NAME
 } from '../../helpers';
 
 const { ERROR, INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED } = FORM_STATES;
@@ -27,7 +28,7 @@ type State = {|
 |};
 
 export const isSmallCompany = (companySize: string) => SMALL_COMPANY_SIZES.includes(companySize);
-export const netlifyFormName = 'requestDemo';
+
 const redirectToDemo = () => {
   if (window) {
     window.location = demoUrl;
@@ -43,7 +44,7 @@ const fetchNetlify = (state: State) =>
   fetch('/', {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body: encodeBody({ 'form-name': netlifyFormName, ...state })
+    body: encodeBody({ 'form-name': NETLIFY_DEMO_FORM_NAME, ...state })
   });
 
 export const handleDemoAccessSubmit = async ({
@@ -72,7 +73,6 @@ export const handleDemoAccessSubmit = async ({
 
   const response = await fetchNetlify(state);
   if (response.status !== 200) {
-    console.log(response);
     setFormStatus(ERROR);
     return;
   }
