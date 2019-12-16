@@ -7,10 +7,10 @@ import {
   isValidEmail,
   removeModalFromDOM,
   SMALL_COMPANY_SIZES,
-  FORM_STATES
+  FORM_STATES,
+  isFieldMissing
 } from '../../helpers';
 
-export const isSmallCompany = (companySize: string) => SMALL_COMPANY_SIZES.includes(companySize);
 const { ERROR, INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED } = FORM_STATES;
 
 export type DemoFormStatus =
@@ -27,6 +27,8 @@ type State = {|
   email: string,
   name: string
 |};
+
+export const isSmallCompany = (companySize: string) => SMALL_COMPANY_SIZES.includes(companySize);
 
 const encodeBody = data =>
   Object.keys(data)
@@ -54,8 +56,8 @@ export const handleDemoAccessSubmit = async ({
   event.preventDefault();
   setFormStatus(LOADING);
   const { email, companySize } = state;
-  const missingField = Object.values(state).some(field => !field);
-  if (missingField) {
+
+  if (isFieldMissing(state)) {
     setFormStatus(INVALID_FIELDS);
     return;
   }

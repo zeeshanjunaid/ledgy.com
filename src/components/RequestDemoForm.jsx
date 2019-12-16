@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Trans } from '@lingui/react';
 
 import { COMPANY_SIZES, FORM_STATES } from '../helpers';
-import { handleDemoAccessSubmit, isSmallCompany, type DemoFormStatus } from './lib';
+import { handleDemoAccessSubmit, type DemoFormStatus, isSmallCompany } from './lib';
 
 const { ERROR, IDLE, INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED } = FORM_STATES;
 
