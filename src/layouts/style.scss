@@ -148,12 +148,20 @@ h1 {
   font-weight: 400;
   font-size: 0.8em;
   padding: 10px 30px;
+  line-height: 18px;
   @include media-breakpoint-down(sm) {
     padding: 10px 15px;
   }
 }
 .newsletter {
   max-width: 600px;
+}
+
+.btn-demo {
+  width: 100%;
+  @include media-breakpoint-up(sm) {
+    width: unset;
+  }
 }
 
 .imprint h6 {

@@ -115,6 +115,9 @@ const RequestDemoForm = () => {
       noValidate
       data-netlify="true"
     >
+      <p className="text-dark m-0">
+        <Trans>Please fill out the information below to get a demo</Trans>
+      </p>
       <Label text={<Trans>Your name</Trans>} />
       <Input
         state={name}
@@ -186,12 +189,9 @@ export const RequestDemoModal = () => (
     titleClassNames="text-white"
     title={<Trans>Request a demo</Trans>}
     buttonText={<Trans>Get a Demo</Trans>}
-    buttonClassName="btn-outline-light d-sm-inline btn-xl mx-1"
+    buttonClassName="btn-demo btn-outline-light d-inline btn-xl mx-1 my-2 my-sm-0"
     hideFooter
   >
-    <p className="text-dark m-0">
-      <Trans>Please fill out the information below to get a demo</Trans>
-    </p>
     <RequestDemoForm />
   </Modal>
 );
