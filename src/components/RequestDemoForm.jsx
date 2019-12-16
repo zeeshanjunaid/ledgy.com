@@ -10,7 +10,7 @@ import {
   ERROR,
   IDLE,
   INVALID_EMAIL,
-  INVALID_STATE,
+  INVALID_FIELDS,
   LOADING,
   SUBMITTED
 } from '../helpers';
@@ -50,7 +50,7 @@ export const RequestDemoForm = ({ setDemoRequested }: { setDemoRequested: boolea
   const state = { name, email, companyName, companySize };
 
   const invalidEmail = formStatus === INVALID_EMAIL;
-  const invalidState = formStatus === INVALID_STATE;
+  const invalidFields = formStatus === INVALID_FIELDS;
   const error = formStatus === ERROR;
   const loading = formStatus === LOADING;
   const submitted = formStatus === SUBMITTED;
@@ -119,14 +119,14 @@ export const RequestDemoForm = ({ setDemoRequested }: { setDemoRequested: boolea
       </div>
       <div className="d-flex justify-content-between align-items-center mt-6">
         <small className="text-danger form-error-message">
-          {invalidState && <Trans>Please fill out all fields</Trans>}
+          {invalidFields && <Trans>Please fill out all fields</Trans>}
           {invalidEmail && <Trans>Oops. This email address is invalid.</Trans>}
           {error && <Trans>Something went wrong, please try again.</Trans>}
         </small>
         <button
           type="submit"
           className="btn btn-primary btn-round btn-xl"
-          disabled={invalidState || invalidEmail || error || loading}
+          disabled={invalidFields || invalidEmail || error || loading}
           style={{ minWidth: '120px' }}
         >
           {loading ? (

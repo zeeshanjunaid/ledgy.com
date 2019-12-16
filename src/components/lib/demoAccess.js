@@ -7,7 +7,7 @@ import {
   ERROR,
   EMAIL_REGEX,
   INVALID_EMAIL,
-  INVALID_STATE,
+  INVALID_FIELDS,
   LOADING,
   removeModalFromDOM,
   SMALL_COMPANY_SIZES,
@@ -52,7 +52,7 @@ export const handleDemoAccessSubmit = async ({
   const { email, companySize } = state;
   const missingField = Object.values(state).some(field => !field);
   if (missingField) {
-    setFormStatus(INVALID_STATE);
+    setFormStatus(INVALID_FIELDS);
     return;
   }
   const validEmail = EMAIL_REGEX.test(email);

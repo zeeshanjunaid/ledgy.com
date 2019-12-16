@@ -41,7 +41,7 @@ export const ERROR = 'error';
 export const SUBMITTED = 'submitted';
 export const INVALID = 'invalid';
 export const INVALID_EMAIL = 'invalid-email';
-export const INVALID_STATE = 'invalid-state';
+export const INVALID_FIELDS = 'invalid-state';
 
 // company sizes
 export const COMPANY_SIZES = ['1–10', '11–50', '51–100', '101–250', '251+'];
