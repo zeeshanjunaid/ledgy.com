@@ -7,15 +7,13 @@ import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { navigate } from 'gatsby';
 
-import { EMAIL_REGEX, removeModalFromDOM } from '../helpers';
+import { isValidEmail, removeModalFromDOM, FORM_STATES } from '../helpers';
 
 import { signupOnMixpanel, trackOnMixpanel } from './lib';
 
+const { ERROR, IDLE, INVALID, LOADING } = FORM_STATES;
+
 declare type FormStatus = {| status: 'idle' | 'loading' | 'invalid' | 'error' |};
-const IDLE = 'idle';
-const LOADING = 'loading';
-const INVALID = 'invalid';
-const ERROR = 'error';
 
 export default class extends Component<
   {| ...Props, trackingEvent: string |},
@@ -30,8 +28,7 @@ export default class extends Component<
     e.preventDefault();
     this.setState({ status: LOADING });
     const { email } = this.state;
-    const valid = EMAIL_REGEX.test(email);
-    if (valid) {
+    if (isValidEmail(email)) {
       try {
         const signupResponse = await signupOnMixpanel(email);
         if (signupResponse.status === 200) {
@@ -71,9 +68,8 @@ export default class extends Component<
             <button
               type="submit"
               name="subscribe"
-              className="btn btn-primary btn-round btn-xl ml-2"
+              className="btn btn-primary btn-round btn-xl ml-2 min-width-110px"
               disabled={invalid || error || loading}
-              style={{ minWidth: '110px' }}
             >
               {loading ? (
                 <FontAwesomeIcon icon={faSpinner} className="fa-lg spin" />

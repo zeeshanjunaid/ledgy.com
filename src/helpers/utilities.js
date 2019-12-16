@@ -42,3 +42,5 @@ export const removeModalFromDOM = () => {
   if (backdrop && backdrop.parentNode) backdrop.parentNode.removeChild(backdrop);
   if (document && document.body) document.body.classList.remove('modal-open');
 };
+
+export const isFieldMissing = (object: Object) => Object.values(object).some(field => !field);
