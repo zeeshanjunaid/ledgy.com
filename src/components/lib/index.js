@@ -1,3 +1,4 @@
 // @flow
 
-export * from './signupHelpers';
+export * from './signup';
+export * from './demoAccess';

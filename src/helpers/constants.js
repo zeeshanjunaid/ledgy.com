@@ -37,6 +37,12 @@ export const EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*
 // form states
 export const IDLE = 'idle';
 export const LOADING = 'loading';
-export const INVALID = 'invalid';
 export const ERROR = 'error';
 export const SUBMITTED = 'submitted';
+export const INVALID = 'invalid';
+export const INVALID_EMAIL = 'invalid-email';
+export const INVALID_STATE = 'invalid-state';
+
+// company sizes
+export const COMPANY_SIZES = ['1–10', '11–50', '51–100', '101–250', '251+'];
+export const SMALL_COMPANY_SIZES: string[] = COMPANY_SIZES.slice(0, 2);
