@@ -97,4 +97,4 @@ export const LanguageHint = ({ lang, documentLang }: {| lang: string, documentLa
     </div>
   );
 
-export const Lead = ({ children }: {| children: Node |}) => <p className="lead">{children}</p>;
+export const Lead = ({ children }: {| children: Node |}) => <div className="lead">{children}</div>;
