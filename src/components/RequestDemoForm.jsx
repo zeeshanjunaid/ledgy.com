@@ -41,7 +41,7 @@ const Input = ({
   </div>
 );
 
-export const RequestDemoForm = ({ setRequested }: { setRequested: boolean => void }) => {
+export const RequestDemoForm = ({ setDemoRequested }: { setDemoRequested: boolean => void }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [companyName, setCompanyName] = useState('');
@@ -68,7 +68,7 @@ export const RequestDemoForm = ({ setRequested }: { setRequested: boolean => voi
     <form
       method="post"
       className="input-round pb-4"
-      onSubmit={event => handleDemoAccessSubmit({ event, state, setFormStatus, setRequested })}
+      onSubmit={event => handleDemoAccessSubmit({ event, state, setFormStatus, setDemoRequested })}
       noValidate
       data-netlify="true"
     >

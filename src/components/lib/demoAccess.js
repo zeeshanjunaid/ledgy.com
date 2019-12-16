@@ -40,12 +40,12 @@ export const handleDemoAccessSubmit = async ({
   event,
   state,
   setFormStatus,
-  setRequested
+  setDemoRequested
 }: {
   event: SyntheticInputEvent<HTMLInputElement>,
   state: State,
   setFormStatus: DemoFormStatus => void,
-  setRequested: boolean => void
+  setDemoRequested: boolean => void
 }) => {
   event.preventDefault();
   setFormStatus(LOADING);
@@ -71,7 +71,7 @@ export const handleDemoAccessSubmit = async ({
       removeModalFromDOM();
       navigate(demoUrl);
     } else {
-      setRequested(true);
+      setDemoRequested(true);
     }
   } else {
     setFormStatus(ERROR);
