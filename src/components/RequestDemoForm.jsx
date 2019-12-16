@@ -5,16 +5,10 @@ import { faSpinner, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Trans } from '@lingui/react';
 
-import {
-  COMPANY_SIZES,
-  ERROR,
-  IDLE,
-  INVALID_EMAIL,
-  INVALID_FIELDS,
-  LOADING,
-  SUBMITTED
-} from '../helpers';
+import { COMPANY_SIZES, FORM_STATES } from '../helpers';
 import { handleDemoAccessSubmit, isSmallCompany, type DemoFormStatus } from './lib';
+
+const { ERROR, IDLE, INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED } = FORM_STATES;
 
 const Label = ({ text }: { text: Node }) => <span>{text}</span>;
 const Input = ({

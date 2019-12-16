@@ -36,13 +36,15 @@ const EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"
 export const isValidEmail = (email: string) => EMAIL_REGEX.test(email);
 
 // form states
-export const IDLE = 'idle';
-export const LOADING = 'loading';
-export const ERROR = 'error';
-export const SUBMITTED = 'submitted';
-export const INVALID = 'invalid';
-export const INVALID_EMAIL = 'invalid-email';
-export const INVALID_FIELDS = 'invalid-state';
+export const FORM_STATES = Object.freeze({
+  IDLE: 'idle',
+  LOADING: 'loading',
+  ERROR: 'error',
+  SUBMITTED: 'submitted',
+  INVALID: 'invalid',
+  INVALID_EMAIL: 'invalid-email',
+  INVALID_FIELDS: 'invalid-fields'
+});
 
 // company sizes
 export const COMPANY_SIZES = ['1–10', '11–50', '51–100', '101–250', '251+'];

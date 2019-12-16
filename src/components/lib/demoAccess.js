@@ -4,23 +4,20 @@ import { navigate } from 'gatsby';
 
 import {
   demoUrl,
-  ERROR,
   isValidEmail,
-  INVALID_EMAIL,
-  INVALID_FIELDS,
-  LOADING,
   removeModalFromDOM,
   SMALL_COMPANY_SIZES,
-  SUBMITTED
+  FORM_STATES
 } from '../../helpers';
 
 export const isSmallCompany = (companySize: string) => SMALL_COMPANY_SIZES.includes(companySize);
+const { ERROR, INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED } = FORM_STATES;
 
 export type DemoFormStatus =
   | 'idle'
   | 'loading'
   | 'invalid-email'
-  | 'invalid-state'
+  | 'invalid-fields'
   | 'error'
   | 'submitted';
 
