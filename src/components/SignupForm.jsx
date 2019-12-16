@@ -68,9 +68,8 @@ export default class extends Component<
             <button
               type="submit"
               name="subscribe"
-              className="btn btn-primary btn-round btn-xl ml-2"
+              className="btn btn-primary btn-round btn-xl ml-2 min-width-110px"
               disabled={invalid || error || loading}
-              style={{ minWidth: '110px' }}
             >
               {loading ? (
                 <FontAwesomeIcon icon={faSpinner} className="fa-lg spin" />

@@ -119,9 +119,8 @@ export const RequestDemoForm = ({ setDemoRequested }: { setDemoRequested: boolea
         </small>
         <button
           type="submit"
-          className="btn btn-primary btn-round btn-xl"
+          className="btn btn-primary btn-round btn-xl min-width-120px"
           disabled={invalidFields || invalidEmail || error || loading}
-          style={{ minWidth: '120px' }}
         >
           {loading ? (
             <FontAwesomeIcon icon={faSpinner} className="fa-lg spin" />

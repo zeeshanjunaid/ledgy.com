@@ -579,3 +579,11 @@ $markdown-spacer: $markdown-font-size;
 button.multi-button.bg-primary:focus {
   background: $color-primary !important;
 }
+
+.min-width-110px {
+  min-width: 110px;
+}
+
+.min-width-120px {
+  min-width: 120px;
+}

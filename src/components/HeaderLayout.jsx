@@ -2,7 +2,15 @@
 
 import React, { type Node } from 'react';
 
-declare type HeaderButton = {| props: Object, text: Node, modal?: Node |};
+type HeaderButton = {| props: Object, text: Node, modal?: Node |};
+type HeaderLayoutProps = {|
+  title: Node | string,
+  subtitle: Node | string,
+  buttonOne: HeaderButton,
+  buttonTwo?: HeaderButton,
+  customButton?: Node,
+  image: Node
+|};
 
 export const HeaderLayout = ({
   title,
@@ -11,14 +19,7 @@ export const HeaderLayout = ({
   buttonTwo,
   customButton,
   image
-}: {|
-  title: Node | string,
-  subtitle: Node | string,
-  buttonOne: HeaderButton,
-  buttonTwo?: HeaderButton,
-  customButton?: Node,
-  image: Node
-|}) => {
+}: HeaderLayoutProps) => {
   const buttonOneClass = `btn btn-block d-sm-inline btn-xl mx-1 btn-round ${
     buttonTwo ? 'btn-outline-light' : 'btn-light'
   }`;
