@@ -27,6 +27,7 @@ type State = {|
 |};
 
 export const isSmallCompany = (companySize: string) => SMALL_COMPANY_SIZES.includes(companySize);
+export const netlifyFormName = 'requestDemo';
 const redirectToDemo = () => {
   if (window) {
     window.location = demoUrl;
@@ -42,7 +43,7 @@ const fetchNetlify = (state: State) =>
   fetch('/', {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body: encodeBody({ 'form-name': 'request-demo', ...state })
+    body: encodeBody({ 'form-name': netlifyFormName, ...state })
   });
 
 export const handleDemoAccessSubmit = async ({
@@ -71,6 +72,7 @@ export const handleDemoAccessSubmit = async ({
 
   const response = await fetchNetlify(state);
   if (response.status !== 200) {
+    console.log(response);
     setFormStatus(ERROR);
     return;
   }

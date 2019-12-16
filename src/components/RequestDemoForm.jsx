@@ -6,7 +6,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Trans } from '@lingui/react';
 
 import { COMPANY_SIZES, FORM_STATES } from '../helpers';
-import { handleDemoAccessSubmit, type DemoFormStatus, isSmallCompany } from './lib';
+import {
+  handleDemoAccessSubmit,
+  type DemoFormStatus,
+  isSmallCompany,
+  netlifyFormName
+} from './lib';
 
 const { ERROR, IDLE, INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED } = FORM_STATES;
 
@@ -15,12 +20,14 @@ const Input = ({
   state,
   setState,
   placeholder,
-  setFormStatus
+  setFormStatus,
+  name
 }: {|
   state: string,
   setState: string => void,
   placeholder: string,
-  setFormStatus: DemoFormStatus => void
+  setFormStatus: DemoFormStatus => void,
+  name: string
 |}) => (
   <div className="form-group input-group bg-white p-2 mt-2 mb-4">
     <input
@@ -31,6 +38,7 @@ const Input = ({
         setFormStatus(IDLE);
       }}
       value={state}
+      name={name}
     />
   </div>
 );
@@ -65,7 +73,7 @@ export const RequestDemoForm = ({ setDemoRequested }: { setDemoRequested: boolea
       onSubmit={event => handleDemoAccessSubmit({ event, state, setFormStatus, setDemoRequested })}
       noValidate
       data-netlify="true"
-      name="requestDemo"
+      name={netlifyFormName}
     >
       <p className="text-dark">
         <Trans>Please fill out the form below to access the demo</Trans>
@@ -76,6 +84,7 @@ export const RequestDemoForm = ({ setDemoRequested }: { setDemoRequested: boolea
         setState={setName}
         placeholder="Elon Must"
         setFormStatus={setFormStatus}
+        name="name"
       />
 
       <Label text={<Trans>Your email</Trans>} />
@@ -84,6 +93,7 @@ export const RequestDemoForm = ({ setDemoRequested }: { setDemoRequested: boolea
         setState={setEmail}
         placeholder="elon@must.com"
         setFormStatus={setFormStatus}
+        name="email"
       />
 
       <Label text={<Trans>Name of your company</Trans>} />
@@ -92,10 +102,12 @@ export const RequestDemoForm = ({ setDemoRequested }: { setDemoRequested: boolea
         setState={setCompanyName}
         placeholder="SpaceY"
         setFormStatus={setFormStatus}
+        name="companyName"
       />
 
       <Label text={<Trans>Number of employees</Trans>} />
       <div className="d-flex mt-2 mb-4">
+        <input type="hidden" name="companySize" />
         {COMPANY_SIZES.map(size => (
           <button
             type="button"
