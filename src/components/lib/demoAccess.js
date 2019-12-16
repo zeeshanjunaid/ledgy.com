@@ -36,6 +36,13 @@ const encodeBody = data =>
     .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
     .join('&');
 
+const fetchNetlify = (state: State) =>
+  fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: encodeBody({ 'form-name': 'request-demo', ...state })
+  });
+
 export const handleDemoAccessSubmit = async ({
   event,
   state,
@@ -59,20 +66,17 @@ export const handleDemoAccessSubmit = async ({
     setFormStatus(INVALID_EMAIL);
     return;
   }
-  const response = await fetch('/', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body: encodeBody({ 'form-name': 'request-demo', ...state })
-  });
-  if (response.status === 200) {
-    setFormStatus(SUBMITTED);
-    if (isSmallCompany(companySize)) {
-      removeModalFromDOM();
-      navigate(demoUrl);
-    } else {
-      setDemoRequested(true);
-    }
-  } else {
+
+  const response = await fetchNetlify(state);
+  if (response.status !== 200) {
     setFormStatus(ERROR);
+    return;
+  }
+  setFormStatus(SUBMITTED);
+  if (isSmallCompany(companySize)) {
+    removeModalFromDOM();
+    navigate(demoUrl);
+  } else {
+    setDemoRequested(true);
   }
 };
