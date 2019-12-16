@@ -1,7 +1,5 @@
 // @flow
 
-import { navigate } from 'gatsby';
-
 import {
   demoUrl,
   isValidEmail,
@@ -23,12 +21,17 @@ export type DemoFormStatus =
 
 type State = {|
   companyName: string,
-  companySize: any | string,
+  companySize: string,
   email: string,
   name: string
 |};
 
 export const isSmallCompany = (companySize: string) => SMALL_COMPANY_SIZES.includes(companySize);
+const redirectToDemo = () => {
+  if (window) {
+    window.location = demoUrl;
+  }
+};
 
 const encodeBody = data =>
   Object.keys(data)
@@ -72,10 +75,10 @@ export const handleDemoAccessSubmit = async ({
     return;
   }
   setFormStatus(SUBMITTED);
-  if (isSmallCompany(companySize)) {
-    removeModalFromDOM();
-    navigate(demoUrl);
-  } else {
+  if (!isSmallCompany(companySize)) {
     setDemoRequested(true);
+    return;
   }
+  removeModalFromDOM();
+  redirectToDemo();
 };
