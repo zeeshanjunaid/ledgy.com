@@ -65,6 +65,7 @@ export const RequestDemoForm = ({ setDemoRequested }: { setDemoRequested: boolea
       onSubmit={event => handleDemoAccessSubmit({ event, state, setFormStatus, setDemoRequested })}
       noValidate
       data-netlify="true"
+      name="requestDemo"
     >
       <p className="text-dark">
         <Trans>Please fill out the form below to access the demo</Trans>
