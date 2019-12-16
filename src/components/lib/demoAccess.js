@@ -5,7 +5,7 @@ import { navigate } from 'gatsby';
 import {
   demoUrl,
   ERROR,
-  EMAIL_REGEX,
+  isValidEmail,
   INVALID_EMAIL,
   INVALID_FIELDS,
   LOADING,
@@ -55,8 +55,7 @@ export const handleDemoAccessSubmit = async ({
     setFormStatus(INVALID_FIELDS);
     return;
   }
-  const validEmail = EMAIL_REGEX.test(email);
-  if (!validEmail) {
+  if (!isValidEmail(email)) {
     setFormStatus(INVALID_EMAIL);
     return;
   }

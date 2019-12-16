@@ -7,7 +7,7 @@ import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { navigate } from 'gatsby';
 
-import { EMAIL_REGEX, removeModalFromDOM, IDLE, LOADING, INVALID, ERROR } from '../helpers';
+import { isValidEmail, removeModalFromDOM, IDLE, LOADING, INVALID, ERROR } from '../helpers';
 
 import { signupOnMixpanel, trackOnMixpanel } from './lib';
 
@@ -26,8 +26,7 @@ export default class extends Component<
     e.preventDefault();
     this.setState({ status: LOADING });
     const { email } = this.state;
-    const valid = EMAIL_REGEX.test(email);
-    if (valid) {
+    if (isValidEmail(email)) {
       try {
         const signupResponse = await signupOnMixpanel(email);
         if (signupResponse.status === 200) {
