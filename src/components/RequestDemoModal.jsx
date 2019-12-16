@@ -2,7 +2,7 @@
 
 import React, { useState, type Node } from 'react';
 import { Trans } from '@lingui/react';
-import { faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { faSpinner, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { navigate } from 'gatsby';
 
@@ -26,7 +26,7 @@ const INVALID_STATE = `${INVALID}-state`;
 const isSmallCompany = companySize => SMALL_COMPANY_SIZES.includes(companySize);
 
 declare type FormStatus = {|
-  status: 'idle' | 'loading' | 'invalid-email' | 'invalid-state' | 'error'
+  status: 'idle' | 'loading' | 'invalid-email' | 'invalid-state' | 'error' | 'submitted'
 |};
 
 const Label = ({ text }: { text: Node }) => <span>{text}</span>;
@@ -59,8 +59,8 @@ const encodeBody = data =>
     .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
     .join('&');
 
-const handleSubmit = async (e, state, setFormStatus) => {
-  e.preventDefault();
+const handleSubmit = async ({ event, state, setFormStatus, setFinished }) => {
+  event.preventDefault();
   setFormStatus(LOADING);
   const { email, companySize } = state;
   const missingField = Object.values(state).some(field => !field);
@@ -80,18 +80,18 @@ const handleSubmit = async (e, state, setFormStatus) => {
   });
   if (response.status === 200) {
     setFormStatus(SUBMITTED);
-    removeModalFromDOM();
     if (isSmallCompany(companySize)) {
+      removeModalFromDOM();
       navigate(demoUrl);
     } else {
-      setFormStatus(SUBMITTED);
+      setFinished(true);
     }
   } else {
     setFormStatus(ERROR);
   }
 };
 
-const RequestDemoForm = () => {
+const RequestDemoForm = ({ setFinished }: { setFinished: boolean => void }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [companyName, setCompanyName] = useState('');
@@ -106,17 +106,24 @@ const RequestDemoForm = () => {
   const submitted = formStatus === SUBMITTED;
 
   return submitted ? (
-    <div>We’ll be in touch shortly</div>
+    <div className="d-flex align-items-center">
+      <FontAwesomeIcon icon={faCheckCircle} size="2x" className="text-primary mr-4" />
+      {isSmallCompany(companySize) ? (
+        <Trans>You are being redirected to the demo</Trans>
+      ) : (
+        <Trans>We’ll be in touch shortly</Trans>
+      )}
+    </div>
   ) : (
     <form
       method="post"
-      className="input-round py-4"
-      onSubmit={e => handleSubmit(e, state, setFormStatus)}
+      className="input-round pb-4"
+      onSubmit={event => handleSubmit({ event, state, setFormStatus, setFinished })}
       noValidate
       data-netlify="true"
     >
-      <p className="text-dark m-0">
-        <Trans>Please fill out the information below to get a demo</Trans>
+      <p className="text-dark">
+        <Trans>Please fill out the form below to access the demo</Trans>
       </p>
       <Label text={<Trans>Your name</Trans>} />
       <Input
@@ -183,15 +190,20 @@ const RequestDemoForm = () => {
   );
 };
 
-export const RequestDemoModal = () => (
-  <Modal
-    id="demo-access"
-    titleClassNames="text-white"
-    title={<Trans>Request a demo</Trans>}
-    buttonText={<Trans>Get a Demo</Trans>}
-    buttonClassName="btn-demo btn-outline-light d-inline btn-xl mx-1 my-2 my-sm-0"
-    hideFooter
-  >
-    <RequestDemoForm />
-  </Modal>
-);
+export const RequestDemoModal = () => {
+  const [isFinished, setFinished] = useState(false);
+  return (
+    <Modal
+      id="demo-access"
+      titleClassNames="text-white"
+      title={
+        isFinished ? <Trans>Thank you for your interest!</Trans> : <Trans>Request a demo</Trans>
+      }
+      buttonText={<Trans>Get a Demo</Trans>}
+      buttonClassName="btn-demo btn-outline-light d-inline btn-xl mx-1 my-2 my-sm-0"
+      hideFooter
+    >
+      <RequestDemoForm setFinished={setFinished} />
+    </Modal>
+  );
+};
