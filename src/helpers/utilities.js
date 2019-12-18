@@ -13,6 +13,10 @@ export const trackSignupGoogleAnalytics = (type: string) => {
   if (window.ga) window.ga('send', 'event', 'signup', type);
 };
 
+export const track = (event: string): void => {
+  if (window.ga) window.ga('send', 'pageview', `landingPage/${event}`);
+};
+
 export const animateTablet = () => {
   let scrolling = false;
   window.onscroll = () => {

@@ -2,6 +2,7 @@
 
 import React, { type Node } from 'react';
 import { Trans } from '@lingui/react';
+import { track } from '../helpers/utilities';
 
 export default ({
   id,
@@ -33,6 +34,7 @@ export default ({
           className={`btn btn-round btn-light ${buttonClassName}`}
           data-toggle="modal"
           data-target={`#${id}`}
+          onClick={() => track(`openModal-${id}`)}
         >
           {buttonText}
         </button>

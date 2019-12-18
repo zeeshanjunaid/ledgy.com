@@ -7,7 +7,8 @@ import {
   SMALL_COMPANY_SIZES,
   FORM_STATES,
   isFieldMissing,
-  NETLIFY_DEMO_FORM_NAME
+  NETLIFY_DEMO_FORM_NAME,
+  track
 } from '../../helpers';
 
 const { ERROR, INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED } = FORM_STATES;
@@ -76,6 +77,7 @@ export const handleDemoAccessSubmit = async ({
     setFormStatus(ERROR);
     return;
   }
+  track('submitDemoRequest');
   setFormStatus(SUBMITTED);
   if (!isSmallCompany(companySize)) {
     setDemoRequested(true);
