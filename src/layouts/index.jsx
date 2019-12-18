@@ -27,6 +27,12 @@ type SiteProps = {
   location: { pathname: string }
 };
 
+const openDemoModal = () => {
+  if (window.location.hash === '#getDemo') {
+    window.$('#demo-access').modal();
+  }
+};
+
 const Initialize = () => {
   useEffect(() => {
     animateTablet();
@@ -71,6 +77,7 @@ const Initialize = () => {
         }
       });
       window.fcWidget.init(window.fcSettings);
+      openDemoModal();
     }, 1414);
   }, []);
   return null;
