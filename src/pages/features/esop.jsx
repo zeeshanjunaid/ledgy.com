@@ -78,7 +78,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             granted, available, vested and exercised
           </Trans>,
           <Trans>
-            Grant options, phantom options, warrants or add inverse vesting to stock transactions
+            Grant options, phantom options, warrants or add reverse vesting to stock transactions
           </Trans>,
           <Trans>Track exercise, termination and expiration</Trans>
         ]}
@@ -91,7 +91,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
         textSize="5"
         header={<Trans>Any vesting schedule</Trans>}
         features={[
-          <Trans>Add vesting or inverse vesting to any transaction</Trans>,
+          <Trans>Add vesting or reverse vesting to any transaction</Trans>,
           <Trans>
             Use simple linear vesting with duration, interval and cliff, define your own custom
             vesting schedule, or select a preset
