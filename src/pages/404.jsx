@@ -1,4 +1,5 @@
 import React from 'react';
+import { targetBlank } from '../helpers';
 
 const NotFoundPage = () => (
   <div>
@@ -6,9 +7,20 @@ const NotFoundPage = () => (
 
     <div className="container py-200">
       <header className="section-header">
-        <h2 className="mt-4">Oh no!</h2>
+        <h1 className="mt-4">Page not found</h1>
         <hr />
-        <p className="lead">Seems you’re looking for something that doesn’t exist.</p>
+        <p className="lead">Oh no! We couldn’t find that page.</p>
+        <p className="lead">
+          Were you looking for{' '}
+          <a href="/features" {...targetBlank}>
+            features
+          </a>{' '}
+          or{' '}
+          <a href="/contact" {...targetBlank}>
+            contact
+          </a>{' '}
+          info?
+        </p>
       </header>
     </div>
   </div>
