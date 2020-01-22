@@ -3,7 +3,7 @@
 import React, { type Node } from 'react';
 import { isBrowser } from '../helpers';
 
-export const Accordion = (props: { children: Node }) => (
+export const Accordion = (props: {| children: Node |}) => (
   <div className="accordion my-4" {...props} />
 );
 

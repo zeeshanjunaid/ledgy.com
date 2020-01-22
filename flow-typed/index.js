@@ -13,7 +13,6 @@ declare type Props = {|
 
 declare type LayoutProps = {|
   ...Props,
-  lang: string,
   location: { pathname: string }
 |};
 
