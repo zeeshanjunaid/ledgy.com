@@ -38,7 +38,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <FeatureLi>
                 <Trans>
                   Supports everything: pools, options, phantom options, warrants, vested stocks, and
-                  inverse vesting
+                  reverse vesting
                 </Trans>
               </FeatureLi>
               <FeatureLi>
