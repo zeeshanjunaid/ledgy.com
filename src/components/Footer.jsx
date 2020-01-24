@@ -139,9 +139,9 @@ export const Footer = ({ location, ...props }: LayoutProps) => {
               {[
                 ['https://www.youtube.com/channel/UCRkvNQptxoE-ckmTsrme1_w', faYoutube, 'YouTube'],
                 ['https://twitter.com/Ledgy', faTwitter, 'Twitter'],
-                ['https://www.linkedin.com/company/ledgy', faLinkedin, 'LinkedIn'],
-                ['https://www.facebook.com/ledgyCom/', faFacebook, 'Facebook'],
-                ['https://angel.co/ledgy', faAngellist, 'AngelList']
+                ['https://www.linkedin.com/company/Ledgy', faLinkedin, 'LinkedIn'],
+                ['https://www.facebook.com/Ledgy', faFacebook, 'Facebook'],
+                ['https://angel.co/Ledgy', faAngellist, 'AngelList']
               ].map(([href, icon, title]) => (
                 <a href={href} key={title} {...targetBlank}>
                   <FontAwesomeIcon icon={icon} title={title} />
