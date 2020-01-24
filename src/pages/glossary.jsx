@@ -25,7 +25,7 @@ export default withI18n()(({ i18n, data }: Props) => {
         title={i18n.t`Glossary`}
         description={i18n.t`Definitions for industry terms relating to cap tables, financing rounds, and legal topics for startups.`}
       />
-      <ContentHeader heading={i18n.t`Glossary`} />
+      <ContentHeader title={i18n.t`Glossary`} />
       <ContentBody>
         <Accordion>{accordionItems}</Accordion>
       </ContentBody>

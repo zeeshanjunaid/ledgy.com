@@ -8,12 +8,12 @@ import Img from 'gatsby-image';
 import { ChevronRight } from '../layouts/utils';
 import { targetBlank } from '../helpers';
 
-export const ContentHeader = ({ heading }: {| heading: string |}) => (
+export const ContentHeader = ({ title }: {| title: string |}) => (
   <header className="header text-white bg-ledgy">
     <div className="container text-center">
       <div className="row">
         <div className="col-12 col-lg-8 offset-lg-2">
-          <h1>{heading}</h1>
+          <h1>{title}</h1>
         </div>
       </div>
     </div>
