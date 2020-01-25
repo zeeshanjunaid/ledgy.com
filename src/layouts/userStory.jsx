@@ -5,6 +5,7 @@ import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
 
+import { PublishDate } from '../components/Content';
 import { Author, Image, Lead } from '../components/Markdown';
 import { DefaultHeader, CalculatorHeader } from '../components/Header';
 import { Title } from '../layouts/utils';
@@ -37,7 +38,7 @@ export default ({
                 </MDXProvider>
               )}
             </div>
-            <div className="d-flex py-4">{date && <small>{date}</small>}</div>
+            <PublishDate date={date} />
             {author && <Author prefix={prefix} name={author} />}
           </div>
         </section>

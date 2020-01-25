@@ -132,3 +132,6 @@ export const CoverImageFragment = graphql`
     }
   }
 `;
+
+export const PublishDate = ({ date }: {| date?: string|}) =>
+  <div className="d-flex py-4">{date && <small>{date}</small>}</div>;
