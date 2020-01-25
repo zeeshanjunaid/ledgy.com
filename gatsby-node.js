@@ -53,7 +53,7 @@ exports.createPages = ({ graphql, actions }) => {
     });
   });
 
-  const pageComponent = path.resolve('./src/layouts/contentfulPage.jsx');
+  const pageComponent = path.resolve('./src/layouts/page.jsx');
   const createPages = new Promise(resolve => {
     graphql(`
       {
@@ -78,7 +78,7 @@ exports.createPages = ({ graphql, actions }) => {
       resolve();
     });
   });
-  const userStoryComponent = path.resolve('./src/layouts/contentfulPage.jsx');
+  const userStoryComponent = path.resolve('./src/layouts/page.jsx');
   const createUserStories = new Promise(resolve => {
     graphql(`
       {
