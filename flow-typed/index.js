@@ -30,4 +30,29 @@ declare type Page = {|
   cover?: Object
 |};
 
+declare type Company = {|
+  name: string,
+  logo: Object,
+  cover: Object,
+  contactName: string,
+  contactTitle: string,
+  mainQuote: string,
+  yearFounded: Number,
+  funding: string,
+  employeeCount: string,
+  sector: string,
+  location: string,
+  stage: string
+|};
+
+declare type UserStory = {|
+  id: string,
+  title: string,
+  slug: string,
+  subtitle: string,
+  company: Company,
+  content: Mdx,
+  date: string
+|};
+
 declare var graphql: any;
