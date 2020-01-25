@@ -35,7 +35,6 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions;
   const createLocalizedPages = (path, component, context) => {
     createPage({ path, component, context });
-    console.log('createPage', { path, component, context });
     languages.forEach(lang => createPage({ path: `/${lang}${path}`, component, context }));
   };
 
