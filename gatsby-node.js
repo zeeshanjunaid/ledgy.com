@@ -33,9 +33,9 @@ exports.onCreatePage = async ({ page, actions }) => {
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions;
-  const createLocalizedPages = (path, component, context) => {
-    createPage({ path, component, context });
-    languages.forEach(lang => createPage({ path: `/${lang}${path}`, component, context }));
+  const createLocalizedPages = (pagePath, component, context) => {
+    createPage({ path: pagePath, component, context });
+    languages.forEach(lang => createPage({ path: `/${lang}${pagePath}`, component, context }));
   };
 
   redirects.forEach(([from, toPath]) => {
@@ -72,7 +72,7 @@ exports.createPages = ({ graphql, actions }) => {
         const { id, slug, namespace } = node;
         const pagePath = `${namespace}${slug}/`;
         const context = { id };
-        createLocalizedPages(pagePath, pageComponent, context)
+        createLocalizedPages(pagePath, pageComponent, context);
       });
       resolve();
     });

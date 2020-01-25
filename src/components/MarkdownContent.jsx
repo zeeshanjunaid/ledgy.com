@@ -6,7 +6,7 @@ import { MDXProvider } from '@mdx-js/react';
 
 import { Image, Lead } from '../components/Markdown';
 
-export const MarkdownContent = ({ content }: {| content: Mdx |}) =>
+export const MarkdownContent = ({ content }: {| content: Mdx |}) => (
   <div className="markdown clearfix">
     {content && (
       <MDXProvider components={{ img: Image, Lead }}>
@@ -14,3 +14,4 @@ export const MarkdownContent = ({ content }: {| content: Mdx |}) =>
       </MDXProvider>
     )}
   </div>
+);

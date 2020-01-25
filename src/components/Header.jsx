@@ -7,15 +7,14 @@ import { LanguageHint } from '../components/Markdown';
 import { calculatorUrl, targetBlank, trackSignupGoogleAnalytics } from '../helpers';
 import { ProductHuntButton } from './ProductHuntButton';
 
-export const DefaultHeader
-  = ({
+export const DefaultHeader = ({
   title,
   lang,
   language
 }: {|
   title: string,
   lang: string,
-  language: string,
+  language: string
 |}) => {
   return (
     <header className="header text-white bg-ledgy">

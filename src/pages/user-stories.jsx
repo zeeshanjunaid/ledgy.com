@@ -3,7 +3,6 @@
 import React from 'react';
 import { withI18n } from '@lingui/react';
 import { graphql } from 'gatsby';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import { ContentHeader, ContentBody } from '../components/Content';
 import { UserStoryLink } from '../components/userStories';
@@ -20,9 +19,9 @@ export default withI18n()(({ i18n, data }: Props) => {
       <ContentHeader title={i18n.t`Ledgy User Stories`} />
 
       <ContentBody>
-        {data.allContentfulUserStory.edges.map(({ node }) =>
+        {data.allContentfulUserStory.edges.map(({ node }) => (
           <UserStoryLink key={node.id} userStory={node} />
-        )}
+        ))}
       </ContentBody>
     </div>
   );
@@ -31,7 +30,7 @@ export default withI18n()(({ i18n, data }: Props) => {
 export const pageQuery = graphql`
   query {
     ...DefaultCover
-    allContentfulUserStory(sort: {order: DESC, fields: [date]}) {
+    allContentfulUserStory(sort: { order: DESC, fields: [date] }) {
       edges {
         node {
           id
@@ -41,7 +40,7 @@ export const pageQuery = graphql`
           date
           company {
             cover {
-              fluid(maxWidth: 150){
+              fluid(maxWidth: 150) {
                 ...GatsbyContentfulFluid_withWebp
               }
             }

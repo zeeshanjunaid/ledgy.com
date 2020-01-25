@@ -116,7 +116,8 @@ export const PostLink = ({
       date={date}
       to={to}
       image={image}
-      external={external} />
+      external={external}
+    />
   );
 };
 
@@ -133,5 +134,6 @@ export const CoverImageFragment = graphql`
   }
 `;
 
-export const PublishDate = ({ date }: {| date?: string|}) =>
-  <div className="d-flex py-4">{date && <small>{date}</small>}</div>;
+export const PublishDate = ({ date }: {| date?: string |}) => (
+  <div className="d-flex py-4">{date && <small>{date}</small>}</div>
+);

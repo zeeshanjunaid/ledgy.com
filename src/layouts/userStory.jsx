@@ -1,14 +1,13 @@
 // @flow
 
 import React from 'react';
-import { graphql, Link } from 'gatsby';
-import Img from 'gatsby-image';
+import { graphql } from 'gatsby';
 import { Trans } from '@lingui/react';
 
 import { PublishDate } from '../components/Content';
 import { Author } from '../components/Markdown';
 import { MarkdownContent } from '../components/MarkdownContent';
-import { DefaultHeader, CalculatorHeader } from '../components/Header';
+import { DefaultHeader } from '../components/Header';
 import { UserStoryCard } from '../components/userStories';
 import { Title } from '../layouts/utils';
 
@@ -23,19 +22,15 @@ export default ({
     allContentfulUserStory: Object
   |}
 |}) => {
-  const { id, title, subtitle, date, author, language, content, company } = data.contentfulUserStory;
-  const { cover } = company;
+  const { title, subtitle, date, author, language, content } = data.contentfulUserStory;
   return (
     <div>
-      <Title
-        title={title}
-        description={subtitle}
-      />
+      <Title title={title} description={subtitle} />
       <DefaultHeader lang={lang} language={language} title={title} />
       <main className="main-content">
         <section className="section">
           <div className="container container-small">
-            <MarkdownContent content={content}/>
+            <MarkdownContent content={content} />
             <PublishDate date={date} />
             {author && <Author prefix={prefix} name={author} />}
 
@@ -44,11 +39,11 @@ export default ({
             </h4>
 
             <div className="d-flex flex-row align-items-center justify-content-center">
-              {data.allContentfulUserStory.edges.slice(0, 3).map(({ node }) =>
+              {data.allContentfulUserStory.edges.slice(0, 3).map(({ node }) => (
                 <div className="col-md-4">
                   <UserStoryCard userStory={node} />
                 </div>
-              )}
+              ))}
             </div>
           </div>
         </section>
@@ -77,12 +72,12 @@ export const pageQuery = graphql`
         contactName
         contactTitle
         logo {
-          fluid(maxWidth: 150){
+          fluid(maxWidth: 150) {
             ...GatsbyContentfulFluid_withWebp
           }
         }
         cover {
-          fluid(maxWidth: 150){
+          fluid(maxWidth: 150) {
             ...GatsbyContentfulFluid_withWebp
           }
         }
@@ -99,19 +94,19 @@ export const pageQuery = graphql`
         stage
       }
     }
-    allContentfulUserStory(sort: {order: DESC, fields: [date]}) {
+    allContentfulUserStory(sort: { order: DESC, fields: [date] }) {
       edges {
         node {
           id
           slug
           company {
             logo {
-              fluid(maxWidth: 150){
+              fluid(maxWidth: 150) {
                 ...GatsbyContentfulFluid_withWebp
               }
             }
             cover {
-              fluid(maxWidth: 150){
+              fluid(maxWidth: 150) {
                 ...GatsbyContentfulFluid_withWebp
               }
             }
