@@ -94,8 +94,7 @@ exports.createPages = ({ graphql, actions }) => {
     `).then(({ errors, data }) => {
       if (errors) throw errors;
       data.allContentfulUserStory.edges.forEach(({ node: { id, slug } }) => {
-        const USER_STORIES = 'user-stories';
-        const pagePath = `${USER_STORIES}/${slug}/`;
+        const pagePath = `user-stories/${slug}/`;
         const context = { id };
         createLocalizedPages(pagePath, userStoryComponent, context);
       });
