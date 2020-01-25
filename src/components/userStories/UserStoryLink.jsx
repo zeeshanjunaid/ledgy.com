@@ -8,20 +8,11 @@ import Img from 'gatsby-image';
 import { ChevronRight } from '../../layouts/utils';
 import { CardLink } from '../Content';
 
-export const UserStoryLink = ({
-  userStory,
-  defaultImage
-}: {|
-  userStory: UserStory,
-  defaultImage: Object
-  |}) => {
+export const UserStoryLink = ({ userStory }: {| userStory: UserStory |}) => {
   const { title, subtitle, slug, date, company } = userStory;
   const to = `user-stories/${slug}`;
   const image = (
-    <Img
-      className="fit-cover"
-      {...company.cover ? company.cover : defaultImage}
-    />
+    <Img className="fit-cover" {...company.cover} />
   );
   const cardTitle = <h5>{title}</h5>;
   return (

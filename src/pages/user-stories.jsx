@@ -20,16 +20,9 @@ export default withI18n()(({ i18n, data }: Props) => {
       <ContentHeader title={i18n.t`Ledgy User Stories`} />
 
       <ContentBody>
-        {data.allContentfulUserStory.edges.map(({ node }) => {
-          const { id, title, subtitle, slug } = node;
-          return (
-            <UserStoryLink
-              key={id}
-              userStory={node}
-              defaultImage={data.ledgy}
-            />
-          );
-        })}
+        {data.allContentfulUserStory.edges.map(({ node }) =>
+          <UserStoryLink key={node.id} userStory={node} />
+        )}
       </ContentBody>
     </div>
   );

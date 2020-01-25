@@ -1,12 +1,15 @@
 // @flow
 
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
+import Img from 'gatsby-image';
+import { Trans } from '@lingui/react';
 
 import { PublishDate } from '../components/Content';
 import { Author } from '../components/Markdown';
 import { MarkdownContent } from '../components/MarkdownContent';
 import { DefaultHeader, CalculatorHeader } from '../components/Header';
+import { UserStoryCard } from '../components/userStories';
 import { Title } from '../layouts/utils';
 
 export default ({
@@ -15,7 +18,10 @@ export default ({
   prefix
 }: {|
   ...Props,
-  data: {| contentfulUserStory: UserStory, site: { siteMetadata: { siteUrl: string } } |}
+  data: {|
+    contentfulUserStory: UserStory,
+    allContentfulUserStory: Object
+  |}
 |}) => {
   const { id, title, subtitle, date, author, language, content, company } = data.contentfulUserStory;
   const { cover } = company;
@@ -32,6 +38,18 @@ export default ({
             <MarkdownContent content={content}/>
             <PublishDate date={date} />
             {author && <Author prefix={prefix} name={author} />}
+
+            <h4 className="m-5 text-center">
+              <Trans>More Stories from Ledgy Users</Trans>
+            </h4>
+
+            <div className="d-flex flex-row align-items-center justify-content-center">
+              {data.allContentfulUserStory.edges.slice(0, 3).map(({ node }) =>
+                <div className="col-md-4">
+                  <UserStoryCard userStory={node} />
+                </div>
+              )}
+            </div>
           </div>
         </section>
       </main>
@@ -79,6 +97,26 @@ export const pageQuery = graphql`
         sector
         location
         stage
+      }
+    }
+    allContentfulUserStory(sort: {order: DESC, fields: [date]}) {
+      edges {
+        node {
+          id
+          slug
+          company {
+            logo {
+              fluid(maxWidth: 150){
+                ...GatsbyContentfulFluid_withWebp
+              }
+            }
+            cover {
+              fluid(maxWidth: 150){
+                ...GatsbyContentfulFluid_withWebp
+              }
+            }
+          }
+        }
       }
     }
   }
