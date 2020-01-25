@@ -51,8 +51,8 @@ export const pageQuery = graphql`
             contactName
             contactTitle
             logo {
-              file {
-                url
+              fluid(maxWidth: 150){
+                ...GatsbyContentfulFluid_withWebp
               }
             }
             cover {
