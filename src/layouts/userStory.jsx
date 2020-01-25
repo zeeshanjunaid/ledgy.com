@@ -18,11 +18,8 @@ export default ({
   ...Props,
   data: {| contentfulUserStory: UserStory, site: { siteMetadata: { siteUrl: string } } |}
 |}) => {
-  console.log({ data, lang, prefix });
   const { id, title, subtitle, date, author, language, content, company } = data.contentfulUserStory;
   const { cover } = company;
-
-  console.log({ title, subtitle, content, date, company})
   return (
     <div>
       <Title
