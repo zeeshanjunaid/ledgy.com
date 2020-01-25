@@ -18,6 +18,8 @@ declare type LayoutProps = {|
 
 declare type Mdx = {| childMdx: {| body: string |} |};
 
+declare type Language = 'en' | 'de' | 'fr';
+
 declare type Page = {|
   id: string,
   title: string,
@@ -26,7 +28,7 @@ declare type Page = {|
   author?: string,
   content: Mdx,
   slug: string,
-  language: 'en' | 'de' | 'fr',
+  language: Language,
   cover?: Object
 |};
 
@@ -52,7 +54,9 @@ declare type UserStory = {|
   subtitle: string,
   company: Company,
   content: Mdx,
-  date: string
+  date: string,
+  language: Language,
+  author?: string
 |};
 
 declare var graphql: any;

@@ -7,15 +7,16 @@ import { LanguageHint } from '../components/Markdown';
 import { calculatorUrl, targetBlank, trackSignupGoogleAnalytics } from '../helpers';
 import { ProductHuntButton } from './ProductHuntButton';
 
-export const DefaultHeader = ({
-  data,
-  lang
+export const DefaultHeader
+  = ({
+  title,
+  lang,
+  language
 }: {|
+  title: string,
   lang: string,
-  data: {| contentfulPage: Page, site: { siteMetadata: { siteUrl: string } } |}
+  language: string,
 |}) => {
-  const { title, language } = data.contentfulPage;
-
   return (
     <header className="header text-white bg-ledgy">
       <div className="container text-center">
