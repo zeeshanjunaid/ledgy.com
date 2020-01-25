@@ -33,6 +33,12 @@ exports.onCreatePage = async ({ page, actions }) => {
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions;
+  const createLocalizedPages = (path, component, context) => {
+    createPage({ path, component, context });
+    console.log('createPage', { path, component, context });
+    languages.forEach(lang => createPage({ path: `/${lang}${path}`, component, context }));
+  };
+
   redirects.forEach(([from, toPath]) => {
     const redirectInBrowser = true;
     [from, `${from}/`].forEach(fromPath => {
@@ -67,10 +73,9 @@ exports.createPages = ({ graphql, actions }) => {
         const { id, slug, namespace } = node;
         const pagePath = `${namespace}${slug}/`;
         const context = { id };
-        createPage({ path: pagePath, component: pageComponent, context });
-        languages.forEach(lang => createPage({ path: `/${lang}${pagePath}`, component: pageComponent, context }));
-        resolve();
+        createLocalizedPages(pagePath, pageComponent, context)
       });
+      resolve();
     });
   });
   const userStoryComponent = path.resolve('./src/layouts/contentfulPage.jsx');
@@ -88,14 +93,11 @@ exports.createPages = ({ graphql, actions }) => {
       }
     `).then(({ errors, data }) => {
       if (errors) throw errors;
-      data.allContentfulUserStory.edges.forEach(({ node }) => {
-        const { id, slug, namespace } = node;
+      data.allContentfulUserStory.edges.forEach(({ node: { id, slug } }) => {
         const USER_STORIES = 'user-stories';
         const pagePath = `${USER_STORIES}/${slug}/`;
         const context = { id };
-        createPage({ path: pagePath, component: userStoryComponent, context });
-        console.log('createPage', { path: pagePath, component: userStoryComponent, context });
-        languages.forEach(lang => createPage({ path: `/${lang}${pagePath}`, component: userStoryComponent, context }));
+        createLocalizedPages(pagePath, userStoryComponent, context);
       });
       resolve();
     });
