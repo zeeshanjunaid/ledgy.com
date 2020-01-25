@@ -10,7 +10,6 @@ import { UserStoryLink } from '../components/userStories';
 import { Title } from '../layouts/utils';
 
 export default withI18n()(({ i18n, data }: Props) => {
-  console.log({ i18n, data });
   return (
     <div>
       <Title
@@ -46,31 +45,13 @@ export const pageQuery = graphql`
           slug
           title
           subtitle
+          date
           company {
-            name
-            contactName
-            contactTitle
-            logo {
-              fluid(maxWidth: 150){
-                ...GatsbyContentfulFluid_withWebp
-              }
-            }
             cover {
               fluid(maxWidth: 150){
                 ...GatsbyContentfulFluid_withWebp
               }
             }
-            mainQuote {
-              childMdx {
-                body
-              }
-            }
-            yearFounded
-            funding
-            employeeCount
-            sector
-            location
-            stage
           }
         }
       }
