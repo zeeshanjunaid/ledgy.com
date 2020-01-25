@@ -2,14 +2,12 @@
 
 import React from 'react';
 import { graphql } from 'gatsby';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
-import { MDXProvider } from '@mdx-js/react';
 
 import { PublishDate } from '../components/Content';
-import { Author, Image, Lead } from '../components/Markdown';
+import { Author } from '../components/Markdown';
+import { MarkdownContent } from '../components/MarkdownContent';
 import { DefaultHeader, CalculatorHeader } from '../components/Header';
 import { Title } from '../layouts/utils';
-
 
 export default ({
   data,
@@ -31,13 +29,7 @@ export default ({
       <main className="main-content">
         <section className="section">
           <div className="container container-small">
-            <div className="markdown clearfix">
-              {content && (
-                <MDXProvider components={{ img: Image, Lead }}>
-                  <MDXRenderer>{content.childMdx.body}</MDXRenderer>
-                </MDXProvider>
-              )}
-            </div>
+            <MarkdownContent content={content}/>
             <PublishDate date={date} />
             {author && <Author prefix={prefix} name={author} />}
           </div>
