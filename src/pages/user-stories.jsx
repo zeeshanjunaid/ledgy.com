@@ -5,7 +5,8 @@ import { withI18n } from '@lingui/react';
 import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import { ContentHeader, ContentBody, PostLink } from '../components/Content';
+import { ContentHeader, ContentBody } from '../components/Content';
+import { UserStoryLink } from '../components/userStories';
 import { Title } from '../layouts/utils';
 
 export default withI18n()(({ i18n, data }: Props) => {
@@ -21,15 +22,12 @@ export default withI18n()(({ i18n, data }: Props) => {
 
       <ContentBody>
         {data.allContentfulUserStory.edges.map(({ node }) => {
-          const { id, title, subtitle } = node;
+          const { id, title, subtitle, slug } = node;
           return (
-            <PostLink
-              external
+            <UserStoryLink
               key={id}
-              to={'#'}
-              post={node}
+              userStory={node}
               defaultImage={data.ledgy}
-              description={subtitle}
             />
           );
         })}
@@ -45,6 +43,7 @@ export const pageQuery = graphql`
       edges {
         node {
           id
+          slug
           title
           subtitle
           company {
@@ -57,8 +56,8 @@ export const pageQuery = graphql`
               }
             }
             cover {
-              file {
-                url
+              fluid(maxWidth: 150){
+                ...GatsbyContentfulFluid_withWebp
               }
             }
             mainQuote {
