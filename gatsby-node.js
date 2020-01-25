@@ -47,8 +47,8 @@ exports.createPages = ({ graphql, actions }) => {
     });
   });
 
-  const component = path.resolve('./src/layouts/contentfulPage.jsx');
-  return new Promise(resolve => {
+  const pageComponent = path.resolve('./src/layouts/contentfulPage.jsx');
+  const createPages = new Promise(resolve => {
     graphql(`
       {
         allContentfulPage(limit: 1000) {
@@ -61,17 +61,44 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
       }
-    `).then(result => {
-      if (result.errors) throw result.errors;
-
-      result.data.allContentfulPage.edges.forEach(({ node }) => {
+    `).then(({ errors, data }) => {
+      if (errors) throw errors;
+      data.allContentfulPage.edges.forEach(({ node }) => {
         const { id, slug, namespace } = node;
         const pagePath = `${namespace}${slug}/`;
         const context = { id };
-        createPage({ path: pagePath, component, context });
-        languages.forEach(lang => createPage({ path: `/${lang}${pagePath}`, component, context }));
+        createPage({ path: pagePath, component: pageComponent, context });
+        languages.forEach(lang => createPage({ path: `/${lang}${pagePath}`, component: pageComponent, context }));
+        resolve();
+      });
+    });
+  });
+  const userStoryComponent = path.resolve('./src/layouts/contentfulPage.jsx');
+  const createUserStories = new Promise(resolve => {
+    graphql(`
+      {
+        allContentfulUserStory(limit: 1000) {
+          edges {
+            node {
+              id
+              slug
+            }
+          }
+        }
+      }
+    `).then(({ errors, data }) => {
+      if (errors) throw errors;
+      data.allContentfulUserStory.edges.forEach(({ node }) => {
+        const { id, slug, namespace } = node;
+        const USER_STORIES = 'user-stories';
+        const pagePath = `${USER_STORIES}/${slug}/`;
+        const context = { id };
+        createPage({ path: pagePath, component: userStoryComponent, context });
+        console.log('createPage', { path: pagePath, component: userStoryComponent, context });
+        languages.forEach(lang => createPage({ path: `/${lang}${pagePath}`, component: userStoryComponent, context }));
       });
       resolve();
     });
   });
+  return Promise.all([createPages, createUserStories]);
 };

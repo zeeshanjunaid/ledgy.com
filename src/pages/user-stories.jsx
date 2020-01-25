@@ -8,55 +8,70 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { ContentHeader, ContentBody, PostLink } from '../components/Content';
 import { Title } from '../layouts/utils';
 
-export default withI18n()(({ i18n, data }: Props) => (
-  <div>
-    <Title
-      title={i18n.t`Webinars`}
-      description={i18n.t`Webinars on cap tables, financing rounds, and legal issues around running and managing a startup.`}
-    />
+export default withI18n()(({ i18n, data }: Props) => {
+  console.log({ i18n, data });
+  return (
+    <div>
+      <Title
+        title={i18n.t`User Stories`}
+        description={i18n.t`Insights on how customers use Ledgy to solve their problems`}
+      />
 
-    <ContentHeader heading={i18n.t`Ledgy Webinars`} />
+      <ContentHeader title={i18n.t`Ledgy User Stories`} />
 
-    <ContentBody>
-      {data.allContentfulWebinar.edges.map(edge => {
-        const { node } = edge;
-        const { id, youtube, description } = node;
-        return (
-          <PostLink
-            external
-            key={id}
-            to={youtube}
-            post={node}
-            defaultImage={data.ledgy}
-            description={<MDXRenderer>{description.childMdx.body}</MDXRenderer>}
-          />
-        );
-      })}
-    </ContentBody>
-  </div>
-));
+      <ContentBody>
+        {data.allContentfulUserStory.edges.map(({ node }) => {
+          const { id, title, subtitle } = node;
+          return (
+            <PostLink
+              external
+              key={id}
+              to={'#'}
+              post={node}
+              defaultImage={data.ledgy}
+              description={subtitle}
+            />
+          );
+        })}
+      </ContentBody>
+    </div>
+  );
+});
 
 export const pageQuery = graphql`
   query {
     ...DefaultCover
-    allContentfulWebinar(sort: { order: DESC, fields: [date] }) {
+    allContentfulUserStory(sort: {order: DESC, fields: [date]}) {
       edges {
         node {
           id
           title
-          date(formatString: "DD MMM YYYY")
-          youtube
-          description {
-            childMdx {
-              body
-            }
-          }
-          cover {
-            localFile {
-              childImageSharp {
-                ...CoverImage
+          subtitle
+          company {
+            name
+            contactName
+            contactTitle
+            logo {
+              file {
+                url
               }
             }
+            cover {
+              file {
+                url
+              }
+            }
+            mainQuote {
+              childMdx {
+                body
+              }
+            }
+            yearFounded
+            funding
+            employeeCount
+            sector
+            location
+            stage
           }
         }
       }
