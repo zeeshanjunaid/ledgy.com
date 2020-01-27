@@ -1,0 +1,14 @@
+.company-content {
+  background: $color-bg-body;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+}
+
+.company-content-logo {
+  max-width: 120px;
+}
+
+.company-content-quote {
+  font-size: 0.8rem !important;
+  margin-bottom: 0rem;
+}

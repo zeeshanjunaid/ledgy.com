@@ -7,7 +7,7 @@ import { PublishDate } from '../components/Content';
 import { Author } from '../components/Markdown';
 import { MarkdownContent } from '../components/MarkdownContent';
 import { DefaultHeader } from '../components/Header';
-import { OtherUserStories } from '../components/userStories';
+import { CompanyContent, OtherUserStories } from '../components/userStories';
 import { Title } from '../layouts/utils';
 
 export default ({
@@ -21,7 +21,7 @@ export default ({
     allContentfulUserStory: Object
   |}
 |}) => {
-  const { id, title, subtitle, date, author, language, content } = data.contentfulUserStory;
+  const { id, title, subtitle, date, author, language, content, company } = data.contentfulUserStory;
   const otherUserStories = data.allContentfulUserStory.edges
     .filter(({ node }) => node.id !== id)
     .map(({ node }) => node);
@@ -31,11 +31,22 @@ export default ({
       <DefaultHeader lang={lang} language={language} title={title} />
       <main className="main-content">
         <section className="section">
-          <div className="container container-small">
-            <MarkdownContent content={content} />
-            <PublishDate date={date} />
-            {author && <Author prefix={prefix} name={author} />}
-            <OtherUserStories userStories={otherUserStories} />
+          <div className="container container-medium">
+            <div className="row">
+              <div className="col-md-4">
+                <CompanyContent company={company} />
+              </div>
+              <div className="col-md-8">
+                <MarkdownContent content={content} />
+                <PublishDate date={date} />
+                {author && <Author prefix={prefix} name={author} />}
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-md-12">
+                <OtherUserStories userStories={otherUserStories} />
+              </div>
+            </div>
           </div>
         </section>
       </main>

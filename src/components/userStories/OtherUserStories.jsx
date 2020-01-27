@@ -10,12 +10,12 @@ export const OtherUserStories = ({ userStories }: {| userStories: UserStory[] |}
   if (userStories.length === 0) return null;
   return (
     <>
-      <h4 className="m-5 text-center">
+      <h4 className="my-5 text-center">
         <Trans>More Stories from Ledgy Users</Trans>
       </h4>
       <div className="d-flex flex-row align-items-center justify-content-center">
         {sampleSize(userStories, 3).map(userStory => (
-          <div className="col-md-4">
+          <div key={userStory.id} className="col-md-4">
             <UserStoryCard userStory={userStory} />
           </div>
         ))}
