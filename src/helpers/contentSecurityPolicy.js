@@ -1,4 +1,4 @@
-export const ContentSecurityPolicy = [
+exports.ContentSecurityPolicy = [
   "default-src 'self'",
   "img-src 'self' data: https://api.producthunt.com https://csi.gstatic.com https://www.google-analytics.com https://maps.gstatic.com https://maps.googleapis.com https://stats.g.doubleclick.net https://www.google.com/pagead/ https://www.google.ch/pagead/ https://px.ads.linkedin.com https://www.linkedin.com/px/ https://script.hotjar.com http://script.hotjar.com https://www.googleadservices.com https://forms.hsforms.com https://track.hubspot.com",
   "object-src 'none'",
