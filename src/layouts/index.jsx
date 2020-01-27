@@ -9,7 +9,7 @@ import 'typeface-work-sans'; // eslint-disable-line import/extensions
 import 'katex/dist/katex.min.css';
 import 'prism-themes/themes/prism-ghcolors.css';
 
-import { name, loadScript, animateTablet } from '../helpers';
+import { name, loadScript, animateTablet, isDevelopment, ContentSecurityPolicy } from '../helpers';
 import { Title } from './utils';
 import { catalogs, langFromPath, langPrefix, deprefix } from '../i18n-config';
 
@@ -41,42 +41,7 @@ const Initialize = () => {
       require('../assets/js/script'); // eslint-disable-line global-require
       require('../assets/js/hotjar'); // eslint-disable-line global-require
 
-      await loadScript('https://wchat.eu.freshchat.com/js/widget.js');
-      window.fcSettings = {
-        token: 'e9a5ae2c-ad84-42c8-8786-a893acbca8b3',
-        host: 'https://wchat.eu.freshchat.com',
-        siteId: 'landing-page',
-        config: {
-          cssNames: {
-            widget: 'custom_fc_frame',
-            expanded: 'custom_fc_expanded'
-          },
-          headerProperty: { backgroundColor: '#0086a9' }
-        }
-      };
-      await loadScript('https://snippets.freshchat.com/js/fc-pre-chat-form-v2.js');
-      window.fcPreChatform.fcWidgetInit({
-        heading: 'Ledgy',
-        textBanner: 'Please tell us a bit about yourself.',
-        SubmitLabel: 'Go',
-        fields: {
-          field1: {
-            type: 'name',
-            label: 'Name',
-            fieldId: 'name',
-            required: 'yes',
-            error: 'Please enter your name'
-          },
-          field2: {
-            type: 'email',
-            label: 'Email',
-            fieldId: 'email',
-            required: 'yes',
-            error: 'Please enter a valid email'
-          }
-        }
-      });
-      window.fcWidget.init(window.fcSettings);
+      await loadScript('https://js.hs-scripts.com/6881367.js');
       openDemoModal();
     }, 1414);
   }, []);
@@ -116,6 +81,10 @@ const TemplateWrapper = withI18n()(({ children, ...props }: SiteProps) => (
               content={i18n.t`cap table, stock ledger, share register, startup, modeling, financing round, equity, esop, phantom, option plan, virtual, portfolio, reporting, investors`}
             />
             <meta name="author" content="Ledgy" />
+
+            {isDevelopment && (
+              <meta httpEquiv="Content-Security-Policy" content={ContentSecurityPolicy} />
+            )}
 
             {/* Facebook social card */}
             <meta property="og:site_name" content={name} />
