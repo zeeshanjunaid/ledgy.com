@@ -41,42 +41,7 @@ const Initialize = () => {
       require('../assets/js/script'); // eslint-disable-line global-require
       require('../assets/js/hotjar'); // eslint-disable-line global-require
 
-      await loadScript('https://wchat.eu.freshchat.com/js/widget.js');
-      window.fcSettings = {
-        token: 'e9a5ae2c-ad84-42c8-8786-a893acbca8b3',
-        host: 'https://wchat.eu.freshchat.com',
-        siteId: 'landing-page',
-        config: {
-          cssNames: {
-            widget: 'custom_fc_frame',
-            expanded: 'custom_fc_expanded'
-          },
-          headerProperty: { backgroundColor: '#0086a9' }
-        }
-      };
-      await loadScript('https://snippets.freshchat.com/js/fc-pre-chat-form-v2.js');
-      window.fcPreChatform.fcWidgetInit({
-        heading: 'Ledgy',
-        textBanner: 'Please tell us a bit about yourself.',
-        SubmitLabel: 'Go',
-        fields: {
-          field1: {
-            type: 'name',
-            label: 'Name',
-            fieldId: 'name',
-            required: 'yes',
-            error: 'Please enter your name'
-          },
-          field2: {
-            type: 'email',
-            label: 'Email',
-            fieldId: 'email',
-            required: 'yes',
-            error: 'Please enter a valid email'
-          }
-        }
-      });
-      window.fcWidget.init(window.fcSettings);
+      await loadScript('https://js.hs-scripts.com/6881367.js');
       openDemoModal();
     }, 1414);
   }, []);
