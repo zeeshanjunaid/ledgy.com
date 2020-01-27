@@ -50,5 +50,6 @@ export const isValidEmail = (email: string) => EMAIL_REGEX.test(email);
 
 // misc
 export const isBrowser = typeof window !== 'undefined';
+export const isDevelopment = isBrowser && window.location.hostname === 'localhost';
 
 export const targetBlank = { target: '_blank', rel: 'noopener noreferrer' };
