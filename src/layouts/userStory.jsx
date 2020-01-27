@@ -2,13 +2,12 @@
 
 import React from 'react';
 import { graphql } from 'gatsby';
-import { Trans } from '@lingui/react';
 
 import { PublishDate } from '../components/Content';
 import { Author } from '../components/Markdown';
 import { MarkdownContent } from '../components/MarkdownContent';
 import { DefaultHeader } from '../components/Header';
-import { UserStoryCard } from '../components/userStories';
+import { OtherUserStories } from '../components/userStories';
 import { Title } from '../layouts/utils';
 
 export default ({
@@ -22,7 +21,10 @@ export default ({
     allContentfulUserStory: Object
   |}
 |}) => {
-  const { title, subtitle, date, author, language, content } = data.contentfulUserStory;
+  const { id, title, subtitle, date, author, language, content } = data.contentfulUserStory;
+  const otherUserStories = data.allContentfulUserStory.edges
+    .filter(({ node }) => node.id !== id)
+    .map(({ node }) => node);
   return (
     <div>
       <Title title={title} description={subtitle} />
@@ -33,18 +35,7 @@ export default ({
             <MarkdownContent content={content} />
             <PublishDate date={date} />
             {author && <Author prefix={prefix} name={author} />}
-
-            <h4 className="m-5 text-center">
-              <Trans>More Stories from Ledgy Users</Trans>
-            </h4>
-
-            <div className="d-flex flex-row align-items-center justify-content-center">
-              {data.allContentfulUserStory.edges.slice(0, 3).map(({ node }) => (
-                <div className="col-md-4">
-                  <UserStoryCard userStory={node} />
-                </div>
-              ))}
-            </div>
+            <OtherUserStories userStories={otherUserStories} />
           </div>
         </section>
       </main>

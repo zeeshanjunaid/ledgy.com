@@ -1,4 +1,4 @@
 // @flow
 
-export * from './UserStoryCard';
+export * from './OtherUserStories';
 export * from './UserStoryLink';
