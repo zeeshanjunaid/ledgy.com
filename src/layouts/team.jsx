@@ -11,7 +11,8 @@ export type AuthorProps = {|
   description: Node,
   twitter: string,
   linkedIn: string,
-  mail: string
+  mail: string,
+  article?: string
 |};
 
 export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
@@ -65,7 +66,8 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
     ),
     twitter: 'https://twitter.com/ovcOS89',
     linkedIn: 'https://www.linkedin.com/in/oriol-vidal-cortes-37584080/',
-    mail: 'oriol@ledgy.com'
+    mail: 'oriol@ledgy.com',
+    article: 'oriol-vidal-cortes'
   },
   jules: {
     name: 'Jules Henze',
@@ -104,7 +106,8 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
     ),
     twitter: 'https://twitter.com/jahlela',
     linkedIn: 'https://www.linkedin.com/in/jahlelahasle',
-    mail: 'jahlela@ledgy.com'
+    mail: 'jahlela@ledgy.com',
+    article: 'jahlela-hasle'
   },
   spela: {
     name: 'Spela Prijon',
@@ -131,7 +134,8 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
     ),
     twitter: 'https://twitter.com/ArmonBattig',
     linkedIn: 'https://www.linkedin.com/in/armon-baettig',
-    mail: 'armon@ledgy.com'
+    mail: 'armon@ledgy.com',
+    article: 'armon-baettig'
   },
   luna: {
     name: 'Luna',
