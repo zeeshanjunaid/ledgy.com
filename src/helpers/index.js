@@ -2,4 +2,7 @@
 
 export * from './constants.js';
 export * from './utilities.js';
-export * from './contentSecurityPolicy.js';
+
+const { ContentSecurityPolicy } = require('./contentSecurityPolicy.js');
+
+export { ContentSecurityPolicy };
