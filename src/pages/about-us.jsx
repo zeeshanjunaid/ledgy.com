@@ -48,7 +48,7 @@ const Founder = withI18n()(
     return (
       <div className="col-12 col-md-4 team-1">
         {article ? (
-          <Link href to={`/updates/${article}`}>
+          <Link href to={`/updates/${article}/`}>
             {ProfileImage}
           </Link>
         ) : (
