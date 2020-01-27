@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Img from 'gatsby-image';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import { withI18n, Trans } from '@lingui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
@@ -38,29 +38,39 @@ const Founder = withI18n()(
     img,
     twitter,
     linkedIn,
-    mail
+    mail,
+    article
   }: {|
     ...AuthorProps,
     img: Object
-  |}) => (
-    <div className="col-12 col-md-4 team-1">
-      {img && <Img {...img} className="mx-auto" alt={name} />}
-      <h6>{name}</h6>
-      <small>{role}</small>
-      <p>{description}</p>
-      <div className="social social-boxed social-rounded social-gray">
-        <a className="social-mail" href={`mailto:${mail}`}>
-          <FontAwesomeIcon icon={faEnvelope} title="Email" />
-        </a>
-        <a className="social-twitter" href={twitter}>
-          <FontAwesomeIcon icon={faTwitter} title="Twitter" />
-        </a>
-        <a className="social-linkedin" href={linkedIn}>
-          <FontAwesomeIcon icon={faLinkedin} title="LinkedIn" />
-        </a>
+  |}) => {
+    const ProfileImage = <Img {...img} className="mx-auto" alt={name} />;
+    return (
+      <div className="col-12 col-md-4 team-1">
+        {article ? (
+          <Link href to={`/updates/${article}`}>
+            {ProfileImage}
+          </Link>
+        ) : (
+          ProfileImage
+        )}
+        <h6 className="my-2">{name}</h6>
+        <small>{role}</small>
+        <p>{description}</p>
+        <div className="social social-boxed social-rounded social-gray">
+          <a className="social-mail" href={`mailto:${mail}`}>
+            <FontAwesomeIcon icon={faEnvelope} title="Email" />
+          </a>
+          <a className="social-twitter" href={twitter}>
+            <FontAwesomeIcon icon={faTwitter} title="Twitter" />
+          </a>
+          <a className="social-linkedin" href={linkedIn}>
+            <FontAwesomeIcon icon={faLinkedin} title="LinkedIn" />
+          </a>
+        </div>
       </div>
-    </div>
-  )
+    );
+  }
 );
 
 const Investor = ({
