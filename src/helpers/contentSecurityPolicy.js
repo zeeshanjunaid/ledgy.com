@@ -19,13 +19,12 @@ const defaultPolicy = {
   object: "'none'",
   font: "'self' data: https://fonts.gstatic.com http://script.hotjar.com https://script.hotjar.com",
   script:
-    "'self' 'unsafe-inline' 'unsafe-eval' https://wchat.eu.freshchat.com/js/ https://snippets.freshchat.com/js/ https://www.googletagmanager.com/ https://www.google-analytics.com https://www.googleadservices.com https://googleads.g.doubleclick.net  https://snap.licdn.com https://sjs.bizographics.com/ https://maps.googleapis.com http://static.hotjar.com https://static.hotjar.com https://script.hotjar.com",
+    "'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com/ https://www.google-analytics.com https://www.googleadservices.com https://googleads.g.doubleclick.net  https://snap.licdn.com https://sjs.bizographics.com/ https://maps.googleapis.com http://static.hotjar.com https://static.hotjar.com https://script.hotjar.com",
   style:
-    "'self' 'unsafe-inline' https://fonts.googleapis.com https://wchat.eu.freshchat.com/css/ https://snippets.freshchat.com/css/ https://maps.googleapis.com/maps/api/",
-  frame:
-    "'self' https://wchat.eu.freshchat.com https://ledgy.eu.webpush.freshchat.com https://www.youtube.com",
+    "'self' 'unsafe-inline' https://fonts.googleapis.com https://maps.googleapis.com/maps/api/",
+  frame: "'self' https://www.youtube.com",
   connect:
-    "'self' https://maps.gstatic.com https://maps.googleapis.com https://snippets.freshchat.com https://www.google-analytics.com https://wchat.eu.freshchat.com http://*.hotjar.com:* https://*.hotjar.com:* https://vc.hotjar.io:* wss://*.hotjar.com",
+    "'self' https://maps.gstatic.com https://maps.googleapis.com https://www.google-analytics.com http://*.hotjar.com:* https://*.hotjar.com:* https://vc.hotjar.io:* wss://*.hotjar.com",
   child: "'self' https://vars.hotjar.com"
 };
 
