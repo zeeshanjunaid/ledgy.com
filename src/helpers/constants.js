@@ -22,8 +22,6 @@ export const wirtschaftswocheUrl =
 export const top100Url = 'https://www.top100startups.swiss/index.cfm?page=136340';
 
 // netlify & mixpanel
-export const NETLIFY_DEMO_FORM_NAME = 'requestDemo';
-
 const isNetlify = typeof window !== 'undefined' && window.location.hostname !== 'localhost';
 export const mixpanelUrl = isNetlify ? '/api' : 'https://api.mixpanel.com';
 

@@ -7,7 +7,6 @@ import {
   SMALL_COMPANY_SIZES,
   FORM_STATES,
   isFieldMissing,
-  NETLIFY_DEMO_FORM_NAME,
   track
 } from '../../helpers';
 
@@ -37,15 +36,15 @@ const redirectToDemo = () => {
 };
 
 const encodeBody = data =>
-  Object.keys(data)
-    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-    .join('&');
+  JSON.stringify({
+    fields: Object.entries(data).map(([name, value]) => ({ name, value }))
+  });
 
-const fetchNetlify = (state: State) =>
-  fetch('/', {
+const fetchHubspot = ({ name, email, companyName, companySize }: State) =>
+  fetch('/getDemo', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body: encodeBody({ 'form-name': NETLIFY_DEMO_FORM_NAME, ...state })
+    headers: { 'Content-Type': 'application/json' },
+    body: encodeBody({ name, email, company: companyName, company_size: companySize })
   });
 
 export const handleDemoAccessSubmit = async ({
@@ -72,7 +71,7 @@ export const handleDemoAccessSubmit = async ({
     return;
   }
 
-  const response = await fetchNetlify(state);
+  const response = await fetchHubspot(state);
   if (response.status !== 200) {
     setFormStatus(ERROR);
     return;

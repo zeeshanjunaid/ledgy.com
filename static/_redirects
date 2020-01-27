@@ -3,4 +3,4 @@ https://ledgy.netlify.com/* https://ledgy.com/:splat 301!
 /  /fr/  302  Language=fr
 
 /psop/ utm_source=:utm_source /employee-participation-plan-templates/?utm_source=:utm_source 301
-/api/* https://api.mixpanel.com/:splat 200
+/getDemo https://api.hsforms.com/submissions/v3/integration/submit/6881367/b360c926-ed24-473a-8418-ee1050ddbd06 200
