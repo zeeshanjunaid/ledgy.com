@@ -5,7 +5,7 @@ import { faSpinner, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Trans } from '@lingui/react';
 
-import { COMPANY_SIZES, FORM_STATES, NETLIFY_DEMO_FORM_NAME } from '../helpers';
+import { COMPANY_SIZES, FORM_STATES } from '../helpers';
 import { handleDemoAccessSubmit, type DemoFormStatus, isSmallCompany } from './lib';
 
 const { ERROR, IDLE, INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED } = FORM_STATES;
@@ -67,8 +67,6 @@ export const RequestDemoForm = ({ setDemoRequested }: { setDemoRequested: boolea
       className="input-round pb-4"
       onSubmit={event => handleDemoAccessSubmit({ event, state, setFormStatus, setDemoRequested })}
       noValidate
-      data-netlify="true"
-      name={NETLIFY_DEMO_FORM_NAME}
     >
       <p className="text-dark">
         <Trans>Please fill out the form below to access the demo</Trans>
