@@ -34,7 +34,7 @@ const hubspot = {
     'https://js.hs-scripts.com https://js.usemessages.com https://js.hsadspixel.net http://js.hs-analytics.net https://js.hscollectedforms.net https://js.hs-scripts.com',
   frame: 'https://vars.hotjar.com https://app.hubspot.com',
   connect:
-    'https://api.hubspot.com https://forms.hubspot.com https://api.hubapi.com https://js.hs-scripts.com'
+    'https://api.hubspot.com https://forms.hubspot.com https://api.hubapi.com https://js.hs-scripts.com https://js.hsadspixel.net https://js.hs-analytics.net https://js.hscollectedforms.net https://js.usemessages.com'
 };
 
 exports.ContentSecurityPolicy = mergePolicies([defaultPolicy, hubspot]);
