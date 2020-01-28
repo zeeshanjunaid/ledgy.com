@@ -22,7 +22,7 @@ const defaultPolicy = {
     "'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com/ https://www.google-analytics.com https://www.googleadservices.com https://googleads.g.doubleclick.net  https://snap.licdn.com https://sjs.bizographics.com/ https://maps.googleapis.com http://static.hotjar.com https://static.hotjar.com https://script.hotjar.com",
   style:
     "'self' 'unsafe-inline' https://fonts.googleapis.com https://maps.googleapis.com/maps/api/",
-  frame: "'self' https://www.youtube.com",
+  frame: "'self' https://www.youtube.com https://bid.g.doubleclick.net",
   connect:
     "'self' https://maps.gstatic.com https://maps.googleapis.com https://www.google-analytics.com http://*.hotjar.com:* https://*.hotjar.com:* https://vc.hotjar.io:* wss://*.hotjar.com",
   child: "'self' https://vars.hotjar.com"
