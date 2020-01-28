@@ -21,6 +21,11 @@ export const SwissPartners = (props: Props) => (
         website="https://smartuplaw.ch"
       />
       <PartnerCard logo={props.data.lexr} email="contact@lexr.ch" website="https://lexr.ch" />
+      <PartnerCard
+        logo={props.data.wengerVieli}
+        email="m.baier@wengervieli.ch"
+        website="https://www.wengervieli.ch/en-us/home"
+      />
     </div>
   </div>
 );
