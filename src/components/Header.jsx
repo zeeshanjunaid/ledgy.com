@@ -24,7 +24,7 @@ export const DefaultHeader = ({
         <div className="row">
           <div className="col-12 col-lg-8 offset-lg-2">
             <h1>{title}</h1>
-            {subtitle && <h5>{subtitle}</h5>}
+            {subtitle && <h5 className="font-weight-light">{subtitle}</h5>}
             <LanguageHint lang={lang} documentLang={language || 'en'} />
           </div>
         </div>
