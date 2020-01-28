@@ -25,7 +25,8 @@ const defaultPolicy = {
   frame: "'self' https://www.youtube.com https://bid.g.doubleclick.net",
   connect:
     "'self' https://maps.gstatic.com https://maps.googleapis.com https://www.google-analytics.com http://*.hotjar.com:* https://*.hotjar.com:* https://vc.hotjar.io:* wss://*.hotjar.com https://www.googleadservices.com https://snap.licdn.com",
-  child: "'self' https://vars.hotjar.com"
+  child: "'self' https://vars.hotjar.com",
+  prefetch: 'https://www.google-analytics.com'
 };
 
 const hubspot = {
