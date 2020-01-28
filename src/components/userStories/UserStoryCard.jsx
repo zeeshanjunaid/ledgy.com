@@ -11,7 +11,7 @@ export const UserStoryCard = ({ userStory: { slug, company } }: {| userStory: Us
   return (
     <div className="card hover-shadow-5 bg-pale-secondary mb-6 px-5">
       <Link href to={pagePath}>
-        {logoImage}
+        <div className="m-5">{logoImage}</div>
         {coverImage}
       </Link>
     </div>
