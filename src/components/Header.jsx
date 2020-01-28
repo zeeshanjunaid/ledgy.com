@@ -9,10 +9,12 @@ import { ProductHuntButton } from './ProductHuntButton';
 
 export const DefaultHeader = ({
   title,
+  subtitle = '',
   lang,
   language
 }: {|
   title: string,
+  subtitle?: string,
   lang: string,
   language: string
 |}) => {
@@ -22,6 +24,7 @@ export const DefaultHeader = ({
         <div className="row">
           <div className="col-12 col-lg-8 offset-lg-2">
             <h1>{title}</h1>
+            {subtitle && <h5>{subtitle}</h5>}
             <LanguageHint lang={lang} documentLang={language || 'en'} />
           </div>
         </div>
