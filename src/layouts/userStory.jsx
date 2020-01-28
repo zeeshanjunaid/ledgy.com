@@ -39,19 +39,21 @@ export default ({
       <Title title={title} description={subtitle} />
       <DefaultHeader lang={lang} language={language} title={title} />
       <main className="main-content">
-        <section className="section">
+        <section className="section ">
           <div className="container container-medium">
-            <div className="row">
+            <div className="user-story-section row">
               <div className="col-md-4">
                 <CompanyContent company={company} />
               </div>
               <div className="col-md-8">
-                <MarkdownContent content={content} />
-                <PublishDate date={date} />
-                {author && <Author prefix={prefix} name={author} />}
+                <div className="px-3">
+                  <MarkdownContent content={content} />
+                  <PublishDate date={date} />
+                  {author && <Author prefix={prefix} name={author} />}
+                </div>
               </div>
             </div>
-            <div className="row">
+            <div className="other-user-stories-section row">
               <div className="col-md-12">
                 <OtherUserStories userStories={otherUserStories} />
               </div>

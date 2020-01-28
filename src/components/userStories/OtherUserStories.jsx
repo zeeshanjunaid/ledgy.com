@@ -20,6 +20,14 @@ export const OtherUserStories = ({ userStories }: {| userStories: UserStory[] |}
           </div>
         ))}
       </div>
+      <div className="row m-0 w-100 justify-content-center align-items-center">
+        <a
+          className="btn btn-xl btn-round btn-primary align-self-center"
+          href="/user-stories"
+        >
+          VIEW ALL
+        </a>
+      </div>
     </>
   );
 };
