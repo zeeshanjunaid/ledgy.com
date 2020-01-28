@@ -24,7 +24,7 @@ export const CompanyContent = ({ company }: {| company: Company |}) => (
         </div>
         <div className="row mx-auto">{company.contactTitle}</div>
       </div>
-      <div className="row mx-auto py-5">
+      <div className="row mx-auto py-3">
         <FontAwesomeIcon
           fixedWidth
           size="lg"
@@ -34,7 +34,7 @@ export const CompanyContent = ({ company }: {| company: Company |}) => (
         />
         Founded in {company.yearFounded}
       </div>
-      <div className="row mx-auto py-5">
+      <div className="row mx-auto py-3">
         <FontAwesomeIcon
           fixedWidth
           size="lg"
@@ -44,7 +44,7 @@ export const CompanyContent = ({ company }: {| company: Company |}) => (
         />
         {company.funding} in Funding
       </div>
-      <div className="row mx-auto py-5">
+      <div className="row mx-auto py-3">
         <FontAwesomeIcon
           fixedWidth
           size="lg"
@@ -54,11 +54,11 @@ export const CompanyContent = ({ company }: {| company: Company |}) => (
         />
         {company.employeeCount} Employees
       </div>
-      <div className="row mx-auto py-5">
+      <div className="row mx-auto py-3">
         <FontAwesomeIcon fixedWidth size="lg" icon={faIndustry} title="Sector" className="mr-4" />
         {company.sector}
       </div>
-      <div className="row mx-auto py-5">
+      <div className="row mx-auto py-3">
         <FontAwesomeIcon fixedWidth size="lg" icon={faSeedling} title="Stage" className="mr-4" />
         {company.stage}
       </div>
