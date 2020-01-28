@@ -34,6 +34,7 @@ export default ({
   const otherUserStories = data.allContentfulUserStory.edges
     .filter(({ node }) => node.id !== id)
     .map(({ node }) => node);
+  const hasOtherUserStories = otherUserStories.length > 0;
   return (
     <div>
       <Title title={title} description={subtitle} />
@@ -53,11 +54,13 @@ export default ({
                 </div>
               </div>
             </div>
-            <div className="other-user-stories-section row">
-              <div className="col-md-12">
-                <OtherUserStories userStories={otherUserStories} />
+            {hasOtherUserStories && (
+              <div className="other-user-stories-section row">
+                <div className="col-md-12">
+                  <OtherUserStories userStories={otherUserStories} />
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </section>
       </main>
