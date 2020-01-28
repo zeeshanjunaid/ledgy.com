@@ -45,5 +45,10 @@ export const pageQuery = graphql`
         ...GatsbyImageSharpFixed
       }
     }
+    wengerVieli: imageSharp(fluid: { originalName: { regex: "/wenger-vieli.png/" } }) {
+      fixed(width: 100) {
+        ...GatsbyImageSharpFixed
+      }
+    }
   }
 `;
