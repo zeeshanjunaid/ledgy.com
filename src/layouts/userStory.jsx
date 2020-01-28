@@ -21,7 +21,16 @@ export default ({
     allContentfulUserStory: Object
   |}
 |}) => {
-  const { id, title, subtitle, date, author, language, content, company } = data.contentfulUserStory;
+  const {
+    id,
+    title,
+    subtitle,
+    date,
+    author,
+    language,
+    content,
+    company
+  } = data.contentfulUserStory;
   const otherUserStories = data.allContentfulUserStory.edges
     .filter(({ node }) => node.id !== id)
     .map(({ node }) => node);
