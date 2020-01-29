@@ -93,7 +93,7 @@ exports.createPages = ({ graphql, actions }) => {
     `).then(({ errors, data }) => {
       if (errors) throw errors;
       data.allContentfulCustomerStory.edges.forEach(({ node: { id, slug } }) => {
-        const pagePath = `customer-stories/${slug}/`;
+        const pagePath = `/customer-stories/${slug}/`;
         const context = { id };
         createLocalizedPages(pagePath, customerStoryComponent, context);
       });

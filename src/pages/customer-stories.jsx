@@ -8,7 +8,7 @@ import { ContentHeader, ContentBody } from '../components/Content';
 import { CustomerStoryLink } from '../components/customerStories';
 import { Title } from '../layouts/utils';
 
-export default withI18n()(({ i18n, data }: Props) => {
+export default withI18n()(({ i18n, prefix, data }: Props) => {
   return (
     <div>
       <Title
@@ -20,7 +20,7 @@ export default withI18n()(({ i18n, data }: Props) => {
 
       <ContentBody>
         {data.allContentfulCustomerStory.edges.map(({ node }) => (
-          <CustomerStoryLink key={node.id} customerStory={node} />
+          <CustomerStoryLink key={node.id} customerStory={node} prefix={prefix} />
         ))}
       </ContentBody>
     </div>

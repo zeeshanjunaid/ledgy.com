@@ -19,14 +19,7 @@ export default ({
     allContentfulCustomerStory: Object
   |}
 |}) => {
-  const {
-    id,
-    title,
-    subtitle,
-    language,
-    content,
-    company
-  } = data.contentfulCustomerStory;
+  const { id, title, subtitle, language, content, company } = data.contentfulCustomerStory;
   const otherUserStories = data.allContentfulCustomerStory.edges
     .filter(({ node }) => node.id !== id)
     .map(({ node }) => node);
@@ -51,7 +44,7 @@ export default ({
             {hasOtherCustomerStories && (
               <div className="other-customer-stories-section row">
                 <div className="col-md-12">
-                  <OtherCustomerStories customerStories={otherUserStories} />
+                  <OtherCustomerStories customerStories={otherUserStories} prefix={prefix} />
                 </div>
               </div>
             )}
