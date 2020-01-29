@@ -29,7 +29,7 @@ export const OtherCustomerStories = ({
       <div className="row m-0 w-100 justify-content-center align-items-center">
         <a
           className="btn btn-xl btn-round btn-primary align-self-center"
-          href={`/${prefix}/customer-stories`}
+          href={`${prefix}/customer-stories`}
         >
           View all
         </a>
