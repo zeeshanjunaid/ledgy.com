@@ -5,7 +5,7 @@ import { graphql } from 'gatsby';
 
 import { LongText } from '../components/LongText';
 import { DefaultHeader } from '../components/Header';
-import { CompanyContent, OtherCustomerStories } from '../components/customerStories';
+import { CompanySummary, OtherCustomerStories } from '../components/customerStories';
 import { Title } from '../layouts/utils';
 
 export default ({
@@ -33,7 +33,7 @@ export default ({
           <div className="container container-medium">
             <div className="customer-story-section row">
               <div className="col-md-4 mb-6">
-                <CompanyContent company={company} />
+                <CompanySummary company={company} />
               </div>
               <div className="col-md-8">
                 <div className="px-3">

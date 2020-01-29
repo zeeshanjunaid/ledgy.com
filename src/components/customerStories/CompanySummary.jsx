@@ -13,7 +13,7 @@ import {
 
 import { LongText } from '../LongText';
 
-export const CompanyContent = ({ company }: {| company: Company |}) => (
+export const CompanySummary = ({ company }: {| company: Company |}) => (
   <div className="company-summary sticky-top p-5">
     <Img className="fit-cover mx-auto company-summary-logo" {...company.logo} />
     <div className="container">
