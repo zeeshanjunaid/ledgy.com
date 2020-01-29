@@ -7,16 +7,18 @@ import { LanguageHint } from '../components/Markdown';
 import { calculatorUrl, targetBlank, trackSignupGoogleAnalytics } from '../helpers';
 import { ProductHuntButton } from './ProductHuntButton';
 
+const DEFAULT_LANG = 'en';
+
 export const DefaultHeader = ({
   title,
   subtitle = '',
-  lang,
-  language
+  lang = DEFAULT_LANG,
+  documentLang = DEFAULT_LANG
 }: {|
   title: string,
   subtitle?: string,
-  lang: string,
-  language: string
+  lang?: Language,
+  documentLang?: Language
 |}) => {
   return (
     <header className="header text-white bg-ledgy">
@@ -25,7 +27,7 @@ export const DefaultHeader = ({
           <div className="col-12 col-lg-8 offset-lg-2">
             <h1>{title}</h1>
             {subtitle && <h5 className="font-weight-light">{subtitle}</h5>}
-            <LanguageHint lang={lang} documentLang={language || 'en'} />
+            <LanguageHint lang={lang} documentLang={documentLang} />
           </div>
         </div>
       </div>

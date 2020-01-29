@@ -27,7 +27,7 @@ export default ({
   return (
     <div>
       <Title title={title} description={subtitle} />
-      <DefaultHeader lang={lang} language={language} title={title} subtitle={subtitle} />
+      <DefaultHeader lang={lang} documentLang={language} title={title} subtitle={subtitle} />
       <main className="main-content">
         <section className="section ">
           <div className="container container-medium">

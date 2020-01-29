@@ -31,7 +31,7 @@ export default ({
       {showCalculatorHeader ? (
         <CalculatorHeader data={data} />
       ) : (
-        <DefaultHeader lang={lang} language={language} title={title} />
+        <DefaultHeader lang={lang} documentLang={language} title={title} />
       )}
       <main className="main-content">
         <section className="section">
