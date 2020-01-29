@@ -23,8 +23,6 @@ export default ({
     id,
     title,
     subtitle,
-    date,
-    author,
     language,
     content,
     company
@@ -71,7 +69,6 @@ export const pageQuery = graphql`
       slug
       title
       subtitle
-      date
       language
       content {
         childMdx {
