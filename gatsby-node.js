@@ -77,11 +77,11 @@ exports.createPages = ({ graphql, actions }) => {
       resolve();
     });
   });
-  const userStoryComponent = path.resolve('./src/layouts/userStory.jsx');
-  const createUserStories = new Promise(resolve => {
+  const customerStoryComponent = path.resolve('./src/layouts/customerStory.jsx');
+  const createCustomerStories = new Promise(resolve => {
     graphql(`
       {
-        allContentfulUserStory(limit: 1000) {
+        allContentfulCustomerStory(limit: 1000) {
           edges {
             node {
               id
@@ -92,13 +92,13 @@ exports.createPages = ({ graphql, actions }) => {
       }
     `).then(({ errors, data }) => {
       if (errors) throw errors;
-      data.allContentfulUserStory.edges.forEach(({ node: { id, slug } }) => {
-        const pagePath = `user-stories/${slug}/`;
+      data.allContentfulCustomerStory.edges.forEach(({ node: { id, slug } }) => {
+        const pagePath = `customer-stories/${slug}/`;
         const context = { id };
-        createLocalizedPages(pagePath, userStoryComponent, context);
+        createLocalizedPages(pagePath, customerStoryComponent, context);
       });
       resolve();
     });
   });
-  return Promise.all([createPages, createUserStories]);
+  return Promise.all([createPages, createCustomerStories]);
 };
