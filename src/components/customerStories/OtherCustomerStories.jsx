@@ -22,7 +22,7 @@ export const OtherCustomerStories = ({ customerStories }: {| customerStories: Cu
       </div>
       <div className="row m-0 w-100 justify-content-center align-items-center">
         <a className="btn btn-xl btn-round btn-primary align-self-center" href="/customer-stories">
-          VIEW ALL
+          View all
         </a>
       </div>
     </>
