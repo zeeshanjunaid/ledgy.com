@@ -3,8 +3,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import { PublishDate } from '../components/Content';
-import { Author } from '../components/Markdown';
 import { MarkdownContent } from '../components/MarkdownContent';
 import { DefaultHeader } from '../components/Header';
 import { CompanyContent, OtherCustomerStories } from '../components/customerStories';
@@ -49,8 +47,6 @@ export default ({
               <div className="col-md-8">
                 <div className="px-3">
                   <MarkdownContent content={content} />
-                  <PublishDate date={date} />
-                  {author && <Author prefix={prefix} name={author} />}
                 </div>
               </div>
             </div>
@@ -76,7 +72,6 @@ export const pageQuery = graphql`
       title
       subtitle
       date
-      author
       language
       content {
         childMdx {
