@@ -6,19 +6,19 @@
   border-top: 1px solid $gray-200;
 }
 
-.company-content {
+.company-summary {
   background: $color-bg-body;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 6px;
-  top: $top-company-content;
-  z-index: $zindex-company-content;
+  top: $top-company-summary;
+  z-index: $zindex-company-summary;
 }
 
-.company-content-logo {
+.company-summary-logo {
   max-width: 120px;
 }
 
-.company-content-quote {
+.company-summary-quote {
   font-style: italic;
   font-weight: normal;
   font-size: 1.2rem;

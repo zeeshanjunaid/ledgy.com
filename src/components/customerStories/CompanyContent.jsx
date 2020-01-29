@@ -14,15 +14,15 @@ import {
 import { LongContent } from '../LongContent';
 
 export const CompanyContent = ({ company }: {| company: Company |}) => (
-  <div className="company-content sticky-top p-5">
-    <Img className="fit-cover mx-auto company-content-logo" {...company.logo} />
+  <div className="company-summary sticky-top p-5">
+    <Img className="fit-cover mx-auto company-summary-logo" {...company.logo} />
     <div className="container">
       <LongContent
         content={company.mainQuote}
         isMarkdown={false}
-        className="company-content-quote mb-0 text-left"
+        className="company-summary-quote mb-0 text-left"
       />
-      <div className="company-content-contact mb-2">
+      <div className="company-summary-contact mb-2">
         <div className="row mx-auto">
           <strong>{company.contactName}</strong>
         </div>
