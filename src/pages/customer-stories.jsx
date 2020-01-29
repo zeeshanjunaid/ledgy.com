@@ -5,22 +5,22 @@ import { withI18n } from '@lingui/react';
 import { graphql } from 'gatsby';
 
 import { ContentHeader, ContentBody } from '../components/Content';
-import { UserStoryLink } from '../components/userStories';
+import { CustomerStoryLink } from '../components/customerStories';
 import { Title } from '../layouts/utils';
 
 export default withI18n()(({ i18n, data }: Props) => {
   return (
     <div>
       <Title
-        title={i18n.t`User Stories`}
+        title={i18n.t`Customer Stories`}
         description={i18n.t`Insights on how customers use Ledgy to solve their problems`}
       />
 
-      <ContentHeader title={i18n.t`Ledgy User Stories`} />
+      <ContentHeader title={i18n.t`Ledgy Customer Stories`} />
 
       <ContentBody>
-        {data.allContentfulUserStory.edges.map(({ node }) => (
-          <UserStoryLink key={node.id} userStory={node} />
+        {data.allContentfulCustomerStory.edges.map(({ node }) => (
+          <CustomerStoryLink key={node.id} customerStory={node} />
         ))}
       </ContentBody>
     </div>
@@ -30,7 +30,7 @@ export default withI18n()(({ i18n, data }: Props) => {
 export const pageQuery = graphql`
   query {
     ...DefaultCover
-    allContentfulUserStory(sort: { order: DESC, fields: [date] }) {
+    allContentfulCustomerStory(sort: { order: DESC, fields: [date] }) {
       edges {
         node {
           id

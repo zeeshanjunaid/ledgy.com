@@ -7,7 +7,7 @@ import { PublishDate } from '../components/Content';
 import { Author } from '../components/Markdown';
 import { MarkdownContent } from '../components/MarkdownContent';
 import { DefaultHeader } from '../components/Header';
-import { CompanyContent, OtherUserStories } from '../components/userStories';
+import { CompanyContent, OtherCustomerStories } from '../components/customerStories';
 import { Title } from '../layouts/utils';
 
 export default ({
@@ -17,8 +17,8 @@ export default ({
 }: {|
   ...Props,
   data: {|
-    contentfulUserStory: UserStory,
-    allContentfulUserStory: Object
+    contentfulCustomerStory: CustomerStory,
+    allContentfulCustomerStory: Object
   |}
 |}) => {
   const {
@@ -30,11 +30,11 @@ export default ({
     language,
     content,
     company
-  } = data.contentfulUserStory;
-  const otherUserStories = data.allContentfulUserStory.edges
+  } = data.contentfulCustomerStory;
+  const otherUserStories = data.allContentfulCustomerStory.edges
     .filter(({ node }) => node.id !== id)
     .map(({ node }) => node);
-  const hasOtherUserStories = otherUserStories.length > 0;
+  const hasOtherCustomerStories = otherUserStories.length > 0;
   return (
     <div>
       <Title title={title} description={subtitle} />
@@ -54,10 +54,10 @@ export default ({
                 </div>
               </div>
             </div>
-            {hasOtherUserStories && (
-              <div className="other-user-stories-section row">
+            {hasOtherCustomerStories && (
+              <div className="other-customer-stories-section row">
                 <div className="col-md-12">
-                  <OtherUserStories userStories={otherUserStories} />
+                  <OtherCustomerStories customerStories={otherUserStories} />
                 </div>
               </div>
             )}
@@ -70,7 +70,7 @@ export default ({
 
 export const pageQuery = graphql`
   query($id: String!) {
-    contentfulUserStory(id: { eq: $id }) {
+    contentfulCustomerStory(id: { eq: $id }) {
       id
       slug
       title
@@ -110,7 +110,7 @@ export const pageQuery = graphql`
         stage
       }
     }
-    allContentfulUserStory(sort: { order: DESC, fields: [date] }) {
+    allContentfulCustomerStory(sort: { order: DESC, fields: [date] }) {
       edges {
         node {
           id

@@ -4,8 +4,8 @@ import React from 'react';
 import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 
-export const UserStoryCard = ({ userStory: { slug, company } }: {| userStory: UserStory |}) => {
-  const pagePath = `user-stories/${slug}/`;
+export const CustomerStoryCard = ({ customerStory: { slug, company } }: {| customerStory: CustomerStory |}) => {
+  const pagePath = `customer-stories/${slug}/`;
   const logoImage = <Img className="fit-cover" {...company.logo} />;
   const coverImage = <Img className="fit-cover" {...company.cover} />;
   return (

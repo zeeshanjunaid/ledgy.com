@@ -47,7 +47,7 @@ declare type Company = {|
   stage: string
 |};
 
-declare type UserStory = {|
+declare type CustomerStory = {|
   id: string,
   title: string,
   slug: string,

@@ -54,7 +54,7 @@ const companyLinks = [
 const helpLinks = [
   [<Trans>Help Center</Trans>, 'help'],
   [<Trans>Getting Started</Trans>, 'help/getting-started'],
-  [<Trans>User Stories</Trans>, 'user-stories'],
+  [<Trans>Customer Stories</Trans>, 'customer-stories'],
   [<Trans>Glossary</Trans>, 'glossary'],
   [<Trans>ESOP Templates</Trans>, 'employee-participation-plan-templates'],
   [<Trans>Round Calculator</Trans>, 'calculator']
