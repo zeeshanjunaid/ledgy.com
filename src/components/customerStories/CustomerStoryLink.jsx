@@ -3,7 +3,7 @@
 import React from 'react';
 import Img from 'gatsby-image';
 
-import { CardLink } from '../Content';
+import { CardLink } from '../CardLink';
 
 export const CustomerStoryLink = ({
   customerStory,
