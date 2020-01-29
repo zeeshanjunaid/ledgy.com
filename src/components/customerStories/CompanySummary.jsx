@@ -13,6 +13,14 @@ import {
 
 import { LongText } from '../LongText';
 
+const getCompanySummaries = (company: Company) => ([
+  [faClock, "Founded year", `Founded in ${company.yearFounded}`],
+  [faMoneyBillAlt, "Funding", `${company.funding} in Funding`],
+  [faUserFriends, "Employees count", `${company.employeeCount} Employees`],
+  [faIndustry, "Sector", company.sector],
+  [faSeedling, "Stage", company.stage],
+]);
+
 export const CompanySummary = ({ company }: {| company: Company |}) => (
   <div className="company-summary sticky-top p-5">
     <Img className="fit-cover mx-auto company-summary-logo" {...company.logo} />
@@ -28,44 +36,18 @@ export const CompanySummary = ({ company }: {| company: Company |}) => (
         </div>
         <div className="row mx-auto">{company.contactTitle}</div>
       </div>
-      <div className="row mx-auto py-3">
-        <FontAwesomeIcon
-          fixedWidth
-          size="lg"
-          icon={faClock}
-          title="Founded year"
-          className="mr-4"
-        />
-        Founded in {company.yearFounded}
-      </div>
-      <div className="row mx-auto py-3">
-        <FontAwesomeIcon
-          fixedWidth
-          size="lg"
-          icon={faMoneyBillAlt}
-          title="Funding"
-          className="mr-4"
-        />
-        {company.funding} in Funding
-      </div>
-      <div className="row mx-auto py-3">
-        <FontAwesomeIcon
-          fixedWidth
-          size="lg"
-          icon={faUserFriends}
-          title="Employees count"
-          className="mr-4"
-        />
-        {company.employeeCount} Employees
-      </div>
-      <div className="row mx-auto py-3">
-        <FontAwesomeIcon fixedWidth size="lg" icon={faIndustry} title="Sector" className="mr-4" />
-        {company.sector}
-      </div>
-      <div className="row mx-auto py-3">
-        <FontAwesomeIcon fixedWidth size="lg" icon={faSeedling} title="Stage" className="mr-4" />
-        {company.stage}
-      </div>
+      {getCompanySummaries(company).map(([icon, iconTitle, description]) =>
+        <div key={iconTitle} className="row mx-auto py-3">
+          <FontAwesomeIcon
+            fixedWidth
+            size="lg"
+            icon={icon}
+            title={iconTitle}
+            className="mr-4"
+          />
+          {description}
+        </div>
+      )}
     </div>
   </div>
 );
