@@ -31,7 +31,7 @@ export default ({
       <main className="main-content">
         <section className="section ">
           <div className="container container-medium">
-            <div className="user-story-section row">
+            <div className="customer-story-section row">
               <div className="col-md-4 mb-6">
                 <CompanyContent company={company} />
               </div>
