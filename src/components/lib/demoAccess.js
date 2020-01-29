@@ -35,9 +35,14 @@ const redirectToDemo = () => {
   }
 };
 
+const HUBSPOTUTK = 'hubspotutk=';
+const getHubspotUserToken = (): string =>
+  (document.cookie.split('; ').find(v => v.startsWith(HUBSPOTUTK)) || '').slice(HUBSPOTUTK.length);
+
 const encodeBody = data =>
   JSON.stringify({
-    fields: Object.entries(data).map(([name, value]) => ({ name, value }))
+    fields: Object.entries(data).map(([name, value]) => ({ name, value })),
+    context: { hutk: getHubspotUserToken() }
   });
 
 const fetchHubspot = ({ name, email, companyName, companySize }: State) =>

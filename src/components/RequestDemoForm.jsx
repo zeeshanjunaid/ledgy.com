@@ -64,6 +64,7 @@ export const RequestDemoForm = ({ setDemoRequested }: { setDemoRequested: boolea
   ) : (
     <form
       method="post"
+      id="getDemo"
       className="input-round pb-4"
       onSubmit={event => handleDemoAccessSubmit({ event, state, setFormStatus, setDemoRequested })}
       noValidate
