@@ -22,7 +22,7 @@ import { Footer } from '../components/Footer';
 
 type SiteProps = {
   ...$Exact<Props>,
-  lang: string,
+  lang: Language,
   children: Node,
   location: { pathname: string }
 };

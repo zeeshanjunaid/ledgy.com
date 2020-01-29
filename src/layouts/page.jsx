@@ -2,10 +2,9 @@
 
 import React from 'react';
 import { graphql } from 'gatsby';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
-import { MDXProvider } from '@mdx-js/react';
-
-import { Author, Image, Lead } from '../components/Markdown';
+import { PublishDate } from '../components/Content';
+import { Author } from '../components/Markdown';
+import { LongText } from '../components/LongText';
 import { DefaultHeader, CalculatorHeader } from '../components/Header';
 import { Title } from '../layouts/utils';
 
@@ -19,10 +18,9 @@ export default ({
   ...Props,
   data: {| contentfulPage: Page, site: { siteMetadata: { siteUrl: string } } |}
 |}) => {
-  const { id, title, description, content, author, date, cover } = data.contentfulPage;
+  const { id, title, description, language, content, author, date, cover } = data.contentfulPage;
   const { siteUrl } = data.site.siteMetadata;
   const showCalculatorHeader = id === CALCULATOR_ID;
-
   return (
     <div>
       <Title
@@ -33,19 +31,13 @@ export default ({
       {showCalculatorHeader ? (
         <CalculatorHeader data={data} />
       ) : (
-        <DefaultHeader lang={lang} data={data} />
+        <DefaultHeader lang={lang} documentLang={language} title={title} />
       )}
       <main className="main-content">
         <section className="section">
           <div className="container container-small">
-            <div className="markdown clearfix">
-              {content && (
-                <MDXProvider components={{ img: Image, Lead }}>
-                  <MDXRenderer>{content.childMdx.body}</MDXRenderer>
-                </MDXProvider>
-              )}
-            </div>
-            <div className="d-flex py-4">{date && <small>{date}</small>}</div>
+            <LongText content={content} />
+            <PublishDate date={date} />
             {author && <Author prefix={prefix} name={author} />}
           </div>
         </section>

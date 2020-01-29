@@ -15,7 +15,7 @@ export default withI18n()(({ i18n, data }: Props) => (
       description={i18n.t`Webinars on cap tables, financing rounds, and legal issues around running and managing a startup.`}
     />
 
-    <ContentHeader heading={i18n.t`Ledgy Webinars`} />
+    <ContentHeader title={i18n.t`Ledgy Webinars`} />
 
     <ContentBody>
       {data.allContentfulWebinar.edges.map(edge => {

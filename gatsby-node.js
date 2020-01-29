@@ -33,6 +33,11 @@ exports.onCreatePage = async ({ page, actions }) => {
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions;
+  const createLocalizedPages = (pagePath, component, context) => {
+    createPage({ path: pagePath, component, context });
+    languages.forEach(lang => createPage({ path: `/${lang}${pagePath}`, component, context }));
+  };
+
   redirects.forEach(([from, toPath]) => {
     const redirectInBrowser = true;
     [from, `${from}/`].forEach(fromPath => {
@@ -47,8 +52,8 @@ exports.createPages = ({ graphql, actions }) => {
     });
   });
 
-  const component = path.resolve('./src/layouts/contentfulPage.jsx');
-  return new Promise(resolve => {
+  const pageComponent = path.resolve('./src/layouts/page.jsx');
+  const createPages = new Promise(resolve => {
     graphql(`
       {
         allContentfulPage(limit: 1000) {
@@ -61,17 +66,39 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
       }
-    `).then(result => {
-      if (result.errors) throw result.errors;
-
-      result.data.allContentfulPage.edges.forEach(({ node }) => {
+    `).then(({ errors, data }) => {
+      if (errors) throw errors;
+      data.allContentfulPage.edges.forEach(({ node }) => {
         const { id, slug, namespace } = node;
         const pagePath = `${namespace}${slug}/`;
         const context = { id };
-        createPage({ path: pagePath, component, context });
-        languages.forEach(lang => createPage({ path: `/${lang}${pagePath}`, component, context }));
+        createLocalizedPages(pagePath, pageComponent, context);
       });
       resolve();
     });
   });
+  const customerStoryComponent = path.resolve('./src/layouts/customerStory.jsx');
+  const createCustomerStories = new Promise(resolve => {
+    graphql(`
+      {
+        allContentfulCustomerStory(limit: 1000) {
+          edges {
+            node {
+              id
+              slug
+            }
+          }
+        }
+      }
+    `).then(({ errors, data }) => {
+      if (errors) throw errors;
+      data.allContentfulCustomerStory.edges.forEach(({ node: { id, slug } }) => {
+        const pagePath = `/customer-stories/${slug}/`;
+        const context = { id };
+        createLocalizedPages(pagePath, customerStoryComponent, context);
+      });
+      resolve();
+    });
+  });
+  return Promise.all([createPages, createCustomerStories]);
 };
