@@ -3,7 +3,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import { MarkdownContent } from '../components/MarkdownContent';
+import { LongContent } from '../components/LongContent';
 import { DefaultHeader } from '../components/Header';
 import { CompanyContent, OtherCustomerStories } from '../components/customerStories';
 import { Title } from '../layouts/utils';
@@ -37,7 +37,7 @@ export default ({
               </div>
               <div className="col-md-8">
                 <div className="px-3">
-                  <MarkdownContent content={content} />
+                  <LongContent content={content} />
                 </div>
               </div>
             </div>

@@ -6,7 +6,7 @@ import { MDXProvider } from '@mdx-js/react';
 
 import { Image, Lead } from '../components/Markdown';
 
-export const MarkdownContent = ({
+export const LongContent = ({
   content,
   isMarkdown = true,
   className = ''
