@@ -258,9 +258,10 @@ $markdown-spacer: $markdown-font-size;
     padding-left: map-get($spacers, 2);
   }
   blockquote {
-    border-left: map-get($pale-colors, "info") 0.2em solid;
-    padding-left: map-get($spacers, 3);
-    margin-left: map-get($spacers, 2);
+    margin: map-get($spacers, 6) map-get($spacers, 3);
+    font-size: 1.2em;
+    font-style: italic;
+    font-weight: 200;
   }
   figure {
     max-width: 700px;
