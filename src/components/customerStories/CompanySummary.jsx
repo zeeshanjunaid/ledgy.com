@@ -23,7 +23,7 @@ const getCompanySummaries = (company: Company) => ([
 
 export const CompanySummary = ({ company }: {| company: Company |}) => (
   <div className="company-summary sticky-top p-5">
-    <Img className="fit-cover mx-auto company-summary-logo" {...company.logo} />
+    <Img className="company-summary-logo font-weight-light fit-cover mx-auto mb-3" {...company.logo} />
     <div className="container">
       <LongText
         content={company.mainQuote}
