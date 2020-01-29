@@ -19,7 +19,8 @@ export const CompanyContent = ({ company }: {| company: Company |}) => (
     <div className="container">
       <MarkdownContent
         content={company.mainQuote}
-        className="mb-0 text-left font-italic blockquote"
+        isMarkdown={false}
+        className="company-content-quote mb-0 text-left"
       />
       <div className="company-content-contact mb-2">
         <div className="row mx-auto">
