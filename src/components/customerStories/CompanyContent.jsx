@@ -11,13 +11,13 @@ import {
   faSeedling
 } from '@fortawesome/free-solid-svg-icons';
 
-import { LongContent } from '../LongContent';
+import { LongText } from '../LongText';
 
 export const CompanyContent = ({ company }: {| company: Company |}) => (
   <div className="company-summary sticky-top p-5">
     <Img className="fit-cover mx-auto company-summary-logo" {...company.logo} />
     <div className="container">
-      <LongContent
+      <LongText
         content={company.mainQuote}
         isMarkdown={false}
         className="company-summary-quote mb-0 text-left"

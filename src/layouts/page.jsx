@@ -4,7 +4,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { PublishDate } from '../components/Content';
 import { Author } from '../components/Markdown';
-import { LongContent } from '../components/LongContent';
+import { LongText } from '../components/LongText';
 import { DefaultHeader, CalculatorHeader } from '../components/Header';
 import { Title } from '../layouts/utils';
 
@@ -36,7 +36,7 @@ export default ({
       <main className="main-content">
         <section className="section">
           <div className="container container-small">
-            <LongContent content={content} />
+            <LongText content={content} />
             <PublishDate date={date} />
             {author && <Author prefix={prefix} name={author} />}
           </div>
