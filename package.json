@@ -12,6 +12,7 @@
     "serve": "npm run build && gatsby serve",
     "start": "./start.sh",
     "test": "eslint . --ext jsx,js && flow",
+    "clean": "gatsby clean",
     "extract": "lingui extract --clean",
     "refresh": "curl -X POST http://localhost:8000/__refresh",
     "edit": "micro -l tcp://0.0.0.0:$(((RANDOM % 65535)+1025)) flask_editor.js"
