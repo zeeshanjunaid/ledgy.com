@@ -88,7 +88,6 @@ export const pageQuery = graphql`
           }
         }
         yearFounded
-        funding
         employeeCount
         sector
         location
