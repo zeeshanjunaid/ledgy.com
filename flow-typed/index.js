@@ -40,7 +40,7 @@ declare type Company = {|
   contactTitle: string,
   mainQuote: Mdx,
   yearFounded: string,
-  funding: string,
+  funding: ?string,
   employeeCount: string,
   sector: string,
   location: string,
