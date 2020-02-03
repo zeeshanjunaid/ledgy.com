@@ -67,7 +67,7 @@ export const handleDemoAccessSubmit = async ({
   setFormStatus(LOADING);
   const { email, companySize } = state;
 
-  if (isFieldMissing(state)) {
+  if (isFieldMissing({ email, companySize })) {
     setFormStatus(INVALID_FIELDS);
     return;
   }
