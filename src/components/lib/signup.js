@@ -1,6 +1,6 @@
 // @flow
 
-import { mixpanelUrl, MIXPANEL_TOKEN, trackSignupGoogleAnalytics } from '../../helpers';
+import { mixpanelUrl, MIXPANEL_TOKEN, track } from '../../helpers';
 
 const encodeBase64 = JsonObject => btoa(JSON.stringify(JsonObject));
 
@@ -36,7 +36,7 @@ export const signupOnMixpanel = async (email: string) => {
 };
 
 export const trackOnMixpanel = async (email: string, trackingEvent: string) => {
-  trackSignupGoogleAnalytics(trackingEvent); // google analytics
+  track(trackingEvent); // google analytics
   const mixpanelTrackingJSON = generateBase64TrackingJSON(
     email,
     MIXPANEL_TOKEN,

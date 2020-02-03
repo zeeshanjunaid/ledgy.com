@@ -1,7 +1,7 @@
 // @flow
 
 import React from 'react';
-import { targetBlank, trackSignupGoogleAnalytics } from '../helpers';
+import { targetBlank, track } from '../helpers';
 
 export const ProductHuntButton = ({
   productHuntLink,
@@ -18,7 +18,7 @@ export const ProductHuntButton = ({
     className="btn btn-block d-sm-inline btn-xl mx-1 shadow-none"
     href={productHuntLink}
     {...targetBlank}
-    onClick={() => trackSignupGoogleAnalytics(trackSignupKey)}
+    onClick={() => track(trackSignupKey)}
   >
     <img
       src={`https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=${postId}&theme=light`}

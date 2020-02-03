@@ -4,7 +4,7 @@ import React from 'react';
 import Img from 'gatsby-image';
 
 import { LanguageHint } from '../components/Markdown';
-import { calculatorUrl, targetBlank, trackSignupGoogleAnalytics } from '../helpers';
+import { calculatorUrl, targetBlank, track } from '../helpers';
 import { ProductHuntButton } from './ProductHuntButton';
 
 const DEFAULT_LANG = 'en';
@@ -71,7 +71,7 @@ export const CalculatorHeader = ({ data }: { data: any }) => {
                 <a
                   className="btn btn-block d-sm-inline btn-xl my-2 mx-1 btn-round btn-light"
                   href={calculatorUrl}
-                  onClick={() => trackSignupGoogleAnalytics('clickCalculator')}
+                  onClick={() => track('clickCalculator')}
                   {...targetBlank}
                 >
                   Launch the Calculator

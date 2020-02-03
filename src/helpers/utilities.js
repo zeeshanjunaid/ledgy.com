@@ -1,9 +1,5 @@
 // @flow
 
-export const trackSignupGoogleAnalytics = (type: string) => {
-  if (window.ga) window.ga('send', 'event', 'signup', type);
-};
-
 export const track = (event: string, properties?: Object): void => {
   if (window.analytics) window.analytics.track(event, properties);
 };
