@@ -1,14 +1,5 @@
 // @flow
 
-export const loadScript = (path: string): Promise<*> =>
-  new Promise((resolve, reject) => {
-    const script = document.createElement('script');
-    script.src = path;
-    script.async = true;
-    script.onload = resolve;
-    return (document.body && document.body.appendChild(script)) || reject();
-  });
-
 export const trackSignupGoogleAnalytics = (type: string) => {
   if (window.ga) window.ga('send', 'event', 'signup', type);
 };
