@@ -72,6 +72,15 @@ export const RequestDemoForm = ({ setDemoRequested }: { setDemoRequested: boolea
       <p className="text-dark">
         <Trans>Please fill out the form below to access the demo</Trans>
       </p>
+      <Label text={<Trans>Your email *</Trans>} />
+      <Input
+        state={email}
+        setState={setEmail}
+        placeholder="elon@must.com"
+        setFormStatus={setFormStatus}
+        name="email"
+      />
+
       <Label text={<Trans>Your name</Trans>} />
       <Input
         state={name}
@@ -81,16 +90,7 @@ export const RequestDemoForm = ({ setDemoRequested }: { setDemoRequested: boolea
         name="name"
       />
 
-      <Label text={<Trans>Your email</Trans>} />
-      <Input
-        state={email}
-        setState={setEmail}
-        placeholder="elon@must.com"
-        setFormStatus={setFormStatus}
-        name="email"
-      />
-
-      <Label text={<Trans>Name of your company</Trans>} />
+      <Label text={<Trans>Company name</Trans>} />
       <Input
         state={companyName}
         setState={setCompanyName}
@@ -99,7 +99,7 @@ export const RequestDemoForm = ({ setDemoRequested }: { setDemoRequested: boolea
         name="companyName"
       />
 
-      <Label text={<Trans>Number of employees</Trans>} />
+      <Label text={<Trans>Number of employees *</Trans>} />
       <div className="d-flex mt-2 mb-4">
         <input type="hidden" name="companySize" />
         {COMPANY_SIZES.map(size => (
@@ -118,9 +118,10 @@ export const RequestDemoForm = ({ setDemoRequested }: { setDemoRequested: boolea
           </button>
         ))}
       </div>
+
       <div className="d-flex justify-content-between align-items-center mt-6">
         <small className="text-danger form-error-message">
-          {invalidFields && <Trans>Please fill out all fields</Trans>}
+          {invalidFields && <Trans>* Please fill in required fields</Trans>}
           {invalidEmail && <Trans>Oops. This email address is invalid.</Trans>}
           {error && <Trans>Something went wrong, please try again.</Trans>}
         </small>
