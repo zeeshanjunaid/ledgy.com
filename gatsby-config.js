@@ -24,6 +24,7 @@ module.exports = {
     'gatsby-plugin-flow',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
+    'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-nprogress',
     'gatsby-plugin-sitemap',
