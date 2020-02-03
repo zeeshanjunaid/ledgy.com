@@ -33,7 +33,9 @@ const segment = {
 const googleAnalytics = {
   script:
     'http://www.google-analytics.com https://snap.licdn.com https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net',
-  frame: 'https://bid.g.doubleclick.net'
+  frame: 'https://bid.g.doubleclick.net',
+  connect:
+    'https://www.google-analytics.com https://www.googleadservices.com https://snap.licdn.com'
 };
 
 const hubspot = {
