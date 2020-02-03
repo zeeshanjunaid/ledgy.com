@@ -30,6 +30,12 @@ const segment = {
   connect: 'https://api.segment.io'
 };
 
+const googleAnalytics = {
+  script:
+    'http://www.google-analytics.com https://snap.licdn.com https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net',
+  frame: 'https://bid.g.doubleclick.net'
+};
+
 const hubspot = {
   img: 'https://forms.hsforms.com https://track.hubspot.com',
   script:
@@ -39,4 +45,4 @@ const hubspot = {
     'https://api.hubspot.com https://forms.hubspot.com https://api.hubapi.com https://js.hs-scripts.com https://js.hsadspixel.net https://js.hs-analytics.net https://js.hscollectedforms.net https://js.usemessages.com'
 };
 
-exports.ContentSecurityPolicy = mergePolicies([defaultPolicy, segment, hubspot]);
+exports.ContentSecurityPolicy = mergePolicies([defaultPolicy, segment, googleAnalytics, hubspot]);
