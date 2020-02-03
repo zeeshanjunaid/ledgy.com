@@ -17,12 +17,17 @@ const defaultPolicy = {
   img: "'self' data: https://api.producthunt.com https://images.ctfassets.net",
   object: "'none'",
   font: "'self' data: https://fonts.gstatic.com",
-  script: "'self' 'unsafe-inline' 'unsafe-eval'",
+  script: "'self' 'unsafe-inline' 'unsafe-eval' https://maps.googleapis.com",
   style:
     "'self' 'unsafe-inline' https://fonts.googleapis.com https://maps.googleapis.com/maps/api/",
   frame: "'self' https://www.youtube.com",
   connect: "'self' https://maps.gstatic.com https://maps.googleapis.com",
   child: "'self'"
+};
+
+const segment = {
+  script: 'https://cdn.segment.com',
+  connect: 'https://api.segment.io'
 };
 
 const hubspot = {
@@ -34,4 +39,4 @@ const hubspot = {
     'https://api.hubspot.com https://forms.hubspot.com https://api.hubapi.com https://js.hs-scripts.com https://js.hsadspixel.net https://js.hs-analytics.net https://js.hscollectedforms.net https://js.usemessages.com'
 };
 
-exports.ContentSecurityPolicy = mergePolicies([defaultPolicy, hubspot]);
+exports.ContentSecurityPolicy = mergePolicies([defaultPolicy, segment, hubspot]);

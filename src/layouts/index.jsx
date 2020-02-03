@@ -39,6 +39,7 @@ const Initialize = () => {
     setTimeout(async () => {
       require('../assets/js/page'); // eslint-disable-line global-require
       require('../assets/js/script'); // eslint-disable-line global-require
+      require('../assets/js/segment'); // eslint-disable-line global-require
 
       openDemoModal();
     }, 1414);
