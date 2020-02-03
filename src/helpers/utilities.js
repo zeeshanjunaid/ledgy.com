@@ -4,8 +4,8 @@ export const trackSignupGoogleAnalytics = (type: string) => {
   if (window.ga) window.ga('send', 'event', 'signup', type);
 };
 
-export const track = (event: string): void => {
-  if (window.ga) window.ga('send', 'pageview', `landingPage/${event}`);
+export const track = (event: string, properties?: Object): void => {
+  if (window.analytics) window.analytics.track(event, properties);
 };
 
 export const animateTablet = () => {
