@@ -20,12 +20,12 @@ import Loader from '../components/Loader';
 import { Nav } from '../components/Nav';
 import { Footer } from '../components/Footer';
 
-type SiteProps = {
+type SiteProps = {|
   ...$Exact<Props>,
   lang: Language,
   children: Node,
   location: { pathname: string }
-};
+|};
 
 const openDemoModal = () => {
   if (window.location.hash === '#getDemo') {
