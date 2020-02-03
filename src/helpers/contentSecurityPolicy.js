@@ -27,7 +27,7 @@ const defaultPolicy = {
 
 const segment = {
   script: 'https://cdn.segment.com',
-  connect: 'https://api.segment.io'
+  connect: 'https://api.segment.io https://cdn.segment.com'
 };
 
 const googleAnalytics = {
