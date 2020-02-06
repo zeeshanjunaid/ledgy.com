@@ -7,5 +7,5 @@ if [ "$BRANCH" = "master" ]; then
   curl -u ${LOCO_KEY}: --data-binary @src/locale/en/messages.po https://localise.biz/api/import/po?tag-absent=deprecated
 fi
 
-npm rebuild sharp
+npm rebuild sharp node-sass
 gatsby build
