@@ -17,12 +17,18 @@ const defaultPolicy = {
   img: "'self' data: https://api.producthunt.com https://images.ctfassets.net",
   object: "'none'",
   font: "'self' data: https://fonts.gstatic.com",
-  script: "'self' 'unsafe-inline' 'unsafe-eval' https://maps.googleapis.com",
-  style:
-    "'self' 'unsafe-inline' https://fonts.googleapis.com https://maps.googleapis.com/maps/api/",
+  script: "'self' 'unsafe-inline' 'unsafe-eval'",
+  style: "'self' 'unsafe-inline' https://fonts.googleapis.com",
   frame: "'self' https://www.youtube.com",
-  connect: "'self' https://maps.gstatic.com https://maps.googleapis.com",
+  connect: "'self' ",
   child: "'self'"
+};
+
+const maps = {
+  script: 'https://maps.googleapis.com',
+  style: 'https://maps.googleapis.com',
+  connect: 'https://maps.gstatic.com https://maps.googleapis.com',
+  img: 'https://maps.gstatic.com'
 };
 
 const segment = {
@@ -35,7 +41,9 @@ const googleAnalytics = {
     'http://www.google-analytics.com https://snap.licdn.com https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net',
   frame: 'https://bid.g.doubleclick.net',
   connect:
-    'https://www.google-analytics.com https://www.googleadservices.com https://snap.licdn.com'
+    'https://www.google-analytics.com https://www.googleadservices.com https://snap.licdn.com',
+  img:
+    'http://www.google-analytics.com https://px.ads.linkedin.com https://www.google.com https://www.google.ch'
 };
 
 const hubspot = {
