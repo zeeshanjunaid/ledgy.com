@@ -55,4 +55,19 @@ const hubspot = {
     'https://api.hubspot.com https://forms.hubspot.com https://api.hubapi.com https://js.hs-scripts.com https://js.hsadspixel.net https://js.hs-analytics.net https://js.hscollectedforms.net https://js.usemessages.com'
 };
 
-exports.ContentSecurityPolicy = mergePolicies([defaultPolicy, segment, googleAnalytics, hubspot]);
+const hotjar = {
+  script: 'https://static.hotjar.com https://script.hotjar.com',
+  frame: 'https://vars.hotjar.com',
+  connect: 'https://in.hotjar.com https://vc.hotjar.io',
+  font: 'https://script.hotjar.com',
+  img: 'https://script.hotjar.com'
+};
+
+exports.ContentSecurityPolicy = mergePolicies([
+  defaultPolicy,
+  maps,
+  segment,
+  googleAnalytics,
+  hubspot,
+  hotjar
+]);
