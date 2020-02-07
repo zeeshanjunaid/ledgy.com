@@ -58,7 +58,7 @@ const hubspot = {
 const hotjar = {
   script: 'https://static.hotjar.com https://script.hotjar.com',
   frame: 'https://vars.hotjar.com',
-  connect: 'https://in.hotjar.com https://vc.hotjar.io',
+  connect: 'https://in.hotjar.com https://vc.hotjar.io https://script.hotjar.com',
   font: 'https://script.hotjar.com',
   img: 'https://script.hotjar.com'
 };
