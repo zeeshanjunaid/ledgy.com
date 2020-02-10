@@ -5,7 +5,7 @@ import React, { type Node } from 'react';
 import sample from 'lodash/sample';
 import { Trans } from '@lingui/react';
 import { callToActionExperiments } from '../layouts/utils';
-import { isBrowser, appUrl, targetBlank, trackSignupGoogleAnalytics } from '../helpers';
+import { isBrowser, appUrl, targetBlank, track } from '../helpers';
 
 const Banner = (props: { title: Node, url: string, trackingName: Node, CTAText: Node }) => {
   const { title, url, trackingName, CTAText } = props;
@@ -20,7 +20,7 @@ const Banner = (props: { title: Node, url: string, trackingName: Node, CTAText: 
             href={url}
             onClick={() => {
               if (window.ga) window.ga('set', 'dimension2', { trackingName });
-              trackSignupGoogleAnalytics('clickSignup');
+              track('click.signup', { experiment: trackingName });
             }}
           >
             {CTAText}

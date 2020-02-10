@@ -1,20 +1,7 @@
 // @flow
 
-export const loadScript = (path: string): Promise<*> =>
-  new Promise((resolve, reject) => {
-    const script = document.createElement('script');
-    script.src = path;
-    script.async = true;
-    script.onload = resolve;
-    return (document.body && document.body.appendChild(script)) || reject();
-  });
-
-export const trackSignupGoogleAnalytics = (type: string) => {
-  if (window.ga) window.ga('send', 'event', 'signup', type);
-};
-
-export const track = (event: string): void => {
-  if (window.ga) window.ga('send', 'pageview', `landingPage/${event}`);
+export const track = (event: string, properties?: Object): void => {
+  if (window.analytics) window.analytics.track(event, properties);
 };
 
 export const animateTablet = () => {

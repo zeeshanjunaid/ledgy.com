@@ -8,7 +8,7 @@ import Img from 'gatsby-image';
 import { ContentBody } from '../components/Content';
 import { HeaderLayout } from '../components/HeaderLayout';
 import { Title } from '../layouts/utils';
-import { targetBlank, appUrl, trackSignupGoogleAnalytics } from '../helpers';
+import { targetBlank, appUrl, track } from '../helpers';
 import {
   TemplateFAQs,
   Testimonials,
@@ -27,7 +27,7 @@ const EquityPlans = (props: Props) => {
   const buttonOne = {
     props: {
       href: `${appUrl}/templates`,
-      onClick: () => trackSignupGoogleAnalytics('clickTemplates'),
+      onClick: () => track('clickTemplates'),
       ...targetBlank
     },
     text: <Trans>Get started</Trans>

@@ -14,28 +14,60 @@ const mergePolicies = policies => {
 
 const defaultPolicy = {
   default: "'self'",
-  img:
-    "'self' data: https://api.producthunt.com https://csi.gstatic.com https://www.google-analytics.com https://maps.gstatic.com https://maps.googleapis.com https://stats.g.doubleclick.net https://www.google.com/pagead/ https://www.google.ch/pagead/ https://px.ads.linkedin.com https://www.linkedin.com/px/ https://script.hotjar.com http://script.hotjar.com https://www.googleadservices.com https://images.ctfassets.net",
+  img: "'self' data: https://api.producthunt.com https://images.ctfassets.net",
   object: "'none'",
-  font: "'self' data: https://fonts.gstatic.com http://script.hotjar.com https://script.hotjar.com",
+  font: "'self' data: https://fonts.gstatic.com",
+  script: "'self' 'unsafe-inline' 'unsafe-eval'",
+  style: "'self' 'unsafe-inline' https://fonts.googleapis.com",
+  frame: "'self' https://www.youtube.com",
+  connect: "'self' ",
+  child: "'self'"
+};
+
+const maps = {
+  script: 'https://maps.googleapis.com',
+  style: 'https://maps.googleapis.com',
+  connect: 'https://maps.gstatic.com https://maps.googleapis.com',
+  img: 'https://maps.gstatic.com'
+};
+
+const segment = {
+  script: 'https://cdn.segment.com',
+  connect: 'https://api.segment.io https://cdn.segment.com'
+};
+
+const googleAnalytics = {
   script:
-    "'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com/ https://www.google-analytics.com https://www.googleadservices.com https://googleads.g.doubleclick.net  https://snap.licdn.com https://sjs.bizographics.com/ https://maps.googleapis.com http://static.hotjar.com https://static.hotjar.com https://script.hotjar.com",
-  style:
-    "'self' 'unsafe-inline' https://fonts.googleapis.com https://maps.googleapis.com/maps/api/",
-  frame: "'self' https://www.youtube.com https://bid.g.doubleclick.net",
+    'http://www.google-analytics.com https://snap.licdn.com https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net',
+  frame: 'https://bid.g.doubleclick.net',
   connect:
-    "'self' https://maps.gstatic.com https://maps.googleapis.com https://www.google-analytics.com http://*.hotjar.com:* https://*.hotjar.com:* https://vc.hotjar.io:* wss://*.hotjar.com https://www.googleadservices.com https://snap.licdn.com",
-  child: "'self' https://vars.hotjar.com",
-  prefetch: 'https://www.google-analytics.com'
+    'https://www.google-analytics.com https://www.googleadservices.com https://snap.licdn.com',
+  img:
+    'http://www.google-analytics.com https://px.ads.linkedin.com https://www.google.com https://www.google.ch'
 };
 
 const hubspot = {
   img: 'https://forms.hsforms.com https://track.hubspot.com',
   script:
     'https://js.hs-scripts.com https://js.usemessages.com https://js.hsadspixel.net http://js.hs-analytics.net https://js.hscollectedforms.net https://js.hs-scripts.com',
-  frame: 'https://vars.hotjar.com https://app.hubspot.com',
+  frame: 'https://app.hubspot.com',
   connect:
     'https://api.hubspot.com https://forms.hubspot.com https://api.hubapi.com https://js.hs-scripts.com https://js.hsadspixel.net https://js.hs-analytics.net https://js.hscollectedforms.net https://js.usemessages.com'
 };
 
-exports.ContentSecurityPolicy = mergePolicies([defaultPolicy, hubspot]);
+const hotjar = {
+  script: 'https://static.hotjar.com https://script.hotjar.com',
+  frame: 'https://vars.hotjar.com',
+  connect: 'https://in.hotjar.com https://vc.hotjar.io https://script.hotjar.com',
+  font: 'https://script.hotjar.com',
+  img: 'https://script.hotjar.com'
+};
+
+exports.ContentSecurityPolicy = mergePolicies([
+  defaultPolicy,
+  maps,
+  segment,
+  googleAnalytics,
+  hubspot,
+  hotjar
+]);

@@ -9,7 +9,7 @@ import 'typeface-work-sans'; // eslint-disable-line import/extensions
 import 'katex/dist/katex.min.css';
 import 'prism-themes/themes/prism-ghcolors.css';
 
-import { name, loadScript, animateTablet, isDevelopment, ContentSecurityPolicy } from '../helpers';
+import { name, animateTablet, isDevelopment, ContentSecurityPolicy } from '../helpers';
 import { Title } from './utils';
 import { catalogs, langFromPath, langPrefix, deprefix } from '../i18n-config';
 
@@ -39,9 +39,8 @@ const Initialize = () => {
     setTimeout(async () => {
       require('../assets/js/page'); // eslint-disable-line global-require
       require('../assets/js/script'); // eslint-disable-line global-require
-      require('../assets/js/hotjar'); // eslint-disable-line global-require
+      require('../assets/js/segment'); // eslint-disable-line global-require
 
-      await loadScript('https://js.hs-scripts.com/6881367.js');
       openDemoModal();
     }, 1414);
   }, []);

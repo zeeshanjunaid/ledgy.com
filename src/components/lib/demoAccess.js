@@ -49,7 +49,7 @@ const fetchHubspot = ({ name, email, companyName, companySize }: State) =>
   fetch('/getDemo', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: encodeBody({ name, email, company: companyName, company_size: companySize })
+    body: encodeBody({ name, email, company: companyName, companysize: companySize })
   });
 
 export const handleDemoAccessSubmit = async ({
