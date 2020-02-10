@@ -8,7 +8,7 @@ import { LongText } from '../components/LongText';
 import { DefaultHeader, CalculatorHeader } from '../components/Header';
 import { Title } from '../layouts/utils';
 
-const CALCULATOR_ID = 'cfcd898c-876a-55cd-befe-3918b0753a5c';
+const CALCULATOR_SLUG = 'calculator';
 
 export default ({
   data,
@@ -18,9 +18,10 @@ export default ({
   ...Props,
   data: {| contentfulPage: Page, site: { siteMetadata: { siteUrl: string } } |}
 |}) => {
-  const { id, title, description, language, content, author, date, cover } = data.contentfulPage;
+  const { slug, title, description, language, content, author, date, cover } = data.contentfulPage;
   const { siteUrl } = data.site.siteMetadata;
-  const showCalculatorHeader = id === CALCULATOR_ID;
+  const showCalculatorHeader = slug === CALCULATOR_SLUG;
+
   return (
     <div>
       <Title
