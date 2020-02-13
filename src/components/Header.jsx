@@ -1,6 +1,6 @@
 // @flow
 
-import React from 'react';
+import React, { type Node } from 'react';
 import Img from 'gatsby-image';
 import { DynamicTrans } from '../components/DynamicTrans';
 
@@ -16,8 +16,8 @@ export const DefaultHeader = ({
   lang = DEFAULT_LANG,
   documentLang = DEFAULT_LANG
 }: {|
-  title: string,
-  subtitle?: string,
+  title: string | Node,
+  subtitle?: string | Node,
   lang?: Language,
   documentLang?: Language
 |}) => {
