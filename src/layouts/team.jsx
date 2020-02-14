@@ -40,7 +40,8 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
     ),
     twitter: 'https://twitter.com/YokoSpirig',
     linkedIn: 'https://www.linkedin.com/in/yokospirig/',
-    mail: 'yoko@ledgy.com'
+    mail: 'yoko@ledgy.com',
+    article: 'yoko-spirig'
   },
   ben: {
     name: 'Ben Brandt',
