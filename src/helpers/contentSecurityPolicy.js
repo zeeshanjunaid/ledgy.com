@@ -1,3 +1,5 @@
+const getCSPEntry = ([key, value]) => `${key.includes('-') ? key : `${key}-src`} ${String(value)}`;
+
 const mergePolicies = policies => {
   const mergedCsp = {};
   policies.forEach(policy => {
@@ -7,7 +9,7 @@ const mergePolicies = policies => {
     });
   });
   const csp = Object.entries(mergedCsp)
-    .map(([key, value]) => `${key}-src ${value}`)
+    .map(getCSPEntry)
     .join('; ');
   return csp;
 };
@@ -24,6 +26,11 @@ const defaultPolicy = {
   child: "'self'"
 };
 
+const sentry = {
+  'report-uri':
+    'https://sentry.io/api/2601736/security/?sentry_key=5b41b936f311460db8d592c6ddb4a6b1'
+};
+
 const maps = {
   script: 'https://maps.googleapis.com',
   style: 'https://maps.googleapis.com',
@@ -38,12 +45,12 @@ const segment = {
 
 const googleAnalytics = {
   script:
-    'http://www.google-analytics.com https://snap.licdn.com https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net',
+    'https://www.google-analytics.com https://ssl.google-analytics.com https://snap.licdn.com https://www.googletagmanager.com https://www.googleadservices.com https://www.google.com https://googleads.g.doubleclick.net',
   frame: 'https://bid.g.doubleclick.net',
   connect:
     'https://www.google-analytics.com https://www.googleadservices.com https://snap.licdn.com',
   img:
-    'http://www.google-analytics.com https://px.ads.linkedin.com https://www.google.com https://www.google.ch'
+    'http://www.google-analytics.com https://www.googletagmanager.com https://px.ads.linkedin.com https://www.google.com https://www.google.ch https://googleads.g.doubleclick.net https://www.google.com'
 };
 
 const hubspot = {
@@ -65,6 +72,7 @@ const hotjar = {
 
 exports.ContentSecurityPolicy = mergePolicies([
   defaultPolicy,
+  sentry,
   maps,
   segment,
   googleAnalytics,
