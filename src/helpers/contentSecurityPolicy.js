@@ -1,3 +1,5 @@
+const getCSPEntry = ([key, value]) => `${key.includes('-') ? key : `${key}-src`} ${String(value)}`;
+
 const mergePolicies = policies => {
   const mergedCsp = {};
   policies.forEach(policy => {
@@ -7,7 +9,7 @@ const mergePolicies = policies => {
     });
   });
   const csp = Object.entries(mergedCsp)
-    .map(([key, value]) => `${key}-src ${value}`)
+    .map(getCSPEntry)
     .join('; ');
   return csp;
 };
@@ -22,6 +24,11 @@ const defaultPolicy = {
   frame: "'self' https://www.youtube.com",
   connect: "'self' ",
   child: "'self'"
+};
+
+const sentry = {
+  'report-uri':
+    'https://sentry.io/api/2601736/security/?sentry_key=5b41b936f311460db8d592c6ddb4a6b1'
 };
 
 const maps = {
@@ -65,6 +72,7 @@ const hotjar = {
 
 exports.ContentSecurityPolicy = mergePolicies([
   defaultPolicy,
+  sentry,
   maps,
   segment,
   googleAnalytics,
