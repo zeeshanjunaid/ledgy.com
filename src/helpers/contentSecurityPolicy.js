@@ -51,7 +51,7 @@ const googleAnalytics = {
   connect:
     'https://www.google-analytics.com https://www.googleadservices.com https://www.google.com https://snap.licdn.com',
   img:
-    'http://www.google-analytics.com https://www.googletagmanager.com https://www.linkedin.com https://px.ads.linkedin.com https://www.google.com https://googleads.g.doubleclick.net https://www.google.ch https://www.google.com https://www.google.de https://www.google.fr',
+    'http://www.google-analytics.com https://www.googletagmanager.com https://www.linkedin.com https://px.ads.linkedin.com https://www.google.com https://googleads.g.doubleclick.net https://p.adsymptotic.com https://www.google.ch https://www.google.com https://www.google.de https://www.google.fr',
   prefetch:
     'https://www.google-analytics.com https://www.googletagmanager.com https://js.hsadspixel.net'
 };
