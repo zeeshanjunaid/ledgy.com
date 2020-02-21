@@ -14,24 +14,22 @@ import {
 
 import { PageHeader } from '../components/PageHeader';
 
-const PartnersPage = ({ ...props }: Props) => (
+export default withI18n()(({ i18n, data, prefix }: Props) => (
   <>
     <Title
-      title={props.i18n.t`Partners`}
-      description={props.i18n.t`Our trusted law firm partners are here to help`}
+      title={i18n.t`Partners`}
+      description={i18n.t`Our trusted law firm partners are here to help`}
     />
     <PageHeader title={<Trans>Our trusted law firm partners are here to help</Trans>} />
 
     <div className="py-0">
-      <SwissPartners {...props} />
+      <SwissPartners data={data} />
       <CollaborationBanner />
-      <UniqueSellingPropositions {...props} />
+      <UniqueSellingPropositions prefix={prefix} />
     </div>
     <LawyerCTABanner />
   </>
-);
-
-export default withI18n()(PartnersPage);
+));
 
 export const pageQuery = graphql`
   query {

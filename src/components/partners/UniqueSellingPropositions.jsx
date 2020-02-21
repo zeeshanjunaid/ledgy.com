@@ -9,7 +9,7 @@ const readMoreWrapperClasses =
   'col-10 offset-1 col-md-8 offset-md-2 col-lg-4 offset-lg-0 mb-4 mb-md-6 my-lg-4';
 const ulClasses = 'width-fit-content text-left pb-0 mb-0 mx-auto';
 
-export const UniqueSellingPropositions = (props: Props) => (
+export const UniqueSellingPropositions = ({ prefix }: {| prefix: string |}) => (
   <div className="partner-usp container pt-6 pb-4">
     <h5 className="mt-6 text-center">
       <Trans>The Smoothest Experience for Startups and Lawyers</Trans>
@@ -32,7 +32,7 @@ export const UniqueSellingPropositions = (props: Props) => (
               </li>
             </ul>
           }
-          url={`${props.prefix}/features/captable`}
+          url={`${prefix}/features/captable`}
         />
       </div>
 
@@ -50,7 +50,7 @@ export const UniqueSellingPropositions = (props: Props) => (
               </li>
             </ul>
           }
-          url={`${props.prefix}/features/modeling`}
+          url={`${prefix}/features/modeling`}
         />
       </div>
 
@@ -68,7 +68,7 @@ export const UniqueSellingPropositions = (props: Props) => (
               </li>
             </ul>
           }
-          url={`${props.prefix}/features/esop`}
+          url={`${prefix}/features/esop`}
         />
       </div>
     </div>

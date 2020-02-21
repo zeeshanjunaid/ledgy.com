@@ -6,12 +6,11 @@ import { withI18n, Trans } from '@lingui/react';
 import { Title } from '../layouts/utils';
 import { PageHeader } from '../components/PageHeader';
 
-const IndexPage = (props: Object) => (
+export default withI18n()(({ i18n }: Props) => (
   <div>
     <Title
-      title={props.i18n.t`Contact`}
-      description={props.i18n
-        .t`Contact the Ledgy team by phone, email, or mailing address to learn more about cap table management, equity plans, and investor relations`}
+      title={i18n.t`Contact`}
+      description={i18n.t`Contact the Ledgy team by phone, email, or mailing address to learn more about cap table management, equity plans, and investor relations`}
     />
     <PageHeader
       title={<Trans>Let’s get in touch</Trans>}
@@ -59,6 +58,4 @@ const IndexPage = (props: Object) => (
       </div>
     </div>
   </div>
-);
-
-export default withI18n()(IndexPage);
+));
