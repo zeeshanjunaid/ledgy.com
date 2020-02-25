@@ -34,13 +34,13 @@ export const Button = ({
     (inverted && 'btn-light') ||
     'btn-primary';
   const classes = `btn ${color} ${className} ${disabled ? 'button-disabled' : ''}`;
-  const props = { onClick, className: classes, ...(buttonProps: Object) };
+  const props = { ...buttonProps, onClick, className: classes };
   return href ? (
-    <a id={id} href={disabled ? null : href} {...targetBlank} {...props}>
+    <a {...props} id={id} href={disabled ? null : href} {...targetBlank}>
       {children}
     </a>
   ) : (
-    <button id={id} disabled={disabled} type={type} {...props}>
+    <button {...props} id={id} disabled={disabled} type={type}>
       {children}
     </button>
   );

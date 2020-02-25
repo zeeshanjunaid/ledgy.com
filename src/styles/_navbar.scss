@@ -37,6 +37,9 @@
     padding: 10px 20px;
   }
 }
+.hover-list-parent p {
+  cursor: default;
+}
 
 .hover-list-parent > li {
   position: relative;
