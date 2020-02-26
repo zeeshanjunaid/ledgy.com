@@ -13,12 +13,12 @@ if (!isBrowser) {
       const escapedText = (text || '').replace(/"/g, '\\"');
       return `msgid "${escapedText}"\nmsgstr "${escapedText}"\n`;
     });
-    const poFile = 'src/locale/dynamic.po';
+    const poFile = 'src/locale/en/dynamic.po';
     console.log(`Writing ${poFile}`);
     fs.appendFileSync(poFile, po.join('\n'));
   });
 }
 
 export const addTranslation = (text: string): void => {
-  dynamicTranslations.add(text);
+  if (text) dynamicTranslations.add(text);
 };

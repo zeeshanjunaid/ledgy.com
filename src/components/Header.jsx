@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Img from 'gatsby-image';
+import { DynamicTrans } from '../components/DynamicTrans';
 
 import { LanguageHint } from '../components/Markdown';
 import { calculatorUrl, targetBlank, track } from '../helpers';
@@ -25,7 +26,9 @@ export const DefaultHeader = ({
       <div className="container text-center">
         <div className="row">
           <div className="col-12 col-lg-8 offset-lg-2">
-            <h1>{title}</h1>
+            <h1>
+              <DynamicTrans>{title}</DynamicTrans>
+            </h1>
             {subtitle && <h5 className="font-weight-light">{subtitle}</h5>}
             <LanguageHint lang={lang} documentLang={documentLang} />
           </div>

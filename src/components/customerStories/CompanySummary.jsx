@@ -12,7 +12,6 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 import { LongText } from '../LongText';
-import { DynamicTrans } from '../DynamicTrans';
 
 const getCompanySummaries = (company: Company) => [
   [faClock, 'Founded year', `Founded in ${company.yearFounded}`],
@@ -38,9 +37,7 @@ export const CompanySummary = ({ company }: {| company: Company |}) => (
         <div className="row mx-auto">
           <strong>{company.contactName}</strong>
         </div>
-        <div className="row mx-auto">
-          <DynamicTrans>{company.contactTitle}</DynamicTrans>
-        </div>
+        <div className="row mx-auto">{company.contactTitle}</div>
       </div>
       {getCompanySummaries(company).map(
         ([icon, iconTitle, description]) =>
