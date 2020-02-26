@@ -11,7 +11,7 @@ gatsby build
 
 if [ "$BRANCH" = "master" ]; then
   npm run extract
-  cd src/local/en
+  cd src/locale/en
   cat dynamic.po >> messages.po
   curl -u ${LOCO_KEY}: --data-binary @messages.po https://localise.biz/api/import/po?tag-absent=deprecated
 fi
