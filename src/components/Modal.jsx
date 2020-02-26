@@ -4,6 +4,7 @@
 
 import React, { type Node } from 'react';
 import ReactDOM from 'react-dom';
+import { CSSTransition } from 'react-transition-group';
 
 import { Button } from './Button';
 
@@ -25,10 +26,10 @@ export const Modal = ({
   title: Node,
   children: Node
 }) => {
-  const container = getDocumentBody();
-  return isOpen && container
+  const documentBody = getDocumentBody();
+  return documentBody
     ? ReactDOM.createPortal(
-        <>
+        <CSSTransition in={isOpen} timeout={400} classNames="modal-transition" unmountOnExit>
           <div className="modal-wrapper" onClick={e => closeWithOutsideClick(e, close)}>
             <div
               className="modal-custom border border-muted my-7 mx-auto"
@@ -43,8 +44,8 @@ export const Modal = ({
               <div className="p-4">{children}</div>
             </div>
           </div>
-        </>,
-        container
+        </CSSTransition>,
+        documentBody
       )
     : null;
 };

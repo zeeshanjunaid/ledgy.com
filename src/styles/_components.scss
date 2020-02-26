@@ -160,6 +160,22 @@
   color: $gray-700 !important;
 }
 
+
+.modal-transition-enter {
+  opacity: 0;
+}
+.modal-transition-enter-active {
+  opacity: 1;
+  transition: opacity 400ms ease-in;
+}
+.modal-transition-exit {
+  opacity: 1;
+}
+.modal-transition-exit-active {
+  opacity: 0;;
+  transition: opacity 400ms ease-in;
+}
+
 // Feature
 $deco-dot-size: 8px;
 
