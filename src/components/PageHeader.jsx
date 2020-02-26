@@ -1,8 +1,6 @@
 // @flow
 
 import React, { type Node } from 'react';
-import Img from 'gatsby-image';
-import { DynamicTrans } from '../components/DynamicTrans';
 
 import { LanguageHint } from '../components/Markdown';
 
@@ -24,7 +22,10 @@ export const PageHeader = ({
   return (
     <header className="header-custom bg-primary text-white d-flex flex-column justify-content-center mb-4 mb-md-5 mb-lg-7">
       <div className="container text-left my-4 my-lg-6 my-xl-7">
-        <h1 className={textCenter ? 'text-center' : ''}>{title}</h1>
+        <h1 className={textCenter ? 'text-center' : ''}>
+          {title}
+          {/* <DynamicTrans>{title}</DynamicTrans> */}
+        </h1>
         {subtitle && <p className="text-lg">{subtitle}</p>}
         <LanguageHint lang={lang} documentLang={documentLang} />
       </div>
