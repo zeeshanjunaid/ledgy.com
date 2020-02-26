@@ -38,13 +38,13 @@
 .multi-button {
   background-color: $white;
   flex: 1 1 0px;
-  color: #999999;
+  color: $gray-600;
   border-radius: 0;
   &:first-of-type {
-    border-radius: 10rem 0 0 10rem;
+    border-radius: $border-radius 0 0 $border-radius;
   }
   &:last-of-type {
-    border-radius: 0 10rem 10rem 0;
+    border-radius: 0 $border-radius $border-radius 0;
   }
   &.selected {
     color: $white;
