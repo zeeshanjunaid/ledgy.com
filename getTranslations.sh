@@ -9,4 +9,4 @@ getPo () {
 getPo en &&
 getPo de &&
 getPo fr &&
-lingui compile
+npm run compile

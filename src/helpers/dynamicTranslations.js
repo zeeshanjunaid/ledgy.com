@@ -11,11 +11,11 @@ if (!isBrowser) {
 
     const po = Array.from(dynamicTranslations).map(text => {
       const escapedText = (text || '').replace(/"/g, '\\"');
-      return `msgid "${escapedText}"\nmsgstr "${escapedText}"\n`;
+      return `#: dynamic\nmsgid "${escapedText}"\nmsgstr "${escapedText}"\n\n`;
     });
     const poFile = 'src/locale/en/dynamic.po';
     console.log(`Writing ${poFile}`);
-    fs.appendFileSync(poFile, po.join('\n'));
+    fs.appendFileSync(poFile, po.join(''));
   });
 }
 
