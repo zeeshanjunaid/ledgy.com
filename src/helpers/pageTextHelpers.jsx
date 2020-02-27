@@ -40,7 +40,10 @@ export const getFirstTwoSellingProps = (data: Object) => [
       </Trans>
     ),
     imgProps: { ...data.scalable },
-    link: { to: '', text: <Trans>How Frontify uses Ledgy to scale their company</Trans> },
+    link: {
+      to: '/customer-stories/frontify',
+      text: <Trans>How Frontify uses Ledgy to scale their company</Trans>
+    },
     imgFirst: true
   },
   {
@@ -57,7 +60,7 @@ export const getFirstTwoSellingProps = (data: Object) => [
       </Trans>
     ),
     imgProps: { ...data.talent },
-    link: { to: '', text: <Trans>How WeFox uses Ledgy to retain talent</Trans> }
+    link: { to: '/human-resources', text: <Trans>Read more about Ledgy for HR</Trans> }
   }
 ];
 
@@ -77,7 +80,7 @@ export const getSecondTwoSellingProps = (data: Object) => [
       </Trans>
     ),
     imgProps: { ...data.security },
-    link: { to: '', text: <Trans>Read more about data protection</Trans> },
+    link: { to: '/data-protection', text: <Trans>Read more about data protection</Trans> },
     imgFirst: true
   },
   {
@@ -94,7 +97,7 @@ export const getSecondTwoSellingProps = (data: Object) => [
       </Trans>
     ),
     imgProps: { ...data.trust },
-    link: { to: '', text: <Trans>How Sherpany uses Ledgy for reporting</Trans> }
+    link: { to: '/investors', text: <Trans>Learn more about investor features</Trans> }
   }
 ];
 

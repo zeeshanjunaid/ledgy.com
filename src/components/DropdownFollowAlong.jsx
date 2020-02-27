@@ -144,6 +144,7 @@ export const DropdownFollowAlong = (props: LayoutProps) => {
         <ul className="hover-list-parent">
           {parentListItems.map(([parentTitle, menuItems, className]) => (
             <ParentListItem
+              key={className}
               eventHandlingProps={eventHandlingProps}
               title={parentTitle}
               menuItems={menuItems}
