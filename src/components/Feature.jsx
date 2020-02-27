@@ -20,8 +20,11 @@ export const Feature = ({
         <div className="col-12 col-md-7 d-flex flex-column text-left">
           <h2 className="feature-title-decoration mb-3">{title}</h2>
           <ul className="p-0 list-style-none">
-            {description.map(point => (
-              <li className="feature-list-item-decoration mb-1">{point}</li>
+            {description.map((point, idx) => (
+              // eslint-disable-next-line react/no-array-index-key
+              <li key={idx} className="feature-list-item-decoration mb-1">
+                {point}
+              </li>
             ))}
           </ul>
         </div>

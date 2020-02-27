@@ -30,9 +30,18 @@ export default withI18n()(({ i18n, data }: Props) => {
         }
       />
 
-      {getHumanResourcesFeatures(data).map(({ title, description, imgProps, imgFirst = false }) => (
-        <Feature title={title} description={description} imgProps={imgProps} imgFirst={imgFirst} />
-      ))}
+      {getHumanResourcesFeatures(data).map(
+        ({ title, description, imgProps, imgFirst = false }, index) => (
+          <Feature
+            // eslint-disable-next-line react/no-array-index-key
+            key={index}
+            title={title}
+            description={description}
+            imgProps={imgProps}
+            imgFirst={imgFirst}
+          />
+        )
+      )}
     </div>
   );
 });
