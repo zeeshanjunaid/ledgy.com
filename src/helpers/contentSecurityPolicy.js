@@ -16,7 +16,7 @@ const mergePolicies = policies => {
 
 const defaultPolicy = {
   default: "'self'",
-  img: "'self' data: https://api.producthunt.com https://images.ctfassets.net",
+  img: "'self' data: https://api.producthunt.com",
   object: "'none'",
   font: "'self' data: https://fonts.gstatic.com",
   script: "'self' 'unsafe-inline' 'unsafe-eval'",

@@ -25,7 +25,7 @@ export const CompanySummary = ({ company }: {| company: Company |}) => (
   <div className="company-summary rounded-md bg-white sticky-top p-2 p-sm-4 p-md-2 p-lg-4">
     <Img
       className="company-summary-logo font-weight-light fit-cover mx-auto mb-3"
-      {...company.logo}
+      {...company.logo.localFile.childImageSharp}
     />
     <div className="container">
       <LongText

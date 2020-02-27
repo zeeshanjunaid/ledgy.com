@@ -12,9 +12,17 @@ export const CustomerStoryLink = ({
   customerStory: CustomerStory,
   prefix: string
 |}) => {
-  const { title, subtitle, slug, date, company } = customerStory;
+  const { title, subtitle, slug, company } = customerStory;
   const to = `${prefix}/customer-stories/${slug}`;
-  const image = <Img className="fit-cover" {...company.cover} />;
+  const image = <Img className="m-4" {...company.logo.localFile.childImageSharp} />;
   const cardTitle = <h5>{title}</h5>;
-  return <CardLink title={cardTitle} description={subtitle} date={date} to={to} image={image} />;
+  return (
+    <CardLink
+      title={cardTitle}
+      type="customer-story"
+      description={subtitle}
+      to={to}
+      image={image}
+    />
+  );
 };

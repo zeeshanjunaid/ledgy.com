@@ -8,6 +8,7 @@ import { ChevronRight } from '../layouts/utils';
 
 export const CardLink = ({
   title,
+  type,
   description,
   image,
   to,
@@ -18,10 +19,11 @@ export const CardLink = ({
   description: string | Node,
   image: Node,
   to: string,
+  type: 'blog' | 'customer-story',
   date?: string,
   external?: boolean
 |}) => (
-  <div className="card custom-card mb-6">
+  <div className={`card card-${type} mb-6`}>
     <div className="row m-0 flex-1">
       <div className="col-md-6 col-lg-3">
         {external ? (

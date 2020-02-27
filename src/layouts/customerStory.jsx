@@ -73,13 +73,12 @@ export const pageQuery = graphql`
         contactName
         contactTitle
         logo {
-          fluid(maxWidth: 150) {
-            ...GatsbyContentfulFluid_withWebp
-          }
-        }
-        cover {
-          fluid(maxWidth: 150) {
-            ...GatsbyContentfulFluid_withWebp
+          localFile {
+            childImageSharp {
+              fluid(maxWidth: 150) {
+                ...GatsbyImageSharpFluid
+              }
+            }
           }
         }
         mainQuote {
@@ -101,13 +100,21 @@ export const pageQuery = graphql`
           slug
           company {
             logo {
-              fluid(maxWidth: 150) {
-                ...GatsbyContentfulFluid_withWebp
+              localFile {
+                childImageSharp {
+                  fluid(maxWidth: 150) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
               }
             }
             cover {
-              fluid(maxWidth: 150) {
-                ...GatsbyContentfulFluid_withWebp
+              localFile {
+                childImageSharp {
+                  fluid(maxWidth: 150) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
               }
             }
           }

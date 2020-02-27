@@ -170,7 +170,7 @@ export default withI18n()(({ i18n, data }: Props) => {
         <div className="justify-content-center row gap-y" />
 
         <hr className="my-8" />
-        <div className="row text-center">
+        <div className="row text-center my-7">
           <div className="col-12 col-lg-6">
             <h5>
               <Trans>Do you tackle the climate crisis?</Trans>{' '}

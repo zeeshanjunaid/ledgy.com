@@ -34,6 +34,7 @@ export const PostLink = ({
   return (
     <CardLink
       title={title}
+      type="blog"
       description={description}
       date={date}
       to={to}

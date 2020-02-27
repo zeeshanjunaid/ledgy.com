@@ -41,9 +41,13 @@ export const pageQuery = graphql`
           subtitle
           date
           company {
-            cover {
-              fluid(maxWidth: 150) {
-                ...GatsbyContentfulFluid_withWebp
+            logo {
+              localFile {
+                childImageSharp {
+                  fluid(maxWidth: 200) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
               }
             }
           }
