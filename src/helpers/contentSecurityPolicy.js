@@ -20,7 +20,7 @@ const defaultPolicy = {
   object: "'none'",
   font: "'self' data: https://fonts.gstatic.com",
   script: "'self' 'unsafe-inline' 'unsafe-eval'",
-  style: "'self' 'unsafe-inline' https://fonts.googleapis.com",
+  style: "'self' 'unsafe-inline' blob: https://fonts.googleapis.com",
   frame: "'self' https://www.youtube.com",
   connect: "'self' https://fonts.googleapis.com",
   child: "'self'"
