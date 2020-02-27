@@ -90,8 +90,8 @@
 .trigger-enter .list-item-hover {
   display: block;
   opacity: 0;
-  transition: 300ms;
-  transform: translateX(10%);
+  transition: 200ms;
+  transform: translateX(2%);
 }
 
 .trigger-enter-active .list-item-hover {

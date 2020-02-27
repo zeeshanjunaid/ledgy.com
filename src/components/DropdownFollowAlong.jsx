@@ -134,7 +134,7 @@ export const DropdownFollowAlong = (props: LayoutProps) => {
               width: backgroundWidth,
               height: backgroundHeight,
               transform: backgroundTransform,
-              transition: firstHover ? 'opacity 300ms' : 'all 500ms, opacity 300ms, transform 200ms'
+              transition: firstHover ? 'opacity 300ms' : 'all 200ms'
             }}
           >
             <span className="arrow" />
