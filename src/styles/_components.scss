@@ -19,7 +19,7 @@
 }
 
 .home-banner h1 {
-  font-weight: bold;
+  font-weight: 500;
   @include media-breakpoint-up(lg) {
     font-size: $huge-font-size;
   }
