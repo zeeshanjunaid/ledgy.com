@@ -189,7 +189,7 @@ export default withI18n()(({ i18n, data }: Props) => {
           </div>
           <div className="col-12 col-lg-6">
             <h5>
-              <Trans>Do you have less than €5m in funding?</Trans>{' '}
+              <Trans>Do you have less than €2m in funding?</Trans>{' '}
               <span role="img" aria-label="rocket">
                 🚀
               </span>
