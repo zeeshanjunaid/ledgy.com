@@ -3,14 +3,6 @@
   @include media-breakpoint-up(xl) {
     max-width: 1050px;
   }
-  // xxl displays
-  @media screen and (min-width: 1440px) {
-    max-width: 1350px;
-  }
-  // 4k displays
-  @media screen and (min-width: 2160px) {
-    max-width: 1600px;
-  }
 }
 
 // Home Banner
