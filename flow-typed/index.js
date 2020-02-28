@@ -20,6 +20,8 @@ declare type LayoutProps = {|
 
 declare type Mdx = {| childMdx: {| body: string |} |};
 
+declare type Image = {| localFile: {| childImageSharp: Object |} |};
+
 declare type Page = {|
   id: string,
   title: string,
@@ -29,13 +31,13 @@ declare type Page = {|
   content: Mdx,
   slug: string,
   language: Language,
-  cover?: Object
+  cover?: Image
 |};
 
 declare type Company = {|
   name: string,
-  logo: Object,
-  cover: Object,
+  logo: Image,
+  cover: Image,
   contactName: string,
   contactTitle: string,
   mainQuote: Mdx,
@@ -57,6 +59,21 @@ declare type CustomerStory = {|
   date: string,
   language: Language,
   author?: string
+|};
+
+declare type Feature = {|
+  id: string,
+  title: string,
+  description: string[],
+  image: Image
+|};
+
+declare type FeaturePage = {|
+  id: string,
+  title: string,
+  description: string,
+  features: Feature[],
+  startOnRight?: boolean
 |};
 
 declare var graphql: any;
