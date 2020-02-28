@@ -7,6 +7,7 @@ import { graphql } from 'gatsby';
 import { HomePageHeader } from '../components/HomePageHeader';
 import { MainProblemLayout } from '../components/MainProblemLayout';
 import { ExternalLogoRow } from '../components/ExternalLogoRow';
+import { DynamicTrans } from '../components/DynamicTrans';
 import { SellingProp } from '../components/SellingProp';
 
 import {
@@ -45,8 +46,11 @@ const IndexPage = (props: Props) => (
     />
 
     <ExternalLogoRow
-      title={<Trans>The CEOs and CFOs of hundreds of companies already trust Ledgy</Trans>}
-      sources={getTopLedgyClients(props)}
+      title={<DynamicTrans>{props.data.contentfulExternalLogos.title}</DynamicTrans>}
+      sources={props.data.contentfulExternalLogos.logos.map(({ title, localFile }) => ({
+        alt: title,
+        imgProps: localFile.childImageSharp
+      }))}
     />
 
     {getFirstTwoSellingProps(props.data).map(
@@ -89,24 +93,17 @@ export const pageQuery = graphql`
         ...GatsbyImageSharpFluid_noBase64
       }
     }
-    viu: imageSharp(fluid: { originalName: { regex: "/viu/" } }) {
-      fixed(width: 120) {
-        ...GatsbyImageSharpFixed
-      }
-    }
-    sherpany: imageSharp(fluid: { originalName: { regex: "/sherpany/" } }) {
-      fixed(width: 150) {
-        ...GatsbyImageSharpFixed
-      }
-    }
-    frontify: imageSharp(fluid: { originalName: { regex: "/frontify/" } }) {
-      fixed(width: 150) {
-        ...GatsbyImageSharpFixed
-      }
-    }
-    nakd: imageSharp(fluid: { originalName: { regex: "/nakd/" } }) {
-      fixed(width: 150) {
-        ...GatsbyImageSharpFixed
+    contentfulExternalLogos(contentful_id: { eq: "3DEHgp3WUysqgzByviFgPS" }) {
+      title
+      logos {
+        title
+        localFile {
+          childImageSharp {
+            fixed(width: 120) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
       }
     }
     forbes: imageSharp(fluid: { originalName: { regex: "/forbes/" } }) {
