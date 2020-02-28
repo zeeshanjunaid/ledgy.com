@@ -11,16 +11,6 @@ export const calculatorUrl = 'https://calculator.ledgy.com';
 
 export const githubUrl = 'https://github.com/morloy/ledgy.com/';
 
-export const forbesUrl = 'https://www.forbesdach.com/30-under-30.html';
-
-export const economistUrl =
-  'https://www.economist.com/business/2019/07/06/new-firms-help-startups-keep-track-of-their-owners';
-
-export const wirtschaftswocheUrl =
-  'https://gruender.wiwo.de/ledgy-plattform-fuer-beteiligungsmanagement-erhaelt-anschubfinanzierung/';
-
-export const top100Url = 'https://www.top100startups.swiss/index.cfm?page=136340';
-
 // netlify & mixpanel
 const isNetlify = typeof window !== 'undefined' && window.location.hostname !== 'localhost';
 export const mixpanelUrl = isNetlify ? '/api' : 'https://api.mixpanel.com';
