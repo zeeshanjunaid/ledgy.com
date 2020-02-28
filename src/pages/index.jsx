@@ -9,8 +9,6 @@ import { MainProblemLayout } from '../components/MainProblemLayout';
 import { ExternalLogoRow } from '../components/ExternalLogoRow';
 import { SellingProp } from '../components/SellingProp';
 
-import { getFirstTwoSellingProps, getSecondTwoSellingProps } from '../helpers';
-
 const DecoShapes = () => (
   <>
     <div className="top-deco-shape top-deco-shape--one" />
@@ -39,35 +37,15 @@ const IndexPage = (props: Props) => (
       imgProps={{ ...props.data.excel }}
     />
 
-    <ExternalLogoRow {...props.data.companies} />
-
-    {getFirstTwoSellingProps(props.data).map(
-      ({ title, subtitle, imgProps, link, imgFirst = false }) => (
-        <SellingProp
-          title={title}
-          subtitle={subtitle}
-          imgProps={{ ...imgProps }}
-          link={link}
-          imgFirst={imgFirst}
-          key={link.to}
-        />
-      )
-    )}
-
-    <ExternalLogoRow {...props.data.media} />
-
-    {getSecondTwoSellingProps(props.data).map(
-      ({ title, subtitle, imgProps, link, imgFirst = false }) => (
-        <SellingProp
-          title={title}
-          subtitle={subtitle}
-          imgProps={{ ...imgProps }}
-          link={link}
-          imgFirst={imgFirst}
-          key={link.to}
-        />
-      )
-    )}
+    {props.data.page.entries.map(({ __typename, ...entry }, index) => {
+      if (__typename === 'ContentfulExternalLogos') {
+        return <ExternalLogoRow {...entry} />;
+      }
+      if (__typename === 'ContentfulSellingProposition') {
+        return <SellingProp {...entry} imgFirst={index % 2 === 0} />;
+      }
+      return null;
+    })}
   </main>
 );
 
@@ -103,6 +81,39 @@ export const pageQuery = graphql`
           childImageSharp {
             fixed(width: 120) {
               ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+    }
+    page: contentfulIndexPage(contentful_id: { eq: "jjbelvJa8nRqbGqYrr5wi" }) {
+      entries {
+        ... on ContentfulExternalLogos {
+          title
+          logos {
+            title
+            description
+            localFile {
+              childImageSharp {
+                fixed(width: 120) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
+          }
+        }
+        ... on ContentfulSellingProposition {
+          title
+          description
+          link
+          linkTo
+          image {
+            localFile {
+              childImageSharp {
+                fluid(maxWidth: 400) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
             }
           }
         }
