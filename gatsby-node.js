@@ -100,5 +100,29 @@ exports.createPages = ({ graphql, actions }) => {
       resolve();
     });
   });
-  return Promise.all([createPages, createCustomerStories]);
+
+  const featurePageComponent = path.resolve('./src/layouts/featurePage.jsx');
+  const createFeaturePages = new Promise(resolve => {
+    graphql(`
+      {
+        allContentfulFeaturePage(limit: 1000) {
+          edges {
+            node {
+              id
+              slug
+            }
+          }
+        }
+      }
+    `).then(({ errors, data }) => {
+      if (errors) throw errors;
+      data.allContentfulFeaturePage.edges.forEach(({ node: { id, slug } }) => {
+        const pagePath = `/${slug}/`;
+        const context = { id };
+        createLocalizedPages(pagePath, featurePageComponent, context);
+      });
+      resolve();
+    });
+  });
+  return Promise.all([createPages, createCustomerStories, createFeaturePages]);
 };
