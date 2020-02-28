@@ -3,7 +3,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import { DynamicTrans } from '../components/DynamicTrans';
 import { PageHeader } from '../components/PageHeader';
 import { Feature } from '../components/Feature';
 import { Title } from '../layouts/utils';
@@ -22,10 +21,7 @@ export default ({
     <div>
       <Title title={title} description={description} />
 
-      <PageHeader
-        title={<DynamicTrans>{title}</DynamicTrans>}
-        subtitle={<DynamicTrans>{description}</DynamicTrans>}
-      />
+      <PageHeader title={title} subtitle={description} />
       {features.map(
         ({ id, title: featureTitle, description: featureDescription, image }, index) => (
           <Feature
