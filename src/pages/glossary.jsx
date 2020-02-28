@@ -19,14 +19,13 @@ export default withI18n()(({ i18n, data }: Props) => {
       </AccordionItem>
     );
   });
+  const title = i18n.t`Glossary`;
+  const description = i18n.t`Definitions for industry terms relating to cap tables, financing rounds, and legal topics for startups.`;
 
   return (
     <div>
-      <Title
-        title={i18n.t`Glossary`}
-        description={i18n.t`Definitions for industry terms relating to cap tables, financing rounds, and legal topics for startups.`}
-      />
-      <PageHeader title={i18n.t`Glossary`} />
+      <Title title={title} description={description} />
+      <PageHeader title={title} subtitle={description} />
       <ContentBody>
         <Accordion>{accordionItems}</Accordion>
       </ContentBody>

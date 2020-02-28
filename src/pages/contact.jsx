@@ -13,8 +13,8 @@ export default withI18n()(({ i18n }: Props) => (
       description={i18n.t`Contact the Ledgy team by phone, email, or mailing address to learn more about cap table management, equity plans, and investor relations`}
     />
     <PageHeader
-      title={<Trans>Let’s get in touch</Trans>}
-      subtitle={<Trans>Here are the ways you can contact us with any questions you have</Trans>}
+      title={i18n.t`Let’s get in touch`}
+      subtitle={i18n.t`Here are the ways you can contact us with any questions you have`}
     />
 
     <div className="container">

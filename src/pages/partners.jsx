@@ -1,7 +1,7 @@
 // @flow
 
 import React from 'react';
-import { withI18n, Trans } from '@lingui/react';
+import { withI18n } from '@lingui/react';
 import { graphql } from 'gatsby';
 
 import { Title } from '../layouts/utils';
@@ -20,7 +20,7 @@ export default withI18n()(({ i18n, data, prefix }: Props) => (
       title={i18n.t`Partners`}
       description={i18n.t`Our trusted law firm partners are here to help`}
     />
-    <PageHeader title={<Trans>Our trusted law firm partners are here to help</Trans>} />
+    <PageHeader title="Our trusted law firm partners are here to help" />
 
     <div className="py-0">
       <SwissPartners data={data} />

@@ -2,13 +2,16 @@
 
 import React from 'react';
 import { graphql } from 'gatsby';
+import { withI18n } from '@lingui/react';
 
 import { PageHeader } from '../components/PageHeader';
 import { Feature } from '../components/Feature';
 import { Title } from '../layouts/utils';
+import { dynamicI18n } from '../components/DynamicTrans';
 
-export default ({
-  data
+const featurePage = ({
+  data,
+  i18n
 }: {|
   ...Props,
   data: {|
@@ -17,11 +20,12 @@ export default ({
   |}
 |}) => {
   const { title, description, features, startOnRight } = data.contentfulFeaturePage;
+  const t = dynamicI18n(i18n);
   return (
     <div>
-      <Title title={title} description={description} />
+      <Title title={t(title)} description={t(description)} />
 
-      <PageHeader title={title} subtitle={description} />
+      <PageHeader title={t(title)} subtitle={t(description)} />
       {features.map(
         ({ id, title: featureTitle, description: featureDescription, image }, index) => (
           <Feature
@@ -36,6 +40,8 @@ export default ({
     </div>
   );
 };
+
+export default withI18n()(featurePage);
 
 export const pageQuery = graphql`
   query($id: String!) {

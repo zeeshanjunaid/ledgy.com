@@ -3,7 +3,8 @@
 declare type Language = 'en' | 'de' | 'fr';
 
 declare type I18n = {|
-  t: (Array<string>, ...values: Array<any>) => string
+  t: (Array<string>, ...values: Array<any>) => string,
+  _: string => string
 |};
 
 declare type Props = {|

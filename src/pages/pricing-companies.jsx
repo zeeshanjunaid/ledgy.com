@@ -128,22 +128,13 @@ export default withI18n()(({ i18n, data }: Props) => {
       </Button>
     </PricingCol>
   );
+  const title = i18n.t`Pricing`;
+  const description = i18n.t`Companies at different stages have very different needs. Consider access rights storage, support needs, and more when selecting your ideal plan.`;
   return (
     <>
-      <Title
-        title={i18n.t`Pricing`}
-        description={i18n.t`Ledgy scales with your needs. Free for startups, powerful for grown-ups.`}
-      />
+      <Title title={title} description={description} />
+      <PageHeader title={title} subtitle={description} />
 
-      <PageHeader
-        title={<Trans>Which plan suits me best?</Trans>}
-        subtitle={
-          <Trans>
-            Companies at different stages have very different needs. Consider access rights,
-            storage, support needs, and more when selecting your ideal plan.
-          </Trans>
-        }
-      />
       <div className="container">
         <PricingRow>
           <TextCol />

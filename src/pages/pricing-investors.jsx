@@ -43,47 +43,39 @@ const InvestorTypeCard = ({
   </div>
 );
 
-export default withI18n()(({ i18n }: Props) => (
-  <>
-    <Title
-      title={i18n.t`Pricing`}
-      description={i18n.t`Ledgy scales with your needs. Free for startups, powerful for grown-ups.`}
-    />
+export default withI18n()(({ i18n }: Props) => {
+  const title = i18n.t`Investor Pricing`;
+  const description = i18n.t`Different investors have different needs. Whether you’re a business angel, a professional investor, or a VC fund, Ledgy has a plan to suit your needs`;
+  return (
+    <>
+      <Title title={title} description={description} />
+      <PageHeader title={title} subtitle={description} />
 
-    <PageHeader
-      title={<Trans>Which plan suits me best?</Trans>}
-      subtitle={
-        <Trans>
-          Different investors have different needs. Whether you’re a business angel, a professional
-          investor, or a VC fund, Ledgy has a plan to suit your needs.
-        </Trans>
-      }
-    />
-
-    <div className="container">
-      <div className="row justify-content-center">
-        <InvestorTypeCard
-          type={<Trans>Business Angel</Trans>}
-          price={<Trans>free</Trans>}
-          features={angelFeatures}
-          button={
-            <Button inverted href={`${appUrl}/signup`}>
-              <Trans>Sign up</Trans>
-            </Button>
-          }
-        />
-        <InvestorTypeCard
-          highlight
-          type={<Trans>Fund</Trans>}
-          price={<Trans>contact us</Trans>}
-          features={fundFeatures}
-          button={
-            <Button href="mailto:contact@ledgy.com?subject=Ledgy investors - Fund plan inquiry">
-              <Trans>Get in touch</Trans>
-            </Button>
-          }
-        />
+      <div className="container">
+        <div className="row justify-content-center">
+          <InvestorTypeCard
+            type={<Trans>Business Angel</Trans>}
+            price={<Trans>free</Trans>}
+            features={angelFeatures}
+            button={
+              <Button inverted href={`${appUrl}/signup`}>
+                <Trans>Sign up</Trans>
+              </Button>
+            }
+          />
+          <InvestorTypeCard
+            highlight
+            type={<Trans>Fund</Trans>}
+            price={<Trans>contact us</Trans>}
+            features={fundFeatures}
+            button={
+              <Button href="mailto:contact@ledgy.com?subject=Ledgy investors - Fund plan inquiry">
+                <Trans>Get in touch</Trans>
+              </Button>
+            }
+          />
+        </div>
       </div>
-    </div>
-  </>
-));
+    </>
+  );
+});

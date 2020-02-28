@@ -86,53 +86,54 @@ const HelpCard = ({
   </div>
 );
 
-const HelpCenter = ({ i18n, prefix }: Props) => (
-  <>
-    <Title
-      title={i18n.t`Help Center`}
-      description={i18n.t`Let Ledgy’s help center guide you on every single aspect of your company’s equity management`}
-    />
-    <PageHeader title={<Trans>How can we help?</Trans>} textCenter />
+const HelpCenter = ({ i18n, prefix }: Props) => {
+  const title = i18n.t`Help Center`;
+  const description = i18n.t`Let Ledgy’s help center guide you on every single aspect of your company’s equity management`;
+  return (
+    <>
+      <Title title={title} description={description} />
+      <PageHeader title={title} subtitle={description} textCenter />
 
-    <div className="container">
-      <div className="row">
-        {helpLinks.map(([title, description, to, icon]) => (
-          <HelpCard
-            title={title}
-            description={description}
-            to={`${prefix}/${to}/`}
-            icon={icon}
-            key={to}
-          />
-        ))}
-      </div>
+      <div className="container">
+        <div className="row">
+          {helpLinks.map(([itemTitle, itemDescription, to, icon]) => (
+            <HelpCard
+              title={itemTitle}
+              description={itemDescription}
+              to={`${prefix}/${to}/`}
+              icon={icon}
+              key={to}
+            />
+          ))}
+        </div>
 
-      <Hr />
-      <div className="container text-center py-md-4">
-        <h3 className="mb-4">
-          <Trans>Popular content</Trans>
-        </h3>
-        <p>
-          <a
-            href="https://www.youtube.com/watch?v=JbiAK2SVwHA&list=PLltwxYxG5b6fCAqvomPFc-E049R1HXzNl"
-            {...targetBlank}
-          >
-            Employee Participation Plans: Webinar by Ledgy and Kellerhals Carrard
-          </a>
-        </p>
-        <p>
-          <a href="https://www.youtube.com/watch?v=7oh_fDsDDYs" {...targetBlank}>
-            The Power of Round Modeling: Webinar by Ledgy
-          </a>
-        </p>
-        <p>
-          <Link href to={`${prefix}/blog/pre-and-post-money-option-pools`}>
-            Basics of Pre- and Post-Money Option Pools
-          </Link>
-        </p>
+        <Hr />
+        <div className="container text-center py-md-4">
+          <h3 className="mb-4">
+            <Trans>Popular content</Trans>
+          </h3>
+          <p>
+            <a
+              href="https://www.youtube.com/watch?v=JbiAK2SVwHA&list=PLltwxYxG5b6fCAqvomPFc-E049R1HXzNl"
+              {...targetBlank}
+            >
+              Employee Participation Plans: Webinar by Ledgy and Kellerhals Carrard
+            </a>
+          </p>
+          <p>
+            <a href="https://www.youtube.com/watch?v=7oh_fDsDDYs" {...targetBlank}>
+              The Power of Round Modeling: Webinar by Ledgy
+            </a>
+          </p>
+          <p>
+            <Link href to={`${prefix}/blog/pre-and-post-money-option-pools`}>
+              Basics of Pre- and Post-Money Option Pools
+            </Link>
+          </p>
+        </div>
       </div>
-    </div>
-  </>
-);
+    </>
+  );
+};
 
 export default withI18n()(HelpCenter);

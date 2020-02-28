@@ -81,24 +81,12 @@ const Investor = ({
 const IndexPage = (props: Props) => {
   const { data, i18n } = props;
   const team = getWholeTeam(props.prefix);
+  const title = i18n.t`About us`;
+  const description = i18n.t`We believe that entrepreneurship is the main driver of positive change in the world. That is why we build beautiful and intuitive software for startups, helping them be more successful`;
   return (
     <div>
-      <Title
-        title={i18n.t`About us`}
-        description={i18n.t`Meet the team behind Ledgy, dedicated to help startups thrive. Learn more about the people who trust us.`}
-      />
-
-      <PageHeader
-        title={<Trans>About us</Trans>}
-        subtitle={
-          <Trans>
-            We believe that entrepreneurship is the main driver of positive change in the world.
-            <br />
-            That is why we build beautiful and intuitive software for startups, helping them be more
-            successful.
-          </Trans>
-        }
-      />
+      <Title title={title} description={description} />
+      <PageHeader title={title} subtitle={description} />
 
       <div className="container text-center">
         <h2>
