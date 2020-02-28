@@ -22,6 +22,8 @@ const IndexPage = (props: Props) => (
     <HomePageHeader {...props} />
 
     {props.data.page.entries.map(({ __typename, ...entry }, index) => {
+      const { prefix } = props;
+
       if (index === 0) {
         return <MainProblemLayout {...entry} />;
       }
@@ -29,7 +31,7 @@ const IndexPage = (props: Props) => (
         return <ExternalLogoRow {...entry} />;
       }
       if (__typename === 'ContentfulSellingProposition') {
-        return <SellingProp {...entry} imgFirst={index % 2 === 0} />;
+        return <SellingProp {...entry} prefix={prefix} imgFirst={index % 2 === 0} />;
       }
       return null;
     })}

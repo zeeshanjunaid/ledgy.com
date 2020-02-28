@@ -92,9 +92,9 @@ const languages = {
 
 export const LanguageHint = ({ lang, documentLang }: {| lang: string, documentLang: string |}) =>
   lang !== documentLang && (
-    <div className="text-center">
+    <>
       <Trans>This page is only available in</Trans> {languages[documentLang]}
-    </div>
+    </>
   );
 
 export const Lead = ({ children }: {| children: Node |}) => <div className="lead">{children}</div>;

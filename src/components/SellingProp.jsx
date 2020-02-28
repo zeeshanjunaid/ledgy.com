@@ -17,6 +17,7 @@ export const SellingProp = withI18n()(
     link,
     linkTo,
     image,
+    prefix,
     i18n,
     imgFirst = false
   }: {|
@@ -25,6 +26,7 @@ export const SellingProp = withI18n()(
     link: string,
     linkTo: string,
     image: Image,
+    prefix: string,
     i18n: I18n,
     imgFirst?: boolean
   |}) => {
@@ -41,7 +43,7 @@ export const SellingProp = withI18n()(
             <p className="my-4">
               <DynamicTrans>{description}</DynamicTrans>
             </p>
-            <Link href to={linkTo} className="d-flex align-items-center">
+            <Link href to={`${prefix}/${linkTo}`} className="d-flex align-items-center">
               <FontAwesomeIcon icon={faArrowCircleRight} className="fa-sm" />
               <span className="deco-link ml-2">
                 <DynamicTrans>{link}</DynamicTrans>
