@@ -20,7 +20,11 @@ declare type LayoutProps = {|
 
 declare type Mdx = {| childMdx: {| body: string |} |};
 
-declare type Image = {| localFile: {| childImageSharp: Object |} |};
+declare type Image = {|
+  localFile: {| childImageSharp: Object |},
+  title: string,
+  description?: string
+|};
 
 declare type Page = {|
   id: string,

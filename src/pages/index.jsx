@@ -7,15 +7,9 @@ import { graphql } from 'gatsby';
 import { HomePageHeader } from '../components/HomePageHeader';
 import { MainProblemLayout } from '../components/MainProblemLayout';
 import { ExternalLogoRow } from '../components/ExternalLogoRow';
-import { DynamicTrans } from '../components/DynamicTrans';
 import { SellingProp } from '../components/SellingProp';
 
-import {
-  getTopLedgyClients,
-  getFeaturedIn,
-  getFirstTwoSellingProps,
-  getSecondTwoSellingProps
-} from '../helpers';
+import { getFirstTwoSellingProps, getSecondTwoSellingProps } from '../helpers';
 
 const DecoShapes = () => (
   <>
@@ -45,13 +39,7 @@ const IndexPage = (props: Props) => (
       imgProps={{ ...props.data.excel }}
     />
 
-    <ExternalLogoRow
-      title={<DynamicTrans>{props.data.contentfulExternalLogos.title}</DynamicTrans>}
-      sources={props.data.contentfulExternalLogos.logos.map(({ title, localFile }) => ({
-        alt: title,
-        imgProps: localFile.childImageSharp
-      }))}
-    />
+    <ExternalLogoRow {...props.data.companies} />
 
     {getFirstTwoSellingProps(props.data).map(
       ({ title, subtitle, imgProps, link, imgFirst = false }) => (
@@ -66,7 +54,7 @@ const IndexPage = (props: Props) => (
       )
     )}
 
-    <ExternalLogoRow title={<Trans>As featured in</Trans>} sources={getFeaturedIn(props)} />
+    <ExternalLogoRow {...props.data.media} />
 
     {getSecondTwoSellingProps(props.data).map(
       ({ title, subtitle, imgProps, link, imgFirst = false }) => (
@@ -93,7 +81,7 @@ export const pageQuery = graphql`
         ...GatsbyImageSharpFluid_noBase64
       }
     }
-    contentfulExternalLogos(contentful_id: { eq: "3DEHgp3WUysqgzByviFgPS" }) {
+    companies: contentfulExternalLogos(contentful_id: { eq: "3DEHgp3WUysqgzByviFgPS" }) {
       title
       logos {
         title
@@ -106,24 +94,18 @@ export const pageQuery = graphql`
         }
       }
     }
-    forbes: imageSharp(fluid: { originalName: { regex: "/forbes/" } }) {
-      fixed(width: 130) {
-        ...GatsbyImageSharpFixed
-      }
-    }
-    theEconomist: imageSharp(fluid: { originalName: { regex: "/the-economist/" } }) {
-      fixed(width: 140) {
-        ...GatsbyImageSharpFixed
-      }
-    }
-    wirtschaftsWoche: imageSharp(fluid: { originalName: { regex: "/wirtschafts-woche/" } }) {
-      fixed(width: 130) {
-        ...GatsbyImageSharpFixed
-      }
-    }
-    top100: imageSharp(fluid: { originalName: { regex: "/top100/" } }) {
-      fixed(width: 140) {
-        ...GatsbyImageSharpFixed
+    media: contentfulExternalLogos(contentful_id: { eq: "3QqTAXNEDjrDpDtxrtodpP" }) {
+      title
+      logos {
+        title
+        description
+        localFile {
+          childImageSharp {
+            fixed(width: 120) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
       }
     }
     excel: imageSharp(fluid: { originalName: { regex: "/excel-illustration/" } }) {

@@ -3,18 +3,6 @@
 import React from 'react';
 import { Trans } from '@lingui/react';
 
-import { forbesUrl, economistUrl, wirtschaftswocheUrl, top100Url } from './constants';
-
-export const getFeaturedIn = (props: Props) => {
-  const { forbes, wirtschaftsWoche, theEconomist, top100 } = props.data;
-  return [
-    { url: forbesUrl, imgProps: forbes, alt: 'Forbes DACH' },
-    { url: wirtschaftswocheUrl, imgProps: wirtschaftsWoche, alt: 'Wirtschafts Woche' },
-    { url: economistUrl, imgProps: theEconomist, alt: 'The Economist' },
-    { url: top100Url, imgProps: top100, alt: 'TOP 100 Swiss Startup Award' }
-  ];
-};
-
 export const getFirstTwoSellingProps = (data: Object) => [
   {
     title: (
