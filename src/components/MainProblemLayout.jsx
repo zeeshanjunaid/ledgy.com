@@ -1,24 +1,33 @@
 // @flow
 
-import React, { type Node } from 'react';
+import React from 'react';
 import Img from 'gatsby-image';
+
+import { DynamicTrans } from '../components/DynamicTrans';
+import { getUnderlineHtml } from './lib';
 
 export const MainProblemLayout = ({
   title,
-  subtitle,
-  imgProps
+  description,
+  image
 }: {|
-  title: Node,
-  subtitle: Node,
-  imgProps: any
+  title: string,
+  description: string,
+  image: Image
 |}) => (
   <div className="container p-4 p-lg-7 my-4 my-lg-7 position-relative z-index-base">
     <div className="row justify-content-center">
       <div className="col-12 col-md-10 col-lg-8">
-        <h2 className="custom-underline mb-4">{title}</h2>
-        <p className="text-lg my-4">{subtitle}</p>
+        <h2
+          className="custom-underline mb-4"
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{ __html: getUnderlineHtml(title) }}
+        />
+        <p className="text-lg my-4">
+          <DynamicTrans>{description}</DynamicTrans>
+        </p>
         <div className="px-md-4 px-lg-7 px-xl-9">
-          <Img {...imgProps} />
+          <Img {...image.localFile.childImageSharp} />
         </div>
       </div>
     </div>

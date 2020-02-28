@@ -10,6 +10,13 @@ import {
   faYoutube
 } from '@fortawesome/free-brands-svg-icons';
 
+export const getUnderlineHtml = (text: string): string =>
+  text
+    .replace('_', '<u>')
+    .replace('_', '</u>')
+    .replace('_', '<u>')
+    .replace('_', '</u>');
+
 export const getFooterLinks = () => {
   const companyLinks = [
     [<Trans>About us</Trans>, 'about-us'],
