@@ -7,8 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons';
 
 import { DynamicTrans } from '../components/DynamicTrans';
-
-const getUnderlineHtml = (text: string): string => text.replace('_', '<u>').replace('_', '</u>');
+import { getUnderlineHtml } from './lib';
 
 export const SellingProp = ({
   title,
