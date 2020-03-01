@@ -21,17 +21,18 @@ const IndexPage = (props: Props) => (
     <DecoShapes />
     <HomePageHeader {...props} />
 
-    {props.data.page.entries.map(({ __typename, ...entry }, index) => {
+    {props.data.page.entries.map(({ __typename, id, ...entry }, index) => {
       const { prefix } = props;
+      console.log({ id });
 
       if (index === 0) {
-        return <MainProblemLayout {...entry} />;
+        return <MainProblemLayout key={id} {...entry} />;
       }
       if (__typename === 'ContentfulExternalLogos') {
-        return <ExternalLogoRow {...entry} />;
+        return <ExternalLogoRow key={id} {...entry} />;
       }
       if (__typename === 'ContentfulSellingProposition') {
-        return <SellingProp {...entry} prefix={prefix} imgFirst={index % 2 === 0} />;
+        return <SellingProp key={id} {...entry} prefix={prefix} imgFirst={index % 2 === 0} />;
       }
       return null;
     })}
@@ -51,6 +52,7 @@ export const pageQuery = graphql`
     page: contentfulIndexPage(contentful_id: { eq: "jjbelvJa8nRqbGqYrr5wi" }) {
       entries {
         ... on ContentfulExternalLogos {
+          id
           title
           logos {
             title
@@ -65,6 +67,7 @@ export const pageQuery = graphql`
           }
         }
         ... on ContentfulSellingProposition {
+          id
           title
           description
           link
