@@ -15,10 +15,15 @@ export const getCompanyFeaturePricing = () => [
   {
     text: <Trans>Electronic signatures</Trans>,
     startup: false,
-    scaleup: <Trans>standard €2 / signature</Trans>,
-    enterprise: <Trans>qualified €3 / signature</Trans>
+    scaleup: <Trans>Coming soon</Trans>,
+    enterprise: <Trans>Coming soon</Trans>
   },
-  { text: <Trans>Document templating</Trans>, startup: false, scaleup: false },
+  {
+    text: <Trans>Document templating</Trans>,
+    startup: false,
+    scaleup: false,
+    enterprise: <Trans>Coming soon</Trans>
+  },
   {
     text: <Trans>Data rooms</Trans>,
     startup: <Trans>50 MB</Trans>,
@@ -41,8 +46,8 @@ export const getCompanyFeaturePricing = () => [
   {
     text: <Trans>Personal support</Trans>,
     startup: false,
-    scaleup: <Trans>basic</Trans>,
-    enterprise: <Trans>priority</Trans>
+    scaleup: <Trans>Basic</Trans>,
+    enterprise: <Trans>Priority</Trans>
   },
   { text: <Trans>Onboarding data audit</Trans>, startup: false, scaleup: false },
   { text: <Trans>Dedicated account manager</Trans>, startup: false, scaleup: false },
