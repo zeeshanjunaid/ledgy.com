@@ -34,7 +34,7 @@ module.exports = {
       options: {
         spaceId: CONTENTFUL_SPACE_ID,
         accessToken: CONTENTFUL_ACCESS_TOKEN,
-        host: true ? 'cdn.contentful.com' : 'preview.contentful.com',
+        host: BRANCH ? 'cdn.contentful.com' : 'preview.contentful.com',
         downloadLocal: true
       }
     },
