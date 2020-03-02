@@ -78,6 +78,13 @@ const PricingRow = ({
   </div>
 );
 
+const PricingCTA = ({ title, description }: {| title: Node, description: Node |}) => (
+  <div className="col-12 col-lg-6 col-xl-4">
+    <h5>{title}</h5>
+    <p className="pb-5">{description}</p>
+  </div>
+);
+
 export default withI18n()(({ i18n, data }: Props) => {
   const TextCol = ({ name = '' }: { name?: string }) => (
     <PricingCol textLeft name={name}>
@@ -161,31 +168,35 @@ export default withI18n()(({ i18n, data }: Props) => {
         <div className="justify-content-center row gap-y" />
 
         <hr className="my-8" />
-        <div className="row text-center my-7">
-          <div className="col-12 col-lg-6">
-            <h5>
-              <Trans>Do you tackle the climate crisis?</Trans>{' '}
-              <span role="img" aria-label="earth">
-                🌍
-              </span>
-            </h5>
-            <p>
+        <div className="row text-center justify-content-center my-7">
+          <PricingCTA
+            title={
+              <>
+                <Trans>Do you tackle the climate crisis?</Trans>{' '}
+                <span role="img" aria-label="earth">
+                  🌍
+                </span>
+              </>
+            }
+            description={
               <Trans>
                 You get a 20% discount on Premium if your startup helps reduce carbon emissions.{' '}
                 <a href="mailto:sales@ledgy.com?subject=Eco-Friendly Discount Application">
                   Tell us about your impact!
                 </a>
               </Trans>
-            </p>
-          </div>
-          <div className="col-12 col-lg-6">
-            <h5>
-              <Trans>Do you have less than €2m in funding?</Trans>{' '}
-              <span role="img" aria-label="rocket">
-                🚀
-              </span>
-            </h5>
-            <p>
+            }
+          />
+          <PricingCTA
+            title={
+              <>
+                <Trans>Do you have less than €2m in funding?</Trans>{' '}
+                <span role="img" aria-label="rocket">
+                  🚀
+                </span>
+              </>
+            }
+            description={
               <Trans>
                 Only pay half the price during your first year on Ledgy.{' '}
                 <a href="mailto:sales@ledgy.com?subject=Startup Discount Application">
@@ -193,8 +204,25 @@ export default withI18n()(({ i18n, data }: Props) => {
                 </a>{' '}
                 and you’ll receive a discount.
               </Trans>
-            </p>
-          </div>
+            }
+          />
+          <PricingCTA
+            title={
+              <>
+                <Trans>Are you crowdfunded?</Trans>{' '}
+                <span role="img" aria-label="unicorn">
+                  🦄
+                </span>
+              </>
+            }
+            description={
+              <Trans>
+                Pay much less if you have many non-voting stakeholders on your cap table.{' '}
+                <a href="mailto:sales@ledgy.com?subject=Crowdfunded Startup on Ledgy">Contact us</a>{' '}
+                to get a quote.
+              </Trans>
+            }
+          />
         </div>
       </div>
     </>
