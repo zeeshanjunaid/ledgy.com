@@ -14,7 +14,7 @@ export const SignupModal = ({ buttonClass = '', i18n }: { buttonClass?: string, 
   const [isOpen, toggle] = useModal();
   return (
     <>
-      <Button onClick={toggle} className={`d-inline w-100 px-1 mb-3 ${buttonClass}`} inverted>
+      <Button onClick={toggle} className={`d-inline px-3 mb-3 ${buttonClass}`} inverted>
         <FontAwesomeIcon className="mr-2" icon={faEnvelope} />
         <Trans>Newsletter</Trans>
       </Button>

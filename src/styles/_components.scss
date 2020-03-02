@@ -423,10 +423,7 @@ $deco-dot-size: 8px;
 
 // Product hunt
 .product-hunt-logo {
-  width: 80%;
-  @include media-breakpoint-up(sm) {
-    width: 75%;
-  }
+  width: 180px;
 }
 
 // Signatories

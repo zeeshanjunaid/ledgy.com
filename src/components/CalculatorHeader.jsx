@@ -10,6 +10,7 @@ import { MainHeaderLayout } from './MainHeaderLayout';
 export const CalculatorHeader = ({ data }: { data: any }) => {
   return (
     <MainHeaderLayout
+      className="mb-5"
       title="The calculator you need if you’re raising capital"
       subtitle={
         <>
