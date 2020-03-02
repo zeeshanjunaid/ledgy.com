@@ -14,6 +14,12 @@
     transform: none !important;
   }
 }
+.btn-primary {
+  &:hover {
+    background-color: $deep-blue;
+    border-color: $deep-blue !important;
+  }
+}
 
 .button-disabled {
   pointer-events: none;
@@ -42,6 +48,9 @@
   border-radius: 0;
   &:first-of-type {
     border-radius: $border-radius 0 0 $border-radius;
+  }
+  &:not(:first-child) {
+    margin-left: -1px;
   }
   &:last-of-type {
     border-radius: 0 $border-radius $border-radius 0;
