@@ -97,7 +97,7 @@ export const getNavbarLinks = () => {
       'help',
       <Trans>Help</Trans>,
       <Trans>
-        Check out our help center to resolve your doubts about equity and how to use Ledgy
+        Check out our help center to resolve your doubts about equity and how to use Ledgy.
       </Trans>
     ],
     [
@@ -121,8 +121,18 @@ export const getNavbarLinks = () => {
   ];
 
   const pricing = [
-    ['pricing-companies', <Trans>For Companies</Trans>],
-    ['pricing-investors', <Trans>For Investors</Trans>]
+    [
+      'pricing-companies',
+      <Trans>For Companies</Trans>,
+      <Trans>Find the perfect plan for your company’s stage and requirements.</Trans>
+    ],
+    [
+      'pricing-investors',
+      <Trans>For Investors</Trans>,
+      <Trans>
+        Get our special package for business angels, professional investors, or a VC funds.
+      </Trans>
+    ]
   ];
 
   const dataProtection = [['data-protection', <Trans>Learn about security</Trans>]];
