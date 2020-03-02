@@ -130,6 +130,7 @@
   background: $white;
   position: relative;
   border-radius: $border-radius;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
   max-width: 450px;
   @include media-breakpoint-up(sm) {
     max-width: 500px;
