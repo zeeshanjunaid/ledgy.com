@@ -15,7 +15,7 @@ export const getCompanyFeaturePricing = () => [
   {
     text: <Trans>Electronic signatures</Trans>,
     startup: false,
-    scaleup: <Trans>standard €1 / signature</Trans>,
+    scaleup: <Trans>standard €2 / signature</Trans>,
     enterprise: <Trans>qualified €3 / signature</Trans>
   },
   { text: <Trans>Document templating</Trans>, startup: false, scaleup: false },
