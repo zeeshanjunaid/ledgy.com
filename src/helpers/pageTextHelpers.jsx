@@ -51,7 +51,13 @@ export const getCompanyFeaturePricing = () => [
   },
   { text: <Trans>Onboarding data audit</Trans>, startup: false, scaleup: false },
   { text: <Trans>Dedicated account manager</Trans>, startup: false, scaleup: false },
-  { text: <Trans>SLA</Trans>, startup: false, scaleup: false }
+  { text: <Trans>SLA</Trans>, startup: false, scaleup: false },
+  {
+    text: <Trans>Signatures & templating</Trans>,
+    startup: <Trans>Soon...</Trans>,
+    scaleup: <Trans>Soon...</Trans>,
+    enterprise: <Trans>Soon...</Trans>
+  }
 ];
 
 export const getInvestorFeaturePricing = () => ({
