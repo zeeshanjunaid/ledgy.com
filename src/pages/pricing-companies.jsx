@@ -204,12 +204,12 @@ export default withI18n()(({ i18n, data }: Props) => {
 export const pageQuery = graphql`
   query {
     startupIcon: imageSharp(fluid: { originalName: { regex: "/startup-icon.png/" } }) {
-      fixed(height: 100) {
+      fixed(height: 80) {
         ...GatsbyImageSharpFixed
       }
     }
     scaleupIcon: imageSharp(fluid: { originalName: { regex: "/scaleup-icon.png/" } }) {
-      fixed(height: 140) {
+      fixed(height: 115) {
         ...GatsbyImageSharpFixed
       }
     }
