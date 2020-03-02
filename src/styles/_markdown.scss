@@ -8,6 +8,7 @@ $markdown-container-width: 720px;
 
 .markdown {
   max-width: $markdown-container-width;
+  font-weight: 300;
 
   font-size: $markdown-font-size;
   h1 { font-size: 1.16 * $markdown-font-size; }
