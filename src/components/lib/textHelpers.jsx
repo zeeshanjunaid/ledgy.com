@@ -96,42 +96,55 @@ export const getNavbarLinks = () => {
     [
       'help',
       <Trans>Help</Trans>,
-      <Trans>
-        Check out our help center to resolve your doubts about equity and how to use Ledgy.
-      </Trans>
+      <Trans>Get started quickly with Ledgy or dive deeper into how the features work</Trans>
     ],
     [
       'blog',
       <Trans>Blog</Trans>,
       <Trans>
-        Detailed explanations about topics concerning equity management, employee engagement,
-        investor relations, and more.
+        Background stories about equity topics, founder and investor interviews and more to explore
       </Trans>
     ],
     [
       'webinars',
       <Trans>Webinars</Trans>,
-      <Trans>Our collection of Ledgy webinars addressing the most requested topics.</Trans>
+      <Trans>
+        Regular short webinars give a quick introduction in many equity and Ledgy related topics
+      </Trans>
     ],
     [
-      'partners',
-      <Trans>Lawyer Partners</Trans>,
-      <Trans>Discover what law firms we cooperate with and how they empower Ledgy.</Trans>
-    ]
+      'customer-stories',
+      <Trans>Customer Stories</Trans>,
+      <Trans>Learn what Ledgy’s customers have to say</Trans>
+    ],
+    [
+      'calculator',
+      <Trans>Funding Round Calculator</Trans>,
+      <Trans>The calculator you need if you’re raising capital, no signup required</Trans>
+    ],
+    [
+      'employee-participation-plan-templates',
+      <Trans>ESOP Templates</Trans>,
+      <Trans>
+        Access employee participation plan templates developed with leading law firms for free
+      </Trans>
+    ],
+    ['partners', <Trans>Law Partners</Trans>, <Trans>These law firms work with Ledgy</Trans>]
   ];
 
   const pricing = [
     [
       'pricing-companies',
       <Trans>For Companies</Trans>,
-      <Trans>Find the perfect plan for your company’s stage and requirements.</Trans>
+      <Trans>
+        Free for early-stage startups and powerful for scaling companies, choose the plan that suits
+        your company
+      </Trans>
     ],
     [
       'pricing-investors',
       <Trans>For Investors</Trans>,
-      <Trans>
-        Get our special package for business angels, professional investors, or a VC funds.
-      </Trans>
+      <Trans>Free for business angels, powerful for professional investors</Trans>
     ]
   ];
 
