@@ -113,6 +113,8 @@ export const DropdownFollowAlong = (props: LayoutProps) => {
   const disappear = () => {
     setShowText(false);
     setFloatingBackground(false);
+    const triggered = document.querySelector('.trigger-enter');
+    if (triggered) triggered.classList.remove('trigger-enter');
   };
 
   const eventHandlingProps = {
