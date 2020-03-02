@@ -43,7 +43,7 @@ const PricingCol = ({
         <>
           <Img {...icon} />
           <h3 className="py-2 mt-1">{name}</h3>
-          <div>{price}</div>
+          <div className="text-wrap">{price}</div>
         </>
       )}
     </div>
@@ -88,7 +88,7 @@ export default withI18n()(({ i18n, data }: Props) => {
   );
 
   const StartupCol = (
-    <PricingCol icon={data.startupIcon} name={STARTUP} price={<Trans>free</Trans>}>
+    <PricingCol icon={data.startupIcon} name={STARTUP} price={<Trans>Free</Trans>}>
       {featurePricing.map(({ startup = true }, i) => (
         <PricingColChildren prop={startup} key={i + 100} />
       ))}

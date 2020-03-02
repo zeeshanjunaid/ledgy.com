@@ -55,7 +55,7 @@ export default withI18n()(({ i18n }: Props) => {
         <div className="row justify-content-center">
           <InvestorTypeCard
             type={<Trans>Business Angel</Trans>}
-            price={<Trans>free</Trans>}
+            price={<Trans>Free</Trans>}
             features={angelFeatures}
             button={
               <Button inverted href={`${appUrl}/signup`}>
@@ -66,7 +66,7 @@ export default withI18n()(({ i18n }: Props) => {
           <InvestorTypeCard
             highlight
             type={<Trans>Fund</Trans>}
-            price={<Trans>contact us</Trans>}
+            price={<Trans>Contact us</Trans>}
             features={fundFeatures}
             button={
               <Button href="mailto:contact@ledgy.com?subject=Ledgy investors - Fund plan inquiry">
