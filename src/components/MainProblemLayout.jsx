@@ -32,7 +32,7 @@ export const MainProblemLayout = withI18n()(
             <p className="text-lg my-4">
               <DynamicTrans>{description}</DynamicTrans>
             </p>
-            <div className="px-md-4 px-lg-7 px-xl-9">
+            <div className="px-4 px-sm-6 px-lg-7 px-xl-9">
               <Img {...image.localFile.childImageSharp} />
             </div>
           </div>
