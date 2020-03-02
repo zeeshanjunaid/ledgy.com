@@ -207,9 +207,9 @@ $deco-dot-size: 8px;
 
 // Pricing
 @mixin pricing-border {
-  border: 3px solid;
+  border: 2px solid;
   border-color: $gray-200;
-  border-radius: $border-radius;
+  border-radius: $border-radius * 5;
 }
 
 .pricing-col {
@@ -219,6 +219,9 @@ $deco-dot-size: 8px;
   &:not(:first-of-type) {
     @include pricing-border;
   }
+}
+.pricing-col.border-energetic-blue {
+  border: 4px solid;
 }
 
 .pricing-plan {
