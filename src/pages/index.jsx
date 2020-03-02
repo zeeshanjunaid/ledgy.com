@@ -23,7 +23,6 @@ const IndexPage = (props: Props) => (
 
     {props.data.page.entries.map(({ __typename, id, ...entry }, index) => {
       const { prefix } = props;
-      console.log({ id });
 
       if (index === 0) {
         return <MainProblemLayout key={id} {...entry} />;
