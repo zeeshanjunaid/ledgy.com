@@ -49,7 +49,6 @@
       analytics.load('mfLUo1gAa0xfzIR2xANV10NG8qN1IZnu', {
         integrations: {
           All: false,
-          'Segment.io': true,
           'Google Analytics': true,
           HubSpot: true,
           Hotjar: true
