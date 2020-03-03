@@ -9,7 +9,7 @@ fi
 npm rebuild sharp node-sass
 gatsby build
 
-if [ "$BRANCH" = "LG-1115/rebranding" ]; then
+if [ "$REVIEW_ID" = "289" ]; then
   npm run extract
   cd src/locale/en
   cat dynamic.po >> messages.po
