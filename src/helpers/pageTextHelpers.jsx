@@ -7,23 +7,11 @@ export const getCompanyFeaturePricing = () => [
   { text: <Trans>Swiss privacy & security</Trans> },
   { text: <Trans>Cap table</Trans> },
   { text: <Trans>Basic reporting</Trans> },
-  { text: <Trans>Branded reporting</Trans>, startup: false },
   { text: <Trans>Basic modeling</Trans> },
+  { text: <Trans>Branded reporting</Trans>, startup: false },
   { text: <Trans>Advanced modeling</Trans>, startup: false },
   { text: <Trans>Equity plans</Trans>, startup: false },
   { text: <Trans>Employee dashboard</Trans>, startup: false, scaleup: false },
-  {
-    text: <Trans>Electronic signatures</Trans>,
-    startup: false,
-    scaleup: <Trans>Coming soon</Trans>,
-    enterprise: <Trans>Coming soon</Trans>
-  },
-  {
-    text: <Trans>Document templating</Trans>,
-    startup: false,
-    scaleup: false,
-    enterprise: <Trans>Coming soon</Trans>
-  },
   {
     text: <Trans>Data rooms</Trans>,
     startup: <Trans>50 MB</Trans>,
@@ -53,10 +41,16 @@ export const getCompanyFeaturePricing = () => [
   { text: <Trans>Dedicated account manager</Trans>, startup: false, scaleup: false },
   { text: <Trans>SLA</Trans>, startup: false, scaleup: false },
   {
-    text: <Trans>Signatures & templating</Trans>,
-    startup: <Trans>Soon...</Trans>,
-    scaleup: <Trans>Soon...</Trans>,
-    enterprise: <Trans>Soon...</Trans>
+    text: <Trans>Document templating</Trans>,
+    startup: false,
+    scaleup: false,
+    enterprise: <Trans>Coming soon</Trans>
+  },
+  {
+    text: <Trans>Electronic signatures</Trans>,
+    startup: false,
+    scaleup: <Trans>Coming soon</Trans>,
+    enterprise: <Trans>Coming soon</Trans>
   }
 ];
 
