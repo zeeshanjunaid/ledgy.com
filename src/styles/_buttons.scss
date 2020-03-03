@@ -21,6 +21,10 @@
   }
 }
 
+.btn-light:hover {
+  background-color: darken($white, 0.1);
+}
+
 .button-disabled {
   pointer-events: none;
   opacity: 0.5;
