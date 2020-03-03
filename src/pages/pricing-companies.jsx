@@ -136,7 +136,7 @@ export default withI18n()(({ i18n, data }: Props) => {
     </PricingCol>
   );
   const title = i18n.t`Pricing`;
-  const description = i18n.t`Companies at different stages have very different needs. Consider access rights storage, support needs, and more when selecting your ideal plan.`;
+  const description = i18n.t`Companies at different stages have very different needs. Consider access rights, storage, support needs, and more when selecting your ideal plan.`;
   return (
     <>
       <Title title={title} description={description} />

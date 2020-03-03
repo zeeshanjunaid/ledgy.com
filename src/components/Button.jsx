@@ -15,7 +15,7 @@ export const Button = ({
   disabled = false,
   type = 'button',
   ...buttonProps
-}: {
+}: {|
   children: Node,
   outline?: boolean,
   cta?: boolean,
@@ -26,7 +26,7 @@ export const Button = ({
   id?: string,
   disabled?: boolean,
   type?: string
-}) => {
+|}) => {
   const color =
     (cta && 'btn-red') ||
     (inverted && outline && 'btn-light border border-primary') ||
