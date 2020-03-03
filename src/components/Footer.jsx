@@ -82,13 +82,13 @@ export const Footer = ({ location, ...props }: LayoutProps) => {
               </FooterColBody>
             </FooterCol>
             <FooterCol order={1} wide>
-              <div className="footer--logo-section d-flex flex-column justify-content-between mt-5 mt-md-0 pb-5">
+              <div className="footer--logo-section d-flex flex-column justify-content-between mt-5 mt-md-0">
                 <div className="d-flex flex-column align-items-center p-0 px-md-4">
                   <Link href to={`${props.prefix}/#start`} className="mb-2 mb-md-4">
                     <img src={logoInvertedCompact} width={80} alt={name} />
                   </Link>
                   <div className="py-lg-4">
-                    <SignupModal {...props} />
+                    <SignupModal {...props} buttonClass="w-100" />
                     <Dropdown
                       toggleText={<Trans>Language</Trans>}
                       toggleIcon={faGlobeEurope}
