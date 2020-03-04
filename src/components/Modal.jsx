@@ -31,7 +31,10 @@ export const Modal = ({
     ? ReactDOM.createPortal(
         <CSSTransition in={isOpen} timeout={400} classNames="modal-transition" unmountOnExit>
           <div className="modal-wrapper" onClick={e => closeWithOutsideClick(e, close)}>
-            <div className="modal-custom my-7 mx-auto" onClick={e => e.stopPropagation()}>
+            <div
+              className="modal-custom mt-2 mb-7 mx-2 my-sm-7 mx-sm-auto"
+              onClick={e => e.stopPropagation()}
+            >
               <div className="modal-header-custom d-flex justify-content-between align-items-center bg-primary text-white px-4 py-3">
                 <h5 className="m-0">{title}</h5>
                 <Button className="modal-close" onClick={close}>
