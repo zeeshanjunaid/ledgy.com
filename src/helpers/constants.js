@@ -33,7 +33,7 @@ export const FORM_STATES = Object.freeze({
 // plan names
 export const LEDGY_PLANS = Object.freeze({
   STARTUP: 'Startup',
-  SCALEUP: 'Scaleup',
+  SCALEUP: 'Premium', // will be named Scaleup soon
   ENTERPRISE: 'Enterprise'
 });
 
