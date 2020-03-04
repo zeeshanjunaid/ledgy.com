@@ -12,3 +12,7 @@ const DynamicTransComponent = ({ children: text }: {| children: string |}) => {
 };
 
 export const DynamicTrans = withI18n()(DynamicTransComponent);
+export const dynamicI18n = (i18n: I18n) => (text: string): string => {
+  addTranslation(text);
+  return i18n._(text);
+};

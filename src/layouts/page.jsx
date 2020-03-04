@@ -2,17 +2,22 @@
 
 import React from 'react';
 import { graphql } from 'gatsby';
+import { withI18n } from '@lingui/react';
+
 import { PublishDate } from '../components/Content';
 import { Author } from '../components/Markdown';
 import { LongText } from '../components/LongText';
-import { DefaultHeader, CalculatorHeader } from '../components/Header';
+import { PageHeader } from '../components/PageHeader';
+import { CalculatorHeader } from '../components/CalculatorHeader';
+import { dynamicI18n } from '../components/DynamicTrans';
 import { Title } from '../layouts/utils';
 
 const CALCULATOR_SLUG = 'calculator';
 
-export default ({
+const page = ({
   data,
   lang,
+  i18n,
   prefix
 }: {|
   ...Props,
@@ -21,31 +26,36 @@ export default ({
   const { slug, title, description, language, content, author, date, cover } = data.contentfulPage;
   const { siteUrl } = data.site.siteMetadata;
   const showCalculatorHeader = slug === CALCULATOR_SLUG;
+  const t = dynamicI18n(i18n);
 
   return (
     <div>
       <Title
-        title={title}
-        description={description}
+        title={t(title)}
+        description={t(description)}
         thumbnailUrl={cover ? `${siteUrl}${cover.localFile.childImageSharp.fixed.src}` : ''}
       />
       {showCalculatorHeader ? (
         <CalculatorHeader data={data} />
       ) : (
-        <DefaultHeader lang={lang} documentLang={language} title={title} />
+        <PageHeader
+          lang={lang}
+          documentLang={language}
+          title={t(title)}
+          subtitle={t(description)}
+          textCenter
+        />
       )}
-      <main className="main-content">
-        <section className="section">
-          <div className="container container-small">
-            <LongText content={content} />
-            <PublishDate date={date} />
-            {author && <Author prefix={prefix} name={author} />}
-          </div>
-        </section>
-      </main>
+      <div className="container container-small">
+        <LongText content={content} />
+        <PublishDate date={date} />
+        {author && <Author prefix={prefix} name={author} />}
+      </div>
     </div>
   );
 };
+
+export default withI18n()(page);
 
 export const pageQuery = graphql`
   query($id: String!) {

@@ -1,0 +1,493 @@
+
+.container {
+  @include media-breakpoint-up(xl) {
+    max-width: 1050px;
+  }
+   @media screen and (min-width: 1440px) {
+    max-width: 1200px;
+  }
+}
+
+// Home Banner
+.home-banner {
+  min-height: 80vh;
+}
+
+.home-banner h1 {
+  font-weight: bold;
+  @include media-breakpoint-up(lg) {
+    font-size: $huge-font-size;
+  }
+}
+
+.home-banner h1, .banner-text {
+  max-width: 500px;
+}
+
+.banner-text {
+  line-height: 1.8rem;
+  hyphens: none;
+  @include media-breakpoint-up(xl) {
+    line-height: 2rem;
+  }
+}
+
+// Footer
+.footer {
+  height: 70rem;
+  @include media-breakpoint-up(sm) {
+    height: 60rem;
+  }
+  @include media-breakpoint-up(md) {
+    height: 45rem;
+    &--logo-section {
+     height: 100%;
+    }
+  }
+  .nav-link {
+    color: $white;
+    padding-left: 0;
+    transform: translateX(0px);
+    transition: 300ms;
+    &:hover {
+      color: $vibrant-green;
+      transition: 300ms;
+      transform: translateX(-2px);
+    }
+  }
+  .social-icon {
+    font-size: 25px;
+  }
+}
+
+// Forms
+.form-error-message {
+  bottom: -30px;
+  left: 25px;
+}
+
+.form-control::placeholder {
+  color: $gray-400;
+}
+
+// Custom underline
+.custom-underline u {
+  text-decoration: none;
+  position: relative;
+  white-space: nowrap;
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 6px;
+    width: 100%;
+    background-color: $vibrant-green;
+    border-radius: $border-radius;
+    z-index: -1;
+  }
+}
+
+// Custom animated underline
+.deco-link {
+  position: relative;
+  font-weight: 400;
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    opacity: 0;
+    transition: 300ms;
+    transform: scale(0,1);
+    background-color: $vibrant-green;
+    border-radius: $border-radius;
+    z-index: -1;
+  }
+  &:hover:after {
+    opacity: 1;
+    transform: scale(1);
+  }
+  @include media-breakpoint-up(md) {
+    white-space: nowrap;
+  }
+}
+
+// Modal
+.modal-wrapper {
+  position: fixed;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.95);
+  z-index: $zindex-popup;
+}
+
+.modal-custom {
+  background: $white;
+  position: relative;
+  border-radius: $border-radius;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  max-width: 450px;
+  @include media-breakpoint-up(sm) {
+    max-width: 500px;
+  }
+  @include media-breakpoint-up(lg) {
+    max-width: 550px;
+  }
+  & > .modal-header-custom  {
+    border-radius: $border-radius $border-radius 0 0;
+  }
+}
+
+.modal-close {
+  font-size: 24px;
+  padding: 15px !important;
+  line-height: 13px;
+  border: none;
+  border-radius: 50%;
+  &:hover {
+    background-color: $gray-300;
+    color: $gray-600;
+  }
+}
+
+.modal-close.btn-primary:not(:disabled):not(.disabled):active,
+.modal-close.btn-primary:focus {
+  background-color: $gray-400 !important;
+  color: $gray-700 !important;
+}
+
+.modal-transition-enter {
+  opacity: 0;
+}
+.modal-transition-enter-active {
+  opacity: 1;
+  transition: opacity 400ms ease-in;
+}
+.modal-transition-exit {
+  opacity: 1;
+}
+.modal-transition-exit-active {
+  opacity: 0;;
+  transition: opacity 400ms ease-in;
+}
+
+// Feature
+$deco-dot-size: 8px;
+
+.feature-title-decoration,
+.feature-list-item-decoration {
+  position: relative;
+  margin-left: 30px;
+  &::before {
+    content: '';
+    position: absolute;
+    width: $deco-dot-size;
+    border-radius: 3px;
+    background-color: $deep-blue;
+    left: -25px;
+  }
+}
+
+.feature-title-decoration::before {
+  top: 50%;
+  transform: translateY(-50%);
+  height: 80%;
+}
+
+.feature-list-item-decoration::before {
+  top: 11px;
+  height: $deco-dot-size;
+}
+
+// Selling prop
+.selling-prop {
+  margin-top: 5rem;
+  &:not(:last-of-type) {
+    margin-bottom: 5rem;
+  }
+}
+
+// Pricing
+@mixin pricing-border {
+  border: 2px solid;
+  border-color: $gray-200;
+  border-radius: $border-radius * 5;
+}
+
+.pricing-col {
+  flex: 1;
+  margin: 0 0.5rem;
+  overflow: scroll;
+  &:not(:first-of-type) {
+    @include pricing-border;
+  }
+}
+.pricing-col.border-energetic-blue {
+  border: 4px solid;
+}
+
+.pricing-plan {
+  height: 210px;
+  &.Scaleup {
+    height: 250px;
+  }
+  &.Enterprise {
+    height: 300px;
+  }
+  @include media-breakpoint-up(lg) {
+    height: 300px !important;
+  }
+}
+
+.investor-pricing-plan {
+  @include pricing-border;
+  li {
+    height: 2.8rem;
+  }
+  &.border-energetic-blue {
+    border: 4px solid;
+  }
+}
+
+
+// Testimonials
+.avatar {
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+}
+
+.testimonial {
+  line-height: 1.8;
+  small {
+    font-weight: 300;
+    &::before {
+      content: '\2014';
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.testimonial-description::before {
+  content: '“';
+  margin-left: -13px;
+  padding-right: 4px;
+}
+.testimonial-description::after {
+  content: '”';
+  margin-right: -13px;
+  padding-left: 4px;
+}
+
+.testimonial-description::before,
+.testimonial-description::after {
+  font-size: 1.5rem;
+  line-height: 1;
+  opacity: .5;
+}
+
+
+// Publicity banner
+
+.publicity-banner {
+  bottom: 18px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 999;
+  width: 60vw;
+  box-shadow: 0 5px 4px 0 rgba(0,0,0,.26);
+  @include media-breakpoint-up(md) {
+    width: 80vw;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.publicity-banner--button {
+  font-size: 20px;
+  line-height: 10px;
+  transition: 200ms;
+  top: 0;
+  right: 0;
+  color: $gray-700;
+  @include media-breakpoint-up(lg) {
+    top: 25%;
+    transform: translate(0, -50%);
+    right: 8px;
+  }
+  &:hover {
+    background: $gray-100 !important;
+    transition: 200ms;
+  }
+}
+
+// Customer stories
+.customer-story-section {
+  margin-bottom: 10rem;
+}
+
+.other-customer-stories-section {
+  border-top: 1px solid $gray-200;
+}
+
+.company-summary {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  top: calc(#{$navbar-min-height} + 15px);
+  z-index: $zindex-company-summary;
+}
+
+.company-summary-logo {
+  max-width: 120px;
+}
+
+.company-summary-quote {
+  font-style: italic;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+// Newsletter
+.newsletter {
+  max-width: 600px;
+}
+
+// Calculator
+.calculator {
+  margin-top: 15%;
+  @include media-breakpoint-up(lg) {
+    width: 110%;
+  }
+}
+
+.calculator-video {
+  width: 90vw;
+  height: 210px;
+  @include media-breakpoint-up(md) {
+    height: 315px;
+    width: 560px;
+  }
+}
+
+.calculator-banner h1 {
+  max-width: 800px;
+}
+
+// About
+.ledgista-profile {
+  .gatsby-image-wrapper {
+    max-width: 245px;
+  }
+  .ledgista-text {
+    height: calc(100% - 245px);
+  }
+  &:not(:last-of-type) {
+    margin-bottom: 3rem;
+  }
+  .social-icon {
+    font-size: 20px;
+  }
+}
+
+.about {
+  border-top: 1px solid $gray-200;
+  h5 {
+    line-height: 0.6;
+  }
+  .gatsby-image-wrapper {
+    width: 85px;
+  }
+}
+
+// Card
+.card-blog {
+  min-height: 250px;
+  & .gatsby-image-wrapper {
+    position: static !important;
+  }
+}
+
+.accordion > .card {
+  border: 1px solid $gray-300 !important;
+  border-radius: $border-radius !important;
+}
+
+// Partners
+.partner-card {
+  height: 200px;
+  max-width: 250px;
+  overflow: hidden;
+  border-radius: 5px;
+  a {
+    font-size: 0.75rem;
+  }
+  img {
+    object-fit: unset !important;
+  }
+}
+
+.partner-usp li {
+  line-height: 2rem;
+}
+
+// Product hunt
+.product-hunt-logo {
+  width: 180px;
+}
+
+// Signatories
+#signatories-coming-soon {
+  .gatsby-image-wrapper {
+    width: 100%;
+    min-width: 300px;
+    max-width: 1000px;
+  }
+}
+
+// Social icons
+.social-icon {
+  opacity: 0.75;
+  color: $gray-500;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+// Help page
+.help-col {
+  transition: 200ms !important;
+  & a, a:hover {
+    transition: none;
+  }
+}
+
+.help-card {
+  padding: 30px 30px 30px 20px;
+  height: 100%;
+  overflow: hidden;
+  border-radius: $border-radius;
+  transition: 200ms;
+  & svg, > p {
+    transition: 200ms;
+  }
+  &:hover {
+    transition: 200ms;
+    box-shadow: 0 2px 3px 2px rgba(0,0,0,.06);
+    svg {
+      color: $vibrant-green !important;
+      transition: 200ms;
+    }
+    p {
+      color: $deep-blue !important;
+      transition: 200ms;
+    }
+  }
+}

@@ -1,67 +1,58 @@
 // @flow
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'gatsby';
-import { Trans } from '@lingui/react';
+import { CSSTransition } from 'react-transition-group';
 
-import { name, appUrl, track } from '../helpers';
-import logoDefault from '../img/logo_black.png';
-import logoInverse from '../img/logo_white.png';
+import { name } from '../helpers';
+import logoInverted from '../img/logo-inverted.png';
 
-const Logo = (props: { prefix: string, inverse: boolean }) => (
-  <Link href to={`${props.prefix}/#start`} className="navbar-brand">
-    <img className="logo-dark" src={logoDefault} width={100} height={40} alt={name} />
-    {props.inverse && (
-      <img className="logo-light" src={logoInverse} width={100} height={40} alt={name} />
-    )}
+import { toggleOverlay } from './lib';
+import { Button } from './Button';
+import { NavbarButtons } from './NavbarButtons';
+import { DropdownFollowAlong } from './DropdownFollowAlong';
+import { MobileNavbar } from './MobileNavbar';
+
+const Logo = (props: { prefix: string }) => (
+  <Link href to={`${props.prefix}/#start`}>
+    <img className="navbar-logo" src={logoInverted} alt={name} />
   </Link>
 );
 
-const navbarLinks = () => [
-  [<Trans>Features</Trans>, 'features'],
-  [<Trans>Pricing</Trans>, 'pricing'],
-  [<Trans>Partners</Trans>, 'partners'],
-  [<Trans>Help</Trans>, 'help'],
-  [<Trans>Blog</Trans>, 'blog']
-];
+export const Nav = (props: LayoutProps) => {
+  const [isOpen, setOpen] = useState(false);
+  return (
+    <>
+      <nav className="navbar bg-primary sticky-top p-0">
+        <div className="container flex-nowrap">
+          <Logo {...props} />
 
-export const Nav = (props: LayoutProps) => (
-  <nav className="navbar navbar-expand-lg navbar-light navbar-stick-dark" data-navbar="sticky">
-    <div className="container flex-nowrap">
-      <div className="navbar-left">
-        <button className="navbar-toggler">&#9776;</button>
-        <Logo {...props} inverse />
-      </div>
-
-      <section className="navbar-mobile">
-        <h6 className="d-sm-none">Ledgy</h6>
-        <nav className="nav nav-navbar ml-auto">
-          {navbarLinks().map(([label, to]) => (
-            <Link className="nav-link" key={to} href to={`${props.prefix}/${to}/`}>
-              {label}
-            </Link>
-          ))}
-        </nav>
-
-        <span className="navbar-divider" />
-      </section>
-
-      <div className="navbar-right">
-        <a
-          className="btn btn-round btn-outline-light mx-2"
-          href={`${appUrl}/login`}
-          onClick={() => track('click.login')}
-        >
-          <Trans>Log In</Trans>
-        </a>
-        <a
-          className="btn btn-round btn-light ml-lg-0 mr-2"
-          href={`${appUrl}/signup`}
-          onClick={() => track('click.signup')}
-        >
-          <Trans>Sign up</Trans>
-        </a>
-      </div>
-    </div>
-  </nav>
-);
+          <div className="desktop-navbar">
+            <DropdownFollowAlong {...props} />
+            <NavbarButtons className="justify-content-end ml-2 ml-lg-4" />
+          </div>
+          <Button
+            id="mobile-navbar-toggler"
+            className={isOpen ? 'open' : ''}
+            onClick={() => toggleOverlay(isOpen, setOpen)}
+          >
+            <span /> <span /> <span /> <span />
+          </Button>
+          <CSSTransition
+            in={isOpen}
+            timeout={750}
+            classNames="mobile-navbar-transition"
+            unmountOnExit
+          >
+            <MobileNavbar
+              isOpen={isOpen}
+              setOpen={setOpen}
+              toggleOverlay={toggleOverlay}
+              prefix={props.prefix}
+            />
+          </CSSTransition>
+        </div>
+      </nav>
+    </>
+  );
+};

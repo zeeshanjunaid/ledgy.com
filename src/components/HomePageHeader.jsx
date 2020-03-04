@@ -6,8 +6,8 @@ import { Trans } from '@lingui/react';
 import Img from 'gatsby-image';
 import sample from 'lodash/sample';
 
-import { targetBlank, appUrl, isBrowser } from '../helpers';
-import { HeaderLayout } from './HeaderLayout';
+import { appUrl, isBrowser } from '../helpers';
+import { MainHeaderLayout } from './MainHeaderLayout';
 import { RequestDemoModal } from './RequestDemoModal';
 
 const languageKeys = {
@@ -74,12 +74,15 @@ export const HomePageHeader = ({ i18n, data, lang }: Props) => {
   }, []);
 
   const buttonTwo = {
-    props: { href: `${appUrl}/signup`, ...targetBlank },
+    props: {
+      href: `${appUrl}/signup`,
+      cta: true
+    },
     text: <Trans>Get Started Free</Trans>
   };
 
   return (
-    <HeaderLayout
+    <MainHeaderLayout
       title={title}
       subtitle={subtitle}
       buttonOne={{ modal: <RequestDemoModal />, props: {}, text: '' }}

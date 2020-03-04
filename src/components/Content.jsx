@@ -6,24 +6,8 @@ import Img from 'gatsby-image';
 
 import { CardLink } from './CardLink';
 
-export const ContentHeader = ({ title }: {| title: string |}) => (
-  <header className="header text-white bg-ledgy">
-    <div className="container text-center">
-      <div className="row">
-        <div className="col-12 col-lg-8 offset-lg-2">
-          <h1>{title}</h1>
-        </div>
-      </div>
-    </div>
-  </header>
-);
-
 export const ContentBody = ({ children }: {| children: Node | Array<Node> |}) => (
-  <main className="main-content">
-    <section className="section">
-      <div className="container">{children}</div>
-    </section>
-  </main>
+  <div className="container">{children}</div>
 );
 
 export const PostLink = ({
@@ -50,6 +34,7 @@ export const PostLink = ({
   return (
     <CardLink
       title={title}
+      type="blog"
       description={description}
       date={date}
       to={to}
@@ -72,6 +57,11 @@ export const CoverImageFragment = graphql`
   }
 `;
 
-export const PublishDate = ({ date }: {| date?: string |}) => (
-  <div className="d-flex py-4">{date && <small>{date}</small>}</div>
-);
+export const PublishDate = ({ date }: {| date?: string |}) =>
+  date ? (
+    <div className="d-flex py-4 justify-content-center">
+      <div className="markdown-width">
+        <small>{date}</small>
+      </div>
+    </div>
+  ) : null;

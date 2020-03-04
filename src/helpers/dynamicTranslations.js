@@ -14,6 +14,7 @@ if (!isBrowser) {
       return `#: dynamic\nmsgid "${escapedText}"\nmsgstr "${escapedText}"\n\n`;
     });
     const poFile = 'src/locale/en/dynamic.po';
+    // eslint-disable-next-line no-console
     console.log(`Writing ${poFile}`);
     fs.appendFileSync(poFile, po.join(''));
   });

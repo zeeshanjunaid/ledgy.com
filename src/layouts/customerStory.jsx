@@ -4,7 +4,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import { LongText } from '../components/LongText';
-import { DefaultHeader } from '../components/Header';
+import { PageHeader } from '../components/PageHeader';
 import { CompanySummary, OtherCustomerStories } from '../components/customerStories';
 import { Title } from '../layouts/utils';
 
@@ -27,7 +27,7 @@ export default ({
   return (
     <div>
       <Title title={title} description={subtitle} />
-      <DefaultHeader lang={lang} documentLang={language} title={title} subtitle={subtitle} />
+      <PageHeader lang={lang} documentLang={language} title={title} subtitle={subtitle} />
       <main className="main-content">
         <section className="section ">
           <div className="container container-medium">
@@ -73,13 +73,12 @@ export const pageQuery = graphql`
         contactName
         contactTitle
         logo {
-          fluid(maxWidth: 150) {
-            ...GatsbyContentfulFluid_withWebp
-          }
-        }
-        cover {
-          fluid(maxWidth: 150) {
-            ...GatsbyContentfulFluid_withWebp
+          localFile {
+            childImageSharp {
+              fluid(maxWidth: 150) {
+                ...GatsbyImageSharpFluid
+              }
+            }
           }
         }
         mainQuote {
@@ -101,13 +100,21 @@ export const pageQuery = graphql`
           slug
           company {
             logo {
-              fluid(maxWidth: 150) {
-                ...GatsbyContentfulFluid_withWebp
+              localFile {
+                childImageSharp {
+                  fluid(maxWidth: 150) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
               }
             }
             cover {
-              fluid(maxWidth: 150) {
-                ...GatsbyContentfulFluid_withWebp
+              localFile {
+                childImageSharp {
+                  fluid(maxWidth: 150) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
               }
             }
           }

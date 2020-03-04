@@ -5,81 +5,46 @@ import { Link } from 'gatsby';
 import { Trans } from '@lingui/react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import {
-  faTwitter,
-  faFacebook,
-  faLinkedin,
-  faAngellist,
-  faYoutube
-} from '@fortawesome/free-brands-svg-icons';
+import { faGlobeEurope } from '@fortawesome/free-solid-svg-icons';
+
 import { name, targetBlank } from '../helpers';
 import { deprefix } from '../i18n-config';
 
-import '../assets/scss/page.scss';
+import logoInvertedCompact from '../img/logo-inverted-compact.png';
 
-import Modal from '../components/Modal';
-import logoInverse from '../img/logo_white.png';
-import SignupForm from '../components/SignupForm';
-import { CTABanner } from '../components/CTABanner';
+import { CTABanner } from './CTABanner';
+import { Dropdown } from './Dropdown';
+import { SignupModal } from './SignupModal';
+import { getFooterLinks } from './lib';
 
-const FooterCol = ({
-  order,
+const FooterCol = ({ order, children }: { order: number, children: Node }) => (
+  <div className={`col-6 col-md-3 order-md-${order}`}>{children}</div>
+);
+
+const FooterColBody = ({
+  title,
   children,
-  wide
+  className = ''
 }: {
-  order: number,
-  children: Node,
-  wide?: boolean
-}) => <div className={`col-${wide ? 12 : 6} col-md-2 pl-6 order-md-${order}`}>{children}</div>;
-
-const FooterColBody = ({ title, children }: { title: Node, children: Array<Node> }) => (
-  <>
-    <h6 className="mb-4 mt-1">
+  title: Node,
+  children: Array<Node>,
+  className?: string
+}) => (
+  <div className={`pl-4 ${className}`}>
+    <h6 className="mb-4">
       <strong>{title}</strong>
     </h6>
     <div className="nav flex-column">{children}</div>
-  </>
+  </div>
 );
-const companyLinks = [
-  [<Trans>About us</Trans>, 'about-us'],
-  [<Trans>Blog</Trans>, 'blog'],
-  [<Trans>Partners</Trans>, 'partners'],
-  [<Trans>Webinars</Trans>, 'webinars'],
-  [<Trans>Security</Trans>, 'security'],
-  [<Trans>Privacy</Trans>, 'privacy'],
-  [<Trans>Career</Trans>, 'jobs'],
-  [<Trans>Contact & Imprint</Trans>, 'contact']
-];
-const helpLinks = [
-  [<Trans>Help Center</Trans>, 'help'],
-  [<Trans>Getting Started</Trans>, 'help/getting-started'],
-  [<Trans>Customer Stories</Trans>, 'customer-stories'],
-  [<Trans>Glossary</Trans>, 'glossary'],
-  [<Trans>ESOP Templates</Trans>, 'employee-participation-plan-templates'],
-  [<Trans>Round Calculator</Trans>, 'calculator']
-];
-const blogLinks = [
-  [<Trans>Option Pools</Trans>, 'blog/pre-and-post-money-option-pools'],
-  [<Trans>Convertible Loans</Trans>, 'blog/convertible-loans'],
-  [<Trans>KPIs & Reports</Trans>, 'updates/kpis-and-reports']
-];
-const productLinks = [
-  [<Trans>Features</Trans>, 'features'],
-  [<Trans>Cap Table</Trans>, 'features/captable'],
-  [<Trans>Modeling</Trans>, 'features/modeling'],
-  [<Trans>Employee Incentives</Trans>, 'features/esop'],
-  [<Trans>Due Diligence</Trans>, 'features/collaboration'],
-  [<Trans>Investors</Trans>, 'features/investors'],
-  [<Trans>Tokenization</Trans>, 'features/tokenization'],
-  [<Trans>Pricing</Trans>, 'pricing']
-];
-const legalLinks = [
-  [<Trans>Terms of Service</Trans>, 'legal/terms'],
-  [<Trans>Privacy Policy</Trans>, 'legal/privacy-policy'],
-  [<Trans>Cookie Policy</Trans>, 'legal/cookie-policy'],
-  [<Trans>GDPR</Trans>, 'legal/gdpr']
-];
+
+const LanguageLink = ({ language, to }: { language: string, to: string }) => (
+  <Link className="d-flex justify-content-center text-primary" to={to} href>
+    {language}
+  </Link>
+);
+
+const { companyLinks, legalLinks, productLinks, resourceLinks, socialLinks } = getFooterLinks();
 
 export const Footer = ({ location, ...props }: LayoutProps) => {
   const isPartners = location.pathname.includes('partners');
@@ -87,142 +52,87 @@ export const Footer = ({ location, ...props }: LayoutProps) => {
   return (
     <div>
       {isPartners ? '' : <CTABanner location={location} {...props} />}
-      <footer className="footer pb-9 pt-7 py-md-7 px-4 text-white">
-        <div className="row gap-y justify-content-md-center">
-          <FooterCol order={2}>
-            <FooterColBody title={<Trans>Company</Trans>}>
-              {companyLinks.map(([label, link]) => (
-                <Link className="nav-link" href to={`${props.prefix}/${link}/`} key={link}>
-                  {label}
-                </Link>
-              ))}
-            </FooterColBody>
-          </FooterCol>
-          <FooterCol order={4}>
-            <FooterColBody title={<Trans>Resources</Trans>}>
-              {helpLinks.map(([label, link]) => (
-                <Link className="nav-link" href to={`${props.prefix}/${link}/`} key={link}>
-                  {label}
-                </Link>
-              ))}
-            </FooterColBody>
-            <FooterColBody title={<Trans>Blog</Trans>}>
-              {blogLinks.map(([label, link]) => (
-                <Link className="nav-link" href to={`${props.prefix}/${link}/`} key={link}>
-                  {label}
-                </Link>
-              ))}
-            </FooterColBody>
-          </FooterCol>
-          <FooterCol order={3}>
-            <FooterColBody title={<Trans>Product</Trans>}>
-              {productLinks.map(([label, link]) => (
-                <Link className="nav-link" href to={`${props.prefix}/${link}/`} key={link}>
-                  {label}
-                </Link>
-              ))}
-            </FooterColBody>
-          </FooterCol>
-          <FooterCol order={5}>
-            <FooterColBody title={<Trans>Legal</Trans>}>
-              {legalLinks.map(([label, link]) => (
-                <Link className="nav-link" href to={`${props.prefix}/${link}/`} key={link}>
-                  {label}
-                </Link>
-              ))}
-            </FooterColBody>
-          </FooterCol>
-          <FooterCol order={1} wide>
-            <Link href to={`${props.prefix}/#start`} className="navbar-brand">
-              <img className="logo-light" src={logoInverse} width={100} height={40} alt={name} />
-            </Link>
-            <div className="social mt-2">
-              {[
-                ['https://www.youtube.com/channel/UCRkvNQptxoE-ckmTsrme1_w', faYoutube, 'YouTube'],
-                ['https://twitter.com/Ledgy', faTwitter, 'Twitter'],
-                ['https://www.linkedin.com/company/Ledgy', faLinkedin, 'LinkedIn'],
-                ['https://www.facebook.com/Ledgy', faFacebook, 'Facebook'],
-                ['https://angel.co/Ledgy', faAngellist, 'AngelList']
-              ].map(([href, icon, title]) => (
-                <a href={href} key={title} {...targetBlank}>
-                  <FontAwesomeIcon icon={icon} title={title} />
-                </a>
-              ))}
-            </div>
-            <div className="newsletter-signup-CTA">
-              <Modal
-                id="newsletter-signup"
-                title={<Trans>Sign up for the Ledgy newsletter</Trans>}
-                buttonText={
-                  <>
-                    <FontAwesomeIcon
-                      className="newsletter-icon mr-2"
-                      icon={faEnvelope}
-                      title="Newsletter"
+      <footer className="footer pt-8 px-2 px-md-4 text-white bg-primary overflow-hidden position-relative">
+        <div className="footer-deco-shape" />
+        <div className="container">
+          <div className="row m-0 h-100 justify-content-md-center position-relative z-index-base">
+            <FooterCol order={2}>
+              <FooterColBody title={<Trans>Company</Trans>}>
+                {companyLinks.map(([label, link]) => (
+                  <Link className="nav-link" href to={`${props.prefix}/${link}/`} key={link}>
+                    {label}
+                  </Link>
+                ))}
+              </FooterColBody>
+              <FooterColBody title={<Trans>Legal</Trans>} className="mt-5">
+                {legalLinks.map(([label, link]) => (
+                  <Link className="nav-link" href to={`${props.prefix}/${link}/`} key={link}>
+                    {label}
+                  </Link>
+                ))}
+              </FooterColBody>
+            </FooterCol>
+            <FooterCol order={3}>
+              <FooterColBody title={<Trans>Resources</Trans>}>
+                {resourceLinks.map(([label, link]) => (
+                  <Link className="nav-link" href to={`${props.prefix}/${link}/`} key={link}>
+                    {label}
+                  </Link>
+                ))}
+              </FooterColBody>
+            </FooterCol>
+            <FooterCol order={1} wide>
+              <div className="footer--logo-section d-flex flex-column justify-content-between mt-5 mt-md-0">
+                <div className="d-flex flex-column align-items-center p-0 px-md-4">
+                  <Link href to={`${props.prefix}/#start`} className="mb-2 mb-md-4">
+                    <img src={logoInvertedCompact} width={80} alt={name} />
+                  </Link>
+                  <div className="py-lg-4">
+                    <SignupModal {...props} buttonClass="w-100" />
+                    <Dropdown
+                      toggleText={<Trans>Language</Trans>}
+                      toggleIcon={faGlobeEurope}
+                      toggleClass="w-100"
+                      toggleProps={{ outline: true }}
+                      items={[
+                        <LanguageLink language="English" to={deprefix(location.pathname)} />,
+                        <LanguageLink
+                          language="Deutsch"
+                          to={`/de${deprefix(location.pathname)}`}
+                        />,
+                        <LanguageLink
+                          language="Français"
+                          to={`/fr${deprefix(location.pathname)}`}
+                        />
+                      ]}
                     />
-                    <Trans>Newsletter</Trans>
-                  </>
-                }
-                hideFooter
-              >
-                <p className="text-dark my-4">
-                  <Trans>
-                    Receive important feature updates, exclusive webinar invitations, and
-                    promotions/offers
-                  </Trans>
-                </p>
-                <SignupForm {...props} trackingEvent="newsletter" />
-              </Modal>
-            </div>
-            <div className="mt-4">
-              <div className="dropdown">
-                <button
-                  className="btn btn-round btn-outline-light dropdown-toggle"
-                  type="button"
-                  id="dropdownMenuButton"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  <Trans>Language</Trans>
-                </button>
-                <div
-                  className="dropdown-menu"
-                  aria-labelledby="dropdownMenuButton"
-                  style={{ minWidth: '7rem' }}
-                >
-                  <Link className="dropdown-item d-flex" to={deprefix(location.pathname)} href>
-                    <span className="mr-1" role="img" aria-label="English">
-                      🍔
-                    </span>
-                    English
-                  </Link>
-                  <Link
-                    className="dropdown-item d-flex"
-                    to={`/de${deprefix(location.pathname)}`}
-                    href
-                  >
-                    <span className="mr-1" role="img" aria-label="Deutsch">
-                      🥨
-                    </span>
-                    Deutsch
-                  </Link>
-                  <Link
-                    className="dropdown-item d-flex"
-                    to={`/fr${deprefix(location.pathname)}`}
-                    href
-                  >
-                    <span className="mr-1" role="img" aria-label="Français">
-                      🥖
-                    </span>
-                    Français
-                  </Link>
+                  </div>
+                </div>
+                <div className="d-flex justify-content-center flex-wrap mt-5">
+                  {socialLinks.map(([href, icon, title]) => (
+                    <a
+                      href={href}
+                      key={title}
+                      {...targetBlank}
+                      className="social-icon text-white mx-2"
+                    >
+                      <FontAwesomeIcon icon={icon} title={title} />
+                    </a>
+                  ))}
                 </div>
               </div>
-            </div>
-          </FooterCol>
+            </FooterCol>
+            <FooterCol order={4}>
+              <FooterColBody title={<Trans>Product</Trans>} className="mt-5 mt-md-0">
+                {productLinks.map(([label, link]) => (
+                  <Link className="nav-link" href to={`${props.prefix}/${link}/`} key={link}>
+                    {label}
+                  </Link>
+                ))}
+              </FooterColBody>
+            </FooterCol>
+          </div>
         </div>
-        <div data-provide="map" />
       </footer>
     </div>
   );

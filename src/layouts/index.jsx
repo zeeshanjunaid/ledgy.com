@@ -4,16 +4,15 @@ import React, { useEffect, type Node } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import { I18nProvider, withI18n } from '@lingui/react';
 import { Helmet } from 'react-helmet';
-import 'typeface-roboto-slab'; // eslint-disable-line import/extensions
-import 'typeface-work-sans'; // eslint-disable-line import/extensions
+
+import 'typeface-open-sans'; // eslint-disable-line import/extensions
 import 'katex/dist/katex.min.css';
 import 'prism-themes/themes/prism-ghcolors.css';
+import '../styles/_index.scss';
 
 import { name, animateTablet, isDevelopment, ContentSecurityPolicy } from '../helpers';
 import { Title } from './utils';
 import { catalogs, langFromPath, langPrefix, deprefix } from '../i18n-config';
-
-import '../assets/scss/page.scss';
 
 import PublicityBanner from '../components/PublicityBanner';
 import Loader from '../components/Loader';
@@ -27,21 +26,12 @@ type SiteProps = {|
   location: { pathname: string }
 |};
 
-const openDemoModal = () => {
-  if (window.location.hash === '#getDemo') {
-    window.$('#demo-access').modal();
-  }
-};
-
 const Initialize = () => {
   useEffect(() => {
     animateTablet();
     setTimeout(async () => {
-      require('../assets/js/page'); // eslint-disable-line global-require
-      require('../assets/js/script'); // eslint-disable-line global-require
-      require('../assets/js/segment'); // eslint-disable-line global-require
-
-      openDemoModal();
+      require('../hotjar'); // eslint-disable-line global-require
+      require('../segment'); // eslint-disable-line global-require
     }, 1414);
   }, []);
   return null;
@@ -141,7 +131,7 @@ console.log(`
 
 ==========================
 
-Looking for a job?
+Looking for a job? 🤓
 https://ledgy.com/jobs
 
 ==========================

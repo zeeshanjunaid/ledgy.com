@@ -1,0 +1,73 @@
+.btn {
+  transition: all 0.3s;
+  padding: 7px 21px;
+  &:hover {
+    box-shadow: $box-shadow;
+    transition: all 0.3s;
+    transform: translateZ(10px) !important;
+  }
+  &:focus, &:active {
+    box-shadow: none !important;
+  }
+  &:disabled:hover {
+    box-shadow: none !important;
+    transform: none !important;
+  }
+}
+.multi-button.btn-primary {
+  &:hover {
+    background-color: $deep-blue;
+    border-color: $deep-blue !important;
+  }
+}
+
+.btn-light:hover {
+  background-color: darken($white, 0.1);
+}
+
+.button-disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.button-embedded {
+  border-radius: 0 $border-radius $border-radius 0;
+}
+
+.btn-xl {
+  font-weight: 400;
+  padding: 10px 30px;
+  line-height: 24px;
+  @include media-breakpoint-down(sm) {
+    padding: 10px 15px;
+  }
+}
+
+// Multi-button
+
+.multi-button {
+  background-color: $white;
+  flex: 1 1 0px;
+  color: $gray-600;
+  border-radius: 0;
+  &:first-of-type {
+    border-radius: $border-radius 0 0 $border-radius;
+  }
+  &:not(:first-child) {
+    margin-left: -1px;
+  }
+  &:last-of-type {
+    border-radius: 0 $border-radius $border-radius 0;
+  }
+  &.selected {
+    color: $white;
+    background-color: $deep-blue;
+  }
+  &:hover:not(.selected) {
+    opacity: 0.75;
+  }
+}
+
+button.multi-button.bg-primary:focus {
+  background: $deep-blue !important;
+}
