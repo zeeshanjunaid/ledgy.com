@@ -32,7 +32,7 @@ export const SellingProp = withI18n()(
   |}) => {
     const t = dynamicI18n(i18n);
     return (
-      <div className="container text-center p-4 p-lg-7 my-7">
+      <div className="container text-center p-4 p-lg-7 selling-prop">
         <div className="row justify-content-center align-items-center">
           <div className="col-12 col-md-6 col-lg-7 d-flex flex-column text-left">
             <h2

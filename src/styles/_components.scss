@@ -164,7 +164,6 @@
   color: $gray-700 !important;
 }
 
-
 .modal-transition-enter {
   opacity: 0;
 }
@@ -206,6 +205,14 @@ $deco-dot-size: 8px;
 .feature-list-item-decoration::before {
   top: 11px;
   height: $deco-dot-size;
+}
+
+// Selling prop
+.selling-prop {
+  margin-top: 5rem;
+  &:not(:last-of-type) {
+    margin-bottom: 5rem;
+  }
 }
 
 // Pricing
