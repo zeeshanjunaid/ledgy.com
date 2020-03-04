@@ -15,7 +15,6 @@ const mergePolicies = policies => {
 };
 
 const defaultPolicy = {
-  default: "'self'",
   img: "'self' data: https://api.producthunt.com",
   object: "'none'",
   font: "'self' data: https://fonts.gstatic.com",
@@ -51,7 +50,7 @@ const googleAnalytics = {
   connect:
     'https://www.google-analytics.com https://www.googleadservices.com https://www.google.com https://snap.licdn.com',
   img:
-    'http://www.google-analytics.com https://www.googletagmanager.com https://www.linkedin.com https://px.ads.linkedin.com https://www.google.com https://googleads.g.doubleclick.net https://p.adsymptotic.com https://www.google.ch https://www.google.com https://www.google.de https://www.google.fr',
+    'http://www.google-analytics.com https://www.googletagmanager.com https://www.linkedin.com https://px.ads.linkedin.com https://www.google.com https://googleads.g.doubleclick.net https://p.adsymptotic.com https://www.google.ch https://www.google.com https://www.google.de https://www.google.fr https://www.google.co.uk https://www.google.es https://www.google.co.in https://www.google.nl https://www.google.co.il https://www.google.at',
   prefetch:
     'https://www.google-analytics.com https://www.googletagmanager.com https://js.hsadspixel.net'
 };
