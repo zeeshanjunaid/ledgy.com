@@ -12,7 +12,7 @@ import { Button } from './Button';
 const Banner = (props: { title: Node, url: string, trackingName: Node, CTAText: Node }) => {
   const { title, url, trackingName, CTAText } = props;
   return (
-    <div className="container p-4 p-lg-7 mb-7">
+    <div className="container p-4 p-lg-7 my-7">
       <div className="row m-0 w-100 flex-column justify-content-center align-items-center">
         <h3 className="mb-4 text-center font-weight-bold">{title}</h3>
         <Button
