@@ -9,7 +9,7 @@ fi
 npm rebuild sharp node-sass
 gatsby build
 
-if [ "$REVIEW_ID" = "289" ]; then
+if [ "$BRANCH" = "master" ]; then
   npm run extract
   cd src/locale/en
   cat dynamic.po >> messages.po
