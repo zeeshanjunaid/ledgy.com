@@ -52,7 +52,7 @@ const TemplateWrapper = withI18n()(({ children, ...props }: SiteProps) => (
       const { i18n, lang } = props;
       const prefix = langPrefix(lang);
       const { siteUrl } = data.site.siteMetadata;
-      const thumbnailUrl = `${siteUrl}/thumbnail.png`;
+      const thumbnailUrl = `${siteUrl}/thumbnail-874d5c.png`;
       const pathname = deprefix(props.location.pathname);
       const isAppShell = pathname === '/offline-plugin-app-shell-fallback/';
       return (
