@@ -225,7 +225,6 @@ $deco-dot-size: 8px;
 .pricing-col {
   flex: 1;
   margin: 0 0.5rem;
-  overflow: scroll;
   &:not(:first-of-type) {
     @include pricing-border;
   }
