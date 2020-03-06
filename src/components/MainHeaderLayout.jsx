@@ -40,12 +40,12 @@ export const MainHeaderLayout = ({
             </div>
             <div className="d-flex align-items-center flex-wrap">
               {Modal || (
-                <Button className={buttonClass} cta inverted={!buttonTwo} {...props}>
+                <Button className={buttonClass} cta {...props}>
                   {buttonOne.text}
                 </Button>
               )}
               {!!buttonTwo && (
-                <Button className={buttonClass} {...buttonTwo.props}>
+                <Button className={buttonClass} inverted {...buttonTwo.props}>
                   {buttonTwo.text}
                 </Button>
               )}

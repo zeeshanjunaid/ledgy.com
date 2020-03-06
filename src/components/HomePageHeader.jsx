@@ -76,7 +76,7 @@ export const HomePageHeader = ({ i18n, data, lang }: Props) => {
   const buttonTwo = {
     props: {
       href: `${appUrl}/signup`,
-      cta: true
+      cta: false
     },
     text: <Trans>Get Started Free</Trans>
   };
@@ -85,7 +85,11 @@ export const HomePageHeader = ({ i18n, data, lang }: Props) => {
     <MainHeaderLayout
       title={title}
       subtitle={subtitle}
-      buttonOne={{ modal: <RequestDemoModal />, props: {}, text: '' }}
+      buttonOne={{
+        modal: <RequestDemoModal buttonClassName="my-sm-0 my-2 btn-xl d-inline mx-1 btn-red" />,
+        props: {},
+        text: ''
+      }}
       buttonTwo={buttonTwo}
       image={
         <div id="tablet-ledgy" data-aos="fade-up">
