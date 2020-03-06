@@ -10,6 +10,7 @@ import Img from 'gatsby-image';
 
 import { Title } from '../layouts/utils';
 import { LEDGY_PLANS, appUrl, getCompanyFeaturePricing } from '../helpers';
+import { RequestDemoModal } from '../components/RequestDemoModal';
 import { PageHeader } from '../components/PageHeader';
 import { Button } from '../components/Button';
 
@@ -114,7 +115,7 @@ export default withI18n()(({ i18n, data }: Props) => {
       {featurePricing.map(({ scaleup = true }, i) => (
         <PricingColChildren prop={scaleup} key={i + 200} />
       ))}
-      <Button className="my-4" href={`${appUrl}/signup`}>
+      <Button className="my-4" outline inverted href={`${appUrl}/signup`}>
         <Trans>Free trial</Trans>
       </Button>
     </PricingCol>
@@ -130,9 +131,7 @@ export default withI18n()(({ i18n, data }: Props) => {
       {featurePricing.map(({ enterprise = true }, i) => (
         <PricingColChildren prop={enterprise} key={i + 300} />
       ))}
-      <Button className="my-4" href="mailto:contact@ledgy.com?subject=Enterprise plan inquiry">
-        <Trans>Get in touch</Trans>
-      </Button>
+      <RequestDemoModal pricingPage />
     </PricingCol>
   );
   const title = i18n.t`Pricing`;

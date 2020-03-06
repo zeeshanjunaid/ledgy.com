@@ -8,12 +8,16 @@ import { RequestDemoForm } from './RequestDemoForm';
 import { Button } from './Button';
 import { useModal } from './lib';
 
-export const RequestDemoModal = () => {
+export const RequestDemoModal = ({ pricingPage = false }: {| pricingPage?: boolean |}) => {
   const [isDemoRequested, setDemoRequested] = useState(false);
   const [isOpen, toggle] = useModal();
   return (
     <>
-      <Button onClick={toggle} className="d-inline btn-xl mx-1 my-2 my-sm-0" inverted>
+      <Button
+        onClick={toggle}
+        className={pricingPage ? 'my-4' : 'my-sm-0 my-2 btn-xl d-inline  mx-1'}
+        inverted={!pricingPage}
+      >
         <Trans>Get a Demo</Trans>
       </Button>
       <Modal
