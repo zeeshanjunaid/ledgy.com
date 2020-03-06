@@ -131,7 +131,7 @@ export default withI18n()(({ i18n, data }: Props) => {
       {featurePricing.map(({ enterprise = true }, i) => (
         <PricingColChildren prop={enterprise} key={i + 300} />
       ))}
-      <RequestDemoModal pricingPage />
+      <RequestDemoModal buttonClassName="my-4 btn-red" />
     </PricingCol>
   );
   const title = i18n.t`Pricing`;

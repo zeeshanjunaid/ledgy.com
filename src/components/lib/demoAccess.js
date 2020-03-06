@@ -82,9 +82,11 @@ export const handleDemoAccessSubmit = async ({
     setFormStatus(ERROR);
     return;
   }
-  track('submitDemoRequest');
+  track('getDemo.submit');
+
   setFormStatus(SUBMITTED);
   if (!isSmallCompany(companySize)) {
+    track('getDemo.submitMartina');
     setDemoRequested(true);
     return;
   }

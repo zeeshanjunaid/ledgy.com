@@ -7,17 +7,19 @@ import { Modal } from './Modal';
 import { RequestDemoForm } from './RequestDemoForm';
 import { Button } from './Button';
 import { useModal } from './lib';
+import { track } from '../helpers';
 
-export const RequestDemoModal = ({ pricingPage = false }: {| pricingPage?: boolean |}) => {
+export const RequestDemoModal = ({ buttonClassName }: {| buttonClassName: string |}) => {
   const [isDemoRequested, setDemoRequested] = useState(false);
   const [isOpen, toggle] = useModal();
+  const onClick = () => {
+    track('getDemo.open');
+    toggle();
+  };
+
   return (
     <>
-      <Button
-        onClick={toggle}
-        className={pricingPage ? 'my-4' : 'my-sm-0 my-2 btn-xl d-inline  mx-1'}
-        inverted={!pricingPage}
-      >
+      <Button onClick={onClick} className={buttonClassName}>
         <Trans>Get a Demo</Trans>
       </Button>
       <Modal
