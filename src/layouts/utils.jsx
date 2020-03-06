@@ -47,10 +47,14 @@ export const Hr = ({ marginX }: { marginX?: number }) => (
 Hr.defaultProps = { marginX: 0 };
 
 export const callToActionExperiments = [
-  { name: 'freeForever', title: <Trans>Free forever with 50 MB storage</Trans> },
-  { name: 'stakeholders', title: <Trans>Help your stakeholders stay up to date</Trans> },
+  { name: 'employees', title: <Trans>Onboard new employees in seconds</Trans> },
+  { name: 'documents', title: <Trans>Organize your grant documents</Trans> },
+  { name: 'signing', title: <Trans>Automate your document signing processes</Trans> },
+  { name: 'modeling', title: <Trans>Model funding rounds and future dilution</Trans> },
+  { name: 'reporting', title: <Trans>Share reports and KPIs with your investors</Trans> },
+  { name: 'documents', title: <Trans>Organize your grant documents</Trans> },
   { name: 'peaceOfMind', title: <Trans>Find peace of mind with a better cap table tool</Trans> },
-  { name: 'yourCapTable', title: <Trans>Your cap table, free forever</Trans> }
+  { name: 'yourCapTable', title: <Trans>Keep your cap table always accurate</Trans> }
 ];
 
 export const Header = ({ text, children }: { text: Node | string, children?: Node }) => (
