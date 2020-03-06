@@ -6,4 +6,4 @@ exports.onRouteUpdate = () => {
   if (backdrop) backdrop.parentNode.removeChild(backdrop);
 };
 
-exports.onServiceWorkerUpdateReady = () => window.location.reload();
+exports.onServiceWorkerUpdateReady = () => window.location.reload(true);
