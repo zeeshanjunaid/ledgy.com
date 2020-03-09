@@ -23,7 +23,7 @@ export default (props: LayoutProps) => (
               <Link
                 className="btn btn-round btn-outline-primary btn-xl mr-md-1 mb-3 mb-md-0"
                 href
-                to={`${props.prefix}/features`}
+                to={`${props.prefix}/help`}
               >
                 Continue exploring
               </Link>
