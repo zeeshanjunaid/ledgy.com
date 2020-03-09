@@ -13,7 +13,6 @@ export const githubUrl = 'https://github.com/morloy/ledgy.com/';
 
 // netlify & mixpanel
 const isNetlify = typeof window !== 'undefined' && window.location.hostname !== 'localhost';
-export const mixpanelUrl = '/newsletter';
 
 export const MIXPANEL_TOKEN = isNetlify
   ? '258b9724a7ad7271dd2e3e3440bb68fd'

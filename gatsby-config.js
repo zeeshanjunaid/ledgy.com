@@ -20,8 +20,8 @@ module.exports = {
     branch: BRANCH || 'development'
   },
   proxy: {
-    prefix: '/newsletter',
-    url: 'https://ledgy.com'
+    prefix: '/engage',
+    url: 'https://api.mixpanel.com'
   },
   plugins: [
     'gatsby-plugin-layout',
