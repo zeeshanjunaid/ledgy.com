@@ -2,5 +2,7 @@ https://ledgy.netlify.com/* https://ledgy.com/:splat 301!
 /  /de/  302  Language=de
 /  /fr/  302  Language=fr
 
+/verify-signature https://support.ledgy.com/how-to-verify-the-validity-of-a-signature
+
 /psop/ utm_source=:utm_source /employee-participation-plan-templates/?utm_source=:utm_source 301
 /getDemo https://api.hsforms.com/submissions/v3/integration/submit/6881367/b360c926-ed24-473a-8418-ee1050ddbd06 200
