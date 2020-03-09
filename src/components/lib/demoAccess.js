@@ -20,10 +20,8 @@ export type DemoFormStatus =
   | 'submitted';
 
 type State = {|
-  companyName: string,
   companySize: string,
-  email: string,
-  name: string
+  email: string
 |};
 
 export const isSmallCompany = (companySize: string) => SMALL_COMPANY_SIZES.includes(companySize);
@@ -44,11 +42,11 @@ const encodeBody = data =>
     context: { hutk: getHubspotUserToken() }
   });
 
-const fetchHubspot = ({ name, email, companyName, companySize }: State) =>
+const fetchHubspot = ({ email, companySize }: State) =>
   fetch('/getDemo', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: encodeBody({ name, email, company: companyName, companysize: companySize })
+    body: encodeBody({ email, companysize: companySize })
   });
 
 export const handleDemoAccessSubmit = async ({

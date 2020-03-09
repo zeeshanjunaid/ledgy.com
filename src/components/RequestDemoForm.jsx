@@ -49,12 +49,10 @@ export const RequestDemoForm = ({
   setDemoRequested: boolean => void,
   toggle: () => void
 |}) => {
-  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [companyName, setCompanyName] = useState('');
   const [companySize, setCompanySize] = useState('');
   const [formStatus, setFormStatus] = useState(IDLE);
-  const state = { name, email, companyName, companySize };
+  const state = { email, companySize };
 
   const invalidEmail = formStatus === INVALID_EMAIL;
   const invalidFields = formStatus === INVALID_FIELDS;
@@ -81,9 +79,9 @@ export const RequestDemoForm = ({
       noValidate
     >
       <p className="text-dark mt-1 mb-4">
-        <Trans>Please fill out the form below to access the demo</Trans>
+        <Trans>Please fill out the form below to get a demo</Trans>
       </p>
-      <Label text={<Trans>Your email *</Trans>} />
+      <Label text={<Trans>Your email</Trans>} />
       <Input
         state={email}
         setState={setEmail}
@@ -92,25 +90,7 @@ export const RequestDemoForm = ({
         name="email"
       />
 
-      <Label text={<Trans>Your name</Trans>} />
-      <Input
-        state={name}
-        setState={setName}
-        placeholder="Elon Must"
-        setFormStatus={setFormStatus}
-        name="name"
-      />
-
-      <Label text={<Trans>Company name</Trans>} />
-      <Input
-        state={companyName}
-        setState={setCompanyName}
-        placeholder="SpaceY"
-        setFormStatus={setFormStatus}
-        name="companyName"
-      />
-
-      <Label text={<Trans>Number of employees *</Trans>} />
+      <Label text={<Trans>Number of company employees</Trans>} />
       <div className="d-flex mt-2 mb-4">
         <input type="hidden" name="companySize" />
         {COMPANY_SIZES.map(size => (
