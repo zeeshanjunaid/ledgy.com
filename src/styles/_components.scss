@@ -34,12 +34,7 @@
 
 // Footer
 .footer {
-  height: 70rem;
-  @include media-breakpoint-up(sm) {
-    height: 60rem;
-  }
   @include media-breakpoint-up(md) {
-    height: 45rem;
     &--logo-section {
      height: 100%;
     }
