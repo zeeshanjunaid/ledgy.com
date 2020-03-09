@@ -219,7 +219,16 @@ $deco-dot-size: 8px;
 
 .pricing-col {
   flex: 1;
+  @include media-breakpoint-down(md) {
+    &:nth-of-type(1) {
+      flex: 4;
+    }
+    &:nth-of-type(2) {
+      flex: 3;
+    }
+  }
   margin: 0 0.5rem;
+  overflow-x: scroll;
   &:not(:first-of-type) {
     @include pricing-border;
   }
@@ -230,7 +239,7 @@ $deco-dot-size: 8px;
 
 .pricing-plan {
   height: 210px;
-  &.Scaleup {
+  &.Premium { // will be renamed to Scaleup
     height: 250px;
   }
   &.Enterprise {
