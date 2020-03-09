@@ -19,6 +19,10 @@ module.exports = {
       `http://localhost:${NODE_ENV === 'production' ? 9 : 8}000`,
     branch: BRANCH || 'development'
   },
+  proxy: {
+    prefix: '/newsletter',
+    url: 'https://ledgy.com'
+  },
   plugins: [
     'gatsby-plugin-layout',
     'gatsby-plugin-flow',
