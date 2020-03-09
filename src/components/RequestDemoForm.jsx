@@ -79,7 +79,7 @@ export const RequestDemoForm = ({
       noValidate
     >
       <p className="text-dark mt-1 mb-4">
-        <Trans>Please fill out the form below to access the demo</Trans>
+        <Trans>Please fill out the form below to get a demo</Trans>
       </p>
       <Label text={<Trans>Your email</Trans>} />
       <Input
