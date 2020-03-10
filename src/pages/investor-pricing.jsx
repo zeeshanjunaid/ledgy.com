@@ -58,7 +58,7 @@ export default withI18n()(({ i18n }: Props) => {
             price={<Trans>Free</Trans>}
             features={angelFeatures}
             button={
-              <Button inverted href={`${appUrl}/signup`}>
+              <Button inverted outline href={`${appUrl}/signup`}>
                 <Trans>Sign up</Trans>
               </Button>
             }
