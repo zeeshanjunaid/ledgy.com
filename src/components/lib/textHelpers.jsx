@@ -134,7 +134,7 @@ export const getNavbarLinks = () => {
 
   const pricing = [
     [
-      'pricing-companies',
+      'company-pricing',
       <Trans>For Companies</Trans>,
       <Trans>
         Free for early-stage startups and powerful for scaling companies, choose the plan that suits
@@ -142,7 +142,7 @@ export const getNavbarLinks = () => {
       </Trans>
     ],
     [
-      'pricing-investors',
+      'investor-pricing',
       <Trans>For Investors</Trans>,
       <Trans>Free for business angels, powerful for professional investors</Trans>
     ]

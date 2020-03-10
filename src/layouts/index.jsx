@@ -54,7 +54,7 @@ const TemplateWrapper = withI18n()(({ children, ...props }: SiteProps) => (
       const { siteUrl } = data.site.siteMetadata;
       const thumbnailUrl = `${siteUrl}/thumbnail-874d5c.png`;
       const pathname = deprefix(props.location.pathname);
-      const isAppShell = pathname === '/offline-plugin-app-shell-fallback/';
+      const isAppShell = pathname.includes('offline-plugin-app-shell-fallback');
       return (
         <div>
           <Title
@@ -101,10 +101,15 @@ const TemplateWrapper = withI18n()(({ children, ...props }: SiteProps) => (
             </noscript>
           </Helmet>
           <Nav {...props} prefix={prefix} />
-          {isAppShell && <Loader />}
-          <PublicityBanner pathname={pathname} />
-          {React.cloneElement((children: Object), { prefix, lang })}
-          <Footer {...props} prefix={prefix} />
+          {isAppShell ? (
+            <Loader />
+          ) : (
+            <>
+              <PublicityBanner pathname={pathname} />
+              {React.cloneElement((children: Object), { prefix, lang })}
+              <Footer {...props} prefix={prefix} />{' '}
+            </>
+          )}
         </div>
       );
     }}
