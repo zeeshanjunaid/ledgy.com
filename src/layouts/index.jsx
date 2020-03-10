@@ -78,6 +78,7 @@ const TemplateWrapper = withI18n()(({ children, ...props }: SiteProps) => (
             {/* Facebook social card */}
             <meta property="og:site_name" content={name} />
             <meta property="og:type" content="website" />
+            <meta property="og:url" content={`${siteUrl}${pathname}`} />
 
             {/* Twitter social card */}
             <meta name="twitter:site" content="@Ledgy" />
