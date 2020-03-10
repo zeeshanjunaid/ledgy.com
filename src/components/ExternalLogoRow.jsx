@@ -15,16 +15,25 @@ export const ExternalLogoRow = ({ title, logos }: { title: Node, logos: Image[] 
         </small>
       </div>
       <div className="row w-100 justify-content-between align-items-center">
-        {logos.map(({ title: alt, localFile: { childImageSharp }, description: url }) => (
-          <div
-            className="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center"
-            key={alt}
-          >
-            <a href={url} {...targetBlank} className="m-4 d-flex align-items-center">
-              <Img {...childImageSharp} alt={alt} />
-            </a>
-          </div>
-        ))}
+        {logos.map(({ title: alt, localFile: { childImageSharp }, description: url }) => {
+          const image = <Img {...childImageSharp} alt={alt} />;
+          const hasUrl = !!url && url.startsWith('https://');
+          const className = 'm-4 d-flex align-items-center';
+          return (
+            <div
+              className="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center"
+              key={alt}
+            >
+              {hasUrl ? (
+                <a href={url} {...targetBlank} className={className}>
+                  {image}
+                </a>
+              ) : (
+                <div className={className}>{image}</div>
+              )}
+            </div>
+          );
+        })}
       </div>
     </div>
   </div>
