@@ -3,7 +3,7 @@
 import React from 'react';
 
 import { PageHeader } from '../components/PageHeader';
-import { supportUrl, targetBlank } from '../helpers';
+import { helpUrl, targetBlank } from '../helpers';
 
 export default () => (
   <>
@@ -22,7 +22,7 @@ export default () => (
             <div className="d-flex flex-column flex-md-row mt-2">
               <a
                 className="btn btn-round btn-outline-primary btn-xl mr-md-1 mb-3 mb-md-0"
-                href={supportUrl}
+                href={helpUrl}
                 {...targetBlank}
               >
                 Continue exploring

@@ -7,7 +7,7 @@ export const appUrl = 'https://app.ledgy.com';
 
 export const demoUrl = 'https://demo.ledgy.com';
 
-export const supportUrl = 'https://support.ledgy.com';
+export const helpUrl = 'https://support.ledgy.com';
 
 export const calculatorUrl = 'https://calculator.ledgy.com';
 
