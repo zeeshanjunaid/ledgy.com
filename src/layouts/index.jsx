@@ -10,7 +10,7 @@ import 'katex/dist/katex.min.css';
 import 'prism-themes/themes/prism-ghcolors.css';
 import '../styles/_index.scss';
 
-import { name, animateTablet, isDevelopment, ContentSecurityPolicy } from '../helpers';
+import { name, getLdJson, animateTablet, isDevelopment, ContentSecurityPolicy } from '../helpers';
 import { Title } from './utils';
 import { catalogs, langFromPath, langPrefix, deprefix } from '../i18n-config';
 
@@ -70,6 +70,7 @@ const TemplateWrapper = withI18n()(({ children, ...props }: SiteProps) => (
               content={i18n.t`cap table, stock ledger, share register, startup, modeling, financing round, equity, esop, phantom, option plan, virtual, portfolio, reporting, investors`}
             />
             <meta name="author" content="Ledgy" />
+            <script type="application/ld+json">{getLdJson(siteUrl)}</script>
 
             {isDevelopment && (
               <meta httpEquiv="Content-Security-Policy" content={ContentSecurityPolicy} />

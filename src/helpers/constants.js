@@ -2,6 +2,33 @@
 
 export const name = 'Ledgy';
 
+export const youtubeUrl = 'https://www.youtube.com/channel/UCRkvNQptxoE-ckmTsrme1_w';
+export const twitterUrl = 'https://twitter.com/Ledgy';
+export const linkedinUrl = 'https://www.linkedin.com/company/Ledgy';
+export const facebookUrl = 'https://www.facebook.com/Ledgy';
+export const angelUrl = 'https://angel.co/Ledgy';
+
+export const getLdJson = (url: string): string => `{
+  "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "name" : "Ledgy",
+  "url" : "${url}",
+  "sameAs" : [
+   "${linkedinUrl}",
+   "${twitterUrl}",
+   "${facebookUrl}",
+   "${youtubeUrl}",
+   "${angelUrl}"
+   ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Forchstrasse 60",
+    "addressRegion": "ZH",
+    "postalCode": "8008",
+    "addressCountry": "CH"
+  }
+}`;
+
 // external URLs
 export const appUrl = 'https://app.ledgy.com';
 
