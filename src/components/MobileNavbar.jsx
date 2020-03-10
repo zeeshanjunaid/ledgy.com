@@ -4,7 +4,7 @@ import React, { type Node } from 'react';
 import { Link } from 'gatsby';
 
 import { NavbarButtons } from './NavbarButtons';
-import { getNavbarTitles, getNavbarLinks } from './lib';
+import { getNavbarTitles, getNavbarLinks, formatUrl } from './lib';
 
 const { featuresTitle, resourcesTitle, pricingTitle, dataProtectionTitle } = getNavbarTitles();
 const { features, resources, pricing, dataProtection } = getNavbarLinks();

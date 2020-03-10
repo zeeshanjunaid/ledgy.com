@@ -15,7 +15,8 @@ import logoInvertedCompact from '../img/logo-inverted-compact.png';
 import { CTABanner } from './CTABanner';
 import { Dropdown } from './Dropdown';
 import { SignupModal } from './SignupModal';
-import { getFooterLinks } from './lib';
+import { getFooterLinks, formatUrl } from './lib';
+import { isExternalUrl } from './lib/urlHelpers';
 
 const FooterCol = ({ order, children }: { order: number, children: Node }) => (
   <div className={`col-6 col-md-3 order-md-${order}`}>{children}</div>
@@ -48,6 +49,7 @@ const { companyLinks, legalLinks, productLinks, resourceLinks, socialLinks } = g
 
 export const Footer = ({ location, ...props }: LayoutProps) => {
   const isPartners = location.pathname.includes('partners');
+  const { prefix } = props;
 
   return (
     <div>
@@ -59,14 +61,14 @@ export const Footer = ({ location, ...props }: LayoutProps) => {
             <FooterCol order={2}>
               <FooterColBody title={<Trans>Company</Trans>}>
                 {companyLinks.map(([label, link]) => (
-                  <Link className="nav-link" href to={`${props.prefix}/${link}/`} key={link}>
+                  <Link className="nav-link" href to={formatUrl(prefix, link)} key={link}>
                     {label}
                   </Link>
                 ))}
               </FooterColBody>
               <FooterColBody title={<Trans>Legal</Trans>} className="mt-5">
                 {legalLinks.map(([label, link]) => (
-                  <Link className="nav-link" href to={`${props.prefix}/${link}/`} key={link}>
+                  <Link className="nav-link" href to={formatUrl(prefix, link)} key={link}>
                     {label}
                   </Link>
                 ))}
@@ -74,17 +76,26 @@ export const Footer = ({ location, ...props }: LayoutProps) => {
             </FooterCol>
             <FooterCol order={3}>
               <FooterColBody title={<Trans>Resources</Trans>}>
-                {resourceLinks.map(([label, link]) => (
-                  <Link className="nav-link" href to={`${props.prefix}/${link}/`} key={link}>
-                    {label}
-                  </Link>
-                ))}
+                {resourceLinks.map(([label, link]) => {
+                  if (isExternalUrl(link)) {
+                    return (
+                      <a className="nav-link" href={link} key={link} {...targetBlank}>
+                        {label}
+                      </a>
+                    );
+                  }
+                  return (
+                    <Link className="nav-link" href to={formatUrl(prefix, link)} key={link}>
+                      {label}
+                    </Link>
+                  );
+                })}
               </FooterColBody>
             </FooterCol>
             <FooterCol order={1} wide>
               <div className="footer--logo-section d-flex flex-column justify-content-between mt-5 mt-md-0">
                 <div className="d-flex flex-column align-items-center p-0 px-md-4">
-                  <Link href to={`${props.prefix}/#start`} className="mb-2 mb-md-4">
+                  <Link href to={`${prefix}/#start`} className="mb-2 mb-md-4">
                     <img src={logoInvertedCompact} width={80} alt={name} />
                   </Link>
                   <div className="py-lg-4">
@@ -124,11 +135,20 @@ export const Footer = ({ location, ...props }: LayoutProps) => {
             </FooterCol>
             <FooterCol order={4}>
               <FooterColBody title={<Trans>Product</Trans>} className="mt-5 mt-md-0">
-                {productLinks.map(([label, link]) => (
-                  <Link className="nav-link" href to={`${props.prefix}/${link}/`} key={link}>
-                    {label}
-                  </Link>
-                ))}
+                {productLinks.map(([label, link]) => {
+                  if (isExternalUrl(link)) {
+                    return (
+                      <a className="nav-link" href={link} key={link}>
+                        {label}
+                      </a>
+                    );
+                  }
+                  return (
+                    <Link className="nav-link" href to={formatUrl(prefix, link)} key={link}>
+                      {label}
+                    </Link>
+                  );
+                })}
               </FooterColBody>
             </FooterCol>
           </div>
