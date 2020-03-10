@@ -29,13 +29,10 @@ const NAV_ID = 'custom-hover-nav';
 const getNavbar = () => document.getElementById(NAV_ID);
 
 const ListItemHover = ({ to, prefix, title, text, onClick, isTextShown }: ListItemHoverProps) => {
-  const titleClasses = `text-primary mt-2 ${text ? 'mb-1' : 'mb-2'}`;
-  const textClasses = 'list-item-hover-text mb-3';
-
   const itemContent = (
     <>
-      <h4 className={titleClasses}>{title}</h4>
-      {text && <div className={textClasses}>{text}</div>}
+      <h4 className={`text-primary mt-2 ${text ? 'mb-1' : 'mb-2'}`}>{title}</h4>
+      {text && <div className="list-item-hover-text mb-3">{text}</div>}
     </>
   );
 

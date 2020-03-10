@@ -76,20 +76,17 @@ export const Footer = ({ location, ...props }: LayoutProps) => {
             </FooterCol>
             <FooterCol order={3}>
               <FooterColBody title={<Trans>Resources</Trans>}>
-                {resourceLinks.map(([label, link]) => {
-                  if (isExternalUrl(link)) {
-                    return (
-                      <a className="nav-link" href={link} key={link} {...targetBlank}>
-                        {label}
-                      </a>
-                    );
-                  }
-                  return (
+                {resourceLinks.map(([label, link]) =>
+                  isExternalUrl(link) ? (
+                    <a className="nav-link" href={link} key={link} {...targetBlank}>
+                      {label}
+                    </a>
+                  ) : (
                     <Link className="nav-link" href to={formatUrl(prefix, link)} key={link}>
                       {label}
                     </Link>
-                  );
-                })}
+                  )
+                )}
               </FooterColBody>
             </FooterCol>
             <FooterCol order={1} wide>
