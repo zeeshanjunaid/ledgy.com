@@ -135,20 +135,11 @@ export const Footer = ({ location, ...props }: LayoutProps) => {
             </FooterCol>
             <FooterCol order={4}>
               <FooterColBody title={<Trans>Product</Trans>} className="mt-5 mt-md-0">
-                {productLinks.map(([label, link]) => {
-                  if (isExternalUrl(link)) {
-                    return (
-                      <a className="nav-link" href={link} key={link}>
-                        {label}
-                      </a>
-                    );
-                  }
-                  return (
-                    <Link className="nav-link" href to={formatUrl(prefix, link)} key={link}>
-                      {label}
-                    </Link>
-                  );
-                })}
+                {productLinks.map(([label, link]) => (
+                  <Link className="nav-link" href to={formatUrl(prefix, link)} key={link}>
+                    {label}
+                  </Link>
+                ))}
               </FooterColBody>
             </FooterCol>
           </div>

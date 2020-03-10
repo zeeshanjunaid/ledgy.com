@@ -1,11 +1,11 @@
 // @flow
 
 import React from 'react';
-import { Link } from 'gatsby';
 
 import { PageHeader } from '../components/PageHeader';
+import { supportUrl, targetBlank } from '../helpers';
 
-export default (props: LayoutProps) => (
+export default () => (
   <>
     <PageHeader title="Subscription confirmed" />
     <div className="container">
@@ -20,13 +20,13 @@ export default (props: LayoutProps) => (
             </p>
             <p>You can cancel your subscription through any of our newsletter emails.</p>
             <div className="d-flex flex-column flex-md-row mt-2">
-              <Link
+              <a
                 className="btn btn-round btn-outline-primary btn-xl mr-md-1 mb-3 mb-md-0"
-                href
-                to={`${props.prefix}/help`}
+                href={supportUrl}
+                {...targetBlank}
               >
                 Continue exploring
-              </Link>
+              </a>
             </div>
           </div>
         </div>

@@ -29,7 +29,7 @@ const MobileNavbarGroup = ({
     <ul className="flex-column ml-2 ml-sm-4 mb-2 mb-sm-4">
       {links.map(([to, name]) => (
         <li key={to}>
-          <Link href to={`${prefix}/${to}`} onClick={() => toggleOverlay(isOpen, setOpen)}>
+          <Link href to={formatUrl(prefix, to)} onClick={() => toggleOverlay(isOpen, setOpen)}>
             <h5 className="text-primary mt-1">{name}</h5>
           </Link>
         </li>

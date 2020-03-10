@@ -16,7 +16,8 @@ const STEPS = [
   [
     3,
     <Trans>
-      Send your customized template and term sheet to your lawyer—or to one of our trusted partners
+      Send your customized template and term sheet to your lawyer – or to one of our trusted
+      partners
     </Trans>
   ],
   [
