@@ -4,7 +4,8 @@ import React, { useState, type Node } from 'react';
 import { Link } from 'gatsby';
 import { CSSTransition } from 'react-transition-group';
 
-import { getNavbarTitles, getNavbarLinks } from './lib';
+import { getNavbarTitles, getNavbarLinks, formatUrl, isExternalUrl } from './lib';
+import { targetBlank } from '../helpers';
 
 type Event = SyntheticInputEvent<HTMLInputElement>;
 type ListItemProps = {| title: Node, isTextShown: boolean, prefix: string |};
@@ -27,14 +28,28 @@ type ParentListItemProps = {|
 const NAV_ID = 'custom-hover-nav';
 const getNavbar = () => document.getElementById(NAV_ID);
 
-const ListItemHover = ({ to, prefix, title, text, onClick, isTextShown }: ListItemHoverProps) => (
-  <li className={`list-item-hover ${isTextShown ? 'show' : 'hide'}`}>
-    <Link href to={`${prefix}/${to}`} onClick={onClick}>
+const ListItemHover = ({ to, prefix, title, text, onClick, isTextShown }: ListItemHoverProps) => {
+  const itemContent = (
+    <>
       <h4 className={`text-primary mt-2 ${text ? 'mb-1' : 'mb-2'}`}>{title}</h4>
       {text && <div className="list-item-hover-text mb-3">{text}</div>}
-    </Link>
-  </li>
-);
+    </>
+  );
+
+  return (
+    <li className={`list-item-hover ${isTextShown ? 'show' : 'hide'}`}>
+      {isExternalUrl(to) ? (
+        <a href={to} onClick={onClick} {...targetBlank}>
+          {itemContent}
+        </a>
+      ) : (
+        <Link href to={formatUrl(prefix, to)} onClick={onClick}>
+          {itemContent}
+        </Link>
+      )}
+    </li>
+  );
+};
 
 const ParentListItem = ({
   eventHandlingProps,

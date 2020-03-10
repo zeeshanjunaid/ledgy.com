@@ -1,11 +1,12 @@
 // @flow
 
 import React from 'react';
-import { Link } from 'gatsby';
 
 import { PageHeader } from '../components/PageHeader';
+import { helpUrl } from '../helpers';
+import { Button } from '../components/Button';
 
-export default (props: LayoutProps) => (
+export default () => (
   <>
     <PageHeader title="Subscription confirmed" />
     <div className="container">
@@ -20,13 +21,9 @@ export default (props: LayoutProps) => (
             </p>
             <p>You can cancel your subscription through any of our newsletter emails.</p>
             <div className="d-flex flex-column flex-md-row mt-2">
-              <Link
-                className="btn btn-round btn-outline-primary btn-xl mr-md-1 mb-3 mb-md-0"
-                href
-                to={`${props.prefix}/help`}
-              >
+              <Button outline inverted className="btn-xl mr-md-1 mb-3 mb-md-0" href={helpUrl}>
                 Continue exploring
-              </Link>
+              </Button>
             </div>
           </div>
         </div>

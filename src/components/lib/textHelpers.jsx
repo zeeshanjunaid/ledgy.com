@@ -9,6 +9,7 @@ import {
   faAngellist,
   faYoutube
 } from '@fortawesome/free-brands-svg-icons';
+import { helpUrl } from '../../helpers';
 
 export const getUnderlineHtml = (text: string): string =>
   text
@@ -38,7 +39,7 @@ export const getFooterLinks = () => {
     [<Trans>Pricing for investors</Trans>, 'pricing-investors']
   ];
   const resourceLinks = [
-    [<Trans>Help</Trans>, 'help'],
+    [<Trans>Help</Trans>, helpUrl],
     [<Trans>Blog</Trans>, 'blog'],
     [<Trans>Webinars</Trans>, 'webinars'],
     [<Trans>Customer stories</Trans>, 'customer-stories'],
@@ -94,7 +95,7 @@ export const getNavbarLinks = () => {
 
   const resources = [
     [
-      'help',
+      helpUrl,
       <Trans>Help</Trans>,
       <Trans>Get started quickly with Ledgy or dive deeper into how the features work</Trans>
     ],

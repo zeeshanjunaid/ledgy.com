@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { helpUrl, targetBlank } from '../helpers';
 
 const NotFoundPage = () => (
   <div>
@@ -24,9 +25,9 @@ const NotFoundPage = () => (
             investors
           </Link>
           ? Maybe need some{' '}
-          <Link href to="/help">
+          <a href={helpUrl} {...targetBlank}>
             help
-          </Link>
+          </a>
           ?
         </p>
       </header>
