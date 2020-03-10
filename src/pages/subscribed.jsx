@@ -3,7 +3,8 @@
 import React from 'react';
 
 import { PageHeader } from '../components/PageHeader';
-import { helpUrl, targetBlank } from '../helpers';
+import { helpUrl } from '../helpers';
+import { Button } from '../components/Button';
 
 export default () => (
   <>
@@ -20,13 +21,9 @@ export default () => (
             </p>
             <p>You can cancel your subscription through any of our newsletter emails.</p>
             <div className="d-flex flex-column flex-md-row mt-2">
-              <a
-                className="btn btn-round btn-outline-primary btn-xl mr-md-1 mb-3 mb-md-0"
-                href={helpUrl}
-                {...targetBlank}
-              >
+              <Button outline inverted className="btn-xl mr-md-1 mb-3 mb-md-0" href={helpUrl}>
                 Continue exploring
-              </a>
+              </Button>
             </div>
           </div>
         </div>
