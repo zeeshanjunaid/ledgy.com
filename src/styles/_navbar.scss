@@ -48,6 +48,7 @@
 }
 
 .hover-list-parent > li {
+  z-index: $zindex-popup-toggler;
   position: relative;
   display: flex;
   justify-content: center;
