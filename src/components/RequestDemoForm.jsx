@@ -26,7 +26,7 @@ const Input = ({
   setFormStatus: DemoFormStatus => void,
   name: string
 |}) => (
-  <div className="form-group input-group bg-white p-2 mb-4">
+  <div className="form-group input-group bg-white py-2 mb-4">
     <input
       className="form-control"
       placeholder={placeholder}
@@ -78,9 +78,6 @@ export const RequestDemoForm = ({
       }
       noValidate
     >
-      <p className="text-dark mt-1 mb-4">
-        <Trans>Please fill out the form below to get a demo</Trans>
-      </p>
       <Label text={<Trans>Your email</Trans>} />
       <Input
         state={email}
