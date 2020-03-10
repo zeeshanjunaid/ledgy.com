@@ -4,7 +4,8 @@ import React, { type Node } from 'react';
 import { Link } from 'gatsby';
 
 import { NavbarButtons } from './NavbarButtons';
-import { getNavbarTitles, getNavbarLinks, formatUrl } from './lib';
+import { getNavbarTitles, getNavbarLinks, formatUrl, isExternalUrl } from './lib';
+import { targetBlank } from '../helpers';
 
 const { featuresTitle, resourcesTitle, pricingTitle, dataProtectionTitle } = getNavbarTitles();
 const { features, resources, pricing, dataProtection } = getNavbarLinks();
@@ -27,13 +28,21 @@ const MobileNavbarGroup = ({
   <>
     <p className="text-gray-neutral mb-1">{title}</p>
     <ul className="flex-column ml-2 ml-sm-4 mb-2 mb-sm-4">
-      {links.map(([to, name]) => (
-        <li key={to}>
+      {links.map(([to, name]) => {
+        const itemContent = <h5 className="text-primary mt-1">{name}</h5>;
+        const externalLink = (
+          <a href={to} key={to} onClick={() => toggleOverlay(isOpen, setOpen)} {...targetBlank}>
+            {itemContent}
+          </a>
+        );
+        const internalLink = (
           <Link href to={formatUrl(prefix, to)} onClick={() => toggleOverlay(isOpen, setOpen)}>
-            <h5 className="text-primary mt-1">{name}</h5>
+            {itemContent}
           </Link>
-        </li>
-      ))}
+        );
+
+        return <li key={to}>{isExternalUrl(to) ? externalLink : internalLink}</li>;
+      })}
     </ul>
   </>
 );
