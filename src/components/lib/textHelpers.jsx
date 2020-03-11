@@ -9,7 +9,7 @@ import {
   faAngellist,
   faYoutube
 } from '@fortawesome/free-brands-svg-icons';
-import { helpUrl } from '../../helpers';
+import { helpUrl, youtubeUrl, twitterUrl, linkedinUrl, angelUrl, facebookUrl } from '../../helpers';
 
 export const getUnderlineHtml = (text: string): string =>
   text
@@ -48,11 +48,11 @@ export const getFooterLinks = () => {
     [<Trans>ESOP templates</Trans>, 'employee-participation-plan-templates']
   ];
   const socialLinks = [
-    ['https://www.youtube.com/channel/UCRkvNQptxoE-ckmTsrme1_w', faYoutube, 'YouTube'],
-    ['https://twitter.com/Ledgy', faTwitter, 'Twitter'],
-    ['https://www.linkedin.com/company/Ledgy', faLinkedin, 'LinkedIn'],
-    ['https://www.facebook.com/Ledgy', faFacebook, 'Facebook'],
-    ['https://angel.co/Ledgy', faAngellist, 'AngelList']
+    [linkedinUrl, faLinkedin, 'LinkedIn'],
+    [twitterUrl, faTwitter, 'Twitter'],
+    [facebookUrl, faFacebook, 'Facebook'],
+    [youtubeUrl, faYoutube, 'YouTube'],
+    [angelUrl, faAngellist, 'AngelList']
   ];
   return { companyLinks, legalLinks, productLinks, resourceLinks, socialLinks };
 };

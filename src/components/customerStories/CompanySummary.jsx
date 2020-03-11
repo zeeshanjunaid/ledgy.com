@@ -43,13 +43,7 @@ export const CompanySummary = ({ company }: {| company: Company |}) => (
         ([icon, iconTitle, description]) =>
           description && (
             <div key={iconTitle} className="row mx-auto py-3">
-              <FontAwesomeIcon
-                fixedWidth
-                size="lg"
-                icon={icon}
-                title={iconTitle}
-                className="mr-4"
-              />
+              <FontAwesomeIcon fixedWidth size="lg" icon={icon} className="mr-4" />
               {description}
             </div>
           )

@@ -124,7 +124,7 @@ export const Footer = ({ location, ...props }: LayoutProps) => {
                       {...targetBlank}
                       className="social-icon text-white mx-2"
                     >
-                      <FontAwesomeIcon icon={icon} title={title} />
+                      <FontAwesomeIcon icon={icon} />
                     </a>
                   ))}
                 </div>
