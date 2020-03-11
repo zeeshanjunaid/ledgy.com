@@ -32,7 +32,6 @@ export const UniqueSellingPropositions = ({ prefix }: {| prefix: string |}) => (
               </li>
             </ul>
           }
-          url={`${prefix}/features/captable`}
         />
       </div>
 
@@ -50,7 +49,6 @@ export const UniqueSellingPropositions = ({ prefix }: {| prefix: string |}) => (
               </li>
             </ul>
           }
-          url={`${prefix}/features/modeling`}
         />
       </div>
 
@@ -68,7 +66,6 @@ export const UniqueSellingPropositions = ({ prefix }: {| prefix: string |}) => (
               </li>
             </ul>
           }
-          url={`${prefix}/features/esop`}
         />
       </div>
     </div>
