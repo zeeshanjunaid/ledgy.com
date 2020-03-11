@@ -46,13 +46,13 @@ const Founder = withI18n()(
             </div>
             <div>
               <a className="social-icon" href={`mailto:${mail}`}>
-                <FontAwesomeIcon icon={faEnvelope} title="Email" />
+                <FontAwesomeIcon icon={faEnvelope} />
               </a>
               <a className="social-icon mx-3" href={twitter}>
-                <FontAwesomeIcon icon={faTwitter} title="Twitter" />
+                <FontAwesomeIcon icon={faTwitter} />
               </a>
               <a className="social-icon" href={linkedIn}>
-                <FontAwesomeIcon icon={faLinkedin} title="LinkedIn" />
+                <FontAwesomeIcon icon={faLinkedin} />
               </a>
             </div>
           </div>

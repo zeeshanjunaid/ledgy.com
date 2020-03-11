@@ -20,13 +20,13 @@ const About = ({ about, img }: {| about: AuthorProps, img: Object |}) => (
       </h5>
       <div>
         <a className="social-icon" href={`mailto:${about.mail}`}>
-          <FontAwesomeIcon icon={faEnvelope} title="Email" />
+          <FontAwesomeIcon icon={faEnvelope} />
         </a>
         <a className="social-icon mx-2" href={about.twitter}>
-          <FontAwesomeIcon icon={faTwitter} title="Twitter" />
+          <FontAwesomeIcon icon={faTwitter} />
         </a>
         <a className="social-icon" href={about.linkedIn}>
-          <FontAwesomeIcon icon={faLinkedin} title="LinkedIn" />
+          <FontAwesomeIcon icon={faLinkedin} />
         </a>
       </div>
     </div>
