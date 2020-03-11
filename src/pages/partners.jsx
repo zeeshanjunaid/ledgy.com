@@ -14,7 +14,7 @@ import {
 
 import { PageHeader } from '../components/PageHeader';
 
-export default withI18n()(({ i18n, data, prefix }: Props) => (
+export default withI18n()(({ i18n, data }: Props) => (
   <>
     <Title
       title={i18n.t`Partners`}
@@ -25,7 +25,7 @@ export default withI18n()(({ i18n, data, prefix }: Props) => (
     <div className="py-0">
       <SwissPartners data={data} />
       <CollaborationBanner />
-      <UniqueSellingPropositions prefix={prefix} />
+      <UniqueSellingPropositions />
     </div>
     <LawyerCTABanner />
   </>
