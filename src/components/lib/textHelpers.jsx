@@ -35,8 +35,8 @@ export const getFooterLinks = () => {
     [<Trans>For human resources</Trans>, 'human-resources'],
     [<Trans>For investors</Trans>, 'investors'],
     [<Trans>Data protection</Trans>, 'data-protection'],
-    [<Trans>Pricing for companies</Trans>, 'pricing-companies'],
-    [<Trans>Pricing for investors</Trans>, 'pricing-investors']
+    [<Trans>Pricing for companies</Trans>, 'company-pricing'],
+    [<Trans>Pricing for investors</Trans>, 'investor-pricing']
   ];
   const resourceLinks = [
     [<Trans>Help</Trans>, helpUrl],
