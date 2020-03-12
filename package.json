@@ -53,6 +53,7 @@
     "gatsby-transformer-sharp": "2.3.16",
     "isomorphic-fetch": "2.2.1",
     "katex": "0.11.1",
+    "ledgy-pricing": "1.2.0",
     "lity": "2.4.0",
     "lodash": "4.17.15",
     "micro": "9.3.4",
