@@ -3,6 +3,7 @@
 import React, { type Node } from 'react';
 import { Trans } from '@lingui/react';
 import { Link } from 'gatsby';
+import { targetBlank } from '../helpers';
 
 import { ChevronRight } from '../layouts/utils';
 
@@ -27,7 +28,9 @@ export const CardLink = ({
     <div className="row m-0 flex-1">
       <div className="col-md-6 col-lg-3">
         {external ? (
-          <a href={to}>{image}</a>
+          <a href={to} {...targetBlank}>
+            {image}
+          </a>
         ) : (
           <Link className="d-table h-100 w-100" href to={to}>
             <div className="card-image-wrapper">{image}</div>
@@ -49,7 +52,7 @@ export const CardLink = ({
           <div className="col-12">{description}</div>
           <div className="col-12 mt-auto">
             {external ? (
-              <a href={to}>
+              <a href={to} {...targetBlank}>
                 <Trans>Watch now</Trans>
                 <ChevronRight />
               </a>
