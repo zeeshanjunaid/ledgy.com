@@ -12,13 +12,18 @@ export const CustomerStoryCard = ({
   prefix: string
 |}) => {
   const pagePath = `${prefix}/customer-stories/${slug}/`;
-  const logoImage = <Img className="fit-cover" {...company.logo.localFile.childImageSharp} />;
-  const coverImage = <Img className="fit-cover" {...company.cover.localFile.childImageSharp} />;
+  const { logo, cover } = company;
+  const logoImage = <Img {...logo.localFile.childImageSharp} />;
+  const coverImage = <Img {...cover.localFile.childImageSharp} />;
   return (
     <Link href to={pagePath}>
-      <div className="card mb-4 px-4 py-1">
-        <div className="m-2">{logoImage}</div>
-        {coverImage}
+      <div className="card card-more-stories mb-4 px-4">
+        <div className="h-50 d-table">
+          <div className="card-image-wrapper">{logoImage}</div>
+        </div>
+        <div className="h-50 d-table">
+          <div className="card-image-wrapper">{coverImage}</div>
+        </div>
       </div>
     </Link>
   );

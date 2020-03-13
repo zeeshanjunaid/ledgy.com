@@ -16,7 +16,7 @@ export const OtherCustomerStories = ({
   if (customerStories.length === 0) return null;
   return (
     <>
-      <h4 className="my-5 text-center">
+      <h4 className="mb-5 mt-3 text-center">
         <Trans>More Stories from Ledgy Users</Trans>
       </h4>
       <div className="d-flex flex-row align-items-center justify-content-center mb-4">
