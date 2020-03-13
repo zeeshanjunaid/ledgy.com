@@ -14,9 +14,14 @@ declare type Props = {|
   data: Object
 |};
 
+declare type LocationProps = {
+  pathname: string,
+  hash?: string
+};
+
 declare type LayoutProps = {|
   ...Props,
-  location: { pathname: string }
+  location: LocationProps
 |};
 
 declare type Mdx = {| childMdx: {| body: string |} |};

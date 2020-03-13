@@ -23,7 +23,7 @@ type SiteProps = {|
   ...$Exact<Props>,
   lang: Language,
   children: Node,
-  location: { pathname: string }
+  location: LocationProps
 |};
 
 const Initialize = () => {
