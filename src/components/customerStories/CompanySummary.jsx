@@ -24,14 +24,14 @@ const getCompanySummaries = (company: Company) => [
 export const CompanySummary = ({ company }: {| company: Company |}) => (
   <div className="company-summary rounded-md bg-white sticky-top p-2 p-sm-4 p-md-2 p-lg-4">
     <Img
-      className="company-summary-logo font-weight-light fit-cover mx-auto mb-3"
+      className="company-summary-logo font-weight-light fit-cover mx-auto my-4"
       {...company.logo.localFile.childImageSharp}
     />
     <div className="container">
       <LongText
         content={company.mainQuote}
         isMarkdown={false}
-        className="company-summary-quote mb-0 text-left"
+        className="company-summary-quote mt-3 mb-0 text-left"
       />
       <div className="company-summary-contact mb-2">
         <div className="row mx-auto">

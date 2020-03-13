@@ -12,14 +12,19 @@ export const CustomerStoryCard = ({
   prefix: string
 |}) => {
   const pagePath = `${prefix}/customer-stories/${slug}/`;
-  const logoImage = <Img className="fit-cover" {...company.logo.localFile.childImageSharp} />;
-  const coverImage = <Img className="fit-cover" {...company.cover.localFile.childImageSharp} />;
+  const { logo, cover } = company;
+  const logoImage = <Img {...logo.localFile.childImageSharp} />;
+  const coverImage = <Img {...cover.localFile.childImageSharp} />;
   return (
-    <div className="card hover-shadow-5 bg-pale-secondary mb-6 px-5">
-      <Link href to={pagePath}>
-        <div className="m-2">{logoImage}</div>
-        {coverImage}
-      </Link>
-    </div>
+    <Link href to={pagePath}>
+      <div className="card card-more-stories mb-4 mx-auto px-4">
+        <div className="h-50 d-table">
+          <div className="card-image-wrapper">{logoImage}</div>
+        </div>
+        <div className="h-50 d-table">
+          <div className="card-image-wrapper">{coverImage}</div>
+        </div>
+      </div>
+    </Link>
   );
 };

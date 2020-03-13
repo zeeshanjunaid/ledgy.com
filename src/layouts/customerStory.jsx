@@ -6,7 +6,7 @@ import { graphql } from 'gatsby';
 import { LongText } from '../components/LongText';
 import { PageHeader } from '../components/PageHeader';
 import { CompanySummary, OtherCustomerStories } from '../components/customerStories';
-import { Title } from '../layouts/utils';
+import { Title, Hr } from '../layouts/utils';
 
 export default ({
   data,
@@ -42,11 +42,14 @@ export default ({
               </div>
             </div>
             {hasOtherCustomerStories && (
-              <div className="other-customer-stories-section row">
-                <div className="col-md-12">
-                  <OtherCustomerStories customerStories={otherUserStories} prefix={prefix} />
+              <>
+                <Hr />
+                <div className="row pb-6">
+                  <div className="col-md-12">
+                    <OtherCustomerStories customerStories={otherUserStories} prefix={prefix} />
+                  </div>
                 </div>
-              </div>
+              </>
             )}
           </div>
         </section>
