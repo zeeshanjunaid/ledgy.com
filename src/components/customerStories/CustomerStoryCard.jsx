@@ -17,7 +17,7 @@ export const CustomerStoryCard = ({
   const coverImage = <Img {...cover.localFile.childImageSharp} />;
   return (
     <Link href to={pagePath}>
-      <div className="card card-more-stories mb-4 px-4">
+      <div className="card card-more-stories mb-4 mx-auto px-4">
         <div className="h-50 d-table">
           <div className="card-image-wrapper">{logoImage}</div>
         </div>
