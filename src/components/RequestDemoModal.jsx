@@ -38,7 +38,7 @@ export const RequestDemoModal = ({
           isDemoRequested ? (
             <Trans>Thank you for your interest!</Trans>
           ) : (
-            <Trans>Request a demo</Trans>
+            <Trans>Request a demo of Ledgy</Trans>
           )
         }
       >
