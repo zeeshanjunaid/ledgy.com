@@ -14,7 +14,7 @@ export const CustomerStoryLink = ({
 |}) => {
   const { title, subtitle, slug, company } = customerStory;
   const to = `${prefix}/customer-stories/${slug}`;
-  const image = <Img className="m-4" {...company.logo.localFile.childImageSharp} />;
+  const image = <Img {...company.logo.localFile.childImageSharp} />;
   const cardTitle = <h5>{title}</h5>;
   return (
     <CardLink

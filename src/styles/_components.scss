@@ -411,10 +411,16 @@ $deco-dot-size: 8px;
 }
 
 // Card
-.card-blog {
-  min-height: 250px;
-  & .gatsby-image-wrapper {
+.card {
+  &-blog, &-customer-story {
+    min-height: 250px;
+  }
+  &-blog .gatsby-image-wrapper {
     position: static !important;
+  }
+  &-image-wrapper {
+    display: table-cell;
+    vertical-align: middle;
   }
 }
 

@@ -29,8 +29,8 @@ export const CardLink = ({
         {external ? (
           <a href={to}>{image}</a>
         ) : (
-          <Link href to={to}>
-            {image}
+          <Link className="d-table h-100 w-100" href to={to}>
+            <div className="card-image-wrapper">{image}</div>
           </Link>
         )}
       </div>
@@ -54,12 +54,10 @@ export const CardLink = ({
                 <ChevronRight />
               </a>
             ) : (
-              <small>
-                <Link href to={to}>
-                  <Trans>Read more</Trans>
-                  <ChevronRight />
-                </Link>
-              </small>
+              <Link href to={to}>
+                <Trans>Read more</Trans>
+                <ChevronRight />
+              </Link>
             )}
           </div>
         </div>

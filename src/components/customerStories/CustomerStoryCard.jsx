@@ -15,11 +15,11 @@ export const CustomerStoryCard = ({
   const logoImage = <Img className="fit-cover" {...company.logo.localFile.childImageSharp} />;
   const coverImage = <Img className="fit-cover" {...company.cover.localFile.childImageSharp} />;
   return (
-    <div className="card hover-shadow-5 bg-pale-secondary mb-6 px-5">
-      <Link href to={pagePath}>
+    <Link href to={pagePath}>
+      <div className="card mb-4 px-4 py-1">
         <div className="m-2">{logoImage}</div>
         {coverImage}
-      </Link>
-    </div>
+      </div>
+    </Link>
   );
 };

@@ -19,7 +19,7 @@ export const OtherCustomerStories = ({
       <h4 className="my-5 text-center">
         <Trans>More Stories from Ledgy Users</Trans>
       </h4>
-      <div className="d-flex flex-row align-items-center justify-content-center mb-6">
+      <div className="d-flex flex-row align-items-center justify-content-center mb-4">
         {sampleSize(customerStories, 3).map(customerStory => (
           <div key={customerStory.id} className="col-md-3 col-md-offset-1">
             <CustomerStoryCard customerStory={customerStory} prefix={prefix} />
