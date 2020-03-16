@@ -41,15 +41,15 @@ export const getCompanyFeaturePricing = () => [
   { text: <Trans>Dedicated account manager</Trans>, startup: false, scaleup: false },
   { text: <Trans>SLA</Trans>, startup: false, scaleup: false },
   {
+    text: <Trans>Electronic signatures</Trans>,
+    startup: false,
+    scaleup: <Trans>Standard</Trans>,
+    enterprise: <Trans>Qualified</Trans>
+  },
+  {
     text: <Trans>Document templating</Trans>,
     startup: false,
     scaleup: false,
-    enterprise: <Trans>Coming soon</Trans>
-  },
-  {
-    text: <Trans>Electronic signatures</Trans>,
-    startup: false,
-    scaleup: <Trans>Coming soon</Trans>,
     enterprise: <Trans>Coming soon</Trans>
   }
 ];
