@@ -14,7 +14,7 @@ import {
   Testimonials,
   Instructions,
   CallToAction,
-  SignaturesComingSoon,
+  DigitalSignatures,
   Video
 } from '../components/templates';
 import { ProductHuntButton } from '../components/ProductHuntButton';
@@ -62,7 +62,7 @@ const EquityPlans = (props: Props) => {
           <Testimonials data={data} i18n={i18n} />
           <Video />
           <TemplateFAQs {...props} />
-          <SignaturesComingSoon data={data} />
+          <DigitalSignatures data={data} />
         </>
       </ContentBody>
     </>
@@ -83,7 +83,7 @@ export const PageQuery = graphql`
         ...GatsbyImageSharpFluid
       }
     }
-    signaturesComingSoon: imageSharp(
+    digitalSignatures: imageSharp(
       fluid: { originalName: { regex: "/signatures-coming-soon.png/" } }
     ) {
       fluid(maxWidth: 1000) {
