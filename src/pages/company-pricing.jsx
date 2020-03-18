@@ -4,13 +4,14 @@
 import React, { type Node } from 'react';
 import { withI18n, Trans } from '@lingui/react';
 import { graphql } from 'gatsby';
-import { LedgyPricing } from 'ledgy-pricing';
+import { LedgyPricing } from '@ledgy/pricing';
 
 import { Button } from '../components/Button';
 import { Title } from '../layouts/utils';
 import { RequestDemoModal } from '../components/RequestDemoModal';
 import { appUrl } from '../helpers';
 import { PageHeader } from '../components/PageHeader';
+import { DynamicTrans, dynamicI18n } from '../components/DynamicTrans';
 
 const PricingCTA = ({ title, description }: {| title: Node, description: Node |}) => (
   <div className="col-12 col-lg-6 col-xl-4">
@@ -21,6 +22,7 @@ const PricingCTA = ({ title, description }: {| title: Node, description: Node |}
 
 export default withI18n()(({ i18n }: Props) => {
   const title = i18n.t`Pricing`;
+  const t = dynamicI18n(i18n);
   const description = i18n.t`Companies at different stages have very different needs. Consider access rights, storage, support needs, and more when selecting your ideal plan.`;
   return (
     <>
@@ -38,6 +40,9 @@ export default withI18n()(({ i18n }: Props) => {
           </Button>
         }
         enterpriseButton={<RequestDemoModal buttonClassName="my-4 btn-red" />}
+        highlightEnterprise
+        DynamicTrans={DynamicTrans}
+        t={t}
       />
       <hr className="my-8" />
       <div className="container">
