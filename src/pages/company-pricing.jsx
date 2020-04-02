@@ -35,7 +35,7 @@ export default withI18n()(({ i18n }: Props) => {
           </Button>
         }
         scaleupButton={
-          <Button outline inverted className="my-4" href={`${appUrl}/signup`}>
+          <Button outline inverted className="mt-4 mb-1" href={`${appUrl}/signup`}>
             <Trans>Free trial</Trans>
           </Button>
         }
