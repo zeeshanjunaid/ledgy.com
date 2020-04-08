@@ -36,9 +36,10 @@ export default withI18n()(({ i18n }: Props) => {
         }
         scaleupButton={
           <Button outline inverted className="mt-4 mb-1" href={`${appUrl}/signup`}>
-            <Trans>Free trial</Trans>
+            <Trans>Sign up</Trans>
           </Button>
         }
+        scaleupText="14-day free trial"
         enterpriseButton={<RequestDemoModal buttonClassName="my-4 btn-red" />}
         highlightEnterprise
         DynamicTrans={DynamicTrans}
