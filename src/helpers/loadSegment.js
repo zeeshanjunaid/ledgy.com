@@ -1,5 +1,9 @@
 /* eslint-disable */
-!(function() {
+
+const getDestinations = (destinations: string[]): { [string]: string } =>
+  destinations.reduce((res, v) => ({ ...res, [v]: true }), { All: false });
+
+export const loadSegment = (destinations: string[]): void => {
   const analytics = (window.analytics = window.analytics || []);
   if (!analytics.initialize)
     if (analytics.invoked)
@@ -47,13 +51,8 @@
       };
       analytics.SNIPPET_VERSION = '4.1.0';
       analytics.load('mfLUo1gAa0xfzIR2xANV10NG8qN1IZnu', {
-        integrations: {
-          All: false,
-          'Google Analytics': true,
-          HubSpot: true,
-          Hotjar: true
-        }
+        integrations: getDestinations(destinations)
       });
       analytics.page();
     }
-})();
+};

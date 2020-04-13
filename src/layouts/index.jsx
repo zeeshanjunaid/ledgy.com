@@ -10,7 +10,7 @@ import 'katex/dist/katex.min.css';
 import 'prism-themes/themes/prism-ghcolors.css';
 import '../styles/_index.scss';
 
-import { name, getLdJson, animateTablet, isDevelopment, ContentSecurityPolicy } from '../helpers';
+import { name, getLdJson, animateTablet, loadSegment } from '../helpers';
 import { Title } from './utils';
 import { catalogs, langFromPath, langPrefix, deprefix } from '../i18n-config';
 
@@ -26,12 +26,11 @@ type SiteProps = {|
   location: LocationProps
 |};
 
-const Initialize = () => {
+const Initialize = ({ segmentDestinations }: {| segmentDestinations: string[] |}) => {
   useEffect(() => {
     animateTablet();
-    setTimeout(async () => {
-      require('../hotjar'); // eslint-disable-line global-require
-      require('../segment'); // eslint-disable-line global-require
+    setTimeout(() => {
+      loadSegment(segmentDestinations);
     }, 1414);
   }, []);
   return null;
@@ -44,6 +43,7 @@ const TemplateWrapper = withI18n()(({ children, ...props }: SiteProps) => (
         site {
           siteMetadata {
             siteUrl
+            segmentDestinations
           }
         }
       }
@@ -51,7 +51,7 @@ const TemplateWrapper = withI18n()(({ children, ...props }: SiteProps) => (
     render={data => {
       const { i18n, lang } = props;
       const prefix = langPrefix(lang);
-      const { siteUrl } = data.site.siteMetadata;
+      const { siteUrl, segmentDestinations } = data.site.siteMetadata;
       const thumbnailUrl = `${siteUrl}/thumbnail-874d5c.png`;
       const pathname = deprefix(props.location.pathname);
       const isAppShell = pathname.includes('offline-plugin-app-shell-fallback');
@@ -62,7 +62,7 @@ const TemplateWrapper = withI18n()(({ children, ...props }: SiteProps) => (
             description={i18n.t`Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant. Try now for free!`}
             thumbnailUrl={thumbnailUrl}
           />
-          <Initialize />
+          <Initialize segmentDestinations={segmentDestinations} />
           <Helmet>
             <html lang={lang} />
             <meta
@@ -71,10 +71,6 @@ const TemplateWrapper = withI18n()(({ children, ...props }: SiteProps) => (
             />
             <meta name="author" content="Ledgy" />
             <script type="application/ld+json">{getLdJson(siteUrl)}</script>
-
-            {isDevelopment && (
-              <meta httpEquiv="Content-Security-Policy" content={ContentSecurityPolicy} />
-            )}
 
             {/* Facebook social card */}
             <meta property="og:site_name" content={name} />

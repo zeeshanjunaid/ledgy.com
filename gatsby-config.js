@@ -5,11 +5,10 @@ const {
   NODE_ENV,
   BRANCH,
   CONTENTFUL_SPACE_ID,
-  CONTENTFUL_ACCESS_TOKEN
+  CONTENTFUL_ACCESS_TOKEN,
+  SEGMENT_DESTINATIONS
 } = process.env;
 const src = `${__dirname}/src`;
-
-const { ContentSecurityPolicy } = require('./src/helpers/contentSecurityPolicy');
 
 module.exports = {
   siteMetadata: {
@@ -17,7 +16,8 @@ module.exports = {
       (CONTEXT === 'production' && URL) ||
       DEPLOY_PRIME_URL ||
       `http://localhost:${NODE_ENV === 'production' ? 9 : 8}000`,
-    branch: BRANCH || 'development'
+    branch: BRANCH || 'development',
+    segmentDestinations: (SEGMENT_DESTINATIONS || '').split(',')
   },
   proxy: {
     prefix: '/engage',
@@ -81,7 +81,6 @@ module.exports = {
       options: {
         headers: {
           '/*': [
-            `Content-Security-Policy: ${ContentSecurityPolicy}`,
             'Referrer-Policy: strict-origin-when-cross-origin',
             'Access-Control-Allow-Origin: https://www.ledgy.com',
             'Access-Control-Allow-Credentials: true'
