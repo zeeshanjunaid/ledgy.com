@@ -9,8 +9,6 @@ const {
 } = process.env;
 const src = `${__dirname}/src`;
 
-const { ContentSecurityPolicy } = require('./src/helpers/contentSecurityPolicy');
-
 module.exports = {
   siteMetadata: {
     siteUrl:
@@ -81,7 +79,6 @@ module.exports = {
       options: {
         headers: {
           '/*': [
-            `Content-Security-Policy: ${ContentSecurityPolicy}`,
             'Referrer-Policy: strict-origin-when-cross-origin',
             'Access-Control-Allow-Origin: https://www.ledgy.com',
             'Access-Control-Allow-Credentials: true'
