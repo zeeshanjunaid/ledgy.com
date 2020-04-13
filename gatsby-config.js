@@ -5,7 +5,8 @@ const {
   NODE_ENV,
   BRANCH,
   CONTENTFUL_SPACE_ID,
-  CONTENTFUL_ACCESS_TOKEN
+  CONTENTFUL_ACCESS_TOKEN,
+  SEGMENT_DESTINATIONS
 } = process.env;
 const src = `${__dirname}/src`;
 
@@ -15,7 +16,8 @@ module.exports = {
       (CONTEXT === 'production' && URL) ||
       DEPLOY_PRIME_URL ||
       `http://localhost:${NODE_ENV === 'production' ? 9 : 8}000`,
-    branch: BRANCH || 'development'
+    branch: BRANCH || 'development',
+    segmentDestinations: (SEGMENT_DESTINATIONS || '').split(',')
   },
   proxy: {
     prefix: '/engage',

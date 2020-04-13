@@ -1,5 +1,6 @@
 // @flow
 
-export * from './constants.js';
-export * from './utilities.js';
-export * from './pageTextHelpers.jsx';
+export * from './constants';
+export * from './utilities';
+export { loadSegment } from './loadSegment';
+export * from './pageTextHelpers';
