@@ -35,14 +35,17 @@ export default withI18n()(({ i18n }: Props) => (
             <p>CHE‑261.454.963 MWST</p>
           </div>
           <div className="col-md-6">
-            <h6>
-              <Trans>Contact</Trans>
-            </h6>
-            <p>
-              <a href="mailto:contact@ledgy.com">contact@ledgy.com</a>
-              <br />
-              +41 (0) 44 585 21 23
-            </p>
+            <div className="d-flex flex-column flex-lg-row">
+              <div className="col-6 p-0 mb-3">
+                <h6>General Inquiries</h6>
+                <a href="mailto:contact@ledgy.com">contact@ledgy.com</a>
+                <div className="text-nowrap">+41 (0) 44 585 21 23</div>
+              </div>
+              <div className="col-6 p-0">
+                <h6>Sales Inquiries</h6>
+                <a href="mailto:contact@ledgy.com">sales@ledgy.com</a>
+              </div>
+            </div>
             <h6>
               <Trans>Managing directors</Trans>
             </h6>
