@@ -36,12 +36,12 @@ export default withI18n()(({ i18n }: Props) => (
           </div>
           <div className="col-md-6">
             <div className="d-flex flex-column flex-lg-row">
-              <div className="col-6 p-0 mb-3">
+              <div className="col-6 p-0 mb-3 text-nowrap">
                 <h6>General Inquiries</h6>
                 <a href="mailto:contact@ledgy.com">contact@ledgy.com</a>
-                <div className="text-nowrap">+41 (0) 44 585 21 23</div>
+                <div>+41 (0) 44 585 21 23</div>
               </div>
-              <div className="col-6 p-0">
+              <div className="col-6 p-0 text-nowrap">
                 <h6>Sales Inquiries</h6>
                 <a href="mailto:contact@ledgy.com">sales@ledgy.com</a>
               </div>
