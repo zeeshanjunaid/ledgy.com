@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Exit if any command fails
+set -e
+
 ./getTranslations.sh
 
 if [ "$NETLIFY_BUILD_BASE" ]; then
