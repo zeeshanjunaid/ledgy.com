@@ -4,7 +4,7 @@
 import React, { type Node } from 'react';
 import { withI18n, Trans } from '@lingui/react';
 import { graphql } from 'gatsby';
-import { LedgyPricing } from '@ledgy/pricing';
+import { LedgyPricing } from '@ledgy/pricing/dist/LedgyPricing';
 
 import { Button } from '../components/Button';
 import { Title } from '../layouts/utils';
