@@ -5,8 +5,9 @@ set -e
 
 ./getTranslations.sh
 
-if [ "$NETLIFY_BUILD_BASE" ]; then
-  cp -r $NETLIFY_BUILD_BASE/cache/gatsby/.cache .cache
+CACHE_DIR=$NETLIFY_BUILD_BASE/cache/gatsby/.cache
+if [ -d "$CACHE_DIR" ]; then
+  cp -r $CACHE_DIR .cache
 fi
 
 npm rebuild sharp node-sass
