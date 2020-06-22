@@ -9,9 +9,9 @@ export type AuthorProps = {|
   name: string,
   role: string,
   description: Node,
-  twitter: string,
   linkedIn: string,
   mail: string,
+  twitter?: string,
   article?: string
 |};
 
@@ -138,6 +138,18 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
     mail: 'armon@ledgy.com',
     article: 'armon-baettig'
   },
+  karime: {
+    name: 'Karime Andere',
+    role: 'Business Development & Olympic Swimmer',
+    description: (
+      <Trans>
+        With experience in consumer research and strategic planning, Karime is finishing her
+        Master’s degree in Management with an orientation in Marketing at HEC Lausanne
+      </Trans>
+    ),
+    linkedIn: 'https://www.linkedin.com/in/karimeandere/',
+    mail: 'karime@ledgy.com'
+  },
   luna: {
     name: 'Luna',
     role: 'Rocket & Trailblazer',
@@ -199,6 +211,11 @@ export const TeamFragment = graphql`
       }
     }
     armon: imageSharp(fluid: { originalName: { regex: "/armon.jpg/" } }) {
+      fluid(maxWidth: 245, maxHeight: 245) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    karime: imageSharp(fluid: { originalName: { regex: "/karime.jpg/" } }) {
       fluid(maxWidth: 245, maxHeight: 245) {
         ...GatsbyImageSharpFluid
       }
