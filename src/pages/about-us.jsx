@@ -45,11 +45,11 @@ const Founder = withI18n()(
               <p className="mt-2 font-weight-light">{description}</p>
             </div>
             <div>
-              <a className="social-icon" href={`mailto:${mail}`}>
+              <a className="social-icon mr-3" href={`mailto:${mail}`}>
                 <FontAwesomeIcon icon={faEnvelope} />
               </a>
               {twitter && (
-                <a className="social-icon mx-3" href={twitter}>
+                <a className="social-icon mr-3" href={twitter}>
                   <FontAwesomeIcon icon={faTwitter} />
                 </a>
               )}
