@@ -140,7 +140,7 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
   },
   karime: {
     name: 'Karime Andere',
-    role: 'Business Development & Swimmer',
+    role: 'Business Development & Olympic Swimmer',
     description: (
       <Trans>
         With experience in consumer research and strategic planning, Karime is finishing her
