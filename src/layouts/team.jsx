@@ -9,9 +9,9 @@ export type AuthorProps = {|
   name: string,
   role: string,
   description: Node,
-  twitter: string,
   linkedIn: string,
   mail: string,
+  twitter?: string,
   article?: string
 |};
 
@@ -137,6 +137,18 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
     linkedIn: 'https://www.linkedin.com/in/armon-baettig',
     mail: 'armon@ledgy.com',
     article: 'armon-baettig'
+  },
+  karime: {
+    name: 'Karime Andere',
+    role: 'Business Development & Swimmer',
+    description: (
+      <Trans>
+        With experience in consumer research and strategic planning, Karime is finishing her
+        Master’s degree in Management with an orientation in Marketing at HEC Lausanne
+      </Trans>
+    ),
+    linkedIn: 'https://www.linkedin.com/in/karimeandere/',
+    mail: 'karime@ledgy.com'
   },
   luna: {
     name: 'Luna',

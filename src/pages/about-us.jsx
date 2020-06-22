@@ -48,9 +48,11 @@ const Founder = withI18n()(
               <a className="social-icon" href={`mailto:${mail}`}>
                 <FontAwesomeIcon icon={faEnvelope} />
               </a>
-              <a className="social-icon mx-3" href={twitter}>
-                <FontAwesomeIcon icon={faTwitter} />
-              </a>
+              {twitter && (
+                <a className="social-icon mx-3" href={twitter}>
+                  <FontAwesomeIcon icon={faTwitter} />
+                </a>
+              )}
               <a className="social-icon" href={linkedIn}>
                 <FontAwesomeIcon icon={faLinkedin} />
               </a>
@@ -103,6 +105,7 @@ const IndexPage = (props: Props) => {
           <Founder {...team.jules} img={data.jules} />
           <Founder {...team.spela} img={data.spela} />
           <Founder {...team.armon} img={data.armon} />
+          <Founder {...team.karime} img={data.karime} />
           <Founder {...team.luna} img={data.luna} />
         </div>
 
