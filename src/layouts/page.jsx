@@ -23,6 +23,8 @@ const page = ({
   ...Props,
   data: {| contentfulPage: Page, site: { siteMetadata: { siteUrl: string } } |}
 |}) => {
+  if (!data) return null;
+
   const { slug, title, description, language, content, author, date, cover } = data.contentfulPage;
   const { siteUrl } = data.site.siteMetadata;
   const showCalculatorHeader = slug === CALCULATOR_SLUG;
