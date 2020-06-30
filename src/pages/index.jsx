@@ -20,15 +20,16 @@ const DecoShapes = () => (
 
 const IndexPage = (props: Props) => {
   const t = dynamicI18n(props.i18n);
+  const { title, entries } = props.data.page;
   return (
     <main className="position-relative overflow-hidden">
       <Helmet>
-        <title>{`Ledgy: ${t(props.data.page.title)}`}</title>
+        <title>{`Ledgy: ${t(title)}`}</title>
       </Helmet>
       <DecoShapes />
       <HomePageHeader {...props} />
 
-      {props.data.page.entries.map(({ __typename, id, ...entry }, index) => {
+      {entries.map(({ __typename, id, ...entry }, index) => {
         const { prefix } = props;
 
         if (index === 0) {
