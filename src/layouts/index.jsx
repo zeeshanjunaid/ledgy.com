@@ -58,7 +58,7 @@ const TemplateWrapper = withI18n()(({ children, ...props }: SiteProps) => (
       return (
         <div>
           <Title
-            title={`Ledgy | ${i18n.t`Equity done right`}`}
+            title={i18n.t`Best Cap Table and Equity Plan Management Software`}
             description={i18n.t`Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant. Try now for free!`}
             thumbnailUrl={thumbnailUrl}
           />

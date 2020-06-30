@@ -3,11 +3,13 @@
 import React from 'react';
 import { withI18n } from '@lingui/react';
 import { graphql } from 'gatsby';
+import { Helmet } from 'react-helmet';
 
 import { HomePageHeader } from '../components/HomePageHeader';
 import { MainProblemLayout } from '../components/MainProblemLayout';
 import { ExternalLogoRow } from '../components/ExternalLogoRow';
 import { SellingProp } from '../components/SellingProp';
+import { dynamicI18n } from '../components/DynamicTrans';
 
 const DecoShapes = () => (
   <>
@@ -16,27 +18,33 @@ const DecoShapes = () => (
   </>
 );
 
-const IndexPage = (props: Props) => (
-  <main className="position-relative overflow-hidden">
-    <DecoShapes />
-    <HomePageHeader {...props} />
+const IndexPage = (props: Props) => {
+  const t = dynamicI18n(props.i18n);
+  return (
+    <main className="position-relative overflow-hidden">
+      <Helmet>
+        <title>{`Ledgy: ${t(props.data.page.title)}`}</title>
+      </Helmet>
+      <DecoShapes />
+      <HomePageHeader {...props} />
 
-    {props.data.page.entries.map(({ __typename, id, ...entry }, index) => {
-      const { prefix } = props;
+      {props.data.page.entries.map(({ __typename, id, ...entry }, index) => {
+        const { prefix } = props;
 
-      if (index === 0) {
-        return <MainProblemLayout key={id} {...entry} />;
-      }
-      if (__typename === 'ContentfulExternalLogos') {
-        return <ExternalLogoRow key={id} {...entry} />;
-      }
-      if (__typename === 'ContentfulSellingProposition') {
-        return <SellingProp key={id} {...entry} prefix={prefix} imgFirst={index % 2 === 0} />;
-      }
-      return null;
-    })}
-  </main>
-);
+        if (index === 0) {
+          return <MainProblemLayout key={id} {...entry} />;
+        }
+        if (__typename === 'ContentfulExternalLogos') {
+          return <ExternalLogoRow key={id} {...entry} />;
+        }
+        if (__typename === 'ContentfulSellingProposition') {
+          return <SellingProp key={id} {...entry} prefix={prefix} imgFirst={index % 2 === 0} />;
+        }
+        return null;
+      })}
+    </main>
+  );
+};
 
 export default withI18n()(IndexPage);
 
@@ -49,6 +57,7 @@ export const pageQuery = graphql`
       }
     }
     page: contentfulIndexPage(contentful_id: { eq: "jjbelvJa8nRqbGqYrr5wi" }) {
+      title
       entries {
         ... on ContentfulExternalLogos {
           id
