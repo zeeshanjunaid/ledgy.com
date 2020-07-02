@@ -6,7 +6,7 @@ import {
   SMALL_COMPANY_SIZES,
   FORM_STATES,
   isFieldMissing,
-  track
+  track,
 } from '../../helpers';
 
 const { ERROR, INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED } = FORM_STATES;
@@ -21,7 +21,7 @@ export type DemoFormStatus =
 
 type State = {|
   companySize: string,
-  email: string
+  email: string,
 |};
 
 export const isSmallCompany = (companySize: string) => SMALL_COMPANY_SIZES.includes(companySize);
@@ -34,19 +34,21 @@ const redirectToDemo = () => {
 
 const HUBSPOTUTK = 'hubspotutk=';
 const getHubspotUserToken = (): string =>
-  (document.cookie.split('; ').find(v => v.startsWith(HUBSPOTUTK)) || '').slice(HUBSPOTUTK.length);
+  (document.cookie.split('; ').find((v) => v.startsWith(HUBSPOTUTK)) || '').slice(
+    HUBSPOTUTK.length
+  );
 
-const encodeBody = data =>
+const encodeBody = (data) =>
   JSON.stringify({
     fields: Object.entries(data).map(([name, value]) => ({ name, value })),
-    context: { hutk: getHubspotUserToken() }
+    context: { hutk: getHubspotUserToken() },
   });
 
 const fetchHubspot = ({ email, companySize }: State) =>
   fetch('/getDemo', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: encodeBody({ email, companysize: companySize })
+    body: encodeBody({ email, companysize: companySize }),
   });
 
 export const handleDemoAccessSubmit = async ({
@@ -54,13 +56,13 @@ export const handleDemoAccessSubmit = async ({
   state,
   setFormStatus,
   setDemoRequested,
-  toggle
+  toggle,
 }: {|
   event: SyntheticInputEvent<HTMLInputElement>,
   state: State,
-  setFormStatus: DemoFormStatus => void,
-  setDemoRequested: boolean => void,
-  toggle: () => void
+  setFormStatus: (DemoFormStatus) => void,
+  setDemoRequested: (boolean) => void,
+  toggle: () => void,
 |}) => {
   event.preventDefault();
   setFormStatus(LOADING);

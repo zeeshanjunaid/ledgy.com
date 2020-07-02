@@ -55,14 +55,14 @@ export const FORM_STATES = Object.freeze({
   SUBMITTED: 'submitted',
   INVALID: 'invalid',
   INVALID_EMAIL: 'invalid-email',
-  INVALID_FIELDS: 'invalid-fields'
+  INVALID_FIELDS: 'invalid-fields',
 });
 
 // plan names
 export const LEDGY_PLANS = Object.freeze({
   STARTUP: 'Startup',
   SCALEUP: 'Premium', // will be named Scaleup soon
-  ENTERPRISE: 'Enterprise'
+  ENTERPRISE: 'Enterprise',
 });
 
 // company sizes

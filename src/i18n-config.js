@@ -13,10 +13,10 @@ const catalogs = {
 
 const defaultLanguage = 'en';
 
-const langPrefix = lang => (lang === defaultLanguage ? '' : `/${lang}`);
-const deprefix = pathname =>
+const langPrefix = (lang) => (lang === defaultLanguage ? '' : `/${lang}`);
+const deprefix = (pathname) =>
   pathname[0] === '/' && pathname[3] === '/' ? pathname.substr(3) : pathname;
-const langFromPath = pathname => {
+const langFromPath = (pathname) => {
   const lang = pathname.split('/')[1];
   return languages.includes(lang) ? lang : 'en';
 };
@@ -26,7 +26,7 @@ const browserLanguagePropertyKeys = [
   'language',
   'browserLanguage',
   'userLanguage',
-  'systemLanguage'
+  'systemLanguage',
 ];
 const getLocale = () =>
   compose(
@@ -35,8 +35,8 @@ const getLocale = () =>
     values,
     pick(browserLanguagePropertyKeys)
   )(window.navigator)
-    .map(s => s.substr(0, 2))
-    .find(s => languages.includes(s)) || 'en';
+    .map((s) => s.substr(0, 2))
+    .find((s) => languages.includes(s)) || 'en';
 
 exports.defaultLanguage = defaultLanguage;
 exports.languages = languages;

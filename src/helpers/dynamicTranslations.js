@@ -9,7 +9,7 @@ if (!isBrowser) {
     // eslint-disable-next-line no-eval
     const fs = eval('require("fs")');
 
-    const po = Array.from(dynamicTranslations).map(text => {
+    const po = Array.from(dynamicTranslations).map((text) => {
       const escapedText = (text || '').replace(/"/g, '\\"');
       return `#: dynamic\nmsgid "${escapedText}"\nmsgstr "${escapedText}"\n\n`;
     });

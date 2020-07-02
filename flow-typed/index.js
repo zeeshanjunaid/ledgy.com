@@ -4,24 +4,24 @@ declare type Language = 'en' | 'de' | 'fr';
 
 declare type I18n = {|
   t: (Array<string>, ...values: Array<any>) => string,
-  _: string => string
+  _: (string) => string,
 |};
 
 declare type Props = {|
   i18n: I18n,
   prefix: string,
   lang: Language,
-  data: Object
+  data: Object,
 |};
 
 declare type LocationProps = {
   pathname: string,
-  hash?: string
+  hash?: string,
 };
 
 declare type LayoutProps = {|
   ...Props,
-  location: LocationProps
+  location: LocationProps,
 |};
 
 declare type Mdx = {| childMdx: {| body: string |} |};
@@ -29,7 +29,7 @@ declare type Mdx = {| childMdx: {| body: string |} |};
 declare type Image = {|
   localFile: {| childImageSharp: Object |},
   title: string,
-  description?: string
+  description?: string,
 |};
 
 declare type Page = {|
@@ -41,7 +41,7 @@ declare type Page = {|
   content: Mdx,
   slug: string,
   language: Language,
-  cover?: Image
+  cover?: Image,
 |};
 
 declare type Company = {|
@@ -56,7 +56,7 @@ declare type Company = {|
   employeeCount: string,
   sector: string,
   location: string,
-  stage: string
+  stage: string,
 |};
 
 declare type CustomerStory = {|
@@ -68,14 +68,14 @@ declare type CustomerStory = {|
   content: Mdx,
   date: string,
   language: Language,
-  author?: string
+  author?: string,
 |};
 
 declare type Feature = {|
   id: string,
   title: string,
   description: string[],
-  image: Image
+  image: Image,
 |};
 
 declare type FeaturePage = {|
@@ -83,7 +83,7 @@ declare type FeaturePage = {|
   title: string,
   description: string,
   features: Feature[],
-  startOnRight?: boolean
+  startOnRight?: boolean,
 |};
 
 declare var graphql: any;

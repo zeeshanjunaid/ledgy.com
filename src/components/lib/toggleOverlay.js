@@ -1,6 +1,6 @@
 // @flow
 
-export const toggleOverlay = (isOverlayOpen: boolean, toggle: boolean => void) => {
+export const toggleOverlay = (isOverlayOpen: boolean, toggle: (boolean) => void) => {
   if (document.body) {
     if (!isOverlayOpen) {
       document.body.classList.add('overlay');
