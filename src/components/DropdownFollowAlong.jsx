@@ -14,15 +14,15 @@ type ListItemHoverProps = {|
   ...ListItemProps,
   to: string,
   text?: Node,
-  onClick: Event => void
+  onClick: (Event) => void,
 |};
 
 type ParentListItemProps = {|
   ...ListItemProps,
-  eventHandlingProps: {| onMouseEnter: Event => void, onMouseLeave: Event => void |},
+  eventHandlingProps: {| onMouseEnter: (Event) => void, onMouseLeave: (Event) => void |},
   menuItems: Object[],
-  disappear: Event => void,
-  className: string
+  disappear: (Event) => void,
+  className: string,
 |};
 
 const NAV_ID = 'custom-hover-nav';
@@ -58,7 +58,7 @@ const ParentListItem = ({
   prefix,
   disappear,
   isTextShown,
-  className
+  className,
 }: ParentListItemProps) => (
   <li {...eventHandlingProps}>
     <p>{parentTitle}</p>
@@ -70,7 +70,7 @@ const ParentListItem = ({
           text={text}
           prefix={prefix}
           key={to}
-          onClick={e => disappear(e)}
+          onClick={(e) => disappear(e)}
           isTextShown={isTextShown}
         />
       ))}
@@ -84,7 +84,7 @@ const { features, resources, pricing, dataProtection } = getNavbarLinks();
 const parentListItems = [
   [featuresTitle, features, 'features-dd'],
   [resourcesTitle, resources, 'resources-dd'],
-  [pricingTitle, pricing, 'pricing-dd']
+  [pricingTitle, pricing, 'pricing-dd'],
 ];
 
 export const DropdownFollowAlong = (props: LayoutProps) => {
@@ -95,7 +95,7 @@ export const DropdownFollowAlong = (props: LayoutProps) => {
   const [firstHover, setFirstHover] = useState(true);
   const [isTextShown, setShowText] = useState(true);
 
-  const hoverIn = e => {
+  const hoverIn = (e) => {
     setShowText(true);
     const navbar = getNavbar();
     if (navbar) {
@@ -118,7 +118,7 @@ export const DropdownFollowAlong = (props: LayoutProps) => {
     }
   };
 
-  const hoverOut = e => {
+  const hoverOut = (e) => {
     const { currentTarget } = e;
     currentTarget.classList.remove('trigger-enter');
     setTimeout(() => currentTarget.classList.remove('trigger-enter-active'), 100);
@@ -133,8 +133,8 @@ export const DropdownFollowAlong = (props: LayoutProps) => {
   };
 
   const eventHandlingProps = {
-    onMouseEnter: e => hoverIn(e),
-    onMouseLeave: e => hoverOut(e)
+    onMouseEnter: (e) => hoverIn(e),
+    onMouseLeave: (e) => hoverOut(e),
   };
   return (
     <>
@@ -151,7 +151,7 @@ export const DropdownFollowAlong = (props: LayoutProps) => {
               width: backgroundWidth,
               height: backgroundHeight,
               transform: backgroundTransform,
-              transition: firstHover ? 'opacity 300ms' : 'all 200ms'
+              transition: firstHover ? 'opacity 300ms' : 'all 200ms',
             }}
           >
             <span className="arrow" />

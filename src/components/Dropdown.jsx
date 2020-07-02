@@ -13,14 +13,14 @@ export const Dropdown = ({
   toggleClass = '',
   toggleProps = {},
   items,
-  itemClass = ''
+  itemClass = '',
 }: {|
   toggleText: Node,
   toggleIcon?: string,
   toggleClass?: string,
   toggleProps?: Object,
   items: Node[],
-  itemClass?: string
+  itemClass?: string,
 |}) => {
   const [isOpen, setOpen] = useState(false);
   return (

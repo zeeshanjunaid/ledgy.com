@@ -20,7 +20,7 @@ export default withI18n()(({ i18n, data }: Props) => (
     <PageHeader title={i18n.t`Ledgy Webinars`} />
 
     <ContentBody>
-      {data.allContentfulWebinar.edges.map(edge => {
+      {data.allContentfulWebinar.edges.map((edge) => {
         const { node } = edge;
         const { id, youtube, description } = node;
         return (

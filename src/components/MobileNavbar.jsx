@@ -16,14 +16,14 @@ const MobileNavbarGroup = ({
   prefix,
   isOpen,
   setOpen,
-  toggleOverlay
+  toggleOverlay,
 }: {|
   title: Node,
   links: Object,
   prefix: string,
   isOpen: boolean,
-  setOpen: boolean => void,
-  toggleOverlay: (boolean, (boolean) => void) => void
+  setOpen: (boolean) => void,
+  toggleOverlay: (boolean, (boolean) => void) => void,
 |}) => (
   <>
     <p className="text-gray-neutral mb-1">{title}</p>
@@ -51,19 +51,19 @@ const titlesAndLinks = [
   [featuresTitle, features],
   [resourcesTitle, resources],
   [pricingTitle, pricing],
-  [dataProtectionTitle, dataProtection]
+  [dataProtectionTitle, dataProtection],
 ];
 
 export const MobileNavbar = ({
   isOpen,
   setOpen,
   toggleOverlay,
-  prefix
+  prefix,
 }: {|
   isOpen: boolean,
-  setOpen: boolean => void,
+  setOpen: (boolean) => void,
   toggleOverlay: (boolean, (boolean) => void) => void,
-  prefix: string
+  prefix: string,
 |}) => (
   <div id="mobile-navbar" className="position-fixed text-primary">
     <div className="mobile-inner">

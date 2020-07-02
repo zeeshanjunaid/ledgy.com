@@ -25,7 +25,7 @@ export const Button = ({
   href?: string,
   id?: string,
   disabled?: boolean,
-  type?: string
+  type?: string,
 |}) => {
   const color =
     (cta && 'btn-red') ||

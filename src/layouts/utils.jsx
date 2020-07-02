@@ -11,7 +11,7 @@ export const Title = (props: {
   title: string,
   section?: string,
   description?: string,
-  thumbnailUrl?: string
+  thumbnailUrl?: string,
 }) => (
   <Helmet>
     <title>
@@ -52,7 +52,7 @@ export const callToActionExperiments = [
   { name: 'modeling', title: <Trans>Model funding rounds and future dilution</Trans> },
   { name: 'reporting', title: <Trans>Share reports and KPIs with your investors</Trans> },
   { name: 'documents', title: <Trans>Organize your grant documents</Trans> },
-  { name: 'peaceOfMind', title: <Trans>Find peace of mind with a better cap table tool</Trans> }
+  { name: 'peaceOfMind', title: <Trans>Find peace of mind with a better cap table tool</Trans> },
 ];
 
 export const Header = ({ text, children }: { text: Node | string, children?: Node }) => (

@@ -8,7 +8,7 @@ import { CircleBadge } from '../Badge';
 const STEPS = [
   [1, <Trans>Upload the document</Trans>],
   [2, <Trans>Select signatories</Trans>],
-  [3, <Trans>Send and receive valid signatures in a matter of seconds</Trans>]
+  [3, <Trans>Send and receive valid signatures in a matter of seconds</Trans>],
 ];
 
 export const DigitalSignatures = ({ data }: Object): Node => {

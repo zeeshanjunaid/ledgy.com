@@ -18,19 +18,19 @@ const Input = ({
   setState,
   placeholder,
   setFormStatus,
-  name
+  name,
 }: {|
   state: string,
-  setState: string => void,
+  setState: (string) => void,
   placeholder: string,
-  setFormStatus: DemoFormStatus => void,
-  name: string
+  setFormStatus: (DemoFormStatus) => void,
+  name: string,
 |}) => (
   <div className="form-group input-group bg-white py-2 mb-4">
     <input
       className="form-control"
       placeholder={placeholder}
-      onChange={e => {
+      onChange={(e) => {
         setState(e.target.value);
         setFormStatus(IDLE);
       }}
@@ -43,11 +43,11 @@ const Input = ({
 export const RequestDemoForm = ({
   isDemoRequested,
   setDemoRequested,
-  toggle
+  toggle,
 }: {|
   isDemoRequested: boolean,
-  setDemoRequested: boolean => void,
-  toggle: () => void
+  setDemoRequested: (boolean) => void,
+  toggle: () => void,
 |}) => {
   const [email, setEmail] = useState('');
   const [companySize, setCompanySize] = useState('');
@@ -73,7 +73,7 @@ export const RequestDemoForm = ({
     <form
       method="post"
       id="getDemo"
-      onSubmit={event =>
+      onSubmit={(event) =>
         handleDemoAccessSubmit({ event, state, setFormStatus, setDemoRequested, toggle })
       }
       noValidate
@@ -90,7 +90,7 @@ export const RequestDemoForm = ({
       <Label text={<Trans>Number of company employees</Trans>} />
       <div className="d-flex mt-2 mb-4">
         <input type="hidden" name="companySize" />
-        {COMPANY_SIZES.map(size => (
+        {COMPANY_SIZES.map((size) => (
           <Button
             key={size}
             onClick={() => {

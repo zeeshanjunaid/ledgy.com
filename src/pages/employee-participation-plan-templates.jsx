@@ -15,7 +15,7 @@ import {
   Instructions,
   CallToAction,
   DigitalSignatures,
-  Video
+  Video,
 } from '../components/templates';
 import { ProductHuntButton } from '../components/ProductHuntButton';
 
@@ -28,9 +28,9 @@ const EquityPlans = (props: Props) => {
     props: {
       href: `${appUrl}/templates`,
       onClick: () => track('clickTemplates'),
-      className: 'mr-2 mb-2'
+      className: 'mr-2 mb-2',
     },
-    text: <Trans>Get started</Trans>
+    text: <Trans>Get started</Trans>,
   };
   const productHuntLaunchButton = (
     <ProductHuntButton

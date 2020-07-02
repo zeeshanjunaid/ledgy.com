@@ -7,12 +7,12 @@ export const PrivacyElement = ({
   icon,
   title,
   body,
-  size
+  size,
 }: {
   icon: string,
   title: string | Node,
   body?: string | Node,
-  size?: string
+  size?: string,
 }) => (
   <div className={`col-12 col-lg-${String(size)}`}>
     <div className="media">

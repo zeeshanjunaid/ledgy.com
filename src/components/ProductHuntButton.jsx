@@ -8,12 +8,12 @@ export const ProductHuntButton = ({
   productHuntLink,
   trackSignupKey,
   postId,
-  altText
+  altText,
 }: {
   productHuntLink: string,
   trackSignupKey: string,
   postId: string,
-  altText: string
+  altText: string,
 }) => (
   <Button
     href={productHuntLink}

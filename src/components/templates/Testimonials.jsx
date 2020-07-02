@@ -17,7 +17,7 @@ export const Testimonials = ({ data, i18n }: Object): Node => {
       ),
       url: 'https://press.getyourguide.com/executive-team',
       img: data.johannesreck,
-      rounded: true
+      rounded: true,
     },
     {
       name: 'Janina Mütze, CEO @ Civey',
@@ -29,7 +29,7 @@ export const Testimonials = ({ data, i18n }: Object): Node => {
       ),
       url: 'https://civey.com/',
       img: data.janinamutze,
-      rounded: true
+      rounded: true,
     },
     {
       name: 'Dr. Tamaz Georgadze, CEO @ Raisin',
@@ -41,7 +41,7 @@ export const Testimonials = ({ data, i18n }: Object): Node => {
       ),
       url: 'https://www.raisin.com/',
       img: data.tamazgeorgadze,
-      rounded: true
+      rounded: true,
     },
     {
       name: 'Christian Reber, CEO @ Pitch',
@@ -53,7 +53,7 @@ export const Testimonials = ({ data, i18n }: Object): Node => {
       ),
       url: 'https://pitch.com/',
       img: data.christianreber,
-      rounded: true
+      rounded: true,
     },
     {
       name: 'Maria Weiers, Partner @ Taylor Wessing',
@@ -65,7 +65,7 @@ export const Testimonials = ({ data, i18n }: Object): Node => {
       ),
       url: 'https://deutschland.taylorwessing.com/en/home',
       img: data.taylorwessing,
-      rounded: false
+      rounded: false,
     },
     {
       name: 'Dr. Thomas Gemmeke, Head of Legal @ Baker Tilly',
@@ -78,8 +78,8 @@ export const Testimonials = ({ data, i18n }: Object): Node => {
       ),
       url: 'https://www.bakertilly.global/en/',
       img: data.bakertilly,
-      rounded: false
-    }
+      rounded: false,
+    },
   ];
 
   const testimonials = TESTIMONIALS.map(({ name, description, url, img, rounded }) => (

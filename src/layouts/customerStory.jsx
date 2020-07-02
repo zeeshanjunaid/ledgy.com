@@ -11,13 +11,13 @@ import { Title, Hr } from '../layouts/utils';
 export default ({
   data,
   lang,
-  prefix
+  prefix,
 }: {|
   ...Props,
   data: {|
     contentfulCustomerStory: CustomerStory,
-    allContentfulCustomerStory: Object
-  |}
+    allContentfulCustomerStory: Object,
+  |},
 |}) => {
   const { id, title, subtitle, language, content, company } = data.contentfulCustomerStory;
   const otherUserStories = data.allContentfulCustomerStory.edges

@@ -12,7 +12,7 @@ export type AuthorProps = {|
   linkedIn: string,
   mail: string,
   twitter?: string,
-  article?: string
+  article?: string,
 |};
 
 export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
@@ -27,7 +27,7 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
     ),
     twitter: 'https://twitter.com/thrstschfr',
     linkedIn: 'https://www.linkedin.com/in/timohorstschaefer/',
-    mail: 'timo@ledgy.com'
+    mail: 'timo@ledgy.com',
   },
   yoko: {
     name: 'Yoko Spirig',
@@ -41,7 +41,7 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
     twitter: 'https://twitter.com/YokoSpirig',
     linkedIn: 'https://www.linkedin.com/in/yokospirig/',
     mail: 'yoko@ledgy.com',
-    article: 'yoko-spirig'
+    article: 'yoko-spirig',
   },
   ben: {
     name: 'Ben Brandt',
@@ -54,7 +54,7 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
     ),
     twitter: 'https://twitter.com/bebinoy',
     linkedIn: 'https://www.linkedin.com/in/ben-elias-brandt-680a95110/',
-    mail: 'ben@ledgy.com'
+    mail: 'ben@ledgy.com',
   },
   oriol: {
     name: 'Oriol Vidal-Cortes',
@@ -68,7 +68,7 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
     twitter: 'https://twitter.com/ovcOS89',
     linkedIn: 'https://www.linkedin.com/in/oriol-vidal-cortes-37584080/',
     mail: 'oriol@ledgy.com',
-    article: 'oriol-vidal-cortes'
+    article: 'oriol-vidal-cortes',
   },
   jules: {
     name: 'Jules Henze',
@@ -81,7 +81,7 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
     ),
     twitter: 'https://twitter.com/HenzeJules',
     linkedIn: 'https://ch.linkedin.com/in/jules-henze',
-    mail: 'jules@ledgy.com'
+    mail: 'jules@ledgy.com',
   },
   marius: {
     name: 'Marius Colacioiu',
@@ -94,7 +94,7 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
     ),
     twitter: 'https://twitter.com/colmarius',
     linkedIn: 'https://www.linkedin.com/in/mariuscolacioiu',
-    mail: 'marius@ledgy.com'
+    mail: 'marius@ledgy.com',
   },
   jahlela: {
     name: 'Jahlela Hasle',
@@ -108,7 +108,7 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
     twitter: 'https://twitter.com/jahlela',
     linkedIn: 'https://www.linkedin.com/in/jahlelahasle',
     mail: 'jahlela@ledgy.com',
-    article: 'jahlela-hasle'
+    article: 'jahlela-hasle',
   },
   spela: {
     name: 'Spela Prijon',
@@ -122,7 +122,7 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
     ),
     twitter: 'https://twitter.com/spelzi',
     linkedIn: 'https://www.linkedin.com/in/spelaprijon',
-    mail: 'spela@ledgy.com'
+    mail: 'spela@ledgy.com',
   },
   armon: {
     name: 'Armon Bättig',
@@ -136,7 +136,7 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
     twitter: 'https://twitter.com/ArmonBattig',
     linkedIn: 'https://www.linkedin.com/in/armon-baettig',
     mail: 'armon@ledgy.com',
-    article: 'armon-baettig'
+    article: 'armon-baettig',
   },
   karime: {
     name: 'Karime Andere',
@@ -148,7 +148,7 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
       </Trans>
     ),
     linkedIn: 'https://www.linkedin.com/in/karimeandere/',
-    mail: 'karime@ledgy.com'
+    mail: 'karime@ledgy.com',
   },
   luna: {
     name: 'Luna',
@@ -164,8 +164,8 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
     ),
     twitter: 'https://twitter.com/hashtag/saturnv',
     linkedIn: 'https://www.linkedin.com/company/nasa',
-    mail: 'contact@ledgy.com'
-  }
+    mail: 'contact@ledgy.com',
+  },
 });
 
 export const TeamFragment = graphql`

@@ -12,12 +12,12 @@ export const MainProblemLayout = withI18n()(
     title,
     description,
     image,
-    i18n
+    i18n,
   }: {|
     title: string,
     description: string,
     image: Image,
-    i18n: I18n
+    i18n: I18n,
   |}) => {
     const t = dynamicI18n(i18n);
     return (

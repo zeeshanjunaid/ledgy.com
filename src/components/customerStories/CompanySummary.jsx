@@ -8,7 +8,7 @@ import {
   faMoneyBillAlt,
   faUserFriends,
   faIndustry,
-  faSeedling
+  faSeedling,
 } from '@fortawesome/free-solid-svg-icons';
 
 import { LongText } from '../LongText';
@@ -18,7 +18,7 @@ const getCompanySummaries = (company: Company) => [
   [faMoneyBillAlt, 'Funding', company.funding ? `${company.funding} in Funding` : ''],
   [faUserFriends, 'Employees count', `${company.employeeCount} Employees`],
   [faIndustry, 'Sector', company.sector],
-  [faSeedling, 'Stage', company.stage]
+  [faSeedling, 'Stage', company.stage],
 ];
 
 export const CompanySummary = ({ company }: {| company: Company |}) => (

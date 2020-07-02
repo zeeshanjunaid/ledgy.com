@@ -8,10 +8,10 @@ import { CustomerStoryCard } from './CustomerStoryCard';
 
 export const OtherCustomerStories = ({
   customerStories,
-  prefix
+  prefix,
 }: {|
   customerStories: CustomerStory[],
-  prefix: string
+  prefix: string,
 |}) => {
   if (customerStories.length === 0) return null;
   return (
@@ -20,7 +20,7 @@ export const OtherCustomerStories = ({
         <Trans>More Stories from Ledgy Users</Trans>
       </h4>
       <div className="row align-items-center justify-content-center mb-4">
-        {sampleSize(customerStories, 3).map(customerStory => (
+        {sampleSize(customerStories, 3).map((customerStory) => (
           <div key={customerStory.id} className="col-md-4 col-lg-3">
             <CustomerStoryCard customerStory={customerStory} prefix={prefix} />
           </div>

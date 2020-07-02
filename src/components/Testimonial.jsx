@@ -11,7 +11,7 @@ export const Testimonial = ({
   col,
   url,
   rounded,
-  minHeight = 80
+  minHeight = 80,
 }: {
   img: Object,
   name: string,
@@ -19,7 +19,7 @@ export const Testimonial = ({
   col: number,
   url?: string,
   rounded?: boolean,
-  minHeight?: number
+  minHeight?: number,
 }) => (
   <div
     className={`testimonial col-lg-${col} d-flex flex-column justify-content-start align-items-center mb-4 mb-lg-0`}

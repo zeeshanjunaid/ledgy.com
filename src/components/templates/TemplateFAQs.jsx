@@ -15,7 +15,7 @@ const getQuestions = (props: Props) => [
         Currently, setting up an employee participation plan costs thousands to set up. With the
         help of these templates and guides you can finalize it for a fraction of the time and cost.
       </Trans>
-    )
+    ),
   },
   {
     slug: 'keep-track-of-plans-and-grants',
@@ -26,7 +26,7 @@ const getQuestions = (props: Props) => [
         vesting schedule for you and send you notifications for important events (cliff, vesting,
         expiry).
       </Trans>
-    )
+    ),
   },
   {
     slug: 'country-laws',
@@ -46,7 +46,7 @@ const getQuestions = (props: Props) => [
         <br />
         <Trans>- Our Swiss law partners: Kellerhals Carrard, Wenger Vieli, Lexr</Trans>
       </>
-    )
+    ),
   },
   {
     slug: 'next-countries',
@@ -65,8 +65,8 @@ const getQuestions = (props: Props) => [
           <SignupModal {...props} />
         </div>
       </>
-    )
-  }
+    ),
+  },
 ];
 
 export const TemplateFAQs = (props: Props): Node => (

@@ -19,7 +19,7 @@ export const SellingProp = withI18n()(
     image,
     prefix,
     i18n,
-    imgFirst = false
+    imgFirst = false,
   }: {|
     title: string,
     description: string,
@@ -28,7 +28,7 @@ export const SellingProp = withI18n()(
     image: Image,
     prefix: string,
     i18n: I18n,
-    imgFirst?: boolean
+    imgFirst?: boolean,
   |}) => {
     const t = dynamicI18n(i18n);
     return (

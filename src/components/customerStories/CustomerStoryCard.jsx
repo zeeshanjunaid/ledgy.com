@@ -6,10 +6,10 @@ import Img from 'gatsby-image';
 
 export const CustomerStoryCard = ({
   customerStory: { slug, company },
-  prefix
+  prefix,
 }: {|
   customerStory: CustomerStory,
-  prefix: string
+  prefix: string,
 |}) => {
   const pagePath = `${prefix}/customer-stories/${slug}/`;
   const { logo, cover } = company;

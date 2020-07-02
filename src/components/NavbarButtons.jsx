@@ -9,10 +9,10 @@ import { Button } from './Button';
 
 export const NavbarButtons = ({
   className = '',
-  isMobile = false
+  isMobile = false,
 }: {
   className?: string,
-  isMobile?: boolean
+  isMobile?: boolean,
 }) => (
   <div className={`d-flex align-items-center ${className}`}>
     <Button
