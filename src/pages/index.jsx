@@ -23,9 +23,11 @@ const IndexPage = (props: Props) => {
   const { title, entries } = props.data.page;
   return (
     <main className="position-relative overflow-hidden">
-      <Helmet>
-        <title>{`Ledgy: ${t(title)}`}</title>
-      </Helmet>
+      {!!title && (
+        <Helmet>
+          <title>{`Ledgy: ${t(title)}`}</title>
+        </Helmet>
+      )}
       <DecoShapes />
       <HomePageHeader {...props} />
 
