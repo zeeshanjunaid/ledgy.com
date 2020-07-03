@@ -11,13 +11,13 @@ export const PageHeader = ({
   subtitle = '',
   lang = DEFAULT_LANG,
   documentLang = DEFAULT_LANG,
-  textCenter = false
+  textCenter = false,
 }: {|
   title: string,
   subtitle?: string,
   lang?: Language,
   documentLang?: Language,
-  textCenter?: boolean
+  textCenter?: boolean,
 |}) => {
   return (
     <header className="header-custom bg-primary text-white d-flex flex-column justify-content-center mb-4 mb-md-5 mb-lg-7">

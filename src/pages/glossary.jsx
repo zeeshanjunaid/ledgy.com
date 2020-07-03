@@ -11,7 +11,7 @@ import { Title } from '../layouts/utils';
 import { Accordion, AccordionItem } from '../components/Accordion';
 
 export default withI18n()(({ i18n, data }: Props) => {
-  const accordionItems = data.allContentfulGlossary.edges.map(edge => {
+  const accordionItems = data.allContentfulGlossary.edges.map((edge) => {
     const { slug, title, description } = edge.node;
     return (
       <AccordionItem id={slug} key={slug} title={title}>

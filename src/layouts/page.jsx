@@ -18,10 +18,10 @@ const page = ({
   data,
   lang,
   i18n,
-  prefix
+  prefix,
 }: {|
   ...Props,
-  data: {| contentfulPage: Page, site: { siteMetadata: { siteUrl: string } } |}
+  data: {| contentfulPage: Page, site: { siteMetadata: { siteUrl: string } } |},
 |}) => {
   if (!data) return null;
 

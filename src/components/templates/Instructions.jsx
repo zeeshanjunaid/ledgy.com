@@ -11,21 +11,21 @@ const STEPS = [
     <Trans>
       Our interactive guide will help you understand and select terms for your employee
       participation plan
-    </Trans>
+    </Trans>,
   ],
   [
     3,
     <Trans>
       Send your customized template and term sheet to your lawyer – or to one of our trusted
       partners
-    </Trans>
+    </Trans>,
   ],
   [
     4,
     <Trans>
       As a bonus, you can keep track of your new employee participation plan and grants in Ledgy
-    </Trans>
-  ]
+    </Trans>,
+  ],
 ];
 
 export const Instructions = (): Node => (

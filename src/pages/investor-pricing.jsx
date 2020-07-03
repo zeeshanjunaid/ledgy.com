@@ -15,13 +15,13 @@ const InvestorTypeCard = ({
   price,
   features,
   button,
-  highlight = false
+  highlight = false,
 }: {
   type: Node,
   price: Node,
   features: Node[],
   button: Node,
-  highlight?: boolean
+  highlight?: boolean,
 }) => (
   <div className="col-12 col-md-6 col-lg-5 mb-4">
     <div
@@ -33,7 +33,7 @@ const InvestorTypeCard = ({
         <h3 className="font-weight-bold">{type}</h3>
         <div className="text-xl font-weight-light mb-4 mt-2">{price}</div>
         <ul className="p-0 mb-3 list-style-none">
-          {features.map(feature => (
+          {features.map((feature) => (
             <li className="mb-4">{feature}</li>
           ))}
         </ul>

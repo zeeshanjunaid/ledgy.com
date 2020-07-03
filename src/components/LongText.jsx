@@ -9,11 +9,11 @@ import { Image, Lead } from '../components/Markdown';
 export const LongText = ({
   content,
   isMarkdown = true,
-  className = ''
+  className = '',
 }: {|
   content: Mdx,
   isMarkdown?: boolean,
-  className?: string
+  className?: string,
 |}) => (
   <div className="d-flex justify-content-center">
     <div className={`${isMarkdown ? 'markdown' : ''} ${className}`}>

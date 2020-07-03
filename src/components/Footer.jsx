@@ -25,11 +25,11 @@ const FooterCol = ({ order, children }: { order: number, children: Node }) => (
 const FooterColBody = ({
   title,
   children,
-  className = ''
+  className = '',
 }: {
   title: Node,
   children: Array<Node>,
-  className?: string
+  className?: string,
 }) => (
   <div className={`pl-4 ${className}`}>
     <h6 className="mb-4">
@@ -111,7 +111,7 @@ export const Footer = ({ location, ...props }: LayoutProps) => {
                         <LanguageLink
                           language="Français"
                           to={`/fr${deprefix(location.pathname)}`}
-                        />
+                        />,
                       ]}
                     />
                   </div>

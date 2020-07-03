@@ -22,10 +22,10 @@ const Founder = withI18n()(
     twitter,
     linkedIn,
     mail,
-    article
+    article,
   }: {|
     ...AuthorProps,
-    img: Object
+    img: Object,
   |}) => {
     const ProfileImage = <Img {...img} className="mx-auto" alt={name} />;
     return (
@@ -67,11 +67,11 @@ const Founder = withI18n()(
 const Investor = ({
   name,
   description,
-  img
+  img,
 }: {|
   name: string,
   description: string,
-  img: Object
+  img: Object,
 |}) => (
   <div className="col-12 col-md-4 mb-4">
     {img && <Img {...img} alt={name} className="rounded-circle" />}

@@ -64,7 +64,7 @@ export const Image = ({ alt, src, title }: {| alt: string, src: string, title?: 
     }
   `);
   const contentfulId = src.split('/')[4];
-  const record = data.allContentfulAsset.nodes.find(v => v.contentful_id === contentfulId);
+  const record = data.allContentfulAsset.nodes.find((v) => v.contentful_id === contentfulId);
   const { align, w } = getImageParams(title);
   const img = record.localFile.childImageSharp;
   return (
@@ -87,7 +87,7 @@ export const Image = ({ alt, src, title }: {| alt: string, src: string, title?: 
 const languages = {
   en: <Trans>English</Trans>,
   de: <Trans>German</Trans>,
-  fr: <Trans>French</Trans>
+  fr: <Trans>French</Trans>,
 };
 
 export const LanguageHint = ({ lang, documentLang }: {| lang: string, documentLang: string |}) =>

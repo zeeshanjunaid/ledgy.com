@@ -7,10 +7,10 @@ import { CardLink } from '../CardLink';
 
 export const CustomerStoryLink = ({
   customerStory,
-  prefix
+  prefix,
 }: {|
   customerStory: CustomerStory,
-  prefix: string
+  prefix: string,
 |}) => {
   const { title, subtitle, slug, company } = customerStory;
   const to = `${prefix}/customer-stories/${slug}`;

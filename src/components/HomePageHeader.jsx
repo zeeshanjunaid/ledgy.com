@@ -13,22 +13,22 @@ import { RequestDemoModal } from './RequestDemoModal';
 const languageKeys = {
   en: {
     title: 'titleEn',
-    subtitle: 'subtitleEn'
+    subtitle: 'subtitleEn',
   },
   de: {
     title: 'titleDe',
-    subtitle: 'subtitleDe'
+    subtitle: 'subtitleDe',
   },
   fr: {
     title: 'titleFr',
-    subtitle: 'subtitleFr'
-  }
+    subtitle: 'subtitleFr',
+  },
 };
 
 type Experiment = {
   name: string,
   title: string,
-  subtitle: string
+  subtitle: string,
 };
 
 type ExperimentKeys = Experiment;
@@ -39,7 +39,7 @@ const getExperiment = (experiments: ExperimentKeys[], lang: string): Experiment 
   return {
     name: sampledExperiment.name,
     title: sampledExperiment[titleKey],
-    subtitle: sampledExperiment[subtitleKey]
+    subtitle: sampledExperiment[subtitleKey],
   };
 };
 
@@ -65,7 +65,7 @@ export const HomePageHeader = ({ i18n, data, lang }: Props) => {
       }
     `
   );
-  const experiments = headers.allContentfulLandingPage.edges.map(edge => edge.node);
+  const experiments = headers.allContentfulLandingPage.edges.map((edge) => edge.node);
   const { title, subtitle, name } = getExperiment(experiments, lang);
 
   useEffect(() => {
@@ -76,9 +76,9 @@ export const HomePageHeader = ({ i18n, data, lang }: Props) => {
   const buttonTwo = {
     props: {
       href: `${appUrl}/signup`,
-      cta: false
+      cta: false,
     },
-    text: <Trans>Get Started Free</Trans>
+    text: <Trans>Get Started Free</Trans>,
   };
 
   return (
@@ -88,7 +88,7 @@ export const HomePageHeader = ({ i18n, data, lang }: Props) => {
       buttonOne={{
         modal: <RequestDemoModal buttonClassName="my-sm-0 my-2 btn-xl d-inline mx-1 btn-red" />,
         props: {},
-        text: ''
+        text: '',
       }}
       buttonTwo={buttonTwo}
       image={

@@ -11,7 +11,7 @@ type MainHeaderLayoutProps = {|
   buttonTwo?: HeaderButton,
   customButton?: Node,
   image: Node,
-  className?: string
+  className?: string,
 |};
 
 export const MainHeaderLayout = ({
@@ -21,7 +21,7 @@ export const MainHeaderLayout = ({
   buttonTwo,
   customButton,
   image,
-  className = ''
+  className = '',
 }: MainHeaderLayoutProps) => {
   const buttonClass = 'btn-xl mx-1 align-self-center';
   const { props, modal = null } = buttonOne;

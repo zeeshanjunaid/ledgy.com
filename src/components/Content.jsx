@@ -15,13 +15,13 @@ export const PostLink = ({
   to,
   defaultImage,
   external,
-  description
+  description,
 }: {|
   post: Page,
   to: string,
   defaultImage: Object,
   external?: boolean,
-  description: string | Node
+  description: string | Node,
 |}) => {
   const image = (
     <Img

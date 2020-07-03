@@ -6,7 +6,7 @@ const {
   BRANCH,
   CONTENTFUL_SPACE_ID,
   CONTENTFUL_ACCESS_TOKEN,
-  SEGMENT_DESTINATIONS
+  SEGMENT_DESTINATIONS,
 } = process.env;
 const src = `${__dirname}/src`;
 
@@ -17,11 +17,11 @@ module.exports = {
       DEPLOY_PRIME_URL ||
       `http://localhost:${NODE_ENV === 'production' ? 9 : 8}000`,
     branch: BRANCH || 'development',
-    segmentDestinations: (SEGMENT_DESTINATIONS || '').split(',')
+    segmentDestinations: (SEGMENT_DESTINATIONS || '').split(','),
   },
   proxy: {
     prefix: '/engage',
-    url: 'https://api.mixpanel.com'
+    url: 'https://api.mixpanel.com',
   },
   plugins: [
     'gatsby-plugin-layout',
@@ -39,8 +39,8 @@ module.exports = {
         spaceId: CONTENTFUL_SPACE_ID,
         accessToken: CONTENTFUL_ACCESS_TOKEN,
         host: BRANCH ? 'cdn.contentful.com' : 'preview.contentful.com',
-        downloadLocal: true
-      }
+        downloadLocal: true,
+      },
     },
     {
       resolve: 'gatsby-plugin-mdx',
@@ -48,9 +48,9 @@ module.exports = {
         gatsbyRemarkPlugins: [
           'gatsby-remark-katex',
           'gatsby-remark-prismjs',
-          'gatsby-remark-unwrap-images'
-        ]
-      }
+          'gatsby-remark-unwrap-images',
+        ],
+      },
     },
     'gatsby-plugin-catch-links',
     {
@@ -66,15 +66,15 @@ module.exports = {
           {
             src: '/favicons/android-chrome-192x192.png',
             sizes: '192x192',
-            type: 'image/png'
+            type: 'image/png',
           },
           {
             src: '/favicons/android-chrome-512x512.png',
             sizes: '512x512',
-            type: 'image/png'
-          }
-        ]
-      }
+            type: 'image/png',
+          },
+        ],
+      },
     },
     {
       resolve: 'gatsby-plugin-netlify',
@@ -83,12 +83,12 @@ module.exports = {
           '/*': [
             'Referrer-Policy: strict-origin-when-cross-origin',
             'Access-Control-Allow-Origin: https://www.ledgy.com',
-            'Access-Control-Allow-Credentials: true'
-          ]
-        }
-      }
+            'Access-Control-Allow-Credentials: true',
+          ],
+        },
+      },
     },
     { resolve: 'gatsby-plugin-netlify-cache', options: { cachePublic: true } },
-    'gatsby-plugin-offline'
-  ]
+    'gatsby-plugin-offline',
+  ],
 };

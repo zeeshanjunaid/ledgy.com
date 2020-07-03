@@ -11,13 +11,13 @@ import { dynamicI18n } from '../components/DynamicTrans';
 
 const featurePage = ({
   data,
-  i18n
+  i18n,
 }: {|
   ...Props,
   data: {|
     contentfulFeaturePage: FeaturePage,
-    allContentfulFeaturePage: Object
-  |}
+    allContentfulFeaturePage: Object,
+  |},
 |}) => {
   const { title, description, features, startOnRight } = data.contentfulFeaturePage;
   const t = dynamicI18n(i18n);

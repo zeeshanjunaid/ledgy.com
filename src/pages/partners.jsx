@@ -9,7 +9,7 @@ import {
   LawyerCTABanner,
   SwissPartners,
   CollaborationBanner,
-  UniqueSellingPropositions
+  UniqueSellingPropositions,
 } from '../components/partners';
 
 import { PageHeader } from '../components/PageHeader';

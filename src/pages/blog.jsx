@@ -17,7 +17,7 @@ export default withI18n()(({ i18n, data, prefix }: Props) => {
       <PageHeader title={title} subtitle={description} />
 
       <ContentBody>
-        {data.allContentfulPage.edges.map(edge => {
+        {data.allContentfulPage.edges.map((edge) => {
           const { node } = edge;
           const { id, slug, description: postDescription } = node;
           return (

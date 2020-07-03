@@ -23,7 +23,7 @@ type SiteProps = {|
   ...$Exact<Props>,
   lang: Language,
   children: Node,
-  location: LocationProps
+  location: LocationProps,
 |};
 
 const Initialize = ({ segmentDestinations }: {| segmentDestinations: string[] |}) => {
@@ -48,7 +48,7 @@ const TemplateWrapper = withI18n()(({ children, ...props }: SiteProps) => (
         }
       }
     `}
-    render={data => {
+    render={(data) => {
       const { i18n, lang } = props;
       const prefix = langPrefix(lang);
       const { siteUrl, segmentDestinations } = data.site.siteMetadata;

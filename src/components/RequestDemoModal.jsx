@@ -11,10 +11,10 @@ import { track } from '../helpers';
 
 export const RequestDemoModal = ({
   buttonClassName,
-  location
+  location,
 }: {|
   buttonClassName: string,
-  location?: LocationProps
+  location?: LocationProps,
 |}) => {
   const [isDemoRequested, setDemoRequested] = useState(false);
   const [isOpen, toggle] = useModal();

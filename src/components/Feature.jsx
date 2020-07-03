@@ -8,12 +8,12 @@ export const Feature = ({
   title,
   description,
   imgProps,
-  imgFirst = false
+  imgFirst = false,
 }: {
   title: string,
   description: string[],
   imgProps: Image,
-  imgFirst?: boolean
+  imgFirst?: boolean,
 }) => {
   return (
     <div className="container text-center py-4 py-lg-6 my-7">

@@ -14,7 +14,7 @@ export const CardLink = ({
   image,
   to,
   date,
-  external = false
+  external = false,
 }: {|
   title: Node,
   description: string | Node,
@@ -22,7 +22,7 @@ export const CardLink = ({
   to: string,
   type: 'blog' | 'customer-story',
   date?: string,
-  external?: boolean
+  external?: boolean,
 |}) => (
   <div className={`card card-${type} mb-6`}>
     <div className="row m-0 flex-1">

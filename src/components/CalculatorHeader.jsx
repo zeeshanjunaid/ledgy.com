@@ -38,9 +38,9 @@ export const CalculatorHeader = ({ data }: { data: any }) => {
         props: {
           href: calculatorUrl,
           onClick: () => track('click.calculator'),
-          className: 'mr-2 mb-2'
+          className: 'mr-2 mb-2',
         },
-        text: 'Launch calculator'
+        text: 'Launch calculator',
       }}
       customButton={
         <ProductHuntButton

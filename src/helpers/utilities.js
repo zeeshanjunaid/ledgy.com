@@ -22,4 +22,4 @@ export const animateTablet = () => {
   }, 50);
 };
 
-export const isFieldMissing = (object: Object) => Object.values(object).some(field => !field);
+export const isFieldMissing = (object: Object) => Object.values(object).some((field) => !field);

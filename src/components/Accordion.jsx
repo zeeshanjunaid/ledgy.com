@@ -9,11 +9,11 @@ export const Accordion = (props: {| children: Node |}) => (
 export const AccordionItem = ({
   id,
   title,
-  children
+  children,
 }: {|
   id: string,
   title: string | Node,
-  children: Node
+  children: Node,
 |}) => {
   return (
     <div className="card mb-2 p-4">
