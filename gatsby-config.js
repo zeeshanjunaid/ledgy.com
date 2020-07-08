@@ -19,10 +19,10 @@ module.exports = {
     branch: BRANCH || 'development',
     segmentDestinations: (SEGMENT_DESTINATIONS || '').split(','),
   },
-  proxy: {
-    prefix: '/engage',
-    url: 'https://api.mixpanel.com',
-  },
+  proxy: [
+    { prefix: '/engage', url: 'https://api.mixpanel.com' },
+    { prefix: '/track', url: 'https://api.mixpanel.com' },
+  ],
   plugins: [
     'gatsby-plugin-layout',
     'gatsby-plugin-flow',
