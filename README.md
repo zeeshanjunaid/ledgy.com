@@ -1,6 +1,5 @@
-## The missing accounting software for your equity – ledgy.com
-Stay on top of your vesting schedules, options, phantom plans and convertible loans.
-Get fast insights for financing rounds or exit negotiations with built-in modeling.
+## Equity done right
+Ledgy helps startups handle their employee shareholdings, cap table and investor relations professionally and accurately from the start. Ledgy provides investors a centralized source of all important information.
 
 ## Built with
 * [GatsbyJS](https://github.com/gatsbyjs/gatsby)
