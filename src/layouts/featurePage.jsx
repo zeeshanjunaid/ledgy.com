@@ -21,7 +21,6 @@ const featurePage = ({
 |}) => {
   const { title, description, features, startOnRight } = data.contentfulFeaturePage;
   const t = dynamicI18n(i18n);
-
   return (
     <div>
       <Title title={t(title)} description={t(description)} />
