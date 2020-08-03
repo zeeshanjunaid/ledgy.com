@@ -35,7 +35,9 @@ const page = ({
       <Title
         title={t(title)}
         description={t(description)}
-        thumbnailUrl={cover ? `${siteUrl}${cover.localFile.childImageSharp.fixed.src}` : ''}
+        thumbnailUrl={
+          cover && cover.localFile ? `${siteUrl}${cover.localFile.childImageSharp.fixed.src}` : ''
+        }
       />
       {showCalculatorHeader ? (
         <CalculatorHeader data={data} />
