@@ -156,8 +156,8 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
     description: (
       <Trans>
         After graduating from the University of Cambridge, Tamas worked at PwC and co-founded his
-        own startup. He is now responsible for the smooth operations of Ledgy with special attention
-        to finance, HR and legal matters.
+        own startup. He is responsible for smooth operations at Ledgy, with special attention to
+        finance, HR and legal matters.
       </Trans>
     ),
     linkedIn: 'https://www.linkedin.com/in/tamasvarkonyi/',
