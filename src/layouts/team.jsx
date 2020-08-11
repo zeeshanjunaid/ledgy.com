@@ -152,7 +152,7 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
   },
   tamas: {
     name: 'Tamas Varkonyi',
-    role: 'Operations, Finance & home baker',
+    role: 'Operations, Finance & Home Baker',
     description: (
       <Trans>
         After graduating from the University of Cambridge, Tamas worked at PwC and co-founded his
