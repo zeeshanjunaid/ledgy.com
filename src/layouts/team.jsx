@@ -150,6 +150,31 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
     linkedIn: 'https://www.linkedin.com/in/karimeandere/',
     mail: 'karime@ledgy.com',
   },
+  tamas: {
+    name: 'Tamas Varkonyi',
+    role: 'Operations, Finance & Home Baker',
+    description: (
+      <Trans>
+        After graduating from the University of Cambridge, Tamas worked at PwC and co-founded his
+        own startup. He is responsible for smooth operations at Ledgy, with special attention to
+        finance, HR and legal matters.
+      </Trans>
+    ),
+    linkedIn: 'https://www.linkedin.com/in/tamasvarkonyi/',
+    mail: 'tamas@ledgy.com',
+  },
+  ermias: {
+    name: 'Ermias Giovanni',
+    role: 'Head of Marketing & Stargazer',
+    description: (
+      <Trans>
+        Ermias has a background in business administration and more than 10 years of marketing
+        experience. His mission is to build the demand-generation engine that drives Ledgy’s growth.
+      </Trans>
+    ),
+    linkedIn: 'https://www.linkedin.com/in/ermiasgio/',
+    mail: 'ermias@ledgy.com',
+  },
   luna: {
     name: 'Luna',
     role: 'Rocket & Trailblazer',
@@ -216,6 +241,16 @@ export const TeamFragment = graphql`
       }
     }
     karime: imageSharp(fluid: { originalName: { regex: "/karime.jpg/" } }) {
+      fluid(maxWidth: 245, maxHeight: 245) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    tamas: imageSharp(fluid: { originalName: { regex: "/tamas.jpg/" } }) {
+      fluid(maxWidth: 245, maxHeight: 245) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    ermias: imageSharp(fluid: { originalName: { regex: "/ermias.jpg/" } }) {
       fluid(maxWidth: 245, maxHeight: 245) {
         ...GatsbyImageSharpFluid
       }
