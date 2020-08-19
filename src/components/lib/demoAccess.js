@@ -2,6 +2,7 @@
 
 import {
   demoUrl,
+  scheduleDemoUrl,
   isValidEmail,
   SMALL_COMPANY_SIZES,
   FORM_STATES,
@@ -9,7 +10,7 @@ import {
   track,
 } from '../../helpers';
 
-const { ERROR, INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED } = FORM_STATES;
+const { ERROR, INVALID_EMAIL, INVALID_FIELDS, LOADING } = FORM_STATES;
 
 export type DemoFormStatus =
   | 'idle'
@@ -29,6 +30,12 @@ export const isSmallCompany = (companySize: string) => SMALL_COMPANY_SIZES.inclu
 const redirectToDemo = () => {
   if (window) {
     window.location = demoUrl;
+  }
+};
+
+const redirectToScheduler = () => {
+  if (window) {
+    window.location = scheduleDemoUrl;
   }
 };
 
@@ -55,13 +62,11 @@ export const handleDemoAccessSubmit = async ({
   event,
   state,
   setFormStatus,
-  setDemoRequested,
   toggle,
 }: {|
   event: SyntheticInputEvent<HTMLInputElement>,
   state: State,
   setFormStatus: (DemoFormStatus) => void,
-  setDemoRequested: (boolean) => void,
   toggle: () => void,
 |}) => {
   event.preventDefault();
@@ -84,10 +89,9 @@ export const handleDemoAccessSubmit = async ({
   }
   track('getDemo.submit');
 
-  setFormStatus(SUBMITTED);
   if (!isSmallCompany(companySize)) {
     track('identify.martina');
-    setDemoRequested(true);
+    redirectToScheduler();
     return;
   }
   toggle();
