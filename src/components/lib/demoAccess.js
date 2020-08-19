@@ -2,6 +2,7 @@
 
 import {
   demoUrl,
+  scheduleDemoUrl,
   isValidEmail,
   SMALL_COMPANY_SIZES,
   FORM_STATES,
@@ -32,6 +33,12 @@ const redirectToDemo = () => {
   }
 };
 
+const redirectToScheduler = () => {
+  if (window) {
+    window.location = scheduleDemoUrl;
+  }
+};
+
 const HUBSPOTUTK = 'hubspotutk=';
 const getHubspotUserToken = (): string =>
   (document.cookie.split('; ').find((v) => v.startsWith(HUBSPOTUTK)) || '').slice(
@@ -55,14 +62,10 @@ export const handleDemoAccessSubmit = async ({
   event,
   state,
   setFormStatus,
-  setDemoRequested,
-  toggle,
 }: {|
   event: SyntheticInputEvent<HTMLInputElement>,
   state: State,
   setFormStatus: (DemoFormStatus) => void,
-  setDemoRequested: (boolean) => void,
-  toggle: () => void,
 |}) => {
   event.preventDefault();
   setFormStatus(LOADING);
@@ -84,12 +87,12 @@ export const handleDemoAccessSubmit = async ({
   }
   track('getDemo.submit');
 
-  setFormStatus(SUBMITTED);
   if (!isSmallCompany(companySize)) {
     track('identify.martina');
-    setDemoRequested(true);
+    redirectToScheduler();
+    setFormStatus(SUBMITTED);
     return;
   }
-  toggle();
   redirectToDemo();
+  setFormStatus(SUBMITTED);
 };

@@ -40,6 +40,8 @@ export const calculatorUrl = 'https://calculator.ledgy.com';
 
 export const githubUrl = 'https://github.com/morloy/ledgy.com/';
 
+export const scheduleDemoUrl = 'https://resources.ledgy.com/schedule-demo';
+
 // netlify & mixpanel
 const isNetlify = typeof window !== 'undefined' && window.location.hostname !== 'localhost';
 

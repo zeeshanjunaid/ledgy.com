@@ -5,7 +5,7 @@ import { faSpinner, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Trans } from '@lingui/react';
 
-import { COMPANY_SIZES, FORM_STATES } from '../helpers';
+import { COMPANY_SIZES, FORM_STATES, demoUrl, scheduleDemoUrl } from '../helpers';
 
 import { Button } from './Button';
 import { handleDemoAccessSubmit, type DemoFormStatus, isSmallCompany } from './lib';
@@ -40,15 +40,7 @@ const Input = ({
   </div>
 );
 
-export const RequestDemoForm = ({
-  isDemoRequested,
-  setDemoRequested,
-  toggle,
-}: {|
-  isDemoRequested: boolean,
-  setDemoRequested: (boolean) => void,
-  toggle: () => void,
-|}) => {
+export const RequestDemoForm = () => {
   const [email, setEmail] = useState('');
   const [companySize, setCompanySize] = useState('');
   const [formStatus, setFormStatus] = useState(IDLE);
@@ -58,24 +50,21 @@ export const RequestDemoForm = ({
   const invalidFields = formStatus === INVALID_FIELDS;
   const error = formStatus === ERROR;
   const loading = formStatus === LOADING;
-  const submitted = formStatus === SUBMITTED || isDemoRequested;
+  const submitted = formStatus === SUBMITTED;
 
   return submitted ? (
     <div className="d-flex align-items-center">
       <FontAwesomeIcon icon={faCheckCircle} size="2x" className="text-primary mr-4" />
-      {isSmallCompany(companySize) ? (
-        <Trans>You are being redirected to the demo</Trans>
-      ) : (
-        <Trans>We’ll be in touch shortly</Trans>
-      )}
+      <Trans>You are being redirected. If nothing happens,</Trans>
+      <a className="ml-1" href={isSmallCompany(companySize) ? demoUrl : scheduleDemoUrl}>
+        <Trans> click here</Trans>
+      </a>
     </div>
   ) : (
     <form
       method="post"
       id="getDemo"
-      onSubmit={(event) =>
-        handleDemoAccessSubmit({ event, state, setFormStatus, setDemoRequested, toggle })
-      }
+      onSubmit={(event) => handleDemoAccessSubmit({ event, state, setFormStatus })}
       noValidate
     >
       <Label text={<Trans>Your email</Trans>} />
