@@ -10,7 +10,7 @@ import {
   track,
 } from '../../helpers';
 
-const { ERROR, INVALID_EMAIL, INVALID_FIELDS, LOADING } = FORM_STATES;
+const { ERROR, INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED } = FORM_STATES;
 
 export type DemoFormStatus =
   | 'idle'
@@ -62,12 +62,10 @@ export const handleDemoAccessSubmit = async ({
   event,
   state,
   setFormStatus,
-  toggle,
 }: {|
   event: SyntheticInputEvent<HTMLInputElement>,
   state: State,
   setFormStatus: (DemoFormStatus) => void,
-  toggle: () => void,
 |}) => {
   event.preventDefault();
   setFormStatus(LOADING);
@@ -92,8 +90,9 @@ export const handleDemoAccessSubmit = async ({
   if (!isSmallCompany(companySize)) {
     track('identify.martina');
     redirectToScheduler();
+    setFormStatus(SUBMITTED);
     return;
   }
-  toggle();
   redirectToDemo();
+  setFormStatus(SUBMITTED);
 };

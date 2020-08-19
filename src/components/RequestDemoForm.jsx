@@ -1,16 +1,16 @@
 // @flow
 
 import React, { useState, type Node } from 'react';
-import { faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { faSpinner, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Trans } from '@lingui/react';
 
-import { COMPANY_SIZES, FORM_STATES } from '../helpers';
+import { COMPANY_SIZES, FORM_STATES, demoUrl, scheduleDemoUrl } from '../helpers';
 
 import { Button } from './Button';
-import { handleDemoAccessSubmit, type DemoFormStatus } from './lib';
+import { handleDemoAccessSubmit, type DemoFormStatus, isSmallCompany } from './lib';
 
-const { ERROR, IDLE, INVALID_EMAIL, INVALID_FIELDS, LOADING } = FORM_STATES;
+const { ERROR, IDLE, INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED } = FORM_STATES;
 
 const Label = ({ text }: { text: Node }) => <span>{text}</span>;
 const Input = ({
@@ -40,7 +40,7 @@ const Input = ({
   </div>
 );
 
-export const RequestDemoForm = ({ toggle }: {| toggle: () => void |}) => {
+export const RequestDemoForm = () => {
   const [email, setEmail] = useState('');
   const [companySize, setCompanySize] = useState('');
   const [formStatus, setFormStatus] = useState(IDLE);
@@ -50,12 +50,21 @@ export const RequestDemoForm = ({ toggle }: {| toggle: () => void |}) => {
   const invalidFields = formStatus === INVALID_FIELDS;
   const error = formStatus === ERROR;
   const loading = formStatus === LOADING;
+  const submitted = formStatus === SUBMITTED;
 
-  return (
+  return submitted ? (
+    <div className="d-flex align-items-center">
+      <FontAwesomeIcon icon={faCheckCircle} size="2x" className="text-primary mr-4" />
+      <Trans>You are being redirected. If nothing happens,</Trans>
+      <a className="ml-1" href={isSmallCompany(companySize) ? demoUrl : scheduleDemoUrl}>
+        <Trans> click here</Trans>
+      </a>
+    </div>
+  ) : (
     <form
       method="post"
       id="getDemo"
-      onSubmit={(event) => handleDemoAccessSubmit({ event, state, setFormStatus, toggle })}
+      onSubmit={(event) => handleDemoAccessSubmit({ event, state, setFormStatus })}
       noValidate
     >
       <Label text={<Trans>Your email</Trans>} />

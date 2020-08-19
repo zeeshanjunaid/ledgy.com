@@ -31,7 +31,7 @@ export const RequestDemoModal = ({
         <Trans>Get a Demo</Trans>
       </Button>
       <Modal isOpen={isOpen} close={toggle} title={<Trans>Request a demo of Ledgy</Trans>}>
-        <RequestDemoForm toggle={toggle} />
+        <RequestDemoForm />
       </Modal>
     </>
   );
