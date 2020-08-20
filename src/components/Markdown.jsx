@@ -66,7 +66,7 @@ export const Image = ({ alt, src, title }: {| alt: string, src: string, title?: 
   const contentfulId = src.split('/')[4];
   const record = data.allContentfulAsset.nodes.find((v) => v.contentful_id === contentfulId);
   const { align, w } = getImageParams(title);
-  const img = record.localFile.childImageSharp;
+  const img = record.localFile?.childImageSharp;
   return (
     <figure
       className={align ? `mx-auto float-md-${align} size-md-small m-6` : 'mx-auto my-6'}
