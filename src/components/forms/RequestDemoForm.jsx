@@ -9,7 +9,7 @@ import { COMPANY_SIZES, FORM_STATES, demoUrl, scheduleDemoUrl } from '../../help
 
 import { Button } from '../Button';
 import { handleDemoAccessSubmit, isSmallCompany } from './lib';
-import { Label, Input } from './Fields';
+import { Label, Input, InvalidFieldHints } from './Fields';
 
 const { ERROR, IDLE, INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED } = FORM_STATES;
 
@@ -71,11 +71,7 @@ export const RequestDemoForm = () => {
       </div>
 
       <div className="d-flex justify-content-between align-items-center mt-6">
-        <small className="text-danger form-error-message">
-          {invalidFields && <Trans>* Please fill in required fields</Trans>}
-          {invalidEmail && <Trans>Oops. This email address is invalid.</Trans>}
-          {error && <Trans>Something went wrong, please try again.</Trans>}
-        </small>
+        <InvalidFieldHints formStatus={formStatus} />
         <Button
           className="btn-xl min-width-120px"
           disabled={invalidFields || invalidEmail || error || loading}

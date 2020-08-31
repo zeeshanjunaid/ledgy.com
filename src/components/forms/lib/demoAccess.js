@@ -12,14 +12,6 @@ import {
 
 const { ERROR, INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED } = FORM_STATES;
 
-export type DemoFormStatus =
-  | 'idle'
-  | 'loading'
-  | 'invalid-email'
-  | 'invalid-fields'
-  | 'error'
-  | 'submitted';
-
 type State = {|
   companySize: string,
   email: string,
@@ -65,7 +57,7 @@ export const handleDemoAccessSubmit = async ({
 }: {|
   event: SyntheticInputEvent<HTMLInputElement>,
   state: State,
-  setFormStatus: (DemoFormStatus) => void,
+  setFormStatus: (FormStatus) => void,
 |}) => {
   event.preventDefault();
   setFormStatus(LOADING);

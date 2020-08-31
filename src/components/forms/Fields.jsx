@@ -1,9 +1,8 @@
 // @flow
 import React, { type Node } from 'react';
+import { Trans } from '@lingui/react';
 
 import { FORM_STATES } from '../../helpers';
-
-import { type DemoFormStatus } from './lib';
 
 export const Label = ({ text }: { text: Node }) => <span>{text}</span>;
 
@@ -19,7 +18,7 @@ export const Input = ({
   state: string,
   setState: (string) => void,
   placeholder: string,
-  setFormStatus: (DemoFormStatus) => void,
+  setFormStatus: (FormStatus) => void,
   name: string,
   wrapperClassName: string,
   className?: string,
@@ -37,3 +36,14 @@ export const Input = ({
     />
   </div>
 );
+
+export const InvalidFieldHints = ({ formStatus }: { formStatus: string }) => {
+  const { INVALID_FIELDS, INVALID_EMAIL, ERROR } = FORM_STATES;
+  return (
+    <small className="text-danger form-error-message" style={{ minHeight: '25px' }}>
+      {formStatus === INVALID_FIELDS && <Trans>* Please fill in required fields</Trans>}
+      {formStatus === INVALID_EMAIL && <Trans>Oops. This email address is invalid.</Trans>}
+      {formStatus === ERROR && <Trans>Something went wrong, please try again.</Trans>}
+    </small>
+  );
+};
