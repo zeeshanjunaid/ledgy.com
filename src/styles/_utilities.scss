@@ -34,6 +34,15 @@
   min-width: 120px;
 }
 
+.height-42px {
+  height: 42px !important;
+}
+
+.placeholder-white::placeholder {
+  color: $white;
+  opacity: 0.6 !important;
+}
+
 .position-absolute-top-center {
   position: absolute;
   top: 0;

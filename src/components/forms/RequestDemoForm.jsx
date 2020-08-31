@@ -1,6 +1,6 @@
 // @flow
 
-import React, { useState, type Node } from 'react';
+import React, { useState } from 'react';
 import { faSpinner, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Trans } from '@lingui/react';
@@ -8,43 +8,17 @@ import { Trans } from '@lingui/react';
 import { COMPANY_SIZES, FORM_STATES, demoUrl, scheduleDemoUrl } from '../../helpers';
 
 import { Button } from '../Button';
-import { handleDemoAccessSubmit, type DemoFormStatus, isSmallCompany } from './lib';
+import { handleDemoAccessSubmit, isSmallCompany } from './lib';
+import { Label, Input } from './Fields';
 
 const { ERROR, IDLE, INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED } = FORM_STATES;
-
-const Label = ({ text }: { text: Node }) => <span>{text}</span>;
-const Input = ({
-  state,
-  setState,
-  placeholder,
-  setFormStatus,
-  name,
-}: {|
-  state: string,
-  setState: (string) => void,
-  placeholder: string,
-  setFormStatus: (DemoFormStatus) => void,
-  name: string,
-|}) => (
-  <div className="form-group input-group bg-white py-2 mb-4">
-    <input
-      className="form-control"
-      placeholder={placeholder}
-      onChange={(e) => {
-        setState(e.target.value);
-        setFormStatus(IDLE);
-      }}
-      value={state}
-      name={name}
-    />
-  </div>
-);
 
 export const RequestDemoForm = () => {
   const [email, setEmail] = useState('');
   const [companySize, setCompanySize] = useState('');
   const [formStatus, setFormStatus] = useState(IDLE);
   const state = { email, companySize };
+  const className = 'bg-white py-2 mb-4';
 
   const invalidEmail = formStatus === INVALID_EMAIL;
   const invalidFields = formStatus === INVALID_FIELDS;
@@ -74,6 +48,7 @@ export const RequestDemoForm = () => {
         placeholder="elon@must.com"
         setFormStatus={setFormStatus}
         name="email"
+        wrapperClassName={className}
       />
 
       <Label text={<Trans>Number of company employees</Trans>} />
