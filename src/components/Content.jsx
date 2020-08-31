@@ -26,7 +26,7 @@ export const PostLink = ({
   const image = (
     <Img
       className="fit-cover"
-      {...(post.cover ? post.cover.localFile.childImageSharp : defaultImage)}
+      {...(post.cover?.localFile ? post.cover.localFile.childImageSharp : defaultImage)}
     />
   );
   const title = <h5>{post.title}</h5>;
