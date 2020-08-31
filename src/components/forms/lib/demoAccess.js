@@ -8,7 +8,7 @@ import {
   FORM_STATES,
   isFieldMissing,
   track,
-} from '../../helpers';
+} from '../../../helpers';
 
 const { ERROR, INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED } = FORM_STATES;
 

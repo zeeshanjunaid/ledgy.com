@@ -8,9 +8,15 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { useModal } from './lib';
 import { Modal } from './Modal';
 import { Button } from './Button';
-import { SignupForm } from './SignupForm';
+import { SubscriptionForm } from './forms';
 
-export const SignupModal = ({ buttonClass = '', i18n }: { buttonClass?: string, i18n: I18n }) => {
+export const SubscriptionModal = ({
+  buttonClass = '',
+  i18n,
+}: {
+  buttonClass?: string,
+  i18n: I18n,
+}) => {
   const [isOpen, toggle] = useModal();
   return (
     <>
@@ -24,7 +30,7 @@ export const SignupModal = ({ buttonClass = '', i18n }: { buttonClass?: string, 
             Receive important feature updates, exclusive webinar invitations, and promotions/offers
           </Trans>
         </p>
-        <SignupForm toggle={toggle} trackingEvent="newsletter" i18n={i18n} />
+        <SubscriptionForm toggle={toggle} trackingEvent="newsletter" i18n={i18n} />
       </Modal>
     </>
   );

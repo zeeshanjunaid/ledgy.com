@@ -5,9 +5,9 @@ import { faSpinner, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Trans } from '@lingui/react';
 
-import { COMPANY_SIZES, FORM_STATES, demoUrl, scheduleDemoUrl } from '../helpers';
+import { COMPANY_SIZES, FORM_STATES, demoUrl, scheduleDemoUrl } from '../../helpers';
 
-import { Button } from './Button';
+import { Button } from '../Button';
 import { handleDemoAccessSubmit, type DemoFormStatus, isSmallCompany } from './lib';
 
 const { ERROR, IDLE, INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED } = FORM_STATES;

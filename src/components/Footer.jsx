@@ -14,7 +14,7 @@ import logoInvertedCompact from '../img/logo-inverted-compact.png';
 
 import { CTABanner } from './CTABanner';
 import { Dropdown } from './Dropdown';
-import { SignupModal } from './SignupModal';
+import { SubscriptionModal } from './SubscriptionModal';
 import { getFooterLinks, formatUrl } from './lib';
 import { isExternalUrl } from './lib/urlHelpers';
 
@@ -96,7 +96,7 @@ export const Footer = ({ location, ...props }: LayoutProps) => {
                     <img src={logoInvertedCompact} width={80} alt={name} />
                   </Link>
                   <div className="py-lg-4">
-                    <SignupModal {...props} buttonClass="w-100" />
+                    <SubscriptionModal {...props} buttonClass="w-100" />
                     <Dropdown
                       toggleText={<Trans>Language</Trans>}
                       toggleIcon={faGlobeEurope}
