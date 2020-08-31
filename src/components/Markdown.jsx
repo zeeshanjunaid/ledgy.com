@@ -68,19 +68,21 @@ export const Image = ({ alt, src, title }: {| alt: string, src: string, title?: 
   const { align, w } = getImageParams(title);
   const img = record.localFile?.childImageSharp;
   return (
-    <figure
-      className={align ? `mx-auto float-md-${align} size-md-small m-6` : 'mx-auto my-6'}
-      style={w ? { maxWidth: `${w}px` } : {}}
-    >
-      <a href={img.fluid.src} data-provide="lightbox">
-        <Img {...img} />
-      </a>
-      {alt && (
-        <figcaption className="text-muted text-center px-4 font-weight-light mt-2">
-          {alt}
-        </figcaption>
-      )}
-    </figure>
+    !!img && (
+      <figure
+        className={align ? `mx-auto float-md-${align} size-md-small m-6` : 'mx-auto my-6'}
+        style={w ? { maxWidth: `${w}px` } : {}}
+      >
+        <a href={img.fluid.src} data-provide="lightbox">
+          <Img {...img} />
+        </a>
+        {alt && (
+          <figcaption className="text-muted text-center px-4 font-weight-light mt-2">
+            {alt}
+          </figcaption>
+        )}
+      </figure>
+    )
   );
 };
 

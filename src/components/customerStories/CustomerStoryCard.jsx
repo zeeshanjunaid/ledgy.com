@@ -14,7 +14,7 @@ export const CustomerStoryCard = ({
   const pagePath = `${prefix}/customer-stories/${slug}/`;
   const { logo, cover } = company;
   const logoImage = <Img {...logo.localFile.childImageSharp} />;
-  const coverImage = <Img {...cover.localFile.childImageSharp} />;
+  const coverImage = cover ? <Img {...cover.localFile.childImageSharp} /> : null;
   return (
     <Link href to={pagePath}>
       <div className="card card-more-stories mb-4 mx-auto px-4">
