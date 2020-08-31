@@ -1,3 +1,7 @@
+.text-sm {
+  font-size: 14px;
+}
+
 .text-lg {
   font-size: 18px;
 }
@@ -41,6 +45,11 @@
 .placeholder-white::placeholder {
   color: $white;
   opacity: 0.6 !important;
+}
+
+.hover-brigthen:hover {
+  color: $energetic-blue;
+  filter: brightness(130%);
 }
 
 .position-absolute-top-center {

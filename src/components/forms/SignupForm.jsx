@@ -2,11 +2,11 @@
 
 import React, { useState } from 'react';
 
-import { COMPANY_SIZES, FORM_STATES, demoUrl, scheduleDemoUrl } from '../../helpers';
+import { FORM_STATES, appUrl } from '../../helpers';
 import { Button } from '../Button';
 import { Input } from './Fields';
 
-const { ERROR, IDLE, INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED } = FORM_STATES;
+const { IDLE } = FORM_STATES;
 
 export const SignupForm = ({ title, buttonText }: { title: string, buttonText: string }) => {
   const [name, setName] = useState('');
@@ -40,9 +40,15 @@ export const SignupForm = ({ title, buttonText }: { title: string, buttonText: s
           wrapperClassName="mb-4"
           className={inputClassName}
         />
-        <Button cta className="w-100 mx-1 mt-4 mb-5 align-self-center btn-xl">
+        <Button cta className="w-100 mx-1 mt-4 mb-4 align-self-center btn-xl">
           {buttonText}
         </Button>
+        <span className="text-sm mb-4">
+          Already have an account?{' '}
+          <a className="hover-brigthen" href={`${appUrl}/login`}>
+            Log in
+          </a>
+        </span>
       </form>
     </div>
   );
