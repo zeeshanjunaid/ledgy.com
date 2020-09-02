@@ -7,12 +7,12 @@ import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { navigate } from 'gatsby';
 
-import { isValidEmail, FORM_STATES } from '../../helpers';
+import { isValidEmail, FORM_STATUSES } from '../../helpers';
 
 import { Button } from '../Button';
 import { signupOnMixpanel, trackOnMixpanel } from './lib';
 
-const { ERROR, IDLE, INVALID, LOADING } = FORM_STATES;
+const { ERROR, IDLE, INVALID, LOADING } = FORM_STATUSES;
 
 declare type FormStatus = {| status: 'idle' | 'loading' | 'invalid' | 'error' |};
 

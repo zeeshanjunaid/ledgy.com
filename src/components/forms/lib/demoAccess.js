@@ -5,12 +5,12 @@ import {
   scheduleDemoUrl,
   isValidEmail,
   SMALL_COMPANY_SIZES,
-  FORM_STATES,
+  FORM_STATUSES,
   isFieldMissing,
   track,
 } from '../../../helpers';
 
-const { ERROR, INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED } = FORM_STATES;
+const { ERROR, INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED } = FORM_STATUSES;
 
 type State = {|
   companySize: string,

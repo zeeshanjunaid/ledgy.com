@@ -1,7 +1,7 @@
 // @flow
-import { FORM_STATES, isFieldMissing, isValidEmail, appUrl } from '../../../helpers';
+import { FORM_STATUSES, isFieldMissing, isValidEmail, appUrl } from '../../../helpers';
 
-const { INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED } = FORM_STATES;
+const { INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED } = FORM_STATUSES;
 
 const encodeFormData = ({ name, email }: { name: string, email: string }): string => {
   const data = JSON.stringify([name, email]);

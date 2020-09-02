@@ -2,7 +2,7 @@
 import React, { type Node } from 'react';
 import { Trans } from '@lingui/react';
 
-import { FORM_STATES } from '../../helpers';
+import { FORM_STATUSES } from '../../helpers';
 
 export const Label = ({ text }: { text: Node }) => <span>{text}</span>;
 
@@ -29,7 +29,7 @@ export const Input = ({
       placeholder={placeholder}
       onChange={(e) => {
         setState(e.target.value);
-        setFormStatus(FORM_STATES.IDLE);
+        setFormStatus(FORM_STATUSES.IDLE);
       }}
       value={state}
       name={name}
@@ -38,7 +38,7 @@ export const Input = ({
 );
 
 export const InvalidFieldHints = ({ formStatus }: { formStatus: string }) => {
-  const { INVALID_FIELDS, INVALID_EMAIL, ERROR } = FORM_STATES;
+  const { INVALID_FIELDS, INVALID_EMAIL, ERROR } = FORM_STATUSES;
   return (
     <small className="text-danger form-error-message" style={{ minHeight: '25px' }}>
       {formStatus === INVALID_FIELDS && <Trans>* Please fill in required fields</Trans>}

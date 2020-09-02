@@ -5,13 +5,13 @@ import { faSpinner, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Trans } from '@lingui/react';
 
-import { COMPANY_SIZES, FORM_STATES, demoUrl, scheduleDemoUrl } from '../../helpers';
+import { COMPANY_SIZES, FORM_STATUSES, demoUrl, scheduleDemoUrl } from '../../helpers';
 
 import { Button } from '../Button';
 import { handleDemoAccessSubmit, isSmallCompany } from './lib';
 import { Label, Input, InvalidFieldHints } from './Fields';
 
-const { ERROR, IDLE, INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED } = FORM_STATES;
+const { ERROR, IDLE, INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED } = FORM_STATUSES;
 
 export const RequestDemoForm = () => {
   const [email, setEmail] = useState('');

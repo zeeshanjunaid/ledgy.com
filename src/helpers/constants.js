@@ -50,7 +50,7 @@ export const MIXPANEL_TOKEN = isNetlify
   : '7f124dd9a799a7c687dc38ee554d9876';
 
 // form states
-export const FORM_STATES = Object.freeze({
+export const FORM_STATUSES = Object.freeze({
   IDLE: 'idle',
   LOADING: 'loading',
   ERROR: 'error',
