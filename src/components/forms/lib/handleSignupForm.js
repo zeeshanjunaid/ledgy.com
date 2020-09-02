@@ -6,7 +6,7 @@ const { INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED } = FORM_STATUSES;
 
 const encodeFormData = ({ name, email }: { name: string, email: string }): string => {
   const data = JSON.stringify([name, email]);
-  return encodeURIComponent(data);
+  return btoa(encodeURIComponent(data));
 };
 
 const redirectToApp = ({ name, email }: { name: string, email: string }) => {
