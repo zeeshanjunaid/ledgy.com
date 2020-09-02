@@ -9,7 +9,7 @@ import { handleSignupForm } from './lib';
 
 const { IDLE } = FORM_STATUSES;
 
-export const SignupForm = ({ title, buttonText }: { title: string, buttonText: string }) => {
+export const SignupForm = ({ title, buttonText }: {| title: string, buttonText: string |}) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [formStatus, setFormStatus] = useState(IDLE);

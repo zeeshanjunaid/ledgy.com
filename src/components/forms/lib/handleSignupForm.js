@@ -23,12 +23,12 @@ export const handleSignupForm = ({
   email,
   event,
   setFormStatus,
-}: {
+}: {|
   name: string,
   email: string,
   event: SyntheticInputEvent<HTMLInputElement>,
   setFormStatus: (FormStatus) => void,
-}) => {
+|}) => {
   event.preventDefault();
   setFormStatus(LOADING);
 

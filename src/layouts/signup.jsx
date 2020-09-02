@@ -16,7 +16,7 @@ const Logo = (props: { prefix: string }) => (
   </Link>
 );
 
-const Quote = (qoteProps: { quote: string, name: string }) => (
+const Quote = (qoteProps: {| quote: string, name: string |}) => (
   <div className="text-center my-7">
     <h2 className="mb-3">“{qoteProps.quote}”</h2>
     <h6>— {qoteProps.name}</h6>
