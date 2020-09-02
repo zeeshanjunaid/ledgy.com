@@ -1,77 +1,20 @@
 // @flow
 
-import React, { useEffect } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import React from 'react';
+
 import { Trans } from '@lingui/react';
 import Img from 'gatsby-image';
-import sample from 'lodash/sample';
 
-import { appUrl, isBrowser } from '../helpers';
+import { appUrl } from '../helpers';
 import { MainHeaderLayout } from './MainHeaderLayout';
 import { RequestDemoModal } from './RequestDemoModal';
-
-const languageKeys = {
-  en: {
-    title: 'titleEn',
-    subtitle: 'subtitleEn',
-  },
-  de: {
-    title: 'titleDe',
-    subtitle: 'subtitleDe',
-  },
-  fr: {
-    title: 'titleFr',
-    subtitle: 'subtitleFr',
-  },
-};
-
-type Experiment = {
-  name: string,
-  title: string,
-  subtitle: string,
-};
-
-type ExperimentKeys = Experiment;
-
-const getExperiment = (experiments: ExperimentKeys[], lang: string): Experiment => {
-  const sampledExperiment = isBrowser ? sample(experiments) : experiments[0];
-  const { title: titleKey, subtitle: subtitleKey } = languageKeys[lang];
-  return {
-    name: sampledExperiment.name,
-    title: sampledExperiment[titleKey],
-    subtitle: sampledExperiment[subtitleKey],
-  };
-};
+import { DynamicTrans } from './DynamicTrans';
 
 // eslint-disable-next-line import/prefer-default-export
-export const HomePageHeader = ({ i18n, data, lang }: Props) => {
-  const headers = useStaticQuery(
-    graphql`
-      {
-        allContentfulLandingPage {
-          edges {
-            node {
-              id
-              name
-              titleEn
-              titleDe
-              titleFr
-              subtitleEn
-              subtitleDe
-              subtitleFr
-            }
-          }
-        }
-      }
-    `
-  );
-  const experiments = headers.allContentfulLandingPage.edges.map((edge) => edge.node);
-  const { title, subtitle, name } = getExperiment(experiments, lang);
-
-  useEffect(() => {
-    window.experiment = name;
-    if (window.ga) window.ga('set', 'dimension1', window.experiment);
-  }, []);
+export const HomePageHeader = ({ i18n, data }: Props) => {
+  const [content] = data.page.edges;
+  const title = <DynamicTrans>{content.node.mainHeader}</DynamicTrans>;
+  const subtitle = <DynamicTrans>{content.node.description}</DynamicTrans>;
 
   const buttonTwo = {
     props: {

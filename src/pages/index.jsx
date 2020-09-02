@@ -20,7 +20,8 @@ const DecoShapes = () => (
 
 const IndexPage = (props: Props) => {
   const t = dynamicI18n(props.i18n);
-  const { title, entries } = props.data.page;
+  const [content] = props.data.page.edges;
+  const { title, entries } = content.node;
   return (
     <main className="position-relative overflow-hidden">
       {!!title && (
@@ -59,35 +60,41 @@ export const pageQuery = graphql`
         ...GatsbyImageSharpFluid_noBase64
       }
     }
-    page: contentfulIndexPage(contentful_id: { eq: "jjbelvJa8nRqbGqYrr5wi" }) {
-      title
-      entries {
-        ... on ContentfulExternalLogos {
-          id
+    page: allContentfulFrontPage {
+      edges {
+        node {
           title
-          logos {
-            title
-            description
-            localFile {
-              childImageSharp {
-                fixed(width: 120) {
-                  ...GatsbyImageSharpFixed
+          mainHeader
+          description
+          entries {
+            ... on ContentfulExternalLogos {
+              id
+              title
+              logos {
+                title
+                description
+                localFile {
+                  childImageSharp {
+                    fixed(width: 120) {
+                      ...GatsbyImageSharpFixed
+                    }
+                  }
                 }
               }
             }
-          }
-        }
-        ... on ContentfulSellingProposition {
-          id
-          title
-          description
-          link
-          linkTo
-          image {
-            localFile {
-              childImageSharp {
-                fluid(maxWidth: 400) {
-                  ...GatsbyImageSharpFluid
+            ... on ContentfulSellingProposition {
+              id
+              title
+              description
+              link
+              linkTo
+              image {
+                localFile {
+                  childImageSharp {
+                    fluid(maxWidth: 400) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
                 }
               }
             }

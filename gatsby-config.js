@@ -84,6 +84,7 @@ module.exports = {
             'Referrer-Policy: strict-origin-when-cross-origin',
             'Access-Control-Allow-Origin: https://www.ledgy.com',
             'Access-Control-Allow-Credentials: true',
+            'Strict-Transport-Security: max-age=63072000; includeSubDomains; preload',
           ],
         },
       },
