@@ -12,7 +12,6 @@ const encodeFormData = ({ name, email }: { name: string, email: string }): strin
 const redirectToApp = ({ name, email }: { name: string, email: string }) => {
   const data = encodeFormData({ name, email });
   const url = `${appUrl}/signup/${data}?utm_source=landing_signup`;
-
   if (window) {
     window.location = url;
   }
