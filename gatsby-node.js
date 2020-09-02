@@ -31,6 +31,57 @@ exports.onCreatePage = async ({ page, actions }) => {
   });
 };
 
+const pageQuery = `
+      {
+        allContentfulPage(limit: 1000) {
+          edges {
+            node {
+              id
+              slug
+              namespace
+            }
+          }
+        }
+      }
+    `;
+
+const customerStoryQuery = `
+      {
+        allContentfulCustomerStory(limit: 1000) {
+          edges {
+            node {
+              id
+              slug
+            }
+          }
+        }
+      }
+    `;
+
+const featurePageQuery = `
+      {
+        allContentfulFeaturePage(limit: 1000) {
+          edges {
+            node {
+              id
+              slug
+            }
+          }
+        }
+      }
+    `;
+
+const basePath = './src/layouts';
+
+const resolvePagePromise = (query, createPageWithData) =>
+  new Promise((resolve) => {
+    query.then(({ errors, data }) => {
+      if (errors) throw errors;
+      createPageWithData(data);
+      resolve();
+    });
+  });
+
 exports.createPages = ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions;
   const createLocalizedPages = (pagePath, component, context) => {
@@ -52,77 +103,35 @@ exports.createPages = ({ graphql, actions }) => {
     });
   });
 
-  const pageComponent = path.resolve('./src/layouts/page.jsx');
-  const createPages = new Promise((resolve) => {
-    graphql(`
-      {
-        allContentfulPage(limit: 1000) {
-          edges {
-            node {
-              id
-              slug
-              namespace
-            }
-          }
-        }
-      }
-    `).then(({ errors, data }) => {
-      if (errors) throw errors;
-      data.allContentfulPage.edges.forEach(({ node }) => {
-        const { id, slug, namespace } = node;
-        const pagePath = `${namespace}${slug}/`;
-        const context = { id };
-        createLocalizedPages(pagePath, pageComponent, context);
-      });
-      resolve();
-    });
-  });
-  const customerStoryComponent = path.resolve('./src/layouts/customerStory.jsx');
-  const createCustomerStories = new Promise((resolve) => {
-    graphql(`
-      {
-        allContentfulCustomerStory(limit: 1000) {
-          edges {
-            node {
-              id
-              slug
-            }
-          }
-        }
-      }
-    `).then(({ errors, data }) => {
-      if (errors) throw errors;
-      data.allContentfulCustomerStory.edges.forEach(({ node: { id, slug } }) => {
-        const pagePath = `/customer-stories/${slug}/`;
-        const context = { id };
-        createLocalizedPages(pagePath, customerStoryComponent, context);
-      });
-      resolve();
-    });
-  });
+  const pageComponent = path.resolve(`${basePath}/page.jsx`);
+  const createPages = resolvePagePromise(graphql(pageQuery), (data) =>
+    data.allContentfulPage.edges.forEach(({ node }) => {
+      const { id, slug, namespace } = node;
+      const pagePath = `${namespace}${slug}/`;
+      const context = { id };
+      createLocalizedPages(pagePath, pageComponent, context);
+    })
+  );
 
-  const featurePageComponent = path.resolve('./src/layouts/featurePage.jsx');
-  const createFeaturePages = new Promise((resolve) => {
-    graphql(`
-      {
-        allContentfulFeaturePage(limit: 1000) {
-          edges {
-            node {
-              id
-              slug
-            }
-          }
-        }
-      }
-    `).then(({ errors, data }) => {
-      if (errors) throw errors;
-      data.allContentfulFeaturePage.edges.forEach(({ node: { id, slug } }) => {
-        const pagePath = `/${slug}/`;
-        const context = { id };
-        createLocalizedPages(pagePath, featurePageComponent, context);
-      });
-      resolve();
-    });
-  });
+  const customerStoryComponent = path.resolve(`${basePath}/customerStory.jsx`);
+  const createCustomerStories = resolvePagePromise(graphql(customerStoryQuery), (data) =>
+    data.allContentfulCustomerStory.edges.forEach(({ node }) => {
+      const { id, slug } = node;
+      const pagePath = `/customer-stories/${slug}/`;
+      const context = { id };
+      createLocalizedPages(pagePath, customerStoryComponent, context);
+    })
+  );
+
+  const featurePageComponent = path.resolve(`${basePath}/featurePage.jsx`);
+  const createFeaturePages = resolvePagePromise(graphql(featurePageQuery), (data) =>
+    data.allContentfulFeaturePage.edges.forEach(({ node }) => {
+      const { id, slug } = node;
+      const pagePath = `/${slug}/`;
+      const context = { id };
+      createLocalizedPages(pagePath, featurePageComponent, context);
+    })
+  );
+
   return Promise.all([createPages, createCustomerStories, createFeaturePages]);
 };
