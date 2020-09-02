@@ -14,8 +14,9 @@ const Logo = (props: { prefix: string }) => (
 );
 
 const SignupPage = (props: Props) => {
-  const [signupContent] = props.data.allContentfulSignupPage.edges;
-  const { title, description, formTitle, formButtonText } = signupContent.node;
+  const { data } = props;
+  const { title, description, formTitle, formButtonText } = data.contentfulSignupPage;
+  console.log({ data });
   return (
     <header className="header d-flex home-banner px-1 text-left bg-primary">
       <div className="container my-4 my-md-auto position-relative z-index-base">
@@ -41,14 +42,49 @@ const SignupPage = (props: Props) => {
 export default withI18n()(SignupPage);
 
 export const pageQuery = graphql`
-  query {
-    allContentfulSignupPage {
-      edges {
-        node {
+  query($id: String!) {
+    contentfulSignupPage(id: { eq: $id }) {
+      id
+      slug
+      title
+      description
+      formTitle
+      formButtonText
+      content {
+        ... on ContentfulExternalLogos {
+          id
+          title
+          logos {
+            title
+            description
+            localFile {
+              childImageSharp {
+                fixed(width: 120) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
+          }
+        }
+        ... on ContentfulSellingProposition {
+          id
           title
           description
-          formTitle
-          formButtonText
+          link
+          linkTo
+          image {
+            localFile {
+              childImageSharp {
+                fluid(maxWidth: 400) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+        ... on ContentfulQuote {
+          quote
+          name
         }
       }
     }

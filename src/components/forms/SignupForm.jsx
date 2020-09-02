@@ -14,7 +14,7 @@ export const SignupForm = ({ title, buttonText }: { title: string, buttonText: s
   const [email, setEmail] = useState('');
   const [formStatus, setFormStatus] = useState(IDLE);
   const inputClassName = 'height-42px bg-transparent text-white placeholder-white';
-  console.log({ formStatus });
+
   return (
     <div className="d-flex flex-column align-items-center border border-gray-neutral p-4 ml-md-4 rounded">
       <h4 className="mt-5 mb-4">{title}</h4>
