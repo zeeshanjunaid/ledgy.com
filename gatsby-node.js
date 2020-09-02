@@ -71,6 +71,19 @@ const featurePageQuery = `
       }
     `;
 
+const signupPageQuery = `
+      {
+        allContentfulSignupPage(limit: 1000) {
+          edges {
+            node {
+              id
+              slug
+            }
+          }
+        }
+      }
+    `;
+
 const basePath = './src/layouts';
 
 const resolvePagePromise = (query, createPageWithData) =>
@@ -133,5 +146,17 @@ exports.createPages = ({ graphql, actions }) => {
     })
   );
 
-  return Promise.all([createPages, createCustomerStories, createFeaturePages]);
+  const signupPageComponent = path.resolve(`${basePath}/signup.jsx`);
+  const createSignupPages = resolvePagePromise(graphql(signupPageQuery), (data) =>
+    data.allContentfulSignupPage.edges.forEach(({ node }) => {
+      const { id, slug } = node;
+      const pagePath = `/signup/${slug}/`;
+      const context = { id };
+      createLocalizedPages(pagePath, signupPageComponent, context);
+    })
+  );
+
+  const allPages = [createPages, createCustomerStories, createFeaturePages, createSignupPages];
+
+  return Promise.all(allPages);
 };
