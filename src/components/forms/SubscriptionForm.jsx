@@ -8,9 +8,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { navigate } from 'gatsby';
 
 import { isValidEmail, FORM_STATUSES } from '../../helpers';
-
 import { Button } from '../Button';
 import { signupOnMixpanel, trackOnMixpanel } from './lib';
+import { InvalidFieldHints } from './Fields';
 
 const { ERROR, IDLE, INVALID_EMAIL, LOADING } = FORM_STATUSES;
 
@@ -75,10 +75,7 @@ export class SubscriptionForm extends Component<
                 <Trans>Subscribe</Trans>
               )}
             </Button>
-            <small className="text-danger position-absolute form-error-message">
-              {invalid && <Trans>Oops. This email address is invalid.</Trans>}
-              {error && <Trans>Oops. Something went wrong, please try again.</Trans>}
-            </small>
+            <InvalidFieldHints formStatus={status} className="position-absolute" />
           </div>
         </form>
       </>
