@@ -11,7 +11,7 @@ import { Button } from '../Button';
 import { handleDemoAccessSubmit, isSmallCompany } from './lib';
 import { Label, Input, InvalidFieldHints } from './Fields';
 
-const { ERROR, IDLE, INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED } = FORM_STATUSES;
+const { ERROR, IDLE, INVALID_EMAIL, INVALID_REQUIRED_FIELDS, LOADING, SUBMITTED } = FORM_STATUSES;
 
 export const RequestDemoForm = () => {
   const [email, setEmail] = useState('');
@@ -21,7 +21,7 @@ export const RequestDemoForm = () => {
   const className = 'bg-white py-2 mb-4';
 
   const invalidEmail = formStatus === INVALID_EMAIL;
-  const invalidFields = formStatus === INVALID_FIELDS;
+  const invalidFields = formStatus === INVALID_REQUIRED_FIELDS;
   const error = formStatus === ERROR;
   const loading = formStatus === LOADING;
   const submitted = formStatus === SUBMITTED;

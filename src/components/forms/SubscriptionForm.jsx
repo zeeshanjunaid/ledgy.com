@@ -12,13 +12,11 @@ import { isValidEmail, FORM_STATUSES } from '../../helpers';
 import { Button } from '../Button';
 import { signupOnMixpanel, trackOnMixpanel } from './lib';
 
-const { ERROR, IDLE, INVALID, LOADING } = FORM_STATUSES;
-
-declare type FormStatus = {| status: 'idle' | 'loading' | 'invalid' | 'error' |};
+const { ERROR, IDLE, INVALID_EMAIL, LOADING } = FORM_STATUSES;
 
 export class SubscriptionForm extends Component<
   {| i18n: I18n, toggle?: () => void, trackingEvent: string |},
-  { email: string, ...FormStatus }
+  { email: string, status: FormStatus }
 > {
   state = { email: '', status: IDLE };
   handleChange = (e: SyntheticInputEvent<HTMLInputElement>) => {
@@ -44,14 +42,14 @@ export class SubscriptionForm extends Component<
         this.setState({ status: ERROR });
       }
     } else {
-      this.setState({ status: INVALID });
+      this.setState({ status: INVALID_EMAIL });
     }
   };
   render = () => {
     const { props, state } = this;
     const { status } = state;
     const { i18n } = props;
-    const invalid = status === INVALID;
+    const invalid = status === INVALID_EMAIL;
     const error = status === ERROR;
     const loading = status === LOADING;
     return (

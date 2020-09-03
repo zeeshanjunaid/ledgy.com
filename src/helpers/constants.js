@@ -55,9 +55,9 @@ export const FORM_STATUSES = Object.freeze({
   LOADING: 'loading',
   ERROR: 'error',
   SUBMITTED: 'submitted',
-  INVALID: 'invalid',
   INVALID_EMAIL: 'invalid-email',
   INVALID_FIELDS: 'invalid-fields',
+  INVALID_REQUIRED_FIELDS: 'invalid-required-fields',
 });
 
 // plan names

@@ -10,7 +10,7 @@ import {
   track,
 } from '../../../helpers';
 
-const { ERROR, INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED } = FORM_STATUSES;
+const { ERROR, INVALID_EMAIL, INVALID_REQUIRED_FIELDS, LOADING, SUBMITTED } = FORM_STATUSES;
 
 type State = {|
   companySize: string,
@@ -64,7 +64,7 @@ export const handleDemoAccessSubmit = async ({
   const { email, companySize } = state;
 
   if (isFieldMissing({ email, companySize })) {
-    setFormStatus(INVALID_FIELDS);
+    setFormStatus(INVALID_REQUIRED_FIELDS);
     return;
   }
   if (!isValidEmail(email)) {

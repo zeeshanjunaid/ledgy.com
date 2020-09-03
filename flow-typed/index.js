@@ -93,5 +93,6 @@ declare type FormStatus =
   | 'loading'
   | 'invalid-email'
   | 'invalid-fields'
+  | 'invalid-required-fields'
   | 'error'
   | 'submitted';

@@ -27,7 +27,7 @@ export const SignupForm = ({ title, buttonText }: {| title: string, buttonText: 
         <Input
           state={name}
           setState={setName}
-          placeholder="Full name"
+          placeholder="Full name *"
           setFormStatus={setFormStatus}
           name="name"
           wrapperClassName="mb-4"
@@ -36,7 +36,7 @@ export const SignupForm = ({ title, buttonText }: {| title: string, buttonText: 
         <Input
           state={email}
           setState={setEmail}
-          placeholder="Email address"
+          placeholder="Email address *"
           setFormStatus={setFormStatus}
           name="email"
           wrapperClassName="mb-4"
