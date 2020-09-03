@@ -87,3 +87,12 @@ declare type FeaturePage = {|
 |};
 
 declare var graphql: any;
+
+declare type FormStatus =
+  | 'idle'
+  | 'loading'
+  | 'invalid-email'
+  | 'invalid-fields'
+  | 'invalid-required-fields'
+  | 'error'
+  | 'submitted';

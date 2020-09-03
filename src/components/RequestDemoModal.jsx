@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 import { Trans } from '@lingui/react';
 
 import { Modal } from './Modal';
-import { RequestDemoForm } from './RequestDemoForm';
+import { RequestDemoForm } from './forms';
 import { Button } from './Button';
 import { useModal } from './lib';
 import { track } from '../helpers';

@@ -1,8 +1,12 @@
-@mixin deco-shape {
+@mixin deco-shape-base {
   z-index: $zindex-deco-shape;
   position: absolute;
   border-radius: 20px;
-  transform: rotate(44deg);
+  transform: rotate(45deg);
+}
+
+@mixin deco-shape {
+  @include deco-shape-base;
   @include media-breakpoint-up(md){
     border-radius: 40px;
     transform: rotate(35deg);
@@ -88,4 +92,42 @@
     left: -165px;
     bottom: -200px;
   }
+}
+
+
+.one-pager-deco-shape {
+  @include deco-shape-base;
+  display: none;
+  @include media-breakpoint-up(sm) {
+    display: block;
+  }
+  @include media-breakpoint-up(lg) {
+    border-radius: 30px;
+  }
+  &--one {
+    background-color: $vibrant-green;
+    width: 340px;
+    height: 150px;
+    left: -80px;
+    bottom: -105px;
+    @include media-breakpoint-up(lg) {
+      width: 440px;
+      height: 215px;
+      left: -90px;
+      bottom: -120px;
+    }
+   }
+  &--two {
+    background-color: $energetic-blue;
+    width: 250px;
+    height: 95px;
+    left: 175px;
+    bottom: -55px;
+    @include media-breakpoint-up(lg) {
+      width: 375px;
+      height: 145px;
+      left: 250px;
+      bottom: -75px;
+    }
+   }
 }

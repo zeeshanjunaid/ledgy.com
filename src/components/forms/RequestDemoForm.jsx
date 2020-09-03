@@ -1,53 +1,27 @@
 // @flow
 
-import React, { useState, type Node } from 'react';
+import React, { useState } from 'react';
 import { faSpinner, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Trans } from '@lingui/react';
 
-import { COMPANY_SIZES, FORM_STATES, demoUrl, scheduleDemoUrl } from '../helpers';
+import { COMPANY_SIZES, FORM_STATUSES, demoUrl, scheduleDemoUrl } from '../../helpers';
 
-import { Button } from './Button';
-import { handleDemoAccessSubmit, type DemoFormStatus, isSmallCompany } from './lib';
+import { Button } from '../Button';
+import { handleDemoAccessSubmit, isSmallCompany } from './lib';
+import { Label, Input, InvalidFieldHints } from './Fields';
 
-const { ERROR, IDLE, INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED } = FORM_STATES;
-
-const Label = ({ text }: { text: Node }) => <span>{text}</span>;
-const Input = ({
-  state,
-  setState,
-  placeholder,
-  setFormStatus,
-  name,
-}: {|
-  state: string,
-  setState: (string) => void,
-  placeholder: string,
-  setFormStatus: (DemoFormStatus) => void,
-  name: string,
-|}) => (
-  <div className="form-group input-group bg-white py-2 mb-4">
-    <input
-      className="form-control"
-      placeholder={placeholder}
-      onChange={(e) => {
-        setState(e.target.value);
-        setFormStatus(IDLE);
-      }}
-      value={state}
-      name={name}
-    />
-  </div>
-);
+const { ERROR, IDLE, INVALID_EMAIL, INVALID_REQUIRED_FIELDS, LOADING, SUBMITTED } = FORM_STATUSES;
 
 export const RequestDemoForm = () => {
   const [email, setEmail] = useState('');
   const [companySize, setCompanySize] = useState('');
   const [formStatus, setFormStatus] = useState(IDLE);
   const state = { email, companySize };
+  const className = 'bg-white py-2 mb-4';
 
   const invalidEmail = formStatus === INVALID_EMAIL;
-  const invalidFields = formStatus === INVALID_FIELDS;
+  const invalidFields = formStatus === INVALID_REQUIRED_FIELDS;
   const error = formStatus === ERROR;
   const loading = formStatus === LOADING;
   const submitted = formStatus === SUBMITTED;
@@ -74,6 +48,7 @@ export const RequestDemoForm = () => {
         placeholder="elon@must.com"
         setFormStatus={setFormStatus}
         name="email"
+        wrapperClassName={className}
       />
 
       <Label text={<Trans>Number of company employees</Trans>} />
@@ -96,11 +71,7 @@ export const RequestDemoForm = () => {
       </div>
 
       <div className="d-flex justify-content-between align-items-center mt-6">
-        <small className="text-danger form-error-message">
-          {invalidFields && <Trans>* Please fill in required fields</Trans>}
-          {invalidEmail && <Trans>Oops. This email address is invalid.</Trans>}
-          {error && <Trans>Something went wrong, please try again.</Trans>}
-        </small>
+        <InvalidFieldHints formStatus={formStatus} />
         <Button
           className="btn-xl min-width-120px"
           disabled={invalidFields || invalidEmail || error || loading}

@@ -5,20 +5,12 @@ import {
   scheduleDemoUrl,
   isValidEmail,
   SMALL_COMPANY_SIZES,
-  FORM_STATES,
+  FORM_STATUSES,
   isFieldMissing,
   track,
-} from '../../helpers';
+} from '../../../helpers';
 
-const { ERROR, INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED } = FORM_STATES;
-
-export type DemoFormStatus =
-  | 'idle'
-  | 'loading'
-  | 'invalid-email'
-  | 'invalid-fields'
-  | 'error'
-  | 'submitted';
+const { ERROR, INVALID_EMAIL, INVALID_REQUIRED_FIELDS, LOADING, SUBMITTED } = FORM_STATUSES;
 
 type State = {|
   companySize: string,
@@ -65,14 +57,14 @@ export const handleDemoAccessSubmit = async ({
 }: {|
   event: SyntheticInputEvent<HTMLInputElement>,
   state: State,
-  setFormStatus: (DemoFormStatus) => void,
+  setFormStatus: (FormStatus) => void,
 |}) => {
   event.preventDefault();
   setFormStatus(LOADING);
   const { email, companySize } = state;
 
   if (isFieldMissing({ email, companySize })) {
-    setFormStatus(INVALID_FIELDS);
+    setFormStatus(INVALID_REQUIRED_FIELDS);
     return;
   }
   if (!isValidEmail(email)) {

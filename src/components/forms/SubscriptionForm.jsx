@@ -7,18 +7,16 @@ import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { navigate } from 'gatsby';
 
-import { isValidEmail, FORM_STATES } from '../helpers';
-
-import { Button } from './Button';
+import { isValidEmail, FORM_STATUSES } from '../../helpers';
+import { Button } from '../Button';
 import { signupOnMixpanel, trackOnMixpanel } from './lib';
+import { InvalidFieldHints } from './Fields';
 
-const { ERROR, IDLE, INVALID, LOADING } = FORM_STATES;
+const { ERROR, IDLE, INVALID_EMAIL, LOADING } = FORM_STATUSES;
 
-declare type FormStatus = {| status: 'idle' | 'loading' | 'invalid' | 'error' |};
-
-export class SignupForm extends Component<
+export class SubscriptionForm extends Component<
   {| i18n: I18n, toggle?: () => void, trackingEvent: string |},
-  { email: string, ...FormStatus }
+  { email: string, status: FormStatus }
 > {
   state = { email: '', status: IDLE };
   handleChange = (e: SyntheticInputEvent<HTMLInputElement>) => {
@@ -44,14 +42,14 @@ export class SignupForm extends Component<
         this.setState({ status: ERROR });
       }
     } else {
-      this.setState({ status: INVALID });
+      this.setState({ status: INVALID_EMAIL });
     }
   };
   render = () => {
     const { props, state } = this;
     const { status } = state;
     const { i18n } = props;
-    const invalid = status === INVALID;
+    const invalid = status === INVALID_EMAIL;
     const error = status === ERROR;
     const loading = status === LOADING;
     return (
@@ -77,10 +75,7 @@ export class SignupForm extends Component<
                 <Trans>Subscribe</Trans>
               )}
             </Button>
-            <small className="text-danger position-absolute form-error-message">
-              {invalid && <Trans>Oops. This email address is invalid.</Trans>}
-              {error && <Trans>Oops. Something went wrong, please try again.</Trans>}
-            </small>
+            <InvalidFieldHints formStatus={status} className="position-absolute" />
           </div>
         </form>
       </>

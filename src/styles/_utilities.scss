@@ -1,3 +1,7 @@
+.text-sm {
+  font-size: 14px;
+}
+
 .text-lg {
   font-size: 18px;
 }
@@ -32,6 +36,20 @@
 
 .min-width-120px {
   min-width: 120px;
+}
+
+.height-42px {
+  height: 42px !important;
+}
+
+.placeholder-white::placeholder {
+  color: $white;
+  opacity: 0.6 !important;
+}
+
+.hover-brigthen:hover {
+  color: $energetic-blue;
+  filter: brightness(130%);
 }
 
 .position-absolute-top-center {

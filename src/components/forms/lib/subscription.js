@@ -1,6 +1,6 @@
 // @flow
 
-import { MIXPANEL_TOKEN, track } from '../../helpers';
+import { MIXPANEL_TOKEN, track } from '../../../helpers';
 
 const encodeBase64 = (JsonObject) => btoa(JSON.stringify(JsonObject));
 

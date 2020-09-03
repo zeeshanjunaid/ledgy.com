@@ -4,7 +4,7 @@ import React, { type Node } from 'react';
 import { Trans } from '@lingui/react';
 
 import { Accordion, AccordionItem } from '../Accordion';
-import { SignupModal } from '../SignupModal';
+import { SubscriptionModal } from '../SubscriptionModal';
 
 const getQuestions = (props: Props) => [
   {
@@ -62,7 +62,7 @@ const getQuestions = (props: Props) => [
         </span>
         <br />
         <div className="d-flex justify-content-center my-5">
-          <SignupModal {...props} />
+          <SubscriptionModal {...props} />
         </div>
       </>
     ),
