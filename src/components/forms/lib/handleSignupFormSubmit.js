@@ -17,7 +17,7 @@ const redirectToApp = ({ name, email }: { name: string, email: string }) => {
   }
 };
 
-export const handleSignupForm = ({
+export const handleSignupFormSubmit = ({
   name,
   email,
   event,
