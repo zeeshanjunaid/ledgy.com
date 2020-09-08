@@ -10,6 +10,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { targetBlank } from '../helpers';
 
 import { getWholeTeam, getTeamImages, type AuthorProps } from '../layouts/team';
+import { Embed } from './Embed';
 
 const About = ({ about, img }: {| about: AuthorProps, img: Object |}) => (
   <div className="about d-flex justify-content-center pt-3 mt-3">
@@ -102,5 +103,10 @@ export const LanguageHint = ({ lang, documentLang }: {| lang: string, documentLa
 
 export const Lead = ({ children }: {| children: Node |}) => <div className="lead">{children}</div>;
 
-// eslint-disable-next-line jsx-a11y/anchor-has-content
-export const Anchor = (props: any) => <a {...targetBlank} {...props} />;
+export const Anchor = (props: { children: Node, href: string, title: string }) => {
+  if (props.href.startsWith('https://www.youtube.com')) {
+    return <Embed src={props.href} title={props.title} className="embed-small" />;
+  }
+  // eslint-disable-next-line jsx-a11y/anchor-has-content
+  return <a {...props} {...targetBlank} />;
+};
