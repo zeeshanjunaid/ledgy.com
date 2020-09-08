@@ -75,12 +75,28 @@
   }
 }
 
+$aspect-ratio: calc(16 / 9);
+@mixin calculate-height($width) {
+  height: calc(#{$width} / #{$aspect-ratio});
+}
+$mobile-width: 90vw;
+$default-width: 700px;
+$small-width: 500px;
+
 .embed {
-  width: 90vw;
-  height: 210px;
-  @include media-breakpoint-up(md) {
-    height: 395px;
-    width: 700px;
+  width: $mobile-width;
+  @include calculate-height($mobile-width);
+  &-default {
+    @include media-breakpoint-up(md) {
+      width: $default-width;
+      @include calculate-height($default-width);
+    }
+  }
+  &-small {
+    @include media-breakpoint-up(md) {
+      width: $small-width;
+      @include calculate-height($small-width);
+    }
   }
 }
 
