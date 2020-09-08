@@ -7,7 +7,7 @@ import { Trans } from '@lingui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { targetBlank } from '../helpers';
+import { targetBlank, youtubeEmbedBaseUrl } from '../helpers';
 
 import { getWholeTeam, getTeamImages, type AuthorProps } from '../layouts/team';
 import { Embed } from './Embed';
@@ -104,8 +104,10 @@ export const LanguageHint = ({ lang, documentLang }: {| lang: string, documentLa
 export const Lead = ({ children }: {| children: Node |}) => <div className="lead">{children}</div>;
 
 export const Anchor = (props: { children: Node, href: string, title: string }) => {
-  if (props.href.startsWith('https://www.youtube.com')) {
-    return <Embed src={props.href} title={props.title} className="embed-small" />;
+  if (props.href.startsWith(youtubeEmbedBaseUrl)) {
+    return (
+      <Embed src={props.href} title={props.title} className="embed-small" wrapperClassName="my-3" />
+    );
   }
   // eslint-disable-next-line jsx-a11y/anchor-has-content
   return <a {...props} {...targetBlank} />;
