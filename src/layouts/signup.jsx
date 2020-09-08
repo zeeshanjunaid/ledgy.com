@@ -17,8 +17,8 @@ const Logo = (props: { prefix: string }) => (
 );
 
 const Quote = (quoteProps: {| quote: string, name: string |}) => (
-  <div className="text-center py-7">
-    <h2 className="mb-3">“{quoteProps.quote}”</h2>
+  <div className="container text-center py-7 line-height-lg">
+    <h3 className="mb-3">“{quoteProps.quote}”</h3>
     <h6>— {quoteProps.name}</h6>
   </div>
 );
