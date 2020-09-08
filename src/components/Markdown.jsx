@@ -7,6 +7,7 @@ import { Trans } from '@lingui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { targetBlank } from '../helpers';
 
 import { getWholeTeam, getTeamImages, type AuthorProps } from '../layouts/team';
 
@@ -100,3 +101,6 @@ export const LanguageHint = ({ lang, documentLang }: {| lang: string, documentLa
   );
 
 export const Lead = ({ children }: {| children: Node |}) => <div className="lead">{children}</div>;
+
+// eslint-disable-next-line jsx-a11y/anchor-has-content
+export const Anchor = (props: any) => <a {...targetBlank} {...props} />;
