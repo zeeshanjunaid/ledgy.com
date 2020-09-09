@@ -13,7 +13,7 @@ export const Embed = ({
   wrapperClassName?: string,
   className?: string,
 |}) => (
-  <div className={wrapperClassName || 'py-6'}>
+  <div className={wrapperClassName || 'my-5'}>
     <iframe
       title={title}
       className={`mx-auto d-block ${className || 'embed-default'}`}

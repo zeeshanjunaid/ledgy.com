@@ -105,9 +105,7 @@ export const Lead = ({ children }: {| children: Node |}) => <div className="lead
 
 export const Anchor = (props: { children: Node, href: string, title: string }) => {
   if (props.href.startsWith(youtubeEmbedBaseUrl)) {
-    return (
-      <Embed src={props.href} title={props.title} className="embed-small" wrapperClassName="my-3" />
-    );
+    return <Embed src={props.href} title={props.title} className="embed-small" />;
   }
   // eslint-disable-next-line jsx-a11y/anchor-has-content
   return <a {...props} {...targetBlank} />;

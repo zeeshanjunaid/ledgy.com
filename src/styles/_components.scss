@@ -365,15 +365,6 @@ $deco-dot-size: 8px;
   }
 }
 
-.calculator-video {
-  width: 90vw;
-  height: 210px;
-  @include media-breakpoint-up(md) {
-    height: 315px;
-    width: 560px;
-  }
-}
-
 .calculator-banner h1 {
   max-width: 800px;
 }
