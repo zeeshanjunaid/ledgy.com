@@ -7,7 +7,7 @@ import { Trans } from '@lingui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
-import { targetBlank, youtubeEmbedBaseUrl } from '../helpers';
+import { targetBlank, youtubeEmbedBaseUrl, ledgyUrl } from '../helpers';
 
 import { getWholeTeam, getTeamImages, type AuthorProps } from '../layouts/team';
 import { Embed } from './Embed';
@@ -103,22 +103,42 @@ export const LanguageHint = ({ lang, documentLang }: {| lang: string, documentLa
 
 export const Lead = ({ children }: {| children: Node |}) => <div className="lead">{children}</div>;
 
+const getPrefixedUrl = ({
+  href,
+  prefix,
+  isExternal,
+}: {|
+  href: string,
+  prefix?: string,
+  isExternal: boolean,
+|}) => {
+  const isFullLedgyUrl = href.startsWith(ledgyUrl);
+  if (!prefix || (isExternal && !isFullLedgyUrl)) return href;
+
+  if (isFullLedgyUrl) {
+    const [, path] = href.split(ledgyUrl);
+    return `${ledgyUrl}${prefix}${path}`;
+  }
+  return `${prefix}/${href}`;
+};
+
 export const Anchor = ({
   href,
   title,
   children,
   prefix,
-}: {
+}: {|
   children: Node,
   href: string,
   title: string,
   prefix?: string,
-}) => {
+|}) => {
   if (href.startsWith(youtubeEmbedBaseUrl)) {
     return <Embed src={href} title={title} className="embed-small" />;
   }
   const isExternal = href.startsWith('https://');
-  const prefixedUrl = prefix && !isExternal ? `${prefix}/${href}` : href;
+  const prefixedUrl = getPrefixedUrl({ href, prefix, isExternal });
+
   return (
     <a href={prefixedUrl} title={title} {...(isExternal ? targetBlank : {})}>
       {children}

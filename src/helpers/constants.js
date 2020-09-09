@@ -44,6 +44,8 @@ export const scheduleDemoUrl = 'https://resources.ledgy.com/schedule-demo';
 
 export const youtubeEmbedBaseUrl = 'https://www.youtube.com/embed';
 
+export const ledgyUrl = 'https://ledgy.com';
+
 // netlify & mixpanel
 const isNetlify = typeof window !== 'undefined' && window.location.hostname !== 'localhost';
 
