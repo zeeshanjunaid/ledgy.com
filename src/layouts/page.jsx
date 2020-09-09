@@ -51,7 +51,7 @@ const page = ({
         />
       )}
       <div className="container container-small">
-        <LongText content={content} />
+        <LongText content={content} prefix={prefix} />
         <PublishDate date={date} />
         {author && <Author prefix={prefix} name={author} />}
       </div>

@@ -33,11 +33,11 @@ export default ({
           <div className="container container-medium">
             <div className="customer-story-section row">
               <div className="col-md-4 mb-6">
-                <CompanySummary company={company} />
+                <CompanySummary company={company} prefix={prefix} />
               </div>
               <div className="col-md-8">
                 <div className="px-3">
-                  <LongText content={content} />
+                  <LongText content={content} prefix={prefix} />
                 </div>
               </div>
             </div>

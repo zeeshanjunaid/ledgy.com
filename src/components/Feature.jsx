@@ -12,7 +12,7 @@ export const Feature = ({
 }: {
   title: string,
   description: string[],
-  imgProps: Image,
+  imgProps?: Image,
   imgFirst?: boolean,
 }) => {
   return (
