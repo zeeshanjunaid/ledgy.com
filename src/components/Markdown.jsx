@@ -119,7 +119,7 @@ const getPrefixedUrl = ({
     const [, path] = href.split(ledgyUrl);
     return `${ledgyUrl}${prefix}${path}`;
   }
-  return `${prefix}/${href}`;
+  return `${prefix}${href}`;
 };
 
 export const Anchor = ({
