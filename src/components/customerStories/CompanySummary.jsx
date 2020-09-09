@@ -21,7 +21,7 @@ const getCompanySummaries = (company: Company) => [
   [faSeedling, 'Stage', company.stage],
 ];
 
-export const CompanySummary = ({ company }: {| company: Company |}) => (
+export const CompanySummary = ({ company, prefix }: {| company: Company, prefix: string |}) => (
   <div className="company-summary rounded-md bg-white sticky-top p-2 p-sm-4 p-md-2 p-lg-4">
     <Img
       className="company-summary-logo font-weight-light fit-cover mx-auto my-4"
@@ -32,6 +32,7 @@ export const CompanySummary = ({ company }: {| company: Company |}) => (
         content={company.mainQuote}
         isMarkdown={false}
         className="company-summary-quote mt-3 mb-0 text-left"
+        prefix={prefix}
       />
       <div className="company-summary-contact mb-2">
         <div className="row mx-auto">

@@ -107,18 +107,20 @@ export const Anchor = ({
   href,
   title,
   children,
+  prefix,
 }: {
   children: Node,
   href: string,
   title: string,
+  prefix?: string,
 }) => {
   if (href.startsWith(youtubeEmbedBaseUrl)) {
     return <Embed src={href} title={title} className="embed-small" />;
   }
   const isExternal = href.startsWith('https://');
-  // eslint-disable-next-line jsx-a11y/anchor-has-content
+  const prefixedUrl = prefix && !isExternal ? `${prefix}/${href}` : href;
   return (
-    <a href={href} title={title} {...(isExternal ? targetBlank : {})}>
+    <a href={prefixedUrl} title={title} {...(isExternal ? targetBlank : {})}>
       {children}
       {isExternal && <FontAwesomeIcon icon={faExternalLinkAlt} className="ml-1 fa-xs" />}
     </a>
