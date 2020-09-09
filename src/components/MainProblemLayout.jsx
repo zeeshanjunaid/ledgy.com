@@ -33,7 +33,7 @@ export const MainProblemLayout = withI18n()(
               <DynamicTrans>{description}</DynamicTrans>
             </p>
             <div className="px-4 px-sm-6 px-lg-7 px-xl-9">
-              <Img {...image.localFile.childImageSharp} />
+              <Img {...image.localFile?.childImageSharp} />
             </div>
           </div>
         </div>

@@ -27,7 +27,7 @@ declare type LayoutProps = {|
 declare type Mdx = {| childMdx: {| body: string |} |};
 
 declare type Image = {|
-  localFile: {| childImageSharp: Object |},
+  localFile?: {| childImageSharp: Object |},
   title: string,
   description?: string,
 |};

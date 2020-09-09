@@ -15,8 +15,8 @@ export const ExternalLogoRow = ({ title, logos }: { title: Node, logos: Image[] 
         </small>
       </div>
       <div className="row w-100 justify-content-between align-items-center">
-        {logos.map(({ title: alt, localFile: { childImageSharp }, description: url }) => {
-          const image = <Img {...childImageSharp} alt={alt} />;
+        {logos.map(({ title: alt, localFile, description: url }) => {
+          const image = <Img {...localFile?.childImageSharp} alt={alt} />;
           const hasUrl = !!url && url.startsWith('https://');
           const className = 'm-4 d-flex align-items-center';
           return (
