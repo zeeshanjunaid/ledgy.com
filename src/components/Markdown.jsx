@@ -140,7 +140,12 @@ export const Anchor = ({
   const prefixedUrl = getPrefixedUrl({ href, prefix, isExternal });
 
   return (
-    <a href={prefixedUrl} title={title} {...(isExternal ? targetBlank : {})}>
+    <a
+      href={prefixedUrl}
+      title={title}
+      {...(isExternal ? targetBlank : {})}
+      className="d-inline-flex align-items-center"
+    >
       {children}
       {isExternal && <FontAwesomeIcon icon={faExternalLinkAlt} className="ml-1 fa-xs" />}
     </a>
