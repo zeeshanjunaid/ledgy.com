@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby';
 import { withI18n } from '@lingui/react';
 import React from 'react';
 
+import { Title } from './utils';
 import { SignupForm } from '../components/forms';
 import { ExternalLogoRow } from '../components/ExternalLogoRow';
 import { SellingProp } from '../components/SellingProp';
@@ -36,6 +37,7 @@ const SignupPage = (props: LayoutProps) => {
 
   return (
     <>
+      <Title title={title} description={description} />
       <header className="header d-flex home-banner px-1 text-left bg-primary overflow-hidden">
         <div className="container my-4 my-md-auto position-relative z-index-base">
           <div className="row mt-4 mt-lg-2 pb-4 pb-md-6">
