@@ -130,7 +130,7 @@ const TemplateWrapper = withI18n()(({ children, ...props }: SiteProps) => (
                     }
 
                     ce(ss);
-                  })(document, 'script', '<https://sc.lfeeder.com/lftracker_v1_lYNOR8xMlxe7WQJZ.js');>
+                  })(document, 'script', 'https://sc.lfeeder.com/lftracker_v1_lYNOR8xMlxe7WQJZ.js');
                 })();
               `}
             </script>
