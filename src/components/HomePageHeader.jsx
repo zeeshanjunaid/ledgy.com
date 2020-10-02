@@ -15,6 +15,7 @@ export const HomePageHeader = ({ i18n, data }: Props) => {
   const [content] = data.page.edges;
   const title = <DynamicTrans>{content.node.mainHeader}</DynamicTrans>;
   const subtitle = <DynamicTrans>{content.node.description}</DynamicTrans>;
+  const tablet = content.node.bannerImage.localFile?.childImageSharp;
 
   const buttonTwo = {
     props: {
@@ -36,7 +37,7 @@ export const HomePageHeader = ({ i18n, data }: Props) => {
       buttonTwo={buttonTwo}
       image={
         <div id="tablet-ledgy" data-aos="fade-up">
-          <Img {...data.tablet} alt={i18n.t`Screenshot of the Ledgy app`} />
+          <Img {...tablet} alt={i18n.t`Screenshot of the Ledgy app`} />
         </div>
       }
     />
