@@ -55,16 +55,20 @@ export default withI18n()(IndexPage);
 // eslint-disable-next-line no-undef
 export const pageQuery = graphql`
   query {
-    tablet: imageSharp(fluid: { originalName: { regex: "/tablet-dashboard.png/" } }) {
-      fluid(maxWidth: 2000) {
-        ...GatsbyImageSharpFluid_noBase64
-      }
-    }
     page: allContentfulFrontPage {
       edges {
         node {
           title
           mainHeader
+          bannerImage {
+            localFile {
+              childImageSharp {
+                fixed(width: 570) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
+          }
           description
           entries {
             ... on ContentfulExternalLogos {
