@@ -126,7 +126,6 @@ export const getNavbarLinks = () => {
         Access employee participation plan templates developed with leading law firms for free
       </Trans>,
     ],
-    ['partners', <Trans>Law Partners</Trans>, <Trans>These law firms work with Ledgy</Trans>],
   ];
 
   const pricing = [
