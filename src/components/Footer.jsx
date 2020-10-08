@@ -6,12 +6,12 @@ import { Trans } from '@lingui/react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobeEurope } from '@fortawesome/free-solid-svg-icons';
-
 import { name, targetBlank } from '../helpers';
 import { deprefix } from '../i18n-config';
 
 import logoInvertedCompact from '../img/logo-inverted-compact.png';
 
+import { G2AndCapterraStrip } from './G2AndCapterraStrip';
 import { CTABanner } from './CTABanner';
 import { Dropdown } from './Dropdown';
 import { SubscriptionModal } from './SubscriptionModal';
@@ -53,6 +53,7 @@ export const Footer = ({ location, ...props }: LayoutProps) => {
 
   return (
     <div>
+      <G2AndCapterraStrip />
       {isPartners ? '' : <CTABanner location={location} {...props} />}
       <footer className="footer py-8 px-2 px-md-4 text-white bg-primary overflow-hidden position-relative">
         <div className="footer-deco-shape" />
