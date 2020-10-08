@@ -6,7 +6,7 @@ import { Trans } from '@lingui/react';
 import { targetBlank } from '../helpers';
 
 export const G2AndCapterraStrip = () => (
-  <div className="bg-light position-relative p-5">
+  <div className="bg-light p-5">
     <div className="container">
       <div className="row justify-content-center">
         <small className="text-gray-neutral text-center">
