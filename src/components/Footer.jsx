@@ -6,7 +6,6 @@ import { Trans } from '@lingui/react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobeEurope } from '@fortawesome/free-solid-svg-icons';
-
 import { name, targetBlank } from '../helpers';
 import { deprefix } from '../i18n-config';
 

@@ -55,6 +55,25 @@
   }
 }
 
+.g2-badge, .capterra-badge {
+  filter: grayscale(1);
+}
+
+.g2-badge {
+  width: 80px;
+  @include media-breakpoint-up(lg) {
+    width: 100px;
+  }
+}
+
+.capterra-badge {
+  opacity: 0.85;
+  width: 110px;
+  @include media-breakpoint-up(lg) {
+    width: 130px;
+  }
+}
+
 // Forms
 .form-error-message {
   bottom: -30px;

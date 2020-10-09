@@ -10,6 +10,7 @@ import { MainProblemLayout } from '../components/MainProblemLayout';
 import { ExternalLogoRow } from '../components/ExternalLogoRow';
 import { SellingProp } from '../components/SellingProp';
 import { dynamicI18n } from '../components/DynamicTrans';
+import { G2AndCapterraStrip } from '../components/G2AndCapterraStrip';
 
 const DecoShapes = () => (
   <>
@@ -46,6 +47,7 @@ const IndexPage = (props: Props) => {
         }
         return null;
       })}
+      <G2AndCapterraStrip />
     </main>
   );
 };
