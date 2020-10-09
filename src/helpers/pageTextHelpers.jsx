@@ -8,7 +8,7 @@ export const getInvestorFeaturePricing = () => ({
     <Trans>Up to 10 companies</Trans>,
     <Trans>One investor portfolio with custom and startup-curated entries</Trans>,
     <Trans>Receive reports, KPIs, documents, and sign documents</Trans>,
-    <Trans>No support</Trans>,
+    <Trans>Limited support</Trans>,
   ],
   fundFeatures: [
     <Trans>Unlimited companies</Trans>,
