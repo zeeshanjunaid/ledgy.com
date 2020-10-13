@@ -5,7 +5,7 @@ import { withI18n } from '@lingui/react';
 import React from 'react';
 
 import { Title } from './utils';
-import { GetDemoForm } from '../components/forms';
+import { DemoForm } from '../components/forms';
 import { ExternalLogoRow } from '../components/ExternalLogoRow';
 import { SellingProp } from '../components/SellingProp';
 import { CTABanner } from '../components/CTABanner';
@@ -31,7 +31,7 @@ const DecoShapes = () => (
   </>
 );
 
-const SignupPage = (props: LayoutProps) => {
+const DemoPage = (props: LayoutProps) => {
   const { data, prefix, location } = props;
   const {
     title,
@@ -40,7 +40,7 @@ const SignupPage = (props: LayoutProps) => {
     formButtonText,
     content,
     type,
-  } = data.contentfulSignupPage;
+  } = data.contentfulSignupPage; // TODO rename in Contentful
 
   return (
     <>
@@ -58,7 +58,7 @@ const SignupPage = (props: LayoutProps) => {
               </div>
             </div>
             <div className="text-white col-lg-6 d-flex flex-column justify-content-center mt-4 mt-lg-0">
-              <GetDemoForm
+              <DemoForm
                 title={formTitle}
                 buttonText={formButtonText}
                 contentfulRequesterType={type}
@@ -87,7 +87,7 @@ const SignupPage = (props: LayoutProps) => {
   );
 };
 
-export default withI18n()(SignupPage);
+export default withI18n()(DemoPage);
 
 export const pageQuery = graphql`
   query($id: String!) {
@@ -98,6 +98,7 @@ export const pageQuery = graphql`
       description
       formTitle
       formButtonText
+      type
       content {
         ... on ContentfulExternalLogos {
           id

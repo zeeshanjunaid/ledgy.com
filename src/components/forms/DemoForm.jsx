@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import { FORM_STATUSES, appUrl } from '../../helpers';
 import { Button } from '../Button';
 import { Input, InvalidFieldHints } from './Fields';
-import { handleGetDemoSubmit } from './lib';
+import { handleDemoSubmit } from './lib';
 
 const { IDLE } = FORM_STATUSES;
 
@@ -16,7 +16,7 @@ const REQUESTER_TYPES = [COMPANY, INVESTOR];
 
 const capitalize = (word: string) => `${word.slice(0, 1).toUpperCase()}${word.slice(1)}`;
 
-export const GetDemoForm = ({
+export const DemoForm = ({
   title,
   buttonText,
   contentfulRequesterType,
@@ -37,7 +37,7 @@ export const GetDemoForm = ({
       <h4 className="mt-5 mb-4">{title}</h4>
       <form
         method="post"
-        onSubmit={(event) => handleGetDemoSubmit({ values, event, setFormStatus })}
+        onSubmit={(event) => handleDemoSubmit({ values, event, setFormStatus })}
         noValidate
         className="w-100 p-2 p-sm-4 d-flex flex-column align-items-center justify-content-between"
       >

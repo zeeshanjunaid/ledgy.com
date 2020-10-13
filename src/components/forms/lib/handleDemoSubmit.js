@@ -13,7 +13,7 @@ const { INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED } = FORM_STATUSES;
 //   }
 // };
 
-export const handleGetDemoSubmit = ({
+export const handleDemoSubmit = ({
   values,
   event,
   setFormStatus,

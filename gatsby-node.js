@@ -71,7 +71,7 @@ const featurePageQuery = `
       }
     `;
 
-const getDemoQuery = `
+const demoQuery = `
       {
         allContentfulSignupPage(limit: 1000) {
           edges {
@@ -146,18 +146,18 @@ exports.createPages = ({ graphql, actions }) => {
     })
   );
 
-  const getDemoPageComponent = path.resolve(`${basePath}/getDemo.jsx`);
-  const createGetDemoPages = resolvePagePromise(graphql(getDemoQuery), (data) =>
+  const demoPageComponent = path.resolve(`${basePath}/demo.jsx`);
+  const createDemoPages = resolvePagePromise(graphql(demoQuery), (data) =>
     // TODO rename in Contentful
     data.allContentfulSignupPage.edges.forEach(({ node }) => {
       const { id, slug } = node;
-      const pagePath = `/getDemo/${slug}/`;
+      const pagePath = `/demo/${slug}/`;
       const context = { id };
-      createLocalizedPages(pagePath, getDemoPageComponent, context);
+      createLocalizedPages(pagePath, demoPageComponent, context);
     })
   );
 
-  const allPages = [createPages, createCustomerStories, createFeaturePages, createGetDemoPages];
+  const allPages = [createPages, createCustomerStories, createFeaturePages, createDemoPages];
 
   return Promise.all(allPages);
 };
