@@ -1,28 +1,22 @@
 // @flow
 
-import { FORM_STATUSES, isFieldMissing, isValidEmail, track, demoUrl } from '../../../helpers';
+import { FORM_STATUSES, isFieldMissing, isValidEmail, track } from '../../../helpers';
+
+import type { FormValues, ParsedFormValues } from './formTypes';
+import { submitToHubspot } from './hubspot';
+import {
+  COMPANY,
+  deerCompanyUrl,
+  EMPLOYEE_VALUE,
+  INVESTMENT_VALUE,
+  investorUrl,
+  SMALL_COMPANY_THRESHOLD,
+  smallCompanyUrl,
+} from './constants';
 
 const { INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED, ERROR } = FORM_STATUSES;
 
-export type RequesterType = 'company' | 'investor';
-
-type FormValues = {|
-  requesterType: RequesterType,
-  email: string,
-  size: string,
-|};
-
-type ParsedFormValues = {|
-  isCompany: boolean,
-  email: string,
-  size: number,
-|};
-
-const smallCompanyUrl = demoUrl;
-const deerCompanyUrl = 'https://meetings.hubspot.com/ledgy/equity-management-with-ledgy';
-const investorUrl = 'https://meetings.hubspot.com/ledgy/portfolio-management-with-ledgy';
-
-const isSmallCompany = (size: number) => size < 50;
+const isSmallCompany = (size: number) => size < SMALL_COMPANY_THRESHOLD;
 
 const getUrl = (values: ParsedFormValues) => {
   if (!values.isCompany) {
@@ -37,40 +31,6 @@ const redirect = (values: ParsedFormValues) => {
   }
 };
 
-export const COMPANY: RequesterType = 'company';
-export const INVESTOR: RequesterType = 'investor';
-
-const companyFormId = 'b360c926-ed24-473a-8418-ee1050ddbd06';
-const investorFormId = 'fcc4153b-79ea-49a1-9672-eb888d210355';
-
-const EMPLOYEE_VALUE = 4;
-const INVESTMENT_VALUE = 15;
-
-const HUBSPOTUTK = 'hubspotutk=';
-const getHubspotUserToken = (): string =>
-  (document.cookie.split('; ').find((v) => v.startsWith(HUBSPOTUTK)) || '').slice(
-    HUBSPOTUTK.length
-  );
-
-const encodeBody = (data) =>
-  JSON.stringify({
-    fields: Object.entries(data).map(([name, value]) => ({ name, value })),
-    context: { hutk: getHubspotUserToken() },
-  });
-
-const submitToHubspot = ({ isCompany, email, size }: ParsedFormValues) => {
-  const formId = isCompany ? companyFormId : investorFormId;
-  const body = {
-    ...(isCompany ? { numberofemployees: size } : { numberofinvestments: size }),
-    email,
-  };
-  return fetch(`/submit/6881367/${formId}`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: encodeBody(body),
-  });
-};
-
 export const handleDemoSubmit = async ({
   values,
   event,
@@ -79,7 +39,7 @@ export const handleDemoSubmit = async ({
   values: FormValues,
   event: SyntheticInputEvent<HTMLInputElement>,
   setFormStatus: (FormStatus) => void,
-|}) => {
+|}): Promise<void> => {
   event.preventDefault();
   setFormStatus(LOADING);
   const { requesterType, email, size: sizeString } = values;
@@ -88,14 +48,14 @@ export const handleDemoSubmit = async ({
     setFormStatus(INVALID_FIELDS);
     return;
   }
-  const size = Number(sizeString);
 
   if (!isValidEmail(email)) {
     setFormStatus(INVALID_EMAIL);
     return;
   }
-  const isCompany = requesterType === COMPANY;
 
+  const isCompany = requesterType === COMPANY;
+  const size = Number(sizeString);
   const parsedFormValues = { isCompany, email, size };
 
   const response = await submitToHubspot(parsedFormValues);
@@ -103,6 +63,7 @@ export const handleDemoSubmit = async ({
     setFormStatus(ERROR);
     throw new Error(response.statusText);
   }
+
   if (isCompany) {
     track('getDemo.submit.company', { value: size * EMPLOYEE_VALUE });
   } else {
