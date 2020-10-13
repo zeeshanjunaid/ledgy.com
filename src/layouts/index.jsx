@@ -55,7 +55,7 @@ const TemplateWrapper = withI18n()(({ children, ...props }: SiteProps) => (
       const thumbnailUrl = `${siteUrl}/thumbnail-874d5c.png`;
       const pathname = deprefix(props.location.pathname);
       const isAppShell = pathname.includes('offline-plugin-app-shell-fallback');
-      const isSignupPage = pathname.includes('signup');
+      const isDemoPage = pathname.includes('demo');
       return (
         <div>
           <Title
@@ -147,14 +147,14 @@ const TemplateWrapper = withI18n()(({ children, ...props }: SiteProps) => (
               `}
             </noscript>
           </Helmet>
-          {!isSignupPage && <Nav {...props} prefix={prefix} />}
+          {!isDemoPage && <Nav {...props} prefix={prefix} />}
           {isAppShell ? (
             <Loader />
           ) : (
             <>
               <PublicityBanner pathname={pathname} />
               {React.cloneElement((children: Object), { prefix, lang })}
-              {!isSignupPage && <Footer {...props} prefix={prefix} />}
+              {!isDemoPage && <Footer {...props} prefix={prefix} />}
             </>
           )}
         </div>

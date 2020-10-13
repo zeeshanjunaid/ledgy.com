@@ -22,6 +22,10 @@ module.exports = {
   proxy: [
     { prefix: '/engage', url: 'https://api.mixpanel.com' },
     { prefix: '/track', url: 'https://api.mixpanel.com' },
+    {
+      prefix: '/submit/6881367',
+      url: 'https://api.hsforms.com/submissions/v3/integration',
+    },
   ],
   plugins: [
     'gatsby-plugin-layout',

@@ -20,6 +20,7 @@ export const SellingProp = withI18n()(
     prefix,
     i18n,
     imgFirst = false,
+    hideLink = false,
   }: {|
     title: string,
     description: string,
@@ -29,6 +30,7 @@ export const SellingProp = withI18n()(
     prefix: string,
     i18n: I18n,
     imgFirst?: boolean,
+    hideLink?: boolean,
   |}) => {
     const t = dynamicI18n(i18n);
     return (
@@ -43,12 +45,14 @@ export const SellingProp = withI18n()(
             <p className="my-4">
               <DynamicTrans>{description}</DynamicTrans>
             </p>
-            <Link href to={`${prefix}/${linkTo}`} className="d-flex align-items-center">
-              <FontAwesomeIcon icon={faArrowCircleRight} className="fa-sm" />
-              <span className="deco-link ml-2">
-                <DynamicTrans>{link}</DynamicTrans>
-              </span>
-            </Link>
+            {!hideLink && (
+              <Link href to={`${prefix}/${linkTo}`} className="d-flex align-items-center">
+                <FontAwesomeIcon icon={faArrowCircleRight} className="fa-sm" />
+                <span className="deco-link ml-2">
+                  <DynamicTrans>{link}</DynamicTrans>
+                </span>
+              </Link>
+            )}
           </div>
           <div
             className={`col-12 col-md-6 col-lg-5 py-3 px-2 px-md-4 ${

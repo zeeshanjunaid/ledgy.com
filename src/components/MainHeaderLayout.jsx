@@ -3,12 +3,11 @@
 import React, { type Node } from 'react';
 import { Button } from './Button';
 
-type HeaderButton = {| props: Object, text: Node, modal?: Node |};
 type MainHeaderLayoutProps = {|
   title: Node | string,
   subtitle: Node | string,
-  buttonOne: HeaderButton,
-  buttonTwo?: HeaderButton,
+  buttonOne: Node,
+  buttonTwo?: {| props: Object, text: Node |},
   customButton?: Node,
   image: Node,
   className?: string,
@@ -24,8 +23,6 @@ export const MainHeaderLayout = ({
   className = '',
 }: MainHeaderLayoutProps) => {
   const buttonClass = 'btn-xl mx-1 align-self-center';
-  const { props, modal = null } = buttonOne;
-  const Modal = modal;
 
   return (
     <header className={`header d-flex home-banner px-1 text-left bg-primary ${className}`}>
@@ -39,11 +36,7 @@ export const MainHeaderLayout = ({
               </div>
             </div>
             <div className="d-flex align-items-center flex-wrap">
-              {Modal || (
-                <Button className={buttonClass} cta {...props}>
-                  {buttonOne.text}
-                </Button>
-              )}
+              {buttonOne}
               {!!buttonTwo && (
                 <Button className={buttonClass} inverted {...buttonTwo.props}>
                   {buttonTwo.text}
