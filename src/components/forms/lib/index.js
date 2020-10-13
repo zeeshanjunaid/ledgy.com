@@ -1,5 +1,5 @@
 // @flow
 
 export * from './demoAccess';
-export * from './handleSignupFormSubmit';
+export * from './handleGetDemoSubmit';
 export * from './subscription';

@@ -5,11 +5,11 @@ import React, { useState } from 'react';
 import { FORM_STATUSES, appUrl } from '../../helpers';
 import { Button } from '../Button';
 import { Input, InvalidFieldHints } from './Fields';
-import { handleSignupFormSubmit } from './lib';
+import { handleGetDemoSubmit } from './lib';
 
 const { IDLE } = FORM_STATUSES;
 
-export const SignupForm = ({ title, buttonText }: {| title: string, buttonText: string |}) => {
+export const GetDemoForm = ({ title, buttonText }: {| title: string, buttonText: string |}) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [formStatus, setFormStatus] = useState(IDLE);
@@ -20,7 +20,7 @@ export const SignupForm = ({ title, buttonText }: {| title: string, buttonText: 
       <h4 className="mt-5 mb-4">{title}</h4>
       <form
         method="post"
-        onSubmit={(event) => handleSignupFormSubmit({ name, email, event, setFormStatus })}
+        onSubmit={(event) => handleGetDemoSubmit({ name, email, event, setFormStatus })}
         noValidate
         className="w-100 p-2 p-sm-4 d-flex flex-column align-items-center justify-content-between"
       >

@@ -1,4 +1,4 @@
 // @flow
 
-export * from './SignupForm';
+export * from './GetDemoForm';
 export * from './SubscriptionForm';

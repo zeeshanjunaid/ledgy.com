@@ -5,7 +5,7 @@ import { withI18n } from '@lingui/react';
 import React from 'react';
 
 import { Title } from './utils';
-import { SignupForm } from '../components/forms';
+import { GetDemoForm } from '../components/forms';
 import { ExternalLogoRow } from '../components/ExternalLogoRow';
 import { SellingProp } from '../components/SellingProp';
 import { CTABanner } from '../components/CTABanner';
@@ -51,7 +51,7 @@ const SignupPage = (props: LayoutProps) => {
               </div>
             </div>
             <div className="text-white col-lg-6 d-flex flex-column justify-content-center mt-4 mt-lg-0">
-              <SignupForm title={formTitle} buttonText={formButtonText} />
+              <GetDemoForm title={formTitle} buttonText={formButtonText} />
             </div>
           </div>
         </div>
