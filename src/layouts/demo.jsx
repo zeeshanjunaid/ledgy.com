@@ -54,7 +54,7 @@ const DemoPage = (props: LayoutProps) => {
               <div className="mt-lg-n4 mb-md-4 mr-md-4">
                 <Logo {...props} />
                 <h1 className="text-white mt-5 mb-2 mb-sm-3">
-                  <DynamicTrans>title</DynamicTrans>
+                  <DynamicTrans>{title}</DynamicTrans>
                 </h1>
                 <div className="text-lg line-height-lg text-white font-weight-light pb-3">
                   <DynamicTrans>{description}</DynamicTrans>
