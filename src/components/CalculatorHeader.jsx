@@ -6,6 +6,7 @@ import Img from 'gatsby-image';
 import { calculatorUrl, track } from '../helpers';
 import { ProductHuntButton } from './ProductHuntButton';
 import { MainHeaderLayout } from './MainHeaderLayout';
+import { Button } from './Button';
 
 export const CalculatorHeader = ({ data }: { data: any }) => {
   return (
@@ -34,14 +35,16 @@ export const CalculatorHeader = ({ data }: { data: any }) => {
           </ul>
         </>
       }
-      buttonOne={{
-        props: {
-          href: calculatorUrl,
-          onClick: () => track('click.calculator'),
-          className: 'mr-2 mb-2',
-        },
-        text: 'Launch calculator',
-      }}
+      buttonOne={
+        <Button
+          cta
+          href={calculatorUrl}
+          onClick={() => track('click.calculator')}
+          className="mr-2 mb-2"
+        >
+          Launch calculator
+        </Button>
+      }
       customButton={
         <ProductHuntButton
           productHuntLink="https://www.producthunt.com/posts/startup-fundraising-calculator?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-startup-fundraising-calculator"

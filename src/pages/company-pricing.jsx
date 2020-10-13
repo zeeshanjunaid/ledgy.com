@@ -8,7 +8,7 @@ import { LedgyPricing } from '@ledgy/pricing/dist/LedgyPricing';
 
 import { Button } from '../components/Button';
 import { Title } from '../layouts/utils';
-import { RequestDemoModal } from '../components/RequestDemoModal';
+import { RequestDemoButton } from '../components/RequestDemoButton';
 import { appUrl } from '../helpers';
 import { PageHeader } from '../components/PageHeader';
 import { DynamicTrans, dynamicI18n } from '../components/DynamicTrans';
@@ -20,7 +20,7 @@ const PricingCTA = ({ title, description }: {| title: Node, description: Node |}
   </div>
 );
 
-export default withI18n()(({ i18n }: Props) => {
+export default withI18n()(({ i18n, prefix }: Props) => {
   const title = i18n.t`Pricing`;
   const t = dynamicI18n(i18n);
   const description = i18n.t`Companies at different stages have very different needs. Consider access rights, storage, support needs, and more when selecting your ideal plan.`;
@@ -40,7 +40,7 @@ export default withI18n()(({ i18n }: Props) => {
           </Button>
         }
         premiumText="7-day free trial"
-        enterpriseButton={<RequestDemoModal buttonClassName="my-4 btn-red" />}
+        enterpriseButton={<RequestDemoButton prefix={prefix} buttonClassName="my-4 btn-red" />}
         highlightEnterprise
         DynamicTrans={DynamicTrans}
         t={t}
