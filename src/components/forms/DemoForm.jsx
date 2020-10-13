@@ -70,7 +70,9 @@ export const DemoForm = ({
         <Input
           state={size}
           setState={setSize}
-          placeholder={`Number of ${requesterType === COMPANY ? 'employees' : 'investments'}`}
+          placeholder={`Number of ${
+            requesterType === COMPANY ? 'company employees' : 'portfolio companies'
+          }`}
           setFormStatus={setFormStatus}
           name="size"
           wrapperClassName="mb-4"
