@@ -77,7 +77,9 @@ const DemoPage = (props: LayoutProps) => {
             return <ExternalLogoRow key={id} {...entry} />;
           }
           if (__typename === 'ContentfulSellingProposition') {
-            return <SellingProp key={id} {...entry} prefix={prefix} imgFirst={i % 2 === 0} />;
+            return (
+              <SellingProp key={id} {...entry} prefix={prefix} imgFirst={i % 2 === 0} hideLink />
+            );
           }
           return null;
         })}
