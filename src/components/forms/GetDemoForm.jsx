@@ -10,8 +10,8 @@ import { handleGetDemoSubmit } from './lib';
 const { IDLE } = FORM_STATUSES;
 
 type RequesterType = 'company' | 'investor';
-const COMPANY = 'company';
-const INVESTOR = 'investor';
+const COMPANY: RequesterType = 'company';
+const INVESTOR: RequesterType = 'investor';
 const REQUESTER_TYPES = [COMPANY, INVESTOR];
 
 const capitalize = (word: string) => `${word.slice(0, 1).toUpperCase()}${word.slice(1)}`;
@@ -25,30 +25,31 @@ export const GetDemoForm = ({
   buttonText: string,
   contentfulRequesterType: RequesterType | void,
 |}) => {
-  const [requesterType, setRequesterType] = useState(COMPANY);
+  const [requesterType, setRequesterType] = useState(contentfulRequesterType || COMPANY);
   const [email, setEmail] = useState('');
   const [size, setSize] = useState('');
   const [formStatus, setFormStatus] = useState(IDLE);
   const inputClassName = 'height-42px bg-transparent text-white placeholder-white';
-  const isCompany = requesterType === COMPANY;
+  const values = { requesterType, email, size };
 
   return (
     <div className="d-flex flex-column align-items-center border border-gray-neutral p-2 p-sm-4 ml-lg-4 mt-lg-4 rounded">
       <h4 className="mt-5 mb-4">{title}</h4>
       <form
         method="post"
-        // onSubmit={(event) => handleGetDemoSubmit({ name, email, event, setFormStatus })}
+        onSubmit={(event) => handleGetDemoSubmit({ values, event, setFormStatus })}
         noValidate
         className="w-100 p-2 p-sm-4 d-flex flex-column align-items-center justify-content-between"
       >
         {!contentfulRequesterType && (
           <div className="d-flex mt-2 mb-4 w-100">
-            <input type="hidden" name="companySize" />
+            <input type="hidden" name="type" />
             {REQUESTER_TYPES.map((type) => (
               <Button
                 key={type}
                 onClick={() => {
                   setRequesterType(type);
+                  setSize('');
                   setFormStatus(IDLE);
                 }}
                 className={`multi-button border border-muted px-1 py-2 ${
@@ -72,11 +73,12 @@ export const GetDemoForm = ({
         <Input
           state={size}
           setState={setSize}
-          placeholder={`Number of ${isCompany ? 'employees' : 'investments'}`}
+          placeholder={`Number of ${requesterType === COMPANY ? 'employees' : 'investments'}`}
           setFormStatus={setFormStatus}
-          name="name"
+          name="size"
           wrapperClassName="mb-4"
           className={inputClassName}
+          type="number"
         />
         <Button
           disabled={formStatus !== IDLE}

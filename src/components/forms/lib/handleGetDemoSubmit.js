@@ -14,20 +14,19 @@ const { INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED } = FORM_STATUSES;
 // };
 
 export const handleGetDemoSubmit = ({
-  name,
-  email,
+  values,
   event,
   setFormStatus,
 }: {|
-  name: string,
-  email: string,
+  values: {| requesterType: string, email: string, size: string |},
   event: SyntheticInputEvent<HTMLInputElement>,
   setFormStatus: (FormStatus) => void,
 |}) => {
   event.preventDefault();
   setFormStatus(LOADING);
+  const { requesterType, email, size } = values;
 
-  if (isFieldMissing({ name })) {
+  if (isFieldMissing({ requesterType, size })) {
     setFormStatus(INVALID_FIELDS);
     return;
   }

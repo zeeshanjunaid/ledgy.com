@@ -14,7 +14,8 @@ export const Input = ({
   name,
   wrapperClassName,
   className = '',
-}: {|
+  ...props
+}: {
   state: string,
   setState: (string) => void,
   placeholder: string,
@@ -22,9 +23,10 @@ export const Input = ({
   name: string,
   wrapperClassName: string,
   className?: string,
-|}) => (
+}) => (
   <div className={`input-group ${wrapperClassName}`}>
     <input
+      {...props}
       className={`form-control ${className}`}
       placeholder={placeholder}
       onChange={(e) => {
