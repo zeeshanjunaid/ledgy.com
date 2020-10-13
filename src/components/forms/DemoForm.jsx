@@ -5,13 +5,10 @@ import React, { useState } from 'react';
 import { FORM_STATUSES, appUrl } from '../../helpers';
 import { Button } from '../Button';
 import { Input, InvalidFieldHints } from './Fields';
-import { handleDemoSubmit } from './lib';
+import { handleDemoSubmit, type RequesterType, COMPANY, INVESTOR } from './lib';
 
 const { IDLE } = FORM_STATUSES;
 
-type RequesterType = 'company' | 'investor';
-const COMPANY: RequesterType = 'company';
-const INVESTOR: RequesterType = 'investor';
 const REQUESTER_TYPES = [COMPANY, INVESTOR];
 
 const capitalize = (word: string) => `${word.slice(0, 1).toUpperCase()}${word.slice(1)}`;
