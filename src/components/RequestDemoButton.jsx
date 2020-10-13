@@ -15,7 +15,7 @@ export const RequestDemoButton = ({
   prefix: string,
 |}) => (
   <>
-    <Link href to={`${prefix}/#start`}>
+    <Link href to={`${prefix}/getDemo/main`}>
       <Button cta onClick={() => track('click.get-demo')} className={buttonClassName}>
         <Trans>Get a Demo</Trans>
       </Button>
