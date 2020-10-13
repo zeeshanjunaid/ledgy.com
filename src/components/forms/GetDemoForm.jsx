@@ -9,36 +9,72 @@ import { handleGetDemoSubmit } from './lib';
 
 const { IDLE } = FORM_STATUSES;
 
-export const GetDemoForm = ({ title, buttonText }: {| title: string, buttonText: string |}) => {
-  const [name, setName] = useState('');
+type RequesterType = 'company' | 'investor';
+const COMPANY = 'company';
+const INVESTOR = 'investor';
+const REQUESTER_TYPES = [COMPANY, INVESTOR];
+
+const capitalize = (word: string) => `${word.slice(0, 1).toUpperCase()}${word.slice(1)}`;
+
+export const GetDemoForm = ({
+  title,
+  buttonText,
+  contentfulRequesterType,
+}: {|
+  title: string,
+  buttonText: string,
+  contentfulRequesterType: RequesterType | void,
+|}) => {
+  const [requesterType, setRequesterType] = useState(COMPANY);
   const [email, setEmail] = useState('');
+  const [size, setSize] = useState('');
   const [formStatus, setFormStatus] = useState(IDLE);
   const inputClassName = 'height-42px bg-transparent text-white placeholder-white';
+  const isCompany = requesterType === COMPANY;
 
   return (
     <div className="d-flex flex-column align-items-center border border-gray-neutral p-2 p-sm-4 ml-lg-4 mt-lg-4 rounded">
       <h4 className="mt-5 mb-4">{title}</h4>
       <form
         method="post"
-        onSubmit={(event) => handleGetDemoSubmit({ name, email, event, setFormStatus })}
+        // onSubmit={(event) => handleGetDemoSubmit({ name, email, event, setFormStatus })}
         noValidate
         className="w-100 p-2 p-sm-4 d-flex flex-column align-items-center justify-content-between"
       >
-        <Input
-          state={name}
-          setState={setName}
-          placeholder="Full name"
-          setFormStatus={setFormStatus}
-          name="name"
-          wrapperClassName="mb-4"
-          className={inputClassName}
-        />
+        {!contentfulRequesterType && (
+          <div className="d-flex mt-2 mb-4 w-100">
+            <input type="hidden" name="companySize" />
+            {REQUESTER_TYPES.map((type) => (
+              <Button
+                key={type}
+                onClick={() => {
+                  setRequesterType(type);
+                  setFormStatus(IDLE);
+                }}
+                className={`multi-button border border-muted px-1 py-2 ${
+                  type === requesterType ? 'selected' : ''
+                }`}
+              >
+                {capitalize(type)}
+              </Button>
+            ))}
+          </div>
+        )}
         <Input
           state={email}
           setState={setEmail}
           placeholder="Email address"
           setFormStatus={setFormStatus}
           name="email"
+          wrapperClassName="mb-4"
+          className={inputClassName}
+        />
+        <Input
+          state={size}
+          setState={setSize}
+          placeholder={`Number of ${isCompany ? 'employees' : 'investments'}`}
+          setFormStatus={setFormStatus}
+          name="name"
           wrapperClassName="mb-4"
           className={inputClassName}
         />

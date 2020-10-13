@@ -33,7 +33,14 @@ const DecoShapes = () => (
 
 const SignupPage = (props: LayoutProps) => {
   const { data, prefix, location } = props;
-  const { title, description, formTitle, formButtonText, content } = data.contentfulSignupPage;
+  const {
+    title,
+    description,
+    formTitle,
+    formButtonText,
+    content,
+    type,
+  } = data.contentfulSignupPage;
 
   return (
     <>
@@ -51,7 +58,11 @@ const SignupPage = (props: LayoutProps) => {
               </div>
             </div>
             <div className="text-white col-lg-6 d-flex flex-column justify-content-center mt-4 mt-lg-0">
-              <GetDemoForm title={formTitle} buttonText={formButtonText} />
+              <GetDemoForm
+                title={formTitle}
+                buttonText={formButtonText}
+                contentfulRequesterType={type}
+              />
             </div>
           </div>
         </div>
