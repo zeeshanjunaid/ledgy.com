@@ -7,16 +7,27 @@ import { submitToHubspot } from './hubspot';
 import {
   COMPANY,
   deerCompanyUrl,
-  EMPLOYEE_VALUE,
+  EMPLOYEE_PREMIUM_VALUE,
+  EMPLOYEE_ENTERPRISE_VALUE,
   INVESTMENT_VALUE,
   investorUrl,
   SMALL_COMPANY_THRESHOLD,
+  DEER_COMPANY_THRESHOLD,
   smallCompanyUrl,
 } from './constants';
 
 const { INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED, ERROR } = FORM_STATUSES;
 
-const isSmallCompany = (size: number) => size < SMALL_COMPANY_THRESHOLD;
+const isDeerCompany = (size: number) => size >= DEER_COMPANY_THRESHOLD;
+const isSmallCompany = (size: number) =>
+  size >= SMALL_COMPANY_THRESHOLD && size < DEER_COMPANY_THRESHOLD;
+
+const getEmployeeValue = (size: number) => {
+  if (isDeerCompany(size)) return size * EMPLOYEE_ENTERPRISE_VALUE;
+  if (isSmallCompany(size)) return size * EMPLOYEE_PREMIUM_VALUE;
+  return 0;
+};
+const getInvestmentValue = (size: number) => size * INVESTMENT_VALUE;
 
 const getUrl = (values: ParsedFormValues) => {
   if (!values.isCompany) {
@@ -65,9 +76,9 @@ export const handleDemoSubmit = async ({
   }
 
   if (isCompany) {
-    track('getDemo.submit.company', { value: size * EMPLOYEE_VALUE });
+    track('getDemo.submit.company', { value: getEmployeeValue(size) });
   } else {
-    track('getDemo.submit.investor', { value: size * INVESTMENT_VALUE });
+    track('getDemo.submit.investor', { value: getInvestmentValue(size) });
   }
 
   redirect(parsedFormValues);
