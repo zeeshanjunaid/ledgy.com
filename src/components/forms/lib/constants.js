@@ -9,8 +9,8 @@ export const INVESTOR: RequesterType = 'investor';
 export const SMALL_COMPANY_THRESHOLD = 10;
 export const DEER_COMPANY_THRESHOLD = 50;
 
-export const EMPLOYEE_PREMIUM_VALUE = 2;
-export const EMPLOYEE_ENTERPRISE_VALUE = 4;
+export const PREMIUM_EMPLOYEE_VALUE = 2;
+export const ENTERPRISE_EMPLOYEE_VALUE = 4;
 export const INVESTMENT_VALUE = 15;
 
 export const smallCompanyUrl = demoUrl;

@@ -7,8 +7,8 @@ import { submitToHubspot } from './hubspot';
 import {
   COMPANY,
   deerCompanyUrl,
-  EMPLOYEE_PREMIUM_VALUE,
-  EMPLOYEE_ENTERPRISE_VALUE,
+  PREMIUM_EMPLOYEE_VALUE,
+  ENTERPRISE_EMPLOYEE_VALUE,
   INVESTMENT_VALUE,
   investorUrl,
   SMALL_COMPANY_THRESHOLD,
@@ -23,8 +23,8 @@ const isSmallCompany = (size: number) =>
   size >= SMALL_COMPANY_THRESHOLD && size < DEER_COMPANY_THRESHOLD;
 
 const getEmployeeValue = (size: number) => {
-  if (isDeerCompany(size)) return size * EMPLOYEE_ENTERPRISE_VALUE;
-  if (isSmallCompany(size)) return size * EMPLOYEE_PREMIUM_VALUE;
+  if (isDeerCompany(size)) return size * ENTERPRISE_EMPLOYEE_VALUE;
+  if (isSmallCompany(size)) return size * PREMIUM_EMPLOYEE_VALUE;
   return 0;
 };
 const getInvestmentValue = (size: number) => size * INVESTMENT_VALUE;
