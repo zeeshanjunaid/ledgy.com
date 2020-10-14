@@ -1,6 +1,6 @@
 // @flow
 
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import { withI18n } from '@lingui/react';
 import React from 'react';
 
@@ -13,11 +13,7 @@ import logoInvertedCompact from '../img/logo-inverted-compact.png';
 
 import { Title } from './utils';
 
-const Logo = (props: { prefix: string }) => (
-  <Link href to={`${props.prefix}/#start`}>
-    <img width={80} src={logoInvertedCompact} alt="Ledgy" />
-  </Link>
-);
+const Logo = () => <img width={80} src={logoInvertedCompact} alt="Ledgy" />;
 
 const Quote = (quoteProps: {| quote: string, name: string |}) => (
   <div className="container text-center py-7 line-height-lg">
@@ -52,7 +48,7 @@ const DemoPage = (props: LayoutProps) => {
           <div className="row mt-4 mt-lg-2 pb-4 pb-md-6">
             <div className="col-lg-6 d-flex flex-column justify-content-center">
               <div className="mt-lg-n4 mb-md-4 mr-md-4">
-                <Logo {...props} />
+                <Logo />
                 <h1 className="text-white mt-5 mb-2 mb-sm-3">
                   <DynamicTrans>{title}</DynamicTrans>
                 </h1>
