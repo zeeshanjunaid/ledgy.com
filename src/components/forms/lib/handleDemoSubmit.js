@@ -33,7 +33,7 @@ const getUrl = (values: ParsedFormValues) => {
   if (!values.isCompany) {
     return investorUrl;
   }
-  return isSmallCompany(values.size) ? smallCompanyUrl : deerCompanyUrl;
+  return isDeerCompany(values.size) ? deerCompanyUrl : smallCompanyUrl;
 };
 
 const redirect = (values: ParsedFormValues) => {
