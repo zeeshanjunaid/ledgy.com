@@ -1,6 +1,7 @@
 // @flow
 
 import React, { useState } from 'react';
+import { Trans } from '@lingui/react';
 
 import { FORM_STATUSES, appUrl } from '../../helpers';
 import { Button } from '../Button';
@@ -11,16 +12,16 @@ const { IDLE } = FORM_STATUSES;
 
 const REQUESTER_TYPES = [COMPANY, INVESTOR];
 
-const capitalize = (word: string) => `${word.slice(0, 1).toUpperCase()}${word.slice(1)}`;
-
 export const DemoForm = ({
   title,
   buttonText,
   contentfulRequesterType,
+  i18n,
 }: {|
   title: string,
   buttonText: string,
   contentfulRequesterType: RequesterType | void,
+  i18n: I18n,
 |}) => {
   const [requesterType, setRequesterType] = useState(contentfulRequesterType || COMPANY);
   const [email, setEmail] = useState('');
@@ -28,6 +29,7 @@ export const DemoForm = ({
   const [formStatus, setFormStatus] = useState(IDLE);
   const inputClassName = 'height-42px bg-transparent text-white placeholder-white';
   const values = { requesterType, email, size };
+  const isCompany = requesterType === COMPANY;
 
   return (
     <div className="d-flex flex-column align-items-center border border-gray-neutral p-2 p-sm-4 ml-lg-4 mt-lg-4 rounded">
@@ -53,7 +55,7 @@ export const DemoForm = ({
                   type === requesterType ? 'selected' : ''
                 }`}
               >
-                {capitalize(type)}
+                {isCompany ? i18n.t`Company` : i18n.t`Investor`}
               </Button>
             ))}
           </div>
@@ -61,7 +63,7 @@ export const DemoForm = ({
         <Input
           state={email}
           setState={setEmail}
-          placeholder="Email address"
+          placeholder={i18n.t`Email address`}
           setFormStatus={setFormStatus}
           name="email"
           wrapperClassName="mb-4"
@@ -70,9 +72,9 @@ export const DemoForm = ({
         <Input
           state={size}
           setState={setSize}
-          placeholder={`Number of ${
-            requesterType === COMPANY ? 'company employees' : 'portfolio companies'
-          }`}
+          placeholder={
+            isCompany ? i18n.t`Number of company employees` : i18n.t`Number of portfolio companies`
+          }
           setFormStatus={setFormStatus}
           name="size"
           wrapperClassName="mb-4"
@@ -88,9 +90,9 @@ export const DemoForm = ({
           {buttonText}
         </Button>
         <span className="text-sm mb-3">
-          Already have an account?{' '}
+          <Trans>Already have an account?</Trans>{' '}
           <a className="hover-brigthen" href={`${appUrl}/login`}>
-            Log in
+            <Trans>Log in</Trans>
           </a>
         </span>
         <InvalidFieldHints formStatus={formStatus} />
