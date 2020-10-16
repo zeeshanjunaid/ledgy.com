@@ -29,7 +29,6 @@ export const DemoForm = ({
   const [formStatus, setFormStatus] = useState(IDLE);
   const inputClassName = 'height-42px bg-transparent text-white placeholder-white';
   const values = { requesterType, email, size };
-  const isCompany = requesterType === COMPANY;
 
   return (
     <div className="d-flex flex-column align-items-center border border-gray-neutral p-2 p-sm-4 ml-lg-4 mt-lg-4 rounded">
@@ -55,7 +54,7 @@ export const DemoForm = ({
                   type === requesterType ? 'selected' : ''
                 }`}
               >
-                {isCompany ? i18n.t`Company` : i18n.t`Investor`}
+                {type === COMPANY ? i18n.t`Company` : i18n.t`Investor`}
               </Button>
             ))}
           </div>
@@ -73,7 +72,9 @@ export const DemoForm = ({
           state={size}
           setState={setSize}
           placeholder={
-            isCompany ? i18n.t`Number of company employees` : i18n.t`Number of portfolio companies`
+            requesterType === COMPANY
+              ? i18n.t`Number of company employees`
+              : i18n.t`Number of portfolio companies`
           }
           setFormStatus={setFormStatus}
           name="size"
