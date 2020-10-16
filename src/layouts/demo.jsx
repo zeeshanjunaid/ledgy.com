@@ -59,9 +59,10 @@ const DemoPage = (props: LayoutProps) => {
             </div>
             <div className="text-white col-lg-6 d-flex flex-column justify-content-center mt-4 mt-lg-0">
               <DemoForm
-                title={formTitle}
-                buttonText={formButtonText}
+                title={t(formTitle)}
+                buttonText={t(formButtonText)}
                 contentfulRequesterType={type}
+                i18n={i18n}
               />
             </div>
           </div>
