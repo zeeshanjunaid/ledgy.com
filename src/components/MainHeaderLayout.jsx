@@ -1,13 +1,12 @@
 // @flow
 
 import React, { type Node } from 'react';
-import { Button } from './Button';
 
 type MainHeaderLayoutProps = {|
   title: Node | string,
   subtitle: Node | string,
   buttonOne: Node,
-  buttonTwo?: {| props: Object, text: Node |},
+  buttonTwo?: Node,
   customButton?: Node,
   image: Node,
   className?: string,
@@ -21,35 +20,27 @@ export const MainHeaderLayout = ({
   customButton,
   image,
   className = '',
-}: MainHeaderLayoutProps) => {
-  const buttonClass = 'btn-xl mx-1 align-self-center';
-
-  return (
-    <header className={`header d-flex home-banner px-1 text-left bg-primary ${className}`}>
-      <div className="container my-auto position-relative z-index-base">
-        <div className="row mt-md-2 pb-4 pb-md-6">
-          <div className="col-lg-6 d-flex flex-column justify-content-center">
-            <div className="mt-md-n4 mb-md-4">
-              <h1 className="text-white mt-5 mt-lg-0 mb-2 mb-sm-3">{title}</h1>
-              <div className="text-lg line-height-lg text-white font-weight-light pb-3">
-                {subtitle}
-              </div>
-            </div>
-            <div className="d-flex align-items-center flex-wrap">
-              {buttonOne}
-              {!!buttonTwo && (
-                <Button className={buttonClass} inverted {...buttonTwo.props}>
-                  {buttonTwo.text}
-                </Button>
-              )}
-              {customButton}
+}: MainHeaderLayoutProps) => (
+  <header className={`header d-flex home-banner px-1 text-left bg-primary ${className}`}>
+    <div className="container my-auto position-relative z-index-base">
+      <div className="row mt-md-2 pb-4 pb-md-6">
+        <div className="col-lg-6 d-flex flex-column justify-content-center">
+          <div className="mt-md-n4 mb-md-4">
+            <h1 className="text-white mt-5 mt-lg-0 mb-2 mb-sm-3">{title}</h1>
+            <div className="text-lg line-height-lg text-white font-weight-light pb-3">
+              {subtitle}
             </div>
           </div>
-          <div className="col-lg-6 d-flex flex-column justify-content-center mt-4 mt-lg-0">
-            {image}
+          <div className="d-flex align-items-center flex-wrap">
+            {buttonOne}
+            {buttonTwo}
+            {customButton}
           </div>
         </div>
+        <div className="col-lg-6 d-flex flex-column justify-content-center mt-4 mt-lg-0">
+          {image}
+        </div>
       </div>
-    </header>
-  );
-};
+    </div>
+  </header>
+);
