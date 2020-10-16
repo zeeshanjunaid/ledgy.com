@@ -29,7 +29,7 @@ export const Nav = (props: LayoutProps) => {
 
           <div className="desktop-navbar">
             <DropdownFollowAlong {...props} />
-            <NavbarButtons className="justify-content-end ml-2 ml-lg-4" />
+            <NavbarButtons className="justify-content-end ml-2 ml-lg-4" prefix={props.prefix} />
           </div>
           <Button
             id="mobile-navbar-toggler"

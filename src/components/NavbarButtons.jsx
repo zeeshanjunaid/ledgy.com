@@ -1,16 +1,20 @@
 // @flow
 
 import React from 'react';
+import { Link } from 'gatsby';
 import { Trans } from '@lingui/react';
 
-import { appUrl, track } from '../helpers';
+import { appUrl, track, demoPage } from '../helpers';
 
 import { Button } from './Button';
+import { removeOverlay } from './lib';
 
 export const NavbarButtons = ({
   className = '',
   isMobile = false,
+  prefix,
 }: {
+  prefix: string,
   className?: string,
   isMobile?: boolean,
 }) => (
@@ -23,14 +27,10 @@ export const NavbarButtons = ({
     >
       <Trans>Log In</Trans>
     </Button>
-    <Button
-      inverted
-      outline={isMobile}
-      className="ml-2 px-3 py-1"
-      href={`${appUrl}/signup`}
-      onClick={() => track('click.signup')}
-    >
-      <Trans>Sign up</Trans>
-    </Button>
+    <Link href to={`${prefix}${demoPage}`} onClick={removeOverlay}>
+      <Button inverted outline={isMobile} className="ml-2 px-3 py-1">
+        <Trans>Get a Demo</Trans>
+      </Button>
+    </Link>
   </div>
 );

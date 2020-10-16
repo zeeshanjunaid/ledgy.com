@@ -3,10 +3,11 @@
 import React from 'react';
 
 import { Trans } from '@lingui/react';
+import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 
-import { appUrl } from '../helpers';
 import { MainHeaderLayout } from './MainHeaderLayout';
+import { Button } from './Button';
 import { RequestDemoButton } from './RequestDemoButton';
 import { DynamicTrans } from './DynamicTrans';
 
@@ -16,14 +17,6 @@ export const HomePageHeader = ({ i18n, data, prefix }: Props) => {
   const title = <DynamicTrans>{content.node.mainHeader}</DynamicTrans>;
   const subtitle = <DynamicTrans>{content.node.description}</DynamicTrans>;
   const tablet = content.node.bannerImage.localFile?.childImageSharp;
-
-  const buttonTwo = {
-    props: {
-      href: `${appUrl}/signup`,
-      cta: false,
-    },
-    text: <Trans>Get Started Free</Trans>,
-  };
 
   return (
     <MainHeaderLayout
@@ -35,7 +28,13 @@ export const HomePageHeader = ({ i18n, data, prefix }: Props) => {
           buttonClassName="my-sm-0 my-2 btn-xl d-inline mx-1 btn-red"
         />
       }
-      buttonTwo={buttonTwo}
+      buttonTwo={
+        <Link href to={`${prefix}/finance`}>
+          <Button className="btn-xl mx-1 align-self-center" inverted>
+            <Trans>Learn more</Trans>
+          </Button>
+        </Link>
+      }
       image={
         <div id="tablet-ledgy" data-aos="fade-up">
           <Img {...tablet} alt={i18n.t`Screenshot of the Ledgy app`} />

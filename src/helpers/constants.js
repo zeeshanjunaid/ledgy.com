@@ -46,6 +46,8 @@ export const youtubeEmbedBaseUrl = 'https://www.youtube.com/embed';
 
 export const ledgyUrl = 'https://ledgy.com';
 
+export const demoPage = '/demo/ledgy';
+
 // netlify & mixpanel
 const isNetlify = typeof window !== 'undefined' && window.location.hostname !== 'localhost';
 

@@ -5,6 +5,7 @@ import { Trans } from '@lingui/react';
 import { Link } from 'gatsby';
 
 import { Button } from './Button';
+import { demoPage } from '../helpers';
 
 export const RequestDemoButton = ({
   buttonClassName,
@@ -34,7 +35,7 @@ export const RequestDemoButton = ({
     </Button>
   ) : (
     <>
-      <Link href to={`${prefix}/demo/ledgy`}>
+      <Link href to={`${prefix}${demoPage}`}>
         <Button cta className={buttonClassName}>
           {ButtonText}
         </Button>

@@ -1,9 +1,8 @@
 // @flow
 
 import React, { useState } from 'react';
-import { Trans } from '@lingui/react';
 
-import { FORM_STATUSES, appUrl } from '../../helpers';
+import { FORM_STATUSES } from '../../helpers';
 import { Button } from '../Button';
 import { Input, InvalidFieldHints } from './Fields';
 import { handleDemoSubmit, type RequesterType, COMPANY, INVESTOR } from './lib';
@@ -90,12 +89,6 @@ export const DemoForm = ({
         >
           {buttonText}
         </Button>
-        <span className="text-sm mb-3">
-          <Trans>Already have an account?</Trans>{' '}
-          <a className="hover-brigthen" href={`${appUrl}/login`}>
-            <Trans>Log in</Trans>
-          </a>
-        </span>
         <InvalidFieldHints formStatus={formStatus} />
       </form>
     </div>
