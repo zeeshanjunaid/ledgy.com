@@ -5,14 +5,16 @@ import { FORM_STATUSES, isFieldMissing, isValidEmail, track } from '../../../hel
 import type { FormValues, ParsedFormValues } from './formTypes';
 import { submitToHubspot } from './hubspot';
 import {
-  COMPANY,
   deerCompanyUrl,
+  investorUrl,
+  fundUrl,
+  COMPANY,
   PREMIUM_EMPLOYEE_VALUE,
   ENTERPRISE_EMPLOYEE_VALUE,
   INVESTMENT_VALUE,
-  investorUrl,
   SMALL_COMPANY_THRESHOLD,
   DEER_COMPANY_THRESHOLD,
+  FUND_INVESTMENT_THRESHOLD,
   smallCompanyUrl,
 } from './constants';
 
@@ -21,19 +23,23 @@ const { INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED, ERROR } = FORM_STATUS
 const isDeerCompany = (size: number) => size >= DEER_COMPANY_THRESHOLD;
 const isSmallCompany = (size: number) =>
   size >= SMALL_COMPANY_THRESHOLD && size < DEER_COMPANY_THRESHOLD;
+const isFund = (size: number) => size >= FUND_INVESTMENT_THRESHOLD;
 
 const getEmployeeValue = (size: number) => {
   if (isDeerCompany(size)) return size * ENTERPRISE_EMPLOYEE_VALUE;
   if (isSmallCompany(size)) return size * PREMIUM_EMPLOYEE_VALUE;
   return 0;
 };
-const getInvestmentValue = (size: number) => size * INVESTMENT_VALUE;
+const getInvestmentValue = (size: number) => {
+  if (isFund(size)) return size * INVESTMENT_VALUE;
+  return 0;
+};
 
-const getUrl = (values: ParsedFormValues) => {
-  if (!values.isCompany) {
-    return investorUrl;
+const getUrl = ({ isCompany, size }: ParsedFormValues) => {
+  if (!isCompany) {
+    return isFund(size) ? fundUrl : investorUrl;
   }
-  return isDeerCompany(values.size) ? deerCompanyUrl : smallCompanyUrl;
+  return isDeerCompany(size) ? deerCompanyUrl : smallCompanyUrl;
 };
 
 const redirect = (values: ParsedFormValues) => {
