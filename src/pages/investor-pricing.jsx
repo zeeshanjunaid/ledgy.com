@@ -6,6 +6,7 @@ import { withI18n, Trans } from '@lingui/react';
 import { Title } from '../layouts/utils';
 import { appUrl, getInvestorFeaturePricing } from '../helpers';
 import { PageHeader } from '../components/PageHeader';
+import { RequestDemoButton } from '../components/RequestDemoButton';
 import { Button } from '../components/Button';
 
 const { angelFeatures, fundFeatures } = getInvestorFeaturePricing();
@@ -43,7 +44,7 @@ const InvestorTypeCard = ({
   </div>
 );
 
-export default withI18n()(({ i18n }: Props) => {
+export default withI18n()(({ i18n, prefix }: Props) => {
   const title = i18n.t`Investor Pricing`;
   const description = i18n.t`Different investors have different needs. Whether you’re a business angel, a professional investor, or a VC fund, Ledgy has a plan to suit your needs`;
   return (
@@ -68,11 +69,7 @@ export default withI18n()(({ i18n }: Props) => {
             type={<Trans>Fund</Trans>}
             price={<Trans>Contact us</Trans>}
             features={fundFeatures}
-            button={
-              <Button href="mailto:sales@ledgy.com?subject=Ledgy investors - Fund plan inquiry">
-                <Trans>Get in touch</Trans>
-              </Button>
-            }
+            button={<RequestDemoButton buttonClassName="" prefix={prefix} />}
           />
         </div>
       </div>

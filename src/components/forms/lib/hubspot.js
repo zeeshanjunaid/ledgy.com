@@ -17,10 +17,21 @@ const encodeBody = (data) =>
     context: { hutk: getHubspotUserToken() },
   });
 
-export const submitToHubspot = ({ isCompany, email, size }: ParsedFormValues) => {
+const padDate = (number: number): string => String(number).padStart(2, '0');
+
+const getHubSpotDate = (date: Date): string => {
+  const year = date.getFullYear();
+  const month = date.getMonth() + 1;
+  const day = date.getDate();
+  return `${year}-${padDate(month)}-${padDate(day)}`;
+};
+
+export const submitToHubspot = ({ isCompany, email, size, value }: ParsedFormValues) => {
   const formId = isCompany ? COMPANY_FORM_ID : INVESTOR_FORM_ID;
   const body = encodeBody({
     ...(isCompany ? { numberofemployees: size } : { numberofinvestments: size }),
+    demorequestdate: getHubSpotDate(new Date()),
+    pipelinevalue: value,
     email,
   });
   return fetch(`/submit/6881367/${formId}`, {

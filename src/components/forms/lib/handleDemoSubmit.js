@@ -35,6 +35,9 @@ const getInvestmentValue = (size: number) => {
   return 0;
 };
 
+const getPipelineValue = (size: number, isCompany: boolean) =>
+  isCompany ? getEmployeeValue(size) : getInvestmentValue(size);
+
 const getUrl = ({ isCompany, size }: ParsedFormValues) => {
   if (!isCompany) {
     return isFund(size) ? fundUrl : investorUrl;
@@ -73,7 +76,8 @@ export const handleDemoSubmit = async ({
 
   const isCompany = requesterType === COMPANY;
   const size = Number(sizeString);
-  const parsedFormValues = { isCompany, email, size };
+  const value = getPipelineValue(size, isCompany);
+  const parsedFormValues = { isCompany, email, size, value };
 
   const response = await submitToHubspot(parsedFormValues);
   if (response.status !== 200) {
@@ -81,11 +85,8 @@ export const handleDemoSubmit = async ({
     throw new Error(response.statusText);
   }
 
-  if (isCompany) {
-    track('getDemo.submit.company', { value: getEmployeeValue(size) });
-  } else {
-    track('getDemo.submit.investor', { value: getInvestmentValue(size) });
-  }
+  const eventName = `getDemo.submit.${requesterType}`;
+  track(eventName, { value });
 
   redirect(parsedFormValues);
   setFormStatus(SUBMITTED);
