@@ -12,4 +12,5 @@ export type ParsedFormValues = {|
   isCompany: boolean,
   email: string,
   size: number,
+  value: number,
 |};
