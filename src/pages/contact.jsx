@@ -39,7 +39,6 @@ export default withI18n()(({ i18n }: Props) => (
               <div className="col-6 p-0 mb-3 text-nowrap">
                 <h6>General Inquiries</h6>
                 <a href="mailto:contact@ledgy.com">contact@ledgy.com</a>
-                <div>+41 (0) 44 585 21 23</div>
               </div>
               <div className="col-6 p-0 text-nowrap">
                 <h6>Sales Inquiries</h6>
