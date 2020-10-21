@@ -17,6 +17,7 @@ export const getUnderlineHtml = (text: string): string =>
 export const getFooterLinks = () => {
   const companyLinks = [
     [<Trans>About us</Trans>, 'about-us'],
+    [<Trans>Sustainability</Trans>, 'sustainability'],
     [<Trans>Career</Trans>, 'jobs'],
     [<Trans>Contact</Trans>, 'contact'],
   ];
@@ -113,6 +114,11 @@ export const getNavbarLinks = () => {
       'customer-stories',
       <Trans>Customer Stories</Trans>,
       <Trans>Learn what Ledgy’s customers have to say</Trans>,
+    ],
+    [
+      'sustainability',
+      <Trans>Sustainability</Trans>,
+      <Trans>Learn how Ledgy strives to be a role model for the new economy</Trans>,
     ],
     [
       'calculator',
