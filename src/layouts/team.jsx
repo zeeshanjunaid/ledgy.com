@@ -180,8 +180,7 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
     role: 'Engineering Trainee & Future hacker',
     description: (
       <Trans>
-        Mariana just graduated from ETH in Mathematics. She has started a 
-        traineeship in software engineering to soon become a Junior Developer.
+        Mariana just graduated from ETH in Mathematics. She has started a traineeship in software engineering to soon become a Junior Developer.
       </Trans>
     ),
     linkedIn: 'https://www.linkedin.com/in/mariana-cely-6491741ba/',
