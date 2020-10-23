@@ -14,7 +14,7 @@ import { getWholeTeam, type AuthorProps } from '../layouts/team';
 
 import { PageHeader } from '../components/PageHeader';
 
-const Founder = withI18n()(
+const TeamMember = withI18n()(
   ({
     name,
     role,
@@ -115,7 +115,7 @@ const IndexPage = (props: Props) => {
 
         <div className="row justify-content-center my-5">
           {teamArray.map(([memberProps, img]) => (
-            <Founder {...memberProps} img={img} key={memberProps.name} />
+            <TeamMember {...memberProps} img={img} key={memberProps.name} />
           ))}
         </div>
 
