@@ -62,7 +62,7 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
     description: (
       <Trans>
         Oriol was pursuing a PhD in biotechnology when he came to realize his passion lay in
-        computers. He enjoys writing software more than he enjoys sleeping.
+        computers. He enjoys writing and playing with software more than he enjoys sleeping.
       </Trans>
     ),
     twitter: 'https://twitter.com/ovcOS89',
@@ -126,7 +126,7 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
   },
   armon: {
     name: 'Armon Bättig',
-    role: 'Head of Business Development & Michelin Chef',
+    role: 'Head of Biz Dev & Michelin Chef',
     description: (
       <Trans>
         Worked 5 years as a chef before he majored in food engineering and getting a masters degree
@@ -140,7 +140,7 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
   },
   karime: {
     name: 'Karime Andere',
-    role: 'Business Developer & Olympic Swimmer',
+    role: 'Biz Dev & Olympic Swimmer',
     description: (
       <Trans>
         With experience in consumer research and strategic planning, Karime is finishing her

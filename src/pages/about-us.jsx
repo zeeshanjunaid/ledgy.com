@@ -30,8 +30,8 @@ const TeamMember = withI18n()(
   |}) => {
     const ProfileImage = <Img {...img} className="mx-auto" alt={name} />;
     return (
-      <div className="col-12 col-md-4 ledgista-profile">
-        <div className="h-100">
+      <div className="col-12 col-md-6 col-lg-4 ledgista-profile">
+        <div className="h-100 pb-6">
           {article ? (
             <Link href to={`/updates/${article}/`}>
               {ProfileImage}

@@ -401,14 +401,11 @@ $deco-dot-size: 8px;
   .gatsby-image-wrapper {
     max-width: 245px;
   }
-  .ledgista-text {
-    height: calc(100% - 245px);
-  }
-  &:not(:last-of-type) {
-    margin-bottom: 3rem;
-  }
   .social-icon {
     font-size: 20px;
+  }
+  .ledgista-text {
+    height: calc(100% - 245px);
   }
 }
 
