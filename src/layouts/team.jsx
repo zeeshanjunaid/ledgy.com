@@ -22,7 +22,7 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
     description: (
       <Trans>
         Coding since high school, Timo got an award for the best master thesis in computer science
-        and worked one year as a computer engineer in robotics
+        and worked one year as a computer engineer in robotics.
       </Trans>
     ),
     twitter: 'https://twitter.com/thrstschfr',
@@ -48,8 +48,8 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
     role: 'Co-Founder & CPO',
     description: (
       <Trans>
-        Ben has extensive experience in project management and has worked for two years as
-        software-engineer in an ETH research group
+        Ben has extensive experience in project management and worked for two years as a software
+        engineer in an ETH research group.
       </Trans>
     ),
     twitter: 'https://twitter.com/bebinoy',
@@ -58,11 +58,11 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
   },
   oriol: {
     name: 'Oriol Vidal-Cortes',
-    role: 'Developer & First employee',
+    role: 'Software Engineer & Mad Scientist',
     description: (
       <Trans>
-        Oriol has a background in biotechnology and is passionate about any code-related matter,
-        especially front-end development
+        Oriol was pursuing a PhD in biotechnology when he came to realize his passion lay in
+        computers. He enjoys writing software more than he enjoys sleeping.
       </Trans>
     ),
     twitter: 'https://twitter.com/ovcOS89',
@@ -72,11 +72,11 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
   },
   jules: {
     name: 'Jules Henze',
-    role: 'Developer & Paragliding Pilot',
+    role: 'Software Engineer & Paragliding Pilot',
     description: (
       <Trans>
         During his studies in engineering as an excellent scholar at ETH Zurich, Jules started
-        working as a software developer building web applications
+        working as a software developer building web applications.
       </Trans>
     ),
     twitter: 'https://twitter.com/HenzeJules',
@@ -85,11 +85,11 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
   },
   marius: {
     name: 'Marius Colacioiu',
-    role: 'Developer & Trail Runner',
+    role: 'Software Engineer & Trail Runner',
     description: (
       <Trans>
         Marius has a background in computer science, graduated from Milan University and worked as a
-        lead developer at XING and On
+        lead developer at XING and On.
       </Trans>
     ),
     twitter: 'https://twitter.com/colmarius',
@@ -98,11 +98,11 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
   },
   jahlela: {
     name: 'Jahlela Hasle',
-    role: 'Developer & Neuroscientist',
+    role: 'Software Engineer & Neuroscientist',
     description: (
       <Trans>
         Jahlela has a background in cognitive neuroscience, graduated from UC Berkeley, and founded
-        a few startups before switching to full-time software engineering
+        a few startups before switching to full-time software engineering.
       </Trans>
     ),
     twitter: 'https://twitter.com/jahlela',
@@ -112,7 +112,7 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
   },
   spela: {
     name: 'Spela Prijon',
-    role: 'Business Development & Sailor',
+    role: 'Head of Customer Experience & Sailor',
     description: (
       <Trans>
         Spela found her passion for business development through her experiences co-founding a
@@ -126,11 +126,11 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
   },
   armon: {
     name: 'Armon Bättig',
-    role: 'Growth Hacker & Michelin Chef',
+    role: 'Head of Business Development & Michelin Chef',
     description: (
       <Trans>
         Worked 5 years as a chef before he majored in food engineering and getting a masters degree
-        in Management, Technology, and Economics at ETH Zurich and HKUST
+        in Management, Technology, and Economics at ETH Zurich and HKUST.
       </Trans>
     ),
     twitter: 'https://twitter.com/ArmonBattig',
@@ -140,11 +140,11 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
   },
   karime: {
     name: 'Karime Andere',
-    role: 'Business Development & Olympic Swimmer',
+    role: 'Business Developer & Olympic Swimmer',
     description: (
       <Trans>
         With experience in consumer research and strategic planning, Karime is finishing her
-        Master’s degree in Management with an orientation in Marketing at HEC Lausanne
+        Master’s degree in Management with an orientation in Marketing at HEC Lausanne.
       </Trans>
     ),
     linkedIn: 'https://www.linkedin.com/in/karimeandere/',
@@ -177,7 +177,7 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
   },
   mariana: {
     name: 'Mariana Cely',
-    role: 'Engineering Trainee & Future hacker',
+    role: 'Engineering Trainee & Future Hacker',
     description: (
       <Trans>
         Mariana just graduated from ETH in Mathematics. She has started a traineeship in software
