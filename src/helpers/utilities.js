@@ -23,3 +23,16 @@ export const animateTablet = () => {
 };
 
 export const isFieldMissing = (object: Object) => Object.values(object).some((field) => !field);
+
+export const shuffleArray = (array: any[]) => {
+  const arrayCopy = array;
+  let iterations = arrayCopy.length - 1;
+  // eslint-disable-next-line no-plusplus
+  for (iterations; iterations > 0; iterations--) {
+    const random = Math.floor(Math.random() * (iterations + 1));
+    const temp = arrayCopy[iterations];
+    arrayCopy[iterations] = arrayCopy[random];
+    arrayCopy[random] = temp;
+  }
+  return arrayCopy;
+};
