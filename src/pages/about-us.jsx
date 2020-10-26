@@ -54,10 +54,12 @@ const TeamMember = withI18n()(
             <a className="social-icon mr-3" href={`mailto:${mail}`}>
               <FontAwesomeIcon icon={faEnvelope} />
             </a>
-            {twitter && (
+            {twitter ? (
               <a className="social-icon mr-3" href={twitter}>
                 <FontAwesomeIcon icon={faTwitter} />
               </a>
+            ) : (
+              <span />
             )}
             <a className="social-icon" href={linkedIn}>
               <FontAwesomeIcon icon={faLinkedin} />
