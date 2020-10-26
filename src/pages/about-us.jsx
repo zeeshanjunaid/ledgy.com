@@ -8,12 +8,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
+import { shuffleArray } from '../helpers';
 import { Title, Hr } from '../layouts/utils';
 import { getWholeTeam, type AuthorProps } from '../layouts/team';
 
 import { PageHeader } from '../components/PageHeader';
 
-const Founder = withI18n()(
+const TeamMember = withI18n()(
   ({
     name,
     role,
@@ -29,8 +30,8 @@ const Founder = withI18n()(
   |}) => {
     const ProfileImage = <Img {...img} className="mx-auto" alt={name} />;
     return (
-      <div className="col-12 col-md-4 ledgista-profile">
-        <div className="h-100">
+      <div className="col-12 col-md-6 col-lg-4 ledgista-profile">
+        <div className="h-100 pb-6">
           {article ? (
             <Link href to={`/updates/${article}/`}>
               {ProfileImage}
@@ -85,6 +86,23 @@ const IndexPage = (props: Props) => {
   const team = getWholeTeam(props.prefix);
   const title = i18n.t`About us`;
   const description = i18n.t`We believe that entrepreneurship is the main driver of positive change in the world. That is why we build beautiful and intuitive software for startups, helping them be more successful`;
+  const teamArray = shuffleArray([
+    [team.timo, data.timo],
+    [team.yoko, data.yoko],
+    [team.ben, data.ben],
+    [team.oriol, data.oriol],
+    [team.jules, data.jules],
+    [team.marius, data.marius],
+    [team.jahlela, data.jahlela],
+    [team.spela, data.spela],
+    [team.armon, data.armon],
+    [team.karime, data.karime],
+    [team.ermias, data.ermias],
+    [team.tamas, data.tamas],
+    [team.mariana, data.mariana],
+    [team.luna, data.luna],
+  ]);
+
   return (
     <div>
       <Title title={title} description={description} />
@@ -96,20 +114,9 @@ const IndexPage = (props: Props) => {
         </h2>
 
         <div className="row justify-content-center my-5">
-          <Founder {...team.timo} img={data.timo} />
-          <Founder {...team.yoko} img={data.yoko} />
-          <Founder {...team.ben} img={data.ben} />
-          <Founder {...team.oriol} img={data.oriol} />
-          <Founder {...team.jahlela} img={data.jahlela} />
-          <Founder {...team.marius} img={data.marius} />
-          <Founder {...team.jules} img={data.jules} />
-          <Founder {...team.spela} img={data.spela} />
-          <Founder {...team.armon} img={data.armon} />
-          <Founder {...team.ermias} img={data.ermias} />
-          <Founder {...team.karime} img={data.karime} />
-          <Founder {...team.tamas} img={data.tamas} />
-          <Founder {...team.mariana} img={data.mariana} />
-          <Founder {...team.luna} img={data.luna} />
+          {teamArray.map(([memberProps, img]) => (
+            <TeamMember {...memberProps} img={img} key={memberProps.name} />
+          ))}
         </div>
 
         <Hr />
