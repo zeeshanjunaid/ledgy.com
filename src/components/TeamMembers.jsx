@@ -52,13 +52,9 @@ const TeamMember = withI18n()(
             <a className="social-icon mr-3" href={`mailto:${mail}`}>
               <FontAwesomeIcon icon={faEnvelope} />
             </a>
-            {twitter ? (
-              <a className="social-icon mr-3" href={twitter}>
-                <FontAwesomeIcon icon={faTwitter} />
-              </a>
-            ) : (
-              <span />
-            )}
+            <a className={`social-icon mr-3 ${twitter ? '' : 'd-none'}`} href={twitter || ''}>
+              <FontAwesomeIcon icon={faTwitter} />
+            </a>
             <a className="social-icon" href={linkedIn}>
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
