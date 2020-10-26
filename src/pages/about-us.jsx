@@ -1,6 +1,6 @@
 // @flow
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Img from 'gatsby-image';
 import { graphql, Link } from 'gatsby';
 import { withI18n, Trans } from '@lingui/react';
@@ -86,7 +86,7 @@ const IndexPage = (props: Props) => {
   const team = getWholeTeam(props.prefix);
   const title = i18n.t`About us`;
   const description = i18n.t`We believe that entrepreneurship is the main driver of positive change in the world. That is why we build beautiful and intuitive software for startups, helping them be more successful`;
-  const teamArray = shuffleArray([
+  const [teamArray, setTeamArray] = useState([
     [team.timo, data.timo],
     [team.yoko, data.yoko],
     [team.ben, data.ben],
@@ -102,6 +102,10 @@ const IndexPage = (props: Props) => {
     [team.mariana, data.mariana],
     [team.luna, data.luna],
   ]);
+
+  useEffect(() => {
+    setTeamArray((prev) => shuffleArray(prev));
+  }, []);
 
   return (
     <div>
