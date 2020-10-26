@@ -1,6 +1,6 @@
 // @flow
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Img from 'gatsby-image';
 import { graphql, Link } from 'gatsby';
 import { withI18n, Trans } from '@lingui/react';
@@ -30,34 +30,38 @@ const TeamMember = withI18n()(
   |}) => {
     const ProfileImage = <Img {...img} className="mx-auto" alt={name} />;
     return (
-      <div className="col-12 col-md-6 col-lg-4 ledgista-profile">
-        <div className="h-100 pb-6">
-          {article ? (
-            <Link href to={`/updates/${article}/`}>
-              {ProfileImage}
-            </Link>
-          ) : (
-            ProfileImage
-          )}
-          <div className="ledgista-text text-center d-flex flex-column align-items-center justify-content-between">
-            <div>
-              <h4 className="mt-2 mb-0">{name}</h4>
-              <small className="text-muted">{role}</small>
-              <p className="mt-2 font-weight-light">{description}</p>
-            </div>
-            <div>
-              <a className="social-icon mr-3" href={`mailto:${mail}`}>
-                <FontAwesomeIcon icon={faEnvelope} />
-              </a>
-              {twitter && (
-                <a className="social-icon mr-3" href={twitter}>
-                  <FontAwesomeIcon icon={faTwitter} />
-                </a>
+      <div className="ledgista col-12 col-md-6 col-lg-4">
+        <div className="pb-6 h-100 d-flex flex-column align-items-center justify-content-between">
+          <div className="d-flex flex-column align-items-center">
+            <div className="ledgista-image-wrapper">
+              {article ? (
+                <Link href to={`/updates/${article}/`}>
+                  {ProfileImage}
+                </Link>
+              ) : (
+                ProfileImage
               )}
-              <a className="social-icon" href={linkedIn}>
-                <FontAwesomeIcon icon={faLinkedin} />
-              </a>
             </div>
+            <div className="text-center d-flex flex-column align-items-center">
+              <div>
+                <h4 className="mt-2 mb-0">{name}</h4>
+                <small className="text-muted">{role}</small>
+                <p className="mt-2 font-weight-light">{description}</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <a className="social-icon mr-3" href={`mailto:${mail}`}>
+              <FontAwesomeIcon icon={faEnvelope} />
+            </a>
+            {twitter && (
+              <a className="social-icon mr-3" href={twitter}>
+                <FontAwesomeIcon icon={faTwitter} />
+              </a>
+            )}
+            <a className="social-icon" href={linkedIn}>
+              <FontAwesomeIcon icon={faLinkedin} />
+            </a>
           </div>
         </div>
       </div>
@@ -86,7 +90,7 @@ const IndexPage = (props: Props) => {
   const team = getWholeTeam(props.prefix);
   const title = i18n.t`About us`;
   const description = i18n.t`We believe that entrepreneurship is the main driver of positive change in the world. That is why we build beautiful and intuitive software for startups, helping them be more successful`;
-  const [teamArray, setTeamArray] = useState([
+  const teamArray = shuffleArray([
     [team.timo, data.timo],
     [team.yoko, data.yoko],
     [team.ben, data.ben],
@@ -102,10 +106,6 @@ const IndexPage = (props: Props) => {
     [team.mariana, data.mariana],
     [team.luna, data.luna],
   ]);
-
-  useEffect(() => {
-    setTeamArray((prev) => shuffleArray(prev));
-  }, []);
 
   return (
     <div>
