@@ -23,22 +23,24 @@ export const MainHeaderLayout = ({
 }: MainHeaderLayoutProps) => (
   <header className={`header d-flex home-banner px-1 text-left bg-primary ${className}`}>
     <div className="container my-auto position-relative z-index-base">
-      <div className="row mt-md-2 pb-4 pb-md-6">
-        <div className="col-lg-6 d-flex flex-column justify-content-center">
-          <div className="mt-md-n4 mb-md-4">
-            <h1 className="text-white mt-5 mt-lg-0 mb-2 mb-sm-3">{title}</h1>
+      <div className="row mt-md-4 pb-4 pb-md-6">
+        <div className="col-xl-5 d-flex flex-column justify-content-center">
+          <div className="mb-md-4">
+            <h1 className="text-white mt-4 mb-2 mb-sm-3">{title}</h1>
             <div className="text-lg line-height-lg text-white font-weight-light pb-3">
               {subtitle}
             </div>
           </div>
-          <div className="d-flex align-items-center flex-wrap">
+          <div className="d-flex align-items-center flex-wrap mb-2 mb-lg-4 mb-xl-0">
             {buttonOne}
             {buttonTwo}
             {customButton}
           </div>
         </div>
-        <div className="col-lg-6 d-flex flex-column justify-content-center mt-4 mt-lg-0">
-          {image}
+        <div className="col-xl-7 d-flex flex-column justify-content-center align-items-center">
+          <div className="header-img-wrapper mt-4 d-flex flex-column justify-content-center">
+            {image}
+          </div>
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ export const track = (event: string, properties?: Object): void => {
   if (window.analytics) window.analytics.track(event, properties);
 };
 
-export const animateTablet = () => {
+export const animateLaptop = () => {
   let scrolling = false;
   window.onscroll = () => {
     scrolling = true;
@@ -12,11 +12,11 @@ export const animateTablet = () => {
   setInterval(() => {
     if (scrolling) {
       scrolling = false;
-      const tablet = document.getElementById('tablet-ledgy');
+      const laptop = document.getElementById('laptop-ledgy');
       const banner = document.querySelector('header');
       const { scrollY } = window;
-      if (tablet && banner && scrollY <= banner.clientHeight) {
-        tablet.style.transform = `translateY(${scrollY / 50}%)`;
+      if (laptop && banner && scrollY <= banner.clientHeight) {
+        laptop.style.transform = `translateY(${scrollY / 50}%)`;
       }
     }
   }, 50);

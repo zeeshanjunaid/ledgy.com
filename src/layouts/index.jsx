@@ -10,7 +10,7 @@ import 'katex/dist/katex.min.css';
 import 'prism-themes/themes/prism-ghcolors.css';
 import '../styles/_index.scss';
 
-import { name, getLdJson, animateTablet, loadSegment } from '../helpers';
+import { name, getLdJson, animateLaptop, loadSegment } from '../helpers';
 import { Title } from './utils';
 import { catalogs, langFromPath, langPrefix, deprefix } from '../i18n-config';
 
@@ -28,7 +28,7 @@ type SiteProps = {|
 
 const Initialize = ({ segmentDestinations }: {| segmentDestinations: string[] |}) => {
   useEffect(() => {
-    animateTablet();
+    animateLaptop();
     setTimeout(() => {
       loadSegment(segmentDestinations);
     }, 1414);
