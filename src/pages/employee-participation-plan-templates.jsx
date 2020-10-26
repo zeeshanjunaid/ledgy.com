@@ -29,7 +29,7 @@ const EquityPlans = (props: Props) => {
     <Button
       href={`${appUrl}/templates`}
       onClick={() => track('click.templates')}
-      className="mr-2 mb-2"
+      className="mr-2 mb-2 btn-red"
     >
       <Trans>Get started</Trans>
     </Button>

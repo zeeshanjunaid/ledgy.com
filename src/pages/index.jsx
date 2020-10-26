@@ -65,7 +65,7 @@ export const pageQuery = graphql`
           bannerImage {
             localFile {
               childImageSharp {
-                fluid(maxWidth: 600, quality: 70) {
+                fluid(maxWidth: 2000, quality: 100) {
                   ...GatsbyImageSharpFluid_noBase64
                 }
               }
