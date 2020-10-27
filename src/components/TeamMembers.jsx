@@ -1,6 +1,6 @@
 // @flow
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 
@@ -66,13 +66,18 @@ const TeamMember = withI18n()(
 );
 
 export const TeamMembers = ({ teamData }: {| teamData: [AuthorProps, any][] |}) => {
-  const shuffledTeam = shuffleArray(teamData);
+  const [team, setTeam] = useState(teamData);
+
+  useEffect(() => {
+    setTeam((prev) => shuffleArray(prev));
+  }, []);
 
   return (
     <div className="row justify-content-center my-5">
-      {shuffledTeam.map(([memberProps, img]) => (
-        <TeamMember {...memberProps} img={img} key={`team-${memberProps.name}`} />
-      ))}
+      {team.map(([memberProps, img]) => {
+        console.log({ memberProps, img });
+        return <TeamMember {...memberProps} img={img} key={`team-${memberProps.name}`} />;
+      })}
     </div>
   );
 };

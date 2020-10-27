@@ -48,6 +48,7 @@ const IndexPage = (props: Props) => {
     [team.mariana, data.mariana],
     [team.luna, data.luna],
   ];
+  console.log({ teamData });
 
   return (
     <div>
