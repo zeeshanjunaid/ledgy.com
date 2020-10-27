@@ -74,10 +74,9 @@ export const TeamMembers = ({ teamData }: {| teamData: [AuthorProps, any][] |}) 
 
   return (
     <div className="row justify-content-center my-5">
-      {team.map(([memberProps, img]) => {
-        console.log({ memberProps, img });
-        return <TeamMember {...memberProps} img={img} key={`team-${memberProps.name}`} />;
-      })}
+      {team.map(([memberProps, img]) => (
+        <TeamMember {...memberProps} img={img} key={`team-${memberProps.name}`} />
+      ))}
     </div>
   );
 };
