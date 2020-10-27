@@ -2,68 +2,14 @@
 
 import React from 'react';
 import Img from 'gatsby-image';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import { withI18n, Trans } from '@lingui/react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
-import { shuffleArray } from '../helpers';
 import { Title, Hr } from '../layouts/utils';
-import { getWholeTeam, type AuthorProps } from '../layouts/team';
+import { getWholeTeam } from '../layouts/team';
 
 import { PageHeader } from '../components/PageHeader';
-
-const TeamMember = withI18n()(
-  ({
-    name,
-    role,
-    description,
-    img,
-    twitter,
-    linkedIn,
-    mail,
-    article,
-  }: {|
-    ...AuthorProps,
-    img: Object,
-  |}) => {
-    const ProfileImage = <Img {...img} className="mx-auto" alt={name} />;
-    return (
-      <div className="col-12 col-md-6 col-lg-4 ledgista-profile">
-        <div className="h-100 pb-6">
-          {article ? (
-            <Link href to={`/updates/${article}/`}>
-              {ProfileImage}
-            </Link>
-          ) : (
-            ProfileImage
-          )}
-          <div className="ledgista-text text-center d-flex flex-column align-items-center justify-content-between">
-            <div>
-              <h4 className="mt-2 mb-0">{name}</h4>
-              <small className="text-muted">{role}</small>
-              <p className="mt-2 font-weight-light">{description}</p>
-            </div>
-            <div>
-              <a className="social-icon mr-3" href={`mailto:${mail}`}>
-                <FontAwesomeIcon icon={faEnvelope} />
-              </a>
-              {twitter && (
-                <a className="social-icon mr-3" href={twitter}>
-                  <FontAwesomeIcon icon={faTwitter} />
-                </a>
-              )}
-              <a className="social-icon" href={linkedIn}>
-                <FontAwesomeIcon icon={faLinkedin} />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-);
+import { TeamMembers } from '../components/TeamMembers';
 
 const Investor = ({
   name,
@@ -86,7 +32,7 @@ const IndexPage = (props: Props) => {
   const team = getWholeTeam(props.prefix);
   const title = i18n.t`About us`;
   const description = i18n.t`We believe that entrepreneurship is the main driver of positive change in the world. That is why we build beautiful and intuitive software for startups, helping them be more successful`;
-  const teamArray = shuffleArray([
+  const teamData = [
     [team.timo, data.timo],
     [team.yoko, data.yoko],
     [team.ben, data.ben],
@@ -101,7 +47,7 @@ const IndexPage = (props: Props) => {
     [team.tamas, data.tamas],
     [team.mariana, data.mariana],
     [team.luna, data.luna],
-  ]);
+  ];
 
   return (
     <div>
@@ -113,11 +59,7 @@ const IndexPage = (props: Props) => {
           <Trans>Team</Trans>
         </h2>
 
-        <div className="row justify-content-center my-5">
-          {teamArray.map(([memberProps, img]) => (
-            <TeamMember {...memberProps} img={img} key={memberProps.name} />
-          ))}
-        </div>
+        <TeamMembers teamData={teamData} />
 
         <Hr />
 

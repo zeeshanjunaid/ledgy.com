@@ -24,7 +24,7 @@ export const animateLaptop = () => {
 
 export const isFieldMissing = (object: Object) => Object.values(object).some((field) => !field);
 
-export const shuffleArray = (array: any[]) =>
+export const shuffleArray = <T>(array: T[]): T[] =>
   array.reduce((res, val, index) => {
     const randomIndex = Math.floor(Math.random() * (index + 1));
     const copy = [...res];
