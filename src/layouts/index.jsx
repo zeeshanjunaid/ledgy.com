@@ -86,6 +86,7 @@ const TemplateWrapper = withI18n()(({ children, ...props }: SiteProps) => (
             <link rel="alternate" href={`${siteUrl}${pathname}`} hrefLang="en" />
             <link rel="alternate" href={`${siteUrl}/de${pathname}`} hrefLang="de" />
             <link rel="alternate" href={`${siteUrl}/fr${pathname}`} hrefLang="fr" />
+            <script src="https://www.googleoptimize.com/optimize.js?id=OPT-PHR22QK" />
             <script>
               {`
                 (function (c, p, d, u, id, i) {
