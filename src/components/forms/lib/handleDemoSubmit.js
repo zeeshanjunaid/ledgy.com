@@ -18,7 +18,7 @@ import {
   smallCompanyUrl,
 } from './constants';
 
-const { INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED, ERROR } = FORM_STATUSES;
+const { INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED, FETCH_ERROR } = FORM_STATUSES;
 
 const isDeerCompany = (size: number) => size >= DEER_COMPANY_THRESHOLD;
 const isSmallCompany = (size: number) =>
@@ -82,7 +82,7 @@ export const handleDemoSubmit = async ({
   const response = await submitToHubspot(parsedFormValues);
   if (response.status !== 200) {
     setTimeout(() => {
-      setFormStatus(ERROR);
+      setFormStatus(FETCH_ERROR);
     }, 1000);
     throw new Error(response.statusText);
   }
