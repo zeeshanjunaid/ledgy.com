@@ -59,7 +59,7 @@ export const MIXPANEL_TOKEN = isNetlify
 export const FORM_STATUSES = Object.freeze({
   IDLE: 'idle',
   LOADING: 'loading',
-  ERROR: 'error',
+  FETCH_ERROR: 'fetch-error',
   SUBMITTED: 'submitted',
   INVALID_EMAIL: 'invalid-email',
   INVALID_FIELDS: 'invalid-fields',

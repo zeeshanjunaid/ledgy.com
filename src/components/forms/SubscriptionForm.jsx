@@ -12,7 +12,7 @@ import { Button } from '../Button';
 import { signupOnMixpanel, trackOnMixpanel } from './lib';
 import { InvalidFieldHints } from './Fields';
 
-const { ERROR, IDLE, INVALID_EMAIL, LOADING } = FORM_STATUSES;
+const { FETCH_ERROR, IDLE, INVALID_EMAIL, LOADING } = FORM_STATUSES;
 
 export class SubscriptionForm extends Component<
   {| i18n: I18n, toggle?: () => void, trackingEvent: string |},
@@ -36,10 +36,10 @@ export class SubscriptionForm extends Component<
           if (this.props.toggle) this.props.toggle();
           navigate('/subscribed');
         } else {
-          this.setState({ status: ERROR });
+          this.setState({ status: FETCH_ERROR });
         }
       } catch (error) {
-        this.setState({ status: ERROR });
+        this.setState({ status: FETCH_ERROR });
       }
     } else {
       this.setState({ status: INVALID_EMAIL });
@@ -50,7 +50,7 @@ export class SubscriptionForm extends Component<
     const { status } = state;
     const { i18n } = props;
     const invalid = status === INVALID_EMAIL;
-    const error = status === ERROR;
+    const error = status === FETCH_ERROR;
     const loading = status === LOADING;
     return (
       <>

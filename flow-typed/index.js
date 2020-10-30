@@ -94,5 +94,5 @@ declare type FormStatus =
   | 'invalid-email'
   | 'invalid-fields'
   | 'invalid-required-fields'
-  | 'error'
+  | 'fetch-error'
   | 'submitted';

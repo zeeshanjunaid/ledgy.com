@@ -7,7 +7,7 @@ import { Button } from '../Button';
 import { Input, InvalidFieldHints } from './Fields';
 import { handleDemoSubmit, type RequesterType, COMPANY, INVESTOR } from './lib';
 
-const { IDLE } = FORM_STATUSES;
+const { IDLE, FETCH_ERROR } = FORM_STATUSES;
 
 const REQUESTER_TYPES = [COMPANY, INVESTOR];
 
@@ -28,6 +28,7 @@ export const DemoForm = ({
   const [formStatus, setFormStatus] = useState(IDLE);
   const inputClassName = 'height-42px bg-transparent text-white placeholder-white';
   const values = { requesterType, email, size };
+  const isButtonDisabled = formStatus !== IDLE && formStatus !== FETCH_ERROR;
 
   return (
     <div className="d-flex flex-column align-items-center border border-gray-neutral p-2 p-sm-4 ml-lg-4 mt-lg-4 rounded">
@@ -82,7 +83,7 @@ export const DemoForm = ({
           type="number"
         />
         <Button
-          disabled={formStatus !== IDLE}
+          disabled={isButtonDisabled}
           type="submit"
           cta
           className="w-100 mx-1 mt-4 mb-4 align-self-center btn-xl"
