@@ -81,7 +81,9 @@ export const handleDemoSubmit = async ({
 
   const response = await submitToHubspot(parsedFormValues);
   if (response.status !== 200) {
-    setFormStatus(ERROR);
+    setTimeout(() => {
+      setFormStatus(ERROR);
+    }, 1000);
     throw new Error(response.statusText);
   }
 
