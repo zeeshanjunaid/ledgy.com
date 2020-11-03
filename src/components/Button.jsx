@@ -7,6 +7,7 @@ export const Button = ({
   children,
   outline = false,
   cta = false,
+  energetic = false,
   inverted = false,
   className = '',
   onClick,
@@ -19,6 +20,7 @@ export const Button = ({
   children: Node,
   outline?: boolean,
   cta?: boolean,
+  energetic?: boolean,
   inverted?: boolean,
   className?: string,
   onClick?: () => void,
@@ -29,6 +31,7 @@ export const Button = ({
 |}) => {
   const color =
     (cta && 'btn-red') ||
+    (energetic && 'btn-info text-black hover-brigthen') ||
     (inverted && outline && 'btn-light border border-primary') ||
     (outline && 'btn-primary border border-white') ||
     (inverted && 'btn-light') ||

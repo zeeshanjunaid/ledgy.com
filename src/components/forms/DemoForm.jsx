@@ -26,12 +26,12 @@ export const DemoForm = ({
   const [email, setEmail] = useState('');
   const [size, setSize] = useState('');
   const [formStatus, setFormStatus] = useState(IDLE);
-  const inputClassName = 'height-42px bg-transparent text-white placeholder-white';
+  const inputClassName = 'height-42px bg-transparent text-dark';
   const values = { requesterType, email, size };
   const isButtonDisabled = formStatus !== IDLE && formStatus !== FETCH_ERROR;
 
   return (
-    <div className="d-flex flex-column align-items-center border border-gray-neutral p-2 p-sm-4 ml-lg-4 mt-lg-4 rounded">
+    <div className="d-flex flex-column align-items-center bg-white border border-gray-neutral p-2 p-sm-4 ml-lg-4 mt-lg-4 rounded">
       <h4 className="mt-5 mb-4">{title}</h4>
       <form
         method="post"
@@ -85,8 +85,8 @@ export const DemoForm = ({
         <Button
           disabled={isButtonDisabled}
           type="submit"
-          cta
-          className="w-100 mx-1 mt-4 mb-4 align-self-center btn-xl"
+          energetic
+          className="border-0 w-100 mx-1 mt-4 mb-4 align-self-center btn-xl"
         >
           {buttonText}
         </Button>

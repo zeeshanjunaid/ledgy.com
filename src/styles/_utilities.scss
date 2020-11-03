@@ -42,14 +42,9 @@
   height: 42px !important;
 }
 
-.placeholder-white::placeholder {
-  color: $white;
-  opacity: 0.6 !important;
-}
-
 .hover-brigthen:hover {
   color: $energetic-blue;
-  filter: brightness(130%);
+  filter: brightness(120%);
 }
 
 .position-absolute-top-center {
