@@ -1,13 +1,14 @@
 // @flow
 
-import { graphql } from 'gatsby';
-import { withI18n } from '@lingui/react';
+import { graphql, Link } from 'gatsby';
+import { withI18n, Trans } from '@lingui/react';
 import React from 'react';
 
 import { DemoForm } from '../components/forms';
 import { ExternalLogoRow } from '../components/ExternalLogoRow';
 import { SellingProp } from '../components/SellingProp';
 import { CTABanner } from '../components/CTABanner';
+import { formatUrl } from '../components/lib';
 import { dynamicI18n, DynamicTrans } from '../components/DynamicTrans';
 import logoInvertedCompact from '../img/logo-inverted-compact.png';
 
@@ -86,6 +87,14 @@ const DemoPage = (props: LayoutProps) => {
         })}
         <CTABanner location={location} {...props} />
       </div>
+      <footer className="footer d-flex align-items-center justify-content-center text-white bg-primary p-2">
+        <Link className="nav-link mx-1 mx-md-5" href to={formatUrl(prefix, 'legal/privacy-policy')}>
+          <Trans>Privacy policy</Trans>
+        </Link>
+        <Link className="nav-link mx-1 mx-md-5" href to={formatUrl(prefix, 'data-protection')}>
+          <Trans>Data protection</Trans>
+        </Link>
+      </footer>
     </>
   );
 };
