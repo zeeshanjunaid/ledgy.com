@@ -2,10 +2,7 @@
 
 import React, { type Node } from 'react';
 
-import sample from 'lodash/sample';
 import { Trans } from '@lingui/react';
-import { callToActionExperiments } from '../layouts/utils';
-import { isBrowser } from '../helpers';
 import { RequestDemoButton } from './RequestDemoButton';
 
 const Banner = ({
@@ -36,6 +33,11 @@ export const CTABanner = ({ location, prefix }: LayoutProps) => {
     );
   }
 
-  const experiment = isBrowser ? sample(callToActionExperiments) : callToActionExperiments[0];
-  return <Banner title={experiment.title} prefix={prefix} location={location} />;
+  return (
+    <Banner
+      title={<Trans>Find out how leading companies are using Ledgy</Trans>}
+      prefix={prefix}
+      location={location}
+    />
+  );
 };

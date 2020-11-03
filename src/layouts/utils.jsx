@@ -4,7 +4,6 @@ import React, { type Node } from 'react';
 import { Helmet } from 'react-helmet';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import { Trans } from '@lingui/react';
 import { name } from '../helpers';
 
 export const Title = (props: {
@@ -45,15 +44,6 @@ export const Hr = ({ marginX }: { marginX?: number }) => (
   <hr className={`my-5 my-md-7 ${marginX ? `mx-md-${marginX}` : ''}`} />
 );
 Hr.defaultProps = { marginX: 0 };
-
-export const callToActionExperiments = [
-  { name: 'employees', title: <Trans>Onboard new employees in seconds</Trans> },
-  { name: 'signing', title: <Trans>Automate your document signing processes</Trans> },
-  { name: 'modeling', title: <Trans>Model funding rounds and future dilution</Trans> },
-  { name: 'reporting', title: <Trans>Share reports and KPIs with your investors</Trans> },
-  { name: 'documents', title: <Trans>Organize your grant documents</Trans> },
-  { name: 'peaceOfMind', title: <Trans>Find peace of mind with a better cap table tool</Trans> },
-];
 
 export const Header = ({ text, children }: { text: Node | string, children?: Node }) => (
   <header className="header text-white">
