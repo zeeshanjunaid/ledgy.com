@@ -41,7 +41,7 @@
 
 .multi-button {
   color: $gray-400;
-  background-color: $deep-blue;
+  background-color: $white;
   flex: 1 1 0px;
   border-radius: 0;
   &:first-of-type {
@@ -54,15 +54,15 @@
     border-radius: 0 $border-radius $border-radius 0;
   }
   &.selected {
-    color: $deep-blue;
-    background-color: $white;
+    color: $gray-800 !important;
+    background-color: $gray-300 !important;
   }
   &:hover:not(.selected) {
-    color: lighten($color: $gray-400, $amount: 10);
-    background-color: darken($color: $deep-blue, $amount: 10);
+    color: darken($color: $deep-blue, $amount: 10);
+    background-color: lighten($color: $gray-300, $amount: 10);
   }
-}
-
-button.multi-button.bg-primary:focus {
-  background: $deep-blue !important;
+  &:active {
+    color: $gray-800 !important;
+    background-color: $gray-300 !important;
+  }
 }
