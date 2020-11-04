@@ -9,10 +9,8 @@ import {
   investorUrl,
   fundUrl,
   COMPANY,
-  PREMIUM_EMPLOYEE_VALUE,
-  ENTERPRISE_EMPLOYEE_VALUE,
+  EMPLOYEE_VALUE,
   INVESTMENT_VALUE,
-  SMALL_COMPANY_THRESHOLD,
   DEER_COMPANY_THRESHOLD,
   FUND_INVESTMENT_THRESHOLD,
   smallCompanyUrl,
@@ -21,13 +19,10 @@ import {
 const { INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED, FETCH_ERROR } = FORM_STATUSES;
 
 const isDeerCompany = (size: number) => size >= DEER_COMPANY_THRESHOLD;
-const isSmallCompany = (size: number) =>
-  size >= SMALL_COMPANY_THRESHOLD && size < DEER_COMPANY_THRESHOLD;
 const isFund = (size: number) => size >= FUND_INVESTMENT_THRESHOLD;
 
 const getEmployeeValue = (size: number) => {
-  if (isDeerCompany(size)) return size * ENTERPRISE_EMPLOYEE_VALUE;
-  if (isSmallCompany(size)) return size * PREMIUM_EMPLOYEE_VALUE;
+  if (isDeerCompany(size)) return size * EMPLOYEE_VALUE;
   return 0;
 };
 const getInvestmentValue = (size: number) => {
