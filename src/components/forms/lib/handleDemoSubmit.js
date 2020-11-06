@@ -75,6 +75,13 @@ export const handleDemoSubmit = async ({
   const parsedFormValues = { isCompany, email, size, value };
 
   const response = await submitToHubspot(parsedFormValues);
+  if (response.status === 400) {
+    setTimeout(() => {
+      setFormStatus(INVALID_EMAIL);
+    }, 1000);
+    return;
+  }
+
   if (response.status !== 200) {
     setTimeout(() => {
       setFormStatus(FETCH_ERROR);
