@@ -16,18 +16,18 @@ import {
   smallCompanyUrl,
 } from './constants';
 
-type Error = {
+type ErrorResponse = {
   errorType: string,
   message: string,
 };
 
 type JsonResponse = {
-  errors: Error[],
+  errors: ErrorResponse[],
 };
 
 const { INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED, FETCH_ERROR } = FORM_STATUSES;
 
-const isInvalidEmailError = (errors: Error[]): boolean =>
+const isInvalidEmailError = (errors: ErrorResponse[]): boolean =>
   errors.some((error) => error.errorType === 'INVALID_EMAIL');
 
 const isDeerCompany = (size: number) => size >= DEER_COMPANY_THRESHOLD;
