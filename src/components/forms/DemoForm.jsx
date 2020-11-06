@@ -62,7 +62,7 @@ export const DemoForm = ({
         <Input
           state={email}
           setState={setEmail}
-          placeholder={i18n.t`Email address`}
+          placeholder={i18n.t`Company email`}
           setFormStatus={setFormStatus}
           name="email"
           wrapperClassName="mb-4"
