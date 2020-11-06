@@ -16,7 +16,19 @@ import {
   smallCompanyUrl,
 } from './constants';
 
+type Error = {
+  errorType: string,
+  message: string,
+};
+
+type JsonResponse = {
+  errors: Error[],
+};
+
 const { INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED, FETCH_ERROR } = FORM_STATUSES;
+
+const isInvalidEmailError = (errors: Error[]): boolean =>
+  errors.find((error) => error.errorType === 'INVALID_EMAIL');
 
 const isDeerCompany = (size: number) => size >= DEER_COMPANY_THRESHOLD;
 const isFund = (size: number) => size >= FUND_INVESTMENT_THRESHOLD;
@@ -75,17 +87,15 @@ export const handleDemoSubmit = async ({
   const parsedFormValues = { isCompany, email, size, value };
 
   const response = await submitToHubspot(parsedFormValues);
-  if (response.status === 400) {
-    setTimeout(() => {
-      setFormStatus(INVALID_EMAIL);
-    }, 1000);
-    return;
-  }
 
   if (response.status !== 200) {
-    setTimeout(() => {
-      setFormStatus(FETCH_ERROR);
-    }, 1000);
+    const jsonResponse: JsonResponse = await response.json();
+    if (isInvalidEmailError(jsonResponse.errors)) {
+      setTimeout(() => {
+        setFormStatus(INVALID_EMAIL);
+      }, 1000);
+      return;
+    }
     throw new Error(response.statusText);
   }
 
