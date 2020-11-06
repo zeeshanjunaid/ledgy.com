@@ -28,7 +28,7 @@ type JsonResponse = {
 const { INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED, FETCH_ERROR } = FORM_STATUSES;
 
 const isInvalidEmailError = (errors: Error[]): boolean =>
-  errors.find((error) => error.errorType === 'INVALID_EMAIL');
+  errors.some((error) => error.errorType === 'INVALID_EMAIL');
 
 const isDeerCompany = (size: number) => size >= DEER_COMPANY_THRESHOLD;
 const isFund = (size: number) => size >= FUND_INVESTMENT_THRESHOLD;
