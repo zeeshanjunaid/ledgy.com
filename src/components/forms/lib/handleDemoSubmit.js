@@ -91,9 +91,7 @@ export const handleDemoSubmit = async ({
   if (response.status !== 200) {
     const jsonResponse: JsonResponse = await response.json();
     if (isInvalidEmailError(jsonResponse.errors)) {
-      setTimeout(() => {
-        setFormStatus(INVALID_EMAIL);
-      }, 1000);
+      setFormStatus(INVALID_EMAIL);
       return;
     }
     setTimeout(() => {
