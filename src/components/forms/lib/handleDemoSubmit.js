@@ -16,7 +16,19 @@ import {
   smallCompanyUrl,
 } from './constants';
 
+type ErrorResponse = {
+  errorType: string,
+  message: string,
+};
+
+type JsonResponse = {
+  errors: ErrorResponse[],
+};
+
 const { INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED, FETCH_ERROR } = FORM_STATUSES;
+
+const isInvalidEmailError = (errors: ErrorResponse[]): boolean =>
+  errors.some((error) => error.errorType === 'INVALID_EMAIL');
 
 const isDeerCompany = (size: number) => size >= DEER_COMPANY_THRESHOLD;
 const isFund = (size: number) => size >= FUND_INVESTMENT_THRESHOLD;
@@ -75,10 +87,17 @@ export const handleDemoSubmit = async ({
   const parsedFormValues = { isCompany, email, size, value };
 
   const response = await submitToHubspot(parsedFormValues);
+
   if (response.status !== 200) {
+    const jsonResponse: JsonResponse = await response.json();
+    if (isInvalidEmailError(jsonResponse.errors)) {
+      setFormStatus(INVALID_EMAIL);
+      return;
+    }
     setTimeout(() => {
       setFormStatus(FETCH_ERROR);
     }, 1000);
+    // TODO: replace with send to sentry helper `error(response.statusText)`
     throw new Error(response.statusText);
   }
 
