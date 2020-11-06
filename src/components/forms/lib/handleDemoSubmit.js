@@ -96,6 +96,10 @@ export const handleDemoSubmit = async ({
       }, 1000);
       return;
     }
+    setTimeout(() => {
+      setFormStatus(FETCH_ERROR);
+    }, 1000);
+    // TODO: replace with send to sentry helper `error(response.statusText)`
     throw new Error(response.statusText);
   }
 
