@@ -28,7 +28,7 @@ type JsonResponse = {
 const { INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED, FETCH_ERROR } = FORM_STATUSES;
 
 const isInvalidEmailError = (errors: ErrorResponse[]): boolean =>
-  errors.some((error) => error.errorType === 'INVALID_EMAIL');
+  errors.some((error) => ['INVALID_EMAIL', 'BLOCKED_EMAIL'].includes(error.errorType));
 
 const isDeerCompany = (size: number) => size >= DEER_COMPANY_THRESHOLD;
 const isFund = (size: number) => size >= FUND_INVESTMENT_THRESHOLD;
@@ -97,7 +97,6 @@ export const handleDemoSubmit = async ({
     setTimeout(() => {
       setFormStatus(FETCH_ERROR);
     }, 1000);
-    // TODO: replace with send to sentry helper `error(response.statusText)`
     throw new Error(response.statusText);
   }
 
