@@ -34,7 +34,7 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
     role: 'Co-Founder & CEO',
     description: (
       <Trans>
-        Yoko studied Physics at ETHZ, the University of Oxford and CERN. She was also project lead
+        Yoko studied Physics at ETH Zurich, the University of Oxford and CERN. She was also project lead
         of Swissloop, helping to build the first Hyperloop pod in Switzerland.
       </Trans>
     ),
@@ -49,7 +49,7 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
     description: (
       <Trans>
         Ben has extensive experience in project management and worked for two years as a software
-        engineer in an ETH research group.
+        engineer in an ETH Zurich's research group.
       </Trans>
     ),
     twitter: 'https://twitter.com/bebinoy',
@@ -180,7 +180,7 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
     role: 'Engineering Trainee & Future Hacker',
     description: (
       <Trans>
-        Mariana just graduated from ETH in Mathematics. She has started a traineeship in software
+        Mariana graduated from ETH Zurich and EPFL in Mathematics. She has started a traineeship in software
         engineering to soon become a Junior Developer.
       </Trans>
     ),
@@ -192,7 +192,7 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
     role: 'Engineering Trainee & Lifelong Learner',
     description: (
       <Trans>
-        Xiao just graduated from ETHz in transport engineering. She has years of coding experience
+        Xiao just graduated from ETH Zurich in transport engineering. She has years of coding experience
         and is now happily diving into the world of web development.
       </Trans>
     ),
