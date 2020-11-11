@@ -187,6 +187,18 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
     linkedIn: 'https://www.linkedin.com/in/mariana-cely-6491741ba/',
     mail: 'mariana@ledgy.com',
   },
+  xiao: {
+    name: 'Xiao Sun',
+    role: 'Engineering Trainee & Lifelong Learner',
+    description: (
+      <Trans>
+        Xiao just graduated from ETHz in transport engineering. She has years of coding experience
+        and is now happily diving into the world of web development.
+      </Trans>
+    ),
+    linkedIn: 'https://www.linkedin.com/in/xiao-s-a54554147/',
+    mail: 'xiao@ledgy.com',
+  },
   luna: {
     name: 'Luna',
     role: 'Rocket & Trailblazer',
@@ -268,6 +280,11 @@ export const TeamFragment = graphql`
       }
     }
     mariana: imageSharp(fluid: { originalName: { regex: "/mariana.jpg/" } }) {
+      fluid(maxWidth: 245, maxHeight: 245) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    xiao: imageSharp(fluid: { originalName: { regex: "/xiao.png/" } }) {
       fluid(maxWidth: 245, maxHeight: 245) {
         ...GatsbyImageSharpFluid
       }
