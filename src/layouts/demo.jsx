@@ -1,6 +1,6 @@
 // @flow
 
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import { withI18n, Trans } from '@lingui/react';
 import React from 'react';
 
@@ -11,6 +11,7 @@ import { CTABanner } from '../components/CTABanner';
 import { formatUrl } from '../components/lib';
 import { dynamicI18n, DynamicTrans } from '../components/DynamicTrans';
 import logoInvertedCompact from '../img/logo-inverted-compact.png';
+import { targetBlank } from '../helpers';
 
 import { Title } from './utils';
 
@@ -88,12 +89,20 @@ const DemoPage = (props: LayoutProps) => {
         <CTABanner location={location} {...props} />
       </div>
       <footer className="footer d-flex align-items-center justify-content-center text-white bg-primary p-2">
-        <Link className="nav-link mx-1 mx-md-5" href to={formatUrl(prefix, 'legal/privacy-policy')}>
+        <a
+          {...targetBlank}
+          className="nav-link mx-1 mx-md-5"
+          href={formatUrl(prefix, 'legal/privacy-policy')}
+        >
           <Trans>Privacy policy</Trans>
-        </Link>
-        <Link className="nav-link mx-1 mx-md-5" href to={formatUrl(prefix, 'data-protection')}>
+        </a>
+        <a
+          {...targetBlank}
+          className="nav-link mx-1 mx-md-5"
+          href={formatUrl(prefix, 'data-protection')}
+        >
           <Trans>Data protection</Trans>
-        </Link>
+        </a>
       </footer>
     </>
   );
