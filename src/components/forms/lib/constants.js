@@ -15,4 +15,4 @@ export const INVESTMENT_VALUE = 15;
 export const smallCompanyUrl = demoUrl;
 export const deerCompanyUrl = 'https://meetings.hubspot.com/tamas5';
 export const investorUrl = 'https://demo.ledgy.com/3whvEG3wR6qMYGnyy/dashboard';
-export const fundUrl = 'https://meetings.hubspot.com/ledgy/portfolio-management-with-ledgy';
+export const fundUrl = 'https://meetings.hubspot.com/tamas5/investors';
