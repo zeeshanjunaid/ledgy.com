@@ -286,7 +286,7 @@ export const TeamFragment = graphql`
         ...GatsbyImageSharpFluid
       }
     }
-    xiao: imageSharp(fluid: { originalName: { regex: "/xiao.png/" } }) {
+    xiao: imageSharp(fluid: { originalName: { regex: "/xiao.jpg/" } }) {
       fluid(maxWidth: 245, maxHeight: 245) {
         ...GatsbyImageSharpFluid
       }
