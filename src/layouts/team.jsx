@@ -186,6 +186,7 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
     ),
     linkedIn: 'https://www.linkedin.com/in/mariana-cely-6491741ba/',
     mail: 'mariana@ledgy.com',
+    article: 'mariana-cely',
   },
   xiao: {
     name: 'Xiao Sun',
@@ -198,6 +199,7 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
     ),
     linkedIn: 'https://www.linkedin.com/in/xiao-s-a54554147/',
     mail: 'xiao@ledgy.com',
+    article: 'xiao-sun',
   },
   luna: {
     name: 'Luna',
@@ -284,7 +286,7 @@ export const TeamFragment = graphql`
         ...GatsbyImageSharpFluid
       }
     }
-    xiao: imageSharp(fluid: { originalName: { regex: "/xiao.png/" } }) {
+    xiao: imageSharp(fluid: { originalName: { regex: "/xiao.jpg/" } }) {
       fluid(maxWidth: 245, maxHeight: 245) {
         ...GatsbyImageSharpFluid
       }
