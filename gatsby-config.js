@@ -94,6 +94,25 @@ module.exports = {
       },
     },
     { resolve: 'gatsby-plugin-netlify-cache', options: { cachePublic: true } },
-    'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        workboxConfig: {
+          runtimeCaching: [
+            { urlPattern: /(\.js$|\.css$|static\/)/, handler: `CacheFirst` },
+            { urlPattern: /^https?:.*\/page-data\/.*\.json/, handler: `NetworkFirst` },
+            { urlPattern: /^https?:.*\/app-data\/.*\.json/, handler: `NetworkFirst` },
+            {
+              urlPattern: /^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/,
+              handler: `StaleWhileRevalidate`,
+            },
+            {
+              urlPattern: /^https?:\/\/fonts\.googleapis\.com\/css/,
+              handler: `StaleWhileRevalidate`,
+            },
+          ],
+        },
+      },
+    },
   ],
 };
