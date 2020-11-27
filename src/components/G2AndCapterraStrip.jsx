@@ -9,9 +9,9 @@ export const G2AndCapterraStrip = () => (
   <div className="bg-light p-5 mt-7">
     <div className="container">
       <div className="row justify-content-center">
-        <small className="text-gray-neutral text-center">
+        <div className="text-gray-neutral text-center mb-4 font-weight-light">
           <Trans>Highly rated on</Trans>
-        </small>
+        </div>
       </div>
       <div className="row justify-content-center align-items-center">
         <a
