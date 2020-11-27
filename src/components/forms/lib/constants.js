@@ -1,6 +1,5 @@
 // @flow
 
-import { demoUrl } from '../../../helpers';
 import type { RequesterType } from './formTypes';
 
 export const COMPANY: RequesterType = 'company';
@@ -12,7 +11,7 @@ export const FUND_INVESTMENT_THRESHOLD = 20;
 export const EMPLOYEE_VALUE = 4;
 export const INVESTMENT_VALUE = 15;
 
-export const smallCompanyUrl = demoUrl;
+export const smallCompanyUrl = '/company-demo';
 export const deerCompanyUrl = 'https://meetings.hubspot.com/tamas5';
-export const investorUrl = 'https://demo.ledgy.com/3whvEG3wR6qMYGnyy/dashboard';
+export const investorUrl = '/investor-demo';
 export const fundUrl = 'https://meetings.hubspot.com/tamas5/investors';
