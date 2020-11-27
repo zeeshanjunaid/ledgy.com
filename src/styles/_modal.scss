@@ -54,11 +54,8 @@
     z-index: $zindex-popup-toggler;
     background-color: transparent !important;
     position: absolute;
-    top: -2.5rem;
+    top: -3rem;
     right: -1rem;
-    @include media-breakpoint-up(sm) {
-      top: -2rem;
-    }
   }
   &.dark {
     color: $white !important;
@@ -68,12 +65,6 @@
     color: $gray-700 !important;
     background-color: $gray-100 !important;
   }
-}
-
-.modal-close.btn-primary:not(:disabled):not(.disabled):active,
-.modal-close.btn-primary:focus {
-  background-color: $gray-400 !important;
-  color: $gray-700 !important;
 }
 
 .modal-transition-enter {
