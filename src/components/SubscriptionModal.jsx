@@ -24,13 +24,21 @@ export const SubscriptionModal = ({
         <FontAwesomeIcon className="mr-2" icon={faEnvelope} />
         <Trans>Newsletter</Trans>
       </Button>
-      <Modal isOpen={isOpen} close={toggle} title={<Trans>Sign up for the Ledgy newsletter</Trans>}>
-        <p className="text-dark mt-4 mb-0 mx-1">
-          <Trans>
-            Receive important feature updates, exclusive webinar invitations, and promotions/offers
-          </Trans>
-        </p>
-        <SubscriptionForm toggle={toggle} trackingEvent="newsletter" i18n={i18n} />
+      <Modal
+        isOpen={isOpen}
+        close={toggle}
+        title={<Trans>Sign up for the Ledgy newsletter</Trans>}
+        className="d-flex align-items-start mt-3 mt-md-4 mt-lg-7 justify-content-center"
+      >
+        <div className="p-4">
+          <p className="text-dark mt-4 mb-0 mx-1">
+            <Trans>
+              Receive important feature updates, exclusive webinar invitations, and
+              promotions/offers
+            </Trans>
+          </p>
+          <SubscriptionForm toggle={toggle} trackingEvent="newsletter" i18n={i18n} />
+        </div>
       </Modal>
     </>
   );

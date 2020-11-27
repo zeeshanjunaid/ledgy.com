@@ -15,33 +15,58 @@ const closeWithOutsideClick = (e: SyntheticInputEvent<HTMLInputElement>, close: 
   close();
 };
 
+const CloseButton = ({
+  close,
+  transparent = false,
+}: {
+  close: () => void,
+  transparent?: boolean,
+}) => (
+  <Button className={`modal-close ${transparent ? 'transparent' : 'dark'}`} onClick={close}>
+    <span>&times;</span>
+  </Button>
+);
+
+const ModalHeader = ({ title, close }: { title: Node, close: () => void }) => (
+  <div className="modal-header-custom d-flex justify-content-between align-items-center bg-primary text-white px-4 py-3">
+    <h5 className="m-0">{title}</h5>
+    <CloseButton close={close} />
+  </div>
+);
+
 export const Modal = ({
   isOpen,
   close,
   title,
   children,
-}: {
+  className = '',
+  size = 'md',
+}: {|
   isOpen: boolean,
   close: () => void,
-  title: Node,
+  title?: Node,
   children: Node,
-}) => {
+  className?: string,
+  size?: 'md' | 'lg',
+|}) => {
   const documentBody = getDocumentBody();
+  const transparent = !title;
   return documentBody
     ? ReactDOM.createPortal(
         <CSSTransition in={isOpen} timeout={400} classNames="modal-transition" unmountOnExit>
-          <div className="modal-wrapper" onClick={(e) => closeWithOutsideClick(e, close)}>
-            <div
-              className="modal-custom mt-2 mb-7 mx-2 my-sm-7 mx-sm-auto"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="modal-header-custom d-flex justify-content-between align-items-center bg-primary text-white px-4 py-3">
-                <h5 className="m-0">{title}</h5>
-                <Button className="modal-close" onClick={close}>
-                  <span>&times;</span>
-                </Button>
+          <div className="modal-page" onClick={(e) => closeWithOutsideClick(e, close)}>
+            <div className={`h-100 w-100 ${className}`}>
+              <div
+                className={`modal-custom ${size} ${transparent ? 'transparent' : ''}`}
+                onClick={(e) => e.stopPropagation()}
+              >
+                {title ? (
+                  <ModalHeader title={title} close={close} />
+                ) : (
+                  <CloseButton close={close} transparent />
+                )}
+                {children}
               </div>
-              <div className="p-4">{children}</div>
             </div>
           </div>
         </CSSTransition>,
