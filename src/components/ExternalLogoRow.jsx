@@ -10,9 +10,9 @@ export const ExternalLogoRow = ({ title, logos }: { title: Node, logos: Image[] 
   <div className="bg-light position-relative p-5">
     <div className="container">
       <div className="row justify-content-center">
-        <small className="text-gray-neutral text-center">
+        <div className="text-gray-neutral text-center mb-4 font-weight-light">
           <DynamicTrans>{title}</DynamicTrans>
-        </small>
+        </div>
       </div>
       <div className="row w-100 justify-content-between align-items-center">
         {logos.map(({ title: alt, localFile, description: url }) => {
