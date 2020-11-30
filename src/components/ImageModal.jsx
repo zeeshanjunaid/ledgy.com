@@ -14,7 +14,7 @@ export const ImageModal = ({ imgProps }: { imgProps?: Image }) => {
       <div
         role="button"
         onClick={toggle}
-        onKeyPress={toggle}
+        onKeyPress={(e) => (e.key === 'Enter' ? toggle() : null)}
         tabIndex={0}
         className="expandable-image-wrapper"
       >

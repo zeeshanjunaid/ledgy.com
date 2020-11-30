@@ -163,7 +163,7 @@ $deco-dot-size: 8px;
 .expandable-image-wrapper {
   cursor: pointer;
   &:focus {
-    outline: 1px solid $gray-100;
+    outline: 2px solid $gray-300;
   }
 }
 
