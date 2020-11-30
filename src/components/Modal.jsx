@@ -22,7 +22,7 @@ const CloseButton = ({
   close: () => void,
   transparent?: boolean,
 }) => (
-  <Button className={`modal-close ${transparent ? 'transparent' : 'dark'}`} onClick={close}>
+  <Button className={`modal-close ${transparent ? 'transparent' : ''}`} onClick={close}>
     <span>&times;</span>
   </Button>
 );
@@ -33,6 +33,8 @@ const ModalHeader = ({ title, close }: { title: Node, close: () => void }) => (
     <CloseButton close={close} />
   </div>
 );
+
+type ModalSize = 'md' | 'lg';
 
 export const Modal = ({
   isOpen,
@@ -47,7 +49,7 @@ export const Modal = ({
   title?: Node,
   children: Node,
   className?: string,
-  size?: 'md' | 'lg',
+  size?: ModalSize,
 |}) => {
   const documentBody = getDocumentBody();
   const transparent = !title;
@@ -63,7 +65,7 @@ export const Modal = ({
                 {title ? (
                   <ModalHeader title={title} close={close} />
                 ) : (
-                  <CloseButton close={close} transparent />
+                  <CloseButton close={close} transparent={transparent} />
                 )}
                 {children}
               </div>

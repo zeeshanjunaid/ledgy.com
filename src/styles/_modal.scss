@@ -49,17 +49,15 @@
   line-height: 13px;
   border: none;
   border-radius: 50%;
+  color: $white !important;
+  background-color: $deep-blue !important;
   &.transparent {
     color: $gray-600 !important;
-    z-index: $zindex-popup-toggler;
     background-color: transparent !important;
+    z-index: $zindex-popup-toggler;
     position: absolute;
     top: -3rem;
     right: -1rem;
-  }
-  &.dark {
-    color: $white !important;
-    background-color: $deep-blue !important;
   }
   &:hover {
     color: $gray-700 !important;
