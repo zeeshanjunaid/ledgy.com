@@ -201,6 +201,18 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
     mail: 'xiao@ledgy.com',
     article: 'xiao-sun',
   },
+  marina: {
+    name: 'Marina Moric',
+    role: 'Product Manager Trainee & Yoga Teacher',
+    description: (
+      <Trans>
+        After finishing her PhD in neuroscience, Marina decided to focus on her passion for
+        technology. Her goal is to become Ledgy’s product management Jedi.
+      </Trans>
+    ),
+    linkedIn: 'https://www.linkedin.com/in/marinamoric/',
+    mail: 'marina@ledgy.com',
+  },
   luna: {
     name: 'Luna',
     role: 'Rocket & Trailblazer',
@@ -287,6 +299,11 @@ export const TeamFragment = graphql`
       }
     }
     xiao: imageSharp(fluid: { originalName: { regex: "/xiao.jpg/" } }) {
+      fluid(maxWidth: 245, maxHeight: 245) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    marina: imageSharp(fluid: { originalName: { regex: "/marina.jpg/" } }) {
       fluid(maxWidth: 245, maxHeight: 245) {
         ...GatsbyImageSharpFluid
       }

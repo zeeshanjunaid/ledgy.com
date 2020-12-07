@@ -47,6 +47,7 @@ const IndexPage = (props: Props) => {
     [team.tamas, data.tamas],
     [team.mariana, data.mariana],
     [team.xiao, data.xiao],
+    [team.marina, data.marina],
     [team.luna, data.luna],
   ];
 
