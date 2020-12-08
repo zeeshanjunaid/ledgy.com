@@ -29,19 +29,19 @@ export default withI18n()(({ i18n, prefix }: Props) => {
       <Title title={title} description={description} />
       <PageHeader title={title} subtitle={description} />
       <LedgyPricing
-        startupButton={
+        launchPlanButton={
           <Button outline inverted className="my-4" href={`${appUrl}/signup`}>
             <Trans>Sign up</Trans>
           </Button>
         }
-        premiumButton={
+        growthPlanButton={
           <Button outline inverted className="mt-4 mb-1" href={`${appUrl}/signup`}>
             <Trans>Sign up</Trans>
           </Button>
         }
-        premiumText="7-day free trial"
-        enterpriseButton={<RequestDemoButton prefix={prefix} buttonClassName="my-4 btn-red" />}
-        highlightEnterprise
+        growthPlanText="7-day free trial"
+        scalePlanButton={<RequestDemoButton prefix={prefix} buttonClassName="my-4 btn-red" />}
+        highlightScalePlan
         DynamicTrans={DynamicTrans}
         t={t}
       />
