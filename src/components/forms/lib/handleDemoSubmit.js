@@ -110,6 +110,7 @@ export const handleDemoSubmit = async ({
 
   if (hubspotResponse.status !== 200) {
     await onError(hubspotResponse);
+  } else {
+    onSuccess();
   }
-  onSuccess();
 };
