@@ -86,9 +86,9 @@ export const handleDemoSubmit = async ({
   const value = getPipelineValue(size, isCompany);
   const parsedFormValues = { isCompany, email, size, value };
 
-  const response = await submitToHubspot(parsedFormValues);
+  const hubspotResponse = await submitToHubspot(parsedFormValues);
 
-  if (response.status !== 200) {
+  const onError = async (response: Response) => {
     const jsonResponse: JsonResponse = await response.json();
     if (isInvalidEmailError(jsonResponse.errors)) {
       setFormStatus(INVALID_EMAIL);
@@ -98,11 +98,18 @@ export const handleDemoSubmit = async ({
       setFormStatus(FETCH_ERROR);
     }, 1000);
     throw new Error(response.statusText);
+  };
+
+  const onSuccess = () => {
+    const eventName = `getDemo.submit.${requesterType}`;
+    track(eventName, { value });
+
+    redirect(parsedFormValues);
+    setFormStatus(SUBMITTED);
+  };
+
+  if (hubspotResponse.status !== 200) {
+    await onError(hubspotResponse);
   }
-
-  const eventName = `getDemo.submit.${requesterType}`;
-  track(eventName, { value });
-
-  redirect(parsedFormValues);
-  setFormStatus(SUBMITTED);
+  onSuccess();
 };
