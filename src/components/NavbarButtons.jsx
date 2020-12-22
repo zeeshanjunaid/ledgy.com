@@ -29,7 +29,7 @@ export const NavbarButtons = ({
     </Button>
     <Link href to={`${prefix}${demoPage}`} onClick={removeOverlay}>
       <Button inverted outline={isMobile} className="ml-2 px-3 py-1">
-        <Trans>Get a Demo</Trans>
+        <Trans>Book a Demo</Trans>
       </Button>
     </Link>
   </div>
