@@ -17,7 +17,7 @@ export const RequestDemoButton = ({
   location?: LocationProps,
 |}) => {
   const isDemoPage = !!location && location.pathname.includes('demo');
-  const ButtonText = <Trans>Get a Demo</Trans>;
+  const ButtonText = <Trans>Book a Demo</Trans>;
 
   return isDemoPage ? (
     <Button
