@@ -14,4 +14,4 @@ export const INVESTMENT_VALUE = 15;
 export const smallCompanyUrl = '/company-demo';
 export const deerCompanyUrl = 'https://meetings.hubspot.com/ledgy/equity-management-with-ledgy';
 export const investorUrl = '/investor-demo';
-export const fundUrl = 'https://meetings.hubspot.com/ledgy/equity-management-with-ledgy';
+export const fundUrl = 'https://meetings.hubspot.com/ledgy/portfolio-management-with-ledgy';
