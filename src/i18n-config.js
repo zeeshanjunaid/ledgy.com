@@ -1,5 +1,4 @@
 /* eslint-disable no-undef */
-/* eslint-disable @typescript-eslint/no-var-requires */
 const compose = require('lodash/fp/compose');
 const pick = require('lodash/fp/pick');
 const flatten = require('lodash/fp/flatten');
