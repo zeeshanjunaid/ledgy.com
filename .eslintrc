@@ -1,13 +1,23 @@
 {
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
   "extends": [
-    "plugin:flowtype/recommended",
-    "airbnb",
+    "eslint:recommended",
+    "plugin:react/recommended",
     "plugin:prettier/recommended",
-    "prettier/flowtype",
-    "prettier/react"
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
+    "prettier/react",
   ],
   "plugins": [
-    "flowtype"
+    "@typescript-eslint"
   ],
   "env": {
     "browser": true
@@ -22,6 +32,16 @@
         "singleQuote": true,
         "printWidth": 100
       }
-    ]
+    ],
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error", { "ignoreRestSiblings": true }],
+    "no-shadow":"off",
+    "@typescript-eslint/no-shadow": "error",
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": "error",
   }
 }

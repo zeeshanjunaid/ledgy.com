@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const {
   CONTEXT,
   URL,
@@ -27,9 +28,11 @@ module.exports = {
       url: 'https://api.hsforms.com/submissions/v3/integration',
     },
   ],
+  flags: {
+    FAST_REFRESH: true,
+  },
   plugins: [
     'gatsby-plugin-layout',
-    'gatsby-plugin-flow',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     'gatsby-plugin-sharp',
@@ -49,11 +52,9 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-mdx',
       options: {
-        gatsbyRemarkPlugins: [
-          'gatsby-remark-katex',
-          'gatsby-remark-prismjs',
-          'gatsby-remark-unwrap-images',
-        ],
+        // eslint-disable-next-line global-require
+        remarkPlugins: [require('remark-math'), require('remark-html-katex')],
+        gatsbyRemarkPlugins: ['gatsby-remark-prismjs', 'gatsby-remark-unwrap-images'],
       },
     },
     'gatsby-plugin-catch-links',
