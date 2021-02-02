@@ -19,7 +19,6 @@ i18n.loadLocaleData('de', { plurals: de });
 i18n.loadLocaleData('fr', { plurals: fr });
 
 i18n.load({ en: enCollection.messages, de: deCollection.messages, fr: frCollection.messages });
-i18n.activate(defaultLanguage);
 
 const langPrefix = (lang) => (lang === defaultLanguage ? '' : `/${lang}`);
 const deprefix = (pathname) =>

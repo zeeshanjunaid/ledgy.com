@@ -1,4 +1,4 @@
-import React, { useEffect, ReactElement } from 'react';
+import React, { useEffect, ReactElement, useMemo } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { i18n } from '@lingui/core';
 import { I18nProvider } from '@lingui/react';
@@ -73,9 +73,7 @@ const App = ({ children, ...props }: AppProps) => {
 
 const Main = (props: AppProps) => {
   const lang = langFromPath(props.location.pathname);
-  useEffect(() => {
-    i18n.activate(lang);
-  }, [lang]);
+  useMemo(() => i18n.activate(lang), [lang]);
   return (
     <I18nProvider i18n={i18n}>
       <App {...props} lang={lang} />
