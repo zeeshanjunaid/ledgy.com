@@ -213,6 +213,19 @@ export const getWholeTeam = (prefix: string): { [string]: AuthorProps } => ({
     linkedIn: 'https://www.linkedin.com/in/marinamoric/',
     mail: 'marina@ledgy.com',
   },
+  catarina: {
+    name: 'Catarina Simoes',
+    role: 'Customer Experience & Dancer',
+    description: (
+      <Trans>
+        After her MSc in Industrial Engineering and Management, Catarina gained experience in
+        project management and continuous improvement. Looking forward to contributing to a
+        purposeful goal, she joined Ledgy.
+      </Trans>
+    ),
+    linkedIn: 'https://www.linkedin.com/in/catarina-martins-sim%C3%B5es-62b8b9142/',
+    mail: 'catarina@ledgy.com',
+  },
   luna: {
     name: 'Luna',
     role: 'Rocket & Trailblazer',
@@ -304,6 +317,11 @@ export const TeamFragment = graphql`
       }
     }
     marina: imageSharp(fluid: { originalName: { regex: "/marina.jpg/" } }) {
+      fluid(maxWidth: 245, maxHeight: 245) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    catarina: imageSharp(fluid: { originalName: { regex: "/catarina.jpg/" } }) {
       fluid(maxWidth: 245, maxHeight: 245) {
         ...GatsbyImageSharpFluid
       }
