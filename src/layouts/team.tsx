@@ -217,7 +217,7 @@ export const getWholeTeam = (
   },
   catarina: {
     name: 'Catarina Simoes',
-    role: 'Customer Experience & Dancer',
+    role: 'Customer Experience & Surfer',
     description: (
       <Trans>
         After her MSc in Industrial Engineering and Management, Catarina gained experience in
