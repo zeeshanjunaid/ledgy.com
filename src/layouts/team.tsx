@@ -228,6 +228,19 @@ export const getWholeTeam = (
     linkedIn: 'https://www.linkedin.com/in/catarina-martins-sim%C3%B5es-62b8b9142/',
     mail: 'catarina@ledgy.com',
   },
+
+  nicolas: {
+    name: 'Nicolas Briner',
+    role: 'Biz Dev & Landscape Photographer',
+    description: (
+      <Trans>
+        During his studies at McGill University, Nicolas discovered the world of startups and has
+        since then been on a journey to support entrepreneurs in reaching their goals.
+      </Trans>
+    ),
+    linkedIn: 'https://www.linkedin.com/in/nicolas-briner/',
+    mail: 'nicolas@ledgy.com',
+  },
   luna: {
     name: 'Luna',
     role: 'Rocket & Trailblazer',
@@ -324,6 +337,11 @@ export const TeamFragment = graphql`
       }
     }
     catarina: imageSharp(fluid: { originalName: { regex: "/catarina.jpg/" } }) {
+      fluid(maxWidth: 245, maxHeight: 245) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    nicolas: imageSharp(fluid: { originalName: { regex: "/nicolas.jpg/" } }) {
       fluid(maxWidth: 245, maxHeight: 245) {
         ...GatsbyImageSharpFluid
       }
