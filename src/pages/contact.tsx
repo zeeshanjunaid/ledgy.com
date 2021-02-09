@@ -44,19 +44,19 @@ const Contact = () => (
                     <Trans>Help Center</Trans>
                   </a>
                   <br />
-                  <a href="mailto:contact@ledgy.com">support@ledgy.com</a>
+                  <a href="mailto:support@ledgy.com">support@ledgy.com</a>
                 </div>
                 <div className="mb-4">
                   <h6>
                     <Trans>Sales Inquiries</Trans>
                   </h6>
-                  <a href="mailto:contact@ledgy.com">sales@ledgy.com</a>
+                  <a href="mailto:sales@ledgy.com">sales@ledgy.com</a>
                 </div>
                 <div>
                   <h6>
                     <Trans>General Inquiries</Trans>
                   </h6>
-                  <a href="mailto:contact@ledgy.com">sales@ledgy.com</a>
+                  <a href="mailto:contact@ledgy.com">contact@ledgy.com</a>
                 </div>
               </div>
               <div className="col-6 p-0 text-nowrap">
