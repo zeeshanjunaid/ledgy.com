@@ -29,13 +29,13 @@ export const ChecklistWithScreenshot = ({
           <ul className="my-2 pl-0">
             {checklistTexts.map((checklistText) => {
               return (
-                <li key={checklistText} className="media d-flex align-items-center">
+                <li key={checklistText} className="media d-flex align-items-center mb-3">
                   <FontAwesomeIcon
                     icon={faCheck}
-                    className={`icon mr-3 mt-1 text-light-energetic-blue`}
+                    className={`icon mr-3 text-light-energetic-blue`}
                     size="lg"
                   />
-                  <p className="text-deep-blue">
+                  <p className="text-deep-blue mb-0">
                     <DynamicTrans>{checklistText}</DynamicTrans>
                   </p>
                 </li>
@@ -44,7 +44,7 @@ export const ChecklistWithScreenshot = ({
           </ul>
         </div>
         <div className="col-lg-8 pl-lg-0">
-          <div className={`screenshot`}>{!!childImageSharp && <Img {...childImageSharp} />}</div>
+          <div className="screenshot">{!!childImageSharp && <Img {...childImageSharp} />}</div>
         </div>
       </div>
     </Section>

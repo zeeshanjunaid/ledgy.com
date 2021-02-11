@@ -11,26 +11,18 @@ const SelectableCard = ({
   index,
   activeIndex,
   setActiveIndex,
-  setHeight,
+  observer,
 }: {
   header: string;
   description: string;
   index: number;
   activeIndex: number;
   setActiveIndex: (i: number) => void;
-  setHeight: (i: number) => void;
+  observer: ResizeObserver | null;
 }) => {
   const ref = useRef(null);
   const isActive = activeIndex === index;
   const backgroundColor = isActive ? 'bg-lightest' : 'bg-transparent';
-
-  const observer = isBrowser
-    ? new ResizeObserver((entries) => {
-        entries.forEach((v) => {
-          setHeight(v.target.clientHeight);
-        });
-      })
-    : null;
 
   useEffect(() => {
     const card = ref.current;
@@ -41,7 +33,7 @@ const SelectableCard = ({
     <div
       ref={ref}
       onClick={() => setActiveIndex(index)}
-      className={`selectable-card flex-1 d-flex flex-column justify-content-center p-4 ${backgroundColor}`}
+      className={`selectable-card flex-1 d-flex flex-column justify-content-center p-2 pl-4 pt-lg-3 pr-lg-3 pb-lg-3 ${backgroundColor}`}
     >
       <h5>
         <DynamicTrans>{header}</DynamicTrans>
@@ -59,8 +51,20 @@ export const SelectableCardsWithScreenshots = ({
 }: SelectableCardsWithScreenshotsProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [height, setHeight] = useState(0);
-  const transform = `translateY(${100 * activeIndex}%)`;
+  const [translateY, setTranslateY] = useState(0);
 
+  const observer = isBrowser
+    ? new ResizeObserver((entries) => {
+        const activeEntry = entries[activeIndex];
+        if (activeEntry) setHeight(activeEntry.target.clientHeight);
+        const pxToTranslate = entries.slice(0, activeIndex).reduce((res, val) => {
+          return val.target.clientHeight + res;
+        }, 0);
+        setTranslateY(pxToTranslate);
+      })
+    : null;
+
+  const style = { height: `${height}px`, transform: `translateY(${translateY}px)` };
   return (
     <Section>
       <h2 className="mb-5 text-center">
@@ -80,8 +84,8 @@ export const SelectableCardsWithScreenshots = ({
         </div>
         <div className="col-lg-4 pl-lg-0">
           <div className="fluid-border-right h-100">
-            <span style={{ height: `${height}px`, transform }} />
-            <div className="d-flex flex-column h-100">
+            <span style={style} />
+            <div className="d-flex flex-column h-100 mt-4 mt-lg-0">
               {content.map((v, i) => (
                 <SelectableCard
                   {...v}
@@ -89,7 +93,7 @@ export const SelectableCardsWithScreenshots = ({
                   index={i}
                   activeIndex={activeIndex}
                   setActiveIndex={setActiveIndex}
-                  setHeight={setHeight}
+                  observer={observer}
                 />
               ))}
             </div>

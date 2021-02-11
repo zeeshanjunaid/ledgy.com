@@ -18,10 +18,13 @@ const Logo = ({ logo }: { logo: Image }) => {
   );
 };
 
-export const LogoBanner = (props: LogoBannerProps) => (
-  <Section className="bg-lightest">
+export const LogoBanner = ({
+  logos,
+  smallPadding = false,
+}: LogoBannerProps & { smallPadding?: boolean }) => (
+  <Section className="bg-lightest" smallPadding={smallPadding}>
     <div className="row align-items-center justify-content-around">
-      {props.logos.map((v) => (
+      {logos.map((v) => (
         <Logo logo={v} key={`logo-banner-${v.title}`} />
       ))}
     </div>

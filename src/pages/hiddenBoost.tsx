@@ -2,15 +2,27 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { ComponentPicker } from '../components/ComponentPicker';
 
+const isTopPageComponent = (__typename: string) =>
+  __typename === 'ContentfulTopBanner' || __typename === 'ContentfulLogoBanner';
+
 const HiddenBoostPage = (props: Props) => {
   const { data, prefix } = props;
   const [content] = data.page.edges;
   const { entries }: { entries: MainPageEntryProps[] } = content.node;
 
+  const topPageComponents = entries.filter((entry) => isTopPageComponent(entry.__typename));
+  const restOfComponents = entries.filter((entry) => !isTopPageComponent(entry.__typename));
+
   return (
     <main className="main-wrapper-1 overflow-hidden">
       <div className="main-wrapper-2">
-        {entries.map((entry, i) => (
+        <div className="top-page-wrapper d-flex flex-column justify-content-between">
+          <span />
+          {topPageComponents.map((entry, i) => (
+            <ComponentPicker entry={entry} prefix={prefix} key={`${entry.id}-${i}`} smallPadding />
+          ))}
+        </div>
+        {restOfComponents.map((entry, i) => (
           <ComponentPicker entry={entry} prefix={prefix} key={`${entry.id}-${i}`} />
         ))}
       </div>

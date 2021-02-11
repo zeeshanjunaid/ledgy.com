@@ -22,9 +22,9 @@ export const CallToAction = ({
   secondaryLinkPath,
   prefix,
 }: { prefix: string } & CallToActionProps) => (
-  <Section>
+  <Section className="my-4">
     <div className="row">
-      <div className="col-md-8 mb-6 mb-md-0 pr-5">
+      <div className="col-md-8 mb-4 mb-md-2 pr-5">
         <h2 className="mb-4">
           <DynamicTrans>{header}</DynamicTrans>
         </h2>

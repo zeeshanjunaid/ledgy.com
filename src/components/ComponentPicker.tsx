@@ -13,16 +13,18 @@ import { ChecklistWithScreenshot } from './ChecklistWithScreenshot';
 export const ComponentPicker = ({
   entry,
   prefix,
+  smallPadding = false,
 }: {
   entry: MainPageEntryProps;
   prefix: string;
+  smallPadding?: boolean;
 }) => {
   switch (entry.__typename) {
     case 'ContentfulTopBanner':
       return <TopBanner {...entry} prefix={prefix} />;
 
     case 'ContentfulLogoBanner':
-      return <LogoBanner {...entry} />;
+      return <LogoBanner {...entry} smallPadding={smallPadding} />;
 
     case 'ContentfulSelectableCardsWithScreenshots':
       return <SelectableCardsWithScreenshots {...entry} />;

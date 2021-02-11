@@ -1,7 +1,7 @@
 
 .container {
    @media screen and (min-width: 1440px) {
-    max-width: 1250px !important;
+    max-width: 1200px !important;
   }
 }
 
@@ -91,12 +91,12 @@ input[type=number]::-webkit-outer-spin-button {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -2px;
+    bottom: -3px;
     height: 6px;
     width: 100%;
     background-color: $vibrant-green;
     border-radius: $border-radius;
-    z-index: 1;
+    z-index: 0;
   }
 }
 
@@ -526,4 +526,8 @@ $padding-lg: 3rem;
 .main-wrapper-2 {
  @include gray-deco-shape;
   background-position: 50% 97%;
+}
+.top-page-wrapper {
+  min-height: 85vh;
+  background-color: $gray-050;
 }
