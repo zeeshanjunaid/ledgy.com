@@ -29,12 +29,19 @@ declare type FormStatus =
   | 'submitted';
 
 declare type IconType =
+  | 'blog'
   | 'calculator'
   | 'chart'
+  | 'company'
   | 'documents'
+  | 'help'
   | 'hr'
+  | 'investor'
   | 'lock'
   | 'map'
   | 'moneybag'
   | 'robot'
-  | 'rocket';
+  | 'rocket'
+  | 'story'
+  | 'template'
+  | 'video';

@@ -99,14 +99,14 @@ const learn: NavbarMenuColumn = {
       link: helpUrl,
       title: 'Help',
       description: 'Get quickly started with Ledgy or dive deeper into how the features work',
-      icon: 'hr',
+      icon: 'help',
     },
     {
       link: 'webinars',
       title: 'Webinars',
       description:
         'Regular short webinars give a quick introduction in many equity and Ledgy-related topics',
-      icon: 'hr',
+      icon: 'video',
     },
   ],
 };
@@ -119,13 +119,13 @@ const explore: NavbarMenuColumn = {
       title: 'Blog',
       description:
         'Background stories about equity topics, founder and investor interviews and more to explore',
-      icon: 'hr',
+      icon: 'blog',
     },
     {
       link: 'customer-stories',
       title: 'Customer Stories',
       description: 'Learn what Ledgy’s customers have to say',
-      icon: 'hr',
+      icon: 'story',
     },
   ],
 };
@@ -138,13 +138,13 @@ const tools: NavbarMenuColumn = {
       title: 'ESOP Templates',
       description:
         'Access employee participation plan templates developed with leading law firms for free',
-      icon: 'hr',
+      icon: 'template',
     },
     {
       link: 'calculator',
       title: 'Funding Round Calculator',
       description: 'The calculator you need if you’re raising capital, no signup required',
-      icon: 'hr',
+      icon: 'calculator',
     },
   ],
 };
@@ -156,13 +156,13 @@ const pricingTypes: NavbarMenuColumn = {
       title: 'For Companies',
       description:
         'Free for early-stage startups and powerful for scaling companies, choose the plan that suits your company',
-      icon: 'hr',
+      icon: 'company',
     },
     {
       link: 'investor-pricing',
       title: 'For Investors',
       description: 'Free for business angels, powerful for professional investors',
-      icon: 'hr',
+      icon: 'investor',
     },
   ],
 };
