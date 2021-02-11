@@ -36,17 +36,6 @@ declare type CustomerStoryBaseProps = AllContentfulCustomerStoryProps & {
 
 declare type CustomerStoryProps = CustomerStoryBaseProps & { content: Mdx; language: Language };
 
-declare type IconType =
-  | 'calculator'
-  | 'chart'
-  | 'documents'
-  | 'hr'
-  | 'lock'
-  | 'map'
-  | 'moneybag'
-  | 'robot'
-  | 'rocket';
-
 declare type FeatureGridSectionProps = { icon: IconType; title: string; description: string };
 
 declare type FeatureGridContentProps = Id & {

@@ -27,3 +27,14 @@ declare type FormStatus =
   | 'invalid-required-fields'
   | 'fetch-error'
   | 'submitted';
+
+declare type IconType =
+  | 'calculator'
+  | 'chart'
+  | 'documents'
+  | 'hr'
+  | 'lock'
+  | 'map'
+  | 'moneybag'
+  | 'robot'
+  | 'rocket';

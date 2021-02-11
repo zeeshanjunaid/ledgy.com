@@ -59,75 +59,116 @@ const socialLinks: SocialLink[] = [
 export const FOOTER_LINKS = { companyLinks, legalLinks, productLinks, resourceLinks, socialLinks };
 
 export const NAVBAR_TITLES = {
-  featuresTitle: 'Features',
+  solutionsTitle: 'Solutions',
   resourcesTitle: 'Resources',
   pricingTitle: 'Pricing',
   dataProtectionTitle: 'Data protection',
 };
 
-export type NavbarMenuItem = [string, string, string?];
+export type NavbarMenuItem = { icon: IconType; title: string; description: string; link: string };
+export type NavbarMenuColumn = { items: NavbarMenuItem[]; header?: string };
 
-const features: NavbarMenuItem[] = [
-  [
-    'finance',
-    'For Finance',
-    'All-in-one solution for your company’s cap table, equity plans, modeling, investor relations, due diligence and document signing automation.',
+const teams: NavbarMenuColumn = {
+  header: 'Teams',
+  items: [
+    {
+      link: 'human-resources',
+      title: 'HR & Compensation',
+      description: 'Automated equity plans, employee dashboards',
+      icon: 'hr',
+    },
+    {
+      link: 'finance',
+      title: 'Finance & legal',
+      description: 'Cap table, scenario modeling, investor relations',
+      icon: 'calculator',
+    },
+    {
+      link: 'investors',
+      title: 'Business Angels & VCs',
+      description: 'Portfolio management, real-time company insights',
+      icon: 'rocket',
+    },
   ],
-  [
-    'human-resources',
-    'For Human Resources',
-    'Equity plans on autopilot, with document signing batch processing for any number of employee grants and an engaging employee dashboard.',
-  ],
-  [
-    'investors',
-    'For Investors',
-    'Flexible reporting and portfolio management solution for business angels, professional investors and funds.',
-  ],
-];
+};
 
-const resources: NavbarMenuItem[] = [
-  [helpUrl, 'Help', 'Get started quickly with Ledgy or dive deeper into how the features work'],
-  [
-    'blog',
-    'Blog',
-    'Background stories about equity topics, founder and investor interviews and more to explore',
+const learn: NavbarMenuColumn = {
+  header: 'Learn',
+  items: [
+    {
+      link: helpUrl,
+      title: 'Help',
+      description: 'Get quickly started with Ledgy or dive deeper into how the features work',
+      icon: 'hr',
+    },
+    {
+      link: 'webinars',
+      title: 'Webinars',
+      description:
+        'Regular short webinars give a quick introduction in many equity and Ledgy-related topics',
+      icon: 'hr',
+    },
   ],
-  [
-    'webinars',
-    'Webinars',
-    'Regular short webinars give a quick introduction in many equity and Ledgy related topics',
-  ],
-  ['customer-stories', 'Customer Stories', 'Learn what Ledgy’s customers have to say'],
-  [
-    'sustainability',
-    'Sustainability',
-    'Learn how Ledgy strives to be a role model for the new economy',
-  ],
-  [
-    'calculator',
-    'Funding Round Calculator',
-    'The calculator you need if you’re raising capital, no signup required',
-  ],
-  [
-    'employee-participation-plan-templates',
-    'ESOP Templates',
-    'Access employee participation plan templates developed with leading law firms for free',
-  ],
-];
+};
 
-const pricing: NavbarMenuItem[] = [
-  [
-    'company-pricing',
-    'For Companies',
-    'Free for early-stage startups and powerful for scaling companies, choose the plan that suits your company',
+const explore: NavbarMenuColumn = {
+  header: 'Explore',
+  items: [
+    {
+      link: 'blog',
+      title: 'Blog',
+      description:
+        'Background stories about equity topics, founder and investor interviews and more to explore',
+      icon: 'hr',
+    },
+    {
+      link: 'customer-stories',
+      title: 'Customer Stories',
+      description: 'Learn what Ledgy’s customers have to say',
+      icon: 'hr',
+    },
   ],
-  [
-    'investor-pricing',
-    'For Investors',
-    'Free for business angels, powerful for professional investors',
+};
+
+const tools: NavbarMenuColumn = {
+  header: 'Tools',
+  items: [
+    {
+      link: 'employee-participation-plan-templates',
+      title: 'ESOP Templates',
+      description:
+        'Access employee participation plan templates developed with leading law firms for free',
+      icon: 'hr',
+    },
+    {
+      link: 'calculator',
+      title: 'Funding Round Calculator',
+      description: 'The calculator you need if you’re raising capital, no signup required',
+      icon: 'hr',
+    },
   ],
-];
+};
 
-const dataProtection: NavbarMenuItem[] = [['data-protection', 'Learn about security']];
+const pricingTypes: NavbarMenuColumn = {
+  items: [
+    {
+      link: 'company-pricing',
+      title: 'For Companies',
+      description:
+        'Free for early-stage startups and powerful for scaling companies, choose the plan that suits your company',
+      icon: 'hr',
+    },
+    {
+      link: 'investor-pricing',
+      title: 'For Investors',
+      description: 'Free for business angels, powerful for professional investors',
+      icon: 'hr',
+    },
+  ],
+};
 
-export const NAVBAR_LINKS = { features, resources, pricing, dataProtection };
+const solutions: NavbarMenuColumn[] = [teams];
+const resources: NavbarMenuColumn[] = [learn, explore, tools];
+const pricing: NavbarMenuColumn[] = [pricingTypes];
+
+export const NAVBAR_LINKS = { solutions, resources, pricing };
