@@ -188,11 +188,14 @@
 
 .hover-list-child.resources-dd {
   width: 800px;
+  & .list-item-hover {
+    height: 140px;
+  }
   @include media-breakpoint-up(xl) {
     width: 1000px;
-  }
-  & .list-item-hover {
-    height: 120px;
+    & .list-item-hover {
+      height: 120px;
+    }
   }
 }
 

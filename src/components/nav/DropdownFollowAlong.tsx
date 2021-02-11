@@ -14,17 +14,16 @@ import { targetBlank } from '../../helpers';
 import { DynamicTrans } from '../DynamicTrans';
 import { Icon } from '../Icon';
 
-type ListItemProps = { title: string; isTextShown: boolean; prefix: string };
-
-type ParentListItemProps = ListItemProps & {
-  eventHandlingProps: {
-    onMouseEnter: (e: MouseEvent) => void;
-    onMouseLeave: (e: MouseEvent) => void;
+type CommonListProps = { prefix: string; isTextShown: boolean };
+type ParentListItemProps = { title: string } & CommonListProps & {
+    eventHandlingProps: {
+      onMouseEnter: (e: MouseEvent) => void;
+      onMouseLeave: (e: MouseEvent) => void;
+    };
+    menuColumns: NavbarMenuColumn[];
+    disappear: () => void;
+    className: string;
   };
-  menuColumns: NavbarMenuColumn[];
-  disappear: () => void;
-  className: string;
-};
 
 const NAV_ID = 'custom-hover-nav';
 const getNavbar = () => document.getElementById(NAV_ID);
@@ -37,7 +36,7 @@ const ListItem = ({
   prefix,
   onClick,
   isTextShown,
-}: NavbarMenuItem & { onClick: () => void; prefix: string; isTextShown: boolean }) => {
+}: NavbarMenuItem & CommonListProps & { onClick: () => void }) => {
   const itemContent = (
     <div className="d-flex">
       <Icon icon={icon} className="mt-3 mr-2" height={30} width={30} />
@@ -53,7 +52,7 @@ const ListItem = ({
   );
 
   return (
-    <li className={`list-item-hover p-2 ${isTextShown ? 'show' : 'hide'}`}>
+    <div className={`list-item-hover p-2 ${isTextShown ? 'show' : 'hide'}`}>
       {isExternalUrl(link) ? (
         <a href={link} onClick={onClick} {...targetBlank}>
           {itemContent}
@@ -63,7 +62,7 @@ const ListItem = ({
           {itemContent}
         </Link>
       )}
-    </li>
+    </div>
   );
 };
 
