@@ -505,7 +505,7 @@ $padding-lg: 3rem;
 
 // Rounded screenshots
 .screenshot {
-  box-shadow: $box-shadow-light;
+  box-shadow: $box-shadow-wide;
   position: relative;
   z-index: $zindex-base;
   border-radius: 8px;

@@ -120,25 +120,18 @@
   transition: 400ms;
 }
 
+$background-border: 1px solid $gray-500;
+
 .dropdown-background {
+  border: $background-border;
   z-index: $zindex-popup;
   width: 100px;
   height: 100px;
   border-radius: 0.25rem;
-  box-shadow: 0 0 5px 1px $gray-700;
+  box-shadow: $box-shadow;
   transform-origin: 50% 0;
   transform: translateY($navbar-min-height);
   position: relative;
-  &::after {
-    position: absolute;
-    content: '';
-    left: 0;
-    bottom: 0;
-    height: 100%;
-    border-radius: 0.25rem 0 0 0.25rem;
-    width: 10px;
-    background-color: $light-energetic-blue;
-  }
 }
 
 .dropdown-background-transition-enter {
@@ -162,9 +155,10 @@
   height: 14px;
   display: block;
   background: $white;
-  transform: translateY(-50%) rotate(45deg);
-  box-shadow: -2px -2px 4px -2px $gray-700;
+  transform: translateY(-55%) rotate(45deg);
   border-radius: 0.25rem 0 0 0;
+  border-left: $background-border;
+  border-top: $background-border;
 }
 
 .column-header {
