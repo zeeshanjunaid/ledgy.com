@@ -9,15 +9,18 @@ import { removeOverlay } from '../lib';
 
 export const NavbarButtons = ({
   className = '',
+  isLightBg,
   isMobile = false,
   prefix,
 }: {
   prefix: string;
+  isLightBg: boolean;
   className?: string;
   isMobile?: boolean;
 }) => (
   <div className={`d-flex align-items-center ${className}`}>
     <Button
+      inverted={isLightBg}
       outline={!isMobile}
       href={`${appUrl}/login`}
       className="px-3 py-1"
@@ -26,7 +29,7 @@ export const NavbarButtons = ({
       <Trans>Log In</Trans>
     </Button>
     <Link to={`${prefix}${demoPage}`} onClick={removeOverlay}>
-      <Button inverted outline={isMobile} className="ml-2 px-3 py-1">
+      <Button inverted={!isLightBg} outline={isMobile} className="ml-2 px-3 py-1">
         <Trans>Book a Demo</Trans>
       </Button>
     </Link>
