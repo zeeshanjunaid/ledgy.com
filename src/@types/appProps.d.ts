@@ -33,6 +33,7 @@ declare type IconType =
   | 'calculator'
   | 'chart'
   | 'company'
+  | 'dach'
   | 'documents'
   | 'help'
   | 'hr'
@@ -40,8 +41,10 @@ declare type IconType =
   | 'lock'
   | 'map'
   | 'moneybag'
+  | 'nordics'
   | 'robot'
   | 'rocket'
   | 'story'
   | 'template'
+  | 'uk'
   | 'video';
