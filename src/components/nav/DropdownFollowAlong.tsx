@@ -52,7 +52,7 @@ const ListItem = ({
   );
 
   return (
-    <div className={`list-item-hover p-2 ${isTextShown ? 'show' : 'hide'}`}>
+    <div className={`list-item-hover px-3 py-2 ${isTextShown ? 'show' : 'hide'}`}>
       {isExternalUrl(link) ? (
         <a href={link} onClick={onClick} {...targetBlank}>
           {itemContent}
