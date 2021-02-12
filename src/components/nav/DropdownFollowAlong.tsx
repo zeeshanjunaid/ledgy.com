@@ -1,6 +1,7 @@
 import React, { useState, MouseEvent } from 'react';
 import { Link } from 'gatsby';
 import { CSSTransition } from 'react-transition-group';
+import { Fade } from 'react-awesome-reveal';
 
 import {
   NAVBAR_TITLES,
@@ -80,24 +81,28 @@ const DropdownItem = ({
       <DynamicTrans>{parentTitle}</DynamicTrans>
     </p>
     <div className={`hover-list-child ${className}`}>
-      {menuColumns.map((column, i) => {
+      {menuColumns.map((column, columnIndex) => {
         const { items, header } = column;
         return (
-          <div key={`${header}-${i}`} className="flex-1 px-2">
+          <div key={`${header}-${columnIndex}`} className="flex-1 px-2">
             {!!header && (
               <h6 className="column-header text-gray-neutral my-2">
                 <DynamicTrans>{header.toUpperCase()}</DynamicTrans>
               </h6>
             )}
-            {items.map((item) => (
-              <ListItem
-                {...item}
-                prefix={prefix}
-                key={item.link}
-                onClick={disappear}
-                isTextShown={isTextShown}
-              />
-            ))}
+            {items.map((item, itemIndex) => {
+              const delay = columnIndex * 250 + itemIndex * 200;
+              return (
+                <Fade duration={700} delay={delay} key={item.link}>
+                  <ListItem
+                    {...item}
+                    prefix={prefix}
+                    onClick={disappear}
+                    isTextShown={isTextShown}
+                  />
+                </Fade>
+              );
+            })}
           </div>
         );
       })}

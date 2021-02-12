@@ -120,10 +120,7 @@
   transition: 400ms;
 }
 
-$background-border: 1px solid $gray-500;
-
 .dropdown-background {
-  border: $background-border;
   z-index: $zindex-popup;
   width: 100px;
   height: 100px;
@@ -157,8 +154,6 @@ $background-border: 1px solid $gray-500;
   background: $white;
   transform: translateY(-55%) rotate(45deg);
   border-radius: 0.25rem 0 0 0;
-  border-left: $background-border;
-  border-top: $background-border;
 }
 
 .column-header {

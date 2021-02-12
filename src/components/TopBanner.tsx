@@ -1,11 +1,12 @@
 import React from 'react';
 import Img from 'gatsby-image';
+import { t } from '@lingui/macro';
+
+import { demoPage } from '../helpers';
 import { RequestDemoButton } from './RequestDemoButton';
 import { Button } from './Button';
 import { DynamicTrans } from './DynamicTrans';
-import { t } from '@lingui/macro';
 import { TopBannerLayout } from './TopBannerLayout';
-import { demoPage } from '../helpers';
 
 const CustomButton = ({ url, text }: { url: string; text: string }) => (
   <Button href={url} className="btn-xl mx-1 my-1 align-self-center" inverted outline>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { Roll } from 'react-awesome-reveal';
 
 import { targetBlank } from '../helpers';
 import { Button } from './Button';
@@ -31,14 +32,14 @@ export const CallToAction = ({
         <p className="mb-4">
           <DynamicTrans>{description}</DynamicTrans>
         </p>
-        <div className="d-flex align-items-center">
+        <div className="d-flex align-items-center flex-wrap">
           <Link to={formatUrl(prefix, buttonPath)}>
-            <Button className="btn-xl mr-4">
+            <Button className="btn-xl mr-4 mb-4">
               <DynamicTrans>{buttonText}</DynamicTrans>
             </Button>
           </Link>
           {!!(externalLinkText && externalLinkUrl) && (
-            <a href={externalLinkUrl} {...targetBlank}>
+            <a href={externalLinkUrl} {...targetBlank} className="mb-4">
               <DynamicTrans>{externalLinkText}</DynamicTrans>
             </a>
           )}
@@ -46,7 +47,9 @@ export const CallToAction = ({
       </div>
       <div className="col-md-4">
         <div className="left-border-with-accent left-border-with-accent-lg">
-          <Icon icon={icon} className="mb-3" height={50} width={50} />
+          <Roll delay={1000}>
+            <Icon icon={icon} className="mb-3" height={50} width={50} />
+          </Roll>
           <div>
             <p className="accent-border font-weight-semi-bold mb-2">
               <DynamicTrans>{secondaryHeader}</DynamicTrans>

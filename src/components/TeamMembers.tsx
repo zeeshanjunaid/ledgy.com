@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 import Img, { GatsbyImageFluidProps } from 'gatsby-image';
+import { Fade } from 'react-awesome-reveal';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
@@ -23,7 +24,7 @@ const TeamMember = ({
 }) => {
   const ProfileImage = <Img {...img} className="mx-auto" alt={name} />;
   return (
-    <div className="ledgista col-12 col-md-6 col-lg-4">
+    <Fade className="ledgista col-12 col-md-6 col-lg-4" delay={300}>
       <div className="pb-6 h-100 d-flex flex-column align-items-center justify-content-between">
         <div className="d-flex flex-column align-items-center">
           <div className="ledgista-image-wrapper">
@@ -49,7 +50,7 @@ const TeamMember = ({
           </a>
         </div>
       </div>
-    </div>
+    </Fade>
   );
 };
 
