@@ -55,7 +55,7 @@ const CompanyPricing = ({ prefix }: Props) => {
             }
             description={
               <Trans>
-                You get a 20% discount on Premium if your startup helps reduce carbon emissions.{' '}
+                You get a 20% discount on Growth if your startup helps reduce carbon emissions.{' '}
                 <a href="mailto:sales@ledgy.com?subject=Eco-Friendly Discount Application">
                   Tell us about your impact!
                 </a>
