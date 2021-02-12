@@ -33,6 +33,22 @@ exports.onCreatePage = async ({ page, actions }) => {
   });
 };
 
+// schema customization to allow Gatsby to query optional Contentful fields
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions;
+  const typeDefinitions = `
+    type ContentfulCallToAction2021 implements Node {
+      externalLinkText: String
+      externalLinkUrl: String
+    }
+    type ContentfulTestimonialCardBuildingBlock implements Node {
+      linkText: String
+      linkPath: String
+    }
+  `;
+  createTypes(typeDefinitions);
+};
+
 const pageQuery = `
       {
         allContentfulPage(limit: 1000) {

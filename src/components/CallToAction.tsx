@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import { targetBlank } from '../helpers';
 import { Button } from './Button';
 import { DynamicTrans } from './DynamicTrans';
-import { formatUrl } from './lib';
+import { formatUrl, isExternalUrl } from './lib';
 import { Icon } from './Icon';
 import { Section } from './Section';
 
@@ -55,9 +55,15 @@ export const CallToAction = ({
           <p className="mb-2">
             <DynamicTrans>{secondaryDescription}</DynamicTrans>
           </p>
-          <Link to={formatUrl(prefix, secondaryLinkPath)}>
-            <DynamicTrans>{secondaryLinkText}</DynamicTrans>
-          </Link>
+          {isExternalUrl(secondaryLinkPath) ? (
+            <a href={secondaryLinkPath} {...targetBlank}>
+              <DynamicTrans>{secondaryLinkText}</DynamicTrans>
+            </a>
+          ) : (
+            <Link to={formatUrl(prefix, secondaryLinkPath)}>
+              <DynamicTrans>{secondaryLinkText}</DynamicTrans>
+            </Link>
+          )}
         </div>
       </div>
     </div>
