@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { Roll } from 'react-awesome-reveal';
 
 import { targetBlank } from '../helpers';
 import { Button } from './Button';
@@ -47,9 +46,7 @@ export const CallToAction = ({
       </div>
       <div className="col-md-4">
         <div className="left-border-with-accent left-border-with-accent-lg">
-          <Roll delay={1000}>
-            <Icon icon={icon} className="mb-3" height={50} width={50} />
-          </Roll>
+          <Icon icon={icon} className="mb-3" height={50} width={50} />
           <div>
             <p className="accent-border font-weight-semi-bold mb-2">
               <DynamicTrans>{secondaryHeader}</DynamicTrans>
