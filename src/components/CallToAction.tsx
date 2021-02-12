@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import { targetBlank } from '../helpers';
 import { Button } from './Button';
 import { DynamicTrans } from './DynamicTrans';
-import { formatUrl, isExternalUrl } from './lib';
+import { formatUrl } from './lib';
 import { Icon } from './Icon';
 import { Section } from './Section';
+import { LinkWithChevron } from './LinkWithChevron';
 
 export const CallToAction = ({
   header,
@@ -38,9 +38,12 @@ export const CallToAction = ({
             </Button>
           </Link>
           {!!(externalLinkText && externalLinkUrl) && (
-            <a href={externalLinkUrl} {...targetBlank} className="mb-4">
-              <DynamicTrans>{externalLinkText}</DynamicTrans>
-            </a>
+            <LinkWithChevron
+              to={externalLinkUrl}
+              text={externalLinkText}
+              className="mb-4"
+              prefix={prefix}
+            />
           )}
         </div>
       </div>
@@ -55,15 +58,7 @@ export const CallToAction = ({
           <p className="mb-2">
             <DynamicTrans>{secondaryDescription}</DynamicTrans>
           </p>
-          {isExternalUrl(secondaryLinkPath) ? (
-            <a href={secondaryLinkPath} {...targetBlank}>
-              <DynamicTrans>{secondaryLinkText}</DynamicTrans>
-            </a>
-          ) : (
-            <Link to={formatUrl(prefix, secondaryLinkPath)}>
-              <DynamicTrans>{secondaryLinkText}</DynamicTrans>
-            </Link>
-          )}
+          <LinkWithChevron to={secondaryLinkPath} text={secondaryLinkText} prefix={prefix} />
         </div>
       </div>
     </div>

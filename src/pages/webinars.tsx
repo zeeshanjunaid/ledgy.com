@@ -22,11 +22,12 @@ const Webinars = ({ data }: Props) => (
         const { id, youtube, description } = node;
         return (
           <PostLink
-            external
             key={id}
             to={youtube}
             post={node}
             description={<MDXRenderer>{description.childMdx.body}</MDXRenderer>}
+            prefix={data.prefix}
+            isExternal
           />
         );
       })}

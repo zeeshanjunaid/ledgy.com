@@ -115,10 +115,6 @@ $small-width: 560px;
   max-width: 832.5px;
 }
 
-.adjust-bottom {
-  margin-bottom: 1px;
-}
-
 .width-fit-content {
   width: fit-content;
 }
@@ -181,5 +177,5 @@ $small-width: 560px;
 
 .card-border-style {
   border-radius: 10px;
-  box-shadow: $box-shadow-light;
+  box-shadow: $box-shadow-wide;
 }

@@ -4,6 +4,7 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import VisibilitySensor from 'react-visibility-sensor';
 
 import { DynamicTrans } from './DynamicTrans';
+import { LinkWithChevron } from './LinkWithChevron';
 
 const handleScrollBehavior = (
   sectionRef: MutableRefObject<HTMLElement | null>,
@@ -32,7 +33,8 @@ export const ContentWithChecklist = ({
   linkText,
   linkUrl,
   checklist,
-}: ContentWithChecklistProps) => {
+  prefix,
+}: ContentWithChecklistProps & { prefix: string }) => {
   const sectionRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -58,9 +60,7 @@ export const ContentWithChecklist = ({
                 <p>
                   <DynamicTrans>{description}</DynamicTrans>
                 </p>
-                <a href={linkUrl}>
-                  <DynamicTrans>{linkText}</DynamicTrans>
-                </a>
+                <LinkWithChevron to={linkUrl} text={linkText} prefix={prefix} />
               </div>
             </div>
             <div className="col-md-6">

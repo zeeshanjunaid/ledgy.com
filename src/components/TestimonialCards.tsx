@@ -2,9 +2,9 @@ import React from 'react';
 import Img from 'gatsby-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Section } from './Section';
-import { DynamicTrans } from './DynamicTrans';
+import { LinkWithChevron } from './LinkWithChevron';
 
-const TestimonialCard = ({ card }: { card: TestimonialCardProps }) => {
+const TestimonialCard = ({ card, prefix }: { card: TestimonialCardProps; prefix: string }) => {
   const { logo, signature, text, linkText, linkPath } = card;
   const { childImageSharp } = logo?.localFile || {};
 
@@ -20,9 +20,12 @@ const TestimonialCard = ({ card }: { card: TestimonialCardProps }) => {
         <div className="d-flex justify-content-between">
           <p className="my-0 text-muted flex-1">{signature}</p>
           {!!(linkText && linkPath) && (
-            <a href={linkPath} className="my-0 d-flex align-items-end justify-content-end flex-1">
-              <DynamicTrans>{linkText}</DynamicTrans>
-            </a>
+            <LinkWithChevron
+              to={linkPath}
+              text={linkText}
+              className="my-0 d-flex align-items-end justify-content-end flex-1"
+              prefix={prefix}
+            />
           )}
         </div>
       </div>
@@ -30,11 +33,11 @@ const TestimonialCard = ({ card }: { card: TestimonialCardProps }) => {
   );
 };
 
-export const TestimonialCards = ({ cards }: TestimonialCardsProps) => (
+export const TestimonialCards = ({ cards, prefix }: TestimonialCardsProps & { prefix: string }) => (
   <Section>
     <div className="row">
       {cards.map((v) => (
-        <TestimonialCard key={v.signature} card={v} />
+        <TestimonialCard key={v.signature} card={v} prefix={prefix} />
       ))}
     </div>
   </Section>

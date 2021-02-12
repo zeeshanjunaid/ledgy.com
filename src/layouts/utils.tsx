@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import { Helmet } from 'react-helmet';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { name } from '../helpers';
 
 export const Title = (props: {
@@ -32,10 +32,6 @@ export const Li = ({ children }: { children: ReactNode }) => (
     <FontAwesomeIcon icon={faCheck} className="text-success mr-1 mt-1" />
     <div className="media-body ml-3">{children}</div>
   </li>
-);
-
-export const ChevronRight = () => (
-  <FontAwesomeIcon icon={faChevronRight} className="fs-12 ml-2 adjust-bottom swinging" />
 );
 
 export const Hr = ({ marginX }: { marginX?: number }) => (

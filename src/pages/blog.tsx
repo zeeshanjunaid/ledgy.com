@@ -20,9 +20,10 @@ const Blog = ({ data, prefix }: Props) => {
           return (
             <PostLink
               key={id}
-              to={`${prefix}/blog/${slug}`}
+              to={`blog/${slug}`}
               post={node}
               description={postDescription}
+              prefix={prefix}
             />
           );
         })}

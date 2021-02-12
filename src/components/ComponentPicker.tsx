@@ -33,13 +33,13 @@ export const ComponentPicker = ({
       return <FeatureGrid {...entry} />;
 
     case 'ContentfulTestimonialCards':
-      return <TestimonialCards {...entry} />;
+      return <TestimonialCards {...entry} prefix={prefix} />;
 
     case 'ContentfulTitleWithGraphic':
       return <TitleWithGraphic {...entry} />;
 
     case 'ContentfulContentWithChecklist':
-      return <ContentWithChecklist {...entry} />;
+      return <ContentWithChecklist {...entry} prefix={prefix} />;
 
     case 'ContentfulChecklistWithScreenshot':
       return <ChecklistWithScreenshot {...entry} />;
