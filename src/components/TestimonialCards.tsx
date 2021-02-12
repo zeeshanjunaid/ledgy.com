@@ -18,9 +18,9 @@ const TestimonialCard = ({ card }: { card: TestimonialCardProps }) => {
           </div>
         </div>
         <div className="d-flex justify-content-between">
-          <p className="my-0 text-muted">{signature}</p>
+          <p className="my-0 text-muted flex-1">{signature}</p>
           {!!(linkText && linkPath) && (
-            <a href={linkPath} className="my-0 ">
+            <a href={linkPath} className="my-0 d-flex align-items-end justify-content-end flex-1">
               <DynamicTrans>{linkText}</DynamicTrans>
             </a>
           )}
