@@ -63,12 +63,12 @@ const FooterLinks = ({
 
 export const Footer = ({ location, ...props }: LayoutProps) => {
   const { pathname } = location;
-  const isPartners = pathname.includes('partners') || pathname.includes('hiddenBoost');
+  const hideOldCTA = pathname.includes('partners') || pathname.includes('hiddenBoost');
   const { prefix } = props;
 
   return (
     <div>
-      {isPartners ? '' : <CTABanner location={location} {...props} />}
+      {hideOldCTA ? '' : <CTABanner location={location} {...props} />}
       <footer className="footer py-8 px-2 px-md-4 text-white bg-primary overflow-hidden position-relative">
         <div className="footer-deco-shape" />
         <div className="container">

@@ -1,6 +1,8 @@
 
 .navbar {
   min-height: $navbar-min-height;
+  will-change: top;
+  transition: 200ms;
   .btn {
     white-space: nowrap;
   }
