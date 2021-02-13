@@ -12,10 +12,10 @@ const handleScrollBehavior = (
   listCount: number
 ) => (isVisible: boolean) => {
   if (!isVisible) {
-    window.onscroll = () => null;
+    document.onscroll = () => null;
     return;
   }
-  window.onscroll = () => {
+  document.onscroll = () => {
     const { current } = sectionRef || {};
     if (!current) return;
     const bounding = current.getBoundingClientRect();

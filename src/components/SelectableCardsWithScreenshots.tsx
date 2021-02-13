@@ -11,15 +11,15 @@ const SelectableCard = ({
   description,
   index,
   activeIndex,
-  setActiveIndex,
   observer,
+  onClick,
 }: {
   header: string;
   description: string;
   index: number;
   activeIndex: number;
-  setActiveIndex: (i: number) => void;
   observer: ResizeObserver | null;
+  onClick: (i: number) => void;
 }) => {
   const ref = useRef(null);
   const isActive = activeIndex === index;
@@ -29,18 +29,10 @@ const SelectableCard = ({
     const card = ref.current;
     if (card && observer) observer.observe(card);
   }, [activeIndex]);
-
   return (
     <div
       ref={ref}
-      onClick={() => {
-        window.scrollTo({
-          top: 100,
-          left: 0,
-          behavior: 'smooth',
-        });
-        setActiveIndex(index);
-      }}
+      onClick={() => onClick(index)}
       className={`selectable-card flex-1 d-flex flex-column justify-content-center p-2 pl-4 pt-lg-3 pr-lg-3 pb-lg-3 ${backgroundColor}`}
     >
       <h5>
@@ -53,7 +45,9 @@ const SelectableCard = ({
   );
 };
 
-const goThroughCardsOnScroll = ({
+const HEIGHT_CORRECTOR = 300;
+
+const handleScroll = ({
   wrapperRef,
   interval,
   activeIndex,
@@ -67,9 +61,8 @@ const goThroughCardsOnScroll = ({
   const { current } = wrapperRef || {};
   if (!current) return;
   const bounding = current.getBoundingClientRect();
-  if (!bounding) return;
   const { top } = bounding;
-  const correctedTop = Math.round(top) - 300;
+  const correctedTop = Math.round(top) - HEIGHT_CORRECTOR;
   if (correctedTop > 0) {
     setActiveIndex(0);
     return;
@@ -116,22 +109,30 @@ export const SelectableCardsWithScreenshots = ({
   useEffect(() => {
     if (isBrowser) {
       const handleResize = () => setWindowHeight(window.innerHeight);
-      window.addEventListener('resize', throttle(handleResize, 150));
-      window.addEventListener(
-        'scroll',
-        throttle(
-          () => goThroughCardsOnScroll({ wrapperRef, interval, activeIndex, setActiveIndex }),
-          100
-        )
-      );
+      window.onresize = () => {
+        throttle(handleResize, 150);
+      };
+      window.onscroll = () => {
+        handleScroll({ wrapperRef, interval, activeIndex, setActiveIndex });
+      };
       return () => {
-        window.removeEventListener('resize', handleResize);
-        window.removeEventListener('scroll', () =>
-          goThroughCardsOnScroll({ wrapperRef, interval, activeIndex, setActiveIndex })
-        );
+        window.onresize = () => null;
+        window.onscroll = () => null;
       };
     }
-  }, [isBrowser]);
+  }, [isBrowser, activeIndex]);
+
+  const handleCardClick = (i: number) => {
+    window.onscroll = () => null;
+    window.scrollTo({
+      top: i * interval + window.innerHeight - HEIGHT_CORRECTOR,
+      left: 0,
+      behavior: 'smooth',
+    });
+    setTimeout(() => {
+      setActiveIndex(i);
+    }, 300);
+  };
 
   return (
     <Section>
@@ -162,8 +163,8 @@ export const SelectableCardsWithScreenshots = ({
                       key={v.header}
                       index={i}
                       activeIndex={activeIndex}
-                      setActiveIndex={setActiveIndex}
                       observer={observer}
+                      onClick={handleCardClick}
                     />
                   ))}
                 </div>

@@ -25,7 +25,7 @@ const Logo = (props: LayoutProps) => {
 
 const toggleNav = (navRef: MutableRefObject<HTMLElement | null>) => {
   let initialOffset = window.pageYOffset;
-  document.onscroll = () => {
+  window.addEventListener('scroll', () => {
     const currentOffset = window.pageYOffset;
     const { current } = navRef || {};
     if (current) {
@@ -36,7 +36,7 @@ const toggleNav = (navRef: MutableRefObject<HTMLElement | null>) => {
       }
       initialOffset = currentOffset;
     }
-  };
+  });
 };
 
 export const Nav = (props: LayoutProps) => {
