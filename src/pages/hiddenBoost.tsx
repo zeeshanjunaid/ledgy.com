@@ -14,7 +14,7 @@ const HiddenBoostPage = (props: Props) => {
   const restOfComponents = entries.filter((entry) => !isTopPageComponent(entry.__typename));
 
   return (
-    <main className="main-wrapper-1 overflow-hidden">
+    <main className="main-wrapper-1">
       <div className="main-wrapper-2">
         <div className="top-page-wrapper d-flex flex-column justify-content-between">
           <span />
