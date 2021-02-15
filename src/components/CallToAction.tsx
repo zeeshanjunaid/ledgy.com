@@ -7,6 +7,7 @@ import { formatUrl } from './lib';
 import { Icon } from './Icon';
 import { Section } from './Section';
 import { LinkWithChevron } from './LinkWithChevron';
+import { SectionHeader } from './SectionHeader';
 
 export const CallToAction = ({
   header,
@@ -22,12 +23,10 @@ export const CallToAction = ({
   secondaryLinkPath,
   prefix,
 }: { prefix: string } & CallToActionProps) => (
-  <Section className="my-4">
+  <Section>
     <div className="row">
       <div className="col-md-8 mb-4 mb-md-2 pr-5">
-        <h2 className="mb-4">
-          <DynamicTrans>{header}</DynamicTrans>
-        </h2>
+        <SectionHeader header={header} className="m-0" />
         <p className="mb-4">
           <DynamicTrans>{description}</DynamicTrans>
         </p>

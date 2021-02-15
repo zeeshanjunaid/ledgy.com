@@ -2,6 +2,7 @@ import React from 'react';
 import Img from 'gatsby-image';
 
 import { DynamicTrans } from '../DynamicTrans';
+import { SectionHeader } from '../SectionHeader';
 
 export const MobileCardsWithScreenshots = ({
   title,
@@ -9,9 +10,7 @@ export const MobileCardsWithScreenshots = ({
 }: SelectableCardsWithScreenshotsProps) => {
   return (
     <div className="d-lg-none">
-      <h2 className="pb-4 text-center">
-        <DynamicTrans>{title}</DynamicTrans>
-      </h2>
+      <SectionHeader header={title} className="text-center" />
       {content.map((v) => {
         const { header, screenshot, description } = v;
         const { childImageSharp } = screenshot.localFile || {};

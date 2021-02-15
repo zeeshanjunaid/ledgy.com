@@ -4,6 +4,7 @@ import { Slide } from 'react-awesome-reveal';
 import { DynamicTrans } from './DynamicTrans';
 import { Icon } from './Icon';
 import { Section } from './Section';
+import { SectionHeader } from './SectionHeader';
 
 const FeatureGridCard = ({
   featureGridSection,
@@ -30,9 +31,7 @@ const FeatureGridCard = ({
 
 export const FeatureGrid = ({ header, sections }: FeatureGridContentProps) => (
   <Section>
-    <h2 className="text-left text-weight-bold mb-5">
-      <DynamicTrans>{header}</DynamicTrans>
-    </h2>
+    <SectionHeader header={header} />
     <div className="row my-4">
       {sections.map((v, i) => (
         <FeatureGridCard key={v.title} index={i} featureGridSection={v} />

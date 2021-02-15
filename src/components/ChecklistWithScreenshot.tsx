@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { DynamicTrans } from './DynamicTrans';
 import { Section } from './Section';
+import { SectionHeader } from './SectionHeader';
 
 export const ChecklistWithScreenshot = ({
   header,
@@ -20,9 +21,7 @@ export const ChecklistWithScreenshot = ({
 
   return (
     <Section>
-      <h2 className="mb-4 text-left">
-        <DynamicTrans>{header}</DynamicTrans>
-      </h2>
+      <SectionHeader header={header} />
       <div className="row">
         <div className={`${order} col-lg-4 pr-4 d-flex flex-column justify-content-center`}>
           <p className="text-deep-blue mb-4">

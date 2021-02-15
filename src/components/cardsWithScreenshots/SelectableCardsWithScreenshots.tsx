@@ -3,12 +3,12 @@ import Img from 'gatsby-image';
 import { throttle } from 'lodash';
 
 import { isBrowser } from '../../helpers';
-import { DynamicTrans } from '../DynamicTrans';
 import { Section } from '../Section';
 
 import { handleCardClick, handleScroll, getEntriesHeight } from './lib';
 import { SelectableCard } from './SelectableCard';
 import { MobileCardsWithScreenshots } from './MobileCardsWithScreenshots';
+import { SectionHeader } from '../SectionHeader';
 
 export const SelectableCardsWithScreenshots = (props: SelectableCardsWithScreenshotsProps) => {
   const { title, content } = props;
@@ -59,9 +59,7 @@ export const SelectableCardsWithScreenshots = (props: SelectableCardsWithScreens
       <MobileCardsWithScreenshots {...props} />
       <div ref={wrapperRef} className="d-none d-lg-block" style={{ height: `${scrollDistance}px` }}>
         <div className="position-sticky" style={stickyStyle}>
-          <h2 className="pb-4 text-center">
-            <DynamicTrans>{title}</DynamicTrans>
-          </h2>
+          <SectionHeader header={title} className="text-center" />
           <div className="row">
             <div className="col-8 pr-0">
               {content.map((v, i) => {

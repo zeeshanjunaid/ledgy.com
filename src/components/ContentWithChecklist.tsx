@@ -5,6 +5,7 @@ import VisibilitySensor from 'react-visibility-sensor';
 
 import { DynamicTrans } from './DynamicTrans';
 import { LinkWithChevron } from './LinkWithChevron';
+import { SectionHeader } from './SectionHeader';
 
 const handleScrollBehavior = (
   sectionRef: MutableRefObject<HTMLElement | null>,
@@ -56,9 +57,7 @@ export const ContentWithChecklist = ({
           <div className="row">
             <div className={`${order} col-md-6 mb-4 mb-md-0`}>
               <div className="d-flex flex-column justify-content-center h-100">
-                <h2 className="mb-4">
-                  <DynamicTrans>{header}</DynamicTrans>
-                </h2>
+                <SectionHeader header={header} className="m-0" />
                 <p>
                   <DynamicTrans>{description}</DynamicTrans>
                 </p>

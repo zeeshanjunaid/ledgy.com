@@ -10,7 +10,7 @@ const TestimonialCard = ({ card, prefix }: { card: TestimonialCardProps; prefix:
 
   return (
     <div className="col-12 mb-4 mb-xl-0 col-xl-6">
-      <div className="p-3 p-md-4 p-lg-5 card-border-style h-100 d-flex flex-column justify-content-between">
+      <div className="p-4 p-lg-5 card-border-style h-100 d-flex flex-column justify-content-between">
         <div>
           {!!childImageSharp && <Img {...childImageSharp} />}
           <div className="my-5">
