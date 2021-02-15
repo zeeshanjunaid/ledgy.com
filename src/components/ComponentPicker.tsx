@@ -6,7 +6,7 @@ import { FeatureGrid } from './FeatureGrid';
 import { TitleWithGraphic } from './TitleWithGraphic';
 import { TestimonialCards } from './TestimonialCards';
 import { LogoBanner } from './LogoBanner';
-import { SelectableCardsWithScreenshots } from './SelectableCardsWithScreenshots';
+import { SelectableCardsWithScreenshots } from './cardsWithScreenshots';
 import { TopBanner } from './TopBanner';
 import { ChecklistWithScreenshot } from './ChecklistWithScreenshot';
 
