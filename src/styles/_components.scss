@@ -508,9 +508,9 @@ $padding-lg: 3rem;
   box-shadow: $box-shadow-wide;
   position: relative;
   z-index: $zindex-base;
-  border-radius: 8px;
+  border-radius: $border-radius-wide;
   img {
-    border-radius: 8px;
+    border-radius: $border-radius-wide;
   }
 }
 

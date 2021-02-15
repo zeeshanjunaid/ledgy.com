@@ -11,7 +11,7 @@ import {
   NavbarMenuItem,
 } from '../lib';
 import { targetBlank } from '../../helpers';
-import { DynamicTrans } from '../DynamicTrans';
+import { dynamicI18n, DynamicTrans } from '../DynamicTrans';
 import { Icon } from '../Icon';
 
 type CommonListProps = { prefix: string; isTextShown: boolean };
@@ -66,6 +66,12 @@ const ListItem = ({
   );
 };
 
+const decorateHeader = (header: string) => {
+  const firstTwoLetters = header.slice(0, 2);
+  const rest = header.slice(2);
+  return firstTwoLetters ? `<u>${firstTwoLetters}</u>${rest}` : '';
+};
+
 const DropdownItem = ({
   eventHandlingProps,
   title: parentTitle,
@@ -82,12 +88,14 @@ const DropdownItem = ({
     <div className={`hover-list-child ${className}`}>
       {menuColumns.map((column, i) => {
         const { items, header } = column;
+        const formattedHeader = dynamicI18n(header || '').toUpperCase();
         return (
           <div key={`${header}-${i}`} className="flex-1 px-2">
             {!!header && (
-              <h6 className="column-header text-gray-neutral my-2">
-                <DynamicTrans>{header.toUpperCase()}</DynamicTrans>
-              </h6>
+              <h6
+                className="column-header text-gray-neutral my-2"
+                dangerouslySetInnerHTML={{ __html: decorateHeader(formattedHeader) }}
+              />
             )}
             {items.map((item) => (
               <ListItem
