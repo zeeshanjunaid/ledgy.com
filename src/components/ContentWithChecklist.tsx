@@ -34,13 +34,15 @@ export const ContentWithChecklist = ({
   linkUrl,
   checklist,
   prefix,
-}: ContentWithChecklistProps & { prefix: string }) => {
+  mirrored = false,
+}: ContentWithChecklistProps & { prefix: string; mirrored?: boolean }) => {
   const sectionRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
   const listCount = checklist.length;
   const liHeight = '50px';
   const transform = `translateX(-2px) translateY(${100 * activeIndex}%)`;
+  const order = mirrored ? 'order-last' : '';
 
   return (
     <VisibilitySensor
@@ -52,7 +54,7 @@ export const ContentWithChecklist = ({
       <section ref={sectionRef} className="py-4 py-lg-7">
         <div className="container my-4">
           <div className="row">
-            <div className="col-md-6 mb-4 mb-md-0">
+            <div className={`${order} col-md-6 mb-4 mb-md-0`}>
               <div className="d-flex flex-column justify-content-center h-100">
                 <h2 className="mb-4">
                   <DynamicTrans>{header}</DynamicTrans>
