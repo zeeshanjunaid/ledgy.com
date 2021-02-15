@@ -28,6 +28,8 @@ type ParentListItemProps = { title: string } & CommonListProps & {
 const NAV_ID = 'custom-hover-nav';
 const getNavbar = () => document.getElementById(NAV_ID);
 
+const Arrow = () => <span className="list-item-hover-arrow">&#10132;</span>;
+
 const ListItem = ({
   icon,
   title,
@@ -41,8 +43,11 @@ const ListItem = ({
     <div className="d-flex">
       <Icon icon={icon} className="mt-3 mr-2" height={30} width={30} />
       <div>
-        <h5 className={`text-primary mt-2 ${description ? 'mb-1' : 'mb-2'}`}>
+        <h5
+          className={`text-primary d-flex align-items-center mt-2 ${description ? 'mb-1' : 'mb-2'}`}
+        >
           <DynamicTrans>{title}</DynamicTrans>
+          <Arrow />
         </h5>
         <div className="list-item-hover-text mb-3">
           <DynamicTrans>{description}</DynamicTrans>
@@ -189,7 +194,7 @@ export const DropdownFollowAlong = (props: LayoutProps) => {
               transition: firstHover ? 'opacity 300ms' : 'all 200ms',
             }}
           >
-            <span className="arrow" />
+            <span className="bubble-tip" />
           </div>
         </CSSTransition>
 
