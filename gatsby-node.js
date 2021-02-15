@@ -45,6 +45,9 @@ exports.createSchemaCustomization = ({ actions }) => {
       linkText: String
       linkPath: String
     }
+    type ContentfulDemoPage2021 implements Node {
+      requesterType: RequesterType
+    }
   `;
   createTypes(typeDefinitions);
 };

@@ -29,17 +29,15 @@ const DemoPage = (props: Props) => {
     description,
     formTitle,
     formButtonText,
-    requestType,
+    requesterType,
   }: {
     content: DemoPageEntryProps[];
     title: string;
     description: string;
     formTitle: string;
     formButtonText: string;
-    requestType?: RequesterType | 'No type';
+    requesterType?: RequesterType | void;
   } = edgesContent.node;
-
-  const contentfulRequesterType = requestType === 'No type' ? undefined : requestType;
 
   return (
     <>
@@ -62,7 +60,7 @@ const DemoPage = (props: Props) => {
               <DemoForm
                 title={dynamicI18n(formTitle)}
                 buttonText={dynamicI18n(formButtonText)}
-                contentfulRequesterType={contentfulRequesterType}
+                contentfulRequesterType={requesterType}
               />
             </div>
           </div>
@@ -105,7 +103,7 @@ export const demoQuery = graphql`
           description
           formTitle
           formButtonText
-          requestType
+          requesterType
           content {
             ... on ContentfulFeatureGrid {
               id
