@@ -135,3 +135,13 @@ declare type MainPageEntryProps =
   | ContentWithChecklistProps
   | CallToActionProps
   | ChecklistWithScreenshotProps;
+
+declare type DemoPageEntryProps =
+  | LogoBannerProps
+  | SelectableCardsWithScreenshotsProps
+  | FeatureGridContentProps
+  | TestimonialCardsProps
+  | TitleWithGraphicProps
+  | ContentWithChecklistProps
+  | CallToActionProps
+  | ChecklistWithScreenshotProps;

@@ -3,29 +3,15 @@ import { Trans } from '@lingui/macro';
 import React from 'react';
 
 import { formatUrl } from '../components/lib';
-import {
-  DemoForm,
-  ExternalLogoRow,
-  SellingProp,
-  CTABanner,
-  dynamicI18n,
-  DynamicTrans,
-} from '../components';
+import { ComponentPicker, DemoForm, dynamicI18n, DynamicTrans } from '../components';
 
 import logoInvertedCompact from '../img/logo-inverted-compact.png';
 import { targetBlank } from '../helpers';
 
 import { Title } from './utils';
+import { RequesterType } from '../components/forms/lib';
 
 const Logo = () => <img width={80} src={logoInvertedCompact} alt="Ledgy" />;
-
-const Quote = ({ name, quote }: ContentfulIndexEntry) =>
-  name && quote ? (
-    <div className="container text-center py-7 line-height-lg">
-      <h3 className="mb-3">“{quote}”</h3>
-      <h6>— {name}</h6>
-    </div>
-  ) : null;
 
 const DecoShapes = () => (
   <>
@@ -34,16 +20,26 @@ const DecoShapes = () => (
   </>
 );
 
-const DemoPage = (props: LayoutProps) => {
+const DemoPage = (props: Props) => {
   const { data, prefix } = props;
+  const [edgesContent] = data.page.edges;
   const {
+    content,
     title,
     description,
     formTitle,
     formButtonText,
-    content,
-    type,
-  } = data.contentfulSignupPage; // TODO rename in Contentful
+    requestType,
+  }: {
+    content: DemoPageEntryProps[];
+    title: string;
+    description: string;
+    formTitle: string;
+    formButtonText: string;
+    requestType?: RequesterType | 'No type';
+  } = edgesContent.node;
+
+  const contentfulRequesterType = requestType === 'No type' ? undefined : requestType;
 
   return (
     <>
@@ -66,7 +62,7 @@ const DemoPage = (props: LayoutProps) => {
               <DemoForm
                 title={dynamicI18n(formTitle)}
                 buttonText={dynamicI18n(formButtonText)}
-                contentfulRequesterType={type}
+                contentfulRequesterType={contentfulRequesterType}
               />
             </div>
           </div>
@@ -74,23 +70,9 @@ const DemoPage = (props: LayoutProps) => {
         <DecoShapes />
       </header>
       <div className="position-relative bg-white z-index-base">
-        {(content as ContentfulIndexEntry[]).map((entry, i) => {
-          const { __typename, id } = entry;
-
-          if (__typename === 'ContentfulQuote') {
-            return <Quote key={id} {...entry} />;
-          }
-          if (__typename === 'ContentfulExternalLogos') {
-            return <ExternalLogoRow key={id} {...entry} />;
-          }
-          if (__typename === 'ContentfulSellingProposition') {
-            return (
-              <SellingProp key={id} {...entry} prefix={prefix} imgFirst={i % 2 === 0} hideLink />
-            );
-          }
-          return null;
-        })}
-        <CTABanner {...props} />
+        {content.map((v, i) => (
+          <ComponentPicker entry={v} prefix={prefix} key={`${v.id}-${i}`} />
+        ))}
       </div>
       <footer className="footer d-flex align-items-center justify-content-center text-white bg-primary p-2">
         <a
@@ -115,51 +97,133 @@ const DemoPage = (props: LayoutProps) => {
 export default DemoPage;
 
 export const demoQuery = graphql`
-  query($id: String!) {
-    contentfulSignupPage(id: { eq: $id }) {
-      id
-      slug
-      title
-      description
-      formTitle
-      formButtonText
-      type
-      content {
-        ... on ContentfulExternalLogos {
-          id
-          title
-          logos {
-            title
-            description
-            localFile {
-              childImageSharp {
-                fixed(width: 120) {
-                  ...GatsbyImageSharpFixed
-                }
-              }
-            }
-          }
-        }
-        ... on ContentfulSellingProposition {
-          id
+  query {
+    page: allContentfulDemoPage2021 {
+      edges {
+        node {
           title
           description
-          link
-          linkTo
-          image {
-            localFile {
-              childImageSharp {
-                fluid(maxWidth: 400) {
-                  ...GatsbyImageSharpFluid
+          formTitle
+          formButtonText
+          requestType
+          content {
+            ... on ContentfulFeatureGrid {
+              id
+              header
+              sections {
+                icon
+                title
+                description
+              }
+            }
+            ... on ContentfulTestimonialCards {
+              id
+              cards {
+                signature
+                linkText
+                linkPath
+                text {
+                  childMdx {
+                    body
+                  }
+                }
+                logo {
+                  localFile {
+                    childImageSharp {
+                      fixed(height: 60) {
+                        ...GatsbyImageSharpFixed
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            ... on ContentfulContentWithChecklist {
+              id
+              header
+              description
+              linkText
+              linkUrl
+              checklist
+            }
+            ... on ContentfulTitleWithGraphic {
+              id
+              title
+              motivationText
+              description
+              graphic {
+                localFile {
+                  childImageSharp {
+                    fixed(height: 300) {
+                      ...GatsbyImageSharpFixed
+                    }
+                  }
+                }
+              }
+            }
+            ... on ContentfulLogoBanner {
+              id
+              logos {
+                title
+                description
+                localFile {
+                  childImageSharp {
+                    fixed(width: 130) {
+                      ...GatsbyImageSharpFixed
+                    }
+                  }
+                }
+              }
+            }
+            ... on ContentfulSelectableCardsWithScreenshots {
+              id
+              title
+              content {
+                header
+                description
+                screenshot {
+                  localFile {
+                    childImageSharp {
+                      fluid(maxWidth: 1500, quality: 100) {
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            ... on ContentfulCallToAction2021 {
+              id
+              header
+              description
+              buttonText
+              buttonPath
+              externalLinkText
+              externalLinkUrl
+              icon
+              secondaryHeader
+              secondaryDescription
+              secondaryLinkText
+              secondaryLinkPath
+            }
+            ... on ContentfulChecklistWithScreenshot {
+              id
+              header
+              description
+              checklists {
+                checklistText
+              }
+              image {
+                localFile {
+                  childImageSharp {
+                    fluid(maxWidth: 1200, quality: 100) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
                 }
               }
             }
           }
-        }
-        ... on ContentfulQuote {
-          id
-          quote
-          name
         }
       }
     }
