@@ -12,9 +12,11 @@ export const ChecklistWithScreenshot = ({
   description,
   checklists,
   image,
-}: ChecklistWithScreenshotProps) => {
+  mirrored = false,
+}: ChecklistWithScreenshotProps & { mirrored?: boolean }) => {
   const { childImageSharp } = image.localFile || {};
   const checklistTexts = checklists.map((v) => v.checklistText);
+  const order = mirrored ? 'order-last' : '';
 
   return (
     <Section>
@@ -22,7 +24,7 @@ export const ChecklistWithScreenshot = ({
         <DynamicTrans>{header}</DynamicTrans>
       </h2>
       <div className="row">
-        <div className="col-lg-4 pr-4 d-flex flex-column justify-content-center">
+        <div className={`${order} col-lg-4 pr-4 d-flex flex-column justify-content-center`}>
           <p className="text-deep-blue mb-4">
             <DynamicTrans>{description}</DynamicTrans>
           </p>
