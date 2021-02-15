@@ -28,7 +28,7 @@ export const TopBannerLayout = ({
   customButton,
   image,
 }: TopBannerLayoutProps) => (
-  <header className="top-banner d-flex bg-lightest">
+  <header className="top-banner d-flex bg-lightest overflow-hidden">
     <Section className="w-100">
       <div className="row">
         <div className="col-xl-5 d-flex flex-column justify-content-center position-relative z-index-base">

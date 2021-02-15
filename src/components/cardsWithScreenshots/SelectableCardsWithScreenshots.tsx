@@ -8,11 +8,10 @@ import { Section } from '../Section';
 
 import { handleCardClick, handleScroll, getEntriesHeight } from './lib';
 import { SelectableCard } from './SelectableCard';
+import { MobileCardsWithScreenshots } from './MobileCardsWithScreenshots';
 
-export const SelectableCardsWithScreenshots = ({
-  title,
-  content,
-}: SelectableCardsWithScreenshotsProps) => {
+export const SelectableCardsWithScreenshots = (props: SelectableCardsWithScreenshotsProps) => {
+  const { title, content } = props;
   const [activeIndex, setActiveIndex] = useState(0);
   const [cardHeight, setCardHeight] = useState(0);
   const [componentHeight, setComponentHeight] = useState(0);
@@ -57,30 +56,31 @@ export const SelectableCardsWithScreenshots = ({
   return (
     <Section>
       <div ref={anchorRef} />
-      <div ref={wrapperRef} style={{ height: `${scrollDistance}px` }}>
+      <MobileCardsWithScreenshots {...props} />
+      <div ref={wrapperRef} className="d-none d-lg-block" style={{ height: `${scrollDistance}px` }}>
         <div className="position-sticky" style={stickyStyle}>
-          <h2 className="pb-2 pb-lg-4 text-center">
+          <h2 className="pb-4 text-center">
             <DynamicTrans>{title}</DynamicTrans>
           </h2>
           <div className="row">
-            <div className="col-lg-8 pr-lg-0">
+            <div className="col-8 pr-0">
               {content.map((v, i) => {
                 const { childImageSharp } = v.screenshot.localFile || {};
                 const isActive = activeIndex === i;
                 return (
                   <div
                     key={`img-${v.header}`}
-                    className={`screenshot mx-md-4 mx-lg-0 ${isActive ? '' : 'd-none'}`}
+                    className={`screenshot mx-lg-0 ${isActive ? '' : 'd-none'}`}
                   >
                     {!!childImageSharp && <Img {...childImageSharp} />}
                   </div>
                 );
               })}
             </div>
-            <div className="col-lg-4 pl-lg-0">
+            <div className="col-4 pl-0">
               <div className="fluid-border-right h-100">
                 <span style={spanStyle} />
-                <div className="d-flex flex-column h-100 mt-4 mt-lg-0">
+                <div className="d-flex flex-column h-100 mt-0">
                   {content.map((v, i) => (
                     <SelectableCard
                       {...v}

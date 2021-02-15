@@ -29,13 +29,19 @@ small {
 }
 
 h1 {
-  font-size: $h1-font-size;
+  font-size: $h1-font-size * 0.9;
   hyphens: none;
+  @include media-breakpoint-up(md) {
+    font-size: $h1-font-size;
+  }
 }
 
 h2 {
-  font-size: $h2-font-size;
-  line-height: 2.75rem;
+  font-size: $h2-font-size * 0.9;
+  @include media-breakpoint-up(md) {
+    font-size: $h2-font-size;
+    line-height: 2.75rem;
+  }
 }
 
 h3 {
