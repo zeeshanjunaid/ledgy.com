@@ -20,7 +20,7 @@ export const ChecklistWithScreenshot = ({
 
   return (
     <Section>
-      <h2 className="mb-5 text-left">
+      <h2 className="mb-4 text-left">
         <DynamicTrans>{header}</DynamicTrans>
       </h2>
       <div className="row">
