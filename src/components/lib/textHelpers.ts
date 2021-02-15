@@ -79,7 +79,7 @@ const teams: NavbarMenuColumn = {
     },
     {
       link: 'finance',
-      title: 'Finance & legal',
+      title: 'Finance, Legal, & Accounting',
       description: 'Cap table, scenario modeling, investor relations',
       icon: 'calculator',
     },
