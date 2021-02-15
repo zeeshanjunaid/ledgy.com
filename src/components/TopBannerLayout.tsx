@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
-import { Slide } from 'react-awesome-reveal';
 
 import { Section } from './Section';
+import { CustomFade } from './CustomFade';
 
 type TopBannerLayoutProps = {
   title: ReactNode | string;
@@ -32,7 +32,7 @@ export const TopBannerLayout = ({
     <Section className="w-100">
       <div className="row">
         <div className="col-xl-5 d-flex flex-column justify-content-center position-relative z-index-base">
-          <Slide>
+          <CustomFade translate="-100px, 0">
             <div className="mt-md-4 mt-lg-2 text-gray-dark">
               <h1 className="mb-2 mb-sm-3">{title}</h1>
               <div className="pb-3 text-lg font-weight-light line-height-lg">{subtitle}</div>
@@ -42,13 +42,13 @@ export const TopBannerLayout = ({
               {buttonTwo}
               {customButton}
             </div>
-          </Slide>
+          </CustomFade>
         </div>
         <div className="col-xl-7 d-flex flex-column justify-content-center align-items-center position-relative pr-xl-0">
           <div className="w-100 mt-4 px-lg-4 px-xl-0 d-flex flex-column justify-content-center">
-            <Slide direction="down" className="position-relative z-index-base">
+            <CustomFade translate="0, 100px" className="position-relative z-index-base">
               {image}
-            </Slide>
+            </CustomFade>
           </div>
           <DecoShapes />
         </div>

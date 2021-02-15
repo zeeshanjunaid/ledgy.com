@@ -20,6 +20,7 @@
   "dependencies": {
     "@babel/core": "7.12.10",
     "@babel/plugin-proposal-object-rest-spread": "7.12.1",
+    "@emotion/react": "11.1.5",
     "@fortawesome/fontawesome-svg-core": "1.2.34",
     "@fortawesome/free-brands-svg-icons": "5.15.2",
     "@fortawesome/free-solid-svg-icons": "5.15.2",

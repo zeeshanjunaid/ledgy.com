@@ -42,7 +42,7 @@ const resourceLinks: FooterLink[] = [
   ['Webinars', 'webinars'],
   ['Customer stories', 'customer-stories'],
   ['Lawyer partners', 'partners'],
-  ['Funding round calculator', 'calculator'],
+  ['Financing calculator', 'calculator'],
   ['ESOP templates', 'employee-participation-plan-templates'],
 ];
 
@@ -142,7 +142,7 @@ const tools: NavbarMenuColumn = {
     },
     {
       link: 'calculator',
-      title: 'Funding Round Calculator',
+      title: 'Financing Calculator',
       description: 'The calculator you need if you’re raising capital, no signup required',
       icon: 'calculator',
     },

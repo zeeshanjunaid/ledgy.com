@@ -1,5 +1,5 @@
 import React from 'react';
-import { Fade } from 'react-awesome-reveal';
+import { CustomFade } from './CustomFade';
 
 import { DynamicTrans } from './DynamicTrans';
 import { Icon } from './Icon';
@@ -15,7 +15,11 @@ const FeatureGridCard = ({
 }) => {
   const { title, description, icon } = featureGridSection;
   return (
-    <Fade delay={index * 200} direction="up" className="col-12 col-sm-6 col-xl-3 mb-4 mb-xl-0">
+    <CustomFade
+      delay={index * 200}
+      translate="0, 100px"
+      className="col-12 col-sm-6 col-xl-3 mb-4 mb-xl-0"
+    >
       <div className="left-border-with-accent h-100">
         <Icon icon={icon} />
         <h5 className="my-2 accent-border">
@@ -25,7 +29,7 @@ const FeatureGridCard = ({
           <DynamicTrans>{description}</DynamicTrans>
         </p>
       </div>
-    </Fade>
+    </CustomFade>
   );
 };
 
