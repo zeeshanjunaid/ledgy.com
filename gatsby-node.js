@@ -45,6 +45,9 @@ exports.createSchemaCustomization = ({ actions }) => {
       linkText: String
       linkPath: String
     }
+    type ContentfulDemoPage2021 implements Node {
+      requesterType: String
+    }
   `;
   createTypes(typeDefinitions);
 };
@@ -91,7 +94,7 @@ const featurePageQuery = `
 
 const demoQuery = `
       {
-        allContentfulSignupPage(limit: 1000) {
+        allContentfulDemoPage2021(limit: 1000) {
           edges {
             node {
               id
@@ -166,8 +169,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   const demoPageComponent = path.resolve(`${basePath}/demo.tsx`);
   const createDemoPages = resolvePagePromise(graphql(demoQuery), (data) =>
-    // TODO rename in Contentful
-    data.allContentfulSignupPage.edges.forEach(({ node }) => {
+    data.allContentfulDemoPage2021.edges.forEach(({ node }) => {
       const { id, slug } = node;
       const pagePath = `/demo/${slug}/`;
       const context = { id };
