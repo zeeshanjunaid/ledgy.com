@@ -11,7 +11,10 @@ import { NavbarButtons } from './NavbarButtons';
 import { DropdownFollowAlong } from './DropdownFollowAlong';
 import { MobileNavbar } from './MobileNavbar';
 
-const isLight = (props: LayoutProps) => props.location.pathname.includes('hiddenBoost');
+const isLight = (props: LayoutProps) => {
+  const { pathname } = props.location;
+  return pathname.includes('hiddenBoost') || pathname.includes('demo');
+};
 
 const Logo = (props: LayoutProps) => {
   const fileName = isLight(props) ? 'logo' : 'logo-inverted';

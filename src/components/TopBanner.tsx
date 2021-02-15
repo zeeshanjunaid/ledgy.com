@@ -63,7 +63,7 @@ export const TopBanner = ({
         subtitle={<DynamicTrans>{description}</DynamicTrans>}
         buttonOne={buttonOne}
         buttonTwo={buttonTwo}
-        image={<Screenshot image={image} />}
+        componentRight={<Screenshot image={image} />}
       />
     </div>
   );

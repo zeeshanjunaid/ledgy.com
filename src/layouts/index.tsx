@@ -57,7 +57,7 @@ const App = ({ children, ...props }: AppProps) => {
       />
       <Initialize segmentDestinations={segmentDestinations} />
       <HelmetIndexLayout lang={lang} siteUrl={siteUrl} pathname={pathname} />
-      {!isDemoPage && <Nav {...props} prefix={prefix} />}
+      <Nav {...props} prefix={prefix} />
       {isAppShell ? (
         <Loader />
       ) : (

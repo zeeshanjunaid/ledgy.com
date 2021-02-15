@@ -9,8 +9,7 @@ type TopBannerLayoutProps = {
   buttonOne: ReactNode;
   buttonTwo?: ReactNode;
   deco?: ReactNode;
-  customButton?: ReactNode;
-  image: ReactNode;
+  componentRight: ReactNode;
 };
 
 const DecoShapes = () => (
@@ -25,8 +24,7 @@ export const TopBannerLayout = ({
   subtitle,
   buttonOne,
   buttonTwo,
-  customButton,
-  image,
+  componentRight,
 }: TopBannerLayoutProps) => (
   <header className="top-banner d-flex bg-lightest overflow-hidden">
     <Section className="w-100">
@@ -40,14 +38,13 @@ export const TopBannerLayout = ({
             <div className="d-flex align-items-center flex-wrap">
               {buttonOne}
               {buttonTwo}
-              {customButton}
             </div>
           </CustomFade>
         </div>
         <div className="col-xl-7 d-flex flex-column justify-content-center align-items-center position-relative pr-xl-0">
           <div className="w-100 mt-4 px-lg-4 px-xl-0 d-flex flex-column justify-content-center">
             <CustomFade translate="0, 100px" className="position-relative z-index-base">
-              {image}
+              {componentRight}
             </CustomFade>
           </div>
           <DecoShapes />
