@@ -15,7 +15,6 @@ type DemoPageProps = {
   content: DemoPageEntryProps[];
   title: string;
   description: string;
-  formTitle: string;
   formButtonText: string;
   requesterType?: RequesterType | void;
 };
@@ -110,7 +109,6 @@ export const demoQuery = graphql`
         node {
           title
           description
-          formTitle
           formButtonText
           requesterType
           content {
