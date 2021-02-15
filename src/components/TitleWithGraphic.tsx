@@ -9,15 +9,15 @@ export const TitleWithGraphic = ({
   motivationText,
   graphic,
   description,
-  inverted = false,
+  light = false,
   mirrored = false,
-}: TitleWithGraphicProps & { inverted?: boolean; mirrored?: boolean }) => {
+}: TitleWithGraphicProps & { light?: boolean; mirrored?: boolean }) => {
   const { childImageSharp } = graphic?.localFile || {};
-  const sectionBackgroundStyle = inverted ? 'bg-lightest' : '';
-  const backgroundStyle = inverted ? '' : 'bg-primary tilted-background';
-  const motivationTextColor = inverted ? 'text-gray-dark' : 'text-secondary';
-  const titleTextColor = inverted ? 'text-primary' : 'text-secondary';
-  const descriptionTextColor = inverted ? 'text-primary' : 'text-white';
+  const sectionBackgroundStyle = light ? 'bg-lightest' : '';
+  const backgroundStyle = light ? '' : 'bg-primary tilted-background';
+  const motivationTextColor = light ? 'text-gray-dark' : 'text-secondary';
+  const titleTextColor = light ? 'text-primary' : 'text-secondary';
+  const descriptionTextColor = light ? 'text-primary' : 'text-white';
   const order = mirrored ? 'order-last' : '';
 
   return (
