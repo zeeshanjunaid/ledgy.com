@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { DynamicTrans } from './DynamicTrans';
 import { Section } from './Section';
 import { SectionHeader } from './SectionHeader';
+import { Fade } from 'react-awesome-reveal';
 
 export const ChecklistWithScreenshot = ({
   header,
@@ -45,7 +46,9 @@ export const ChecklistWithScreenshot = ({
           </ul>
         </div>
         <div className="col-lg-8 pl-lg-0">
-          <div className="screenshot">{!!childImageSharp && <Img {...childImageSharp} />}</div>
+          <Fade direction="up">
+            <div className="screenshot">{!!childImageSharp && <Img {...childImageSharp} />}</div>
+          </Fade>
         </div>
       </div>
     </Section>
