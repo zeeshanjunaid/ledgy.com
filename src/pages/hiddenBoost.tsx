@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { ComponentPicker } from '../components/ComponentPicker';
+import { ComponentPicker } from '../components';
 
 const isTopPageComponent = (__typename: string) =>
   __typename === 'ContentfulTopBanner' || __typename === 'ContentfulLogoBanner';
