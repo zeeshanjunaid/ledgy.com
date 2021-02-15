@@ -1,20 +1,31 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { ComponentPicker } from '../components';
+import { ComponentPicker, dynamicI18n } from '../components';
+import { Helmet } from 'react-helmet';
 
-const isTopPageComponent = (__typename: string) =>
-  __typename === 'ContentfulTopBanner' || __typename === 'ContentfulLogoBanner';
+const isTopBanner = (entry: MainPageEntryProps): entry is TopBannerProps =>
+  entry.__typename === 'ContentfulTopBanner';
+
+const isTopPageComponent = (entry: MainPageEntryProps) =>
+  isTopBanner(entry) || entry.__typename === 'ContentfulLogoBanner';
 
 const HiddenBoostPage = (props: Props) => {
   const { data, prefix } = props;
   const [content] = data.page.edges;
   const { entries }: { entries: MainPageEntryProps[] } = content.node;
 
-  const topPageComponents = entries.filter((entry) => isTopPageComponent(entry.__typename));
-  const restOfComponents = entries.filter((entry) => !isTopPageComponent(entry.__typename));
+  const topBanner = entries.find(isTopBanner);
+  const { mainHeader } = topBanner || {};
+  const topPageComponents = entries.filter(isTopPageComponent);
+  const restOfComponents = entries.filter((entry) => !isTopPageComponent(entry));
 
   return (
     <main className="main-wrapper-1">
+      {!!mainHeader && (
+        <Helmet>
+          <title>{`Ledgy: ${dynamicI18n(mainHeader)}`}</title>
+        </Helmet>
+      )}
       <div className="main-wrapper-2">
         <div className="top-page-wrapper d-flex flex-column justify-content-between">
           <span />
