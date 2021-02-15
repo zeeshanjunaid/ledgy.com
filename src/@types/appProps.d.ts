@@ -35,6 +35,7 @@ declare type IconType =
   | 'company'
   | 'dach'
   | 'documents'
+  | 'globe'
   | 'help'
   | 'hr'
   | 'investor'
