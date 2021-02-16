@@ -1,7 +1,15 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import { Button, DynamicTrans, Icon, Section, LinkWithChevron, SectionHeader } from './utils';
+import {
+  Button,
+  DynamicTrans,
+  Icon,
+  Section,
+  LinkWithChevron,
+  SectionHeader,
+  CustomFade,
+} from './utils';
 import { formatUrl } from './lib';
 
 export const CallToAction = ({
@@ -25,21 +33,23 @@ export const CallToAction = ({
         <p className="mb-4">
           <DynamicTrans>{description}</DynamicTrans>
         </p>
-        <div className="d-flex align-items-center flex-wrap">
-          <Link to={formatUrl(prefix, buttonPath)}>
-            <Button className="btn-xl mr-4 mb-4">
-              <DynamicTrans>{buttonText}</DynamicTrans>
-            </Button>
-          </Link>
-          {!!(externalLinkText && externalLinkUrl) && (
-            <LinkWithChevron
-              to={externalLinkUrl}
-              text={externalLinkText}
-              className="mb-4"
-              prefix={prefix}
-            />
-          )}
-        </div>
+        <CustomFade translate="0, 100px">
+          <div className="d-flex align-items-center flex-wrap">
+            <Link to={formatUrl(prefix, buttonPath)}>
+              <Button className="btn-xl mr-4 mb-4">
+                <DynamicTrans>{buttonText}</DynamicTrans>
+              </Button>
+            </Link>
+            {!!(externalLinkText && externalLinkUrl) && (
+              <LinkWithChevron
+                to={externalLinkUrl}
+                text={externalLinkText}
+                className="mb-4"
+                prefix={prefix}
+              />
+            )}
+          </div>
+        </CustomFade>
       </div>
       <div className="col-md-4">
         <div className="left-border-with-accent left-border-with-accent-lg">
