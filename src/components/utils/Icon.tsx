@@ -11,7 +11,7 @@ export const Icon = ({
   width?: number;
   className?: string;
 }) => {
-  const src = require(`../img/svg/icons/${icon}.svg`);
+  const src = require(`../../img/svg/icons/${icon}.svg`);
 
   return src ? <img src={src} height={height} width={width} className={className} /> : null;
 };
