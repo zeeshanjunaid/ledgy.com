@@ -1,7 +1,7 @@
 import React from 'react';
 import Img, { GatsbyImageProps } from 'gatsby-image';
 
-import { useModal } from './lib';
+import { useModal } from '../lib';
 import { Modal } from './Modal';
 
 export const ImageModal = ({ imgProps }: { imgProps: GatsbyImageProps }) => {

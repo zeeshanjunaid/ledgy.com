@@ -11,8 +11,7 @@ import {
   NavbarMenuItem,
 } from '../lib';
 import { targetBlank } from '../../helpers';
-import { dynamicI18n, DynamicTrans } from '../DynamicTrans';
-import { Icon } from '../Icon';
+import { dynamicI18n, DynamicTrans, Icon } from '../utils';
 
 type CommonListProps = { prefix: string; isTextShown: boolean };
 type ParentListItemProps = { title: string } & CommonListProps & {

@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import { Link } from 'gatsby';
 import { targetBlank } from '../helpers';
 
-import { LinkWithChevron } from './LinkWithChevron';
+import { LinkWithChevron } from './utils';
 
 export const CardLink = ({
   title,

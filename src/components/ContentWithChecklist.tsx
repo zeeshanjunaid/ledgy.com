@@ -3,9 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import VisibilitySensor from 'react-visibility-sensor';
 
-import { DynamicTrans } from './DynamicTrans';
-import { LinkWithChevron } from './LinkWithChevron';
-import { SectionHeader } from './SectionHeader';
+import { DynamicTrans, LinkWithChevron, SectionHeader } from './utils';
 
 const handleScrollBehavior = (
   sectionRef: MutableRefObject<HTMLElement | null>,

@@ -1,8 +1,6 @@
 import React from 'react';
 
-import { DynamicTrans } from '../DynamicTrans';
-import { SectionHeader } from '../SectionHeader';
-import { Image } from '../Image';
+import { DynamicTrans, SectionHeader, Image } from '../utils';
 
 export const MobileCardsWithScreenshots = ({
   header,

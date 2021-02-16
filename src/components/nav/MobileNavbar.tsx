@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import { NavbarButtons } from './NavbarButtons';
 import { NAVBAR_TITLES, NAVBAR_LINKS, formatUrl, isExternalUrl, NavbarMenuColumn } from '../lib';
 import { targetBlank } from '../../helpers';
-import { DynamicTrans } from '../DynamicTrans';
+import { DynamicTrans } from '../utils';
 
 const { solutionsTitle, resourcesTitle, pricingTitle } = NAVBAR_TITLES;
 const { solutions, resources, pricing } = NAVBAR_LINKS;

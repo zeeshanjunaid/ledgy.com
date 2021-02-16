@@ -2,8 +2,7 @@ import React from 'react';
 import type { GatsbyImageProps } from 'gatsby-image';
 import { Slide } from 'react-awesome-reveal';
 
-import { DynamicTrans } from '../components';
-import { ImageModal } from './ImageModal';
+import { DynamicTrans, ImageModal } from './utils';
 
 export const Feature = ({
   title,
