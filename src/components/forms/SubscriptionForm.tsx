@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { navigate } from 'gatsby';
 
 import { isValidEmail, FORM_STATUSES } from '../../helpers';
-import { Button } from '../Button';
+import { Button } from '../utils';
 import { signupOnMixpanel, trackOnMixpanel } from './lib';
 import { InvalidFieldHints } from './Fields';
 

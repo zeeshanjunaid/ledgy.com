@@ -2,13 +2,11 @@ import React, { useEffect, useRef, useState } from 'react';
 import { throttle } from 'lodash';
 
 import { isBrowser } from '../../helpers';
-import { Section } from '../Section';
 
 import { handleCardClick, handleScroll, getEntriesHeight } from './lib';
 import { SelectableCard } from './SelectableCard';
 import { MobileCardsWithScreenshots } from './MobileCardsWithScreenshots';
-import { SectionHeader } from '../SectionHeader';
-import { Image } from '../Image';
+import { Image, Section, SectionHeader } from '../utils';
 
 export const SelectableCardsWithScreenshots = (props: SelectableCardsWithScreenshotsProps) => {
   const { header, content } = props;

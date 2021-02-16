@@ -2,7 +2,7 @@ import React from 'react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
 
-import { MarkdownImage, Lead, Anchor } from '../components';
+import { MarkdownImage, Lead, Anchor } from './Markdown';
 
 // eslint-disable-next-line react/display-name
 const getAnchorComponent = (prefix: string) => ({

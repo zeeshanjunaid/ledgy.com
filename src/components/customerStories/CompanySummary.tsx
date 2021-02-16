@@ -9,8 +9,8 @@ import {
   IconDefinition,
 } from '@fortawesome/free-solid-svg-icons';
 
-import { LongText } from '../LongText';
-import { Image } from '../Image';
+import { LongText } from '../markdown';
+import { Image } from '../utils';
 
 const getCompanySummaries = (company: Company): [IconDefinition, string, string][] => [
   [faClock, 'Founded year', `Founded in ${company.yearFounded}`],

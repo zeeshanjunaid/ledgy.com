@@ -2,11 +2,10 @@ import { Link } from 'gatsby';
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
-
-import { targetBlank } from '../helpers';
-import { DynamicTrans } from './DynamicTrans';
-import { formatUrl, isExternalUrl } from './lib';
+import { formatUrl, isExternalUrl } from './../lib';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { targetBlank } from '../../helpers';
+import { DynamicTrans } from './DynamicTrans';
 
 const TextAndIcon = ({ text, icon }: { text: string; icon: IconProp }) => (
   <div className="d-flex align-items-center">

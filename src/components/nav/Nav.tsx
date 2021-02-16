@@ -5,7 +5,7 @@ import { CSSTransition } from 'react-transition-group';
 import { name } from '../../helpers';
 
 import { toggleOverlay } from '../lib';
-import { Button } from '../Button';
+import { Button } from '../utils';
 
 import { NavbarButtons } from './NavbarButtons';
 import { DropdownFollowAlong } from './DropdownFollowAlong';

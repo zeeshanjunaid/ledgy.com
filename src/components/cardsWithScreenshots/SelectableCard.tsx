@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { DynamicTrans } from '../DynamicTrans';
+import { DynamicTrans } from '../utils';
 
 export const SelectableCard = ({
   title,

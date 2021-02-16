@@ -3,10 +3,8 @@ import { t } from '@lingui/macro';
 
 import { demoPage } from '../helpers';
 import { RequestDemoButton } from './RequestDemoButton';
-import { Button } from './Button';
-import { DynamicTrans } from './DynamicTrans';
 import { TopBannerLayout } from './TopBannerLayout';
-import { Image } from './Image';
+import { Button, DynamicTrans, Image } from './utils';
 
 const CustomButton = ({ url, text }: { url: string; text: string }) => (
   <Button href={url} className="btn-xl mx-1 my-1 align-self-center" inverted outline>

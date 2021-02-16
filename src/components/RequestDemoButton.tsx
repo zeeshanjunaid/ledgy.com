@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import { Button } from './Button';
+import { Button, DynamicTrans } from './utils';
 import { demoPage } from '../helpers';
-import { DynamicTrans } from './DynamicTrans';
 
 const DEMO_BUTTON_TEXT = 'Book a Demo';
 

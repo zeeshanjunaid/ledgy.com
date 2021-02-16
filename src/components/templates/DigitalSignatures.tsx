@@ -1,7 +1,7 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
 import Img from 'gatsby-image';
-import { CircleBadge } from '../Badge';
+import { CircleBadge } from '../utils';
 
 const STEPS = [
   { key: 1, text: <Trans>Upload the document</Trans> },

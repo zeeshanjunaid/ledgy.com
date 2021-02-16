@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { targetBlank } from '../helpers';
+import { targetBlank } from '../../helpers';
 
 type ButtonType = 'button' | 'submit' | 'reset';
 

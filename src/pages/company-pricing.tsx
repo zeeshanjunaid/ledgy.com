@@ -5,7 +5,7 @@ import { LedgyPricing } from '@ledgy/pricing/dist/LedgyPricing';
 
 import { Title } from '../layouts/utils';
 import { appUrl } from '../helpers';
-import { Button, RequestDemoButton, PageHeader, DynamicTrans, dynamicI18n } from '../components';
+import { Button, DynamicTrans, dynamicI18n, RequestDemoButton, PageHeader } from '../components';
 
 const PricingCTA = ({ title, description }: { title: ReactNode; description: ReactNode }) => (
   <div className="col-12 col-lg-6 col-xl-4">

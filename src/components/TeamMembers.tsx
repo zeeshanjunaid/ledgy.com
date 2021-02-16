@@ -8,7 +8,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 import { shuffleArray } from '../helpers';
 import { AuthorProps } from '../layouts/team';
-import { CustomFade } from './CustomFade';
+import { CustomFade } from './utils';
 
 const TeamMember = ({
   name,

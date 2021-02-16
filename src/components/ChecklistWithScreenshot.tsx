@@ -4,10 +4,7 @@ import Img from 'gatsby-image';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { DynamicTrans } from './DynamicTrans';
-import { Section } from './Section';
-import { SectionHeader } from './SectionHeader';
-import { CustomFade } from './CustomFade';
+import { CustomFade, DynamicTrans, Section, SectionHeader } from './utils';
 
 export const ChecklistWithScreenshot = ({
   header,

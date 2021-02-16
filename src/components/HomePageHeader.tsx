@@ -3,11 +3,10 @@ import React from 'react';
 import { Trans, t } from '@lingui/macro';
 import Img from 'gatsby-image';
 
-import { MainHeaderLayout } from './MainHeaderLayout';
-import { Button } from './Button';
-import { RequestDemoButton } from './RequestDemoButton';
-import { DynamicTrans } from './DynamicTrans';
 import { demoUrl } from '../helpers';
+import { MainHeaderLayout } from './MainHeaderLayout';
+import { Button, DynamicTrans } from './utils';
+import { RequestDemoButton } from './RequestDemoButton';
 
 export const HomePageHeader = ({ data, prefix }: Props) => {
   const [content] = data.page.edges;

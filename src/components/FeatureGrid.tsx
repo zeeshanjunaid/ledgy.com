@@ -1,10 +1,6 @@
 import React from 'react';
-import { CustomFade } from './CustomFade';
 
-import { DynamicTrans } from './DynamicTrans';
-import { Icon } from './Icon';
-import { Section } from './Section';
-import { SectionHeader } from './SectionHeader';
+import { CustomFade, DynamicTrans, Icon, Section, SectionHeader } from './utils';
 
 const FeatureGridCard = ({
   featureGridSection,

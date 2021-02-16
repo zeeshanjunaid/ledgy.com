@@ -4,8 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 import { useModal } from './lib';
-import { Modal } from './Modal';
-import { Button } from './Button';
+import { Button, Modal } from './utils';
 import { SubscriptionForm } from './forms';
 
 export const SubscriptionModal = ({ buttonClass = '' }: { buttonClass?: string }) => {
