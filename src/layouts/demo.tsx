@@ -49,14 +49,13 @@ const G2Badge = () => (
 
 const DemoPage = (props: Props) => {
   const { data, prefix } = props;
-  const [edgesContent] = data.page.edges;
   const {
     content,
     title,
     description,
     formButtonText,
     requesterType,
-  }: DemoPageProps = edgesContent.node;
+  }: DemoPageProps = data.contentfulDemoPage2021;
 
   const buttonOne = <CapterraBadge />;
   const buttonTwo = <G2Badge />;
@@ -103,128 +102,126 @@ const DemoPage = (props: Props) => {
 export default DemoPage;
 
 export const demoQuery = graphql`
-  query {
-    page: allContentfulDemoPage2021 {
-      edges {
-        node {
-          title
+  query($id: String!) {
+    contentfulDemoPage2021(id: { eq: $id }) {
+      id
+      slug
+      title
+      description
+      formButtonText
+      requesterType
+      content {
+        ... on ContentfulFeatureGrid {
+          id
+          header
+          sections {
+            icon
+            title
+            description
+          }
+        }
+        ... on ContentfulTestimonialCards {
+          id
+          cards {
+            signature
+            linkText
+            linkPath
+            text {
+              childMdx {
+                body
+              }
+            }
+            logo {
+              localFile {
+                childImageSharp {
+                  fixed(height: 60) {
+                    ...GatsbyImageSharpFixed
+                  }
+                }
+              }
+            }
+          }
+        }
+        ... on ContentfulContentWithChecklist {
+          id
+          header
           description
-          formButtonText
-          requesterType
+          linkText
+          linkUrl
+          checklist
+        }
+        ... on ContentfulTitleWithGraphic {
+          id
+          title
+          motivationText
+          description
+          graphic {
+            localFile {
+              childImageSharp {
+                fixed(height: 300) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
+          }
+        }
+        ... on ContentfulLogoBanner {
+          id
+          logos {
+            title
+            description
+            localFile {
+              childImageSharp {
+                fixed(width: 130) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
+          }
+        }
+        ... on ContentfulSelectableCardsWithScreenshots {
+          id
+          title
           content {
-            ... on ContentfulFeatureGrid {
-              id
-              header
-              sections {
-                icon
-                title
-                description
-              }
-            }
-            ... on ContentfulTestimonialCards {
-              id
-              cards {
-                signature
-                linkText
-                linkPath
-                text {
-                  childMdx {
-                    body
-                  }
-                }
-                logo {
-                  localFile {
-                    childImageSharp {
-                      fixed(height: 60) {
-                        ...GatsbyImageSharpFixed
-                      }
-                    }
+            header
+            description
+            screenshot {
+              localFile {
+                childImageSharp {
+                  fluid(maxWidth: 1500, quality: 100) {
+                    ...GatsbyImageSharpFluid
                   }
                 }
               }
             }
-            ... on ContentfulContentWithChecklist {
-              id
-              header
-              description
-              linkText
-              linkUrl
-              checklist
-            }
-            ... on ContentfulTitleWithGraphic {
-              id
-              title
-              motivationText
-              description
-              graphic {
-                localFile {
-                  childImageSharp {
-                    fixed(height: 300) {
-                      ...GatsbyImageSharpFixed
-                    }
-                  }
-                }
-              }
-            }
-            ... on ContentfulLogoBanner {
-              id
-              logos {
-                title
-                description
-                localFile {
-                  childImageSharp {
-                    fixed(width: 130) {
-                      ...GatsbyImageSharpFixed
-                    }
-                  }
-                }
-              }
-            }
-            ... on ContentfulSelectableCardsWithScreenshots {
-              id
-              title
-              content {
-                header
-                description
-                screenshot {
-                  localFile {
-                    childImageSharp {
-                      fluid(maxWidth: 1500, quality: 100) {
-                        ...GatsbyImageSharpFluid
-                      }
-                    }
-                  }
-                }
-              }
-            }
-            ... on ContentfulCallToAction2021 {
-              id
-              header
-              description
-              buttonText
-              buttonPath
-              externalLinkText
-              externalLinkUrl
-              icon
-              secondaryHeader
-              secondaryDescription
-              secondaryLinkText
-              secondaryLinkPath
-            }
-            ... on ContentfulChecklistWithScreenshot {
-              id
-              header
-              description
-              checklists {
-                checklistText
-              }
-              image {
-                localFile {
-                  childImageSharp {
-                    fluid(maxWidth: 1200, quality: 100) {
-                      ...GatsbyImageSharpFluid
-                    }
-                  }
+          }
+        }
+        ... on ContentfulCallToAction2021 {
+          id
+          header
+          description
+          buttonText
+          buttonPath
+          externalLinkText
+          externalLinkUrl
+          icon
+          secondaryHeader
+          secondaryDescription
+          secondaryLinkText
+          secondaryLinkPath
+        }
+        ... on ContentfulChecklistWithScreenshot {
+          id
+          header
+          description
+          checklists {
+            checklistText
+          }
+          image {
+            localFile {
+              childImageSharp {
+                fluid(maxWidth: 1200, quality: 100) {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
