@@ -10,9 +10,10 @@ import { targetBlank } from '../helpers';
 import { Title } from './utils';
 import { RequesterType } from '../components/forms/lib';
 import { TopBannerLayout } from '../components/TopBannerLayout';
+import { DemoPageEntryProps } from '../@types/contentful';
 
 type DemoPageProps = {
-  content: DemoPageProps[];
+  content: DemoPageEntryProps[];
   title: string;
   description: string;
   formButtonText: string;
