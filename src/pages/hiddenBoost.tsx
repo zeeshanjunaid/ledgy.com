@@ -137,9 +137,9 @@ export const hiddenBoostQuery = graphql`
             }
             ... on ContentfulSelectableCardsWithScreenshots {
               id
-              title
+              header
               content {
-                header
+                title
                 description
                 screenshot {
                   localFile {
@@ -170,9 +170,7 @@ export const hiddenBoostQuery = graphql`
               id
               header
               description
-              checklists {
-                checklistText
-              }
+              checklist
               image {
                 localFile {
                   childImageSharp {

@@ -181,9 +181,9 @@ export const demoQuery = graphql`
         }
         ... on ContentfulSelectableCardsWithScreenshots {
           id
-          title
+          header
           content {
-            header
+            title
             description
             screenshot {
               localFile {
@@ -214,9 +214,7 @@ export const demoQuery = graphql`
           id
           header
           description
-          checklists {
-            checklistText
-          }
+          checklist
           image {
             localFile {
               childImageSharp {
