@@ -1,5 +1,9 @@
-import React from 'react';
-import { SectionProps } from '../@types/contentful';
+import React, { ReactNode, DetailedHTMLProps, HTMLAttributes } from 'react';
+
+declare type SectionProps = {
+  children: ReactNode;
+  smallPadding?: boolean;
+} & DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>;
 
 export const Section = ({
   children,

@@ -1,5 +1,3 @@
-import { ReactNode, DetailedHTMLProps, HTMLAttributes } from 'react';
-
 type Id = { id: string };
 
 declare type ContentfulPageProps = Id & {
@@ -147,8 +145,3 @@ declare type DemoPageEntryProps =
   | ContentWithChecklistProps
   | CallToActionProps
   | ChecklistWithScreenshotProps;
-
-declare type SectionProps = {
-  children: ReactNode;
-  smallPadding?: boolean;
-} & DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>;
