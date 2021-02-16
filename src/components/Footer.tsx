@@ -62,7 +62,7 @@ const FooterLinks = ({
 
 export const Footer = ({ location, ...props }: LayoutProps) => {
   const { pathname } = location;
-  const hideOldCTA = pathname.includes('partners') || pathname.includes('hiddenBoost');
+  const hideOldCTA = pathname.includes('partners') || pathname === '/';
   const { prefix } = props;
 
   return (
