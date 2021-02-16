@@ -8,7 +8,7 @@ import { DynamicTrans } from './DynamicTrans';
 import { formatUrl, isExternalUrl } from './lib';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
-const Content = ({ text, icon }: { text: string; icon: IconProp }) => (
+const TextAndIcon = ({ text, icon }: { text: string; icon: IconProp }) => (
   <div className="d-flex align-items-center">
     <DynamicTrans>{text}</DynamicTrans>
     <FontAwesomeIcon icon={icon} className="ml-2 swinging" style={{ height: '14px' }} />
@@ -26,7 +26,7 @@ export const LinkWithChevron = ({
   prefix: string;
   className?: string;
 }) => {
-  <Content text={text} icon={faChevronRight} />;
+  const Content = <TextAndIcon text={text} icon={faChevronRight} />;
 
   return isExternalUrl(to) ? (
     <a href={to} {...targetBlank} className={className}>

@@ -1,52 +1,42 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import { ComponentPicker, dynamicI18n } from '../components';
 import { Helmet } from 'react-helmet';
 
-import {
-  HomePageHeader,
-  MainProblemLayout,
-  ExternalLogoRow,
-  SellingProp,
-  dynamicI18n,
-  G2AndCapterraStrip,
-} from '../components';
+const isTopBanner = (entry: MainPageEntryProps): entry is TopBannerProps =>
+  entry.__typename === 'ContentfulTopBanner';
 
-const DecoShapes = () => (
-  <>
-    <div className="top-deco-shape top-deco-shape--one" />
-    <div className="top-deco-shape top-deco-shape--two" />
-  </>
-);
+const isTopPageComponent = (entry: MainPageEntryProps) =>
+  isTopBanner(entry) || entry.__typename === 'ContentfulLogoBanner';
 
 const IndexPage = (props: Props) => {
   const { data, prefix } = props;
   const [content] = data.page.edges;
-  const { title, entries } = content.node;
+  const { entries }: { entries: MainPageEntryProps[] } = content.node;
+
+  const topBanner = entries.find(isTopBanner);
+  const { mainHeader } = topBanner || {};
+  const topPageComponents = entries.filter(isTopPageComponent);
+  const restOfComponents = entries.filter((entry) => !isTopPageComponent(entry));
 
   return (
-    <main className="position-relative overflow-hidden">
-      {!!title && (
+    <main className="main-wrapper-1">
+      {!!mainHeader && (
         <Helmet>
-          <title>{`Ledgy: ${dynamicI18n(title)}`}</title>
+          <title>{`Ledgy: ${dynamicI18n(mainHeader)}`}</title>
         </Helmet>
       )}
-      <DecoShapes />
-      <HomePageHeader {...props} />
-      {(entries as ContentfulIndexEntry[]).map((entry, index) => {
-        const { __typename, id } = entry;
-
-        if (index === 0) {
-          return <MainProblemLayout key={id} {...entry} />;
-        }
-        if (__typename === 'ContentfulExternalLogos') {
-          return <ExternalLogoRow key={id} {...entry} />;
-        }
-        if (__typename === 'ContentfulSellingProposition') {
-          return <SellingProp key={id} {...entry} prefix={prefix} imgFirst={index % 2 === 0} />;
-        }
-        return null;
-      })}
-      <G2AndCapterraStrip />
+      <div className="main-wrapper-2">
+        <div className="top-page-wrapper d-flex flex-column justify-content-between">
+          <span />
+          {topPageComponents.map((entry, i) => (
+            <ComponentPicker entry={entry} prefix={prefix} key={`${entry.id}-${i}`} smallPadding />
+          ))}
+        </div>
+        {restOfComponents.map((entry, i) => (
+          <ComponentPicker entry={entry} prefix={prefix} key={`${entry.id}-${i}`} />
+        ))}
+      </div>
     </main>
   );
 };
@@ -55,47 +45,136 @@ export default IndexPage;
 
 export const indexPageQuery = graphql`
   query {
-    page: allContentfulFrontPage {
+    page: allContentfulFrontPage2021 {
       edges {
         node {
-          title
-          mainHeader
-          bannerImage {
-            localFile {
-              childImageSharp {
-                fluid(maxWidth: 1200, quality: 100) {
-                  ...GatsbyImageSharpFluid_noBase64
+          entries {
+            ... on ContentfulTopBanner {
+              id
+              mainHeader
+              description
+              firstButtonText
+              firstButtonUrl
+              secondButtonText
+              secondButtonUrl
+              image {
+                localFile {
+                  childImageSharp {
+                    fluid(maxWidth: 1200, quality: 100) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
                 }
               }
             }
-          }
-          description
-          entries {
-            ... on ContentfulExternalLogos {
+            ... on ContentfulFeatureGrid {
               id
-              title
-              logos {
+              header
+              sections {
+                icon
                 title
                 description
+              }
+            }
+            ... on ContentfulTestimonialCards {
+              id
+              cards {
+                signature
+                linkText
+                linkPath
+                text {
+                  childMdx {
+                    body
+                  }
+                }
+                logo {
+                  localFile {
+                    childImageSharp {
+                      fixed(height: 60) {
+                        ...GatsbyImageSharpFixed
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            ... on ContentfulContentWithChecklist {
+              id
+              header
+              description
+              linkText
+              linkUrl
+              checklist
+            }
+            ... on ContentfulTitleWithGraphic {
+              id
+              title
+              motivationText
+              description
+              graphic {
                 localFile {
                   childImageSharp {
-                    fixed(width: 120) {
+                    fixed(height: 300) {
                       ...GatsbyImageSharpFixed
                     }
                   }
                 }
               }
             }
-            ... on ContentfulSellingProposition {
+            ... on ContentfulLogoBanner {
               id
-              title
+              logos {
+                title
+                description
+                localFile {
+                  childImageSharp {
+                    fixed(width: 130) {
+                      ...GatsbyImageSharpFixed
+                    }
+                  }
+                }
+              }
+            }
+            ... on ContentfulSelectableCardsWithScreenshots {
+              id
+              header
+              content {
+                title
+                description
+                screenshot {
+                  localFile {
+                    childImageSharp {
+                      fluid(maxWidth: 1500, quality: 100) {
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            ... on ContentfulCallToAction2021 {
+              id
+              header
               description
-              link
-              linkTo
+              buttonText
+              buttonPath
+              externalLinkText
+              externalLinkUrl
+              icon
+              secondaryHeader
+              secondaryDescription
+              secondaryLinkText
+              secondaryLinkPath
+            }
+            ... on ContentfulChecklistWithScreenshot {
+              id
+              header
+              description
+              checklist
               image {
                 localFile {
                   childImageSharp {
-                    fluid(maxWidth: 400) {
+                    fluid(maxWidth: 1200, quality: 100) {
                       ...GatsbyImageSharpFluid
                     }
                   }

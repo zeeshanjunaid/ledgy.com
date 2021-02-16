@@ -13,7 +13,7 @@ import { MobileNavbar } from './MobileNavbar';
 
 const isLight = (props: LayoutProps) => {
   const { pathname } = props.location;
-  return pathname.includes('hiddenBoost') || pathname.includes('demo');
+  return pathname === '/' || pathname.includes('demo');
 };
 
 const Logo = (props: LayoutProps) => {
