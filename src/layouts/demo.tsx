@@ -42,7 +42,7 @@ const G2Badge = () => (
     <img
       className="g2-badge d-none d-md-block"
       alt="Ledgy is a leader in Equity Management on G2"
-      src="https://images.g2crowd.com/uploads/report_medal/image/1239/medal.svg"
+      src="https://images.g2crowd.com/uploads/report_medal/image/1335/medal.svg"
     />
   </a>
 );

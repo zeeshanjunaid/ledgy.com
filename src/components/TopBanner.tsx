@@ -7,7 +7,7 @@ import { TopBannerLayout } from './TopBannerLayout';
 import { Button, DynamicTrans, Image } from './utils';
 
 const CustomButton = ({ url, text }: { url: string; text: string }) => (
-  <Button href={url} className="btn-xl mx-1 my-1 align-self-center" inverted outline>
+  <Button href={url} className="btn-xl mr-2 my-1 align-self-center" inverted outline>
     <DynamicTrans>{text}</DynamicTrans>
   </Button>
 );
@@ -28,7 +28,7 @@ export const TopBanner = ({
   secondButtonUrl,
   prefix,
 }: TopBannerProps & { prefix: string }) => {
-  const buttonClassName = 'my-sm-0 my-2 btn-xl d-inline mx-1';
+  const buttonClassName = 'my-sm-0 my-2 btn-xl d-inline mr-2';
 
   const buttonOne = firstButtonUrl.includes(demoPage) ? (
     <RequestDemoButton
