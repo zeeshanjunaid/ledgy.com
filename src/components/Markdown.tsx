@@ -49,7 +49,15 @@ export const getImageParams = (
     return { ...res, [key]: value };
   }, {});
 
-export const Image = ({ alt, src, title }: { alt: string; src: string; title?: string }) => {
+export const MarkdownImage = ({
+  alt,
+  src,
+  title,
+}: {
+  alt: string;
+  src: string;
+  title?: string;
+}) => {
   const data = useStaticQuery(graphql`
     query {
       allContentfulAsset(limit: 1000) {

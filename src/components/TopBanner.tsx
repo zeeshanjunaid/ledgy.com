@@ -1,5 +1,4 @@
 import React from 'react';
-import Img from 'gatsby-image';
 import { t } from '@lingui/macro';
 
 import { demoPage } from '../helpers';
@@ -7,6 +6,7 @@ import { RequestDemoButton } from './RequestDemoButton';
 import { Button } from './Button';
 import { DynamicTrans } from './DynamicTrans';
 import { TopBannerLayout } from './TopBannerLayout';
+import { Image } from './Image';
 
 const CustomButton = ({ url, text }: { url: string; text: string }) => (
   <Button href={url} className="btn-xl mx-1 my-1 align-self-center" inverted outline>
@@ -14,15 +14,11 @@ const CustomButton = ({ url, text }: { url: string; text: string }) => (
   </Button>
 );
 
-const Screenshot = ({ image }: { image: Image }) => {
-  const { childImageSharp } = image?.localFile || {};
-
-  return (
-    <div className="mt-sm-4 mt-xl-0 p-0 screenshot">
-      {!!childImageSharp && <Img {...childImageSharp} alt={t`Screenshot of the Ledgy app`} />}
-    </div>
-  );
-};
+const Screenshot = ({ image }: { image: Image }) => (
+  <div className="mt-sm-4 mt-xl-0 p-0 screenshot">
+    <Image image={image} alt={t`Screenshot of the Ledgy app`} />
+  </div>
+);
 
 export const TopBanner = ({
   mainHeader,

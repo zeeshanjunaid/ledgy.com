@@ -50,6 +50,6 @@ export const ComponentPicker = ({
       return <CallToAction {...entry} prefix={prefix} />;
 
     default:
-      return null;
+      throw new Error('content __typename not recognized');
   }
 };

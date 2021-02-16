@@ -1,8 +1,8 @@
 import React from 'react';
-import Img from 'gatsby-image';
 import { dynamicI18n, DynamicTrans } from './DynamicTrans';
 import { getUnderlineHtml } from './lib';
 import { Section } from './Section';
+import { Image } from './Image';
 
 export const TitleWithGraphic = ({
   title,
@@ -12,7 +12,6 @@ export const TitleWithGraphic = ({
   light = false,
   mirrored = false,
 }: TitleWithGraphicProps & { light?: boolean; mirrored?: boolean }) => {
-  const { childImageSharp } = graphic?.localFile || {};
   const sectionBackgroundStyle = light ? 'bg-lightest' : '';
   const backgroundStyle = light ? '' : 'bg-primary tilted-background';
   const motivationTextColor = light ? 'text-gray-dark' : 'text-secondary';
@@ -28,7 +27,7 @@ export const TitleWithGraphic = ({
           <div
             className={`${order} col-lg-4 d-flex align-items-center justify-content-center justify-content-lg-end`}
           >
-            {!!childImageSharp && <Img {...childImageSharp} />}
+            <Image image={graphic} />
           </div>
           <div className="col-lg-5 pt-2 pt-lg-0">
             <p className={motivationTextColor}>

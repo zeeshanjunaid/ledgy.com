@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-import Img from 'gatsby-image';
 import { throttle } from 'lodash';
 
 import { isBrowser } from '../../helpers';
@@ -9,6 +8,7 @@ import { handleCardClick, handleScroll, getEntriesHeight } from './lib';
 import { SelectableCard } from './SelectableCard';
 import { MobileCardsWithScreenshots } from './MobileCardsWithScreenshots';
 import { SectionHeader } from '../SectionHeader';
+import { Image } from '../Image';
 
 export const SelectableCardsWithScreenshots = (props: SelectableCardsWithScreenshotsProps) => {
   const { header, content } = props;
@@ -63,14 +63,13 @@ export const SelectableCardsWithScreenshots = (props: SelectableCardsWithScreens
           <div className="row">
             <div className="col-8 pr-0">
               {content.map((v, i) => {
-                const { childImageSharp } = v.screenshot.localFile || {};
                 const isActive = activeIndex === i;
                 return (
                   <div
                     key={`img-${v.title}`}
                     className={`screenshot mx-lg-0 ${isActive ? '' : 'd-none'}`}
                   >
-                    {!!childImageSharp && <Img {...childImageSharp} />}
+                    <Image image={v.screenshot} />
                   </div>
                 );
               })}

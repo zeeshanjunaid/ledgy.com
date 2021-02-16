@@ -23,6 +23,7 @@ export * from './G2AndCapterraStrip';
 export * from './HelmetIndexLayout';
 export * from './HomePageHeader';
 export * from './Icon';
+export * from './Image';
 export * from './ImageModal';
 export * from './Loader';
 export * from './LogoBanner';

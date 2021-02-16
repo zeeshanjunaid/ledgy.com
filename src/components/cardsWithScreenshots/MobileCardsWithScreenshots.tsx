@@ -1,8 +1,8 @@
 import React from 'react';
-import Img from 'gatsby-image';
 
 import { DynamicTrans } from '../DynamicTrans';
 import { SectionHeader } from '../SectionHeader';
+import { Image } from '../Image';
 
 export const MobileCardsWithScreenshots = ({
   header,
@@ -13,7 +13,6 @@ export const MobileCardsWithScreenshots = ({
       <SectionHeader header={header} className="text-center" />
       {content.map((v) => {
         const { title, screenshot, description } = v;
-        const { childImageSharp } = screenshot.localFile || {};
         return (
           <div className="text-center" key={`img-${title}`}>
             <h5>
@@ -23,7 +22,7 @@ export const MobileCardsWithScreenshots = ({
               <DynamicTrans>{description}</DynamicTrans>
             </p>
             <div className="screenshot mb-5">
-              {!!childImageSharp && <Img {...childImageSharp} />}
+              <Image image={screenshot} />
             </div>
           </div>
         );

@@ -1,4 +1,3 @@
-import Img from 'gatsby-image';
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -11,6 +10,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 import { LongText } from '../LongText';
+import { Image } from '../Image';
 
 const getCompanySummaries = (company: Company): [IconDefinition, string, string][] => [
   [faClock, 'Founded year', `Founded in ${company.yearFounded}`],
@@ -22,15 +22,13 @@ const getCompanySummaries = (company: Company): [IconDefinition, string, string]
 
 export const CompanySummary = ({ company, prefix }: { company: Company; prefix: string }) => {
   const { contactName, logo, contactTitle, mainQuote } = company;
-  const { childImageSharp } = logo.localFile || {};
   return (
     <div className="company-summary rounded-md bg-white sticky-top p-2 p-sm-4 p-md-2 p-lg-4">
-      {!!childImageSharp && (
-        <Img
-          className="company-summary-logo font-weight-light fit-cover mx-auto my-4"
-          {...childImageSharp}
-        />
-      )}
+      <Image
+        image={logo}
+        className="company-summary-logo font-weight-light fit-cover mx-auto my-4"
+      />
+
       <div className="container">
         <LongText
           content={mainQuote}

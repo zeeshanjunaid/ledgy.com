@@ -2,7 +2,7 @@ import React from 'react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
 
-import { Image, Lead, Anchor } from '../components';
+import { MarkdownImage, Lead, Anchor } from '../components';
 
 // eslint-disable-next-line react/display-name
 const getAnchorComponent = (prefix: string) => ({
@@ -21,7 +21,7 @@ const getAnchorComponent = (prefix: string) => ({
 
 const getProviderComponents = (prefix: string) => ({
   a: getAnchorComponent(prefix),
-  img: Image,
+  img: MarkdownImage,
   Lead,
 });
 

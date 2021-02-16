@@ -1,24 +1,16 @@
 import React from 'react';
-import Img from 'gatsby-image';
 
 import { Section } from './Section';
 import { CustomFade } from './CustomFade';
+import { Image } from './Image';
 
-const Logo = ({ logo, index }: { logo: Image; index: number }) => {
-  const { childImageSharp } = logo?.localFile || {};
-  return (
-    <CustomFade delay={index * 100} className="col-12 col-sm-6 col-md-4 col-xl-2 my-2">
-      {!!childImageSharp && (
-        <div
-          className="d-flex align-items-center justify-content-center"
-          style={{ minHeight: '70px' }}
-        >
-          <Img {...childImageSharp} />
-        </div>
-      )}
-    </CustomFade>
-  );
-};
+const Logo = ({ logo, index }: { logo: Image; index: number }) => (
+  <CustomFade delay={index * 100} className="col-12 col-sm-6 col-md-4 col-xl-2 my-2">
+    <div className="d-flex align-items-center justify-content-center" style={{ minHeight: '70px' }}>
+      <Image image={logo} />
+    </div>
+  </CustomFade>
+);
 
 export const LogoBanner = ({
   logos,
