@@ -12,12 +12,11 @@ import { CustomFade } from './CustomFade';
 export const ChecklistWithScreenshot = ({
   header,
   description,
-  checklists,
+  checklist,
   image,
   mirrored = false,
 }: ChecklistWithScreenshotProps & { mirrored?: boolean }) => {
   const { childImageSharp } = image.localFile || {};
-  const checklistTexts = checklists.map((v) => v.checklistText);
   const order = mirrored ? 'order-last' : '';
 
   return (
@@ -29,16 +28,16 @@ export const ChecklistWithScreenshot = ({
             <DynamicTrans>{description}</DynamicTrans>
           </p>
           <ul className="my-2 pl-0">
-            {checklistTexts.map((checklistText) => {
+            {checklist.map((item) => {
               return (
-                <li key={checklistText} className="media d-flex align-items-center mb-3">
+                <li key={item} className="media d-flex align-items-center mb-3">
                   <FontAwesomeIcon
                     icon={faCheck}
                     className={`icon mr-3 text-light-energetic-blue`}
                     size="lg"
                   />
                   <p className="text-deep-blue mb-0">
-                    <DynamicTrans>{checklistText}</DynamicTrans>
+                    <DynamicTrans>{item}</DynamicTrans>
                   </p>
                 </li>
               );

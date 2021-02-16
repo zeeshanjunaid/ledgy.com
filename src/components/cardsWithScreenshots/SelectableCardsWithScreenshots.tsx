@@ -11,7 +11,7 @@ import { MobileCardsWithScreenshots } from './MobileCardsWithScreenshots';
 import { SectionHeader } from '../SectionHeader';
 
 export const SelectableCardsWithScreenshots = (props: SelectableCardsWithScreenshotsProps) => {
-  const { title, content } = props;
+  const { header, content } = props;
   const [activeIndex, setActiveIndex] = useState(0);
   const [cardHeight, setCardHeight] = useState(0);
   const [componentHeight, setComponentHeight] = useState(0);
@@ -59,7 +59,7 @@ export const SelectableCardsWithScreenshots = (props: SelectableCardsWithScreens
       <MobileCardsWithScreenshots {...props} />
       <div ref={wrapperRef} className="d-none d-lg-block" style={{ height: `${scrollDistance}px` }}>
         <div className="position-sticky" style={stickyStyle}>
-          <SectionHeader header={title} className="text-center" />
+          <SectionHeader header={header} className="text-center" />
           <div className="row">
             <div className="col-8 pr-0">
               {content.map((v, i) => {
@@ -67,7 +67,7 @@ export const SelectableCardsWithScreenshots = (props: SelectableCardsWithScreens
                 const isActive = activeIndex === i;
                 return (
                   <div
-                    key={`img-${v.header}`}
+                    key={`img-${v.title}`}
                     className={`screenshot mx-lg-0 ${isActive ? '' : 'd-none'}`}
                   >
                     {!!childImageSharp && <Img {...childImageSharp} />}
@@ -82,7 +82,7 @@ export const SelectableCardsWithScreenshots = (props: SelectableCardsWithScreens
                   {content.map((v, i) => (
                     <SelectableCard
                       {...v}
-                      key={v.header}
+                      key={v.title}
                       index={i}
                       activeIndex={activeIndex}
                       observer={observer}

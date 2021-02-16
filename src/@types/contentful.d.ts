@@ -95,14 +95,14 @@ declare type LogoBannerProps = Id & {
 };
 
 type SelectableCardWithScreenshotProps = {
-  header: string;
+  title: string;
   description: string;
   screenshot: Image;
 };
 
 declare type SelectableCardsWithScreenshotsProps = Id & {
   __typename: 'ContentfulSelectableCardsWithScreenshots';
-  title: string;
+  header: string;
   content: SelectableCardWithScreenshotProps[];
 };
 
@@ -122,7 +122,7 @@ declare type ChecklistWithScreenshotProps = Id & {
   header: string;
   description: string;
   image: Image;
-  checklists: { checklistText: string }[];
+  checklist: string[];
 };
 
 declare type MainPageEntryProps =

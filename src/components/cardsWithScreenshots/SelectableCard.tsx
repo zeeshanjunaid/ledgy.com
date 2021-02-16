@@ -2,14 +2,14 @@ import React, { useEffect, useRef } from 'react';
 import { DynamicTrans } from '../DynamicTrans';
 
 export const SelectableCard = ({
-  header,
+  title,
   description,
   index,
   activeIndex,
   observer,
   onClick,
 }: {
-  header: string;
+  title: string;
   description: string;
   index: number;
   activeIndex: number;
@@ -31,7 +31,7 @@ export const SelectableCard = ({
       className={`selectable-card flex-1 d-flex flex-column justify-content-center p-2 pl-4 pt-lg-3 pr-lg-3 pb-lg-3 ${backgroundColor}`}
     >
       <h5>
-        <DynamicTrans>{header}</DynamicTrans>
+        <DynamicTrans>{title}</DynamicTrans>
       </h5>
       <p className="m-0">
         <DynamicTrans>{description}</DynamicTrans>

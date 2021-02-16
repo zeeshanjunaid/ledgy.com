@@ -5,19 +5,19 @@ import { DynamicTrans } from '../DynamicTrans';
 import { SectionHeader } from '../SectionHeader';
 
 export const MobileCardsWithScreenshots = ({
-  title,
+  header,
   content,
 }: SelectableCardsWithScreenshotsProps) => {
   return (
     <div className="d-lg-none">
-      <SectionHeader header={title} className="text-center" />
+      <SectionHeader header={header} className="text-center" />
       {content.map((v) => {
-        const { header, screenshot, description } = v;
+        const { title, screenshot, description } = v;
         const { childImageSharp } = screenshot.localFile || {};
         return (
-          <div className="text-center" key={`img-${header}`}>
+          <div className="text-center" key={`img-${title}`}>
             <h5>
-              <DynamicTrans>{header}</DynamicTrans>
+              <DynamicTrans>{title}</DynamicTrans>
             </h5>
             <p>
               <DynamicTrans>{description}</DynamicTrans>
