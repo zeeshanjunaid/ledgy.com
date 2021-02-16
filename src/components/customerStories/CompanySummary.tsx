@@ -9,7 +9,7 @@ import {
   IconDefinition,
 } from '@fortawesome/free-solid-svg-icons';
 
-import { LongText } from '../LongText';
+import { LongText } from '../markdown';
 import { Image } from '../Image';
 
 const getCompanySummaries = (company: Company): [IconDefinition, string, string][] => [

@@ -1,10 +1,7 @@
 import React from 'react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import { Section } from './Section';
-import { LinkWithChevron } from './LinkWithChevron';
-import { CustomFade } from './CustomFade';
-import { Image } from './Image';
+import { Section, LinkWithChevron, CustomFade, Image } from './utils';
 
 const TestimonialCard = ({
   card,

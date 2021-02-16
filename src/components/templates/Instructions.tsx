@@ -1,6 +1,6 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
-import { CircleBadge } from '../Badge';
+import { CircleBadge } from '../utils';
 
 const STEPS = [
   { key: 1, text: 'Sign up for a free account' },

@@ -10,11 +10,10 @@ import { deprefix } from '../i18n-config';
 import logoInvertedCompact from '../img/logo-inverted-compact.png';
 
 import { CTABanner } from './CTABanner';
-import { Dropdown } from './Dropdown';
 import { SubscriptionModal } from './SubscriptionModal';
 import { FOOTER_LINKS, FooterLink, formatUrl } from './lib';
 import { isExternalUrl } from './lib/urlHelpers';
-import { DynamicTrans } from './DynamicTrans';
+import { DynamicTrans, Dropdown } from './utils';
 
 const { companyLinks, legalLinks, productLinks, resourceLinks, socialLinks } = FOOTER_LINKS;
 

@@ -1,13 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import { Button } from './Button';
-import { DynamicTrans } from './DynamicTrans';
+import { Button, DynamicTrans, Icon, Section, LinkWithChevron, SectionHeader } from './utils';
 import { formatUrl } from './lib';
-import { Icon } from './Icon';
-import { Section } from './Section';
-import { LinkWithChevron } from './LinkWithChevron';
-import { SectionHeader } from './SectionHeader';
 
 export const CallToAction = ({
   header,

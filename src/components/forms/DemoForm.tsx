@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { t } from '@lingui/macro';
 
 import { FORM_STATUSES } from '../../helpers';
-import { Button } from '../Button';
+import { Button } from '../utils';
 import { Input, InvalidFieldHints } from './Fields';
 import { handleDemoSubmit, RequesterType, COMPANY, INVESTOR } from './lib';
 

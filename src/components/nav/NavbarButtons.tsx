@@ -4,7 +4,7 @@ import { Trans } from '@lingui/macro';
 
 import { appUrl, track, demoPage } from '../../helpers';
 
-import { Button } from '../Button';
+import { Button } from '../utils';
 import { removeOverlay } from '../lib';
 
 export const NavbarButtons = ({
