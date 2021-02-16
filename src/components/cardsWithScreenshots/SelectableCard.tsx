@@ -18,7 +18,7 @@ export const SelectableCard = ({
 }) => {
   const ref = useRef(null);
   const isActive = activeIndex === index;
-  const backgroundColor = isActive ? 'bg-lightest' : 'bg-transparent';
+  const backgroundColor = isActive ? 'bg-gray-light' : 'bg-transparent';
 
   useEffect(() => {
     const card = ref.current;

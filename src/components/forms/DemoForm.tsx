@@ -26,12 +26,12 @@ export const DemoForm = ({
   const isButtonDisabled = formStatus !== IDLE && formStatus !== FETCH_ERROR;
 
   return (
-    <div className="card-border-style bg-white mx-md-6 ">
+    <div className="card-border-style bg-white mx-md-7 mx-xl-6">
       <form
         method="post"
         onSubmit={(event) => handleDemoSubmit({ values, event, setFormStatus })}
         noValidate
-        className="w-100 px-2 px-md-4 py-md-4 p-lg-6 d-flex flex-column align-items-center justify-content-between"
+        className="w-100 p-2 px-md-4 py-md-4 p-lg-6 d-flex flex-column align-items-center justify-content-between"
       >
         {!contentfulRequesterType && (
           <div className="d-flex mb-4 w-100">
