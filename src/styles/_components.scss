@@ -106,11 +106,28 @@ $deco-dot-size: 8px;
 }
 
 // Expandable image
-
 .expandable-image-wrapper {
   cursor: pointer;
   &:focus {
     outline: 2px solid $gray-300;
+  }
+}
+
+// Custom underline
+.custom-underline u {
+  text-decoration: none;
+  position: relative;
+  white-space: nowrap;
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 6px;
+    width: 100%;
+    background-color: $vibrant-green;
+    border-radius: $border-radius;
+    z-index: 0;
   }
 }
 

@@ -15,19 +15,22 @@ export const ChecklistWithScreenshot = ({
 }: ChecklistWithScreenshotProps & { mirrored?: boolean }) => {
   const { childImageSharp } = image.localFile || {};
   const order = mirrored ? 'order-last' : '';
-
+  const isLongChecklist = checklist.length > 3;
   return (
     <Section>
       <SectionHeader header={header} />
       <div className="row">
         <div className={`${order} col-lg-4 pr-4 d-flex flex-column justify-content-center`}>
-          <p className="text-deep-blue mb-4">
+          <p className={`text-deep-blue ${isLongChecklist ? 'mb-2 mb-xl-3' : 'mb-4'}`}>
             <DynamicTrans>{description}</DynamicTrans>
           </p>
           <ul className="my-2 pl-0">
             {checklist.map((item) => {
               return (
-                <li key={item} className="media d-flex align-items-center mb-3">
+                <li
+                  key={item}
+                  className={`media d-flex align-items-center ${isLongChecklist ? 'mb-2' : 'mb-3'}`}
+                >
                   <FontAwesomeIcon
                     icon={faCheck}
                     className={`icon mr-3 text-light-energetic-blue`}
