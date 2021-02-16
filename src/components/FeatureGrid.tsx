@@ -37,8 +37,8 @@ export const FeatureGrid = ({ header, sections }: FeatureGridContentProps) => (
   <Section>
     <SectionHeader header={header} />
     <div className="row my-4">
-      {sections.map((v, i) => (
-        <FeatureGridCard key={v.title} index={i} featureGridSection={v} />
+      {sections.map((section, index) => (
+        <FeatureGridCard key={section.title} index={index} featureGridSection={section} />
       ))}
     </div>
   </Section>

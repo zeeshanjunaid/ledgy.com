@@ -5,11 +5,13 @@ import { Button } from './Button';
 import { demoPage } from '../helpers';
 import { DynamicTrans } from './DynamicTrans';
 
+const DEMO_BUTTON_TEXT = 'Book a Demo';
+
 export const RequestDemoButton = ({
   buttonClassName,
   prefix,
   location,
-  buttonText = 'Book a Demo',
+  buttonText = DEMO_BUTTON_TEXT,
 }: {
   buttonClassName: string;
   prefix: string;

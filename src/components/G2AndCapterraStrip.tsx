@@ -3,8 +3,9 @@ import { Trans } from '@lingui/macro';
 
 import { targetBlank } from '../helpers';
 
+const style = { filter: 'grayscale(1)' };
+
 export const G2AndCapterraStrip = () => {
-  const style = { filter: 'grayscale(1)' };
   return (
     <div className="bg-light p-5 mt-7">
       <div className="container">

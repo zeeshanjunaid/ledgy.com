@@ -12,11 +12,11 @@ import { RequesterType } from '../components/forms/lib';
 import { TopBannerLayout } from '../components/TopBannerLayout';
 
 type DemoPageProps = {
-  content: DemoPageEntryProps[];
+  content: DemoPageProps[];
   title: string;
   description: string;
   formButtonText: string;
-  requesterType?: RequesterType | void;
+  requesterType?: RequesterType;
 };
 
 const CapterraBadge = () => (

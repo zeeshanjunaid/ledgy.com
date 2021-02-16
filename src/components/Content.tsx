@@ -13,7 +13,7 @@ export const PostLink = ({
   to,
   description,
   prefix,
-  isExternal,
+  isExternal = false,
 }: {
   post: ContentfulPageProps;
   to: string;

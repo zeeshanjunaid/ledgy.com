@@ -26,8 +26,8 @@ export const LogoBanner = ({
 }: LogoBannerProps & { smallPadding?: boolean }) => (
   <Section className="bg-lightest" smallPadding={smallPadding}>
     <div className="row align-items-center justify-content-around">
-      {logos.map((v, i) => (
-        <Logo logo={v} key={`logo-banner-${v.title}`} index={i} />
+      {logos.map((logo, index) => (
+        <Logo logo={logo} key={`logo-banner-${logo.title}`} index={index} />
       ))}
     </div>
   </Section>

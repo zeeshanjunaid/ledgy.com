@@ -1,14 +1,12 @@
-import React, { ReactNode, DetailedHTMLProps, HTMLAttributes } from 'react';
+import React from 'react';
+import { SectionProps } from '../@types/contentful';
 
 export const Section = ({
   children,
   className = '',
   smallPadding = false,
   ...props
-}: { children: ReactNode; smallPadding?: boolean } & DetailedHTMLProps<
-  HTMLAttributes<HTMLElement>,
-  HTMLElement
->) => (
+}: SectionProps) => (
   <section
     {...props}
     className={`py-${smallPadding ? 2 : 4} py-lg-${smallPadding ? 4 : 8} ${className}`}
