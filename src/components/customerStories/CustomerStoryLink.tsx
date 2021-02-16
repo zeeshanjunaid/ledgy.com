@@ -22,6 +22,7 @@ export const CustomerStoryLink = ({
       description={subtitle}
       to={to}
       image={image}
+      prefix={prefix}
     />
   );
 };

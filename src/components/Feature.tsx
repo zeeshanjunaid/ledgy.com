@@ -1,8 +1,8 @@
 import React from 'react';
 import type { GatsbyImageProps } from 'gatsby-image';
+import { Slide } from 'react-awesome-reveal';
 
-import { DynamicTrans } from '../components/DynamicTrans';
-import { ImageModal } from './ImageModal';
+import { DynamicTrans, ImageModal } from './utils';
 
 export const Feature = ({
   title,
@@ -33,7 +33,9 @@ export const Feature = ({
         </ul>
       </div>
       <div className={`col-12 col-md-5 py-3 px-2 px-md-4 ${imgFirst ? 'order-md-first' : ''}`}>
-        {!!imgProps && <ImageModal imgProps={imgProps} />}
+        <Slide direction={imgFirst ? 'left' : 'right'}>
+          {!!imgProps && <ImageModal imgProps={imgProps} />}
+        </Slide>
       </div>
     </div>
   </div>

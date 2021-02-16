@@ -4,7 +4,7 @@ import Img, { GatsbyImageFluidProps } from 'gatsby-image';
 import { calculatorUrl, track } from '../helpers';
 import { ProductHuntButton } from './ProductHuntButton';
 import { MainHeaderLayout } from './MainHeaderLayout';
-import { Button } from './Button';
+import { Button } from './utils';
 
 export const CalculatorHeader = ({
   data,

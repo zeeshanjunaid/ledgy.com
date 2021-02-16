@@ -10,6 +10,10 @@
   font-size: 22px;
 }
 
+.font-weight-semi-bold {
+  font-weight: 600;
+}
+
 .line-height-lg {
   line-height: 2.2rem;
 }
@@ -111,10 +115,6 @@ $small-width: 560px;
   max-width: 832.5px;
 }
 
-.adjust-bottom {
-  margin-bottom: 1px;
-}
-
 .width-fit-content {
   width: fit-content;
 }
@@ -163,10 +163,19 @@ $small-width: 560px;
   z-index: $zindex-base;
 }
 
+.z-index-background {
+  z-index: 0;
+}
+
 .z-index-deco {
   z-index: $zindex-deco-shape;
 }
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.card-border-style {
+  border-radius: $border-radius-wide;
+  box-shadow: $box-shadow-wide;
 }

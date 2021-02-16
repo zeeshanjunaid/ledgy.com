@@ -8,6 +8,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 import { shuffleArray } from '../helpers';
 import { AuthorProps } from '../layouts/team';
+import { CustomFade } from './utils';
 
 const TeamMember = ({
   name,
@@ -23,7 +24,7 @@ const TeamMember = ({
 }) => {
   const ProfileImage = <Img {...img} className="mx-auto" alt={name} />;
   return (
-    <div className="ledgista col-12 col-md-6 col-lg-4">
+    <CustomFade className="ledgista col-12 col-md-6 col-lg-4" delay={300}>
       <div className="pb-6 h-100 d-flex flex-column align-items-center justify-content-between">
         <div className="d-flex flex-column align-items-center">
           <div className="ledgista-image-wrapper">
@@ -49,7 +50,7 @@ const TeamMember = ({
           </a>
         </div>
       </div>
-    </div>
+    </CustomFade>
   );
 };
 

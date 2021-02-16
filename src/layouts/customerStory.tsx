@@ -1,9 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import { LongText } from '../components/LongText';
-import { PageHeader } from '../components/PageHeader';
-import { CompanySummary, OtherCustomerStories } from '../components/customerStories';
+import { LongText, PageHeader, CompanySummary, OtherCustomerStories } from '../components';
 import { Title, Hr } from '../layouts/utils';
 
 const CustomerStory = ({
@@ -25,10 +23,10 @@ const CustomerStory = ({
     <div>
       <Title title={title} description={subtitle} />
       <PageHeader lang={lang} documentLang={language} title={title} subtitle={subtitle} />
-      <main className="main-content">
+      <main>
         <section className="section ">
           <div className="container container-medium">
-            <div className="customer-story-section row">
+            <div className="row">
               <div className="col-md-4 mb-6">
                 <CompanySummary company={company} prefix={prefix} />
               </div>

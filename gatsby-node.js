@@ -33,6 +33,31 @@ exports.onCreatePage = async ({ page, actions }) => {
   });
 };
 
+// schema customization to allow Gatsby to query optional Contentful fields
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions;
+  const typeDefinitions = `
+  type ContentfulCallToAction2021 implements Node {
+    externalLinkText: String
+    externalLinkUrl: String
+  }
+  type ContentfulTestimonialCardBuildingBlock implements Node {
+    linkText: String
+    linkPath: String
+  }
+  union DemoPage2021Content = ContentfulLogoBanner | ContentfulSelectableCardsWithScreenshots | ContentfulFeatureGrid | ContentfulTestimonialCards | ContentfulTitleWithGraphic | ContentfulContentWithChecklist | ContentfulCallToAction2021 | ContentfulChecklistWithScreenshot
+  type ContentfulDemoPage2021 implements Node {
+    requesterType: String
+    content: [DemoPage2021Content] @link(by: "id", from: "content___NODE")
+  }
+  union FrontPage2021Content = ContentfulTopBanner | ContentfulLogoBanner | ContentfulSelectableCardsWithScreenshots | ContentfulFeatureGrid | ContentfulTestimonialCards | ContentfulTitleWithGraphic | ContentfulContentWithChecklist | ContentfulCallToAction2021 | ContentfulChecklistWithScreenshot
+  type ContentfulFrontPage2021 implements Node {
+    entries: [FrontPage2021Content] @link(by: "id", from: "entries___NODE")
+  }
+`;
+  createTypes(typeDefinitions);
+};
+
 const pageQuery = `
       {
         allContentfulPage(limit: 1000) {
@@ -75,7 +100,7 @@ const featurePageQuery = `
 
 const demoQuery = `
       {
-        allContentfulSignupPage(limit: 1000) {
+        allContentfulDemoPage2021(limit: 1000) {
           edges {
             node {
               id
@@ -150,8 +175,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   const demoPageComponent = path.resolve(`${basePath}/demo.tsx`);
   const createDemoPages = resolvePagePromise(graphql(demoQuery), (data) =>
-    // TODO rename in Contentful
-    data.allContentfulSignupPage.edges.forEach(({ node }) => {
+    data.allContentfulDemoPage2021.edges.forEach(({ node }) => {
       const { id, slug } = node;
       const pagePath = `/demo/${slug}/`;
       const context = { id };

@@ -3,20 +3,20 @@ import { Trans, t } from '@lingui/macro';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
-import { ContentBody } from '../components/Content';
-import { Button } from '../components/Button';
-import { MainHeaderLayout } from '../components/MainHeaderLayout';
 import { Title } from '../layouts/utils';
 import { appUrl, track } from '../helpers';
 import {
   TemplateFAQs,
   Testimonials,
   Instructions,
-  CallToAction,
+  CallToActionEsop,
   DigitalSignatures,
   Video,
-} from '../components/templates';
-import { ProductHuntButton } from '../components/ProductHuntButton';
+  Button,
+  ContentBody,
+  MainHeaderLayout,
+  ProductHuntButton,
+} from '../components';
 
 const esopTemplates = (props: Props) => {
   const { data, lang } = props;
@@ -58,7 +58,7 @@ const esopTemplates = (props: Props) => {
       />
       <ContentBody>
         <Instructions />
-        <CallToAction />
+        <CallToActionEsop />
         <Testimonials data={data} />
         <Video />
         <TemplateFAQs />

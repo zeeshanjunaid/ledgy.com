@@ -1,12 +1,10 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import { PageHeader } from '../components/PageHeader';
-import { Feature } from '../components/Feature';
+import { PageHeader, dynamicI18n, Feature } from '../components';
 import { Title } from '../layouts/utils';
-import { dynamicI18n } from '../components/DynamicTrans';
 
-declare type FeatureProps = {
+type FeatureProps = {
   id: string;
   title: string;
   description: string[];

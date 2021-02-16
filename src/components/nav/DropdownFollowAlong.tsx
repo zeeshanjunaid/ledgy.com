@@ -2,94 +2,126 @@ import React, { useState, MouseEvent } from 'react';
 import { Link } from 'gatsby';
 import { CSSTransition } from 'react-transition-group';
 
-import { NAVBAR_TITLES, NAVBAR_LINKS, formatUrl, isExternalUrl, NavbarMenuItem } from '../lib';
+import {
+  NAVBAR_TITLES,
+  NAVBAR_LINKS,
+  formatUrl,
+  isExternalUrl,
+  NavbarMenuColumn,
+  NavbarMenuItem,
+} from '../lib';
 import { targetBlank } from '../../helpers';
-import { DynamicTrans } from '../DynamicTrans';
+import { dynamicI18n, DynamicTrans, Icon } from '../utils';
 
-type ListItemProps = { title: string; isTextShown: boolean; prefix: string };
-
-type ListItemHoverProps = ListItemProps & {
-  to: string;
-  text?: string;
-  onClick: () => void;
-};
-
-type ParentListItemProps = ListItemProps & {
-  eventHandlingProps: {
-    onMouseEnter: (e: MouseEvent) => void;
-    onMouseLeave: (e: MouseEvent) => void;
+type CommonListProps = { prefix: string; isTextShown: boolean };
+type ParentListItemProps = { title: string } & CommonListProps & {
+    eventHandlingProps: {
+      onMouseEnter: (e: MouseEvent) => void;
+      onMouseLeave: (e: MouseEvent) => void;
+    };
+    menuColumns: NavbarMenuColumn[];
+    disappear: () => void;
+    className: string;
   };
-  menuItems: NavbarMenuItem[];
-  disappear: () => void;
-  className: string;
-};
 
 const NAV_ID = 'custom-hover-nav';
 const getNavbar = () => document.getElementById(NAV_ID);
 
-const ListItemHover = ({ to, prefix, title, text, onClick, isTextShown }: ListItemHoverProps) => {
+const Arrow = () => <span className="list-item-hover-arrow">&#10132;</span>;
+
+const ListItem = ({
+  icon,
+  title,
+  description,
+  link,
+  prefix,
+  onClick,
+  isTextShown,
+}: NavbarMenuItem & CommonListProps & { onClick: () => void }) => {
   const itemContent = (
-    <>
-      <h4 className={`text-primary mt-2 ${text ? 'mb-1' : 'mb-2'}`}>
-        <DynamicTrans>{title}</DynamicTrans>
-      </h4>
-      {!!text && (
+    <div className="d-flex">
+      <Icon icon={icon} className="mt-3 mr-2" height={30} width={30} />
+      <div>
+        <h5
+          className={`text-primary d-flex align-items-center mt-2 ${description ? 'mb-1' : 'mb-2'}`}
+        >
+          <DynamicTrans>{title}</DynamicTrans>
+          <Arrow />
+        </h5>
         <div className="list-item-hover-text mb-3">
-          <DynamicTrans>{text}</DynamicTrans>
+          <DynamicTrans>{description}</DynamicTrans>
         </div>
-      )}
-    </>
+      </div>
+    </div>
   );
 
   return (
-    <li className={`list-item-hover ${isTextShown ? 'show' : 'hide'}`}>
-      {isExternalUrl(to) ? (
-        <a href={to} onClick={onClick} {...targetBlank}>
+    <div className={`list-item-hover px-3 py-2 ${isTextShown ? 'show' : 'hide'}`}>
+      {isExternalUrl(link) ? (
+        <a href={link} onClick={onClick} {...targetBlank}>
           {itemContent}
         </a>
       ) : (
-        <Link to={formatUrl(prefix, to)} onClick={onClick}>
+        <Link to={formatUrl(prefix, link)} onClick={onClick}>
           {itemContent}
         </Link>
       )}
-    </li>
+    </div>
   );
 };
 
-const ParentListItem = ({
+const decorateHeader = (header: string) => {
+  const firstTwoLetters = header.slice(0, 2);
+  const rest = header.slice(2);
+  return firstTwoLetters ? `<u>${firstTwoLetters}</u>${rest}` : '';
+};
+
+const DropdownItem = ({
   eventHandlingProps,
   title: parentTitle,
-  menuItems,
+  menuColumns,
   prefix,
   disappear,
   isTextShown,
   className,
 }: ParentListItemProps) => (
-  <li {...eventHandlingProps}>
+  <li {...eventHandlingProps} className="dropdown-item-hover">
     <p>
       <DynamicTrans>{parentTitle}</DynamicTrans>
     </p>
-    <ul className={`hover-list-child ${className}`}>
-      {menuItems.map(([to, title, text]) => (
-        <ListItemHover
-          to={to}
-          title={title}
-          text={text}
-          prefix={prefix}
-          key={to}
-          onClick={disappear}
-          isTextShown={isTextShown}
-        />
-      ))}
-    </ul>
+    <div className={`hover-list-child ${className}`}>
+      {menuColumns.map((column, i) => {
+        const { items, header } = column;
+        const formattedHeader = dynamicI18n(header || '').toUpperCase();
+        return (
+          <div key={`${header}-${i}`} className="flex-1 px-2">
+            {!!header && (
+              <h6
+                className="column-header text-gray-neutral my-2"
+                dangerouslySetInnerHTML={{ __html: decorateHeader(formattedHeader) }}
+              />
+            )}
+            {items.map((item) => (
+              <ListItem
+                {...item}
+                prefix={prefix}
+                key={item.link}
+                onClick={disappear}
+                isTextShown={isTextShown}
+              />
+            ))}
+          </div>
+        );
+      })}
+    </div>
   </li>
 );
 
-const { featuresTitle, resourcesTitle, pricingTitle, dataProtectionTitle } = NAVBAR_TITLES;
-const { features, resources, pricing, dataProtection } = NAVBAR_LINKS;
+const { solutionsTitle, resourcesTitle, pricingTitle } = NAVBAR_TITLES;
+const { solutions, resources, pricing } = NAVBAR_LINKS;
 
-const parentListItems: [string, NavbarMenuItem[], string][] = [
-  [featuresTitle, features, 'features-dd'],
+const dropdownItems: [string, NavbarMenuColumn[], string][] = [
+  [solutionsTitle, solutions, 'solutions-dd'],
   [resourcesTitle, resources, 'resources-dd'],
   [pricingTitle, pricing, 'pricing-dd'],
 ];
@@ -161,28 +193,23 @@ export const DropdownFollowAlong = (props: LayoutProps) => {
               transition: firstHover ? 'opacity 300ms' : 'all 200ms',
             }}
           >
-            <span className="arrow" />
+            <span className="bubble-tip" />
           </div>
         </CSSTransition>
 
-        <ul className="hover-list-parent">
-          {parentListItems.map(([parentTitle, menuItems, className]) => (
-            <ParentListItem
+        <ul className="dropdown-items-parent">
+          {dropdownItems.map(([parentTitle, menuColumns, className]) => (
+            <DropdownItem
               key={className}
               eventHandlingProps={eventHandlingProps}
               title={parentTitle}
-              menuItems={menuItems}
+              menuColumns={menuColumns}
               prefix={props.prefix}
               disappear={disappear}
               isTextShown={isTextShown}
               className={className}
             />
           ))}
-          <li>
-            <Link to={`${props.prefix}/${dataProtection[0][0]}`}>
-              <DynamicTrans>{dataProtectionTitle}</DynamicTrans>
-            </Link>
-          </li>
         </ul>
       </nav>
     </>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { t } from '@lingui/macro';
 
 import { FORM_STATUSES } from '../../helpers';
-import { Button } from '../Button';
+import { Button } from '../utils';
 import { Input, InvalidFieldHints } from './Fields';
 import { handleDemoSubmit, RequesterType, COMPANY, INVESTOR } from './lib';
 
@@ -11,11 +11,9 @@ const { IDLE, FETCH_ERROR } = FORM_STATUSES;
 const REQUESTER_TYPES = [COMPANY, INVESTOR];
 
 export const DemoForm = ({
-  title,
   buttonText,
   contentfulRequesterType,
 }: {
-  title: string;
   buttonText: string;
   contentfulRequesterType: RequesterType | void;
 }) => {
@@ -23,21 +21,20 @@ export const DemoForm = ({
   const [email, setEmail] = useState('');
   const [size, setSize] = useState('');
   const [formStatus, setFormStatus] = useState(IDLE);
-  const inputClassName = 'height-42px bg-transparent text-dark';
+  const inputClassName = 'height-42px bg-transparent text-dark border border-light-energetic-blue';
   const values = { requesterType, email, size };
   const isButtonDisabled = formStatus !== IDLE && formStatus !== FETCH_ERROR;
 
   return (
-    <div className="d-flex flex-column align-items-center bg-white border border-gray-neutral p-2 p-sm-4 ml-lg-4 mt-lg-4 rounded">
-      <h4 className="mt-5 mb-4">{title}</h4>
+    <div className="card-border-style bg-white mx-md-7 mx-xl-6">
       <form
         method="post"
         onSubmit={(event) => handleDemoSubmit({ values, event, setFormStatus })}
         noValidate
-        className="w-100 p-2 p-sm-4 d-flex flex-column align-items-center justify-content-between"
+        className="w-100 p-2 px-md-4 py-md-4 p-lg-6 d-flex flex-column align-items-center justify-content-between"
       >
         {!contentfulRequesterType && (
-          <div className="d-flex mt-2 mb-4 w-100">
+          <div className="d-flex mb-4 w-100">
             <input type="hidden" name="type" />
             {REQUESTER_TYPES.map((type) => (
               <Button
@@ -47,7 +44,7 @@ export const DemoForm = ({
                   setSize('');
                   setFormStatus(IDLE);
                 }}
-                className={`multi-button border border-muted px-1 py-2 ${
+                className={`multi-button border border-light-energetic-blue px-1 py-2 ${
                   type === requesterType ? 'selected' : ''
                 }`}
               >
@@ -83,7 +80,7 @@ export const DemoForm = ({
           disabled={isButtonDisabled}
           type="submit"
           energetic
-          className="border-0 w-100 mx-1 mt-4 mb-4 align-self-center btn-xl"
+          className="border-0 w-100 mx-1 mt-4 mb-1 align-self-center btn-xl"
         >
           {buttonText}
         </Button>

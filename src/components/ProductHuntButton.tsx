@@ -1,6 +1,6 @@
 import React from 'react';
 import { track } from '../helpers';
-import { Button } from './Button';
+import { Button } from './utils';
 
 export const ProductHuntButton = ({
   productHuntLink,

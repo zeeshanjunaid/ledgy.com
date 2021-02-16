@@ -1,6 +1,8 @@
 
 .navbar {
   min-height: $navbar-min-height;
+  will-change: top;
+  transition: 200ms;
   .btn {
     white-space: nowrap;
   }
@@ -32,9 +34,7 @@
   }
 }
 
-.hover-list-parent > li > a,
-.hover-list-parent > li > p {
-  color: $white;
+.dropdown-items-parent > .dropdown-item-hover > p {
   display: inline-block;
   border-radius: 5px;
   margin: 10px;
@@ -43,11 +43,11 @@
     padding: 10px 20px;
   }
 }
-.hover-list-parent p {
+.dropdown-items-parent p {
   cursor: default;
 }
 
-.hover-list-parent > li {
+.dropdown-items-parent > .dropdown-item-hover {
   z-index: $zindex-popup-toggler;
   position: relative;
   display: flex;
@@ -70,7 +70,7 @@
 }
 
 .trigger-enter .hover-list-child {
-  display: block;
+  display: flex;
 }
 
 .trigger-enter-active .hover-list-child {
@@ -79,9 +79,9 @@
 }
 
 .list-item-hover {
+  height: 100px;
   display: none;
   position: relative;
-  padding: 2px 8px;
   border-radius: $border-radius;
 }
 
@@ -104,13 +104,23 @@
 
 .trigger-enter-active .list-item-hover {
   opacity: 1;
-  transition: 400ms;
+  transition: 300ms;
   transform: translateX(0);
+  .list-item-hover-arrow {
+    transition: 300ms;
+    opacity: 0;
+    transform: translateX(0);
+    font-size: 11px;
+  }
   &:hover {
-    background-color: $pale-energetic-blue;
-    transition: 400ms;
     .list-item-hover-text {
+      transition: color 300ms;
       color: $deep-blue;
+    }
+    .list-item-hover-arrow {
+      opacity: 1;
+      transition: transform 300ms;
+      transform: translateX(6px);
     }
   }
 }
@@ -126,10 +136,11 @@
   z-index: $zindex-popup;
   width: 100px;
   height: 100px;
-  border-radius: 0.25rem;
-  box-shadow: 0 0 5px 1px $gray-700;
+  border-radius: $border-radius-wide;
+  box-shadow: $box-shadow-wide;
   transform-origin: 50% 0;
   transform: translateY($navbar-min-height);
+  position: relative;
 }
 
 .dropdown-background-transition-enter {
@@ -147,28 +158,50 @@
   transition: 500ms;
 }
 
-.arrow {
+.bubble-tip {
   position: absolute;
   width: 14px;
   height: 14px;
   display: block;
   background: $white;
-  transform: translateY(-50%) rotate(45deg);
-  box-shadow: -2px -2px 4px -2px $gray-700;
+  transform: translateY(-55%) rotate(45deg);
   border-radius: 0.25rem 0 0 0;
 }
 
-.hover-list-child.features-dd {
-  width: 450px;
+.column-header u {
+  position: relative;
+  text-decoration: none;
+  &::after {
+    position: absolute;
+    content: '';
+    left: 1px;
+    bottom: 0;
+    height: 3px;
+    border-radius: 3px;
+    width: 100%;
+    background-color: $light-energetic-blue;
+  }
 }
 
-
-.hover-list-child.resources-dd {
+.hover-list-child.solutions-dd {
   width: 400px;
 }
 
+.hover-list-child.resources-dd {
+  width: 800px;
+  & .list-item-hover {
+    height: 140px;
+  }
+  @include media-breakpoint-up(xl) {
+    width: 1000px;
+    & .list-item-hover {
+      height: 120px;
+    }
+  }
+}
+
 .hover-list-child.pricing-dd {
-  width: 350px;
+  width: 500px;
 }
 
 // Mobile properties

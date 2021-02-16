@@ -2,91 +2,82 @@ import { graphql } from 'gatsby';
 import { Trans } from '@lingui/macro';
 import React from 'react';
 
-import { DemoForm } from '../components/forms';
-import { ExternalLogoRow } from '../components/ExternalLogoRow';
-import { SellingProp } from '../components/SellingProp';
-import { CTABanner } from '../components/CTABanner';
 import { formatUrl } from '../components/lib';
-import { dynamicI18n, DynamicTrans } from '../components/DynamicTrans';
-import logoInvertedCompact from '../img/logo-inverted-compact.png';
+import { ComponentPicker, DemoForm, dynamicI18n, DynamicTrans } from '../components';
+
 import { targetBlank } from '../helpers';
 
 import { Title } from './utils';
+import { RequesterType } from '../components/forms/lib';
+import { TopBannerLayout } from '../components/TopBannerLayout';
 
-const Logo = () => <img width={80} src={logoInvertedCompact} alt="Ledgy" />;
+type DemoPageProps = {
+  content: DemoPageEntryProps[];
+  title: string;
+  description: string;
+  formButtonText: string;
+  requesterType?: RequesterType;
+};
 
-const Quote = ({ name, quote }: ContentfulIndexEntry) =>
-  name && quote ? (
-    <div className="container text-center py-7 line-height-lg">
-      <h3 className="mb-3">“{quote}”</h3>
-      <h6>— {name}</h6>
-    </div>
-  ) : null;
-
-const DecoShapes = () => (
-  <>
-    <div className="one-pager-deco-shape one-pager-deco-shape--one" />
-    <div className="one-pager-deco-shape one-pager-deco-shape--two" />
-  </>
+const CapterraBadge = () => (
+  <a
+    href="https://www.capterra.com/reviews/173939/Ledgy?utm_source=vendor&utm_medium=badge&utm_campaign=capterra_reviews_badge"
+    className="mr-4"
+    {...targetBlank}
+  >
+    <img
+      className="capterra-badge d-none d-md-block"
+      src="https://assets.capterra.com/badge/4700aedd505fa5881254166d19949239.png?v=2120646&p=173939"
+      alt="Ledgy high Capterra rating"
+    />
+  </a>
 );
 
-const DemoPage = (props: LayoutProps) => {
+const G2Badge = () => (
+  <a
+    title="Ledgy is a leader in Equity Management on G2"
+    href="https://www.g2.com/products/ledgy/reviews?utm_source=rewards-badge"
+    {...targetBlank}
+  >
+    <img
+      className="g2-badge d-none d-md-block"
+      alt="Ledgy is a leader in Equity Management on G2"
+      src="https://images.g2crowd.com/uploads/report_medal/image/1335/medal.svg"
+    />
+  </a>
+);
+
+const DemoPage = (props: Props) => {
   const { data, prefix } = props;
   const {
+    content,
     title,
     description,
-    formTitle,
     formButtonText,
-    content,
-    type,
-  } = data.contentfulSignupPage; // TODO rename in Contentful
+    requesterType,
+  }: DemoPageProps = data.contentfulDemoPage2021;
+
+  const buttonOne = <CapterraBadge />;
+  const buttonTwo = <G2Badge />;
+
+  const form = (
+    <DemoForm buttonText={dynamicI18n(formButtonText)} contentfulRequesterType={requesterType} />
+  );
 
   return (
     <>
       <Title title={dynamicI18n(title)} description={dynamicI18n(description)} />
-      <header className="header d-flex home-banner px-1 text-left bg-primary overflow-hidden">
-        <div className="container my-4 my-md-auto position-relative z-index-base">
-          <div className="row mt-4 mt-lg-2 pb-4 pb-md-6">
-            <div className="col-lg-6 d-flex flex-column justify-content-center">
-              <div className="mt-lg-n4 mb-md-4 mr-md-4">
-                <Logo />
-                <h1 className="text-white mt-5 mb-2 mb-sm-3">
-                  <DynamicTrans>{title}</DynamicTrans>
-                </h1>
-                <div className="text-lg line-height-lg text-white font-weight-light pb-3">
-                  <DynamicTrans>{description}</DynamicTrans>
-                </div>
-              </div>
-            </div>
-            <div className="text-dark col-lg-6 d-flex flex-column justify-content-center mt-4 mt-lg-0">
-              <DemoForm
-                title={dynamicI18n(formTitle)}
-                buttonText={dynamicI18n(formButtonText)}
-                contentfulRequesterType={type}
-              />
-            </div>
-          </div>
-        </div>
-        <DecoShapes />
-      </header>
+      <TopBannerLayout
+        buttonOne={buttonOne}
+        buttonTwo={buttonTwo}
+        title={<DynamicTrans>{title}</DynamicTrans>}
+        subtitle={<DynamicTrans>{description}</DynamicTrans>}
+        componentRight={form}
+      />
       <div className="position-relative bg-white z-index-base">
-        {(content as ContentfulIndexEntry[]).map((entry, i) => {
-          const { __typename, id } = entry;
-
-          if (__typename === 'ContentfulQuote') {
-            return <Quote key={id} {...entry} />;
-          }
-          if (__typename === 'ContentfulExternalLogos') {
-            return <ExternalLogoRow key={id} {...entry} />;
-          }
-          if (__typename === 'ContentfulSellingProposition') {
-            return (
-              <SellingProp key={id} {...entry} prefix={prefix} imgFirst={i % 2 === 0} hideLink />
-            );
-          }
-          return null;
-        })}
-        <CTABanner {...props} />
+        {content.map((v, i) => (
+          <ComponentPicker entry={v} prefix={prefix} key={`${v.id}-${i}`} />
+        ))}
       </div>
       <footer className="footer d-flex align-items-center justify-content-center text-white bg-primary p-2">
         <a
@@ -112,50 +103,127 @@ export default DemoPage;
 
 export const demoQuery = graphql`
   query($id: String!) {
-    contentfulSignupPage(id: { eq: $id }) {
+    contentfulDemoPage2021(id: { eq: $id }) {
       id
       slug
       title
       description
-      formTitle
       formButtonText
-      type
+      requesterType
       content {
-        ... on ContentfulExternalLogos {
+        ... on ContentfulFeatureGrid {
           id
-          title
-          logos {
+          header
+          sections {
+            icon
             title
             description
+          }
+        }
+        ... on ContentfulTestimonialCards {
+          id
+          cards {
+            signature
+            linkText
+            linkPath
+            text {
+              childMdx {
+                body
+              }
+            }
+            logo {
+              localFile {
+                childImageSharp {
+                  fixed(height: 60) {
+                    ...GatsbyImageSharpFixed
+                  }
+                }
+              }
+            }
+          }
+        }
+        ... on ContentfulContentWithChecklist {
+          id
+          header
+          description
+          linkText
+          linkUrl
+          checklist
+        }
+        ... on ContentfulTitleWithGraphic {
+          id
+          title
+          motivationText
+          description
+          graphic {
             localFile {
               childImageSharp {
-                fixed(width: 120) {
+                fixed(height: 300) {
                   ...GatsbyImageSharpFixed
                 }
               }
             }
           }
         }
-        ... on ContentfulSellingProposition {
+        ... on ContentfulLogoBanner {
           id
-          title
-          description
-          link
-          linkTo
-          image {
+          logos {
+            title
+            description
             localFile {
               childImageSharp {
-                fluid(maxWidth: 400) {
-                  ...GatsbyImageSharpFluid
+                fixed(width: 130) {
+                  ...GatsbyImageSharpFixed
                 }
               }
             }
           }
         }
-        ... on ContentfulQuote {
+        ... on ContentfulSelectableCardsWithScreenshots {
           id
-          quote
-          name
+          header
+          content {
+            title
+            description
+            screenshot {
+              localFile {
+                childImageSharp {
+                  fluid(maxWidth: 1500, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+            }
+          }
+        }
+        ... on ContentfulCallToAction2021 {
+          id
+          header
+          description
+          buttonText
+          buttonPath
+          externalLinkText
+          externalLinkUrl
+          icon
+          secondaryHeader
+          secondaryDescription
+          secondaryLinkText
+          secondaryLinkPath
+        }
+        ... on ContentfulChecklistWithScreenshot {
+          id
+          header
+          description
+          checklist
+          image {
+            localFile {
+              childImageSharp {
+                fluid(maxWidth: 1200, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
         }
       }
     }

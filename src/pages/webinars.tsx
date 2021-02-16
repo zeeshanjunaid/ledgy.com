@@ -3,8 +3,7 @@ import { t } from '@lingui/macro';
 import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import { ContentBody, PostLink } from '../components/Content';
-import { PageHeader } from '../components/PageHeader';
+import { ContentBody, PostLink, PageHeader } from '../components';
 
 import { Title } from '../layouts/utils';
 
@@ -23,11 +22,12 @@ const Webinars = ({ data }: Props) => (
         const { id, youtube, description } = node;
         return (
           <PostLink
-            external
             key={id}
             to={youtube}
             post={node}
             description={<MDXRenderer>{description.childMdx.body}</MDXRenderer>}
+            prefix={data.prefix}
+            isExternal
           />
         );
       })}

@@ -1,33 +1,73 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState, MutableRefObject } from 'react';
 import { Link } from 'gatsby';
 import { CSSTransition } from 'react-transition-group';
 
 import { name } from '../../helpers';
-import logoInverted from '../../img/logo-inverted.png';
+
 import { toggleOverlay } from '../lib';
-import { Button } from '../Button';
+import { Button } from '../utils';
 
 import { NavbarButtons } from './NavbarButtons';
 import { DropdownFollowAlong } from './DropdownFollowAlong';
 import { MobileNavbar } from './MobileNavbar';
 
-const Logo = (props: { prefix: string }) => (
-  <Link to={`${props.prefix}/#start`}>
-    <img className="navbar-logo" src={logoInverted} alt={name} />
-  </Link>
-);
+const isLight = (props: LayoutProps) => {
+  const { pathname } = props.location;
+  return pathname === '/' || pathname.includes('demo');
+};
+
+const Logo = (props: LayoutProps) => {
+  const fileName = isLight(props) ? 'logo' : 'logo-inverted';
+  const logo = require(`../../img/${fileName}.png`);
+  return (
+    <Link to={`${props.prefix}/#start`}>
+      <img className="navbar-logo" src={logo} alt={name} />
+    </Link>
+  );
+};
+
+const toggleNav = (navRef: MutableRefObject<HTMLElement | null>) => {
+  let initialOffset = window.pageYOffset;
+  window.addEventListener('scroll', () => {
+    const currentOffset = window.pageYOffset;
+    const { current } = navRef || {};
+    if (current) {
+      if (initialOffset > currentOffset) {
+        current.style.top = '0px';
+      } else {
+        current.style.top = '-70px';
+      }
+      initialOffset = currentOffset;
+    }
+  });
+};
 
 export const Nav = (props: LayoutProps) => {
   const [isOpen, setOpen] = useState(false);
+  const navRef = useRef(null);
+  const isLightBg = isLight(props);
+  useEffect(() => {
+    toggleNav(navRef);
+  }, []);
+
   return (
     <>
-      <nav className="navbar bg-primary sticky-top p-0">
+      <nav
+        ref={navRef}
+        className={`navbar bg-${isLightBg ? 'lightest' : 'primary'} text-${
+          isLightBg ? 'dark-gray' : 'white'
+        } sticky-top p-0`}
+      >
         <div className="container flex-nowrap">
           <Logo {...props} />
 
           <div className="desktop-navbar">
             <DropdownFollowAlong {...props} />
-            <NavbarButtons className="justify-content-end ml-2 ml-lg-4" prefix={props.prefix} />
+            <NavbarButtons
+              className="justify-content-end ml-2 ml-lg-4"
+              prefix={props.prefix}
+              isLightBg={isLightBg}
+            />
           </div>
           <Button
             id="mobile-navbar-toggler"

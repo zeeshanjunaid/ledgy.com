@@ -1,5 +1,5 @@
 import React from 'react';
-import { Embed } from '../Embed';
+import { Embed } from '../utils';
 
 export const Video = () => (
   <Embed

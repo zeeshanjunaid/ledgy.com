@@ -11,13 +11,15 @@ export const ContentBody = ({ children }: { children: ReactNode | ReactNode[] })
 export const PostLink = ({
   post,
   to,
-  external,
   description,
+  prefix,
+  isExternal = false,
 }: {
   post: ContentfulPageProps;
   to: string;
-  external?: boolean;
   description: string | ReactNode;
+  prefix: string;
+  isExternal?: boolean;
 }) => {
   const { childImageSharp } = post.cover?.localFile || {};
   const image = childImageSharp ? <Img className="fit-cover" {...childImageSharp} /> : null;
@@ -31,7 +33,8 @@ export const PostLink = ({
       date={date}
       to={to}
       image={image}
-      external={external}
+      isExternal={isExternal}
+      prefix={prefix}
     />
   );
 };
