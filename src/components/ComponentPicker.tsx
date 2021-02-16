@@ -19,6 +19,8 @@ export const ComponentPicker = ({
   prefix: string;
   smallPadding?: boolean;
 }) => {
+  if (!entry.id) return null;
+
   switch (entry.__typename) {
     case 'ContentfulTopBanner':
       return <TopBanner {...entry} prefix={prefix} />;
