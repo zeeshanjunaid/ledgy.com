@@ -1,13 +1,13 @@
 .text-sm {
-  font-size: 14px;
+  font-size: $ledgy-font-size / 1.2;
 }
 
 .text-lg {
-  font-size: 18px;
+  font-size: $ledgy-font-size * 1.12;
 }
 
 .text-xl {
-  font-size: 22px;
+  font-size: $ledgy-font-size * 1.25;
 }
 
 .font-weight-semi-bold {

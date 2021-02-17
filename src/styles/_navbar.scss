@@ -126,8 +126,8 @@
 }
 
 .list-item-hover-text {
-  line-height: 18px;
-  font-size: 14px;
+  line-height: 19px;
+  font-size: $ledgy-font-size / 1.2;
   color: $gray-600;
   transition: 400ms;
 }
@@ -184,7 +184,7 @@
 }
 
 .hover-list-child.solutions-dd {
-  width: 400px;
+  width: 420px;
 }
 
 .hover-list-child.resources-dd {

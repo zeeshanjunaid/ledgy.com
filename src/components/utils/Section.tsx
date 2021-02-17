@@ -16,7 +16,7 @@ export const Section = ({
   const padding = noPadding ? '' : `py-${smallPadding ? 2 : 4} py-lg-${smallPadding ? 4 : 8}`;
   return (
     <section {...props} className={`${padding} ${className}`}>
-      <div className="container my-0 my-md-4">{children}</div>
+      <div className="container my-2 my-md-4">{children}</div>
     </section>
   );
 };

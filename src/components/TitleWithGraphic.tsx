@@ -16,7 +16,7 @@ export const TitleWithGraphic = ({
   const titleColor = isTopBanner ? 'text-primary' : 'text-secondary';
   const descriptionColor = isTopBanner ? 'text-primary' : 'text-white';
 
-  const rowMargin = isTopBanner ? 'my-3 my-lg-5' : 'my-5 my-lg-7';
+  const rowMargin = isTopBanner ? 'my-3 my-xl-5' : 'my-5 my-xl-7';
   const graphicCol = isTopBanner ? 'order-last' : '';
   const textCol = isTopBanner ? 'col-lg-6' : 'col-lg-5';
 

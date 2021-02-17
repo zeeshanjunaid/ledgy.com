@@ -8,7 +8,7 @@ export const SectionHeader = ({
   header: string;
   className?: string;
 }) => (
-  <h2 className={`pb-4 ${className}`}>
+  <h2 className={`pb-2 mb-md-4 ${className}`}>
     <DynamicTrans>{header}</DynamicTrans>
   </h2>
 );
