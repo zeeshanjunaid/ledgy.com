@@ -34,7 +34,7 @@ const metaDataQuery = graphql`
         segmentDestinations
       }
     }
-    allContentfulSiteMetaProps {
+    allContentfulSiteMetadata {
       edges {
         node {
           description
@@ -48,11 +48,11 @@ const metaDataQuery = graphql`
 const App = ({ children, ...props }: AppProps) => {
   const data = useStaticQuery(metaDataQuery);
   const { lang, location } = props;
-  const { site, allContentfulSiteMetaProps } = data;
+  const { site, allContentfulSiteMetadata } = data;
   const { siteUrl, segmentDestinations } = site.siteMetadata;
 
   const thumbnailUrl = `${siteUrl}/thumbnail-874d5c.png`;
-  const { node }: { node: SiteMetaProps } = allContentfulSiteMetaProps.edges[0];
+  const { node }: { node: SiteMetaProps } = allContentfulSiteMetadata.edges[0];
   const { title, description } = node;
 
   const prefix = langPrefix(lang);
