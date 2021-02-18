@@ -132,3 +132,8 @@ declare type ChecklistWithScreenshotProps = Id & {
 };
 
 declare type MainPageEntryProps = TopBannerProps | EntryProps;
+
+declare type SiteMetaProps = {
+  title: string;
+  description: string;
+};

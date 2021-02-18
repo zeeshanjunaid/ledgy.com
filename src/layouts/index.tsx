@@ -2,7 +2,6 @@ import React, { useEffect, ReactElement, useMemo } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { i18n } from '@lingui/core';
 import { I18nProvider } from '@lingui/react';
-import { t } from '@lingui/macro';
 
 import 'typeface-open-sans';
 import 'katex/dist/katex.min.css';
@@ -13,7 +12,14 @@ import { loadSegment } from '../helpers';
 import { Title } from './utils';
 import { langFromPath, langPrefix, deprefix } from '../i18n-config';
 
-import { HelmetIndexLayout, Footer, Loader, Nav, PublicityBanner } from '../components';
+import {
+  HelmetIndexLayout,
+  Footer,
+  Loader,
+  Nav,
+  PublicityBanner,
+  dynamicI18n,
+} from '../components';
 
 type AppProps = LayoutProps & {
   children: ReactElement;
@@ -28,30 +34,44 @@ const Initialize = ({ segmentDestinations }: { segmentDestinations: string[] }) 
   return null;
 };
 
-const App = ({ children, ...props }: AppProps) => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          siteUrl
-          segmentDestinations
+const metaDataQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        siteUrl
+        segmentDestinations
+      }
+    }
+    allContentfulSiteMetaProps {
+      edges {
+        node {
+          description
+          title
         }
       }
     }
-  `);
-  const { lang } = props;
-  const prefix = langPrefix(lang);
-  const { siteUrl, segmentDestinations } = data.site.siteMetadata;
+  }
+`;
+
+const App = ({ children, ...props }: AppProps) => {
+  const data = useStaticQuery(metaDataQuery);
+  const { lang, location } = props;
+  const { site, allContentfulSiteMetaProps } = data;
+  const { siteUrl, segmentDestinations } = site.siteMetadata;
+
   const thumbnailUrl = `${siteUrl}/thumbnail-874d5c.png`;
-  const pathname = deprefix(props.location.pathname);
+  const { node }: { node: SiteMetaProps } = allContentfulSiteMetaProps.edges[0];
+  const { title, description } = node;
+
+  const prefix = langPrefix(lang);
+  const pathname = deprefix(location.pathname);
   const isAppShell = pathname.includes('offline-plugin-app-shell-fallback');
   const isDemoPage = pathname.includes('demo');
-
   return (
     <div>
       <Title
-        title={t`Best Cap Table and Equity Plan Management Software`}
-        description={t`Get your cap table and employee participation plans right, from the beginning. Make your financing rounds a success and engage your investors and employees. Know your data is safe and compliant. Try now for free!`}
+        title={dynamicI18n(title)}
+        description={dynamicI18n(description)}
         thumbnailUrl={thumbnailUrl}
       />
       <Initialize segmentDestinations={segmentDestinations} />
