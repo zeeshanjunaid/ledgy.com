@@ -10,13 +10,34 @@ import {
   SectionHeader,
   CustomFade,
 } from './utils';
-import { formatUrl } from './lib';
+import { formatUrl, isExternalUrl } from './lib';
+
+const CTAButton = ({
+  buttonText,
+  buttonUrl,
+  prefix,
+}: {
+  buttonText: string;
+  buttonUrl: string;
+  prefix: string;
+}) => {
+  const text = <DynamicTrans>{buttonText}</DynamicTrans>;
+  return isExternalUrl(buttonUrl) ? (
+    <Button href={buttonUrl} className="btn-xl mr-4 mb-4">
+      {text}
+    </Button>
+  ) : (
+    <Link to={formatUrl(prefix, buttonUrl)}>
+      <Button className="btn-xl mr-4 mb-4">{text}</Button>
+    </Link>
+  );
+};
 
 export const CallToAction = ({
   header,
   description,
   buttonText,
-  buttonPath,
+  buttonUrl,
   linkText,
   linkUrl,
   icon,
@@ -35,11 +56,7 @@ export const CallToAction = ({
         </p>
         <CustomFade translate="0, 100px">
           <div className="d-flex align-items-center flex-wrap">
-            <Link to={formatUrl(prefix, buttonPath)}>
-              <Button className="btn-xl mr-4 mb-4">
-                <DynamicTrans>{buttonText}</DynamicTrans>
-              </Button>
-            </Link>
+            <CTAButton buttonText={buttonText} buttonUrl={buttonUrl} prefix={prefix} />
             {!!(linkText && linkUrl) && (
               <LinkWithChevron to={linkUrl} text={linkText} className="mb-4" prefix={prefix} />
             )}

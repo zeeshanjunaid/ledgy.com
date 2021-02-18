@@ -85,7 +85,7 @@ declare type CallToActionProps = Id & {
   header: string;
   description: string;
   buttonText: string;
-  buttonPath: string;
+  buttonUrl: string;
   icon: IconType;
   secondaryHeader: string;
   secondaryDescription: string;

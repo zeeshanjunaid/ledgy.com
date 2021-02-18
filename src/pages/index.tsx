@@ -153,7 +153,7 @@ export const CallToAction2021Fragment = graphql`
     header
     description
     buttonText
-    buttonPath
+    buttonUrl
     linkText
     linkUrl
     icon
