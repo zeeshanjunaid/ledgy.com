@@ -2,8 +2,9 @@ import { graphql } from 'gatsby';
 import { Trans } from '@lingui/macro';
 import React from 'react';
 
+import { dynamicI18n } from '../helpers';
 import { formatUrl } from '../components/lib';
-import { ComponentPicker, DemoForm, dynamicI18n, DynamicTrans } from '../components';
+import { ComponentPicker, DemoForm, DynamicTrans } from '../components';
 
 import { targetBlank } from '../helpers';
 

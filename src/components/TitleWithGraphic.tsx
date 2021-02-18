@@ -1,5 +1,7 @@
 import React from 'react';
-import { dynamicI18n, DynamicTrans, Section, Image } from './utils';
+
+import { dynamicI18n } from '../helpers';
+import { DynamicTrans, Section, Image } from './utils';
 import { getUnderlineHtml } from './lib';
 
 export const TitleWithGraphic = ({

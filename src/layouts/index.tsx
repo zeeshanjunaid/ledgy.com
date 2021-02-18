@@ -8,18 +8,10 @@ import 'katex/dist/katex.min.css';
 import 'prism-themes/themes/prism-ghcolors.css';
 import '../styles/_index.scss';
 
-import { loadSegment } from '../helpers';
-import { Title } from './utils';
+import { dynamicI18n, loadSegment } from '../helpers';
 import { langFromPath, langPrefix, deprefix } from '../i18n-config';
-
-import {
-  HelmetIndexLayout,
-  Footer,
-  Loader,
-  Nav,
-  PublicityBanner,
-  dynamicI18n,
-} from '../components';
+import { HelmetIndexLayout, Footer, Loader, Nav, PublicityBanner } from '../components';
+import { Title } from './utils';
 
 type AppProps = LayoutProps & {
   children: ReactElement;

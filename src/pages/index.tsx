@@ -1,6 +1,8 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { ComponentPicker, dynamicI18n } from '../components';
+
+import { dynamicI18n } from '../helpers';
+import { ComponentPicker } from '../components';
 import { Helmet } from 'react-helmet';
 
 const isTopBanner = (entry: MainPageEntryProps): entry is TopBannerProps =>

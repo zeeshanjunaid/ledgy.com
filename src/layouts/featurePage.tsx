@@ -1,7 +1,8 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import { dynamicI18n, ComponentPicker, TitleWithGraphic } from '../components';
+import { dynamicI18n } from '../helpers';
+import { ComponentPicker, TitleWithGraphic } from '../components';
 import { Title } from '../layouts/utils';
 
 const FeaturePage = ({

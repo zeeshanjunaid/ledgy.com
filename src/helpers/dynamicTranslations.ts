@@ -1,3 +1,5 @@
+import { i18n } from '@lingui/core';
+
 import { isBrowser } from './constants';
 
 const dynamicTranslations = new Set<string>();
@@ -20,4 +22,9 @@ if (!isBrowser) {
 
 export const addTranslation = (text: string): void => {
   if (text) dynamicTranslations.add(text);
+};
+
+export const dynamicI18n = (text: string): string => {
+  addTranslation(text);
+  return i18n._(text);
 };
