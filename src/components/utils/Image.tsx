@@ -6,7 +6,7 @@ export const Image = ({
   alt = '',
   className = '',
 }: {
-  image?: Image;
+  image?: ImageProps;
   alt?: string;
   className?: string;
 }) => {

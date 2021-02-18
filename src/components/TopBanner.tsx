@@ -12,7 +12,7 @@ const CustomButton = ({ url, text }: { url: string; text: string }) => (
   </Button>
 );
 
-const Screenshot = ({ image }: { image: Image }) => (
+const Screenshot = ({ image }: { image: ImageProps }) => (
   <div className="mt-sm-4 mt-xl-0 p-0 screenshot">
     <Image image={image} alt={t`Screenshot of the Ledgy app`} />
   </div>

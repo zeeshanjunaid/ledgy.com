@@ -18,11 +18,11 @@ declare type ContentfulPageProps = Id & {
   content: Mdx;
   slug: string;
   language: Language;
-  cover?: Image;
+  cover?: ImageProps;
 };
 
 declare type AllContentfulCustomerStoryProps = Id & {
-  company: Company;
+  company: CompanyProps;
   slug: string;
 };
 
@@ -43,7 +43,7 @@ declare type FeatureGridContentProps = Id & {
 };
 
 declare type TestimonialCardProps = {
-  logo: Image;
+  logo: ImageProps;
   text: Mdx;
   signature: string;
   linkText?: string;
@@ -58,7 +58,7 @@ declare type TestimonialCardsProps = Id & {
 declare type BaseFeatureProps = Id & {
   title: string;
   description: string;
-  graphic: Image;
+  graphic: ImageProps;
   motivationText: string;
 };
 
@@ -97,13 +97,13 @@ declare type CallToActionProps = Id & {
 
 declare type LogoBannerProps = Id & {
   __typename: 'ContentfulLogoBanner';
-  logos: Image[];
+  logos: ImageProps[];
 };
 
 type SelectableCardWithScreenshotProps = {
   title: string;
   description: string;
-  screenshot: Image;
+  screenshot: ImageProps;
 };
 
 declare type SelectableCardsWithScreenshotsProps = Id & {
@@ -120,14 +120,14 @@ declare type TopBannerProps = Id & {
   firstButtonUrl: string;
   secondButtonText: string;
   secondButtonUrl: string;
-  image: Image;
+  image: ImageProps;
 };
 
 declare type ChecklistWithScreenshotProps = Id & {
   __typename: 'ContentfulChecklistWithScreenshot';
   header: string;
   description: string;
-  image: Image;
+  image: ImageProps;
   checklist: string[];
 };
 

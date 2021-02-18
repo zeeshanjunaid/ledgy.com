@@ -12,7 +12,7 @@ import {
 import { LongText } from '../markdown';
 import { Image } from '../utils';
 
-const getCompanySummaries = (company: Company): [IconDefinition, string, string][] => [
+const getCompanySummaries = (company: CompanyProps): [IconDefinition, string, string][] => [
   [faClock, 'Founded year', `Founded in ${company.yearFounded}`],
   [faMoneyBillAlt, 'Funding', company.funding ? `${company.funding} in Funding` : ''],
   [faUserFriends, 'Employees count', `${company.employeeCount} Employees`],
@@ -20,7 +20,7 @@ const getCompanySummaries = (company: Company): [IconDefinition, string, string]
   [faSeedling, 'Stage', company.stage],
 ];
 
-export const CompanySummary = ({ company, prefix }: { company: Company; prefix: string }) => {
+export const CompanySummary = ({ company, prefix }: { company: CompanyProps; prefix: string }) => {
   const { contactName, logo, contactTitle, mainQuote } = company;
   return (
     <div className="company-summary rounded-md bg-white sticky-top p-2 p-sm-4 p-md-2 p-lg-4">

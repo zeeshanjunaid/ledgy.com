@@ -7,7 +7,6 @@ export * from './ComponentPicker';
 export * from './Content';
 export * from './ContentWithChecklist';
 export * from './customerStories';
-export * from './Feature';
 export * from './FeatureGrid';
 export * from './Footer';
 export * from './forms';

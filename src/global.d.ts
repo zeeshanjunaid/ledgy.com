@@ -4,15 +4,15 @@ declare global {
   interface Window {
     analytics: UntypedObject;
   }
-  type Image = {
+  type ImageProps = {
     localFile?: { childImageSharp: GatsbyImageProps };
     title: string;
     description?: string;
   };
-  type Company = {
+  type CompanyProps = {
     name: string;
-    logo: Image;
-    cover: Image;
+    logo: ImageProps;
+    cover: ImageProps;
     contactName: string;
     contactTitle: string;
     mainQuote: Mdx;
