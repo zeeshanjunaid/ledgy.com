@@ -11,7 +11,7 @@ export const TitleWithGraphic = ({
   description,
   isTopBanner = false,
 }: TitleWithGraphicProps & { isTopBanner?: boolean }) => {
-  const wrapperClassName = isTopBanner ? 'bg-lightest top-banner' : 'py-7 mb-n4';
+  const wrapperClassName = isTopBanner ? 'bg-lightest top-banner' : 'py-8 mb-n5';
   const tiltedBackground = isTopBanner ? '' : 'bg-primary tilted-background';
 
   const motivationTextColor = isTopBanner ? 'text-gray-dark' : 'text-secondary';
