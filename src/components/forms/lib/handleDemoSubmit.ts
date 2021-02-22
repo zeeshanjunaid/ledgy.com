@@ -3,9 +3,8 @@ import { FORM_STATUSES, isFieldMissing, isValidEmail, track } from '../../../hel
 import { FormValues, ParsedFormValues } from './formTypes';
 import { submitToHubspot } from './hubspot';
 import {
-  deerCompanyUrl,
   investorUrl,
-  fundUrl,
+  meetingRequestUrl,
   COMPANY,
   EMPLOYEE_VALUE,
   INVESTMENT_VALUE,
@@ -45,9 +44,9 @@ const getPipelineValue = (size: number, isCompany: boolean) =>
 
 const getUrl = ({ isCompany, size }: ParsedFormValues) => {
   if (!isCompany) {
-    return isFund(size) ? fundUrl : investorUrl;
+    return isFund(size) ? meetingRequestUrl : investorUrl;
   }
-  return isDeerCompany(size) ? deerCompanyUrl : smallCompanyUrl;
+  return isDeerCompany(size) ? meetingRequestUrl : smallCompanyUrl;
 };
 
 const redirect = (values: ParsedFormValues) => {
