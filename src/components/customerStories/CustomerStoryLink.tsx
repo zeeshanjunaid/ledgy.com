@@ -12,7 +12,7 @@ export const CustomerStoryLink = ({
 }) => {
   const { title, subtitle, slug, company } = customerStory;
   const { childImageSharp } = company.logo.localFile || {};
-  const to = `${prefix}/customer-stories/${slug}`;
+  const to = `customer-stories/${slug}`;
   const image = childImageSharp ? <Img {...childImageSharp} /> : null;
   const cardTitle = <h5>{title}</h5>;
   return (
