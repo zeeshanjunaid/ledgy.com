@@ -27,9 +27,7 @@ export const TitleWithGraphic = ({
       <Section className="position-relative" noPadding={isTopBanner}>
         <div className={`${tiltedBackground} position-absolute z-index-background`} />
         <div className={`row justify-content-center py-5 py-lg-7 ${rowMargin}`}>
-          <div
-            className={`${graphicCol} col-lg-4 align-items-center justify-content-center justify-content-lg-end`}
-          >
+          <div className={`${graphicCol} col-lg-4`}>
             <Image image={graphic} />
           </div>
           <div className={`${textCol} pt-2 pt-lg-0`}>

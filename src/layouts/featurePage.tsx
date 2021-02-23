@@ -48,7 +48,7 @@ export const featurePageQuery = graphql`
       graphic {
         localFile {
           childImageSharp {
-            fluid(maxWidth: 400) {
+            fluid(maxHeight: 300) {
               ...GatsbyImageSharpFluid
             }
           }
