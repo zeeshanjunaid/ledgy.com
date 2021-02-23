@@ -48,8 +48,8 @@ export const featurePageQuery = graphql`
       graphic {
         localFile {
           childImageSharp {
-            fixed(height: 300) {
-              ...GatsbyImageSharpFixed
+            fluid(maxWidth: 400) {
+              ...GatsbyImageSharpFluid
             }
           }
         }

@@ -28,7 +28,7 @@ export const TitleWithGraphic = ({
         <div className={`${tiltedBackground} position-absolute z-index-background`} />
         <div className={`row justify-content-center py-5 py-lg-7 ${rowMargin}`}>
           <div
-            className={`${graphicCol} col-lg-4 d-flex align-items-center justify-content-center justify-content-lg-end`}
+            className={`${graphicCol} col-lg-4 align-items-center justify-content-center justify-content-lg-end`}
           >
             <Image image={graphic} />
           </div>
