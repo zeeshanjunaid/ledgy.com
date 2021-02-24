@@ -4,8 +4,8 @@ import { graphql } from 'gatsby';
 import { LedgyPricing } from '@ledgy/pricing/dist/LedgyPricing';
 
 import { Title } from '../layouts/utils';
-import { appUrl } from '../helpers';
-import { Button, DynamicTrans, dynamicI18n, RequestDemoButton, PageHeader } from '../components';
+import { appUrl, dynamicI18n } from '../helpers';
+import { Button, DynamicTrans, RequestDemoButton, PageHeader } from '../components';
 
 const PricingCTA = ({ title, description }: { title: ReactNode; description: ReactNode }) => (
   <div className="col-12 col-lg-6 col-xl-4">

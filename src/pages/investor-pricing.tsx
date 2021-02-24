@@ -50,7 +50,7 @@ const InvestorPricing = ({ prefix }: Props) => {
       <Title title={title} description={description} />
       <PageHeader title={title} subtitle={description} />
 
-      <div className="container">
+      <div className="container my-4 my-lg-6">
         <div className="row justify-content-center">
           <InvestorTypeCard
             type={<Trans>Business Angel</Trans>}

@@ -10,20 +10,41 @@ import {
   SectionHeader,
   CustomFade,
 } from './utils';
-import { formatUrl } from './lib';
+import { formatUrl, isExternalUrl } from './lib';
+
+const CTAButton = ({
+  buttonText,
+  buttonUrl,
+  prefix,
+}: {
+  buttonText: string;
+  buttonUrl: string;
+  prefix: string;
+}) => {
+  const text = <DynamicTrans>{buttonText}</DynamicTrans>;
+  return isExternalUrl(buttonUrl) ? (
+    <Button href={buttonUrl} className="btn-xl mr-4 mb-4">
+      {text}
+    </Button>
+  ) : (
+    <Link to={formatUrl(prefix, buttonUrl)}>
+      <Button className="btn-xl mr-4 mb-4">{text}</Button>
+    </Link>
+  );
+};
 
 export const CallToAction = ({
   header,
   description,
   buttonText,
-  buttonPath,
-  externalLinkText,
-  externalLinkUrl,
+  buttonUrl,
+  linkText,
+  linkUrl,
   icon,
   secondaryHeader,
   secondaryDescription,
   secondaryLinkText,
-  secondaryLinkPath,
+  secondaryLinkUrl,
   prefix,
 }: { prefix: string } & CallToActionProps) => (
   <Section>
@@ -35,18 +56,9 @@ export const CallToAction = ({
         </p>
         <CustomFade translate="0, 100px">
           <div className="d-flex align-items-center flex-wrap">
-            <Link to={formatUrl(prefix, buttonPath)}>
-              <Button className="btn-xl mr-4 mb-4">
-                <DynamicTrans>{buttonText}</DynamicTrans>
-              </Button>
-            </Link>
-            {!!(externalLinkText && externalLinkUrl) && (
-              <LinkWithChevron
-                to={externalLinkUrl}
-                text={externalLinkText}
-                className="mb-4"
-                prefix={prefix}
-              />
+            <CTAButton buttonText={buttonText} buttonUrl={buttonUrl} prefix={prefix} />
+            {!!(linkText && linkUrl) && (
+              <LinkWithChevron to={linkUrl} text={linkText} className="mb-4" prefix={prefix} />
             )}
           </div>
         </CustomFade>
@@ -62,7 +74,7 @@ export const CallToAction = ({
           <p className="mb-2">
             <DynamicTrans>{secondaryDescription}</DynamicTrans>
           </p>
-          <LinkWithChevron to={secondaryLinkPath} text={secondaryLinkText} prefix={prefix} />
+          <LinkWithChevron to={secondaryLinkUrl} text={secondaryLinkText} prefix={prefix} />
         </div>
       </div>
     </div>

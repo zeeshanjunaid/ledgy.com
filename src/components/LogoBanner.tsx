@@ -2,7 +2,7 @@ import React from 'react';
 
 import { CustomFade, Section, Image } from './utils';
 
-const Logo = ({ logo, index }: { logo: Image; index: number }) => (
+const Logo = ({ logo, index }: { logo: ImageProps; index: number }) => (
   <CustomFade delay={index * 100} className="col-12 col-sm-6 col-md-4 col-xl-2 my-2">
     <div className="d-flex align-items-center justify-content-center" style={{ minHeight: '70px' }}>
       <Image image={logo} />

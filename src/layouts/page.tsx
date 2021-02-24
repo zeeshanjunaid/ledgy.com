@@ -2,14 +2,8 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { GatsbyImageFluidProps } from 'gatsby-image';
 
-import {
-  PublishDate,
-  dynamicI18n,
-  Author,
-  LongText,
-  PageHeader,
-  CalculatorHeader,
-} from '../components';
+import { dynamicI18n } from '../helpers';
+import { PublishDate, Author, LongText, PageHeader, CalculatorHeader } from '../components';
 import { Title } from '../layouts/utils';
 
 const CALCULATOR_SLUG = 'calculator';
