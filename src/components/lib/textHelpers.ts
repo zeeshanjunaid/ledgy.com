@@ -14,6 +14,7 @@ import {
   HR_AND_COMPENSATION_TITLE,
   FINANCE_LEGAL_ACCOUNTING_TITLE,
   VCS_BUSINESS_ANGELS_TITLE,
+  DATA_PROTECTION,
 } from '../forms/lib/constants';
 
 export const getUnderlineHtml = (text: string): string =>
@@ -39,7 +40,7 @@ const productLinks: FooterLink[] = [
   ['For human resources', HR_AND_COMPENSATION],
   ['For finance', FINANCE_LEGAL_ACCOUNTING],
   ['For investors', VCS_BUSINESS_ANGELS],
-  // ['Data protection', 'data-protection'], // FIXME Uncomment when content is ready
+  ['Data protection', DATA_PROTECTION],
   ['Pricing for companies', 'company-pricing'],
   ['Pricing for investors', 'investor-pricing'],
 ];

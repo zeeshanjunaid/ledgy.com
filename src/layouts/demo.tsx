@@ -11,6 +11,7 @@ import { targetBlank } from '../helpers';
 import { Title } from './utils';
 import { RequesterType } from '../components/forms/lib';
 import { TopBannerLayout } from '../components/TopBannerLayout';
+import { DATA_PROTECTION } from '../components/forms/lib/constants';
 
 type DemoPageProps = {
   content: EntryProps[];
@@ -88,13 +89,13 @@ const DemoPage = (props: Props) => {
         >
           <Trans>Privacy policy</Trans>
         </a>
-        {/* <a
+        <a
           {...targetBlank}
           className="nav-link mx-1 mx-md-5"
-          href={formatUrl(prefix, 'data-protection')}
+          href={formatUrl(prefix, DATA_PROTECTION)}
         >
           <Trans>Data protection</Trans>
-        </a> // FIXME Uncomment when content is ready */}
+        </a>
       </footer>
     </>
   );

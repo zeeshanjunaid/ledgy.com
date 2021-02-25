@@ -16,6 +16,7 @@ export const meetingRequestUrl = 'https://meetings.hubspot.com/ledgy/salesteam';
 export const HR_AND_COMPENSATION = 'hr-and-compensation';
 export const FINANCE_LEGAL_ACCOUNTING = 'finance-legal-accounting';
 export const VCS_BUSINESS_ANGELS = 'vcs-business-angels';
+export const DATA_PROTECTION = 'data-protection';
 
 export const HR_AND_COMPENSATION_TITLE = 'HR & Compensation';
 export const FINANCE_LEGAL_ACCOUNTING_TITLE = 'Finance, Legal, & Accounting';
