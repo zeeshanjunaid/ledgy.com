@@ -8,7 +8,7 @@ import {
   HR_AND_COMPENSATION_TITLE,
   VCS_BUSINESS_ANGELS,
   VCS_BUSINESS_ANGELS_TITLE,
-} from '../components/forms/lib/constants';
+} from '../helpers';
 
 const NotFoundPage = () => (
   <div>

@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import { Trans } from '@lingui/macro';
 
-import { FORM_STATUSES } from '../../helpers';
+import { FORM_STATUSES } from './lib';
 
 export const Label = ({ text }: { text: ReactNode }) => <span>{text}</span>;
 

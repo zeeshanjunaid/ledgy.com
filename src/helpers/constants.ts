@@ -53,17 +53,6 @@ export const MIXPANEL_TOKEN = isNetlify
   ? '258b9724a7ad7271dd2e3e3440bb68fd'
   : '7f124dd9a799a7c687dc38ee554d9876';
 
-// form states
-export const FORM_STATUSES = Object.freeze({
-  IDLE: 'idle',
-  LOADING: 'loading',
-  FETCH_ERROR: 'fetch-error',
-  SUBMITTED: 'submitted',
-  INVALID_EMAIL: 'invalid-email',
-  INVALID_FIELDS: 'invalid-fields',
-  INVALID_REQUIRED_FIELDS: 'invalid-required-fields',
-});
-
 // plan names
 export const LEDGY_PLANS = Object.freeze({
   STARTUP: 'Startup',
@@ -84,3 +73,14 @@ export const isBrowser = typeof window !== 'undefined';
 export const isDevelopment = isBrowser && window.location.hostname === 'localhost';
 
 export const targetBlank = { target: '_blank', rel: 'noopener noreferrer' };
+
+// links
+export const HR_AND_COMPENSATION = 'hr-and-compensation';
+export const FINANCE_LEGAL_ACCOUNTING = 'finance-legal-accounting';
+export const VCS_BUSINESS_ANGELS = 'vcs-business-angels';
+export const DATA_PROTECTION = 'data-protection';
+
+//titles
+export const HR_AND_COMPENSATION_TITLE = 'HR & Compensation';
+export const FINANCE_LEGAL_ACCOUNTING_TITLE = 'Finance, Legal, & Accounting';
+export const VCS_BUSINESS_ANGELS_TITLE = 'VCs & Business Angels';

@@ -1,4 +1,4 @@
-import { FORM_STATUSES, isFieldMissing, isValidEmail, track } from '../../../helpers';
+import { isFieldMissing, isValidEmail, track } from '../../../helpers';
 
 import { FormValues, ParsedFormValues } from './formTypes';
 import { submitToHubspot } from './hubspot';
@@ -11,6 +11,7 @@ import {
   DEER_COMPANY_THRESHOLD,
   FUND_INVESTMENT_THRESHOLD,
   smallCompanyUrl,
+  FORM_STATUSES,
 } from './constants';
 
 type ErrorResponse = {

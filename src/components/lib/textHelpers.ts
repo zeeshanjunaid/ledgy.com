@@ -6,15 +6,21 @@ import {
   faYoutube,
   IconDefinition,
 } from '@fortawesome/free-brands-svg-icons';
-import { helpUrl, youtubeUrl, twitterUrl, linkedinUrl, angelUrl, facebookUrl } from '../../helpers';
 import {
+  helpUrl,
+  youtubeUrl,
+  twitterUrl,
+  linkedinUrl,
+  angelUrl,
+  facebookUrl,
   HR_AND_COMPENSATION,
   FINANCE_LEGAL_ACCOUNTING,
   VCS_BUSINESS_ANGELS,
   HR_AND_COMPENSATION_TITLE,
   FINANCE_LEGAL_ACCOUNTING_TITLE,
   VCS_BUSINESS_ANGELS_TITLE,
-} from '../forms/lib/constants';
+  DATA_PROTECTION,
+} from '../../helpers';
 
 export const getUnderlineHtml = (text: string): string =>
   text.replace('_', '<u>').replace('_', '</u>').replace('_', '<u>').replace('_', '</u>');
@@ -39,7 +45,7 @@ const productLinks: FooterLink[] = [
   ['For human resources', HR_AND_COMPENSATION],
   ['For finance', FINANCE_LEGAL_ACCOUNTING],
   ['For investors', VCS_BUSINESS_ANGELS],
-  // ['Data protection', 'data-protection'], // FIXME Uncomment when content is ready
+  ['Data protection', DATA_PROTECTION],
   ['Pricing for companies', 'company-pricing'],
   ['Pricing for investors', 'investor-pricing'],
 ];
