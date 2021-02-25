@@ -5,9 +5,9 @@ import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { navigate } from 'gatsby';
 
-import { isValidEmail, FORM_STATUSES } from '../../helpers';
+import { isValidEmail } from '../../helpers';
 import { Button } from '../utils';
-import { signupOnMixpanel, trackOnMixpanel } from './lib';
+import { signupOnMixpanel, trackOnMixpanel, FORM_STATUSES } from './lib';
 import { InvalidFieldHints } from './Fields';
 
 const { FETCH_ERROR, IDLE, INVALID_EMAIL, LOADING } = FORM_STATUSES;

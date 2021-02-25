@@ -6,8 +6,13 @@ import {
   faYoutube,
   IconDefinition,
 } from '@fortawesome/free-brands-svg-icons';
-import { helpUrl, youtubeUrl, twitterUrl, linkedinUrl, angelUrl, facebookUrl } from '../../helpers';
 import {
+  helpUrl,
+  youtubeUrl,
+  twitterUrl,
+  linkedinUrl,
+  angelUrl,
+  facebookUrl,
   HR_AND_COMPENSATION,
   FINANCE_LEGAL_ACCOUNTING,
   VCS_BUSINESS_ANGELS,
@@ -15,7 +20,7 @@ import {
   FINANCE_LEGAL_ACCOUNTING_TITLE,
   VCS_BUSINESS_ANGELS_TITLE,
   DATA_PROTECTION,
-} from '../forms/lib/constants';
+} from '../../helpers';
 
 export const getUnderlineHtml = (text: string): string =>
   text.replace('_', '<u>').replace('_', '</u>').replace('_', '<u>').replace('_', '</u>');

@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { t } from '@lingui/macro';
 
-import { FORM_STATUSES } from '../../helpers';
 import { Button } from '../utils';
 import { Input, InvalidFieldHints } from './Fields';
-import { handleDemoSubmit, RequesterType, COMPANY, INVESTOR } from './lib';
+import { handleDemoSubmit, RequesterType, COMPANY, INVESTOR, FORM_STATUSES } from './lib';
 
 const { IDLE, FETCH_ERROR } = FORM_STATUSES;
 

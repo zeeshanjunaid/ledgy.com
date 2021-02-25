@@ -11,7 +11,7 @@ import { targetBlank } from '../helpers';
 import { Title } from './utils';
 import { RequesterType } from '../components/forms/lib';
 import { TopBannerLayout } from '../components/TopBannerLayout';
-import { DATA_PROTECTION } from '../components/forms/lib/constants';
+import { DATA_PROTECTION } from '../helpers';
 
 type DemoPageProps = {
   content: EntryProps[];
