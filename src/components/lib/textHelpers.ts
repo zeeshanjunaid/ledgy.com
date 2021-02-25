@@ -23,7 +23,7 @@ export type FooterLink = [string, string];
 
 const companyLinks: FooterLink[] = [
   ['About us', 'about-us'],
-  ['Sustainability', 'sustainability'],
+  //  ['Sustainability', 'sustainability'], // FIXME Uncomment when content is ready
   ['Career', 'jobs'],
   ['Contact', 'contact'],
 ];
@@ -39,7 +39,7 @@ const productLinks: FooterLink[] = [
   ['For human resources', HR_AND_COMPENSATION],
   ['For finance', FINANCE_LEGAL_ACCOUNTING],
   ['For investors', VCS_BUSINESS_ANGELS],
-  ['Data protection', 'data-protection'],
+  // ['Data protection', 'data-protection'], // FIXME Uncomment when content is ready
   ['Pricing for companies', 'company-pricing'],
   ['Pricing for investors', 'investor-pricing'],
 ];
