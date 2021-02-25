@@ -7,6 +7,14 @@ import {
   IconDefinition,
 } from '@fortawesome/free-brands-svg-icons';
 import { helpUrl, youtubeUrl, twitterUrl, linkedinUrl, angelUrl, facebookUrl } from '../../helpers';
+import {
+  HR_AND_COMPENSATION,
+  FINANCE_LEGAL_ACCOUNTING,
+  VCS_BUSINESS_ANGELS,
+  HR_AND_COMPENSATION_TITLE,
+  FINANCE_LEGAL_ACCOUNTING_TITLE,
+  VCS_BUSINESS_ANGELS_TITLE,
+} from '../forms/lib/constants';
 
 export const getUnderlineHtml = (text: string): string =>
   text.replace('_', '<u>').replace('_', '</u>').replace('_', '<u>').replace('_', '</u>');
@@ -28,9 +36,9 @@ const legalLinks: FooterLink[] = [
 ];
 
 const productLinks: FooterLink[] = [
-  ['For finance', 'finance-legal-accounting'],
-  ['For human resources', 'hr-and-compensation'],
-  ['For investors', 'vcs-business-angels'],
+  ['For human resources', HR_AND_COMPENSATION],
+  ['For finance', FINANCE_LEGAL_ACCOUNTING],
+  ['For investors', VCS_BUSINESS_ANGELS],
   ['Data protection', 'data-protection'],
   ['Pricing for companies', 'company-pricing'],
   ['Pricing for investors', 'investor-pricing'],
@@ -72,20 +80,20 @@ const teams: NavbarMenuColumn = {
   header: 'Teams',
   items: [
     {
-      link: 'hr-and-compensation',
-      title: 'HR & Compensation',
+      link: HR_AND_COMPENSATION,
+      title: HR_AND_COMPENSATION_TITLE,
       description: 'Automated equity plans, employee dashboards',
       icon: 'hr',
     },
     {
-      link: 'finance-legal-accounting',
-      title: 'Finance, Legal, & Accounting',
+      link: FINANCE_LEGAL_ACCOUNTING,
+      title: FINANCE_LEGAL_ACCOUNTING_TITLE,
       description: 'Cap table, scenario modeling, investor relations',
       icon: 'calculator',
     },
     {
-      link: 'vcs-business-angels',
-      title: 'VCs & Business Angels',
+      link: VCS_BUSINESS_ANGELS,
+      title: VCS_BUSINESS_ANGELS_TITLE,
       description: 'Portfolio management, real-time company insights',
       icon: 'rocket',
     },
