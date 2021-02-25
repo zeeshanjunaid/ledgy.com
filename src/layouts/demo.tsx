@@ -88,13 +88,13 @@ const DemoPage = (props: Props) => {
         >
           <Trans>Privacy policy</Trans>
         </a>
-        <a
+        {/* <a
           {...targetBlank}
           className="nav-link mx-1 mx-md-5"
           href={formatUrl(prefix, 'data-protection')}
         >
           <Trans>Data protection</Trans>
-        </a>
+        </a> // FIXME Uncomment when content is ready */}
       </footer>
     </>
   );
