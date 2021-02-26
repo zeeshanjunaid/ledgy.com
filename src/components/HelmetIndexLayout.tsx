@@ -7,17 +7,16 @@ export const HelmetIndexLayout = ({
   lang,
   siteUrl,
   pathname,
+  keywords,
 }: {
   lang: string;
   siteUrl: string;
   pathname: string;
+  keywords: string[];
 }) => (
   <Helmet>
     <html lang={lang} />
-    <meta
-      name="keywords"
-      content={t`cap table, stock ledger, share register, startup, modeling, financing round, equity, esop, phantom, option plan, virtual, portfolio, reporting, investors`}
-    />
+    <meta name="keywords" content={t`${[...keywords]}`} />
     <meta name="author" content="Ledgy" />
     <script type="application/ld+json">{getLdJson(siteUrl)}</script>
 
