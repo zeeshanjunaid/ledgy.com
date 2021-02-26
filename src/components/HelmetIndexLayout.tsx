@@ -1,7 +1,6 @@
-import { t } from '@lingui/macro';
 import { Helmet } from 'react-helmet';
 import React from 'react';
-import { name, getLdJson } from '../helpers';
+import { name, getLdJson, dynamicI18n } from '../helpers';
 
 export const HelmetIndexLayout = ({
   lang,
@@ -16,7 +15,7 @@ export const HelmetIndexLayout = ({
 }) => (
   <Helmet>
     <html lang={lang} />
-    <meta name="keywords" content={t`${[...keywords]}`} />
+    <meta name="keywords" content={dynamicI18n(keywords.join(', '))} />
     <meta name="author" content="Ledgy" />
     <script type="application/ld+json">{getLdJson(siteUrl)}</script>
 
