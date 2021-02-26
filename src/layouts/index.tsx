@@ -39,6 +39,7 @@ const metaDataQuery = graphql`
         node {
           description
           title
+          keywords
         }
       }
     }
@@ -53,12 +54,13 @@ const App = ({ children, ...props }: AppProps) => {
 
   const thumbnailUrl = `${siteUrl}/thumbnail-874d5c.png`;
   const { node }: { node: SiteMetaProps } = allContentfulSiteMetadata.edges[0];
-  const { title, description } = node;
+  const { title, description, keywords } = node;
 
   const prefix = langPrefix(lang);
   const pathname = deprefix(location.pathname);
   const isAppShell = pathname.includes('offline-plugin-app-shell-fallback');
   const isDemoPage = pathname.includes('demo');
+
   return (
     <div>
       <Title
@@ -67,7 +69,7 @@ const App = ({ children, ...props }: AppProps) => {
         thumbnailUrl={thumbnailUrl}
       />
       <Initialize segmentDestinations={segmentDestinations} />
-      <HelmetIndexLayout lang={lang} siteUrl={siteUrl} pathname={pathname} />
+      <HelmetIndexLayout lang={lang} siteUrl={siteUrl} pathname={pathname} keywords={keywords} />
       <Nav {...props} prefix={prefix} />
       {isAppShell ? (
         <Loader />
