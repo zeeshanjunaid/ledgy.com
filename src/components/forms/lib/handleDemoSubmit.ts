@@ -43,11 +43,12 @@ const getInvestmentValue = (size: number) => {
 const getPipelineValue = (size: number, isCompany: boolean) =>
   isCompany ? getEmployeeValue(size) : getInvestmentValue(size);
 
-const getUrl = ({ isCompany, size }: ParsedFormValues) => {
+const getUrl = ({ isCompany, size, email }: ParsedFormValues) => {
+  const meetingRequestUrlWithEmail = `${meetingRequestUrl}?email=${email}`;
   if (!isCompany) {
-    return isFund(size) ? meetingRequestUrl : investorUrl;
+    return isFund(size) ? meetingRequestUrlWithEmail : investorUrl;
   }
-  return isDeerCompany(size) ? meetingRequestUrl : smallCompanyUrl;
+  return isDeerCompany(size) ? meetingRequestUrlWithEmail : smallCompanyUrl;
 };
 
 const redirect = (values: ParsedFormValues) => {
