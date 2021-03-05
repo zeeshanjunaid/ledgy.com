@@ -29,7 +29,7 @@ export type FooterLink = [string, string];
 
 const companyLinks: FooterLink[] = [
   ['About us', 'about-us'],
-  //  ['Sustainability', 'sustainability'], // FIXME Uncomment when content is ready
+  ['Sustainability', 'sustainability'],
   ['Career', 'jobs'],
   ['Contact', 'contact'],
 ];
