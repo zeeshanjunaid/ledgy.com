@@ -169,7 +169,14 @@ export const ContentWithScreenshotFragment = graphql`
     id
     header
     description
+    longDescription {
+      childMdx {
+        body
+      }
+    }
     checklist
+    smallImage
+    inverted
     image {
       localFile {
         childImageSharp {

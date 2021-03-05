@@ -126,9 +126,12 @@ declare type TopBannerProps = Id & {
 declare type ChecklistWithScreenshotProps = Id & {
   __typename: 'ContentfulChecklistWithScreenshot';
   header: string;
-  description: string;
+  description?: string;
+  longDescription?: Mdx;
   image: ImageProps;
-  checklist: string[];
+  checklist?: string[];
+  smallImage: boolean;
+  inverted: boolean;
 };
 
 declare type MainPageEntryProps = TopBannerProps | EntryProps;
