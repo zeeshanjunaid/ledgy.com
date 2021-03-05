@@ -20,10 +20,8 @@ export const ChecklistWithScreenshot = ({
   const order = inverted ? 'order-last' : '';
   const withChecklist = !!checklist;
   const isLongChecklist = withChecklist ? checklist.length > 3 : false;
-  const smallImageCol = smallImage ? 5 : 5;
+  const smallImageCol = smallImage ? 5 : 8;
   const textCol = 12 - smallImageCol;
-
-  console.log({ description });
   return (
     <Section>
       <SectionHeader header={header} />
@@ -63,7 +61,7 @@ export const ChecklistWithScreenshot = ({
         </div>
         <div className={`col-lg-${smallImageCol} pl-lg-0`}>
           <CustomFade translate="0, 100px">
-            <div className={`screenshot`}>{!!childImageSharp && <Img {...childImageSharp} />}</div>
+            <div className="screenshot">{!!childImageSharp && <Img {...childImageSharp} />}</div>
           </CustomFade>
         </div>
       </div>
