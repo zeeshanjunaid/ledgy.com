@@ -75,8 +75,8 @@ declare type ContentWithChecklistProps = Id & {
   __typename: 'ContentfulContentWithChecklist';
   header: string;
   description: string;
-  linkText: string;
-  linkUrl: string;
+  linkText?: string;
+  linkUrl?: string;
   checklist: string[];
 };
 

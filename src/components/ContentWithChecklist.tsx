@@ -59,7 +59,9 @@ export const ContentWithChecklist = ({
                 <p>
                   <DynamicTrans>{description}</DynamicTrans>
                 </p>
-                <LinkWithChevron to={linkUrl} text={linkText} prefix={prefix} />
+                {!!linkUrl && !!linkText && (
+                  <LinkWithChevron to={linkUrl} text={linkText} prefix={prefix} />
+                )}
               </div>
             </div>
             <div className="col-md-6">
