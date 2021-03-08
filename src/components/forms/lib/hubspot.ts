@@ -22,14 +22,7 @@ const encodeBody = (data: EncodeBodyData) =>
     context: { hutk: getHubspotUserToken() },
   });
 
-const padDate = (number: number): string => String(number).padStart(2, '0');
-
-const getHubSpotDate = (date: Date): string => {
-  const year = date.getFullYear();
-  const month = date.getMonth() + 1;
-  const day = date.getDate();
-  return `${year}-${padDate(month)}-${padDate(day)}`;
-};
+const getHubSpotDate = (date: Date): string => date.toISOString().slice(0, 10);
 
 export const submitToHubspot = ({ isCompany, email, size, value }: ParsedFormValues) => {
   const body = encodeBody({
