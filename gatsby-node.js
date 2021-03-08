@@ -37,11 +37,26 @@ exports.onCreatePage = async ({ page, actions }) => {
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions;
   const typeDefinitions = `
+  type Body implements Node  {
+    body: String
+  }
+  type Mdx implements Node  {
+    childMdx: Body
+  }
+  type ContentfulChecklistWithScreenshot implements Node {
+    description: String
+    checklist: [String]
+    longDescription: Mdx
+  }
   type ContentfulCallToAction2021 implements Node {
     linkText: String
     linkUrl: String
   }
   type ContentfulTestimonialCardBuildingBlock implements Node {
+    linkText: String
+    linkUrl: String
+  }
+  type ContentfulContentWithChecklist implements Node {
     linkText: String
     linkUrl: String
   }
