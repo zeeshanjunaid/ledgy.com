@@ -10,7 +10,7 @@ const getHubspotUserToken = (): string =>
 
 declare type EncodeBodyData = {
   demorequestdate: string;
-  pipelinevalue: number;
+  unverified_pipeline_value: number;
   email: string;
   numberofemployees?: number;
   numberofinvestments?: number;
@@ -35,7 +35,7 @@ export const submitToHubspot = ({ isCompany, email, size, value }: ParsedFormVal
   const body = encodeBody({
     ...(isCompany ? { numberofemployees: size } : { numberofinvestments: size }),
     demorequestdate: getHubSpotDate(new Date()),
-    pipelinevalue: value,
+    unverified_pipeline_value: value,
     email,
   });
   return fetch(`/submit/6881367/${DEMO_FORM_ID}`, {
