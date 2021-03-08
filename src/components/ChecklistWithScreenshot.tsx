@@ -29,12 +29,16 @@ export const ChecklistWithScreenshot = ({
         <div
           className={`${order} col-lg-${textCol} pr-4 d-flex flex-column justify-content-center`}
         >
-          <p className={`text-deep-blue my-2 my-lg-0 ${isLongChecklist ? 'mb-2 mb-xl-3' : 'mb-4'}`}>
-            {!!description && <DynamicTrans>{description}</DynamicTrans>}
+          <div className="text-deep-blue my-2 my-lg-0">
+            {!!description && (
+              <p className={`${isLongChecklist ? 'mb-2 mb-xl-3' : 'mb-4'}`}>
+                <DynamicTrans>{description}</DynamicTrans>
+              </p>
+            )}
             {!!longDescription && !description && (
               <MDXRenderer>{longDescription.childMdx.body}</MDXRenderer>
             )}
-          </p>
+          </div>
           {withChecklist && (
             <ul className="my-2 pl-0">
               {checklist.map((item) => {
