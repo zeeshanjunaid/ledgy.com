@@ -1,7 +1,6 @@
 import { ParsedFormValues } from './formTypes';
 
-const COMPANY_FORM_ID = 'b360c926-ed24-473a-8418-ee1050ddbd06';
-const INVESTOR_FORM_ID = 'fcc4153b-79ea-49a1-9672-eb888d210355';
+const DEMO_FORM_ID = 'b360c926-ed24-473a-8418-ee1050ddbd06';
 const HUBSPOTUTK = 'hubspotutk=';
 
 const getHubspotUserToken = (): string =>
@@ -33,14 +32,13 @@ const getHubSpotDate = (date: Date): string => {
 };
 
 export const submitToHubspot = ({ isCompany, email, size, value }: ParsedFormValues) => {
-  const formId = isCompany ? COMPANY_FORM_ID : INVESTOR_FORM_ID;
   const body = encodeBody({
     ...(isCompany ? { numberofemployees: size } : { numberofinvestments: size }),
     demorequestdate: getHubSpotDate(new Date()),
     pipelinevalue: value,
     email,
   });
-  return fetch(`/submit/6881367/${formId}`, {
+  return fetch(`/submit/6881367/${DEMO_FORM_ID}`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body,
