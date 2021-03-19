@@ -228,7 +228,6 @@ export const getWholeTeam = (
     linkedIn: 'https://www.linkedin.com/in/catarina-martins-sim%C3%B5es-62b8b9142/',
     mail: 'catarina@ledgy.com',
   },
-
   nicolas: {
     name: 'Nicolas Briner',
     role: 'Biz Dev & Landscape Photographer',
@@ -240,6 +239,7 @@ export const getWholeTeam = (
     ),
     linkedIn: 'https://www.linkedin.com/in/nicolas-briner/',
     mail: 'nicolas@ledgy.com',
+    article: 'nicolas-briner',
   },
   luna: {
     name: 'Luna',
