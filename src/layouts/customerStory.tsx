@@ -14,15 +14,15 @@ const CustomerStory = ({
     allContentfulCustomerStory: { edges: { node: AllContentfulCustomerStoryProps }[] };
   };
 }) => {
-  const { id, title, subtitle, language, content, company } = data.contentfulCustomerStory;
+  const { id, title, header, subtitle, language, content, company } = data.contentfulCustomerStory;
   const otherUserStories = data.allContentfulCustomerStory.edges
     .filter(({ node }) => node.id !== id)
     .map(({ node }) => node);
   const hasOtherCustomerStories = otherUserStories.length > 0;
   return (
     <div>
-      <Title title={title} description={subtitle} />
-      <PageHeader lang={lang} documentLang={language} title={title} subtitle={subtitle} />
+      <Title title={title || header} description={subtitle} />
+      <PageHeader lang={lang} documentLang={language} title={header} subtitle={subtitle} />
       <main>
         <section className="section ">
           <div className="container container-medium">
@@ -61,6 +61,7 @@ export const customerStoryQuery = graphql`
       id
       slug
       title
+      header
       subtitle
       language
       content {

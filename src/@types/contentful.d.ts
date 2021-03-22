@@ -28,6 +28,7 @@ declare type AllContentfulCustomerStoryProps = Id & {
 
 declare type CustomerStoryBaseProps = AllContentfulCustomerStoryProps & {
   title: string;
+  header: string;
   subtitle: string;
   date: string;
 };
