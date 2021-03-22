@@ -62,13 +62,16 @@ exports.createSchemaCustomization = ({ actions }) => {
   }
   union EntryProps = ContentfulTopBanner | ContentfulLogoBanner | ContentfulSelectableCardsWithScreenshots | ContentfulFeatureGrid | ContentfulTestimonialCards | ContentfulTitleWithGraphic | ContentfulContentWithChecklist | ContentfulCallToAction2021 | ContentfulChecklistWithScreenshot
   type ContentfulDemoPage2021 implements Node {
+    title: String
     requesterType: String
     content: [EntryProps] @link(by: "id", from: "content___NODE")
   }
   type ContentfulFrontPage2021 implements Node {
+    title: String
     entries: [EntryProps] @link(by: "id", from: "entries___NODE")
   }
   type ContentfulFeaturePage2021 implements Node {
+    title: String
     entries: [EntryProps] @link(by: "id", from: "entries___NODE")
   }
 `;

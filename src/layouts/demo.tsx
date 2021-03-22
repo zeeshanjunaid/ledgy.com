@@ -16,6 +16,7 @@ import { DATA_PROTECTION } from '../helpers';
 type DemoPageProps = {
   content: EntryProps[];
   title: string;
+  header: string;
   description: string;
   formButtonText: string;
   requesterType?: RequesterType;
@@ -54,6 +55,7 @@ const DemoPage = (props: Props) => {
   const {
     content,
     title,
+    header,
     description,
     formButtonText,
     requesterType,
@@ -68,11 +70,11 @@ const DemoPage = (props: Props) => {
 
   return (
     <>
-      <Title title={dynamicI18n(title)} description={dynamicI18n(description)} />
+      <Title title={dynamicI18n(title || header)} description={dynamicI18n(description)} />
       <TopBannerLayout
         buttonOne={buttonOne}
         buttonTwo={buttonTwo}
-        title={<DynamicTrans>{title}</DynamicTrans>}
+        title={<DynamicTrans>{header}</DynamicTrans>}
         subtitle={<DynamicTrans>{description}</DynamicTrans>}
         componentRight={form}
       />
@@ -109,6 +111,7 @@ export const demoQuery = graphql`
       id
       slug
       title
+      header
       description
       formButtonText
       requesterType

@@ -14,13 +14,20 @@ const FeaturePage = ({
     allContentfulFeaturePage2021: UnknownObject;
   };
 }) => {
-  const { title, description, graphic, motivationText, entries } = data.contentfulFeaturePage2021;
+  const {
+    title,
+    header,
+    description,
+    graphic,
+    motivationText,
+    entries,
+  } = data.contentfulFeaturePage2021;
   return (
     <div>
-      <Title title={dynamicI18n(title)} description={dynamicI18n(description)} />
+      <Title title={dynamicI18n(title || header)} description={dynamicI18n(description)} />
       <TitleWithGraphic
-        id={title}
-        title={title}
+        id={header}
+        title={header}
         description={description}
         graphic={graphic}
         motivationText={motivationText}
@@ -42,6 +49,7 @@ export const featurePageQuery = graphql`
       id
       slug
       title
+      header
       description
       motivationText
       graphic {

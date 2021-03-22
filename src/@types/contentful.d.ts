@@ -64,6 +64,7 @@ declare type BaseFeatureProps = Id & {
 
 declare type FeaturePageProps = BaseFeatureProps & {
   slug: string;
+  header: string;
   entries: EntryProps[];
 };
 
