@@ -14,7 +14,7 @@ const isTopPageComponent = (entry: MainPageEntryProps) =>
 const IndexPage = (props: Props) => {
   const { data, prefix } = props;
   const [content] = data.page.edges;
-  const { entries }: { entries: MainPageEntryProps[] } = content.node;
+  const { entries, title }: { entries: MainPageEntryProps[]; title: string } = content.node;
 
   const topBanner = entries.find(isTopBanner);
   const { mainHeader } = topBanner || {};
@@ -25,7 +25,7 @@ const IndexPage = (props: Props) => {
     <main className="main-wrapper-1">
       {!!mainHeader && (
         <Helmet>
-          <title>{`Ledgy: ${dynamicI18n(mainHeader)}`}</title>
+          <title>{`Ledgy: ${dynamicI18n(title || mainHeader)}`}</title>
         </Helmet>
       )}
       <div className="main-wrapper-2">
@@ -194,6 +194,7 @@ export const indexPageQuery = graphql`
     page: allContentfulFrontPage2021 {
       edges {
         node {
+          title
           entries {
             ... on ContentfulTopBanner {
               id

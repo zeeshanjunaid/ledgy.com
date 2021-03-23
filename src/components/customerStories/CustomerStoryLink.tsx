@@ -10,11 +10,11 @@ export const CustomerStoryLink = ({
   customerStory: CustomerStoryBaseProps;
   prefix: string;
 }) => {
-  const { title, subtitle, slug, company } = customerStory;
+  const { header, subtitle, slug, company } = customerStory;
   const { childImageSharp } = company.logo.localFile || {};
   const to = `customer-stories/${slug}`;
   const image = childImageSharp ? <Img {...childImageSharp} /> : null;
-  const cardTitle = <h5>{title}</h5>;
+  const cardTitle = <h5>{header}</h5>;
   return (
     <CardLink
       title={cardTitle}
