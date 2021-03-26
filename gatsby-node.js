@@ -35,9 +35,7 @@ exports.onCreatePage = async ({ page, actions }) => {
 
 // schema customization to allow Gatsby to query optional Contentful fields
 exports.createSchemaCustomization = ({ actions }) => {
-  const { createTypes, printTypeDefinitions } = actions;
-  const defs = printTypeDefinitions({});
-  console.log({ defs, actions });
+  const { createTypes } = actions;
   const typeDefinitions = `
   type ContentfulChecklistWithScreenshot implements Node {
     description: String
