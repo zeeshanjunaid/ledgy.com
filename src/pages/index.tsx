@@ -164,8 +164,8 @@ export const CallToAction2021Fragment = graphql`
   }
 `;
 
-export const ContentWithScreenshotFragment = graphql`
-  fragment ContentWithScreenshotFragment on ContentfulChecklistWithScreenshot {
+export const ChecklistWithScreenshotFragment = graphql`
+  fragment ChecklistWithScreenshotFragment on ContentfulChecklistWithScreenshot {
     id
     header
     description
@@ -221,7 +221,7 @@ export const indexPageQuery = graphql`
             ...LogoBannerFragment
             ...SelectableCardsWithScreenshotsFragment
             ...CallToAction2021Fragment
-            ...ContentWithScreenshotFragment
+            ...ChecklistWithScreenshotFragment
           }
         }
       }

@@ -123,7 +123,7 @@ export const demoQuery = graphql`
         ...LogoBannerFragment
         ...SelectableCardsWithScreenshotsFragment
         ...CallToAction2021Fragment
-        ...ContentWithScreenshotFragment
+        ...ChecklistWithScreenshotFragment
       }
     }
   }
