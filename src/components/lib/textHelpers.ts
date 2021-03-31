@@ -35,6 +35,7 @@ const companyLinks: FooterLink[] = [
 ];
 
 const legalLinks: FooterLink[] = [
+  ['Data protection', DATA_PROTECTION],
   ['Terms of service', 'legal/terms'],
   ['Privacy policy', 'legal/privacy-policy'],
   ['Cookie policy', 'legal/cookie-policy'],
@@ -45,7 +46,6 @@ const productLinks: FooterLink[] = [
   ['For human resources', HR_AND_COMPENSATION],
   ['For finance', FINANCE_LEGAL_ACCOUNTING],
   ['For investors', VCS_BUSINESS_ANGELS],
-  ['Data protection', DATA_PROTECTION],
   ['Pricing for companies', 'company-pricing'],
   ['Pricing for investors', 'investor-pricing'],
 ];
