@@ -3,7 +3,7 @@
 const path = require('path');
 const { redirects } = require('./src/redirects.js');
 
-const { languages, defaultLanguage } = require('./src/i18n-config.js');
+const { languages, langPrefix } = require('./src/i18n-config.js');
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
@@ -22,7 +22,7 @@ exports.onCreatePage = async ({ page, actions }) => {
       languages.forEach((language) => {
         const newPage = Object.assign({}, page, {
           originalPath: page.path,
-          path: language === defaultLanguage ? page.path : `/${language}${page.path}`,
+          path: `${langPrefix(language)}${page.path}`,
           context: { lang: language },
         });
         createPage(newPage);
@@ -142,8 +142,9 @@ const resolvePagePromise = (query, createPageWithData) =>
 exports.createPages = ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions;
   const createLocalizedPages = (pagePath, component, context) => {
-    createPage({ path: pagePath, component, context });
-    languages.forEach((lang) => createPage({ path: `/${lang}${pagePath}`, component, context }));
+    languages.forEach((language) =>
+      createPage({ path: `${langPrefix(language)}${pagePath}`, component, context })
+    );
   };
 
   redirects.forEach(([from, toPath]) => {
