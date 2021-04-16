@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet';
 import React from 'react';
 import { name, getLdJson, dynamicI18n } from '../helpers';
+import { langPrefix } from '../i18n-config';
 
 export const HelmetIndexLayout = ({
   lang,
@@ -32,6 +33,7 @@ export const HelmetIndexLayout = ({
     <link rel="alternate" href={`${siteUrl}${pathname}`} hrefLang="en" />
     <link rel="alternate" href={`${siteUrl}/de${pathname}`} hrefLang="de" />
     <link rel="alternate" href={`${siteUrl}/fr${pathname}`} hrefLang="fr" />
+    <link rel="canonical" href={`${siteUrl}${langPrefix(lang)}${pathname}`} />
     <script src="https://www.googleoptimize.com/optimize.js?id=OPT-PHR22QK" />
     <script>
       {`
