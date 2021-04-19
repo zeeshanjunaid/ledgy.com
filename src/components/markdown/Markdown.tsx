@@ -8,6 +8,7 @@ import { faEnvelope, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons
 import { targetBlank, youtubeEmbedBaseUrl, ledgyUrl } from '../../helpers';
 import { getWholeTeam, getTeamImages, AuthorProps } from '../../layouts/team';
 import { Embed, DynamicTrans } from '../utils';
+import { isExternalUrl } from '../lib';
 
 const About = ({ about, img }: { about: AuthorProps; img: GatsbyImageFluidProps }) => (
   <div className="about d-flex justify-content-center pt-3 mt-3">
@@ -140,7 +141,7 @@ export const Anchor = ({
   if (href.startsWith(youtubeEmbedBaseUrl)) {
     return <Embed src={href} title={title} className="embed-small" />;
   }
-  const isExternal = href.startsWith('https://');
+  const isExternal = isExternalUrl(href);
   const prefixedUrl = getPrefixedUrl({ href, prefix, isExternal });
 
   return (
