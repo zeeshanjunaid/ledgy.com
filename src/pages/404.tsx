@@ -21,9 +21,9 @@ const NotFoundPage = () => (
         <p className="lead">Oh no! We couldn’t find that page.</p>
         <p className="lead">
           Were you looking for features for{' '}
-          <Link to={`/${HR_AND_COMPENSATION}`}> {HR_AND_COMPENSATION_TITLE}</Link>,{' '}
-          <Link to={`/${FINANCE_LEGAL_ACCOUNTING}`}>{FINANCE_LEGAL_ACCOUNTING_TITLE}</Link>, or{' '}
-          <Link to={`/${VCS_BUSINESS_ANGELS}`}>{VCS_BUSINESS_ANGELS_TITLE}</Link>? Maybe need some{' '}
+          <Link to={`/${HR_AND_COMPENSATION}/`}> {HR_AND_COMPENSATION_TITLE}</Link>,{' '}
+          <Link to={`/${FINANCE_LEGAL_ACCOUNTING}/`}>{FINANCE_LEGAL_ACCOUNTING_TITLE}</Link>, or{' '}
+          <Link to={`/${VCS_BUSINESS_ANGELS}/`}>{VCS_BUSINESS_ANGELS_TITLE}</Link>? Maybe need some{' '}
           <a href={helpUrl} {...targetBlank}>
             help
           </a>
