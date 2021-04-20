@@ -10,7 +10,14 @@ import '../styles/_index.scss';
 
 import { dynamicI18n, loadSegment } from '../helpers';
 import { langFromPath, langPrefix, deprefix } from '../i18n-config';
-import { HelmetIndexLayout, Footer, Loader, Nav, PublicityBanner } from '../components';
+import {
+  HelmetIndexLayout,
+  Footer,
+  Loader,
+  Nav,
+  PublicityBanner,
+  CookieBanner,
+} from '../components';
 import { Title } from './utils';
 
 type AppProps = LayoutProps & {
@@ -76,6 +83,7 @@ const App = ({ children, ...props }: AppProps) => {
       ) : (
         <>
           <PublicityBanner pathname={pathname} />
+          <CookieBanner />
           {React.cloneElement(children, { prefix, lang })}
           {!isDemoPage && <Footer {...props} prefix={prefix} />}
         </>

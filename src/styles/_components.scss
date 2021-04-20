@@ -233,6 +233,35 @@ input[type=number]::-webkit-outer-spin-button {
   }
 }
 
+// Cookie banner
+.cookie-banner {
+  bottom: 18px;
+  left: 80%;
+  transform: translate(-50%);
+  z-index: 1010;
+  width: 50vw;
+  box-shadow: 0 5px 4px 0 rgba(0,0,0,.26);
+  border-radius: 0.25rem;
+
+  @include media-breakpoint-up(lg) {
+    width: 25vw;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.cookie-banner--confirm-button {
+  line-height: 40px;
+  transition: 200ms;
+  background-color: $energetic-blue;
+  width: 100%;
+  &:hover {
+    background: $gray-100 !important;
+    transition: 200ms;
+  }
+}
+
 // Customer stories
 
 .company-summary {
