@@ -1,4 +1,4 @@
-import React, { useEffect, ReactElement, useMemo } from 'react';
+import React, { useEffect, ReactElement, useMemo, useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { i18n } from '@lingui/core';
 import { I18nProvider } from '@lingui/react';
@@ -54,6 +54,7 @@ const metaDataQuery = graphql`
 `;
 
 const App = ({ children, ...props }: AppProps) => {
+  const [segments, setSegments] = useState([]);
   const data = useStaticQuery(metaDataQuery);
   const { lang, location } = props;
   const { site, allContentfulSiteMetadata } = data;
@@ -70,20 +71,23 @@ const App = ({ children, ...props }: AppProps) => {
 
   return (
     <div>
+      <p>{segments}</p>
       <Title
         title={dynamicI18n(title)}
         description={dynamicI18n(description)}
         thumbnailUrl={thumbnailUrl}
       />
-      <Initialize segmentDestinations={segmentDestinations} />
+      <Initialize segmentDestinations={segments} />
       <HelmetIndexLayout lang={lang} siteUrl={siteUrl} pathname={pathname} keywords={keywords} />
       <Nav {...props} prefix={prefix} />
       {isAppShell ? (
         <Loader />
       ) : (
         <>
-          <PublicityBanner pathname={pathname} />
-          <CookieBanner />
+          <div className="banner-container position-fixed d-flex flex-column">
+            <PublicityBanner pathname={pathname} />
+            <CookieBanner acceptCookies={() => setSegments(segmentDestinations)} />
+          </div>
           {React.cloneElement(children, { prefix, lang })}
           {!isDemoPage && <Footer {...props} prefix={prefix} />}
         </>
