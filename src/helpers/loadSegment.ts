@@ -2,7 +2,12 @@
 
 const getDestinations = (destinations: string[]) => destinations.reduce((res, v) => ({ ...res, [v]: true }), { All: false });
 
+
+const SEGMENT_COOKIE_ID = 'ajs_anonymous_id';
+export const hasAcceptedCookies = () => !!localStorage.getItem(SEGMENT_COOKIE_ID);
+
 export const loadSegment = (destinations: string[]): void => {
+  console.log('load segment');
   const analytics = window.analytics = window.analytics || [];
   if (!analytics.initialize) if (analytics.invoked) window.console && console.error && console.error('Segment snippet included twice.');else {
     analytics.invoked = !0;

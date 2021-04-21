@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Button } from './utils';
 import { ClosingButton, bannerClassName } from './PublicityBanner';
+
+import { hasAcceptedCookies, loadSegment } from '../helpers/loadSegment';
 
 const ConfirmButton = ({
   hide,
@@ -64,13 +66,28 @@ const cookieBannerQuery = graphql`
   }
 `;
 
-export const CookieBanner = ({ acceptCookies }: { acceptCookies: () => void }) => {
+export const CookieBanner = ({ segmentDestinations }: { segmentDestinations: string[] }) => {
   const result = useStaticQuery(cookieBannerQuery);
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    if (hasAcceptedCookies()) {
+      setTimeout(() => {
+        loadSegment(segmentDestinations);
+      }, 1414);
+    } else {
+      setShow(true);
+    }
+  }, []);
+
   const [banner] = result.allContentfulCookieBanner.edges;
   if (!banner) return null;
 
   const { title, content } = banner.node;
-  const [show, setShow] = useState(true);
+  const acceptCookies = () => {
+    loadSegment(segmentDestinations);
+    setShow(false);
+  };
 
   return show ? (
     <Banner
