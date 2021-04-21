@@ -1,4 +1,4 @@
-import React, { useEffect, ReactElement, useMemo, useState } from 'react';
+import React, { useEffect, ReactElement, useMemo } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { i18n } from '@lingui/core';
 import { I18nProvider } from '@lingui/react';
@@ -24,11 +24,14 @@ type AppProps = LayoutProps & {
   children: ReactElement;
 };
 
+const callLoadSegment = ({ segmentDestinations }: { segmentDestinations: string[] }) =>
+  setTimeout(() => {
+    loadSegment(segmentDestinations);
+  }, 1414);
+
 const Initialize = ({ segmentDestinations }: { segmentDestinations: string[] }) => {
   useEffect(() => {
-    setTimeout(() => {
-      loadSegment(segmentDestinations);
-    }, 1414);
+    callLoadSegment({ segmentDestinations });
   }, []);
   return null;
 };
@@ -54,12 +57,10 @@ const metaDataQuery = graphql`
 `;
 
 const App = ({ children, ...props }: AppProps) => {
-  const [segments, setSegments] = useState([]);
   const data = useStaticQuery(metaDataQuery);
   const { lang, location } = props;
   const { site, allContentfulSiteMetadata } = data;
   const { siteUrl, segmentDestinations } = site.siteMetadata;
-
   const thumbnailUrl = `${siteUrl}/thumbnail-874d5c.png`;
   const { node }: { node: SiteMetaProps } = allContentfulSiteMetadata.edges[0];
   const { title, description, keywords } = node;
@@ -69,6 +70,12 @@ const App = ({ children, ...props }: AppProps) => {
   const isAppShell = pathname.includes('offline-plugin-app-shell-fallback');
   const isDemoPage = pathname.includes('demo');
 
+  const SegmentDestinationId = 'SegmentDestinations';
+  const savedSegmentDestination = localStorage.getItem(SegmentDestinationId);
+  const localSegmentDestinations = savedSegmentDestination
+    ? JSON.parse(savedSegmentDestination)
+    : [];
+
   return (
     <div>
       <Title
@@ -76,7 +83,7 @@ const App = ({ children, ...props }: AppProps) => {
         description={dynamicI18n(description)}
         thumbnailUrl={thumbnailUrl}
       />
-      <Initialize segmentDestinations={segments} />
+      <Initialize segmentDestinations={localSegmentDestinations} />
       <HelmetIndexLayout lang={lang} siteUrl={siteUrl} pathname={pathname} keywords={keywords} />
       <Nav {...props} prefix={prefix} />
       {isAppShell ? (
@@ -85,7 +92,14 @@ const App = ({ children, ...props }: AppProps) => {
         <>
           <div className="banner-container position-fixed d-flex flex-column">
             <PublicityBanner pathname={pathname} />
-            <CookieBanner acceptCookies={() => setSegments(segmentDestinations)} />
+            {!savedSegmentDestination && (
+              <CookieBanner
+                acceptCookies={() => {
+                  callLoadSegment({ segmentDestinations });
+                  localStorage.setItem(SegmentDestinationId, JSON.stringify(segmentDestinations));
+                }}
+              />
+            )}
           </div>
           {React.cloneElement(children, { prefix, lang })}
           {!isDemoPage && <Footer {...props} prefix={prefix} />}

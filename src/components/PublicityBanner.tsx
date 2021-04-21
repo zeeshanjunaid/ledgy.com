@@ -12,10 +12,10 @@ export const ClosingButton = ({ hide }: { hide: () => void }) => (
 );
 
 export const bannerClassName =
-  'bottom-banner position-relative my-1 bg-white rounded font-weight-light';
+  'bottom-banner position-relative my-1 bg-white rounded font-weight-light text-center';
 
 const Banner = ({ content, hide }: { content: Mdx; hide: () => void }) => (
-  <div className={`${bannerClassName} text-center`}>
+  <div className={bannerClassName}>
     <div className="m-4">
       <MDXRenderer>{content.childMdx.body}</MDXRenderer>
     </div>
