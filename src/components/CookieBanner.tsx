@@ -2,6 +2,25 @@ import React, { useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Button } from './utils';
+import { ClosingButton, bannerClassName } from './PublicityBanner';
+
+const ConfirmButton = ({
+  hide,
+  acceptCookies,
+}: {
+  hide: () => void;
+  acceptCookies: () => void;
+}) => (
+  <Button
+    className={'my-sm-0 my-2 mr-2 btn-md'}
+    onClick={() => {
+      hide();
+      acceptCookies();
+    }}
+  >
+    Yes
+  </Button>
+);
 
 const Banner = ({
   title,
@@ -14,30 +33,17 @@ const Banner = ({
   hide: () => void;
   acceptCookies: () => void;
 }) => (
-  <div className="bottom-banner position-relative my-1 text-left bg-white rounded font-weight-light">
+  <div className={`${bannerClassName} text-left`}>
     <div className="m-4 row">
       <div className="col-10 pl-4">
         <div className="font-weight-semi-bold">{title}</div>
         <MDXRenderer>{content.childMdx.body}</MDXRenderer>
       </div>
       <div className="col-2 d-flex align-items-center justify-content-center">
-        <Button
-          className={'my-sm-0 my-2 mr-2 btn-md'}
-          onClick={() => {
-            hide();
-            acceptCookies();
-          }}
-        >
-          Yes
-        </Button>
+        <ConfirmButton hide={hide} acceptCookies={acceptCookies} />
       </div>
     </div>
-    <button
-      className="bottom-banner--button position-absolute bg-transparent border-0"
-      onClick={hide}
-    >
-      ×
-    </button>
+    <ClosingButton hide={hide} />
   </div>
 );
 
