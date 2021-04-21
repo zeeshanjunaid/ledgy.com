@@ -70,8 +70,9 @@ const App = ({ children, ...props }: AppProps) => {
   const isAppShell = pathname.includes('offline-plugin-app-shell-fallback');
   const isDemoPage = pathname.includes('demo');
 
+  const isOnClient = typeof window !== 'undefined';
   const SegmentDestinationId = 'SegmentDestinations';
-  const savedSegmentDestination = localStorage.getItem(SegmentDestinationId);
+  const savedSegmentDestination = isOnClient ? localStorage.getItem(SegmentDestinationId) : '';
   const localSegmentDestinations = savedSegmentDestination
     ? JSON.parse(savedSegmentDestination)
     : [];
@@ -83,7 +84,7 @@ const App = ({ children, ...props }: AppProps) => {
         description={dynamicI18n(description)}
         thumbnailUrl={thumbnailUrl}
       />
-      <Initialize segmentDestinations={localSegmentDestinations} />
+      <Initialize segmentDestinations={localSegmentDestinations || []} />
       <HelmetIndexLayout lang={lang} siteUrl={siteUrl} pathname={pathname} keywords={keywords} />
       <Nav {...props} prefix={prefix} />
       {isAppShell ? (
