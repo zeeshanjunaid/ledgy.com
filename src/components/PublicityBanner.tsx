@@ -3,12 +3,12 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 const Banner = ({ content, hide }: { content: Mdx; hide: () => void }) => (
-  <div className="publicity-banner position-relative my-1 text-center bg-white rounded font-weight-light">
+  <div className="bottom-banner position-relative my-1 text-center bg-white rounded font-weight-light">
     <div className="m-4">
       <MDXRenderer>{content.childMdx.body}</MDXRenderer>
     </div>
     <button
-      className="publicity-banner--button position-absolute bg-transparent border-0"
+      className="bottom-banner--button position-absolute bg-transparent border-0"
       onClick={hide}
     >
       ×

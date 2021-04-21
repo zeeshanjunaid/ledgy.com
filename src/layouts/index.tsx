@@ -71,7 +71,6 @@ const App = ({ children, ...props }: AppProps) => {
 
   return (
     <div>
-      <p>{segments}</p>
       <Title
         title={dynamicI18n(title)}
         description={dynamicI18n(description)}

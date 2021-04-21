@@ -14,7 +14,7 @@ const Banner = ({
   hide: () => void;
   acceptCookies: () => void;
 }) => (
-  <div className="publicity-banner position-relative my-1 text-left bg-white rounded font-weight-light">
+  <div className="bottom-banner position-relative my-1 text-left bg-white rounded font-weight-light">
     <div className="m-4 row">
       <div className="col-10 pl-4">
         <div className="font-weight-semi-bold">{title}</div>
@@ -22,7 +22,7 @@ const Banner = ({
       </div>
       <div className="col-2 d-flex align-items-center justify-content-center">
         <Button
-          className={'my-sm-0 my-2 mr-2 btn-xl'}
+          className={'my-sm-0 my-2 mr-2 btn-md'}
           onClick={() => {
             hide();
             acceptCookies();
@@ -33,7 +33,7 @@ const Banner = ({
       </div>
     </div>
     <button
-      className="publicity-banner--button position-absolute bg-transparent border-0"
+      className="bottom-banner--button position-absolute bg-transparent border-0"
       onClick={hide}
     >
       ×
