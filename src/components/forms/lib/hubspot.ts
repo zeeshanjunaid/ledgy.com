@@ -1,17 +1,20 @@
 import { ParsedFormValues } from './formTypes';
 
 const DEMO_FORM_ID = 'b360c926-ed24-473a-8418-ee1050ddbd06';
-const HUBSPOTUTK = 'hubspotutk=';
+const HUBSPOT_UTK = 'hubspotutk';
+const GOOGLE_CID = '_ga';
 
-const getHubspotUserToken = (): string =>
-  (document.cookie.split('; ').find((v) => v.startsWith(HUBSPOTUTK)) || '').slice(
-    HUBSPOTUTK.length
-  );
+const getCookieValue = (name: string) =>
+  (document.cookie.split('; ').find((v) => v.startsWith(name)) || '').slice(name.length + 1);
+
+const getHubspotUserToken = () => getCookieValue(HUBSPOT_UTK);
+const getGoogleAnalyticsClientId = () => getCookieValue(GOOGLE_CID).slice(6);
 
 declare type EncodeBodyData = {
   demorequestdate: string;
   pipelinevalue: number;
   email: string;
+  google_analytics_client_id: string;
   numberofemployees?: number;
   numberofinvestments?: number;
 };
@@ -30,6 +33,7 @@ export const submitToHubspot = ({ isCompany, email, size, value }: ParsedFormVal
     demorequestdate: getHubSpotDate(new Date()),
     pipelinevalue: value,
     email,
+    google_analytics_client_id: getGoogleAnalyticsClientId(),
   });
   return fetch(`/submit/6881367/${DEMO_FORM_ID}`, {
     method: 'POST',
