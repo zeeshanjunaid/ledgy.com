@@ -4,7 +4,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Button } from './utils';
 import { ClosingButton, bannerClassName } from './PublicityBanner';
 
-import { hasAcceptedCookies, loadSegment } from '../helpers/loadSegment';
+import { hasAcceptedCookies, loadMarketingTools } from '../helpers/marketing';
 
 const ConfirmButton = ({
   hide,
@@ -73,7 +73,7 @@ export const CookieBanner = ({ segmentDestinations }: { segmentDestinations: str
   useEffect(() => {
     if (hasAcceptedCookies()) {
       setTimeout(() => {
-        loadSegment(segmentDestinations);
+        loadMarketingTools(segmentDestinations);
       }, 1414);
     } else {
       setShow(true);
@@ -85,7 +85,7 @@ export const CookieBanner = ({ segmentDestinations }: { segmentDestinations: str
 
   const { title, content } = banner.node;
   const acceptCookies = () => {
-    loadSegment(segmentDestinations);
+    loadMarketingTools(segmentDestinations);
     setShow(false);
   };
 
