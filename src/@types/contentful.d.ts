@@ -20,6 +20,7 @@ declare type ContentfulPageProps = Id & {
   slug: string;
   language: Language;
   cover?: ImageProps;
+  entries?: EntryProps[];
 };
 
 declare type AllContentfulCustomerStoryProps = Id & {
