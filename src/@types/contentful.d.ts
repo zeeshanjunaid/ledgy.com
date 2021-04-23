@@ -8,7 +8,8 @@ declare type EntryProps =
   | TitleWithGraphicProps
   | ContentWithChecklistProps
   | CallToActionProps
-  | ChecklistWithScreenshotProps;
+  | ChecklistWithScreenshotProps
+  | LongTextComponentProps;
 
 declare type ContentfulPageProps = Id & {
   title: string;
@@ -134,6 +135,12 @@ declare type ChecklistWithScreenshotProps = Id & {
   checklist?: string[];
   smallImage: boolean;
   inverted: boolean;
+};
+
+declare type LongTextComponentProps = Id & {
+  __typename: 'ContentfulLongText';
+  isWide: boolean;
+  longTextContent: Mdx;
 };
 
 declare type MainPageEntryProps = TopBannerProps | EntryProps;

@@ -28,18 +28,21 @@ const getProviderComponents = (prefix: string) => ({
 export const LongText = ({
   content,
   isMarkdown = true,
+  isWideMarkdown = false,
   className = '',
   prefix,
 }: {
   content: Mdx;
   isMarkdown?: boolean;
+  isWideMarkdown?: boolean;
   className?: string;
   prefix: string;
 }) => {
   const components = getProviderComponents(prefix);
+  const markdownClassName = isWideMarkdown ? 'wide-markdown' : 'markdown';
   return (
     <div className="d-flex justify-content-center mb-4 mb-lg-5">
-      <div className={`${isMarkdown ? 'markdown' : ''} ${className}`}>
+      <div className={`${isMarkdown ? markdownClassName : ''}  ${className} `}>
         {content && (
           <MDXProvider components={components}>
             <MDXRenderer>{content.childMdx.body}</MDXRenderer>
