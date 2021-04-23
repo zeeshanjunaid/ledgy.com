@@ -7,10 +7,8 @@ export const LongTextComponent = ({
   isWide,
   content,
   prefix,
-}: { prefix: string } & LongTextComponentProps) => {
-  return (
-    <Section>
-      <LongText content={content} prefix={prefix} isWideMarkdown={isWide} />
-    </Section>
-  );
-};
+}: { prefix: string } & LongTextComponentProps) => (
+  <Section>
+    <LongText content={content} prefix={prefix} isWide={isWide} />
+  </Section>
+);
