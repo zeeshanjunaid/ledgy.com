@@ -21,6 +21,7 @@ export * from './PageHeader';
 export * from './Privacy';
 export * from './ProductHuntButton';
 export * from './PublicityBanner';
+export * from './CookieBanner';
 export * from './ReadMore';
 export * from './RequestDemoButton';
 export * from './SubscriptionModal';

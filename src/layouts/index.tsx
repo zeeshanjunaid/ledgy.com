@@ -1,4 +1,4 @@
-import React, { useEffect, ReactElement, useMemo } from 'react';
+import React, { ReactElement, useMemo } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { i18n } from '@lingui/core';
 import { I18nProvider } from '@lingui/react';
@@ -8,22 +8,20 @@ import 'katex/dist/katex.min.css';
 import 'prism-themes/themes/prism-ghcolors.css';
 import '../styles/_index.scss';
 
-import { dynamicI18n, loadSegment } from '../helpers';
+import { dynamicI18n } from '../helpers';
 import { langFromPath, langPrefix, deprefix } from '../i18n-config';
-import { HelmetIndexLayout, Footer, Loader, Nav, PublicityBanner } from '../components';
+import {
+  HelmetIndexLayout,
+  Footer,
+  Loader,
+  Nav,
+  PublicityBanner,
+  CookieBanner,
+} from '../components';
 import { Title } from './utils';
 
 type AppProps = LayoutProps & {
   children: ReactElement;
-};
-
-const Initialize = ({ segmentDestinations }: { segmentDestinations: string[] }) => {
-  useEffect(() => {
-    setTimeout(() => {
-      loadSegment(segmentDestinations);
-    }, 1414);
-  }, []);
-  return null;
 };
 
 const metaDataQuery = graphql`
@@ -51,7 +49,6 @@ const App = ({ children, ...props }: AppProps) => {
   const { lang, location } = props;
   const { site, allContentfulSiteMetadata } = data;
   const { siteUrl, segmentDestinations } = site.siteMetadata;
-
   const thumbnailUrl = `${siteUrl}/thumbnail-874d5c.png`;
   const { node }: { node: SiteMetaProps } = allContentfulSiteMetadata.edges[0];
   const { title, description, keywords } = node;
@@ -68,14 +65,16 @@ const App = ({ children, ...props }: AppProps) => {
         description={dynamicI18n(description)}
         thumbnailUrl={thumbnailUrl}
       />
-      <Initialize segmentDestinations={segmentDestinations} />
       <HelmetIndexLayout lang={lang} siteUrl={siteUrl} pathname={pathname} keywords={keywords} />
       <Nav {...props} prefix={prefix} />
       {isAppShell ? (
         <Loader />
       ) : (
         <>
-          <PublicityBanner pathname={pathname} />
+          <div className="banner-container position-fixed d-flex flex-column">
+            <PublicityBanner pathname={pathname} />
+            <CookieBanner segmentDestinations={segmentDestinations} />
+          </div>
           {React.cloneElement(children, { prefix, lang })}
           {!isDemoPage && <Footer {...props} prefix={prefix} />}
         </>

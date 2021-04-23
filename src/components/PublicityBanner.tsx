@@ -2,17 +2,24 @@ import React, { useState, useEffect } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
+export const ClosingButton = ({ hide }: { hide: () => void }) => (
+  <button
+    className="bottom-banner--button position-absolute bg-transparent border-0"
+    onClick={hide}
+  >
+    ×
+  </button>
+);
+
+export const bannerClassName =
+  'bottom-banner position-relative my-1 bg-white rounded font-weight-light text-center';
+
 const Banner = ({ content, hide }: { content: Mdx; hide: () => void }) => (
-  <div className="publicity-banner position-fixed text-center bg-white rounded font-weight-light">
+  <div className={bannerClassName}>
     <div className="m-4">
       <MDXRenderer>{content.childMdx.body}</MDXRenderer>
     </div>
-    <button
-      className="publicity-banner--button position-absolute bg-transparent border-0"
-      onClick={hide}
-    >
-      ×
-    </button>
+    <ClosingButton hide={hide} />
   </div>
 );
 
