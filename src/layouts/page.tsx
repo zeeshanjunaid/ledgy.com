@@ -112,6 +112,7 @@ export const contentfulPageQuery = graphql`
         ...SelectableCardsWithScreenshotsFragment
         ...CallToAction2021Fragment
         ...ChecklistWithScreenshotFragment
+        ...LongTextBuildingBlockFragment
       }
     }
     site {
