@@ -193,7 +193,7 @@ export const LongTextFragment = graphql`
   fragment LongTextFragment on ContentfulLongText {
     id
     isWide
-    content {
+    longTextContent {
       childMdx {
         body
       }

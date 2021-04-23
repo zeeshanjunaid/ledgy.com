@@ -5,10 +5,10 @@ import { Section } from './utils';
 
 export const LongTextComponent = ({
   isWide,
-  content,
+  longTextContent,
   prefix,
 }: { prefix: string } & LongTextComponentProps) => (
   <Section>
-    <LongText content={content} prefix={prefix} isWide={isWide} />
+    <LongText content={longTextContent} prefix={prefix} isWide={isWide} />
   </Section>
 );

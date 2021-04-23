@@ -140,7 +140,7 @@ declare type ChecklistWithScreenshotProps = Id & {
 declare type LongTextComponentProps = Id & {
   __typename: 'ContentfulLongText';
   isWide: boolean;
-  content: Mdx;
+  longTextContent: Mdx;
 };
 
 declare type MainPageEntryProps = TopBannerProps | EntryProps;
