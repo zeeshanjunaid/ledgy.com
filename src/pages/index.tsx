@@ -189,11 +189,11 @@ export const ChecklistWithScreenshotFragment = graphql`
   }
 `;
 
-export const LongTextBuildingBlockFragment = graphql`
-  fragment LongTextBuildingBlockFragment on ContentfulLongTextBuildingBlock {
+export const LongTextFragment = graphql`
+  fragment LongTextFragment on ContentfulLongText {
     id
-    width
-    longTextContent {
+    isWide
+    content {
       childMdx {
         body
       }

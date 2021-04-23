@@ -9,7 +9,7 @@ declare type EntryProps =
   | ContentWithChecklistProps
   | CallToActionProps
   | ChecklistWithScreenshotProps
-  | LongTextBuildingBlockProps;
+  | LongTextComponentProps;
 
 declare type ContentfulPageProps = Id & {
   title: string;
@@ -137,10 +137,10 @@ declare type ChecklistWithScreenshotProps = Id & {
   inverted: boolean;
 };
 
-declare type LongTextBuildingBlockProps = Id & {
-  __typename: 'ContentfulLongTextBuildingBlock';
-  width: string;
-  longTextContent: Mdx;
+declare type LongTextComponentProps = Id & {
+  __typename: 'ContentfulLongText';
+  isWide: boolean;
+  content: Mdx;
 };
 
 declare type MainPageEntryProps = TopBannerProps | EntryProps;
