@@ -20,7 +20,7 @@ const ConfirmCookieButton = ({
       acceptCookies();
     }}
   >
-    Yes
+    Ok
   </Button>
 );
 
