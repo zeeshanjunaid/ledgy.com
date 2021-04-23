@@ -71,6 +71,10 @@ exports.createSchemaCustomization = ({ actions }) => {
   type ContentfulCustomerStory implements Node {
     title: String
   }
+  type ContentfulPage implements Node {
+    title: String
+    entries: [EntryProps] @link(by: "id", from: "entries___NODE")
+  }
 `;
   createTypes(typeDefinitions);
 };

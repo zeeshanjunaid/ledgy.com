@@ -3,7 +3,14 @@ import { graphql } from 'gatsby';
 import { GatsbyImageFluidProps } from 'gatsby-image';
 
 import { dynamicI18n } from '../helpers';
-import { PublishDate, Author, LongText, PageHeader, CalculatorHeader } from '../components';
+import {
+  PublishDate,
+  Author,
+  LongText,
+  PageHeader,
+  CalculatorHeader,
+  ComponentPicker,
+} from '../components';
 import { Title } from '../layouts/utils';
 
 const CALCULATOR_SLUG = 'calculator';
@@ -21,7 +28,17 @@ const ContentfulPage = ({
 }) => {
   if (!data) return null;
 
-  const { slug, title, description, language, content, author, date, cover } = data.contentfulPage;
+  const {
+    slug,
+    title,
+    description,
+    language,
+    content,
+    author,
+    date,
+    cover,
+    entries,
+  } = data.contentfulPage;
   const { siteUrl } = data.site.siteMetadata;
   const showCalculatorHeader = slug === CALCULATOR_SLUG;
   const { childImageSharp } = cover?.localFile || {};
@@ -53,6 +70,8 @@ const ContentfulPage = ({
         <LongText content={content} prefix={prefix} />
         <PublishDate date={date} />
         {author && <Author prefix={prefix} name={author} />}
+        {!!entries &&
+          entries.map((entry) => <ComponentPicker key={entry.id} entry={entry} prefix={prefix} />)}
       </div>
     </div>
   );
@@ -83,6 +102,17 @@ export const contentfulPageQuery = graphql`
             }
           }
         }
+      }
+      entries {
+        ...FeatureGridFramgent
+        ...TestimonialCardsFragment
+        ...ContentWithChecklistFragment
+        ...TitleWithGraphicFragment
+        ...LogoBannerFragment
+        ...SelectableCardsWithScreenshotsFragment
+        ...CallToAction2021Fragment
+        ...ChecklistWithScreenshotFragment
+        ...LongTextFragment
       }
     }
     site {
