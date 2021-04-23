@@ -70,6 +70,7 @@ export const featurePageQuery = graphql`
         ...SelectableCardsWithScreenshotsFragment
         ...CallToAction2021Fragment
         ...ChecklistWithScreenshotFragment
+        ...LongTextBuildingBlockFragment
       }
     }
   }

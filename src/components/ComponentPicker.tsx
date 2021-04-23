@@ -9,6 +9,7 @@ import { LogoBanner } from './LogoBanner';
 import { SelectableCardsWithScreenshots } from './cardsWithScreenshots';
 import { TopBanner } from './TopBanner';
 import { ChecklistWithScreenshot } from './ChecklistWithScreenshot';
+import { LongTextBuildingBlock } from './LongTextBuildingBlock';
 
 export const ComponentPicker = ({
   entry,
@@ -48,6 +49,9 @@ export const ComponentPicker = ({
 
     case 'ContentfulCallToAction2021':
       return <CallToAction {...entry} prefix={prefix} />;
+
+    case 'ContentfulLongTextBuildingBlock':
+      return <LongTextBuildingBlock {...entry} prefix={prefix} />;
 
     default:
       throw new Error('content __typename not recognized');

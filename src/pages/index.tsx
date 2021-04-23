@@ -189,6 +189,17 @@ export const ChecklistWithScreenshotFragment = graphql`
   }
 `;
 
+export const LongTextBuildingBlockFragment = graphql`
+  fragment LongTextBuildingBlockFragment on ContentfulLongTextBuildingBlock {
+    id
+    longTextContent {
+      childMdx {
+        body
+      }
+    }
+  }
+`;
+
 export const indexPageQuery = graphql`
   query {
     page: allContentfulFrontPage2021 {
