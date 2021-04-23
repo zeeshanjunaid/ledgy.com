@@ -1,16 +1,17 @@
 import React from 'react';
 
 import { Section } from './utils';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
+import { LongText } from './markdown';
 
 export const LongTextBuildingBlock = ({
+  width,
   longTextContent,
+  prefix,
 }: { prefix: string } & LongTextBuildingBlockProps) => {
-  console.log({ longTextContent });
+  const isWideMarkdown = width === 'wide';
   return (
     <Section>
-      <p>hi</p>
-      <MDXRenderer>{longTextContent.childMdx.body}</MDXRenderer>
+      <LongText content={longTextContent} prefix={prefix} isWideMarkdown={isWideMarkdown} />
     </Section>
   );
 };

@@ -192,6 +192,7 @@ export const ChecklistWithScreenshotFragment = graphql`
 export const LongTextBuildingBlockFragment = graphql`
   fragment LongTextBuildingBlockFragment on ContentfulLongTextBuildingBlock {
     id
+    width
     longTextContent {
       childMdx {
         body

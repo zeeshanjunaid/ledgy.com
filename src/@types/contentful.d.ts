@@ -139,6 +139,7 @@ declare type ChecklistWithScreenshotProps = Id & {
 
 declare type LongTextBuildingBlockProps = Id & {
   __typename: 'ContentfulLongTextBuildingBlock';
+  width: string;
   longTextContent: Mdx;
 };
 
