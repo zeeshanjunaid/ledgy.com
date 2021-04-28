@@ -52,10 +52,10 @@ const productLinks: FooterLink[] = [
 
 const resourceLinks: FooterLink[] = [
   ['Help', helpUrl],
-  ['Blog', 'blog'],
   ['Webinars', 'webinars'],
-  ['Updates', 'updates'],
+  ['Blog', 'blog'],
   ['Customer stories', 'customer-stories'],
+  ['Updates', 'updates'],
   ['Lawyer partners', 'partners'],
   ['Financing calculator', 'calculator'],
   ['ESOP templates', 'employee-participation-plan-templates'],
