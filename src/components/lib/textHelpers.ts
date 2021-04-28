@@ -53,6 +53,7 @@ const productLinks: FooterLink[] = [
 const resourceLinks: FooterLink[] = [
   ['Help', helpUrl],
   ['Blog', 'blog'],
+  ['Updates', 'updates'],
   ['Webinars', 'webinars'],
   ['Customer stories', 'customer-stories'],
   ['Lawyer partners', 'partners'],
@@ -134,6 +135,12 @@ const explore: NavbarMenuColumn = {
       description:
         'Background stories about equity topics, founder and investor interviews and more to explore',
       icon: 'blog',
+    },
+    {
+      link: 'updates',
+      title: 'Updates',
+      description: 'Feature releases, improvements and all things new at Ledgy',
+      icon: 'updates',
     },
     {
       link: 'customer-stories',
