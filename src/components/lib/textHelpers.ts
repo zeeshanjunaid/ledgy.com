@@ -20,6 +20,12 @@ import {
   FINANCE_LEGAL_ACCOUNTING_TITLE,
   VCS_BUSINESS_ANGELS_TITLE,
   DATA_PROTECTION,
+  CAP_TABLE,
+  EQUITY_PLAN_AUTOMATION,
+  SCENARIO_MODELING,
+  CAP_TABLE_MANAGEMENT_TITLE,
+  EQUITY_PLAN_AUTOMATION_TITLE,
+  SCENARIO_MODELING_TITLE,
 } from '../../helpers';
 
 export const getUnderlineHtml = (text: string): string =>
@@ -46,15 +52,19 @@ const productLinks: FooterLink[] = [
   ['For human resources', HR_AND_COMPENSATION],
   ['For finance', FINANCE_LEGAL_ACCOUNTING],
   ['For investors', VCS_BUSINESS_ANGELS],
+  [CAP_TABLE_MANAGEMENT_TITLE, CAP_TABLE],
+  [EQUITY_PLAN_AUTOMATION_TITLE, EQUITY_PLAN_AUTOMATION],
+  [SCENARIO_MODELING_TITLE, SCENARIO_MODELING],
   ['Pricing for companies', 'company-pricing'],
   ['Pricing for investors', 'investor-pricing'],
 ];
 
 const resourceLinks: FooterLink[] = [
   ['Help', helpUrl],
-  ['Blog', 'blog'],
   ['Webinars', 'webinars'],
+  ['Blog', 'blog'],
   ['Customer stories', 'customer-stories'],
+  ['Updates', 'updates'],
   ['Lawyer partners', 'partners'],
   ['Financing calculator', 'calculator'],
   ['ESOP templates', 'employee-participation-plan-templates'],
@@ -106,6 +116,30 @@ const teams: NavbarMenuColumn = {
   ],
 };
 
+const features: NavbarMenuColumn = {
+  header: 'Features',
+  items: [
+    {
+      link: CAP_TABLE,
+      title: CAP_TABLE_MANAGEMENT_TITLE,
+      description: 'Your cap table: accurate, visual, built to scale',
+      icon: 'documents',
+    },
+    {
+      link: EQUITY_PLAN_AUTOMATION,
+      title: EQUITY_PLAN_AUTOMATION_TITLE,
+      description: 'Your company’s equity on auto pilot',
+      icon: 'robot',
+    },
+    {
+      link: SCENARIO_MODELING,
+      title: SCENARIO_MODELING_TITLE,
+      description: 'Map out complex funding rounds, dilution, and exits',
+      icon: 'chart',
+    },
+  ],
+};
+
 const learn: NavbarMenuColumn = {
   header: 'Learn',
   items: [
@@ -121,6 +155,12 @@ const learn: NavbarMenuColumn = {
       description:
         'Regular short webinars give a quick introduction in many equity and Ledgy-related topics',
       icon: 'video',
+    },
+    {
+      link: 'data-protection',
+      title: 'Data Protection',
+      description: 'GDPR, security, privacy',
+      icon: 'lock',
     },
   ],
 };
@@ -140,6 +180,12 @@ const explore: NavbarMenuColumn = {
       title: 'Customer Stories',
       description: 'Learn what Ledgy’s customers have to say',
       icon: 'story',
+    },
+    {
+      link: 'updates',
+      title: 'Updates',
+      description: 'Feature releases, improvements and all things new at Ledgy',
+      icon: 'updates',
     },
   ],
 };
@@ -181,7 +227,7 @@ const pricingTypes: NavbarMenuColumn = {
   ],
 };
 
-const solutions: NavbarMenuColumn[] = [teams];
+const solutions: NavbarMenuColumn[] = [teams, features];
 const resources: NavbarMenuColumn[] = [learn, explore, tools];
 const pricing: NavbarMenuColumn[] = [pricingTypes];
 

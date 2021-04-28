@@ -184,7 +184,16 @@
 }
 
 .hover-list-child.solutions-dd {
-  width: 420px;
+  width: 500px;
+  & .list-item-hover {
+    height: 140px;
+  }
+  @include media-breakpoint-up(xl) {
+    width: 800px;
+    & .list-item-hover {
+      height: 120px;
+    }
+  }
 }
 
 .hover-list-child.resources-dd {

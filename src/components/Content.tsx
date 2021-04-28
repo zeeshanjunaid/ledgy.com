@@ -14,15 +14,18 @@ export const PostLink = ({
   description,
   prefix,
   isExternal = false,
+  showImage = true,
 }: {
   post: ContentfulPageProps;
   to: string;
   description: string | ReactNode;
   prefix: string;
   isExternal?: boolean;
+  showImage?: boolean;
 }) => {
   const { childImageSharp } = post.cover?.localFile || {};
   const image = childImageSharp ? <Img className="fit-cover" {...childImageSharp} /> : null;
+
   const title = <h5>{post.title}</h5>;
   const { date } = post;
   return (
@@ -35,6 +38,7 @@ export const PostLink = ({
       image={image}
       isExternal={isExternal}
       prefix={prefix}
+      showImage={showImage}
     />
   );
 };

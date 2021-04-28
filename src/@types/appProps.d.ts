@@ -48,4 +48,5 @@ declare type IconType =
   | 'story'
   | 'template'
   | 'uk'
-  | 'video';
+  | 'video'
+  | 'updates';
