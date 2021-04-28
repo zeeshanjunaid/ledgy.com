@@ -107,6 +107,30 @@ const teams: NavbarMenuColumn = {
   ],
 };
 
+const features: NavbarMenuColumn = {
+  header: 'Features',
+  items: [
+    {
+      link: 'cap-table',
+      title: 'Cap Table Management',
+      description: 'Your cap table: accurate, visual, built to scale',
+      icon: 'documents',
+    },
+    {
+      link: 'equity-plan-automation',
+      title: 'Equity Plan Automation',
+      description: 'Your company’s equity on auto pilot',
+      icon: 'robot',
+    },
+    {
+      link: 'scenario-modeling',
+      title: 'Scenario & Exit Modeling',
+      description: 'Map out complex funding rounds, dilution, and exits',
+      icon: 'chart',
+    },
+  ],
+};
+
 const learn: NavbarMenuColumn = {
   header: 'Learn',
   items: [
@@ -122,6 +146,12 @@ const learn: NavbarMenuColumn = {
       description:
         'Regular short webinars give a quick introduction in many equity and Ledgy-related topics',
       icon: 'video',
+    },
+    {
+      link: 'data-protection',
+      title: 'Data Protection',
+      description: 'GDPR, security, privacy',
+      icon: 'lock',
     },
   ],
 };
@@ -188,7 +218,7 @@ const pricingTypes: NavbarMenuColumn = {
   ],
 };
 
-const solutions: NavbarMenuColumn[] = [teams];
+const solutions: NavbarMenuColumn[] = [teams, features];
 const resources: NavbarMenuColumn[] = [learn, explore, tools];
 const pricing: NavbarMenuColumn[] = [pricingTypes];
 
