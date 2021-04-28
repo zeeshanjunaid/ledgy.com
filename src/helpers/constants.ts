@@ -79,8 +79,14 @@ export const HR_AND_COMPENSATION = 'hr-and-compensation';
 export const FINANCE_LEGAL_ACCOUNTING = 'finance-legal-accounting';
 export const VCS_BUSINESS_ANGELS = 'vcs-business-angels';
 export const DATA_PROTECTION = 'data-protection';
+export const CAP_TABLE = 'cap-table';
+export const EQUITY_PLAN_AUTOMATION = 'equity-plan-automation';
+export const SCENARIO_MODELING = 'scenario-modeling';
 
 //titles
 export const HR_AND_COMPENSATION_TITLE = 'HR & Compensation';
 export const FINANCE_LEGAL_ACCOUNTING_TITLE = 'Finance, Legal, & Accounting';
 export const VCS_BUSINESS_ANGELS_TITLE = 'VCs & Business Angels';
+export const CAP_TABLE_MANAGEMENT_TITLE = 'Cap Table Management';
+export const EQUITY_PLAN_AUTOMATION_TITLE = 'Equity Plan Automation';
+export const SCENARIO_MODELING_TITLE = 'Scenario & Exit Modeling';

@@ -20,6 +20,12 @@ import {
   FINANCE_LEGAL_ACCOUNTING_TITLE,
   VCS_BUSINESS_ANGELS_TITLE,
   DATA_PROTECTION,
+  CAP_TABLE,
+  EQUITY_PLAN_AUTOMATION,
+  SCENARIO_MODELING,
+  CAP_TABLE_MANAGEMENT_TITLE,
+  EQUITY_PLAN_AUTOMATION_TITLE,
+  SCENARIO_MODELING_TITLE,
 } from '../../helpers';
 
 export const getUnderlineHtml = (text: string): string =>
@@ -46,6 +52,9 @@ const productLinks: FooterLink[] = [
   ['For human resources', HR_AND_COMPENSATION],
   ['For finance', FINANCE_LEGAL_ACCOUNTING],
   ['For investors', VCS_BUSINESS_ANGELS],
+  [CAP_TABLE_MANAGEMENT_TITLE, CAP_TABLE],
+  [EQUITY_PLAN_AUTOMATION_TITLE, EQUITY_PLAN_AUTOMATION],
+  [SCENARIO_MODELING_TITLE, SCENARIO_MODELING],
   ['Pricing for companies', 'company-pricing'],
   ['Pricing for investors', 'investor-pricing'],
 ];
@@ -111,20 +120,20 @@ const features: NavbarMenuColumn = {
   header: 'Features',
   items: [
     {
-      link: 'cap-table',
-      title: 'Cap Table Management',
+      link: CAP_TABLE,
+      title: CAP_TABLE_MANAGEMENT_TITLE,
       description: 'Your cap table: accurate, visual, built to scale',
       icon: 'documents',
     },
     {
-      link: 'equity-plan-automation',
-      title: 'Equity Plan Automation',
+      link: EQUITY_PLAN_AUTOMATION,
+      title: EQUITY_PLAN_AUTOMATION_TITLE,
       description: 'Your company’s equity on auto pilot',
       icon: 'robot',
     },
     {
-      link: 'scenario-modeling',
-      title: 'Scenario & Exit Modeling',
+      link: SCENARIO_MODELING,
+      title: SCENARIO_MODELING_TITLE,
       description: 'Map out complex funding rounds, dilution, and exits',
       icon: 'chart',
     },
