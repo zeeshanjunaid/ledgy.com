@@ -53,8 +53,8 @@ const productLinks: FooterLink[] = [
 const resourceLinks: FooterLink[] = [
   ['Help', helpUrl],
   ['Blog', 'blog'],
-  ['Updates', 'updates'],
   ['Webinars', 'webinars'],
+  ['Updates', 'updates'],
   ['Customer stories', 'customer-stories'],
   ['Lawyer partners', 'partners'],
   ['Financing calculator', 'calculator'],
@@ -137,16 +137,16 @@ const explore: NavbarMenuColumn = {
       icon: 'blog',
     },
     {
-      link: 'updates',
-      title: 'Updates',
-      description: 'Feature releases, improvements and all things new at Ledgy',
-      icon: 'updates',
-    },
-    {
       link: 'customer-stories',
       title: 'Customer Stories',
       description: 'Learn what Ledgy’s customers have to say',
       icon: 'story',
+    },
+    {
+      link: 'updates',
+      title: 'Updates',
+      description: 'Feature releases, improvements and all things new at Ledgy',
+      icon: 'updates',
     },
   ],
 };
