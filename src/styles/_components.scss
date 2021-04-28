@@ -291,6 +291,14 @@ input[type=number]::-webkit-outer-spin-button {
 
 // Card
 .card {
+  will-change: transform;
+  transition: all 0.3s;
+  padding: 7px 21px;
+  &:hover {
+    box-shadow: $box-shadow-light;
+    transition: all 0.3s;
+    transform: translateZ(10px) !important;
+  }
   &-blog, &-customer-story {
     min-height: 250px;
   }
