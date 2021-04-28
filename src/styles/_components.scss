@@ -293,7 +293,6 @@ input[type=number]::-webkit-outer-spin-button {
 .card {
   will-change: transform;
   transition: all 0.3s;
-  padding: 7px 21px;
   &:hover {
     box-shadow: $box-shadow-light;
     transition: all 0.3s;
