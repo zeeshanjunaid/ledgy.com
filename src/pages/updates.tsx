@@ -24,6 +24,7 @@ const Updates = ({ data, prefix }: Props) => {
               post={node}
               description={postDescription}
               prefix={prefix}
+              showImage={false}
             />
           );
         })}
