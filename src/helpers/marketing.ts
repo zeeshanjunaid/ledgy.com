@@ -102,7 +102,7 @@ const loadCapterra = () => {
   })();
 };
 
-export const hasAcceptedCookies = () => !!localStorage.getItem(SEGMENT_COOKIE_ID);
+export const hasAcceptedCookies = () => !!document.cookie.includes(SEGMENT_COOKIE_ID);
 
 export const loadMarketingTools = (segmentDestinations: string[]) => {
   loadSegment(segmentDestinations);
