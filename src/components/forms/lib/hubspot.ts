@@ -10,6 +10,8 @@ const getCookieValue = (name: string) =>
 const getHubspotUserToken = () => getCookieValue(HUBSPOT_UTK);
 const getGoogleAnalyticsClientId = () => getCookieValue(GOOGLE_CID).slice(6);
 
+const DEMO_REQUEST = 'demoRequest';
+
 declare type EncodeBodyData = {
   demorequestdate: string;
   pipelinevalue: number;
@@ -17,6 +19,7 @@ declare type EncodeBodyData = {
   google_analytics_client_id: string;
   numberofemployees?: number;
   numberofinvestments?: number;
+  lead_form_source: typeof DEMO_REQUEST;
 };
 
 const encodeBody = (data: EncodeBodyData) =>
@@ -34,6 +37,7 @@ export const submitToHubspot = ({ isCompany, email, size, value }: ParsedFormVal
     pipelinevalue: value,
     email,
     google_analytics_client_id: getGoogleAnalyticsClientId(),
+    lead_form_source: DEMO_REQUEST,
   });
   return fetch(`/submit/6881367/${DEMO_FORM_ID}`, {
     method: 'POST',
