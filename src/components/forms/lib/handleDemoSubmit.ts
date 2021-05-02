@@ -25,6 +25,14 @@ type JsonResponse = {
 
 const { INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED, FETCH_ERROR } = FORM_STATUSES;
 
+export const LEDGY_DOMAIN = 'ledgy.com';
+export const LEAD_FORM = 'leadForm';
+export const IDENTIFIED = 'identified';
+
+const setDomainCookie = (name: string, value: string) => {
+  document.cookie = `${name}=${value}; domain=${LEDGY_DOMAIN}`;
+};
+
 const isInvalidEmailError = (errors: ErrorResponse[]): boolean =>
   errors.some((error) => ['INVALID_EMAIL', 'BLOCKED_EMAIL'].includes(error.errorType));
 
@@ -105,6 +113,7 @@ export const handleDemoSubmit = async ({
 
     redirect(parsedFormValues);
     setFormStatus(SUBMITTED);
+    setDomainCookie(LEAD_FORM, IDENTIFIED);
   };
 
   if (hubspotResponse.status !== 200) {
