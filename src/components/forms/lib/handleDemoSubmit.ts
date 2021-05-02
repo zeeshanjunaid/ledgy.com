@@ -26,7 +26,7 @@ type JsonResponse = {
 const { INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED, FETCH_ERROR } = FORM_STATUSES;
 
 export const LEDGY_DOMAIN = 'ledgy.com';
-export const LEAD_FORM = 'leadForm';
+export const LEAD_STATUS = 'leadStatus';
 export const IDENTIFIED = 'identified';
 
 const setDomainCookie = (name: string, value: string) => {
@@ -113,7 +113,7 @@ export const handleDemoSubmit = async ({
 
     redirect(parsedFormValues);
     setFormStatus(SUBMITTED);
-    setDomainCookie(LEAD_FORM, IDENTIFIED);
+    setDomainCookie(LEAD_STATUS, IDENTIFIED);
   };
 
   if (hubspotResponse.status !== 200) {
