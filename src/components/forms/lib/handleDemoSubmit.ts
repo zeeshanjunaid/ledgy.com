@@ -110,6 +110,7 @@ export const handleDemoSubmit = async ({
   const onSuccess = () => {
     const eventName = `getDemo.submit.${requesterType}`;
     track(eventName, { value });
+    track('captureLead');
 
     redirect(parsedFormValues);
     setFormStatus(SUBMITTED);
