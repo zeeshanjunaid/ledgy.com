@@ -13,7 +13,6 @@ const getGoogleAnalyticsClientId = () => getCookieValue(GOOGLE_CID).slice(6);
 const DEMO_REQUEST = 'demoRequest';
 
 declare type EncodeBodyData = {
-  demorequestdate: string;
   pipelinevalue: number;
   email: string;
   google_analytics_client_id: string;
@@ -28,12 +27,9 @@ const encodeBody = (data: EncodeBodyData) =>
     context: { hutk: getHubspotUserToken() },
   });
 
-const getHubSpotDate = (date: Date): string => date.toISOString().slice(0, 10);
-
 export const submitToHubspot = ({ isCompany, email, size, value }: ParsedFormValues) => {
   const body = encodeBody({
     ...(isCompany ? { numberofemployees: size } : { numberofinvestments: size }),
-    demorequestdate: getHubSpotDate(new Date()),
     pipelinevalue: value,
     email,
     google_analytics_client_id: getGoogleAnalyticsClientId(),
