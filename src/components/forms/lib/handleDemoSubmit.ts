@@ -1,4 +1,4 @@
-import { isFieldMissing, isValidEmail, track } from '../../../helpers';
+import { isFieldMissing, isValidEmail, track, setDomainCookie } from '../../../helpers';
 
 import { FormValues, ParsedFormValues } from './formTypes';
 import { submitToHubspot } from './hubspot';
@@ -25,13 +25,8 @@ type JsonResponse = {
 
 const { INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED, FETCH_ERROR } = FORM_STATUSES;
 
-const LEDGY_DOMAIN = 'ledgy.com';
-const LEAD_STATUS = 'leadStatus';
-const IDENTIFIED = 'identified';
-
-const setDomainCookie = (name: string, value: string) => {
-  document.cookie = `${name}=${value}; domain=${LEDGY_DOMAIN}`;
-};
+export const LEAD_STATUS = 'leadStatus';
+export const IDENTIFIED = 'identified';
 
 const isInvalidEmailError = (errors: ErrorResponse[]): boolean =>
   errors.some((error) => ['INVALID_EMAIL', 'BLOCKED_EMAIL'].includes(error.errorType));
