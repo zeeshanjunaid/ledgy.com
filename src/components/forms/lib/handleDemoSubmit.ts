@@ -25,9 +25,9 @@ type JsonResponse = {
 
 const { INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED, FETCH_ERROR } = FORM_STATUSES;
 
-export const LEDGY_DOMAIN = 'ledgy.com';
-export const LEAD_STATUS = 'leadStatus';
-export const IDENTIFIED = 'identified';
+const LEDGY_DOMAIN = 'ledgy.com';
+const LEAD_STATUS = 'leadStatus';
+const IDENTIFIED = 'identified';
 
 const setDomainCookie = (name: string, value: string) => {
   document.cookie = `${name}=${value}; domain=${LEDGY_DOMAIN}`;
