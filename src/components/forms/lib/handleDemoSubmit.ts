@@ -25,8 +25,8 @@ type JsonResponse = {
 
 const { INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED, FETCH_ERROR } = FORM_STATUSES;
 
-export const LEAD_STATUS = 'leadStatus';
-export const IDENTIFIED = 'identified';
+const LEAD_STATUS = 'leadStatus';
+const IDENTIFIED = 'identified';
 
 const isInvalidEmailError = (errors: ErrorResponse[]): boolean =>
   errors.some((error) => ['INVALID_EMAIL', 'BLOCKED_EMAIL'].includes(error.errorType));
