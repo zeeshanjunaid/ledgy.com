@@ -87,7 +87,7 @@ export const getWholeTeam = (
   },
   marius: {
     name: 'Marius Colacioiu',
-    role: 'Software Engineer & Trail Runner',
+    role: 'Head of Engineering & Trail Runner',
     description: (
       <Trans>
         Marius has a background in computer science, graduated from Milan University and worked as a
@@ -179,7 +179,7 @@ export const getWholeTeam = (
   },
   mariana: {
     name: 'Mariana Cely',
-    role: 'Engineering Trainee & Future Hacker',
+    role: 'Junior Software Engineer & Future Hacker',
     description: (
       <Trans>
         Mariana graduated from ETH Zurich and EPFL in Mathematics. She has started a traineeship in
@@ -192,7 +192,7 @@ export const getWholeTeam = (
   },
   xiao: {
     name: 'Xiao Sun',
-    role: 'Engineering Trainee & Lifelong Learner',
+    role: 'Junior Software Engineer & Lifelong Learner',
     description: (
       <Trans>
         Xiao just graduated from ETH Zurich in transport engineering. She has years of coding
@@ -205,7 +205,7 @@ export const getWholeTeam = (
   },
   marina: {
     name: 'Marina Moric',
-    role: 'Product Manager Trainee & Yoga Teacher',
+    role: 'Junior Product Manager & Yoga Teacher',
     description: (
       <Trans>
         After finishing her PhD in neuroscience, Marina decided to focus on her passion for
