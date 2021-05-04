@@ -4,7 +4,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Button } from './utils';
 import { ClosingButton, bannerClassName } from './PublicityBanner';
 
-import { hasAcceptedCookies, loadMarketingTools } from '../helpers/marketing';
+import { hasAcceptedCookies, loadMarketingTools } from '../helpers';
 
 const ConfirmCookieButton = ({
   hide,

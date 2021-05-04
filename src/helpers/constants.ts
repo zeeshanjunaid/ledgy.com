@@ -1,4 +1,5 @@
 export const name = 'Ledgy';
+export const ledgyDomain = 'ledgy.com';
 
 export const youtubeUrl = 'https://www.youtube.com/channel/UCRkvNQptxoE-ckmTsrme1_w';
 export const twitterUrl = 'https://twitter.com/Ledgy';

@@ -1,4 +1,4 @@
-import { isFieldMissing, isValidEmail, track } from '../../../helpers';
+import { isFieldMissing, isValidEmail, track, setDomainCookie } from '../../../helpers';
 
 import { FormValues, ParsedFormValues } from './formTypes';
 import { submitToHubspot } from './hubspot';
@@ -24,6 +24,9 @@ type JsonResponse = {
 };
 
 const { INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED, FETCH_ERROR } = FORM_STATUSES;
+
+const LEAD_STATUS = 'leadStatus';
+const IDENTIFIED = 'identified';
 
 const isInvalidEmailError = (errors: ErrorResponse[]): boolean =>
   errors.some((error) => ['INVALID_EMAIL', 'BLOCKED_EMAIL'].includes(error.errorType));
@@ -102,9 +105,11 @@ export const handleDemoSubmit = async ({
   const onSuccess = () => {
     const eventName = `getDemo.submit.${requesterType}`;
     track(eventName, { value });
+    track('captureLead');
 
     redirect(parsedFormValues);
     setFormStatus(SUBMITTED);
+    setDomainCookie(LEAD_STATUS, IDENTIFIED);
   };
 
   if (hubspotResponse.status !== 200) {

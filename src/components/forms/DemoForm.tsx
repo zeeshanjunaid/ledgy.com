@@ -66,7 +66,7 @@ export const DemoForm = ({
           setState={setSize}
           placeholder={
             requesterType === COMPANY
-              ? t`Number of company employees`
+              ? t`Number of stakeholders / security holders`
               : t`Number of portfolio companies`
           }
           setFormStatus={setFormStatus}
