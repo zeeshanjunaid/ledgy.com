@@ -10,7 +10,7 @@ export const getCookie = (name: string) =>
   (document.cookie.split('; ').find((v) => v.startsWith(name)) || '').slice(name.length + 1);
 
 export const setDomainCookie = (name: string, value: string) => {
-  document.cookie = `${name}=${value}; domain=${ledgyDomain}`;
+  document.cookie = `${name}=${value}; domain=${ledgyDomain}; path=/`;
 };
 
 export const hasAcceptedCookies = () => !!getCookie(SEGMENT_COOKIE_ID);
