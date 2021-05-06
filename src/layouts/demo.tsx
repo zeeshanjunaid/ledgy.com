@@ -23,31 +23,26 @@ type DemoPageProps = {
 };
 
 const CapterraBadge = () => (
-  <a
-    href="https://www.capterra.com/reviews/173939/Ledgy?utm_source=vendor&utm_medium=badge&utm_campaign=capterra_reviews_badge"
-    className="mr-4"
-    {...targetBlank}
-  >
-    <img
-      className="capterra-badge d-none d-md-block"
-      src="https://assets.capterra.com/badge/4700aedd505fa5881254166d19949239.png?v=2120646&p=173939"
-      alt="Ledgy high Capterra rating"
-    />
-  </a>
+  <img
+    className="capterra-badge d-none d-md-block mr-4"
+    src="https://assets.capterra.com/badge/4700aedd505fa5881254166d19949239.png?v=2120646&p=173939"
+    alt="Ledgy high Capterra rating"
+  />
 );
 
 const G2Badge = () => (
-  <a
-    title="Ledgy is a leader in Equity Management on G2"
-    href="https://www.g2.com/products/ledgy/reviews?utm_source=rewards-badge"
-    {...targetBlank}
-  >
-    <img
-      className="g2-badge d-none d-md-block"
-      alt="Ledgy is a leader in Equity Management on G2"
-      src="https://images.g2crowd.com/uploads/report_medal/image/1335/medal.svg"
-    />
-  </a>
+  <img
+    className="g2-badge d-none d-md-block mr-4"
+    alt="Ledgy is a leader in Equity Management on G2"
+    src="https://images.g2crowd.com/uploads/report_medal/image/1335/medal.svg"
+  />
+);
+
+const SourceforgeBadge = () => (
+  <img
+    className="g2-badge d-none d-md-block"
+    src="https://sourceforge.net/cdn/syndication/badge_img/3084019/customers-love-us-white"
+  />
 );
 
 const DemoPage = (props: Props) => {
@@ -63,6 +58,7 @@ const DemoPage = (props: Props) => {
 
   const buttonOne = <CapterraBadge />;
   const buttonTwo = <G2Badge />;
+  const buttonThree = <SourceforgeBadge />;
 
   const form = (
     <DemoForm buttonText={dynamicI18n(formButtonText)} contentfulRequesterType={requesterType} />
@@ -74,6 +70,7 @@ const DemoPage = (props: Props) => {
       <TopBannerLayout
         buttonOne={buttonOne}
         buttonTwo={buttonTwo}
+        buttonThree={buttonThree}
         title={<DynamicTrans>{header}</DynamicTrans>}
         subtitle={<DynamicTrans>{description}</DynamicTrans>}
         componentRight={form}
