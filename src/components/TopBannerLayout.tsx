@@ -7,6 +7,7 @@ type TopBannerLayoutProps = {
   subtitle: ReactNode | string;
   buttonOne: ReactNode;
   buttonTwo?: ReactNode;
+  buttonThree?: ReactNode;
   deco?: ReactNode;
   componentRight: ReactNode;
 };
@@ -23,6 +24,7 @@ export const TopBannerLayout = ({
   subtitle,
   buttonOne,
   buttonTwo,
+  buttonThree,
   componentRight,
 }: TopBannerLayoutProps) => (
   <header className="top-banner d-flex bg-lightest overflow-hidden">
@@ -37,6 +39,7 @@ export const TopBannerLayout = ({
             <div className="d-flex align-items-center flex-wrap">
               {buttonOne}
               {buttonTwo}
+              {buttonThree}
             </div>
           </CustomFade>
         </div>

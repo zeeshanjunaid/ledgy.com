@@ -38,6 +38,13 @@ const G2Badge = () => (
   />
 );
 
+const SourceforgeBadge = () => (
+  <img
+    className="g2-badge d-none d-md-block"
+    src="https://sourceforge.net/cdn/syndication/badge_img/3084019/customers-love-us-white"
+  />
+);
+
 const DemoPage = (props: Props) => {
   const { data, prefix } = props;
   const {
@@ -51,6 +58,7 @@ const DemoPage = (props: Props) => {
 
   const buttonOne = <CapterraBadge />;
   const buttonTwo = <G2Badge />;
+  const buttonThree = <SourceforgeBadge />;
 
   const form = (
     <DemoForm buttonText={dynamicI18n(formButtonText)} contentfulRequesterType={requesterType} />
@@ -62,6 +70,7 @@ const DemoPage = (props: Props) => {
       <TopBannerLayout
         buttonOne={buttonOne}
         buttonTwo={buttonTwo}
+        buttonThree={buttonThree}
         title={<DynamicTrans>{header}</DynamicTrans>}
         subtitle={<DynamicTrans>{description}</DynamicTrans>}
         componentRight={form}
