@@ -101,9 +101,9 @@ module.exports = {
         workboxConfig: {
           runtimeCaching: [
             { urlPattern: /(\.js$|\.css$|static\/)/, handler: `CacheFirst` },
-            { urlPattern: /^https?:.*\/page-data\/.*\.json/, handler: `NetworkFirst` },
+            { urlPattern: /^\/.*\/page-data\/.*\.json/, handler: `NetworkFirst` },
             {
-              urlPattern: /^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/,
+              urlPattern: /^\/.*\.(png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/,
               handler: `StaleWhileRevalidate`,
             },
             {
