@@ -5,7 +5,7 @@ const DEMO_FORM_ID = 'b360c926-ed24-473a-8418-ee1050ddbd06';
 const HUBSPOT_UTK = 'hubspotutk';
 const GOOGLE_CID = '_ga';
 
-const getHubspotUserToken = () => getCookie(HUBSPOT_UTK);
+const getHubspotUserToken = () => getCookie(HUBSPOT_UTK) || undefined;
 const getGoogleAnalyticsClientId = () => getCookie(GOOGLE_CID).slice(6);
 
 const DEMO_REQUEST = 'demoRequest';
