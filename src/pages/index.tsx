@@ -113,9 +113,9 @@ export const TitleWithGraphicFragment = graphql`
 export const LogoBannerFragment = graphql`
   fragment LogoBannerFragment on ContentfulLogoBanner {
     id
+    description
     logos {
       title
-      description
       localFile {
         childImageSharp {
           fixed(width: 130) {

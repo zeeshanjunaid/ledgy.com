@@ -12,9 +12,11 @@ const Logo = ({ logo, index }: { logo: ImageProps; index: number }) => (
 
 export const LogoBanner = ({
   logos,
+  description,
   smallPadding = false,
 }: LogoBannerProps & { smallPadding?: boolean }) => (
   <Section className="bg-lightest" smallPadding={smallPadding}>
+    <div className="text-xl font-weight-light mb-2 text-gray-dark text-center">{description}</div>
     <div className="row align-items-center justify-content-around">
       {logos.map((logo, index) => (
         <Logo logo={logo} key={`logo-banner-${logo.title}`} index={index} />

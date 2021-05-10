@@ -46,6 +46,9 @@ exports.createSchemaCustomization = ({ actions }) => {
     linkText: String
     linkUrl: String
   }
+  type ContentfulLogoBanner implements Node {
+    description: String
+  }
   type ContentfulTestimonialCardBuildingBlock implements Node {
     linkText: String
     linkUrl: String
