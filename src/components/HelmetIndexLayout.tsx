@@ -29,6 +29,8 @@ export const HelmetIndexLayout = ({
     <meta name="twitter:site" content="@Ledgy" />
     <meta name="twitter:card" content="summary_large_image" />
 
+    <meta name="facebook-domain-verification" content="taat2n50g23sb14q9tq4dycvqkvqms" />
+
     <link rel="alternate" href={`${siteUrl}${pathname}`} hrefLang="x-default" />
     <link rel="alternate" href={`${siteUrl}${pathname}`} hrefLang="en" />
     <link rel="alternate" href={`${siteUrl}/de${pathname}`} hrefLang="de" />
