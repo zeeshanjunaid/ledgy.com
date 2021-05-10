@@ -102,6 +102,7 @@ declare type CallToActionProps = Id & {
 declare type LogoBannerProps = Id & {
   __typename: 'ContentfulLogoBanner';
   logos: ImageProps[];
+  description?: string;
 };
 
 type SelectableCardWithScreenshotProps = {
