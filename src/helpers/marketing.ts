@@ -5,8 +5,10 @@ const getDestinations = (destinations: string[]): Record<string, boolean> =>
   destinations.reduce((res, v) => ({ ...res, [v]: true }), { All: false });
 
 const SEGMENT_COOKIE_ID = 'ajs_anonymous_id';
+const HAS_ACCOUNT_COOKIE_ID = 'hasAccount';
 
 export const getCookie = (name: string) =>
+  typeof document === 'object' &&
   (document.cookie.split('; ').find((v) => v.startsWith(name)) || '').slice(name.length + 1);
 
 export const setDomainCookie = (name: string, value: string) => {
@@ -14,6 +16,7 @@ export const setDomainCookie = (name: string, value: string) => {
 };
 
 export const hasAcceptedCookies = () => !!getCookie(SEGMENT_COOKIE_ID);
+export const hasLedgyAccount = () => !!getCookie(HAS_ACCOUNT_COOKIE_ID);
 
 export const loadMarketingTools = (segmentDestinations: string[]) => {
   loadSegment(getDestinations(segmentDestinations));
