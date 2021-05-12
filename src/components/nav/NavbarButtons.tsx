@@ -10,7 +10,7 @@ import { removeOverlay } from '../lib';
 const LOGIN = 'login';
 const SIGNUP = 'signup';
 
-const SignupLoginButton = ({ isMobile }: { isMobile: boolean }) => {
+const SignupLoginButton = () => {
   const [buttonType, setButtonType] = useState(null as string | null);
   useEffect(() => {
     const hasAccount = hasLedgyAccount();
@@ -20,7 +20,7 @@ const SignupLoginButton = ({ isMobile }: { isMobile: boolean }) => {
   return (
     <Button
       inverted
-      outline={!isMobile}
+      outline
       href={appUrl}
       className={`px-3 py-1 ${buttonType ? 'visible' : 'invisible'}`}
     >
@@ -31,17 +31,15 @@ const SignupLoginButton = ({ isMobile }: { isMobile: boolean }) => {
 
 export const NavbarButtons = ({
   className = '',
-  isMobile = false,
   prefix,
 }: {
   prefix: string;
   className?: string;
-  isMobile?: boolean;
 }) => (
   <div className={`d-flex align-items-center ${className}`}>
-    <SignupLoginButton isMobile={isMobile} />
+    <SignupLoginButton />
     <Link to={`${prefix}${demoPage}`} onClick={removeOverlay}>
-      <Button outline={isMobile} className="ml-2 px-3 py-1">
+      <Button className="ml-2 px-3 py-1">
         <Trans>Book a Demo</Trans>
       </Button>
     </Link>
