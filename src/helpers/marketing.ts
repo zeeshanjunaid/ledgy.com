@@ -8,8 +8,9 @@ const SEGMENT_COOKIE_ID = 'ajs_anonymous_id';
 const HAS_ACCOUNT_COOKIE_ID = 'hasAccount';
 
 export const getCookie = (name: string) =>
-  typeof document === 'object' &&
-  (document.cookie.split('; ').find((v) => v.startsWith(name)) || '').slice(name.length + 1);
+  typeof document === 'object'
+    ? (document.cookie.split('; ').find((v) => v.startsWith(name)) || '').slice(name.length + 1)
+    : '';
 
 export const setDomainCookie = (name: string, value: string) => {
   document.cookie = `${name}=${value}; domain=${ledgyDomain}; path=/`;
