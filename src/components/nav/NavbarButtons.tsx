@@ -37,15 +37,13 @@ export const NavbarButtons = ({
   prefix: string;
   className?: string;
   isMobile?: boolean;
-}) => {
-  return (
-    <div className={`d-flex align-items-center ${className}`}>
-      <SignupLoginButton isMobile={isMobile} />
-      <Link to={`${prefix}${demoPage}`} onClick={removeOverlay}>
-        <Button outline={isMobile} className="ml-2 px-3 py-1">
-          <Trans>Book a Demo</Trans>
-        </Button>
-      </Link>
-    </div>
-  );
-};
+}) => (
+  <div className={`d-flex align-items-center ${className}`}>
+    <SignupLoginButton isMobile={isMobile} />
+    <Link to={`${prefix}${demoPage}`} onClick={removeOverlay}>
+      <Button outline={isMobile} className="ml-2 px-3 py-1">
+        <Trans>Book a Demo</Trans>
+      </Button>
+    </Link>
+  </div>
+);
