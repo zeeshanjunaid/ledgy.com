@@ -12,8 +12,10 @@ export const getCookie = (name: string) =>
     ? (document.cookie.split('; ').find((v) => v.startsWith(name)) || '').slice(name.length + 1)
     : '';
 
+const cookieLifetime = 60 * 60 * 24 * 365;
 export const setDomainCookie = (name: string, value: string) => {
-  document.cookie = `${name}=${value}; domain=${ledgyDomain}; path=/`;
+  const cookie = `${name}=${value}; domain=${ledgyDomain}; path=/; max-age=${cookieLifetime}`;
+  document.cookie = cookie;
 };
 
 export const hasAcceptedCookies = () => !!getCookie(SEGMENT_COOKIE_ID);
