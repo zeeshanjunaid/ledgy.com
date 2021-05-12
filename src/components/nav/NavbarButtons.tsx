@@ -1,33 +1,45 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'gatsby';
 import { Trans } from '@lingui/macro';
 
-import { appUrl, track, demoPage } from '../../helpers';
+import { appUrl, demoPage, hasLedgyAccount } from '../../helpers';
 
 import { Button } from '../utils';
 import { removeOverlay } from '../lib';
 
+const LOGIN = 'login';
+const SIGNUP = 'signup';
+
+const SignupLoginButton = () => {
+  const [buttonType, setButtonType] = useState(null as string | null);
+  useEffect(() => {
+    const hasAccount = hasLedgyAccount();
+    setButtonType(hasAccount ? LOGIN : SIGNUP);
+  });
+
+  return (
+    <Button
+      inverted
+      outline
+      href={appUrl}
+      className={`px-3 py-1 ${buttonType ? 'visible' : 'invisible'}`}
+    >
+      {buttonType === LOGIN ? <Trans>Log In</Trans> : <Trans>Sign Up</Trans>}
+    </Button>
+  );
+};
+
 export const NavbarButtons = ({
   className = '',
-  isMobile = false,
   prefix,
 }: {
   prefix: string;
   className?: string;
-  isMobile?: boolean;
 }) => (
   <div className={`d-flex align-items-center ${className}`}>
-    <Button
-      inverted
-      outline={!isMobile}
-      href={`${appUrl}/login`}
-      className="px-3 py-1"
-      onClick={() => track('click.login')}
-    >
-      <Trans>Log In</Trans>
-    </Button>
+    <SignupLoginButton />
     <Link to={`${prefix}${demoPage}`} onClick={removeOverlay}>
-      <Button outline={isMobile} className="ml-2 px-3 py-1">
+      <Button className="ml-2 px-3 py-1">
         <Trans>Book a Demo</Trans>
       </Button>
     </Link>
