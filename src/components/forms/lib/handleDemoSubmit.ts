@@ -47,12 +47,15 @@ const getPipelineValue = (size: number, isCompany: boolean) =>
   isCompany ? getEmployeeValue(size) : getInvestmentValue(size);
 
 const getUrl = ({ isCompany, size, email }: ParsedFormValues) => {
-  const alwaysBook = window.location.hash.includes('#book');
   const meetingRequestUrlWithEmail = `${meetingRequestUrl}?email=${email}`;
+
+  const alwaysBook = window.location.hash.includes('#book');
+  if (alwaysBook) return meetingRequestUrlWithEmail;
+
   if (!isCompany) {
-    return isFund(size) || alwaysBook ? meetingRequestUrlWithEmail : investorUrl;
+    return isFund(size) ? meetingRequestUrlWithEmail : investorUrl;
   }
-  return isDeerCompany(size) || alwaysBook ? meetingRequestUrlWithEmail : smallCompanyUrl;
+  return isDeerCompany(size) ? meetingRequestUrlWithEmail : smallCompanyUrl;
 };
 
 const redirect = (values: ParsedFormValues) => {
