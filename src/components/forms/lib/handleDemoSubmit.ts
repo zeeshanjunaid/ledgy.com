@@ -48,6 +48,10 @@ const getPipelineValue = (size: number, isCompany: boolean) =>
 
 const getUrl = ({ isCompany, size, email }: ParsedFormValues) => {
   const meetingRequestUrlWithEmail = `${meetingRequestUrl}?email=${email}`;
+
+  const alwaysBook = window.location.hash.includes('#book');
+  if (alwaysBook) return meetingRequestUrlWithEmail;
+
   if (!isCompany) {
     return isFund(size) ? meetingRequestUrlWithEmail : investorUrl;
   }
