@@ -47,14 +47,8 @@ const SourceforgeBadge = () => (
 
 const DemoPage = (props: Props) => {
   const { data, prefix } = props;
-  const {
-    content,
-    title,
-    header,
-    description,
-    formButtonText,
-    requesterType,
-  }: DemoPageProps = data.contentfulDemoPage2021;
+  const { content, title, header, description, formButtonText, requesterType }: DemoPageProps =
+    data.contentfulDemoPage2021;
 
   const buttonOne = <CapterraBadge />;
   const buttonTwo = <G2Badge />;
@@ -103,7 +97,7 @@ const DemoPage = (props: Props) => {
 export default DemoPage;
 
 export const demoQuery = graphql`
-  query($id: String!) {
+  query ($id: String!) {
     contentfulDemoPage2021(id: { eq: $id }) {
       id
       slug

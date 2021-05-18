@@ -6,18 +6,15 @@ const STEPS = [
   { key: 1, text: 'Sign up for a free account' },
   {
     key: 2,
-    text:
-      'Our interactive guide will help you understand and select terms for your employee participation plan',
+    text: 'Our interactive guide will help you understand and select terms for your employee participation plan',
   },
   {
     key: 3,
-    text:
-      'Send your customized template and term sheet to your lawyer – or to one of our trusted partners',
+    text: 'Send your customized template and term sheet to your lawyer – or to one of our trusted partners',
   },
   {
     key: 4,
-    text:
-      'As a bonus, you can keep track of your new employee participation plan and grants in Ledgy',
+    text: 'As a bonus, you can keep track of your new employee participation plan and grants in Ledgy',
   },
 ];
 

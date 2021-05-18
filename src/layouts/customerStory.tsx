@@ -56,7 +56,7 @@ const CustomerStory = ({
 export default CustomerStory;
 
 export const customerStoryQuery = graphql`
-  query($id: String!) {
+  query ($id: String!) {
     contentfulCustomerStory(id: { eq: $id }) {
       id
       slug
