@@ -17,7 +17,7 @@
 }
 
 .navbar-scroll {
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  box-shadow: $box-shadow-lighter;
 }
 
 @media screen and ( max-height: 699px ) {
