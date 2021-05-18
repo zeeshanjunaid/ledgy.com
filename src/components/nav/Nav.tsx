@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, MutableRefObject } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import { CSSTransition } from 'react-transition-group';
 
@@ -20,32 +20,12 @@ const Logo = (props: LayoutProps) => {
   );
 };
 
-const toggleNav = (navRef: MutableRefObject<HTMLElement | null>) => {
-  let initialOffset = window.pageYOffset;
-  window.addEventListener('scroll', () => {
-    const currentOffset = window.pageYOffset;
-    const { current } = navRef || {};
-    if (current) {
-      if (initialOffset > currentOffset) {
-        current.style.top = '0px';
-      } else {
-        current.style.top = '-70px';
-      }
-      initialOffset = currentOffset;
-    }
-  });
-};
-
 export const Nav = (props: LayoutProps) => {
   const [isOpen, setOpen] = useState(false);
-  const navRef = useRef(null);
-  useEffect(() => {
-    toggleNav(navRef);
-  }, []);
 
   return (
     <>
-      <nav ref={navRef} className="navbar bg-lightest text-dark-gray sticky-top p-0">
+      <nav className="navbar bg-lightest text-dark-gray sticky-top p-0">
         <div className="container flex-nowrap">
           <Logo {...props} />
 
