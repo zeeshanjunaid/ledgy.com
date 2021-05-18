@@ -52,9 +52,9 @@ const productLinks: FooterLink[] = [
   ['For human resources', HR_AND_COMPENSATION],
   ['For finance', FINANCE_LEGAL_ACCOUNTING],
   ['For investors', VCS_BUSINESS_ANGELS],
-  [CAP_TABLE_MANAGEMENT_TITLE, CAP_TABLE],
-  [EQUITY_PLAN_AUTOMATION_TITLE, EQUITY_PLAN_AUTOMATION],
-  [SCENARIO_MODELING_TITLE, SCENARIO_MODELING],
+  ['Cap table management', CAP_TABLE],
+  ['Equity plan automation', EQUITY_PLAN_AUTOMATION],
+  ['Scenario & exit modeling', SCENARIO_MODELING],
   ['Pricing for companies', 'company-pricing'],
   ['Pricing for investors', 'investor-pricing'],
 ];
