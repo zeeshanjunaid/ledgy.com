@@ -1,8 +1,7 @@
 
 .navbar {
   min-height: $navbar-min-height;
-  will-change: top;
-  transition: 200ms;
+  transition: box-shadow 0.3s ease-in-out;
   .btn {
     white-space: nowrap;
   }
@@ -15,6 +14,10 @@
       width: 130px;
     }
   }
+}
+
+.navbar-scroll {
+  box-shadow: $box-shadow-lighter;
 }
 
 @media screen and ( max-height: 699px ) {

@@ -21,17 +21,15 @@ const Logo = (props: LayoutProps) => {
 };
 
 const toggleNav = (navRef: MutableRefObject<HTMLElement | null>) => {
-  let initialOffset = window.pageYOffset;
   window.addEventListener('scroll', () => {
     const currentOffset = window.pageYOffset;
     const { current } = navRef || {};
     if (current) {
-      if (initialOffset > currentOffset) {
-        current.style.top = '0px';
+      if (currentOffset > 50) {
+        current.classList.add('navbar-scroll');
       } else {
-        current.style.top = '-70px';
+        current.classList.remove('navbar-scroll');
       }
-      initialOffset = currentOffset;
     }
   });
 };
