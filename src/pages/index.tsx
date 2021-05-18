@@ -48,6 +48,7 @@ export default IndexPage;
 export const FeatureGridFragment = graphql`
   fragment FeatureGridFramgent on ContentfulFeatureGrid {
     id
+    __typename
     header
     sections {
       icon
@@ -59,6 +60,7 @@ export const FeatureGridFragment = graphql`
 export const TestimonialCardsFragment = graphql`
   fragment TestimonialCardsFragment on ContentfulTestimonialCards {
     id
+    __typename
     cards {
       signature
       linkText
@@ -84,6 +86,7 @@ export const TestimonialCardsFragment = graphql`
 export const ContentWithChecklistFragment = graphql`
   fragment ContentWithChecklistFragment on ContentfulContentWithChecklist {
     id
+    __typename
     header
     description
     linkText
@@ -95,6 +98,7 @@ export const ContentWithChecklistFragment = graphql`
 export const TitleWithGraphicFragment = graphql`
   fragment TitleWithGraphicFragment on ContentfulTitleWithGraphic {
     id
+    __typename
     title
     motivationText
     description
@@ -113,6 +117,7 @@ export const TitleWithGraphicFragment = graphql`
 export const LogoBannerFragment = graphql`
   fragment LogoBannerFragment on ContentfulLogoBanner {
     id
+    __typename
     description
     logos {
       title
@@ -130,6 +135,7 @@ export const LogoBannerFragment = graphql`
 export const SelectableCardsWithScreenshotsFragment = graphql`
   fragment SelectableCardsWithScreenshotsFragment on ContentfulSelectableCardsWithScreenshots {
     id
+    __typename
     header
     content {
       title
@@ -150,6 +156,7 @@ export const SelectableCardsWithScreenshotsFragment = graphql`
 export const CallToAction2021Fragment = graphql`
   fragment CallToAction2021Fragment on ContentfulCallToAction2021 {
     id
+    __typename
     header
     description
     buttonText
@@ -167,6 +174,7 @@ export const CallToAction2021Fragment = graphql`
 export const ChecklistWithScreenshotFragment = graphql`
   fragment ChecklistWithScreenshotFragment on ContentfulChecklistWithScreenshot {
     id
+    __typename
     header
     description
     longDescription {
@@ -192,6 +200,7 @@ export const ChecklistWithScreenshotFragment = graphql`
 export const LongTextFragment = graphql`
   fragment LongTextFragment on ContentfulLongText {
     id
+    __typename
     isWide
     longTextContent {
       childMdx {
@@ -210,6 +219,7 @@ export const indexPageQuery = graphql`
           entries {
             ... on ContentfulTopBanner {
               id
+              __typename
               mainHeader
               description
               firstButtonText
