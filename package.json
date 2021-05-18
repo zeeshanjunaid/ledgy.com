@@ -38,6 +38,7 @@
     "gatsby": "^3.5.0",
     "gatsby-image": "^3.5.0",
     "gatsby-plugin-catch-links": "^3.5.0",
+    "gatsby-plugin-image": "^1.5.0",
     "gatsby-plugin-layout": "^2.5.0",
     "gatsby-plugin-manifest": "^3.5.0",
     "gatsby-plugin-mdx": "^2.5.0",
@@ -72,7 +73,7 @@
     "react-transition-group": "4.4.1",
     "react-visibility-sensor": "5.1.1",
     "remark-html-katex": "3.0.0",
-    "remark-math": "3.0.1",
+    "remark-math": "^4.0.0",
     "typeface-open-sans": "1.1.13"
   },
   "keywords": [
@@ -91,7 +92,7 @@
     "babel-eslint": "10.1.0",
     "eslint": "^7.26.0",
     "eslint-config-airbnb": "18.2.1",
-    "eslint-config-prettier": "7.2.0",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.23.2",
     "eslint-plugin-jsx-a11y": "6.4.1",
     "eslint-plugin-prettier": "^3.4.0",
