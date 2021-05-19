@@ -21,6 +21,7 @@
     "@babel/core": "^7.14.3",
     "@babel/plugin-proposal-object-rest-spread": "^7.14.2",
     "@emotion/react": "^11.4.0",
+    "@emotion/serialize": "^1.0.2",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
