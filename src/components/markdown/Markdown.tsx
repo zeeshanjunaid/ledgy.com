@@ -6,9 +6,9 @@ import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 import { targetBlank, youtubeEmbedBaseUrl, ledgyUrl } from '../../helpers';
-import { getWholeTeam, getTeamImages, AuthorProps } from '../../layouts/team';
 import { Embed, DynamicTrans } from '../utils';
 import { isExternalUrl } from '../lib';
+import { AuthorProps, getTeamImages, getWholeTeam } from '../AboutUs/team';
 
 const About = ({ about, img }: { about: AuthorProps; img: GatsbyImageFluidProps }) => (
   <div className="about d-flex justify-content-center pt-3 mt-3">

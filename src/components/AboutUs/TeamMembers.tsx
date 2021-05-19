@@ -6,9 +6,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
-import { shuffleArray } from '../helpers';
-import { AuthorProps } from '../layouts/team';
-import { CustomFade } from './utils';
+import { shuffleArray } from '../../helpers';
+import { AuthorProps } from './team';
+import { CustomFade } from '../utils';
+import { TeamDataProps } from './AboutUs';
 
 const TeamMember = ({
   name,
@@ -53,8 +54,6 @@ const TeamMember = ({
     </CustomFade>
   );
 };
-
-export type TeamDataProps = [AuthorProps, DisableTypeScript][];
 
 export const TeamMembers = ({ teamData }: { teamData: TeamDataProps }) => {
   const [team, setTeam] = useState(teamData);

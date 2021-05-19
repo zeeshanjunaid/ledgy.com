@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import { Trans } from '@lingui/macro';
 import { graphql, useStaticQuery } from 'gatsby';
-import { targetBlank } from '../helpers';
+import { targetBlank } from '../../helpers';
 
 export type AuthorProps = {
   name: string;
