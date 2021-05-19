@@ -24,7 +24,7 @@ export const SelectableCardsWithScreenshots = (props: SelectableCardsWithScreens
   const interval = scrollDistance / content.length;
 
   const observer = isBrowser
-    ? new ResizeObserver((entries) => {
+    ? new ResizeObserver((entries: ResizeObserverEntry[]) => {
         const activeEntry = entries[activeIndex];
         if (activeEntry) setCardHeight(activeEntry.target.clientHeight);
         const entriesToEvaluate = entries.slice(0, activeIndex);
