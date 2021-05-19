@@ -53,6 +53,9 @@ export const ComponentPicker = ({
     case 'ContentfulLongText':
       return <LongTextComponent {...entry} prefix={prefix} />;
 
+    case 'ContentfulStaticBlock':
+      return <div />;
+
     default:
       throw new Error('content __typename not recognized');
   }

@@ -95,7 +95,7 @@ export const contentfulPageQuery = graphql`
         }
       }
       entries {
-        ...FeatureGridFramgent
+        ...FeatureGridFragment
         ...TestimonialCardsFragment
         ...ContentWithChecklistFragment
         ...TitleWithGraphicFragment

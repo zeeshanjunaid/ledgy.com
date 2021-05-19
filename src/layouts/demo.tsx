@@ -107,7 +107,7 @@ export const demoQuery = graphql`
       formButtonText
       requesterType
       content {
-        ...FeatureGridFramgent
+        ...FeatureGridFragment
         ...TestimonialCardsFragment
         ...ContentWithChecklistFragment
         ...TitleWithGraphicFragment

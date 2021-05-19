@@ -56,7 +56,7 @@ export const featurePageQuery = graphql`
         }
       }
       entries {
-        ...FeatureGridFramgent
+        ...FeatureGridFragment
         ...TestimonialCardsFragment
         ...ContentWithChecklistFragment
         ...TitleWithGraphicFragment
@@ -65,6 +65,7 @@ export const featurePageQuery = graphql`
         ...CallToAction2021Fragment
         ...ChecklistWithScreenshotFragment
         ...LongTextFragment
+        ...StaticBlockFragment
       }
     }
   }

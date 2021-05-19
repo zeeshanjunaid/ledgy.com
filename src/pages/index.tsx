@@ -46,7 +46,7 @@ const IndexPage = (props: Props) => {
 export default IndexPage;
 
 export const FeatureGridFragment = graphql`
-  fragment FeatureGridFramgent on ContentfulFeatureGrid {
+  fragment FeatureGridFragment on ContentfulFeatureGrid {
     id
     __typename
     header
@@ -210,6 +210,13 @@ export const LongTextFragment = graphql`
   }
 `;
 
+export const StaticBlockFragment = graphql`
+  fragment StaticBlockFragment on ContentfulStaticBlock {
+    id
+    block
+  }
+`;
+
 export const indexPageQuery = graphql`
   query {
     page: allContentfulFrontPage2021 {
@@ -236,7 +243,7 @@ export const indexPageQuery = graphql`
                 }
               }
             }
-            ...FeatureGridFramgent
+            ...FeatureGridFragment
             ...TestimonialCardsFragment
             ...ContentWithChecklistFragment
             ...TitleWithGraphicFragment
