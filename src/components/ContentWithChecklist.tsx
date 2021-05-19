@@ -5,26 +5,28 @@ import VisibilitySensor from 'react-visibility-sensor';
 
 import { DynamicTrans, LinkWithChevron, SectionHeader } from './utils';
 
-const handleScrollBehavior = (
-  sectionRef: MutableRefObject<HTMLElement | null>,
-  setActiveIndex: (arg: number) => void,
-  listCount: number
-) => (isVisible: boolean) => {
-  if (!isVisible) {
-    document.onscroll = () => null;
-    return;
-  }
-  document.onscroll = () => {
-    const { current } = sectionRef || {};
-    if (!current) return;
-    const bounding = current.getBoundingClientRect();
-    if (!bounding) return;
-    const positionReference = window.innerHeight - bounding.bottom;
-    const interval = window.innerHeight / listCount;
-    const index = Math.max(0, Math.round(positionReference / interval) + 1);
-    setActiveIndex(Math.min(index, listCount - 1));
+const handleScrollBehavior =
+  (
+    sectionRef: MutableRefObject<HTMLElement | null>,
+    setActiveIndex: (arg: number) => void,
+    listCount: number
+  ) =>
+  (isVisible: boolean) => {
+    if (!isVisible) {
+      document.onscroll = () => null;
+      return;
+    }
+    document.onscroll = () => {
+      const { current } = sectionRef || {};
+      if (!current) return;
+      const bounding = current.getBoundingClientRect();
+      if (!bounding) return;
+      const positionReference = window.innerHeight - bounding.bottom;
+      const interval = window.innerHeight / listCount;
+      const index = Math.max(0, Math.round(positionReference / interval) + 1);
+      setActiveIndex(Math.min(index, listCount - 1));
+    };
   };
-};
 
 export const ContentWithChecklist = ({
   header,
