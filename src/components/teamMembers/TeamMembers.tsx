@@ -7,8 +7,8 @@ import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 import { shuffleArray } from '../../helpers';
-import { AuthorProps } from './team';
-import { CustomFade } from '../utils';
+import { AuthorProps } from './getTeamText';
+import { CustomFade, DynamicTrans } from '../utils';
 import { TeamDataProps } from './AboutUs';
 
 const TeamMember = ({
@@ -64,6 +64,9 @@ export const TeamMembers = ({ teamData }: { teamData: TeamDataProps }) => {
 
   return (
     <div className="row justify-content-center my-5">
+      <h2>
+        <DynamicTrans>Team</DynamicTrans>
+      </h2>
       {team.map(([memberProps, img]) => (
         <TeamMember {...memberProps} img={img} key={`team-${memberProps.name}`} />
       ))}

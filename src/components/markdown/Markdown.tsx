@@ -8,7 +8,7 @@ import { faEnvelope, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons
 import { targetBlank, youtubeEmbedBaseUrl, ledgyUrl } from '../../helpers';
 import { Embed, DynamicTrans } from '../utils';
 import { isExternalUrl } from '../lib';
-import { AuthorProps, getTeamImages, getWholeTeam } from '../AboutUs/team';
+import { AuthorProps, getTeamMemberImages, getTeamMembersText } from '../AboutUs/team';
 
 const About = ({ about, img }: { about: AuthorProps; img: GatsbyImageFluidProps }) => (
   <div className="about d-flex justify-content-center pt-3 mt-3">
@@ -34,8 +34,8 @@ const About = ({ about, img }: { about: AuthorProps; img: GatsbyImageFluidProps 
 );
 
 export const Author = ({ name, prefix }: { name: string; prefix: string }) => {
-  const team = getWholeTeam(prefix);
-  const images = getTeamImages();
+  const team = getTeamMembersText(prefix);
+  const images = getTeamMemberImages();
   return <About about={team[name]} img={images[name]} />;
 };
 

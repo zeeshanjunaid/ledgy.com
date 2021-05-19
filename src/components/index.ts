@@ -12,7 +12,7 @@ export * from './Footer';
 export * from './forms';
 export * from './FullWidthBanner';
 export * from './HelmetIndexLayout';
-export * from './AboutUs';
+export * from './teamMembers';
 export * from './Loader';
 export * from './LogoBanner';
 export * from './markdown';
