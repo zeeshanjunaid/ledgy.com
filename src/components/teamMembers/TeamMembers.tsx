@@ -99,6 +99,7 @@ export const TeamMembers = ({ prefix }: { prefix: string }) => {
           <TeamMember {...memberProps} img={img} key={`team-${memberProps.name}`} />
         ))}
       </div>
+      <hr />
     </div>
   );
 };

@@ -5,7 +5,7 @@ import { DynamicTrans, Button } from '../utils';
 import { RequestDemoButton } from '../RequestDemoButton';
 
 export const CompanyPricing = ({ prefix }: { prefix: string }) => (
-  <div className="container my-4 mb-lg-6">
+  <div className="container my-4 my-lg-6">
     <LedgyPricing
       launchPlanButton={
         <Button outline inverted className="my-4" href={`${appUrl}/signup`}>
@@ -22,5 +22,6 @@ export const CompanyPricing = ({ prefix }: { prefix: string }) => (
       highlightScalePlan
       DynamicTrans={DynamicTrans}
     />
+    <hr className="my-8" />
   </div>
 );
