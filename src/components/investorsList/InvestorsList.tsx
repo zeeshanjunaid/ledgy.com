@@ -40,7 +40,7 @@ export const InvestorsList = () => {
   const InvestorDescriptions = getInvestorDescriptions();
   const investorData = investorList.map((v) => [InvestorDescriptions[v], investorImages[v]]);
   return (
-    <div className="container text-center">
+    <div className="container text-center my-4 mb-lg-6">
       <h2>
         <DynamicTrans>Backed by</DynamicTrans>
       </h2>

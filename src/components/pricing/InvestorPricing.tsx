@@ -41,7 +41,7 @@ const InvestorTypeCard = ({
 );
 
 export const InvestorPricing = ({ prefix }: { prefix: string }) => (
-  <div className="container my-4 my-lg-6">
+  <div className="container my-4 mb-lg-6">
     <div className="row justify-content-center">
       <InvestorTypeCard
         type={<DynamicTrans>Business Angel</DynamicTrans>}

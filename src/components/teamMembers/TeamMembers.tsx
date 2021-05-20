@@ -90,7 +90,7 @@ export const TeamMembers = ({ prefix }: { prefix: string }) => {
   }, []);
 
   return (
-    <div className="container text-center">
+    <div className="container text-center my-4 mb-lg-6">
       <h2>
         <DynamicTrans>Team</DynamicTrans>
       </h2>
