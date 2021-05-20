@@ -213,6 +213,7 @@ export const LongTextFragment = graphql`
 export const StaticBlockFragment = graphql`
   fragment StaticBlockFragment on ContentfulStaticBlock {
     id
+    __typename
     block
   }
 `;
