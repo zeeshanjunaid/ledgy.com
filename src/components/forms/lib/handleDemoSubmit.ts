@@ -20,7 +20,7 @@ type ErrorResponse = {
 };
 
 type JsonResponse = {
-  errors: ErrorResponse[];
+  errors?: ErrorResponse[];
 };
 
 const { INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED, FETCH_ERROR } = FORM_STATUSES;
@@ -96,7 +96,7 @@ export const handleDemoSubmit = async ({
 
   const onError = async (response: Response) => {
     const jsonResponse: JsonResponse = await response.json();
-    if (isInvalidEmailError(jsonResponse.errors)) {
+    if (isInvalidEmailError(jsonResponse.errors || [])) {
       setFormStatus(INVALID_EMAIL);
       return;
     }
