@@ -1,7 +1,7 @@
 import React from 'react';
 import { TeamMembers } from './teamMembers';
 import { InvestorsList } from './investorsList';
-import { CompanyPricing, CompanyPricingCtas } from './pricing';
+import { CompanyPricing, CompanyPricingCtas, InvestorPricing } from './pricing';
 
 export const StaticBlockPicker = ({ block, prefix }: StaticBlockProps & { prefix: string }) => {
   if (!block) return null;
@@ -13,6 +13,7 @@ export const StaticBlockPicker = ({ block, prefix }: StaticBlockProps & { prefix
           <InvestorsList />
           <CompanyPricing prefix={prefix} />
           <CompanyPricingCtas />
+          <InvestorPricing prefix={prefix} />
         </div>
       );
     case 'investorsList':
