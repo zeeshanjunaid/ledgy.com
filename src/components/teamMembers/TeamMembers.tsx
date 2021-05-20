@@ -6,9 +6,34 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
-import { shuffleArray } from '../helpers';
-import { AuthorProps } from '../layouts/team';
-import { CustomFade } from './utils';
+import { shuffleArray } from '../../helpers';
+import { AuthorProps } from './getTeamDescriptions';
+import { CustomFade, DynamicTrans } from '../utils';
+
+import { getTeamDescriptions } from './getTeamDescriptions';
+
+import { getTeamImages } from './getTeamImages';
+
+const teamMemberList = [
+  'timo',
+  'yoko',
+  'ben',
+  'oriol',
+  'jules',
+  'marius',
+  'jahlela',
+  'spela',
+  'armon',
+  'karime',
+  'ermias',
+  'tamas',
+  'mariana',
+  'xiao',
+  'marina',
+  'catarina',
+  'nicolas',
+  'luna',
+];
 
 const TeamMember = ({
   name,
@@ -54,20 +79,27 @@ const TeamMember = ({
   );
 };
 
-export type TeamDataProps = [AuthorProps, DisableTypeScript][];
+export const TeamMembers = ({ prefix }: { prefix: string }) => {
+  const teamImages = getTeamImages();
+  const teamDescriptions = getTeamDescriptions(prefix);
+  const teamData = teamMemberList.map((name) => [teamDescriptions[name], teamImages[name]]);
 
-export const TeamMembers = ({ teamData }: { teamData: TeamDataProps }) => {
   const [team, setTeam] = useState(teamData);
-
   useEffect(() => {
     setTeam((prev) => shuffleArray(prev));
   }, []);
 
   return (
-    <div className="row justify-content-center my-5">
-      {team.map(([memberProps, img]) => (
-        <TeamMember {...memberProps} img={img} key={`team-${memberProps.name}`} />
-      ))}
+    <div className="container text-center my-4 mb-lg-6">
+      <h2>
+        <DynamicTrans>Team</DynamicTrans>
+      </h2>
+      <div className="row justify-content-center my-5">
+        {team.map(([memberProps, img]) => (
+          <TeamMember {...memberProps} img={img} key={`team-${memberProps.name}`} />
+        ))}
+      </div>
+      <hr />
     </div>
   );
 };

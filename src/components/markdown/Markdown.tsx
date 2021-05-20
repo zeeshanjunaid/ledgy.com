@@ -6,9 +6,10 @@ import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 import { targetBlank, youtubeEmbedBaseUrl, ledgyUrl } from '../../helpers';
-import { getWholeTeam, getTeamImages, AuthorProps } from '../../layouts/team';
 import { Embed, DynamicTrans } from '../utils';
 import { isExternalUrl } from '../lib';
+import { AuthorProps, getTeamDescriptions } from '../teamMembers/getTeamDescriptions';
+import { getTeamImages } from '../teamMembers';
 
 const About = ({ about, img }: { about: AuthorProps; img: GatsbyImageFluidProps }) => (
   <div className="about d-flex justify-content-center pt-3 mt-3">
@@ -34,7 +35,7 @@ const About = ({ about, img }: { about: AuthorProps; img: GatsbyImageFluidProps 
 );
 
 export const Author = ({ name, prefix }: { name: string; prefix: string }) => {
-  const team = getWholeTeam(prefix);
+  const team = getTeamDescriptions(prefix);
   const images = getTeamImages();
   return <About about={team[name]} img={images[name]} />;
 };

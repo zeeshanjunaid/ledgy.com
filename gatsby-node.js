@@ -57,7 +57,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     linkText: String
     linkUrl: String
   }
-  union EntryProps = ContentfulTopBanner | ContentfulLogoBanner | ContentfulSelectableCardsWithScreenshots | ContentfulFeatureGrid | ContentfulTestimonialCards | ContentfulTitleWithGraphic | ContentfulContentWithChecklist | ContentfulCallToAction2021 | ContentfulChecklistWithScreenshot | ContentfulLongText
+  union EntryProps = ContentfulTopBanner | ContentfulLogoBanner | ContentfulSelectableCardsWithScreenshots | ContentfulFeatureGrid | ContentfulTestimonialCards | ContentfulTitleWithGraphic | ContentfulContentWithChecklist | ContentfulCallToAction2021 | ContentfulChecklistWithScreenshot | ContentfulLongText | ContentfulStaticBlock
   type ContentfulDemoPage2021 implements Node {
     title: String
     requesterType: String

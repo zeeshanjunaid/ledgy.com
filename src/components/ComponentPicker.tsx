@@ -10,6 +10,7 @@ import { SelectableCardsWithScreenshots } from './cardsWithScreenshots';
 import { TopBanner } from './TopBanner';
 import { ChecklistWithScreenshot } from './ChecklistWithScreenshot';
 import { LongTextComponent } from './LongTextComponent';
+import { StaticBlockPicker } from './StaticBlockPicker';
 
 export const ComponentPicker = ({
   entry,
@@ -52,6 +53,9 @@ export const ComponentPicker = ({
 
     case 'ContentfulLongText':
       return <LongTextComponent {...entry} prefix={prefix} />;
+
+    case 'ContentfulStaticBlock':
+      return <StaticBlockPicker {...entry} prefix={prefix} />;
 
     default:
       throw new Error('content __typename not recognized');
