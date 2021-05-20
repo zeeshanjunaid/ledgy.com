@@ -7,9 +7,33 @@ import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 import { shuffleArray } from '../../helpers';
-import { AuthorProps } from './getTeamText';
+import { AuthorProps } from './getTeamDescriptions';
 import { CustomFade, DynamicTrans } from '../utils';
-import { TeamDataProps } from './AboutUs';
+
+import { getTeamDescriptions } from './getTeamDescriptions';
+
+import { getTeamMemberImages } from './getTeamImages';
+
+const teamMemberList = [
+  'timo',
+  'yoko',
+  'ben',
+  'oriol',
+  'jules',
+  'marius',
+  'jahlela',
+  'spela',
+  'armon',
+  'karime',
+  'ermias',
+  'tamas',
+  'mariana',
+  'xiao',
+  'marina',
+  'catarina',
+  'nicolas',
+  'luna',
+];
 
 const TeamMember = ({
   name,
@@ -55,21 +79,29 @@ const TeamMember = ({
   );
 };
 
-export const TeamMembers = ({ teamData }: { teamData: TeamDataProps }) => {
-  const [team, setTeam] = useState(teamData);
+export const TeamMembers = ({ prefix }: { prefix: string }) => {
+  const teamImages = getTeamMemberImages();
+  const teamDescriptions = getTeamDescriptions(prefix);
+  const teamData = teamMemberList.map((name) => {
+    const description = teamDescriptions[name];
+    return [description, teamImages[name]];
+  });
 
+  const [team, setTeam] = useState(teamData);
   useEffect(() => {
     setTeam((prev) => shuffleArray(prev));
   }, []);
 
   return (
-    <div className="row justify-content-center my-5">
+    <div className="container text-center">
       <h2>
         <DynamicTrans>Team</DynamicTrans>
       </h2>
-      {team.map(([memberProps, img]) => (
-        <TeamMember {...memberProps} img={img} key={`team-${memberProps.name}`} />
-      ))}
+      <div className="row justify-content-center my-5">
+        {team.map(([memberProps, img]) => (
+          <TeamMember {...memberProps} img={img} key={`team-${memberProps.name}`} />
+        ))}
+      </div>
     </div>
   );
 };

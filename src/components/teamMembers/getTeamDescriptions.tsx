@@ -12,7 +12,7 @@ export type AuthorProps = {
   article?: string;
 };
 
-export const getTeamMembersText = (
+export const getTeamDescriptions = (
   prefix: string
 ): {
   [key: string]: AuthorProps;

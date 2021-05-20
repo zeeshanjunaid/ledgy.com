@@ -28,8 +28,17 @@ const ContentfulPage = ({
 }) => {
   if (!data) return null;
 
-  const { slug, title, description, language, content, author, date, cover, entries } =
-    data.contentfulPage;
+  const {
+    slug,
+    title,
+    description,
+    language,
+    content,
+    author,
+    date,
+    cover,
+    entries,
+  } = data.contentfulPage;
   const { siteUrl } = data.site.siteMetadata;
   const showCalculatorHeader = slug === CALCULATOR_SLUG;
   const { childImageSharp } = cover?.localFile || {};
@@ -71,7 +80,7 @@ const ContentfulPage = ({
 export default ContentfulPage;
 
 export const contentfulPageQuery = graphql`
-  query ($id: String!) {
+  query($id: String!) {
     contentfulPage(id: { eq: $id }) {
       id
       slug

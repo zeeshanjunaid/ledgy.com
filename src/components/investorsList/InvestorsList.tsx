@@ -1,5 +1,5 @@
 import React from 'react';
-import { AuthorProps } from '../teamMembers/getTeamText';
+import { AuthorProps } from '../teamMembers/getTeamDescriptions';
 
 import { DynamicTrans } from '../utils';
 import { Investor } from './Investors';
