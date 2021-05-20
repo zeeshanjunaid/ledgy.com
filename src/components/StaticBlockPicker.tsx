@@ -6,7 +6,12 @@ export const StaticBlockPicker = ({ block, prefix }: StaticBlockProps & { prefix
   if (!block) return null;
   switch (block) {
     case 'teamMembers':
-      return <TeamMembers prefix={prefix} />;
+      return (
+        <div>
+          <TeamMembers prefix={prefix} />
+          <InvestorsList />
+        </div>
+      );
     case 'investorsList':
       return <InvestorsList />;
     case 'companyPricing':

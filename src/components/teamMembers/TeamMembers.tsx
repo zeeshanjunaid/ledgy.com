@@ -82,10 +82,7 @@ const TeamMember = ({
 export const TeamMembers = ({ prefix }: { prefix: string }) => {
   const teamImages = getTeamMemberImages();
   const teamDescriptions = getTeamDescriptions(prefix);
-  const teamData = teamMemberList.map((name) => {
-    const description = teamDescriptions[name];
-    return [description, teamImages[name]];
-  });
+  const teamData = teamMemberList.map((name) => [teamDescriptions[name], teamImages[name]]);
 
   const [team, setTeam] = useState(teamData);
   useEffect(() => {

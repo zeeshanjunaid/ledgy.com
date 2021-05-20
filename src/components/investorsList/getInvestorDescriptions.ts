@@ -1,6 +1,6 @@
-import { InvestorProps } from './InvestorsList';
+type InvestorProps = { name: string; description: string };
 
-export const getInvestorText = (): {
+export const getInvestorDescriptions = (): {
   [key: string]: InvestorProps;
 } => ({
   btov: {

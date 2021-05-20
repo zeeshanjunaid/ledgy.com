@@ -1,45 +1,51 @@
 import React from 'react';
-import { AuthorProps } from '../teamMembers/getTeamDescriptions';
 
 import { DynamicTrans } from '../utils';
-import { Investor } from './Investors';
-import { getInvestorImages } from '../../layouts/investorDetails';
-import { getInvestorText } from './getInvestorText';
+import Img, { GatsbyImageFixedProps } from 'gatsby-image';
+import { getInvestorDescriptions } from './getInvestorDescriptions';
+import { getInvestorImages } from './getInvestorImages';
 
-export type TeamDataProps = [AuthorProps, DisableTypeScript][];
+const investorList = [
+  'btov',
+  'creathor',
+  'vipartners',
+  'paul',
+  'daniel',
+  'luis',
+  'myke',
+  'cyrill',
+  'luzius',
+  'adrian',
+  'elena',
+];
 
-export type InvestorProps = { name: string; description: string };
-
-export type InvestorsDataProps = [InvestorProps, DisableTypeScript][];
+const Investor = ({
+  name,
+  description,
+  img,
+}: {
+  name: string;
+  description: string;
+  img: GatsbyImageFixedProps;
+}) => (
+  <div className="col-12 col-md-4 mb-4">
+    {img && <Img {...img} alt={name} className="rounded-circle" />}
+    <h6>{name}</h6>
+    <p className="font-weight-light">{description}</p>
+  </div>
+);
 
 export const InvestorsList = () => {
   const investorImages = getInvestorImages();
-
-  const investors = getInvestorText();
-  const investorsData: InvestorsDataProps = [
-    [investors.btov, investorImages.btov],
-    [investors.creathor, investorImages.creathor],
-    [investors.vipartners, investorImages.vipartners],
-    [investors.paul, investorImages.paul],
-    [investors.daniel, investorImages.daniel],
-    [investors.luis, investorImages.luis],
-    [investors.myke, investorImages.myke],
-    [investors.cyrill, investorImages.cyrill],
-    [investors.luzius, investorImages.luzius],
-    [investors.adrian, investorImages.adrian],
-    [investors.elena, investorImages.elena],
-  ];
-
+  const InvestorDescriptions = getInvestorDescriptions();
+  const investorData = investorList.map((v) => [InvestorDescriptions[v], investorImages[v]]);
   return (
     <div className="container text-center">
-      <h2>
-        <DynamicTrans>Team</DynamicTrans>
-      </h2>
       <h2>
         <DynamicTrans>Backed by</DynamicTrans>
       </h2>
       <div className="row justify-content-center my-5">
-        {investorsData.map(([investorProps, img]) => {
+        {investorData.map(([investorProps, img]) => {
           const { name, description } = investorProps;
           return (
             <Investor name={name} description={description} img={img} key={`investor-${name}`} />
