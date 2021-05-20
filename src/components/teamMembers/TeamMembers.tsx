@@ -12,7 +12,7 @@ import { CustomFade, DynamicTrans } from '../utils';
 
 import { getTeamDescriptions } from './getTeamDescriptions';
 
-import { getTeamMemberImages } from './getTeamImages';
+import { getTeamImages } from './getTeamImages';
 
 const teamMemberList = [
   'timo',
@@ -80,7 +80,7 @@ const TeamMember = ({
 };
 
 export const TeamMembers = ({ prefix }: { prefix: string }) => {
-  const teamImages = getTeamMemberImages();
+  const teamImages = getTeamImages();
   const teamDescriptions = getTeamDescriptions(prefix);
   const teamData = teamMemberList.map((name) => [teamDescriptions[name], teamImages[name]]);
 

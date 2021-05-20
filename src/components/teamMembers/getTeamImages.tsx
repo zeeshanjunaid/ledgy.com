@@ -95,7 +95,7 @@ export const TeamFragment = graphql`
   }
 `;
 
-export const getTeamMemberImages = () =>
+export const getTeamImages = () =>
   useStaticQuery(graphql`
     query {
       ...TeamFragment
