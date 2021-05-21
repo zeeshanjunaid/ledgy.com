@@ -75,7 +75,7 @@
     "react-visibility-sensor": "5.1.1",
     "remark": "13.0.0",
     "remark-html-katex": "3.0.0",
-    "remark-math": "^3.0.1",
+    "remark-math": "3.0.1",
     "typeface-open-sans": "1.1.13"
   },
   "keywords": [
