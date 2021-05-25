@@ -35,7 +35,7 @@ const isInvalidEmailError = (errors: ErrorResponse[]): boolean =>
 const encodeBody = (data: EncodeBodyData) =>
   JSON.stringify({
     fields: Object.entries(data).map(([name, value]) => ({ name, value })),
-    context: { hutk: '' },
+    context: { hutk: getHubspotUserToken() },
   });
 
 export const INVALID_EMAIL = 'invalidEmail';
