@@ -35,7 +35,7 @@ const isInvalidEmailError = (errors: ErrorResponse[]): boolean =>
 const encodeBody = (data: EncodeBodyData) =>
   JSON.stringify({
     fields: Object.entries(data).map(([name, value]) => ({ name, value })),
-    context: { hutk: getHubspotUserToken() },
+    context: { hutk: '' },
   });
 
 export const INVALID_EMAIL = 'invalidEmail';
@@ -56,12 +56,13 @@ export const submitToHubspot = async ({ isCompany, email, size, value }: ParsedF
 
   if (response.status !== 200) {
     const jsonResponse: JsonResponse = await response.json();
-    if (isInvalidEmailError(jsonResponse.errors || [])) {
+    const errors = jsonResponse.errors || [];
+    if (isInvalidEmailError(errors)) {
       throw new Error(FORM_STATUSES.INVALID_EMAIL);
     }
 
     const error = new Error(response.statusText);
-    reportError(error, { body });
+    reportError(error, { body, jsonResponse, errors });
     throw error;
   }
 
