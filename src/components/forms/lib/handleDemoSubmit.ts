@@ -103,7 +103,6 @@ export const handleDemoSubmit = async ({
     setTimeout(() => {
       setFormStatus(FETCH_ERROR);
     }, 1000);
-    throw new Error(response.statusText);
   };
 
   const onSuccess = () => {

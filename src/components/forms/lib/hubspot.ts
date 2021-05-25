@@ -1,5 +1,5 @@
 import { ParsedFormValues } from './formTypes';
-import { getCookie } from '../../../helpers';
+import { getCookie, reportError } from '../../../helpers';
 
 const DEMO_FORM_ID = 'b360c926-ed24-473a-8418-ee1050ddbd06';
 const HUBSPOT_UTK = 'hubspotutk';
@@ -25,7 +25,7 @@ const encodeBody = (data: EncodeBodyData) =>
     context: { hutk: getHubspotUserToken() },
   });
 
-export const submitToHubspot = ({ isCompany, email, size, value }: ParsedFormValues) => {
+export const submitToHubspot = async ({ isCompany, email, size, value }: ParsedFormValues) => {
   const body = encodeBody({
     ...(isCompany ? { numberofemployees: size } : { numberofinvestments: size }),
     pipelinevalue: value,
@@ -33,9 +33,13 @@ export const submitToHubspot = ({ isCompany, email, size, value }: ParsedFormVal
     google_analytics_client_id: getGoogleAnalyticsClientId(),
     lead_form_source: DEMO_REQUEST,
   });
-  return fetch(`/submit/6881367/${DEMO_FORM_ID}`, {
+  const result = await fetch(`/submit/6881367/${DEMO_FORM_ID}`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body,
   });
+
+  if (result.status !== 200) reportError(new Error(result.statusText), { body });
+
+  return result;
 };
