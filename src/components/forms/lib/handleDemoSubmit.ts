@@ -14,22 +14,10 @@ import {
   FORM_STATUSES,
 } from './constants';
 
-type ErrorResponse = {
-  errorType: string;
-  message: string;
-};
-
-type JsonResponse = {
-  errors?: ErrorResponse[];
-};
-
 const { INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED, FETCH_ERROR } = FORM_STATUSES;
 
 const LEAD_STATUS = 'leadStatus';
 const IDENTIFIED = 'identified';
-
-const isInvalidEmailError = (errors: ErrorResponse[]): boolean =>
-  errors.some((error) => ['INVALID_EMAIL', 'BLOCKED_EMAIL'].includes(error.errorType));
 
 const isDeerCompany = (size: number) => size >= DEER_COMPANY_THRESHOLD;
 const isFund = (size: number) => size >= FUND_INVESTMENT_THRESHOLD;
@@ -92,33 +80,24 @@ export const handleDemoSubmit = async ({
   const value = getPipelineValue(size, isCompany);
   const parsedFormValues = { isCompany, email, size, value };
 
-  const hubspotResponse = await submitToHubspot(parsedFormValues);
-
-  const onError = async (response: Response) => {
-    const jsonResponse: JsonResponse = await response.json();
-    if (isInvalidEmailError(jsonResponse.errors || [])) {
+  try {
+    await submitToHubspot(parsedFormValues);
+  } catch (error) {
+    if (error.message === INVALID_EMAIL) {
       setFormStatus(INVALID_EMAIL);
-      return;
+    } else {
+      setTimeout(() => {
+        setFormStatus(FETCH_ERROR);
+      }, 1000);
     }
-    setTimeout(() => {
-      setFormStatus(FETCH_ERROR);
-    }, 1000);
-    throw new Error(response.statusText);
-  };
-
-  const onSuccess = () => {
-    const eventName = `getDemo.submit.${requesterType}`;
-    track(eventName, { value });
-    track('captureLead');
-
-    redirect(parsedFormValues);
-    setFormStatus(SUBMITTED);
-    setDomainCookie(LEAD_STATUS, IDENTIFIED);
-  };
-
-  if (hubspotResponse.status !== 200) {
-    await onError(hubspotResponse);
-  } else {
-    onSuccess();
+    return;
   }
+
+  const eventName = `getDemo.submit.${requesterType}`;
+  track(eventName, { value });
+  track('captureLead');
+
+  redirect(parsedFormValues);
+  setFormStatus(SUBMITTED);
+  setDomainCookie(LEAD_STATUS, IDENTIFIED);
 };
