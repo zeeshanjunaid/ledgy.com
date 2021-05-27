@@ -242,6 +242,18 @@ export const getTeamDescriptions = (
     mail: 'nicolas@ledgy.com',
     article: 'nicolas-briner',
   },
+  rory: {
+    name: 'Rory Buckworth',
+    role: 'Account Executive & Hiker',
+    description: (
+      <Trans>
+        Rory has a background in Sales with 5 years of experience. His aim is to spread the word
+        about Ledgy in the UK, helping entrepreneurs achieve their goals.
+      </Trans>
+    ),
+    linkedIn: 'https://www.linkedin.com/in/rory-buckworth-0b2847156/',
+    mail: 'rory@ledgy.com',
+  },
   luna: {
     name: 'Luna',
     role: 'Rocket & Trailblazer',
