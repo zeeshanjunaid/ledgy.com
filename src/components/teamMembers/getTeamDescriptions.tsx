@@ -141,7 +141,7 @@ export const getTeamDescriptions = (
   },
   karime: {
     name: 'Karime Andere',
-    role: 'Biz Dev & Olympic Swimmer',
+    role: 'Customer Experience & Olympic Swimmer',
     description: (
       <Trans>
         With experience in consumer research and strategic planning, Karime is finishing her
