@@ -181,8 +181,8 @@ export const getTeamDescriptions = (
     role: 'Junior Software Engineer & Future Hacker',
     description: (
       <Trans>
-        Mariana graduated from ETH Zurich and EPFL in Mathematics. She has started a traineeship in
-        software engineering to soon become a Junior Developer.
+        After graduating from ETH Zurich and EPFL in mathematics, Mariana started an traineeship at
+        Ledgy. She now works as a developer.
       </Trans>
     ),
     linkedIn: 'https://www.linkedin.com/in/mariana-cely-6491741ba/',
@@ -194,8 +194,8 @@ export const getTeamDescriptions = (
     role: 'Junior Software Engineer & Lifelong Learner',
     description: (
       <Trans>
-        Xiao just graduated from ETH Zurich in transport engineering. She has years of coding
-        experience and is now happily diving into the world of web development.
+        Xiao graduated from ETH Zurich in transport engineering. She has some coding experience and
+        is now happily diving into the world of web development.
       </Trans>
     ),
     linkedIn: 'https://www.linkedin.com/in/xiao-s-a54554147/',
