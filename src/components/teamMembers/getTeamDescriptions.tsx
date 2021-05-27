@@ -181,7 +181,7 @@ export const getTeamDescriptions = (
     role: 'Junior Software Engineer & Future Hacker',
     description: (
       <Trans>
-        After graduating from ETH Zurich and EPFL in mathematics, Mariana started an traineeship at
+        After graduating from ETH Zurich and EPFL in Mathematics, Mariana started a traineeship at
         Ledgy. She now works as a developer.
       </Trans>
     ),
