@@ -181,8 +181,8 @@ export const getTeamDescriptions = (
     role: 'Junior Software Engineer & Future Hacker',
     description: (
       <Trans>
-        Mariana graduated from ETH Zurich and EPFL in Mathematics. She has started a traineeship in
-        software engineering to soon become a Junior Developer.
+        After graduating from ETH Zurich and EPFL in Mathematics, Mariana started a traineeship at
+        Ledgy. She now works as a developer.
       </Trans>
     ),
     linkedIn: 'https://www.linkedin.com/in/mariana-cely-6491741ba/',
@@ -194,8 +194,8 @@ export const getTeamDescriptions = (
     role: 'Junior Software Engineer & Lifelong Learner',
     description: (
       <Trans>
-        Xiao just graduated from ETH Zurich in transport engineering. She has years of coding
-        experience and is now happily diving into the world of web development.
+        Xiao graduated from ETH Zurich in transport engineering. She has some coding experience and
+        is now happily diving into the world of web development.
       </Trans>
     ),
     linkedIn: 'https://www.linkedin.com/in/xiao-s-a54554147/',
@@ -241,6 +241,18 @@ export const getTeamDescriptions = (
     linkedIn: 'https://www.linkedin.com/in/nicolas-briner/',
     mail: 'nicolas@ledgy.com',
     article: 'nicolas-briner',
+  },
+  rory: {
+    name: 'Rory Buckworth',
+    role: 'Account Executive & Hiker',
+    description: (
+      <Trans>
+        Rory has a background in Sales with 5 years of experience. His aim is to spread the word
+        about Ledgy in the UK, helping entrepreneurs achieve their goals.
+      </Trans>
+    ),
+    linkedIn: 'https://www.linkedin.com/in/rory-buckworth-0b2847156/',
+    mail: 'rory@ledgy.com',
   },
   luna: {
     name: 'Luna',

@@ -32,6 +32,7 @@ const teamMemberList = [
   'marina',
   'catarina',
   'nicolas',
+  'rory',
   'luna',
 ];
 
