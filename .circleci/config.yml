@@ -10,7 +10,7 @@ jobs:
           key: dependency-cache-{{ checksum "package-lock.json" }}
       - run:
           name: install-npm-wee
-          command: npm install && npm run extract
+          command: npm install && npm run compile
       - save_cache:
           key: dependency-cache-{{ checksum "package-lock.json" }}
           paths:
