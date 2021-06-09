@@ -4,7 +4,7 @@ import { InvestorsList } from './investorsList';
 import { CompanyPricing, CompanyPricingCtas, InvestorPricing } from './pricing';
 import { BlogsList } from './BlogsList';
 import { UpdatesList } from './UpdatesList';
-import { CustomerStoriesList } from './customerStories/CustomerStoriesList';
+import { CustomerStoriesList } from './customerStories';
 import { WebinarsList } from './WebinarsList';
 import { ContactUs } from './ContactUs';
 
