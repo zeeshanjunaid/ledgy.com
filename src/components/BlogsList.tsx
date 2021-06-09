@@ -1,7 +1,5 @@
 import React from 'react';
-
 import { graphql, useStaticQuery } from 'gatsby';
-
 import { ContentBody, PostLink } from '../components';
 
 const getBlogs = () =>
@@ -35,9 +33,10 @@ const getBlogs = () =>
 
 export const BlogsList = ({ prefix }: { prefix: string }) => {
   const blogs = getBlogs();
+  const { edges } = blogs.allContentfulPage;
   return (
     <ContentBody>
-      {blogs.allContentfulPage.edges.map((edge: UntypedObject) => {
+      {edges.map((edge: UntypedObject) => {
         const { node } = edge;
         const { id, slug, description: postDescription } = node;
         return (

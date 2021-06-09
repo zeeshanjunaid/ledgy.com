@@ -34,9 +34,10 @@ const getWebinars = () =>
 
 export const WebinarsList = ({ prefix }: { prefix: string }) => {
   const webinars = getWebinars();
+  const { edges } = webinars.allContentfulWebinar;
   return (
     <ContentBody>
-      {webinars.allContentfulWebinar.edges.map((edge: UntypedObject) => {
+      {edges.map((edge: UntypedObject) => {
         const { node } = edge;
         const { id, youtube, description } = node;
         return (

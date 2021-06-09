@@ -33,10 +33,11 @@ const getUpdates = () =>
 
 export const UpdatesList = ({ prefix }: { prefix: string }) => {
   const updates = getUpdates();
+  const { edges } = updates.allContentfulPage;
   return (
     <div>
       <ContentBody>
-        {updates.allContentfulPage.edges.map((edge: UntypedObject) => {
+        {edges.map((edge: UntypedObject) => {
           const { node } = edge;
           const { id, slug, description: postDescription } = node;
           return (

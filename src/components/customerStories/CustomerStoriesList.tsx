@@ -34,13 +34,12 @@ const getCustomerStories = () =>
 
 export const CustomerStoriesList = ({ prefix }: { prefix: string }) => {
   const customerStories = getCustomerStories();
+  const { edges } = customerStories.allContentfulCustomerStory;
   return (
     <ContentBody>
-      {customerStories.allContentfulCustomerStory.edges.map(
-        ({ node }: { node: CustomerStoryBaseProps }) => (
-          <CustomerStoryLink key={node.id} customerStory={node} prefix={prefix} />
-        )
-      )}
+      {edges.map(({ node }: { node: CustomerStoryBaseProps }) => (
+        <CustomerStoryLink key={node.id} customerStory={node} prefix={prefix} />
+      ))}
     </ContentBody>
   );
 };
