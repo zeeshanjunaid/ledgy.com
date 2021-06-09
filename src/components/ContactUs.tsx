@@ -1,21 +1,9 @@
 import React from 'react';
-import { Trans, t } from '@lingui/macro';
-
-import { Title } from '../layouts/utils';
-import { PageHeader } from '../components';
+import { Trans } from '@lingui/macro';
 import { helpUrl, targetBlank } from '../helpers';
 
-const Contact = () => (
+export const ContactUs = () => (
   <div>
-    <Title
-      title={t`Contact`}
-      description={t`Contact the Ledgy team by phone, email, or mailing address to learn more about cap table management, equity plans, and investor relations`}
-    />
-    <PageHeader
-      title={t`Let’s get in touch`}
-      subtitle={t`Here are the ways you can contact us with any questions you have`}
-    />
-
     <div className="container">
       <div className="bg-gray h-full p-5 imprint">
         <div className="row">
@@ -78,5 +66,3 @@ const Contact = () => (
     </div>
   </div>
 );
-
-export default Contact;

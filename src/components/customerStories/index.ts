@@ -1,3 +1,4 @@
 export * from './CompanySummary';
-export * from './OtherCustomerStories';
+export * from './CustomerStoriesList';
 export * from './CustomerStoryLink';
+export * from './OtherCustomerStories';
