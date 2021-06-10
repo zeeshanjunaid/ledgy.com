@@ -27,6 +27,7 @@ $markdown-container-wide-width: 1200px;
   h6 {
     margin-top: 2 * $markdown-spacer;
     margin-bottom: 0.5 * $markdown-spacer;
+    line-height: 2rem;
   }
   li {
     margin-bottom: map-get($spacers, 1);
@@ -48,8 +49,8 @@ $markdown-container-wide-width: 1200px;
     font-weight: 400;
   }
   .lead {
-    font-size: $markdown-font-size * 1.12;
-    margin-bottom: map-get($spacers, 7);
+    font-size: $markdown-font-size;
+    margin-bottom: map-get($spacers, 10);
   }
   .katex {
     font-size: 1em;
