@@ -218,6 +218,15 @@ export const StaticBlockFragment = graphql`
   }
 `;
 
+export const ButtonFragment = graphql`
+  fragment ButtonFragment on ContentfulButton {
+    id
+    __typename
+    text
+    url
+  }
+`;
+
 export const indexPageQuery = graphql`
   query {
     page: allContentfulFrontPage2021 {

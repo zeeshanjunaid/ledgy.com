@@ -40,7 +40,7 @@ export const ComponentPicker = ({
       return <TestimonialCards {...entry} prefix={prefix} />;
 
     case 'ContentfulTitleWithGraphic':
-      return <TitleWithGraphic {...entry} />;
+      return <TitleWithGraphic {...entry} prefix={prefix} />;
 
     case 'ContentfulContentWithChecklist':
       return <ContentWithChecklist {...entry} prefix={prefix} />;

@@ -4,10 +4,16 @@ import { t } from '@lingui/macro';
 import { demoPage } from '../helpers';
 import { RequestDemoButton } from './RequestDemoButton';
 import { TopBannerLayout } from './TopBannerLayout';
+import { formatUrl } from './lib';
 import { Button, DynamicTrans, Image } from './utils';
 
-const CustomButton = ({ url, text }: { url: string; text: string }) => (
-  <Button href={url} className="btn-xl mr-2 my-1 align-self-center" inverted outline>
+const CustomButton = ({ prefix, url, text }: { prefix: string; url: string; text: string }) => (
+  <Button
+    href={formatUrl(prefix, url)}
+    className="btn-xl mr-2 my-1 align-self-center"
+    inverted
+    outline
+  >
     <DynamicTrans>{text}</DynamicTrans>
   </Button>
 );
@@ -37,7 +43,7 @@ export const TopBanner = ({
       buttonClassName={buttonClassName}
     />
   ) : (
-    <CustomButton url={firstButtonUrl} text={firstButtonText} />
+    <CustomButton prefix={prefix} url={firstButtonUrl} text={firstButtonText} />
   );
 
   const buttonTwo = secondButtonUrl.includes(demoPage) ? (
@@ -47,7 +53,7 @@ export const TopBanner = ({
       buttonClassName={buttonClassName}
     />
   ) : (
-    <CustomButton url={secondButtonUrl} text={secondButtonText} />
+    <CustomButton prefix={prefix} url={secondButtonUrl} text={secondButtonText} />
   );
 
   return (

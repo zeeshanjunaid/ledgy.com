@@ -1,5 +1,8 @@
 import React, { ReactNode } from 'react';
+import { Link } from 'gatsby';
+
 import { targetBlank } from '../../helpers';
+import { isExternalUrl } from '../lib';
 
 type ButtonType = 'button' | 'submit' | 'reset';
 
@@ -38,11 +41,24 @@ export const Button = ({
     'btn-primary';
   const classes = `btn ${color} ${className} ${disabled ? 'button-disabled' : ''}`;
   const props = { ...buttonProps, onClick, className: classes };
-  return href ? (
-    <a {...props} id={id} href={disabled ? undefined : href} {...targetBlank}>
-      {children}
-    </a>
-  ) : (
+
+  if (href) {
+    if (isExternalUrl(href))
+      return (
+        <a {...props} id={id} href={disabled ? undefined : href} {...targetBlank}>
+          {children}
+        </a>
+      );
+
+    return (
+      <Link to={disabled ? '' : href}>
+        <a {...props} id={id}>
+          {children}
+        </a>
+      </Link>
+    );
+  }
+  return (
     <button {...props} id={id} disabled={disabled} type={type}>
       {children}
     </button>

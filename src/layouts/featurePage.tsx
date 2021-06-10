@@ -14,7 +14,7 @@ const FeaturePage = ({
     allContentfulFeaturePage2021: UnknownObject;
   };
 }) => {
-  const { title, header, description, graphic, motivationText, entries } =
+  const { title, header, description, graphic, motivationText, entries, buttons } =
     data.contentfulFeaturePage2021;
   return (
     <div>
@@ -25,6 +25,8 @@ const FeaturePage = ({
         description={description}
         graphic={graphic}
         motivationText={motivationText}
+        buttons={buttons}
+        prefix={prefix}
         __typename={'ContentfulTitleWithGraphic'}
         isTopBanner
       />
@@ -46,6 +48,9 @@ export const featurePageQuery = graphql`
       header
       description
       motivationText
+      buttons {
+        ...ButtonFragment
+      }
       graphic {
         localFile {
           childImageSharp {

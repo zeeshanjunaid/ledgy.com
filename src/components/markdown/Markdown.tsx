@@ -5,9 +5,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
-import { targetBlank, youtubeEmbedBaseUrl, ledgyUrl } from '../../helpers';
+import { targetBlank, youtubeEmbedBaseUrl } from '../../helpers';
 import { Embed, DynamicTrans } from '../utils';
-import { isExternalUrl } from '../lib';
+import { isExternalUrl, formatUrl } from '../lib';
 import { AuthorProps, getTeamDescriptions } from '../teamMembers/getTeamDescriptions';
 import { getTeamImages } from '../teamMembers';
 
@@ -109,25 +109,6 @@ export const LanguageHint = ({ lang, documentLang }: { lang: string; documentLan
 
 export const Lead = ({ children }: { children: Node }) => <div className="lead">{children}</div>;
 
-const getPrefixedUrl = ({
-  href,
-  prefix,
-  isExternal,
-}: {
-  href: string;
-  prefix?: string;
-  isExternal: boolean;
-}) => {
-  const isFullLedgyUrl = href.startsWith(ledgyUrl);
-  if (!prefix || (isExternal && !isFullLedgyUrl)) return href;
-
-  if (isFullLedgyUrl) {
-    const [, path] = href.split(ledgyUrl);
-    return `${ledgyUrl}${prefix}${path}`;
-  }
-  return `${prefix}${href}`;
-};
-
 export const Anchor = ({
   href,
   title,
@@ -137,17 +118,17 @@ export const Anchor = ({
   children: ReactNode;
   href: string;
   title: string;
-  prefix?: string;
+  prefix: string;
 }) => {
   if (href.startsWith(youtubeEmbedBaseUrl)) {
     return <Embed src={href} title={title} className="embed-small" />;
   }
   const isExternal = isExternalUrl(href);
-  const prefixedUrl = getPrefixedUrl({ href, prefix, isExternal });
+  const url = formatUrl(prefix, href);
 
   return (
     <a
-      href={prefixedUrl}
+      href={url}
       title={title}
       {...(isExternal ? targetBlank : {})}
       className="d-inline-flex align-items-center"

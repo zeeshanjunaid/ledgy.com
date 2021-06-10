@@ -5,7 +5,7 @@ import { Trans } from '@lingui/macro';
 import { appUrl, demoPage, hasLedgyAccount } from '../../helpers';
 
 import { Button } from '../utils';
-import { removeOverlay } from '../lib';
+import { formatUrl, removeOverlay } from '../lib';
 
 const LOGIN = 'login';
 const SIGNUP = 'signup';
@@ -38,7 +38,7 @@ export const NavbarButtons = ({
 }) => (
   <div className={`d-flex align-items-center ${className}`}>
     <SignupLoginButton />
-    <Link to={`${prefix}${demoPage}`} onClick={removeOverlay}>
+    <Link to={formatUrl(prefix, demoPage)} onClick={removeOverlay}>
       <Button className="ml-2 px-3 py-1">
         <Trans>Book a Demo</Trans>
       </Button>
