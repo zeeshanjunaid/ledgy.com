@@ -57,6 +57,9 @@ exports.createSchemaCustomization = ({ actions }) => {
     linkText: String
     linkUrl: String
   }
+  type ContentfulTitleWithGraphic implements Node {
+    buttons: [ContentfulButton] @link(by: "id", from: "buttons___NODE")
+  }
   union EntryProps = ContentfulTopBanner | ContentfulLogoBanner | ContentfulSelectableCardsWithScreenshots | ContentfulFeatureGrid | ContentfulTestimonialCards | ContentfulTitleWithGraphic | ContentfulContentWithChecklist | ContentfulCallToAction2021 | ContentfulChecklistWithScreenshot | ContentfulLongText | ContentfulStaticBlock
   type ContentfulDemoPage2021 implements Node {
     title: String
@@ -70,6 +73,7 @@ exports.createSchemaCustomization = ({ actions }) => {
   type ContentfulFeaturePage2021 implements Node {
     title: String
     entries: [EntryProps] @link(by: "id", from: "entries___NODE")
+    buttons: [ContentfulButton] @link(by: "id", from: "buttons___NODE")
   }
   type ContentfulCustomerStory implements Node {
     title: String
