@@ -52,9 +52,9 @@ export const Button = ({
 
     return (
       <Link to={disabled ? '' : href}>
-        <a {...props} id={id}>
+        <button {...props} id={id}>
           {children}
-        </a>
+        </button>
       </Link>
     );
   }
