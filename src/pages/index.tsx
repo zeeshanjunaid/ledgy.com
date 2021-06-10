@@ -102,6 +102,9 @@ export const TitleWithGraphicFragment = graphql`
     title
     motivationText
     description
+    buttons {
+      ...ButtonFragment
+    }
     graphic {
       localFile {
         childImageSharp {

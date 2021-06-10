@@ -8,16 +8,18 @@ const CustomButton = ({
   url,
   text,
   isPrimary,
+  isTopBanner,
 }: {
   url: string;
   text: string;
   isPrimary: boolean;
+  isTopBanner: boolean;
 }) => (
   <Button
     href={url}
     className="btn-xl mr-2 my-1 align-self-center"
-    inverted={!isPrimary}
-    outline={!isPrimary}
+    inverted={(isTopBanner && !isPrimary) || (!isTopBanner && isPrimary)}
+    outline={(isTopBanner && !isPrimary) || (!isTopBanner && !isPrimary)}
   >
     <DynamicTrans>{text}</DynamicTrans>
   </Button>
@@ -74,6 +76,7 @@ export const TitleWithGraphic = ({
                     text={text}
                     url={formatUrl(prefix, url)}
                     isPrimary={index === 0}
+                    isTopBanner={isTopBanner}
                   />
                 ))}
               </div>
