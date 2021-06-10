@@ -1,4 +1,4 @@
-$markdown-font-size: $ledgy-font-size * 1.12;
+$markdown-font-size: $ledgy-font-size;
 $markdown-spacer: $markdown-font-size;
 $markdown-container-width: 720px;
 $markdown-container-wide-width: 1200px;
@@ -34,7 +34,7 @@ $markdown-container-wide-width: 1200px;
   }
   blockquote {
     margin: map-get($spacers, 6) map-get($spacers, 3);
-    font-size: 1.2em;
+    font-size: $markdown-font-size;
     font-style: italic;
     font-weight: 200;
   }
@@ -48,7 +48,7 @@ $markdown-container-wide-width: 1200px;
     font-weight: 400;
   }
   .lead {
-    font-size: 1.4rem;
+    font-size: $markdown-font-size * 1.12;
     margin-bottom: map-get($spacers, 7);
   }
   .katex {
