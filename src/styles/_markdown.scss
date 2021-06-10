@@ -1,4 +1,4 @@
-$markdown-font-size: 1.2rem;
+$markdown-font-size: $ledgy-font-size;
 $markdown-spacer: $markdown-font-size;
 $markdown-container-width: 720px;
 $markdown-container-wide-width: 1200px;
@@ -27,6 +27,7 @@ $markdown-container-wide-width: 1200px;
   h6 {
     margin-top: 2 * $markdown-spacer;
     margin-bottom: 0.5 * $markdown-spacer;
+    line-height: 2rem;
   }
   li {
     margin-bottom: map-get($spacers, 1);
@@ -34,7 +35,7 @@ $markdown-container-wide-width: 1200px;
   }
   blockquote {
     margin: map-get($spacers, 6) map-get($spacers, 3);
-    font-size: 1.2em;
+    font-size: $markdown-font-size;
     font-style: italic;
     font-weight: 200;
   }
@@ -48,8 +49,8 @@ $markdown-container-wide-width: 1200px;
     font-weight: 400;
   }
   .lead {
-    font-size: 1.4rem;
-    margin-bottom: map-get($spacers, 7);
+    font-size: $markdown-font-size;
+    margin-bottom: map-get($spacers, 10);
   }
   .katex {
     font-size: 1em;
