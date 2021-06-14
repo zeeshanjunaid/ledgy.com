@@ -3,9 +3,9 @@ import Img, { GatsbyImageFluidProps } from 'gatsby-image';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faComments } from '@fortawesome/free-solid-svg-icons';
+import { faComments } from '@fortawesome/free-solid-svg-icons';
 
-import { shuffleArray } from '../../helpers';
+import { shuffleArray, targetBlank } from '../../helpers';
 import { AuthorProps } from './getTeamDescriptions';
 import { CustomFade, DynamicTrans } from '../utils';
 
@@ -42,7 +42,6 @@ const TeamMember = ({
   img,
   twitter,
   linkedIn,
-  mail,
   article,
 }: AuthorProps & {
   img: GatsbyImageFluidProps;
@@ -63,19 +62,18 @@ const TeamMember = ({
       </div>
       <div className="d-flex align-items-center">
         {!!article && (
-          <a className="social-icon mr-3" href={`/updates/${article}/`}>
+          <a className="social-icon mx-2" href={`/updates/${article}/`}>
             <FontAwesomeIcon icon={faComments} />
           </a>
         )}
-        <a className="social-icon mr-3" href={`mailto:${mail}`}>
-          <FontAwesomeIcon icon={faEnvelope} />
-        </a>
-        <a className={`social-icon mr-3 ${twitter ? '' : 'd-none'}`} href={twitter || ''}>
-          <FontAwesomeIcon icon={faTwitter} />
-        </a>
-        <a className="social-icon" href={linkedIn}>
+        <a className="social-icon mx-2" href={linkedIn} {...targetBlank}>
           <FontAwesomeIcon icon={faLinkedin} />
         </a>
+        {!!twitter && (
+          <a className={`social-icon mx-2`} href={twitter || ''} {...targetBlank}>
+            <FontAwesomeIcon icon={faTwitter} />
+          </a>
+        )}
       </div>
     </div>
   </CustomFade>
