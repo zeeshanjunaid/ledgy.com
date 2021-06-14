@@ -29,6 +29,7 @@ export const getTeamDescriptions = (
     twitter: 'https://twitter.com/thrstschfr',
     linkedIn: 'https://www.linkedin.com/in/timohorstschaefer/',
     mail: 'timo@ledgy.com',
+    article: 'founders-climate-action',
   },
   yoko: {
     name: 'Yoko Spirig',
@@ -56,6 +57,7 @@ export const getTeamDescriptions = (
     twitter: 'https://twitter.com/bebinoy',
     linkedIn: 'https://www.linkedin.com/in/ben-elias-brandt-680a95110/',
     mail: 'ben@ledgy.com',
+    article: 'founders-climate-action',
   },
   oriol: {
     name: 'Oriol Vidal-Cortes',
@@ -96,6 +98,7 @@ export const getTeamDescriptions = (
     twitter: 'https://twitter.com/colmarius',
     linkedIn: 'https://www.linkedin.com/in/mariuscolacioiu',
     mail: 'marius@ledgy.com',
+    article: 'women-in-web-from-ledgy-trainees-to-junior-developers',
   },
   jahlela: {
     name: 'Jahlela Hasle',
@@ -150,6 +153,7 @@ export const getTeamDescriptions = (
     ),
     linkedIn: 'https://www.linkedin.com/in/karimeandere/',
     mail: 'karime@ledgy.com',
+    article: 'karime-andere',
   },
   tamas: {
     name: 'Tamas Varkonyi',
