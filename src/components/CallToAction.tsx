@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
-
 import {
   Button,
   DynamicTrans,
@@ -10,26 +8,14 @@ import {
   SectionHeader,
   CustomFade,
 } from './utils';
-import { formatUrl, isExternalUrl } from './lib';
+import { formatUrl } from './lib';
 
-const CTAButton = ({
-  buttonText,
-  buttonUrl,
-  prefix,
-}: {
-  buttonText: string;
-  buttonUrl: string;
-  prefix: string;
-}) => {
+const CTAButton = ({ buttonText, buttonUrl }: { buttonText: string; buttonUrl: string }) => {
   const text = <DynamicTrans>{buttonText}</DynamicTrans>;
-  return isExternalUrl(buttonUrl) ? (
+  return (
     <Button href={buttonUrl} className="btn-xl mr-4 mb-4">
       {text}
     </Button>
-  ) : (
-    <Link to={formatUrl(prefix, buttonUrl)}>
-      <Button className="btn-xl mr-4 mb-4">{text}</Button>
-    </Link>
   );
 };
 
@@ -56,7 +42,7 @@ export const CallToAction = ({
         </p>
         <CustomFade translate="0, 100px">
           <div className="d-flex align-items-center flex-wrap">
-            <CTAButton buttonText={buttonText} buttonUrl={buttonUrl} prefix={prefix} />
+            <CTAButton buttonText={buttonText} buttonUrl={formatUrl(prefix, buttonUrl)} />
             {!!(linkText && linkUrl) && (
               <LinkWithChevron to={linkUrl} text={linkText} className="mb-4" prefix={prefix} />
             )}

@@ -1,16 +1,39 @@
 import React from 'react';
 
 import { dynamicI18n } from '../helpers';
-import { DynamicTrans, Section, Image } from './utils';
-import { getUnderlineHtml } from './lib';
+import { DynamicTrans, Section, Image, Button } from './utils';
+import { formatUrl, getUnderlineHtml } from './lib';
+
+const CustomButton = ({
+  url,
+  text,
+  isPrimary,
+  isTopBanner,
+}: {
+  url: string;
+  text: string;
+  isPrimary: boolean;
+  isTopBanner: boolean;
+}) => (
+  <Button
+    href={url}
+    className="btn-xl mr-2 my-1 align-self-center"
+    inverted={(isTopBanner && !isPrimary) || (!isTopBanner && isPrimary)}
+    outline={(isTopBanner && !isPrimary) || (!isTopBanner && !isPrimary)}
+  >
+    <DynamicTrans>{text}</DynamicTrans>
+  </Button>
+);
 
 export const TitleWithGraphic = ({
   title,
   motivationText,
   graphic,
   description,
+  buttons,
+  prefix,
   isTopBanner = false,
-}: TitleWithGraphicProps & { isTopBanner?: boolean }) => {
+}: TitleWithGraphicProps & { isTopBanner?: boolean; prefix: string }) => {
   const wrapperClassName = isTopBanner ? 'bg-lightest top-banner' : 'py-8 mb-n5';
   const tiltedBackground = isTopBanner ? '' : 'bg-primary tilted-background';
 
@@ -45,6 +68,19 @@ export const TitleWithGraphic = ({
             <p className={descriptionColor}>
               <DynamicTrans>{description}</DynamicTrans>
             </p>
+            {!!buttons && (
+              <div className="d-flex align-items-center flex-wrap">
+                {buttons.map(({ id, text, url }, index) => (
+                  <CustomButton
+                    key={id}
+                    text={text}
+                    url={formatUrl(prefix, url)}
+                    isPrimary={index === 0}
+                    isTopBanner={isTopBanner}
+                  />
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </Section>

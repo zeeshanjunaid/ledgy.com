@@ -102,6 +102,9 @@ export const TitleWithGraphicFragment = graphql`
     title
     motivationText
     description
+    buttons {
+      ...ButtonFragment
+    }
     graphic {
       localFile {
         childImageSharp {
@@ -215,6 +218,15 @@ export const StaticBlockFragment = graphql`
     id
     __typename
     block
+  }
+`;
+
+export const ButtonFragment = graphql`
+  fragment ButtonFragment on ContentfulButton {
+    id
+    __typename
+    text
+    url
   }
 `;
 

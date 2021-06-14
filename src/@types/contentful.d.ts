@@ -59,11 +59,18 @@ declare type TestimonialCardsProps = Id & {
   cards: TestimonialCardProps[];
 };
 
+declare type ButtonProps = Id & {
+  __typename: 'ContentfulButton';
+  text: string;
+  url: string;
+};
+
 declare type BaseFeatureProps = Id & {
   title: string;
   description: string;
   graphic: ImageProps;
   motivationText: string;
+  buttons?: ButtonProps[];
 };
 
 declare type FeaturePageProps = BaseFeatureProps & {
