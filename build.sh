@@ -3,15 +3,12 @@
 # Exit if any command fails
 set -e
 
+export GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true
+
 ./getTranslations.sh
 
-CACHE_DIR=$NETLIFY_BUILD_BASE/cache/gatsby/.cache
-if [ -d "$CACHE_DIR" ]; then
-  cp -r $CACHE_DIR .cache
-fi
-
 npm rebuild sharp node-sass
-gatsby build
+gatsby build --log-pages
 
 if [ "$BRANCH" = "master" ]; then
   npm run extract
