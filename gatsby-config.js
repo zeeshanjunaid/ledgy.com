@@ -28,9 +28,6 @@ module.exports = {
       url: 'https://api.hsforms.com/submissions/v3/integration',
     },
   ],
-  flags: {
-    FAST_REFRESH: true,
-  },
   plugins: [
     'gatsby-plugin-layout',
     'gatsby-plugin-react-helmet',

@@ -3,8 +3,6 @@
 # Exit if any command fails
 set -e
 
-export GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true
-
 ./getTranslations.sh
 
 npm rebuild sharp node-sass
