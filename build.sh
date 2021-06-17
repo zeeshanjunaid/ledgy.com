@@ -5,13 +5,8 @@ set -e
 
 ./getTranslations.sh
 
-CACHE_DIR=$NETLIFY_BUILD_BASE/cache/gatsby/.cache
-if [ -d "$CACHE_DIR" ]; then
-  cp -r $CACHE_DIR .cache
-fi
-
 npm rebuild sharp node-sass
-gatsby build
+gatsby build --log-pages
 
 if [ "$BRANCH" = "master" ]; then
   npm run extract

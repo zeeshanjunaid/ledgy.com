@@ -9,3 +9,4 @@ https://ledgy.netlify.com/* https://ledgy.com/:splat 301!
 /engage/* https://api.mixpanel.com/:splat 200
 /track/* https://api.mixpanel.com/:splat 200
 /signup/* /demo/:splat 301
+/career/ /jobs/ 301
