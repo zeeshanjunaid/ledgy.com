@@ -1,5 +1,5 @@
 import { ParsedFormValues } from './formTypes';
-import { getCookie, reportError } from '../../../helpers';
+import { getCookie, reportError, getGoogleAdsClickId } from '../../../helpers';
 import { FORM_STATUSES } from './constants';
 
 const DEMO_FORM_ID = 'b360c926-ed24-473a-8418-ee1050ddbd06';
@@ -23,7 +23,8 @@ type JsonResponse = {
 type EncodeBodyData = {
   pipelinevalue: number;
   email: string;
-  google_analytics_client_id: string;
+  google_analytics_client_id?: string;
+  google_ads_click_id?: string;
   numberofemployees?: number;
   numberofinvestments?: number;
   lead_form_source: typeof DEMO_REQUEST;
@@ -46,6 +47,7 @@ export const submitToHubspot = async ({ isCompany, email, size, value }: ParsedF
     pipelinevalue: value,
     email,
     google_analytics_client_id: getGoogleAnalyticsClientId(),
+    google_ads_click_id: getGoogleAdsClickId(),
     lead_form_source: DEMO_REQUEST,
   });
   const response = await fetch(`/submit/6881367/${DEMO_FORM_ID}`, {

@@ -8,7 +8,7 @@ import 'katex/dist/katex.min.css';
 import 'prism-themes/themes/prism-ghcolors.css';
 import '../styles/_index.scss';
 
-import { dynamicI18n, loadLocales } from '../helpers';
+import { dynamicI18n, loadLocales, saveGoogleAdsClickId } from '../helpers';
 import { langFromPath, langPrefix, deprefix } from '../i18n-config';
 import {
   HelmetIndexLayout,
@@ -87,6 +87,7 @@ const Main = (props: AppProps) => {
   const lang = langFromPath(props.location.pathname);
   useMemo(loadLocales, []);
   useMemo(() => i18n.activate(lang), [lang]);
+  useMemo(saveGoogleAdsClickId, []);
   return (
     <I18nProvider i18n={i18n}>
       <App {...props} lang={lang} />
