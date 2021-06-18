@@ -1,5 +1,5 @@
 import { ledgyDomain } from './constants';
-import { loadSegment, loadCapterra, loadG2 } from './snippets';
+import { loadSegment, loadCapterra, loadG2, loadBing } from './snippets';
 
 const getDestinations = (destinations: string[]): Record<string, boolean> =>
   destinations.reduce((res, v) => ({ ...res, [v]: true }), { All: false });
@@ -43,4 +43,5 @@ export const loadMarketingTools = (segmentDestinations: string[]) => {
   loadSegment(getDestinations(segmentDestinations));
   loadG2();
   loadCapterra();
+  loadBing();
 };
