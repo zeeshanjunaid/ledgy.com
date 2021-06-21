@@ -275,7 +275,13 @@ input[type=number]::-webkit-outer-spin-button {
     width: 245px;
     height: 245px;
     overflow: hidden;
-    border-radius: $border-radius;
+    border-radius: $border-radius-wide;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
   .social-icon {
     font-size: 20px;
