@@ -273,6 +273,9 @@ input[type=number]::-webkit-outer-spin-button {
 .ledgista {
   .ledgista-image-wrapper {
     width: 245px;
+    height: 245px;
+    overflow: hidden;
+    border-radius: $border-radius;
   }
   .social-icon {
     font-size: 20px;

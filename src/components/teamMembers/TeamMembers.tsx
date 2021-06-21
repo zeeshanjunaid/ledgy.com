@@ -40,16 +40,14 @@ const TeamMember = ({
   role,
   description,
   img,
-  emoji,
   twitter,
   linkedIn,
   article,
 }: AuthorProps & {
   img: GatsbyImageFluidProps;
-  emoji: GatsbyImageFluidProps;
 }) => {
   const [showEmoji, setShowEmoji] = useState(false);
-  const imageProps = showEmoji ? emoji : img;
+  const emojiFileName = name.split(' ')[0].toLowerCase();
   return (
     <CustomFade className="ledgista col-12 col-md-6 col-lg-4" delay={300}>
       <div className="pb-6 h-100 d-flex flex-column align-items-center justify-content-between">
@@ -59,7 +57,11 @@ const TeamMember = ({
             onMouseOver={() => setShowEmoji(true)}
             onMouseOut={() => setShowEmoji(false)}
           >
-            <Img {...imageProps} className="mx-auto" alt={name} />
+            {showEmoji ? (
+              <img src={`/emojis/${emojiFileName}.gif`} />
+            ) : (
+              <Img {...img} className="mx-auto" alt={name} />
+            )}
           </div>
           <div className="text-center d-flex flex-column align-items-center">
             <div>
@@ -98,7 +100,6 @@ export const TeamMembers = ({ prefix }: { prefix: string }) => {
   useEffect(() => {
     setTeam((prev) => shuffleArray(prev));
   }, []);
-  const emoji = team[0][1];
 
   return (
     <div className="container text-center my-4 mb-lg-6">
@@ -107,7 +108,7 @@ export const TeamMembers = ({ prefix }: { prefix: string }) => {
       </h2>
       <div className="row justify-content-center my-5">
         {team.map(([memberProps, img]) => (
-          <TeamMember {...memberProps} img={img} emoji={emoji} key={`team-${memberProps.name}`} />
+          <TeamMember {...memberProps} img={img} key={`team-${memberProps.name}`} />
         ))}
       </div>
       <hr />
