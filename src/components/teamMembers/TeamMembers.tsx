@@ -40,44 +40,54 @@ const TeamMember = ({
   role,
   description,
   img,
+  emoji,
   twitter,
   linkedIn,
   article,
 }: AuthorProps & {
   img: GatsbyImageFluidProps;
-}) => (
-  <CustomFade className="ledgista col-12 col-md-6 col-lg-4" delay={300}>
-    <div className="pb-6 h-100 d-flex flex-column align-items-center justify-content-between">
-      <div className="d-flex flex-column align-items-center">
-        <div className="ledgista-image-wrapper">
-          <Img {...img} className="mx-auto" alt={name} />
-        </div>
-        <div className="text-center d-flex flex-column align-items-center">
-          <div>
-            <h4 className="mt-2 mb-0">{name}</h4>
-            <small className="text-muted">{role}</small>
-            <p className="mt-2 font-weight-light">{description}</p>
+  emoji: GatsbyImageFluidProps;
+}) => {
+  const [showEmoji, setShowEmoji] = useState(false);
+  const imageProps = showEmoji ? emoji : img;
+  return (
+    <CustomFade className="ledgista col-12 col-md-6 col-lg-4" delay={300}>
+      <div className="pb-6 h-100 d-flex flex-column align-items-center justify-content-between">
+        <div className="d-flex flex-column align-items-center">
+          <div
+            className="ledgista-image-wrapper"
+            onMouseOver={() => setShowEmoji(true)}
+            onMouseOut={() => setShowEmoji(false)}
+          >
+            <Img {...imageProps} className="mx-auto" alt={name} />
+          </div>
+          <div className="text-center d-flex flex-column align-items-center">
+            <div>
+              <h4 className="mt-2 mb-0">{name}</h4>
+              <small className="text-muted">{role}</small>
+              <p className="mt-2 font-weight-light">{description}</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="d-flex align-items-center">
-        {!!article && (
-          <a className="social-icon mx-2" href={`/updates/${article}/`}>
-            <FontAwesomeIcon icon={faComments} />
+        <div className="d-flex align-items-center">
+          {!!article && (
+            <a className="social-icon mx-2" href={`/updates/${article}/`}>
+              <FontAwesomeIcon icon={faComments} />
+            </a>
+          )}
+          <a className="social-icon mx-2" href={linkedIn} {...targetBlank}>
+            <FontAwesomeIcon icon={faLinkedin} />
           </a>
-        )}
-        <a className="social-icon mx-2" href={linkedIn} {...targetBlank}>
-          <FontAwesomeIcon icon={faLinkedin} />
-        </a>
-        {!!twitter && (
-          <a className={`social-icon mx-2`} href={twitter || ''} {...targetBlank}>
-            <FontAwesomeIcon icon={faTwitter} />
-          </a>
-        )}
+          {!!twitter && (
+            <a className={`social-icon mx-2`} href={twitter || ''} {...targetBlank}>
+              <FontAwesomeIcon icon={faTwitter} />
+            </a>
+          )}
+        </div>
       </div>
-    </div>
-  </CustomFade>
-);
+    </CustomFade>
+  );
+};
 
 export const TeamMembers = ({ prefix }: { prefix: string }) => {
   const teamImages = getTeamImages();
@@ -88,6 +98,7 @@ export const TeamMembers = ({ prefix }: { prefix: string }) => {
   useEffect(() => {
     setTeam((prev) => shuffleArray(prev));
   }, []);
+  const emoji = team[0][1];
 
   return (
     <div className="container text-center my-4 mb-lg-6">
@@ -96,7 +107,7 @@ export const TeamMembers = ({ prefix }: { prefix: string }) => {
       </h2>
       <div className="row justify-content-center my-5">
         {team.map(([memberProps, img]) => (
-          <TeamMember {...memberProps} img={img} key={`team-${memberProps.name}`} />
+          <TeamMember {...memberProps} img={img} emoji={emoji} key={`team-${memberProps.name}`} />
         ))}
       </div>
       <hr />
