@@ -40,14 +40,15 @@ const TeamMember = ({
   role,
   description,
   img,
+  emojiFilename,
   twitter,
   linkedIn,
   article,
 }: AuthorProps & {
   img: GatsbyImageFluidProps;
+  emojiFilename: string;
 }) => {
   const [showEmoji, setShowEmoji] = useState(false);
-  const emojiFileName = name.split(' ')[0].toLowerCase();
   return (
     <CustomFade className="ledgista col-12 col-md-6 col-lg-4" delay={300}>
       <div className="pb-6 h-100 d-flex flex-column align-items-center justify-content-between">
@@ -58,7 +59,7 @@ const TeamMember = ({
             onMouseOut={() => setShowEmoji(false)}
           >
             {showEmoji ? (
-              <img src={`/emojis/${emojiFileName}.gif`} />
+              <img src={`/emojis/${emojiFilename}.gif`} />
             ) : (
               <Img {...img} className="mx-auto" alt={name} />
             )}
@@ -94,7 +95,7 @@ const TeamMember = ({
 export const TeamMembers = ({ prefix }: { prefix: string }) => {
   const teamImages = getTeamImages();
   const teamDescriptions = getTeamDescriptions(prefix);
-  const teamData = teamMemberList.map((name) => [teamDescriptions[name], teamImages[name]]);
+  const teamData = teamMemberList.map((name) => [name, teamDescriptions[name], teamImages[name]]);
 
   const [team, setTeam] = useState(teamData);
   useEffect(() => {
@@ -107,8 +108,8 @@ export const TeamMembers = ({ prefix }: { prefix: string }) => {
         <DynamicTrans>Team</DynamicTrans>
       </h2>
       <div className="row justify-content-center my-5">
-        {team.map(([memberProps, img]) => (
-          <TeamMember {...memberProps} img={img} key={`team-${memberProps.name}`} />
+        {team.map(([name, member, img]) => (
+          <TeamMember {...member} emojiFilename={name} img={img} key={`team-${name}`} />
         ))}
       </div>
       <hr />
