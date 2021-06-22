@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Img, { GatsbyImageFluidProps } from 'gatsby-image';
 
+import { Helmet } from 'react-helmet';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faComments } from '@fortawesome/free-solid-svg-icons';
@@ -49,20 +50,20 @@ const TeamMember = ({
   emojiFilename: string;
 }) => {
   const [showEmoji, setShowEmoji] = useState(false);
+  const emojiPath = `/emojis/${emojiFilename}.gif`;
   return (
     <CustomFade className="ledgista col-12 col-md-6 col-lg-4" delay={300}>
       <div className="pb-6 h-100 d-flex flex-column align-items-center justify-content-between">
         <div className="d-flex flex-column align-items-center">
+          <Helmet>
+            <link rel="preload" as="image" href={emojiPath} />
+          </Helmet>
           <div
             className="ledgista-image-wrapper"
             onMouseOver={() => setShowEmoji(true)}
             onMouseOut={() => setShowEmoji(false)}
           >
-            {showEmoji ? (
-              <img src={`/emojis/${emojiFilename}.gif`} />
-            ) : (
-              <Img {...img} className="mx-auto" alt={name} />
-            )}
+            {showEmoji ? <img src={emojiPath} /> : <Img {...img} className="mx-auto" alt={name} />}
           </div>
           <div className="text-center d-flex flex-column align-items-center">
             <div>
