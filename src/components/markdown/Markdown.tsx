@@ -93,7 +93,7 @@ export const MarkdownImage = ({
       className={align ? `mx-auto float-md-${align} size-md-small m-6` : 'mx-auto my-6'}
       style={w ? { maxWidth: `${w}px` } : {}}
     >
-      <a href={imgSrc} data-provide="lightbox">
+      <a href={imgSrc} data-provide="lightbox" {...targetBlank}>
         {Image}
       </a>
       {alt && (
