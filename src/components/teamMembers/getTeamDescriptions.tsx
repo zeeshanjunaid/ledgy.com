@@ -85,6 +85,7 @@ export const getTeamDescriptions = (
     twitter: 'https://twitter.com/HenzeJules',
     linkedIn: 'https://ch.linkedin.com/in/jules-henze',
     mail: 'jules@ledgy.com',
+    article: 'interview-with-jules-henze-software-engineer-at-ledgy',
   },
   marius: {
     name: 'Marius Colacioiu',
