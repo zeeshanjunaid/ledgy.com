@@ -65,6 +65,7 @@ export const MarkdownImage = ({
         nodes {
           contentful_id
           localFile {
+            publicURL
             childImageSharp {
               fluid {
                 ...GatsbyImageSharpFluid
@@ -82,13 +83,18 @@ export const MarkdownImage = ({
   );
   const { align, w } = getImageParams(title);
   const img = record?.localFile?.childImageSharp;
-  return img ? (
+  const imgSrc = record?.localFile?.publicURL;
+  const Image =
+    (img && <Img {...img} />) ||
+    (imgSrc && <img src={imgSrc} className="d-block mx-auto" />) ||
+    null;
+  return Image ? (
     <figure
       className={align ? `mx-auto float-md-${align} size-md-small m-6` : 'mx-auto my-6'}
       style={w ? { maxWidth: `${w}px` } : {}}
     >
-      <a href={img.fluid.src} data-provide="lightbox">
-        <Img {...img} />
+      <a href={imgSrc} data-provide="lightbox" {...targetBlank}>
+        {Image}
       </a>
       {alt && (
         <figcaption className="text-muted text-center px-4 font-weight-light mt-2">
