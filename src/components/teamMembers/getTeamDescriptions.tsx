@@ -259,6 +259,18 @@ export const getTeamDescriptions = (
     linkedIn: 'https://www.linkedin.com/in/rory-buckworth-0b2847156/',
     mail: 'rory@ledgy.com',
   },
+  tanya: {
+    name: 'Tanya Bikov',
+    role: 'Software Engineer & Avid Reader',
+    description: (
+      <Trans>
+        Coming from the startup nation, Tanya joined Ledgy where she uses her love of software
+        development to help push the European startup ecosystem to the next level.
+      </Trans>
+    ),
+    linkedIn: 'https://www.linkedin.com/in/tanya-bikov/',
+    mail: 'tanya@ledgy.com',
+  },
   luna: {
     name: 'Luna',
     role: 'Rocket & Trailblazer',

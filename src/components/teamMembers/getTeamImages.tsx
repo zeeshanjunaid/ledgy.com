@@ -92,6 +92,11 @@ export const TeamFragment = graphql`
         ...GatsbyImageSharpFluid
       }
     }
+    tanya: imageSharp(fluid: { originalName: { regex: "/tanya.jpg/" } }) {
+      fluid(maxWidth: 245, maxHeight: 245) {
+        ...GatsbyImageSharpFluid
+      }
+    }
     luna: imageSharp(fluid: { originalName: { regex: "/luna.jpg/" } }) {
       fluid(maxWidth: 245, maxHeight: 245) {
         ...GatsbyImageSharpFluid
