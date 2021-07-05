@@ -275,4 +275,16 @@ export const getTeamDescriptions = (
     linkedIn: 'https://www.linkedin.com/company/nasa',
     mail: 'contact@ledgy.com',
   },
+  tanya: {
+    name: 'Tanya Bikov',
+    role: 'Software Engineer & Avid Reader',
+    description: (
+      <Trans>
+        Coming from the startup nation, Tanya joined Ledgy where she uses her love 
+        of software development to help push the European startup ecosystem to the next level.
+      </Trans>
+    ),
+    linkedIn: 'https://www.linkedin.com/in/tanya-bikov/',
+    mail: 'tanya@ledgy.com',
+  },
 });
