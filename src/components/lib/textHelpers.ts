@@ -23,9 +23,11 @@ import {
   CAP_TABLE,
   EQUITY_PLAN_AUTOMATION,
   SCENARIO_MODELING,
+  EMPLOYEE_DASHBOARDS_TITLE,
   CAP_TABLE_MANAGEMENT_TITLE,
   EQUITY_PLAN_AUTOMATION_TITLE,
   SCENARIO_MODELING_TITLE,
+  EMPLOYEE_DASHBOARDS,
 } from '../../helpers';
 
 export const getUnderlineHtml = (text: string): string =>
@@ -140,6 +142,18 @@ const features: NavbarMenuColumn = {
   ],
 };
 
+const engagement: NavbarMenuColumn = {
+  header: 'Engagement',
+  items: [
+    {
+      link: EMPLOYEE_DASHBOARDS,
+      title: EMPLOYEE_DASHBOARDS_TITLE,
+      description: 'Make their ownership clear at every stage',
+      icon: 'employees',
+    },
+  ],
+};
+
 const learn: NavbarMenuColumn = {
   header: 'Learn',
   items: [
@@ -227,7 +241,7 @@ const pricingTypes: NavbarMenuColumn = {
   ],
 };
 
-const solutions: NavbarMenuColumn[] = [teams, features];
+const solutions: NavbarMenuColumn[] = [teams, features, engagement];
 const resources: NavbarMenuColumn[] = [learn, explore, tools];
 const pricing: NavbarMenuColumn[] = [pricingTypes];
 
