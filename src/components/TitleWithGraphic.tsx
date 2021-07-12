@@ -47,7 +47,7 @@ export const TitleWithGraphic = ({
 
   return (
     <div className={`overflow-hidden ${wrapperClassName}`}>
-      <Section className="position-relative" noPadding={isTopBanner}>
+      <Section className="position-relative" noPadding={isTopBanner} smallPadding>
         <div className={`${tiltedBackground} position-absolute z-index-background`} />
         <div className={`row justify-content-center py-5 py-lg-7 ${rowMargin}`}>
           <div
