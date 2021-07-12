@@ -84,6 +84,7 @@ export const DATA_PROTECTION = 'data-protection';
 export const CAP_TABLE = 'cap-table';
 export const EQUITY_PLAN_AUTOMATION = 'equity-plan-automation';
 export const SCENARIO_MODELING = 'scenario-modeling';
+export const EMPLOYEE_DASHBOARDS = 'employee-dashboards';
 
 //titles
 export const HR_AND_COMPENSATION_TITLE = 'HR & Compensation';
@@ -92,3 +93,4 @@ export const VCS_BUSINESS_ANGELS_TITLE = 'VCs & Business Angels';
 export const CAP_TABLE_MANAGEMENT_TITLE = 'Cap Table Management';
 export const EQUITY_PLAN_AUTOMATION_TITLE = 'Equity Plan Automation';
 export const SCENARIO_MODELING_TITLE = 'Scenario & Exit Modeling';
+export const EMPLOYEE_DASHBOARDS_TITLE = 'Employee Dashboards';

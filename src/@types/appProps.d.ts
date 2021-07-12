@@ -44,6 +44,7 @@ declare type IconType =
   | 'moneybag'
   | 'nordics'
   | 'robot'
+  | 'employees'
   | 'rocket'
   | 'story'
   | 'template'
