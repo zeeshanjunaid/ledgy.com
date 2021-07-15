@@ -33,7 +33,7 @@ export const getInvestorDescriptions = (): {
   },
   cyrill: {
     name: 'Cyrill Osterwalder',
-    description: 'Digital entrepreneur and investor. Security, crypto & privacy exper',
+    description: 'Digital entrepreneur and investor. Security, crypto & privacy expert',
   },
   luzius: {
     name: 'Luzius Meisser',
