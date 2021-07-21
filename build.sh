@@ -4,7 +4,10 @@
 set -e
 
 DEPRECATED_TAG="deprecated"
-[ ! -e .cache  ] && DEPRECATE_TRANSLATIONS_ON_CLEAN_BUILD="tag-absent=${DEPRECATED_TAG}"
+if [ ! -e .cache  ]; then
+  echo "Clean build: Deprecating old assets on Loco"
+  DEPRECATE_TRANSLATIONS_ON_CLEAN_BUILD="tag-absent=${DEPRECATED_TAG}"
+fi
 
 ./getTranslations.sh
 
