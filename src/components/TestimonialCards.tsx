@@ -1,7 +1,6 @@
 import React from 'react';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import { Section, LinkWithChevron, CustomFade, Image } from './utils';
+import { Section, LinkWithChevron, CustomFade, Image, DynamicTrans } from './utils';
 
 const TestimonialCard = ({
   card,
@@ -20,7 +19,7 @@ const TestimonialCard = ({
         <div>
           <Image image={logo} />
           <div className="my-5">
-            <MDXRenderer>{text.childMdx.body}</MDXRenderer>
+            <DynamicTrans>{text.text}</DynamicTrans>
           </div>
         </div>
         <div className="d-flex justify-content-between">
