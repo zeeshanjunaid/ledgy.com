@@ -66,9 +66,7 @@ export const TestimonialCardsFragment = graphql`
       linkText
       linkUrl
       text {
-        childMdx {
-          body
-        }
+        text
       }
       logo {
         localFile {

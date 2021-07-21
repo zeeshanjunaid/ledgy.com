@@ -48,7 +48,7 @@ declare type FeatureGridContentProps = Id & {
 
 declare type TestimonialCardProps = {
   logo: ImageProps;
-  text: Mdx;
+  text: { text: string };
   signature: string;
   linkText?: string;
   linkUrl?: string;

@@ -3,14 +3,18 @@
 # Exit if any command fails
 set -e
 
+DEPRECATED_TAG="deprecated"
+[ ! -e .cache  ] && DEPRECATE_TRANSLATIONS_ON_CLEAN_BUILD="tag-absent=${DEPRECATED_TAG}"
+
 ./getTranslations.sh
 
 npm rebuild sharp node-sass
 gatsby build --log-pages
 
+
 if [ "$BRANCH" = "master" ]; then
   npm run extract
   cd src/locale/en
   cat dynamic.po >> messages.po
-  curl -u ${LOCO_KEY_REBRANDING}: --data-binary @messages.po https://localise.biz/api/import/po?tag-absent=deprecated
+  curl -u ${LOCO_KEY_REBRANDING}: --data-binary @messages.po "https://localise.biz/api/import/po?untag-all=${DEPRECATED_TAG}&${DEPRECATE_TRANSLATIONS_ON_CLEAN_BUILD}"
 fi
