@@ -5,7 +5,6 @@ const getDestinations = (destinations: string[]): Record<string, boolean> =>
   destinations.reduce((res, v) => ({ ...res, [v]: true }), { All: false });
 
 export const GOOGLE_ADS_CLICK_ID = 'gclid';
-const SEGMENT_COOKIE_ID = 'ajs_anonymous_id';
 const HAS_ACCOUNT_COOKIE_ID = 'hasAccount';
 const cookieLifetime = 60 * 60 * 24 * 365;
 
@@ -36,7 +35,8 @@ export const saveGoogleAdsClickId = () => {
 
 export const getGoogleAdsClickId = () => getCookie(GOOGLE_ADS_CLICK_ID);
 
-export const hasAcceptedCookies = () => !!getCookie(SEGMENT_COOKIE_ID);
+export const hasAcceptedCookies = () =>
+  !!(getCookie('ajs_anonymous_id') || getCookie('ajs_user_id'));
 export const hasLedgyAccount = () => !!getCookie(HAS_ACCOUNT_COOKIE_ID);
 
 export const loadMarketingTools = (segmentDestinations: string[]) => {
