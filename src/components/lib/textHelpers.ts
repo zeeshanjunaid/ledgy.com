@@ -22,12 +22,14 @@ import {
   DATA_PROTECTION,
   CAP_TABLE,
   EQUITY_PLAN_AUTOMATION,
+  INVESTOR_DASHBOARDS,
   SCENARIO_MODELING,
   EMPLOYEE_DASHBOARDS_TITLE,
   CAP_TABLE_MANAGEMENT_TITLE,
   EQUITY_PLAN_AUTOMATION_TITLE,
   SCENARIO_MODELING_TITLE,
   EMPLOYEE_DASHBOARDS,
+  INVESTOR_DASHBOARDS_TITLE,
 } from '../../helpers';
 
 export const getUnderlineHtml = (text: string): string =>
@@ -150,6 +152,12 @@ const engagement: NavbarMenuColumn = {
       title: EMPLOYEE_DASHBOARDS_TITLE,
       description: 'Make their ownership clear at every stage',
       icon: 'employees',
+    },
+    {
+      link: INVESTOR_DASHBOARDS,
+      title: INVESTOR_DASHBOARDS_TITLE,
+      description: 'Truly understand your investments and returns',
+      icon: 'investor',
     },
   ],
 };
