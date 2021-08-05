@@ -8,10 +8,14 @@ export const GOOGLE_ADS_CLICK_ID = 'gclid';
 const HAS_ACCOUNT_COOKIE_ID = 'hasAccount';
 const cookieLifetime = 60 * 60 * 24 * 365;
 
-export const getCookie = (name: string) =>
-  typeof document === 'object'
-    ? (document.cookie.split('; ').find((v) => v.startsWith(name)) || '').slice(name.length + 1)
-    : '';
+export const getCookie = (name: string) => {
+  if (typeof document !== 'object') return '';
+
+  const snippet = `${name}=`;
+  return (document.cookie.split('; ').find((v) => v.startsWith(snippet)) || '').slice(
+    snippet.length
+  );
+};
 
 const getUrlParam = (name: string) =>
   typeof location === 'object'
