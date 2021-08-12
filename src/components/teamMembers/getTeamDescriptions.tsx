@@ -256,7 +256,7 @@ export const getTeamDescriptions = (
         high-performing Ledgy team.
       </Trans>
     ),
-    linkedIn: 'https://www.linkedin.com/in/sarabrioschi/ ',
+    linkedIn: 'https://www.linkedin.com/in/sarabrioschi/',
     mail: 'sara@ledgy.com',
   },
   luna: {
