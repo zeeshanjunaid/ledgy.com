@@ -103,7 +103,7 @@ export const getTeamDescriptions = (
   },
   jahlela: {
     name: 'Jahlela Hasle',
-    role: 'Software Engineer & Neuroscientist',
+    role: 'Engineering Team Lead & Neuroscientist',
     description: (
       <Trans>
         Jahlela has a background in cognitive neuroscience, graduated from UC Berkeley, and founded
@@ -155,19 +155,6 @@ export const getTeamDescriptions = (
     linkedIn: 'https://www.linkedin.com/in/karimeandere/',
     mail: 'karime@ledgy.com',
     article: 'karime-andere',
-  },
-  tamas: {
-    name: 'Tamas Varkonyi',
-    role: 'Operations, Finance & Home Baker',
-    description: (
-      <Trans>
-        After graduating from the University of Cambridge, Tamas worked at PwC and co-founded his
-        own startup. He is responsible for smooth operations at Ledgy, with special attention to
-        finance, HR and legal matters.
-      </Trans>
-    ),
-    linkedIn: 'https://www.linkedin.com/in/tamasvarkonyi/',
-    mail: 'tamas@ledgy.com',
   },
   ermias: {
     name: 'Ermias Giovanni',
@@ -247,18 +234,6 @@ export const getTeamDescriptions = (
     mail: 'nicolas@ledgy.com',
     article: 'nicolas-briner',
   },
-  rory: {
-    name: 'Rory Buckworth',
-    role: 'Account Executive & Hiker',
-    description: (
-      <Trans>
-        Rory has a background in Sales with 5 years of experience. His aim is to spread the word
-        about Ledgy in the UK, helping entrepreneurs achieve their goals.
-      </Trans>
-    ),
-    linkedIn: 'https://www.linkedin.com/in/rory-buckworth-0b2847156/',
-    mail: 'rory@ledgy.com',
-  },
   tanya: {
     name: 'Tanya Bikov',
     role: 'Software Engineer & Avid Reader',
@@ -270,6 +245,19 @@ export const getTeamDescriptions = (
     ),
     linkedIn: 'https://www.linkedin.com/in/tanya-bikov/',
     mail: 'tanya@ledgy.com',
+  },
+  sara: {
+    name: 'Sara Brioschi',
+    role: 'Head Of Talent & Motorbiker',
+    description: (
+      <Trans>
+        With a background in Economics and Management, Sara worked with several startups from Europe
+        and Silicon Valley. She dedicates herself to attracting, engaging, and growing the
+        high-performing Ledgy team.
+      </Trans>
+    ),
+    linkedIn: 'https://www.linkedin.com/in/sarabrioschi/',
+    mail: 'sara@ledgy.com',
   },
   luna: {
     name: 'Luna',
