@@ -52,11 +52,6 @@ export const TeamFragment = graphql`
         ...GatsbyImageSharpFluid
       }
     }
-    tamas: imageSharp(fluid: { originalName: { regex: "/tamas.jpg/" } }) {
-      fluid(maxWidth: 245, maxHeight: 245) {
-        ...GatsbyImageSharpFluid
-      }
-    }
     ermias: imageSharp(fluid: { originalName: { regex: "/ermias.jpg/" } }) {
       fluid(maxWidth: 245, maxHeight: 245) {
         ...GatsbyImageSharpFluid
@@ -87,12 +82,12 @@ export const TeamFragment = graphql`
         ...GatsbyImageSharpFluid
       }
     }
-    rory: imageSharp(fluid: { originalName: { regex: "/rory.jpg/" } }) {
+    tanya: imageSharp(fluid: { originalName: { regex: "/tanya.jpg/" } }) {
       fluid(maxWidth: 245, maxHeight: 245) {
         ...GatsbyImageSharpFluid
       }
     }
-    tanya: imageSharp(fluid: { originalName: { regex: "/tanya.jpg/" } }) {
+    sara: imageSharp(fluid: { originalName: { regex: "/sara.jpg/" } }) {
       fluid(maxWidth: 245, maxHeight: 245) {
         ...GatsbyImageSharpFluid
       }

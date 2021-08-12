@@ -26,14 +26,13 @@ const teamMemberList = [
   'armon',
   'karime',
   'ermias',
-  'tamas',
   'mariana',
   'xiao',
   'marina',
   'catarina',
   'nicolas',
-  'rory',
   'tanya',
+  'sara',
   'luna',
 ];
 
