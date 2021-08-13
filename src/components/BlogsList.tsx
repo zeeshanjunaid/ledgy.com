@@ -36,16 +36,17 @@ const getBlogs = () =>
 export const BlogsList = ({ prefix }: { prefix: string }) => {
   const blogs = getBlogs();
   const { edges } = blogs.allContentfulPage;
-  const [tag, setTag] = useState('All topics');
-  const blogTags = ['All topics', 'Companies', 'Investors', 'Equity', 'Funding'];
-  console.log({ tag });
+
+  const ALL_TOPICS = 'All topics';
+  const BLOG_TAGS = [ALL_TOPICS, 'Companies', 'Investors', 'Equity', 'Funding'];
+  const [tag, setTag] = useState(ALL_TOPICS);
   return (
     <ContentBody>
-      <ButtonGroup buttonTexts={blogTags} onClick={setTag} tag={tag} />
+      <ButtonGroup buttonTexts={BLOG_TAGS} onClick={setTag} tag={tag} />
       {edges.map((edge: UntypedObject) => {
         const { node } = edge;
         const { id, slug, tags, description: postDescription } = node;
-        const showBlog = (!!tags && tags.includes(tag)) || tag === 'All topics';
+        const showBlog = (!!tags && tags.includes(tag)) || tag === ALL_TOPICS;
 
         return showBlog ? (
           <PostLink

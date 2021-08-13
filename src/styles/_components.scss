@@ -302,7 +302,6 @@ input[type=number]::-webkit-outer-spin-button {
 .card {
   will-change: transform;
   transition: all 0.3s;
-  border-width: 0;
   &:hover {
     box-shadow: $box-shadow-light;
     transition: all 0.3s;
@@ -312,6 +311,7 @@ input[type=number]::-webkit-outer-spin-button {
     min-height: 250px;
     border-radius:  $border-radius-wide;
     box-shadow: $box-shadow-wide;
+    border-width: 0;
   }
   &-blog .gatsby-image-wrapper {
     position: static !important;

@@ -36,16 +36,18 @@ const getUpdates = () =>
 export const UpdatesList = ({ prefix }: { prefix: string }) => {
   const updates = getUpdates();
   const { edges } = updates.allContentfulPage;
-  const [tag, setTag] = useState('All topics');
-  const updatesTags = ['All topics', 'Product', 'Company', 'Team', 'News'];
+
+  const ALL_TOPICS = 'All topics';
+  const UPDATE_TAGS = [ALL_TOPICS, 'Product', 'Company', 'Team', 'News'];
+  const [tag, setTag] = useState(ALL_TOPICS);
   return (
     <div>
       <ContentBody>
-        <ButtonGroup buttonTexts={updatesTags} onClick={setTag} tag={tag} />
+        <ButtonGroup buttonTexts={UPDATE_TAGS} onClick={setTag} tag={tag} />
         {edges.map((edge: UntypedObject) => {
           const { node } = edge;
           const { id, slug, tags, description: postDescription } = node;
-          const showUpdate = (!!tags && tags.includes(`Updates_${tag}`)) || tag === 'All topics';
+          const showUpdate = (!!tags && tags.includes(`Updates_${tag}`)) || tag === ALL_TOPICS;
 
           return showUpdate ? (
             <PostLink
