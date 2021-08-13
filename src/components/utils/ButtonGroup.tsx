@@ -14,7 +14,7 @@ export const ButtonGroup = ({
     {buttonTexts.map((buttonText) => (
       <div key={buttonText} className="p-1 p-md-0">
         <Button
-          className={`button-tag mb-2  ${tag === buttonText ? 'selected' : ''}`}
+          className={`button-group mb-2 ${tag === buttonText ? 'selected' : ''}`}
           onClick={() => onClick(buttonText)}
         >
           <DynamicTrans>{buttonText}</DynamicTrans>
