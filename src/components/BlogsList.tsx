@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { ContentBody, PostLink } from '../components';
 import { ButtonGroup } from './utils';
@@ -14,6 +14,7 @@ const getBlogs = () =>
         edges {
           node {
             id
+            tags
             slug
             title
             description
@@ -35,14 +36,17 @@ const getBlogs = () =>
 export const BlogsList = ({ prefix }: { prefix: string }) => {
   const blogs = getBlogs();
   const { edges } = blogs.allContentfulPage;
-  const buttonNames = ['All topics', 'Companies', 'Investors', 'Equity', 'Funding'];
+  const [tag, setTag] = useState('All topics');
+  const blogTags = ['All topics', 'Companies', 'Investors', 'Equity', 'Funding'];
   return (
     <ContentBody>
-      <ButtonGroup buttonNames={buttonNames} />
+      <ButtonGroup buttonNames={blogTags} setTag={setTag} />
       {edges.map((edge: UntypedObject) => {
         const { node } = edge;
-        const { id, slug, description: postDescription } = node;
-        return (
+        const { id, slug, tags, description: postDescription } = node;
+        const showBlog = (!!tags && tags.includes(tag)) || tag === 'All topics';
+
+        return showBlog ? (
           <PostLink
             key={id}
             to={`blog/${slug}`}
@@ -50,6 +54,8 @@ export const BlogsList = ({ prefix }: { prefix: string }) => {
             description={postDescription}
             prefix={prefix}
           />
+        ) : (
+          <div />
         );
       })}
     </ContentBody>
