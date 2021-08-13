@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { ContentBody, PostLink } from '../components';
 import { ButtonGroup } from './utils';
+import { ALL_TOPICS, BLOG_TAGS } from '../helpers';
 
 const getBlogs = () =>
   useStaticQuery(graphql`
@@ -36,9 +37,6 @@ const getBlogs = () =>
 export const BlogsList = ({ prefix }: { prefix: string }) => {
   const blogs = getBlogs();
   const { edges } = blogs.allContentfulPage;
-
-  const ALL_TOPICS = 'All topics';
-  const BLOG_TAGS = [ALL_TOPICS, 'Companies', 'Investors', 'Equity', 'Funding'];
   const [tag, setTag] = useState(ALL_TOPICS);
   return (
     <ContentBody>

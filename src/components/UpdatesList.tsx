@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { ContentBody, PostLink } from '../components';
 import { ButtonGroup } from './utils';
+import { ALL_TOPICS, UPDATE_TAGS } from '../helpers';
 
 const getUpdates = () =>
   useStaticQuery(graphql`
@@ -36,9 +37,6 @@ const getUpdates = () =>
 export const UpdatesList = ({ prefix }: { prefix: string }) => {
   const updates = getUpdates();
   const { edges } = updates.allContentfulPage;
-
-  const ALL_TOPICS = 'All topics';
-  const UPDATE_TAGS = [ALL_TOPICS, 'Product', 'Company', 'Team', 'News'];
   const [tag, setTag] = useState(ALL_TOPICS);
   return (
     <div>
