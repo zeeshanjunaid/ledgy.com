@@ -27,7 +27,7 @@ export const CardLink = ({
   showImage?: boolean;
 }) => (
   <Link to={formatUrl(prefix, to)} {...(isExternal ? targetBlank : {})}>
-    <div className={`card card-${type} mb-6`}>
+    <div className={`card card-${type} mb-5`}>
       <div className="row m-0 flex-1">
         {showImage && (
           <div className="col-md-6 col-lg-3">
