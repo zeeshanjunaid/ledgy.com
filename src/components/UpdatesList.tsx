@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { ContentBody, PostLink } from '../components';
+import { ButtonGroup } from './utils';
 
 const getUpdates = () =>
   useStaticQuery(graphql`
@@ -34,9 +35,11 @@ const getUpdates = () =>
 export const UpdatesList = ({ prefix }: { prefix: string }) => {
   const updates = getUpdates();
   const { edges } = updates.allContentfulPage;
+  const buttonNames = ['All topics', 'Product', 'Company', 'Team', 'News'];
   return (
     <div>
       <ContentBody>
+        <ButtonGroup buttonNames={buttonNames} />
         {edges.map((edge: UntypedObject) => {
           const { node } = edge;
           const { id, slug, description: postDescription } = node;

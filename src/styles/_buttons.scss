@@ -38,6 +38,14 @@
   }
 }
 
+.button-wide {
+  min-width: 200px;
+  border:0;
+  &:hover {
+    background-color:$energetic-blue;
+  }
+}
+
 // Multi-button
 
 .multi-button {
@@ -67,3 +75,4 @@
     background-color: $light-energetic-blue !important;
   }
 }
+
