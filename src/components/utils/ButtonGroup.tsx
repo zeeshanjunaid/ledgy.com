@@ -2,17 +2,22 @@ import React from 'react';
 import { Button, DynamicTrans } from '.';
 
 export const ButtonGroup = ({
-  buttonNames,
-  setTag,
+  buttonTexts,
+  onClick,
+  tag,
 }: {
-  buttonNames: string[];
-  setTag: (arg: string) => void;
+  buttonTexts: string[];
+  onClick: (arg: string) => void;
+  tag: string;
 }) => (
   <div className="d-flex justify-content-between mb-6">
-    {buttonNames.map((buttonName) => (
-      <div key={buttonName}>
-        <Button className="button-wide mb-6" onClick={() => setTag(buttonName)}>
-          <DynamicTrans>{buttonName}</DynamicTrans>
+    {buttonTexts.map((buttonText) => (
+      <div key={buttonText}>
+        <Button
+          className={`button-tag mb-4  ${tag === buttonText ? 'selected' : ''}`}
+          onClick={() => onClick(buttonText)}
+        >
+          <DynamicTrans>{buttonText}</DynamicTrans>
         </Button>
       </div>
     ))}

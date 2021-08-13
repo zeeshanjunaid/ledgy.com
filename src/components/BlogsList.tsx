@@ -38,9 +38,10 @@ export const BlogsList = ({ prefix }: { prefix: string }) => {
   const { edges } = blogs.allContentfulPage;
   const [tag, setTag] = useState('All topics');
   const blogTags = ['All topics', 'Companies', 'Investors', 'Equity', 'Funding'];
+  console.log({ tag });
   return (
     <ContentBody>
-      <ButtonGroup buttonNames={blogTags} setTag={setTag} />
+      <ButtonGroup buttonTexts={blogTags} onClick={setTag} tag={tag} />
       {edges.map((edge: UntypedObject) => {
         const { node } = edge;
         const { id, slug, tags, description: postDescription } = node;

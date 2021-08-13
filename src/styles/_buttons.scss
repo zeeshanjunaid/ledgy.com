@@ -38,16 +38,18 @@
   }
 }
 
-.button-wide {
-  min-width: 200px;
+.button-tag {
+  min-width: 12vw;
   border:0;
-  &:hover {
-    background-color:$energetic-blue;
+  &:hover, &:active, &:focus {
+    background-color: $energetic-blue;
+  }
+  &.selected {
+    background-color: $energetic-blue;
   }
 }
 
 // Multi-button
-
 .multi-button {
   color: $gray-400;
   background-color: $white;

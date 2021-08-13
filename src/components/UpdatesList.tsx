@@ -41,7 +41,7 @@ export const UpdatesList = ({ prefix }: { prefix: string }) => {
   return (
     <div>
       <ContentBody>
-        <ButtonGroup buttonNames={updatesTags} setTag={setTag} />
+        <ButtonGroup buttonTexts={updatesTags} onClick={setTag} tag={tag} />
         {edges.map((edge: UntypedObject) => {
           const { node } = edge;
           const { id, slug, tags, description: postDescription } = node;
