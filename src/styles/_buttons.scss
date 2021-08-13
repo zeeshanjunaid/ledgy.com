@@ -40,6 +40,12 @@
 
 .button-tag {
   min-width: 12vw;
+  @include media-breakpoint-down(sm) {
+    min-width: 30vw;
+  }
+  @include media-breakpoint-down(xs) {
+    min-width: 40vw;
+  }
   border:0;
   &:hover, &:active, &:focus {
     background-color: $energetic-blue;
