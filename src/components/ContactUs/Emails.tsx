@@ -20,6 +20,12 @@ export const Emails = () => (
       </h6>
       <a href="mailto:sales@ledgy.com">sales@ledgy.com</a>
     </div>
+    <div className="mb-4">
+      <h6>
+        <DynamicTrans>Career Inquiries</DynamicTrans>
+      </h6>
+      <a href="mailto:work@ledgy.com">work@ledgy.com</a>
+    </div>
     <div>
       <h6>
         <DynamicTrans>General Inquiries</DynamicTrans>
