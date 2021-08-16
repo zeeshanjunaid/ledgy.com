@@ -303,14 +303,14 @@ input[type=number]::-webkit-outer-spin-button {
   will-change: transform;
   transition: all 0.3s;
   &:hover {
-    box-shadow: $box-shadow-light;
+    box-shadow: $box-shadow-wide;
     transition: all 0.3s;
     transform: translateZ(10px) !important;
   }
   &-blog, &-customer-story {
     min-height: 250px;
     border-radius:  $border-radius-wide;
-    box-shadow: $box-shadow-wide;
+    box-shadow: $box-shadow-lighter;
     border-width: 0;
   }
   &-blog .gatsby-image-wrapper {
