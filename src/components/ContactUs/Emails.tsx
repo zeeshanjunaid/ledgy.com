@@ -1,34 +1,34 @@
 import React from 'react';
 import { helpUrl, targetBlank } from '../../helpers';
-import { DynamicTrans } from '../utils';
+import { Trans } from '@lingui/macro';
 
 export const Emails = () => (
   <div className="col-6 p-0 mb-3 text-nowrap">
     <div className="mb-4">
       <h6>
-        <DynamicTrans>Support Questions</DynamicTrans>
+        <Trans>Support Questions</Trans>
       </h6>
       <a href={helpUrl} {...targetBlank} className="kb__text-link">
-        <DynamicTrans>Help Center</DynamicTrans>
+        <Trans>Help Center</Trans>
       </a>
       <br />
       <a href="mailto:support@ledgy.com">support@ledgy.com</a>
     </div>
     <div className="mb-4">
       <h6>
-        <DynamicTrans>Sales Inquiries</DynamicTrans>
+        <Trans>Sales Inquiries</Trans>
       </h6>
       <a href="mailto:sales@ledgy.com">sales@ledgy.com</a>
     </div>
     <div className="mb-4">
       <h6>
-        <DynamicTrans>Career Inquiries</DynamicTrans>
+        <Trans>Career Inquiries</Trans>
       </h6>
       <a href="mailto:work@ledgy.com">work@ledgy.com</a>
     </div>
     <div>
       <h6>
-        <DynamicTrans>General Inquiries</DynamicTrans>
+        <Trans>General Inquiries</Trans>
       </h6>
       <a href="mailto:contact@ledgy.com">contact@ledgy.com</a>
     </div>
