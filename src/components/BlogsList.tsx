@@ -44,7 +44,7 @@ export const BlogsList = ({ prefix }: { prefix: string }) => {
       {edges.map((edge: UntypedObject) => {
         const { node } = edge;
         const { id, slug, tags, description: postDescription } = node;
-        const showBlog = (!!tags && tags.includes(tag)) || tag === ALL_TOPICS;
+        const showBlog = (!!tags && tags.includes(`Blog_${tag}`)) || tag === ALL_TOPICS;
 
         return showBlog ? (
           <PostLink
