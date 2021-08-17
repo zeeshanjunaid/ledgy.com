@@ -1,19 +1,24 @@
-import React, { useMemo } from 'react';
+import React, { useEffect } from 'react';
 import { graphql } from 'gatsby';
 
 import { dynamicI18n, loadScript } from '../helpers';
 import { PageHeader } from '../components';
 import { Title } from './utils';
 
+const loadApplicationForm = async (greenhouseId: string) => {
+  await loadScript('https://boards.eu.greenhouse.io/embed/job_board/js?for=ledgy');
+  window.Grnhse?.Iframe.load(greenhouseId);
+};
+
 const JobPage = ({ data, lang }: Props & { data: { greenhouseJobPost: GreenhouseJobProps } }) => {
   if (!data) return null;
 
   const { title, content, greenhouseId, location } = data.greenhouseJobPost;
-  useMemo(async () => {
-    await loadScript('https://boards.eu.greenhouse.io/embed/job_board/js?for=ledgy');
-    window.Grnhse?.Iframe.load(greenhouseId);
+
+  useEffect(() => {
+    loadApplicationForm(greenhouseId);
   }, []);
-  console.log({ location });
+
   return (
     <div>
       <Title title={dynamicI18n(title)} description={dynamicI18n(location.name)} />
