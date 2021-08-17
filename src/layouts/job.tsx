@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { graphql } from 'gatsby';
+import { i18n } from '@lingui/core';
 
 import { dynamicI18n, loadScript } from '../helpers';
 import { PageHeader } from '../components';
@@ -23,7 +24,11 @@ const JobPage = ({ data, lang }: Props & { data: { greenhouseJobPost: Greenhouse
 
   return (
     <div>
-      <Title title={dynamicI18n(title)} description={dynamicI18n(location.name)} />
+      <Title
+        title={dynamicI18n(title)}
+        section={i18n._('Career')}
+        description={dynamicI18n(location.name)}
+      />
       <PageHeader
         lang={lang}
         documentLang="en"
