@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { ContentBody, PostLink } from '../components';
+import { ButtonGroup } from './utils';
+import { ALL_TOPICS, UPDATE_TAGS } from '../helpers';
 
 const getUpdates = () =>
   useStaticQuery(graphql`
@@ -14,6 +16,7 @@ const getUpdates = () =>
           node {
             id
             slug
+            tags
             title
             description
             language
@@ -34,13 +37,17 @@ const getUpdates = () =>
 export const UpdatesList = ({ prefix }: { prefix: string }) => {
   const updates = getUpdates();
   const { edges } = updates.allContentfulPage;
+  const [tag, setTag] = useState(ALL_TOPICS);
   return (
     <div>
       <ContentBody>
+        <ButtonGroup buttonTexts={UPDATE_TAGS} onClick={setTag} tag={tag} />
         {edges.map((edge: UntypedObject) => {
           const { node } = edge;
-          const { id, slug, description: postDescription } = node;
-          return (
+          const { id, slug, tags, description: postDescription } = node;
+          const showUpdate = (!!tags && tags.includes(`Updates_${tag}`)) || tag === ALL_TOPICS;
+
+          return showUpdate ? (
             <PostLink
               key={id}
               to={`updates/${slug}`}
@@ -49,6 +56,8 @@ export const UpdatesList = ({ prefix }: { prefix: string }) => {
               prefix={prefix}
               showImage={false}
             />
+          ) : (
+            <div />
           );
         })}
       </ContentBody>

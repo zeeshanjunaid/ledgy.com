@@ -11,3 +11,4 @@ export * from './LinkWithChevron';
 export * from './Modal';
 export * from './Section';
 export * from './SectionHeader';
+export * from './ButtonGroup';

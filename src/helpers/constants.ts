@@ -96,3 +96,8 @@ export const EQUITY_PLAN_AUTOMATION_TITLE = 'Equity Plan Automation';
 export const SCENARIO_MODELING_TITLE = 'Scenario & Exit Modeling';
 export const EMPLOYEE_DASHBOARDS_TITLE = 'Employee Dashboards';
 export const INVESTOR_DASHBOARDS_TITLE = 'Investor Dashboards';
+
+//tags
+export const ALL_TOPICS = 'All topics';
+export const BLOG_TAGS = [ALL_TOPICS, 'Companies', 'Investors', 'Equity', 'Funding'];
+export const UPDATE_TAGS = [ALL_TOPICS, 'Product', 'Company', 'Team', 'News'];

@@ -38,8 +38,24 @@
   }
 }
 
-// Multi-button
+.button-group {
+  min-width: 12vw;
+  @include media-breakpoint-down(sm) {
+    min-width: 30vw;
+  }
+  @include media-breakpoint-down(xs) {
+    min-width: 40vw;
+  }
+  border:0;
+  &:hover, &:active, &:focus {
+    background-color: $energetic-blue;
+  }
+  &.selected {
+    background-color: $energetic-blue;
+  }
+}
 
+// Multi-button
 .multi-button {
   color: $gray-400;
   background-color: $white;
@@ -67,3 +83,4 @@
     background-color: $light-energetic-blue !important;
   }
 }
+
