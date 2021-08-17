@@ -6,6 +6,7 @@ import { BlogsList } from './BlogsList';
 import { UpdatesList } from './UpdatesList';
 import { CustomerStoriesList } from './customerStories';
 import { WebinarsList } from './WebinarsList';
+import { JobBoard } from './JobBoard';
 import { ContactUs } from './ContactUs';
 
 export const StaticBlockPicker = ({ block, prefix }: StaticBlockProps & { prefix: string }) => {
@@ -29,6 +30,8 @@ export const StaticBlockPicker = ({ block, prefix }: StaticBlockProps & { prefix
       return <CustomerStoriesList prefix={prefix} />;
     case 'webinarsList':
       return <WebinarsList prefix={prefix} />;
+    case 'jobBoard':
+      return <JobBoard prefix={prefix} />;
     case 'contactUs':
       return <ContactUs />;
     default:

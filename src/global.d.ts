@@ -4,6 +4,7 @@ declare global {
   interface Window {
     analytics: UntypedObject;
     Sentry?: UntypedObject;
+    Grnhse?: UntypedObject;
   }
   type ImageProps = {
     localFile?: { childImageSharp: GatsbyImageProps };
