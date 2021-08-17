@@ -7,7 +7,7 @@ import { formatUrl } from './lib';
 const getJobs = () =>
   useStaticQuery(graphql`
     query {
-      allGreenhouseDepartment {
+      allGreenhouseDepartment(sort: { fields: name }) {
         nodes {
           greenhouseId
           name
@@ -25,6 +25,9 @@ const Job = ({ title, greenhouseId, prefix }: GreenhouseJobProps & Prefix) => (
   </li>
 );
 
+const byTitle = (a: GreenhouseJobProps, b: GreenhouseJobProps) =>
+  a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1;
+
 const Department = ({
   name,
   childrenGreenhouseJobPost: jobs,
@@ -36,7 +39,7 @@ const Department = ({
     <div className="col-12 col-md-4">
       <h4>{name}</h4>
       <ul>
-        {jobs.map((job) => (
+        {jobs.sort(byTitle).map((job) => (
           <Job key={job.greenhouseId} prefix={prefix} {...job} />
         ))}
       </ul>
