@@ -6,8 +6,10 @@ import { PageHeader } from '../components';
 import { Title } from './utils';
 
 const loadApplicationForm = async (greenhouseId: string) => {
-  await loadScript('https://boards.eu.greenhouse.io/embed/job_board/js?for=ledgy');
-  window.Grnhse?.Iframe.load(greenhouseId);
+  const { Grnhse } = window;
+  if (!Grnhse) await loadScript('https://boards.eu.greenhouse.io/embed/job_board/js?for=ledgy');
+
+  Grnhse?.Iframe.load(greenhouseId);
 };
 
 const JobPage = ({ data, lang }: Props & { data: { greenhouseJobPost: GreenhouseJobProps } }) => {
