@@ -49,7 +49,10 @@ module.exports = {
     },
     {
       resolve: `gatsby-source-greenhouse`,
-      options: { apiToken: GREENHOUSE_API_TOKEN, jobPosts: { live: true } },
+      options: {
+        apiToken: GREENHOUSE_API_TOKEN,
+        pluginOptions: { jobPosts: { live: true, full_content: true } },
+      },
     },
     {
       resolve: 'gatsby-plugin-mdx',
