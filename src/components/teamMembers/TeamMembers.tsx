@@ -93,7 +93,7 @@ const TeamMember = ({
   );
 };
 
-export const TeamMembers = ({ prefix }: { prefix: string }) => {
+export const TeamMembers = ({ prefix }: Prefix) => {
   const teamImages = getTeamImages();
   const teamDescriptions = getTeamDescriptions(prefix);
   const teamData = teamMemberList.map((name) => [name, teamDescriptions[name], teamImages[name]]);

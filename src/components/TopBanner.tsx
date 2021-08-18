@@ -7,7 +7,7 @@ import { TopBannerLayout } from './TopBannerLayout';
 import { formatUrl } from './lib';
 import { Button, DynamicTrans, Image } from './utils';
 
-const CustomButton = ({ prefix, url, text }: { prefix: string; url: string; text: string }) => (
+const CustomButton = ({ prefix, url, text }: Prefix & { url: string; text: string }) => (
   <Button
     href={formatUrl(prefix, url)}
     className="btn-xl mr-2 my-1 align-self-center"
@@ -33,7 +33,7 @@ export const TopBanner = ({
   secondButtonText,
   secondButtonUrl,
   prefix,
-}: TopBannerProps & { prefix: string }) => {
+}: TopBannerProps & Prefix) => {
   const buttonClassName = 'my-sm-0 my-2 btn-xl d-inline mr-2';
 
   const buttonOne = firstButtonUrl.includes(demoPage) ? (

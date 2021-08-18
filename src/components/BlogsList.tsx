@@ -34,7 +34,7 @@ const getBlogs = () =>
     }
   `);
 
-export const BlogsList = ({ prefix }: { prefix: string }) => {
+export const BlogsList = ({ prefix }: Prefix) => {
   const blogs = getBlogs();
   const { edges } = blogs.allContentfulPage;
   const [tag, setTag] = useState(ALL_TOPICS);

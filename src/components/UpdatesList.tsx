@@ -34,7 +34,7 @@ const getUpdates = () =>
     }
   `);
 
-export const UpdatesList = ({ prefix }: { prefix: string }) => {
+export const UpdatesList = ({ prefix }: Prefix) => {
   const updates = getUpdates();
   const { edges } = updates.allContentfulPage;
   const [tag, setTag] = useState(ALL_TOPICS);

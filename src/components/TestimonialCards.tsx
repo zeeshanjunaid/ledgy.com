@@ -6,11 +6,7 @@ const TestimonialCard = ({
   card,
   prefix,
   index,
-}: {
-  card: TestimonialCardProps;
-  prefix: string;
-  index: number;
-}) => {
+}: Prefix & { card: TestimonialCardProps; index: number }) => {
   const { logo, signature, text, linkText, linkUrl } = card;
 
   return (
@@ -38,7 +34,7 @@ const TestimonialCard = ({
   );
 };
 
-export const TestimonialCards = ({ cards, prefix }: TestimonialCardsProps & { prefix: string }) => (
+export const TestimonialCards = ({ cards, prefix }: TestimonialCardsProps & Prefix) => (
   <Section>
     <div className="row">
       {cards.map((v, i) => (

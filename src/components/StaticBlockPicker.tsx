@@ -9,7 +9,7 @@ import { WebinarsList } from './WebinarsList';
 import { JobBoard } from './JobBoard';
 import { ContactUs } from './ContactUs';
 
-export const StaticBlockPicker = ({ block, prefix }: StaticBlockProps & { prefix: string }) => {
+export const StaticBlockPicker = ({ block, prefix }: StaticBlockProps & Prefix) => {
   if (!block) return null;
   switch (block) {
     case 'teamMembers':

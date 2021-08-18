@@ -26,12 +26,11 @@ export const LongText = ({
   isWideMarkdown = false,
   className = '',
   prefix,
-}: {
+}: Prefix & {
   content: Mdx;
   isMarkdown?: boolean;
   isWideMarkdown?: boolean;
   className?: string;
-  prefix: string;
 }) => {
   const components = getProviderComponents(prefix);
   const markdownClassName = isWideMarkdown ? 'wide-markdown' : 'markdown';

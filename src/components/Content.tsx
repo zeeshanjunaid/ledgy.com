@@ -15,11 +15,10 @@ export const PostLink = ({
   prefix,
   isExternal = false,
   showImage = true,
-}: {
+}: Prefix & {
   post: ContentfulPageProps;
   to: string;
   description: string | ReactNode;
-  prefix: string;
   isExternal?: boolean;
   showImage?: boolean;
 }) => {

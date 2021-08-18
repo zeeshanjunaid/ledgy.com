@@ -48,7 +48,7 @@ const Department = ({
   );
 };
 
-export const JobBoard = ({ prefix }: { prefix: string }) => {
+export const JobBoard = ({ prefix }: Prefix) => {
   const blogs = getJobs();
   const { nodes: departments } = blogs.allGreenhouseDepartment;
   return (

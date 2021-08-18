@@ -16,10 +16,9 @@ const MobileNavbarGroup = ({
   isOpen,
   setOpen,
   toggleOverlay,
-}: {
+}: Prefix & {
   title: string;
   menuColumns: NavbarMenuColumn[];
-  prefix: string;
   isOpen: boolean;
   setOpen: (arg0: boolean) => void;
   toggleOverlay: (arg0: boolean, arg1: (arg0: boolean) => void) => void;
@@ -71,11 +70,10 @@ export const MobileNavbar = ({
   setOpen,
   toggleOverlay,
   prefix,
-}: {
+}: Prefix & {
   isOpen: boolean;
   setOpen: (arg0: boolean) => void;
   toggleOverlay: (arg0: boolean, arg1: (arg0: boolean) => void) => void;
-  prefix: string;
 }) => (
   <div id="mobile-navbar" className="position-fixed text-primary">
     <div className="mobile-inner">

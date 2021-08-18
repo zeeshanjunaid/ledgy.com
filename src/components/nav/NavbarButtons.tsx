@@ -29,13 +29,7 @@ const SignupLoginButton = () => {
   );
 };
 
-export const NavbarButtons = ({
-  className = '',
-  prefix,
-}: {
-  prefix: string;
-  className?: string;
-}) => (
+export const NavbarButtons = ({ className = '', prefix }: Prefix & { className?: string }) => (
   <div className={`d-flex align-items-center ${className}`}>
     <SignupLoginButton />
     <Link to={formatUrl(prefix, demoPage)} onClick={removeOverlay}>

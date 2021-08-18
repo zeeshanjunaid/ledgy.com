@@ -40,7 +40,7 @@ const InvestorTypeCard = ({
   </div>
 );
 
-export const InvestorPricing = ({ prefix }: { prefix: string }) => (
+export const InvestorPricing = ({ prefix }: Prefix) => (
   <div className="container my-4 mb-lg-6">
     <div className="row justify-content-center">
       <InvestorTypeCard

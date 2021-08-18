@@ -7,10 +7,7 @@ import { CustomerStoryCard } from './CustomerStoryCard';
 export const OtherCustomerStories = ({
   customerStories,
   prefix,
-}: {
-  customerStories: AllContentfulCustomerStoryProps[];
-  prefix: string;
-}) => {
+}: Prefix & { customerStories: AllContentfulCustomerStoryProps[] }) => {
   if (customerStories.length === 0) return null;
   return (
     <>
