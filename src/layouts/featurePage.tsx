@@ -1,20 +1,9 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { Helmet } from 'react-helmet';
 
 import { dynamicI18n } from '../helpers';
 import { ComponentPicker, TitleWithGraphic } from '../components';
 import { Title } from '../layouts/utils';
-
-const JobBoard = () => (
-  <>
-    <h1>Greenhouse</h1>
-    <div id="grnhse_app" />
-    <Helmet>
-      <script src="https://boards.eu.greenhouse.io/embed/job_board/js?for=ledgy" />
-    </Helmet>
-  </>
-);
 
 const FeaturePage = ({
   data,
@@ -45,7 +34,6 @@ const FeaturePage = ({
       {entries.map((entry) => (
         <ComponentPicker key={entry.id} entry={entry} prefix={prefix} />
       ))}
-      <JobBoard />
     </div>
   );
 };
