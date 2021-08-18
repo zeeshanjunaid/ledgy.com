@@ -32,7 +32,7 @@ export const CallToAction = ({
   secondaryLinkText,
   secondaryLinkUrl,
   prefix,
-}: { prefix: string } & CallToActionProps) => (
+}: Prefix & CallToActionProps) => (
   <Section>
     <div className="row">
       <div className="col-md-8 mb-4 mb-md-2 pr-5">

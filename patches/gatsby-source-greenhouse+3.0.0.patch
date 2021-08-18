@@ -1,0 +1,15 @@
+diff --git a/node_modules/gatsby-source-greenhouse/gatsby-node.js b/node_modules/gatsby-source-greenhouse/gatsby-node.js
+index d8aa423..bc348ef 100644
+--- a/node_modules/gatsby-source-greenhouse/gatsby-node.js
++++ b/node_modules/gatsby-source-greenhouse/gatsby-node.js
+@@ -143,8 +143,8 @@ function flattenJobPosts(jobs, jobPosts) {
+ }
+ 
+ exports.sourceNodes = (() => {
+-  var _ref4 = _asyncToGenerator(function* ({ boundActionCreators }, { apiToken, pluginOptions }) {
+-    const createNode = boundActionCreators.createNode;
++  var _ref4 = _asyncToGenerator(function* ({ actions }, { apiToken, pluginOptions }) {
++    const createNode = actions.createNode;
+ 
+     const options = pluginOptions || defaultPluginOptions;
+ 

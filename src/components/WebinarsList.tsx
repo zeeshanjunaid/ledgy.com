@@ -32,7 +32,7 @@ const getWebinars = () =>
     }
   `);
 
-export const WebinarsList = ({ prefix }: { prefix: string }) => {
+export const WebinarsList = ({ prefix }: Prefix) => {
   const webinars = getWebinars();
   const { edges } = webinars.allContentfulWebinar;
   return (

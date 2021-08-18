@@ -34,7 +34,7 @@ const About = ({ about, img }: { about: AuthorProps; img: GatsbyImageFluidProps 
   </div>
 );
 
-export const Author = ({ name, prefix }: { name: string; prefix: string }) => {
+export const Author = ({ name, prefix }: Prefix & { name: string }) => {
   const team = getTeamDescriptions(prefix);
   const images = getTeamImages();
   return <About about={team[name]} img={images[name]} />;
@@ -120,12 +120,7 @@ export const Anchor = ({
   title,
   children,
   prefix,
-}: {
-  children: ReactNode;
-  href: string;
-  title: string;
-  prefix: string;
-}) => {
+}: Prefix & { children: ReactNode; href: string; title: string }) => {
   if (href.startsWith(youtubeEmbedBaseUrl)) {
     return <Embed src={href} title={title} className="embed-small" />;
   }

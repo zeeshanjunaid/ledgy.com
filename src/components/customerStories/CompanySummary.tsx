@@ -20,7 +20,7 @@ const getCompanySummaries = (company: CompanyProps): [IconDefinition, string, st
   [faSeedling, 'Stage', company.stage],
 ];
 
-export const CompanySummary = ({ company, prefix }: { company: CompanyProps; prefix: string }) => {
+export const CompanySummary = ({ company, prefix }: Prefix & { company: CompanyProps }) => {
   const { contactName, logo, contactTitle, mainQuote } = company;
   return (
     <div className="company-summary rounded-md bg-white sticky-top p-2 p-sm-4 p-md-2 p-lg-4">

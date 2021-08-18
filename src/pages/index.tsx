@@ -228,6 +228,19 @@ export const ButtonFragment = graphql`
   }
 `;
 
+export const GreenhouseJobFragment = graphql`
+  fragment GreenhouseJobFragment on GreenhouseJobPost {
+    id
+    greenhouseId
+    slug
+    title
+    content
+    location {
+      name
+    }
+  }
+`;
+
 export const indexPageQuery = graphql`
   query {
     page: allContentfulFrontPage2021 {

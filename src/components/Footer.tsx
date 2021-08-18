@@ -31,12 +31,7 @@ const FooterLinks = ({
   links,
   prefix,
   className = '',
-}: {
-  title: string;
-  links: FooterLink[];
-  prefix: string;
-  className?: string;
-}) => (
+}: Prefix & { title: string; links: FooterLink[]; className?: string }) => (
   <div className={`pl-4 ${className}`}>
     <h6 className="mb-4">
       <strong>

@@ -36,7 +36,7 @@ export const ContentWithChecklist = ({
   checklist,
   prefix,
   mirrored = false,
-}: ContentWithChecklistProps & { prefix: string; mirrored?: boolean }) => {
+}: ContentWithChecklistProps & Prefix & { mirrored?: boolean }) => {
   const sectionRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
 

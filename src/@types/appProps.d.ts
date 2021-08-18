@@ -1,7 +1,8 @@
 declare type Language = 'en' | 'de' | 'fr';
 
-declare type Props = {
-  prefix: string;
+declare type Prefix = { prefix: string };
+
+declare type Props = Prefix & {
   lang: Language;
   data: UntypedObject;
 };

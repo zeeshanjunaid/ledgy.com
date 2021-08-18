@@ -16,11 +16,7 @@ export const ComponentPicker = ({
   entry,
   prefix,
   smallPadding = false,
-}: {
-  entry: MainPageEntryProps;
-  prefix: string;
-  smallPadding?: boolean;
-}) => {
+}: Prefix & { entry: MainPageEntryProps; smallPadding?: boolean }) => {
   if (!entry.id) return null;
 
   switch (entry.__typename) {

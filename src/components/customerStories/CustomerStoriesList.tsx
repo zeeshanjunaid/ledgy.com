@@ -32,7 +32,7 @@ const getCustomerStories = () =>
     }
   `);
 
-export const CustomerStoriesList = ({ prefix }: { prefix: string }) => {
+export const CustomerStoriesList = ({ prefix }: Prefix) => {
   const customerStories = getCustomerStories();
   const { edges } = customerStories.allContentfulCustomerStory;
   return (

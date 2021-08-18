@@ -33,7 +33,7 @@ export const TitleWithGraphic = ({
   buttons,
   prefix,
   isTopBanner = false,
-}: TitleWithGraphicProps & { isTopBanner?: boolean; prefix: string }) => {
+}: TitleWithGraphicProps & Prefix & { isTopBanner?: boolean }) => {
   const wrapperClassName = isTopBanner ? 'bg-lightest top-banner' : 'py-8 mb-n5';
   const tiltedBackground = isTopBanner ? '' : 'bg-primary tilted-background';
 

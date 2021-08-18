@@ -10,11 +10,7 @@ export const RequestDemoButton = ({
   buttonClassName,
   prefix,
   buttonText = DEMO_BUTTON_TEXT,
-}: {
-  buttonClassName: string;
-  prefix: string;
-  buttonText?: string;
-}) => (
+}: Prefix & { buttonClassName: string; buttonText?: string }) => (
   <Button href={formatUrl(prefix, demoPage)} className={buttonClassName}>
     <DynamicTrans>{buttonText}</DynamicTrans>
   </Button>

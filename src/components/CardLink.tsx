@@ -15,13 +15,12 @@ export const CardLink = ({
   date,
   isExternal = false,
   showImage = true,
-}: {
+}: Prefix & {
   title: ReactNode;
   type: 'blog' | 'customer-story';
   description: string | ReactNode;
   image: ReactNode;
   to: string;
-  prefix: string;
   date?: string;
   isExternal?: boolean;
   showImage?: boolean;

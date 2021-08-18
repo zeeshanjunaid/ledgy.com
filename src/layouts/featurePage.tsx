@@ -16,6 +16,7 @@ const FeaturePage = ({
 }) => {
   const { title, header, description, graphic, motivationText, entries, buttons } =
     data.contentfulFeaturePage2021;
+
   return (
     <div>
       <Title title={dynamicI18n(title || header)} description={dynamicI18n(description)} />

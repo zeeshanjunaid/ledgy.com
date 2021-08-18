@@ -6,10 +6,7 @@ import { CardLink } from '../CardLink';
 export const CustomerStoryLink = ({
   customerStory,
   prefix,
-}: {
-  customerStory: CustomerStoryBaseProps;
-  prefix: string;
-}) => {
+}: Prefix & { customerStory: CustomerStoryBaseProps }) => {
   const { header, subtitle, slug, company } = customerStory;
   const { childImageSharp } = company.logo.localFile || {};
   const to = `customer-stories/${slug}`;

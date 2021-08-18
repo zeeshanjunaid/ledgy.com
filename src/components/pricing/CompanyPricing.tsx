@@ -4,7 +4,7 @@ import { appUrl } from '../../helpers';
 import { DynamicTrans, Button } from '../utils';
 import { RequestDemoButton } from '../RequestDemoButton';
 
-export const CompanyPricing = ({ prefix }: { prefix: string }) => (
+export const CompanyPricing = ({ prefix }: Prefix) => (
   <div className="container my-4 my-lg-6">
     <LedgyPricing
       launchPlanButton={

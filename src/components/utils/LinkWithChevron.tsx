@@ -19,12 +19,7 @@ export const LinkWithChevron = ({
   text,
   prefix,
   className = '',
-}: {
-  to: string;
-  text: string;
-  prefix: string;
-  className?: string;
-}) => {
+}: Prefix & { to: string; text: string; className?: string }) => {
   const Content = <TextAndIcon text={text} icon={faChevronRight} />;
 
   return isExternalUrl(to) ? (

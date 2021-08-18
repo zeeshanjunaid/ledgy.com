@@ -13,3 +13,12 @@ export const shuffleArray = <T>(array: T[]): T[] =>
     copy[randomIndex] = val;
     return copy;
   }, array);
+
+export const loadScript = (src: string): Promise<void> =>
+  new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.src = src;
+    script.async = true;
+    script.onload = () => resolve();
+    return (document.body && document.body.appendChild(script)) || reject();
+  });

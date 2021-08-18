@@ -13,7 +13,7 @@ import {
 import { dynamicI18n, targetBlank } from '../../helpers';
 import { DynamicTrans, Icon } from '../utils';
 
-type CommonListProps = { prefix: string; isTextShown: boolean };
+type CommonListProps = Prefix & { isTextShown: boolean };
 type ParentListItemProps = { title: string } & CommonListProps & {
     eventHandlingProps: {
       onMouseEnter: (e: MouseEvent) => void;

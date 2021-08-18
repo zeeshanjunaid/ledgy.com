@@ -87,57 +87,69 @@ exports.createSchemaCustomization = ({ actions }) => {
 };
 
 const pageQuery = `
-      {
-        allContentfulPage(limit: 1000) {
-          edges {
-            node {
-              id
-              slug
-              namespace
-            }
-          }
-        }
+{
+  allContentfulPage(limit: 1000) {
+    edges {
+      node {
+        id
+        slug
+        namespace
       }
-    `;
+    }
+  }
+}
+`;
 
 const customerStoryQuery = `
-      {
-        allContentfulCustomerStory(limit: 1000) {
-          edges {
-            node {
-              id
-              slug
-            }
-          }
-        }
+{
+  allContentfulCustomerStory(limit: 1000) {
+    edges {
+      node {
+        id
+        slug
       }
-    `;
+    }
+  }
+}
+`;
 
 const featurePageQuery = `
-      {
-        allContentfulFeaturePage2021(limit: 1000) {
-          edges {
-            node {
-              id
-              slug
-            }
-          }
-        }
+{
+  allContentfulFeaturePage2021(limit: 1000) {
+    edges {
+      node {
+        id
+        slug
       }
-    `;
+    }
+  }
+}
+`;
 
 const demoQuery = `
-      {
-        allContentfulDemoPage2021(limit: 1000) {
-          edges {
-            node {
-              id
-              slug
-            }
-          }
-        }
+{
+  allContentfulDemoPage2021(limit: 1000) {
+    edges {
+      node {
+        id
+        slug
       }
-    `;
+    }
+  }
+}
+`;
+
+const jobQuery = `
+{
+  allGreenhouseJobPost {
+    nodes {
+      id
+      slug
+      greenhouseId
+    }
+  }
+}
+`;
 
 const basePath = './src/layouts';
 
@@ -212,7 +224,22 @@ exports.createPages = ({ graphql, actions }) => {
     })
   );
 
-  const allPages = [createPages, createCustomerStories, createFeaturePages, createDemoPages];
+  const jobPageComponent = path.resolve(`${basePath}/job.tsx`);
+  const createJobPages = resolvePagePromise(graphql(jobQuery), (data) =>
+    data.allGreenhouseJobPost.nodes.forEach(({ id, greenhouseId }) => {
+      const pagePath = `/jobs/${greenhouseId}/`;
+      const context = { id };
+      createLocalizedPages(pagePath, jobPageComponent, context);
+    })
+  );
+
+  const allPages = [
+    createPages,
+    createCustomerStories,
+    createFeaturePages,
+    createDemoPages,
+    createJobPages,
+  ];
 
   return Promise.all(allPages);
 };
