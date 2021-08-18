@@ -6,20 +6,26 @@ import { dynamicI18n, loadScript } from '../helpers';
 import { PageHeader } from '../components';
 import { Title } from './utils';
 
+let iframe: null | UntypedObject;
+
 const loadApplicationForm = async (greenhouseId: string) => {
   if (!window.Grnhse) {
     await loadScript('https://boards.eu.greenhouse.io/embed/job_board/js?for=ledgy');
   }
-  window.Grnhse?.Iframe.load(greenhouseId);
+  iframe = window.Grnhse?.Iframe.load(greenhouseId);
+};
+
+const unloadApplicationForm = () => {
+  if (iframe) iframe.htmlElement = null;
 };
 
 const JobPage = ({ data, lang }: Props & { data: { greenhouseJobPost: GreenhouseJobProps } }) => {
-  if (!data) return null;
-
   const { title, content, greenhouseId, location } = data.greenhouseJobPost;
+  if (!data) return null;
 
   useEffect(() => {
     loadApplicationForm(greenhouseId);
+    return unloadApplicationForm;
   }, []);
 
   return (
