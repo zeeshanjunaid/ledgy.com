@@ -9,6 +9,7 @@ const getJobs = () =>
     query {
       allGreenhouseDepartment(sort: { fields: name }) {
         nodes {
+          id
           greenhouseId
           name
           childrenGreenhouseJobPost {
