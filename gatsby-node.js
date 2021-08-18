@@ -82,6 +82,10 @@ exports.createSchemaCustomization = ({ actions }) => {
     title: String
     entries: [EntryProps] @link(by: "id", from: "entries___NODE")
   }
+  type GreenhouseJobPost implements Node {
+    slug: String
+    greenhouseId: String
+  }
 `;
   createTypes(typeDefinitions);
 };
