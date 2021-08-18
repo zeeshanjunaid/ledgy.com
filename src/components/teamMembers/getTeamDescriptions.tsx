@@ -170,7 +170,7 @@ export const getTeamDescriptions = (
   },
   mariana: {
     name: 'Mariana Cely',
-    role: 'Junior Software Engineer & Future Hacker',
+    role: 'Junior Software Engineer & Junior Human',
     description: (
       <Trans>
         After graduating from ETH Zurich and EPFL in Mathematics, Mariana started a traineeship at
@@ -235,7 +235,7 @@ export const getTeamDescriptions = (
     article: 'nicolas-briner',
   },
   tanya: {
-    name: 'Tanya Bikov',
+    name: 'Tanya Niznik',
     role: 'Software Engineer & Avid Reader',
     description: (
       <Trans>
