@@ -12,28 +12,25 @@ const getJobs = () =>
           id
           greenhouseId
           name
-          childrenGreenhouseJobPost {
-            ...GreenhouseJobFragment
+          jobPosts {
+            id
+            title
           }
         }
       }
     }
   `);
 
-const Job = ({ title, greenhouseId, prefix }: GreenhouseJobProps & Prefix) => (
-  <li key={greenhouseId}>
-    <Link to={formatUrl(prefix, `/jobs/${greenhouseId}`)}>{title}</Link>
+const Job = ({ title, id, prefix }: GreenhouseJobProps & Prefix) => (
+  <li key={id}>
+    <Link to={formatUrl(prefix, `/jobs/${id}`)}>{title}</Link>
   </li>
 );
 
 const byTitle = (a: GreenhouseJobProps, b: GreenhouseJobProps) =>
   a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1;
 
-const Department = ({
-  name,
-  childrenGreenhouseJobPost: jobs,
-  prefix,
-}: GreenhouseDepartmentProps & Prefix) => {
+const Department = ({ name, jobPosts: jobs, prefix }: GreenhouseDepartmentProps & Prefix) => {
   if (!jobs.length) return null;
 
   return (
@@ -41,7 +38,7 @@ const Department = ({
       <h4>{name}</h4>
       <ul>
         {jobs.sort(byTitle).map((job) => (
-          <Job key={job.greenhouseId} prefix={prefix} {...job} />
+          <Job key={job.id} prefix={prefix} {...job} />
         ))}
       </ul>
     </div>

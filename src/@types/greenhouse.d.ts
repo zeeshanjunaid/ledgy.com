@@ -7,5 +7,5 @@ declare type GreenhouseJobProps = Id & {
 
 declare type GreenhouseDepartmentProps = Id & {
   name: string;
-  childrenGreenhouseJobPost: GreenhouseJobProps[];
+  jobPosts: GreenhouseJobProps[];
 };
