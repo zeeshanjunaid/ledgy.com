@@ -13,8 +13,7 @@ const getJobs = () =>
           gh_Id
           name
           jobs {
-            gh_Id
-            title
+            ...GreenhouseJobFragment
           }
         }
       }
@@ -22,7 +21,7 @@ const getJobs = () =>
   `);
 
 const Job = ({ title, gh_Id, prefix }: GreenhouseJobProps & Prefix) => (
-  <li key={gh_Id}>
+  <li key={gh_Id} className="list-style-none">
     <Link to={formatUrl(prefix, `/jobs/${gh_Id}`)}>{title}</Link>
   </li>
 );
@@ -36,7 +35,7 @@ const Department = ({ name, jobs, prefix }: GreenhouseDepartmentProps & Prefix) 
   return (
     <div className="col-12 col-md-4">
       <h4>{name}</h4>
-      <ul>
+      <ul className="pl-0">
         {jobs.sort(byTitle).map((job) => (
           <Job key={job.id} prefix={prefix} {...job} />
         ))}
