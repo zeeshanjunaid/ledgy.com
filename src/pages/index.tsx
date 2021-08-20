@@ -229,10 +229,9 @@ export const ButtonFragment = graphql`
 `;
 
 export const GreenhouseJobFragment = graphql`
-  fragment GreenhouseJobFragment on GreenhouseJobPost {
+  fragment GreenhouseJobFragment on GreenhouseJob {
     id
-    greenhouseId
-    slug
+    gh_Id
     title
     content
     location {

@@ -19,12 +19,19 @@ const unloadApplicationForm = () => {
   if (iframe) iframe.htmlElement = null;
 };
 
-const JobPage = ({ data, lang }: Props & { data: { greenhouseJobPost: GreenhouseJobProps } }) => {
-  const { title, content, greenhouseId, location } = data.greenhouseJobPost;
+const decodeContent = (content: string): string =>
+  content
+    .replace(/&gt;/g, '>')
+    .replace(/&lt;/g, '<')
+    .replace(/&quot;/g, '"')
+    .replace(/&amp;/g, '&');
+
+const JobPage = ({ data, lang }: Props & { data: { greenhouseJob: GreenhouseJobProps } }) => {
+  const { title, content, gh_Id, location } = data.greenhouseJob;
   if (!data) return null;
 
   useEffect(() => {
-    loadApplicationForm(greenhouseId);
+    loadApplicationForm(gh_Id);
     return unloadApplicationForm;
   }, []);
 
@@ -44,7 +51,7 @@ const JobPage = ({ data, lang }: Props & { data: { greenhouseJobPost: Greenhouse
       />
       <div className="container container-small">
         <div className="d-flex justify-content-center mb-4 mb-lg-5">
-          <div dangerouslySetInnerHTML={{ __html: content }} className="markdown" />
+          <div dangerouslySetInnerHTML={{ __html: decodeContent(content) }} className="markdown" />
         </div>
         <div className="d-flex justify-content-center mb-4 mb-lg-5">
           <div id="grnhse_app" className="w-100 markdown" />
@@ -58,7 +65,7 @@ export default JobPage;
 
 export const jobPageQuery = graphql`
   query ($id: String!) {
-    greenhouseJobPost(id: { eq: $id }) {
+    greenhouseJob(id: { eq: $id }) {
       ...GreenhouseJobFragment
     }
   }

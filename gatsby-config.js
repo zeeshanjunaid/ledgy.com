@@ -7,7 +7,6 @@ const {
   BRANCH,
   CONTENTFUL_SPACE_ID,
   CONTENTFUL_ACCESS_TOKEN,
-  GREENHOUSE_API_TOKEN,
   SEGMENT_DESTINATIONS,
 } = process.env;
 const src = `${__dirname}/src`;
@@ -48,10 +47,9 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-greenhouse`,
+      resolve: 'gatsby-source-greenhouse-job-board',
       options: {
-        apiToken: GREENHOUSE_API_TOKEN,
-        pluginOptions: { jobPosts: { live: true, full_content: true } },
+        boardToken: 'ledgy',
       },
     },
     {
