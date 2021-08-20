@@ -83,7 +83,6 @@ exports.createSchemaCustomization = ({ actions }) => {
     entries: [EntryProps] @link(by: "id", from: "entries___NODE")
   }
   type GreenhouseJob implements Node {
-    slug: String
     gh_Id: String
   }
 `;
