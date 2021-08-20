@@ -82,9 +82,9 @@ exports.createSchemaCustomization = ({ actions }) => {
     title: String
     entries: [EntryProps] @link(by: "id", from: "entries___NODE")
   }
-  type GreenhouseJobPost implements Node {
+  type GreenhouseJob implements Node {
     slug: String
-    greenhouseId: String
+    gh_Id: String
   }
 `;
   createTypes(typeDefinitions);
@@ -145,11 +145,10 @@ const demoQuery = `
 
 const jobQuery = `
 {
-  allGreenhouseJobPost {
+  allGreenhouseJob {
     nodes {
       id
-      slug
-      greenhouseId
+      gh_Id
     }
   }
 }
@@ -230,8 +229,8 @@ exports.createPages = ({ graphql, actions }) => {
 
   const jobPageComponent = path.resolve(`${basePath}/job.tsx`);
   const createJobPages = resolvePagePromise(graphql(jobQuery), (data) =>
-    data.allGreenhouseJobPost.nodes.forEach(({ id, greenhouseId }) => {
-      const pagePath = `/jobs/${greenhouseId}/`;
+    data.allGreenhouseJob.nodes.forEach(({ id, gh_Id }) => {
+      const pagePath = `/jobs/${gh_Id}/`;
       const context = { id };
       createLocalizedPages(pagePath, jobPageComponent, context);
     })

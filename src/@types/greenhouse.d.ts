@@ -1,11 +1,11 @@
 declare type GreenhouseJobProps = Id & {
   title: string;
   content: string;
-  greenhouseId: string;
+  gh_Id: string;
   location: { name: string };
 };
 
 declare type GreenhouseDepartmentProps = Id & {
   name: string;
-  jobPosts: GreenhouseJobProps[];
+  jobs: GreenhouseJobProps[];
 };

@@ -10,10 +10,10 @@ const getJobs = () =>
       allGreenhouseDepartment(sort: { fields: name }) {
         nodes {
           id
-          greenhouseId
+          gh_Id
           name
-          jobPosts {
-            id
+          jobs {
+            gh_Id
             title
           }
         }
@@ -21,16 +21,16 @@ const getJobs = () =>
     }
   `);
 
-const Job = ({ title, id, prefix }: GreenhouseJobProps & Prefix) => (
-  <li key={id}>
-    <Link to={formatUrl(prefix, `/jobs/${id}`)}>{title}</Link>
+const Job = ({ title, gh_Id, prefix }: GreenhouseJobProps & Prefix) => (
+  <li key={gh_Id}>
+    <Link to={formatUrl(prefix, `/jobs/${gh_Id}`)}>{title}</Link>
   </li>
 );
 
 const byTitle = (a: GreenhouseJobProps, b: GreenhouseJobProps) =>
   a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1;
 
-const Department = ({ name, jobPosts: jobs, prefix }: GreenhouseDepartmentProps & Prefix) => {
+const Department = ({ name, jobs, prefix }: GreenhouseDepartmentProps & Prefix) => {
   if (!jobs.length) return null;
 
   return (
