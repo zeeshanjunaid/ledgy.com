@@ -260,7 +260,7 @@ export const getTeamDescriptions = (
   },
   joe: {
     name: 'Joe Brennan',
-    role: 'Content Lead and Drone Theorist',
+    role: 'Content Lead & Drone Theorist',
     description: (
       <Trans>
         As Ledgy’s Content Lead, Joe turns technical concepts into useful information for customers.
