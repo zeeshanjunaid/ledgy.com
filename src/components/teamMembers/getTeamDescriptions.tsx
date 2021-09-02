@@ -96,10 +96,9 @@ export const getTeamDescriptions = (
         lead developer at XING and On.
       </Trans>
     ),
-    twitter: 'https://twitter.com/colmarius',
     linkedIn: 'https://www.linkedin.com/in/mariuscolacioiu',
     mail: 'marius@ledgy.com',
-    article: 'women-in-web-from-ledgy-trainees-to-junior-developers',
+    article: 'interview-with-marius-colacioiu-head-of-engineering-at-ledgy',
   },
   jahlela: {
     name: 'Jahlela Hasle',
