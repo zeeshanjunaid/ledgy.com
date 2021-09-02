@@ -4,6 +4,8 @@ import { graphql, useStaticQuery, Link } from 'gatsby';
 import { Section } from './utils';
 import { formatUrl } from './lib';
 
+const JOB_BOARD_LOCATION = 'Zurich';
+
 const getJobs = () =>
   useStaticQuery(graphql`
     query {
@@ -29,7 +31,8 @@ const Job = ({ title, gh_Id, prefix }: GreenhouseJobProps & Prefix) => (
 const byTitle = (a: GreenhouseJobProps, b: GreenhouseJobProps) =>
   a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1;
 
-const Department = ({ name, jobs, prefix }: GreenhouseDepartmentProps & Prefix) => {
+const Department = ({ name, jobs: allJobs, prefix }: GreenhouseDepartmentProps & Prefix) => {
+  const jobs = allJobs.filter((v) => v.location.name.includes(JOB_BOARD_LOCATION));
   if (!jobs.length) return null;
 
   return (
