@@ -259,6 +259,57 @@ export const getTeamDescriptions = (
     linkedIn: 'https://www.linkedin.com/in/sarabrioschi/',
     mail: 'sara@ledgy.com',
   },
+  joe: {
+    name: 'Joe Brennan',
+    role: 'Content Lead and Drone Theorist',
+    description: (
+      <Trans>
+        As Ledgy’s Content Lead, Joe turns technical concepts into useful information for customers.
+        In his spare time he writes about drones at rillerkobots.substack.com
+      </Trans>
+    ),
+    linkedIn: 'https://www.linkedin.com/in/joevalbren/',
+    twitter: 'https://twitter.com/_joeledgy',
+    mail: 'joe@ledgy.com',
+  },
+  aloys: {
+    name: 'Aloys Van de vreken',
+    role: 'Operations and Finance Manager & Egg Man',
+    description: (
+      <Trans>
+        As a PhD student in Entrepreneurship at ETH Zürich, Aloys saw how founders struggled with
+        Entrepreneurial Finance and ESOPs. He decided to help Ledgy build a future in which both are
+        simplified, instead of waiting to study it
+      </Trans>
+    ),
+    linkedIn: 'https://www.linkedin.com/in/aloysvandevreken/',
+    mail: 'aloys@ledgy.com',
+  },
+  valerie: {
+    name: 'Valerie Baia',
+    role: 'Account Executive & Global Explorer',
+    description: (
+      <Trans>
+        Valerie delights in interacting with companies across the spectrum of the startup ecosystem.
+        She has extensive experience leading sales and business development projects across Europe,
+        Africa, and APAC
+      </Trans>
+    ),
+    linkedIn: 'https://www.linkedin.com/in/valerie-baia/',
+    mail: 'valerie@ledgy.com',
+  },
+  thomas: {
+    name: 'Thomas Kuster',
+    role: 'Legal Counsel & Amateur Shepherd',
+    description: (
+      <Trans>
+        As a business lawyer with extensive experience in consulting startups, Thomas’ mission is to
+        give Ledgy’s in-house legal resources a power-up
+      </Trans>
+    ),
+    linkedIn: 'https://www.linkedin.com/in/thomas-kuster/',
+    mail: 'thomas@ledgy.com',
+  },
   luna: {
     name: 'Luna',
     role: 'Rocket & Trailblazer',

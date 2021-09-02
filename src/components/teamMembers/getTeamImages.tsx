@@ -92,6 +92,26 @@ export const TeamFragment = graphql`
         ...GatsbyImageSharpFluid
       }
     }
+    joe: imageSharp(fluid: { originalName: { regex: "/joe.png/" } }) {
+      fluid(maxWidth: 245, maxHeight: 245) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    valerie: imageSharp(fluid: { originalName: { regex: "/valerie.png/" } }) {
+      fluid(maxWidth: 245, maxHeight: 245) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    aloys: imageSharp(fluid: { originalName: { regex: "/aloys.png/" } }) {
+      fluid(maxWidth: 245, maxHeight: 245) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    thomas: imageSharp(fluid: { originalName: { regex: "/thomas.png/" } }) {
+      fluid(maxWidth: 245, maxHeight: 245) {
+        ...GatsbyImageSharpFluid
+      }
+    }
     luna: imageSharp(fluid: { originalName: { regex: "/luna.jpg/" } }) {
       fluid(maxWidth: 245, maxHeight: 245) {
         ...GatsbyImageSharpFluid

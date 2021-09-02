@@ -33,6 +33,10 @@ const teamMemberList = [
   'nicolas',
   'tanya',
   'sara',
+  'joe',
+  'valerie',
+  'aloys',
+  'thomas',
   'luna',
 ];
 
