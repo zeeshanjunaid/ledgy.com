@@ -19,6 +19,19 @@ const unloadApplicationForm = () => {
   if (iframe) iframe.htmlElement = null;
 };
 
+const slugify = (title: string) =>
+  title
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/[^\w-]+/g, '')
+    .replace(/--+/g, '-')
+    .replace(/^-+/, '')
+    .replace(/-+$/, '');
+
+const addJobSlug = (title: string) => {
+  history.replaceState('', '', slugify(title));
+};
+
 const decodeContent = (content: string): string =>
   content
     .replace(/&gt;/g, '>')
@@ -31,6 +44,7 @@ const JobPage = ({ data, lang }: Props & { data: { greenhouseJob: GreenhouseJobP
   if (!data) return null;
 
   useEffect(() => {
+    addJobSlug(title);
     loadApplicationForm(gh_Id);
     return unloadApplicationForm;
   }, []);
