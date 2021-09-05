@@ -28,7 +28,7 @@ const slugify = (title: string) =>
     .replace(/^-+/, '')
     .replace(/-+$/, '');
 
-const addJobSlug = (title: string) => {
+const addSlugToUrl = (title: string) => {
   history.replaceState('', '', slugify(title));
 };
 
@@ -44,7 +44,7 @@ const JobPage = ({ data, lang }: Props & { data: { greenhouseJob: GreenhouseJobP
   if (!data) return null;
 
   useEffect(() => {
-    addJobSlug(title);
+    addSlugToUrl(title);
     loadApplicationForm(gh_Id);
     return unloadApplicationForm;
   }, []);
