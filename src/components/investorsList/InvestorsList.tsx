@@ -5,18 +5,17 @@ import Img, { GatsbyImageFixedProps } from 'gatsby-image';
 import { getInvestorDescriptions } from './getInvestorDescriptions';
 import { getInvestorImages } from './getInvestorImages';
 
+const vcList = ['sequoia', 'btov', 'visionariesClub', 'creathor', 'viPartners'];
+
 const investorList = [
-  'btov',
-  'creathor',
-  'vipartners',
-  'paul',
+  'luciana',
+  'andreas',
+  'xavier',
+  'harry',
   'daniel',
-  'luis',
+  'mathilde',
+  'paul',
   'myke',
-  'cyrill',
-  'luzius',
-  'adrian',
-  'elena',
 ];
 
 const Investor = ({
@@ -38,12 +37,21 @@ const Investor = ({
 export const InvestorsList = () => {
   const investorImages = getInvestorImages();
   const InvestorDescriptions = getInvestorDescriptions();
+  const vcData = vcList.map((v) => [InvestorDescriptions[v], investorImages[v]]);
   const investorData = investorList.map((v) => [InvestorDescriptions[v], investorImages[v]]);
   return (
     <div className="container text-center my-4 mb-lg-6">
       <h2>
         <DynamicTrans>Backed by</DynamicTrans>
       </h2>
+      <div className="row justify-content-center my-5">
+        {vcData.map(([investorProps, img]) => {
+          const { name, description } = investorProps;
+          return (
+            <Investor name={name} description={description} img={img} key={`investor-${name}`} />
+          );
+        })}
+      </div>
       <div className="row justify-content-center my-5">
         {investorData.map(([investorProps, img]) => {
           const { name, description } = investorProps;
