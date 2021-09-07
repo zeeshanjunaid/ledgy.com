@@ -2,58 +2,67 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 export const InvestorFragment = graphql`
   fragment InvestorFragment on Query {
-    btov: imageSharp(fluid: { originalName: { regex: "/btov.png/" } }) {
+    sequoia: imageSharp(fluid: { originalName: { regex: "/sequoia/" } }) {
       fixed(width: 128, height: 128) {
         ...GatsbyImageSharpFixed
       }
     }
-    creathor: imageSharp(fluid: { originalName: { regex: "/creathor.jpg/" } }) {
+    btov: imageSharp(fluid: { originalName: { regex: "/btov/" } }) {
       fixed(width: 128, height: 128) {
         ...GatsbyImageSharpFixed
       }
     }
-    vipartners: imageSharp(fluid: { originalName: { regex: "/vipartners.jpg/" } }) {
+    visionariesClub: imageSharp(fluid: { originalName: { regex: "/visionariesClub/" } }) {
       fixed(width: 128, height: 128) {
         ...GatsbyImageSharpFixed
       }
     }
-    daniel: imageSharp(fluid: { originalName: { regex: "/daniel.jpg/" } }) {
+    creathor: imageSharp(fluid: { originalName: { regex: "/creathor/" } }) {
       fixed(width: 128, height: 128) {
         ...GatsbyImageSharpFixed
       }
     }
-    luis: imageSharp(fluid: { originalName: { regex: "/luis.jpg/" } }) {
+    viPartners: imageSharp(fluid: { originalName: { regex: "/viPartners/" } }) {
       fixed(width: 128, height: 128) {
         ...GatsbyImageSharpFixed
       }
     }
-    cyrill: imageSharp(fluid: { originalName: { regex: "/cyrill.jpg/" } }) {
+    daniel: imageSharp(fluid: { originalName: { regex: "/daniel/" } }) {
       fixed(width: 128, height: 128) {
         ...GatsbyImageSharpFixed
       }
     }
-
-    myke: imageSharp(fluid: { originalName: { regex: "/myke.jpg/" } }) {
+    luciana: imageSharp(fluid: { originalName: { regex: "/luciana/" } }) {
       fixed(width: 128, height: 128) {
         ...GatsbyImageSharpFixed
       }
     }
-    paul: imageSharp(fluid: { originalName: { regex: "/paul.jpg/" } }) {
+    andreas: imageSharp(fluid: { originalName: { regex: "/andreas/" } }) {
       fixed(width: 128, height: 128) {
         ...GatsbyImageSharpFixed
       }
     }
-    luzius: imageSharp(fluid: { originalName: { regex: "/luzius.jpg/" } }) {
+    myke: imageSharp(fluid: { originalName: { regex: "/myke/" } }) {
       fixed(width: 128, height: 128) {
         ...GatsbyImageSharpFixed
       }
     }
-    adrian: imageSharp(fluid: { originalName: { regex: "/adrian.jpg/" } }) {
+    paul: imageSharp(fluid: { originalName: { regex: "/paul/" } }) {
       fixed(width: 128, height: 128) {
         ...GatsbyImageSharpFixed
       }
     }
-    elena: imageSharp(fluid: { originalName: { regex: "/elena.jpg/" } }) {
+    harry: imageSharp(fluid: { originalName: { regex: "/harry/" } }) {
+      fixed(width: 128, height: 128) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+    xavier: imageSharp(fluid: { originalName: { regex: "/xavier/" } }) {
+      fixed(width: 128, height: 128) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+    mathilde: imageSharp(fluid: { originalName: { regex: "/mathilde/" } }) {
       fixed(width: 128, height: 128) {
         ...GatsbyImageSharpFixed
       }
