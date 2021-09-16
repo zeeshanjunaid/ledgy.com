@@ -309,6 +309,19 @@ export const getTeamDescriptions = (
     linkedIn: 'https://www.linkedin.com/in/thomas-kuster/',
     mail: 'thomas@ledgy.com',
   },
+  greg: {
+    name: 'Greg Jones',
+    role: 'Software Engineer & Snow Enthusiast',
+    description: (
+      <Trans>
+        Greg spent many years in Silicon Valley—from childhood, for university, and at
+        startups—includingfive years leading product engineering at Amplitude. He now happily finds
+        himself building products in Zurich at Ledgy.
+      </Trans>
+    ),
+    linkedIn: 'https://www.linkedin.com/in/justanotherjones/',
+    mail: 'greg@ledgy.com',
+  },
   luna: {
     name: 'Luna',
     role: 'Rocket & Trailblazer',
