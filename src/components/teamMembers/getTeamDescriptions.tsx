@@ -315,7 +315,7 @@ export const getTeamDescriptions = (
     description: (
       <Trans>
         Greg spent many years in Silicon Valley—from childhood, for university, and at
-        startups—includingfive years leading product engineering at Amplitude. He now happily finds
+        startups—including five years leading product engineering at Amplitude. He now happily finds
         himself building products in Zurich at Ledgy.
       </Trans>
     ),
