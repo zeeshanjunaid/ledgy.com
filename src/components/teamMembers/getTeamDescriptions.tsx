@@ -334,8 +334,8 @@ export const getTeamDescriptions = (
         </a>
       </Trans>
     ),
-    twitter: 'https://twitter.com/hashtag/saturnv',
-    linkedIn: 'https://www.linkedin.com/company/nasa',
-    mail: 'contact@ledgy.com',
+    twitter: 'https://twitter.com/ledgycodes',
+    linkedIn: 'https://www.linkedin.com/in/luna-ledgista-196228219/',
+    mail: 'work@ledgy.com',
   },
 });
