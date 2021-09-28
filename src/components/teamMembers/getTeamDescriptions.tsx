@@ -322,6 +322,20 @@ export const getTeamDescriptions = (
     linkedIn: 'https://www.linkedin.com/in/justanotherjones/',
     mail: 'greg@ledgy.com',
   },
+  giacomo: {
+    name: 'Giacomo Venier',
+    role: 'Jr. Software Engineer & Future Kitesurfer',
+    description: (
+      <Trans>
+        After graduating from Rotterdam School of Management in Business, 
+        Giacomo took a dive into computer science and launched a couple of mobile apps. 
+        He now joined Ledgy as a Software Developer.
+      </Trans>
+    ),
+    linkedIn: 'https://www.linkedin.com/in/giacomovenier/',
+    twitter: 'https://twitter.com/giacomovenier',
+    mail: 'giacomo@ledgy.com',
+  },
   luna: {
     name: 'Luna',
     role: 'Rocket & Trailblazer',
