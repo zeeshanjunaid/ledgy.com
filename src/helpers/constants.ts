@@ -21,9 +21,9 @@ export const getLdJson = (url: string): string => `{
    ],
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Forchstrasse 60",
+    "streetAddress": "Fraumünsterstrasse 16",
     "addressRegion": "ZH",
-    "postalCode": "8008",
+    "postalCode": "8001",
     "addressCountry": "CH"
   }
 }`;
