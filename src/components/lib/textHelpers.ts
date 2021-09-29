@@ -121,7 +121,7 @@ const teams: NavbarMenuColumn = {
 };
 
 const features: NavbarMenuColumn = {
-  header: 'Features',
+  header: 'Use Cases',
   items: [
     {
       link: CAP_TABLE,
