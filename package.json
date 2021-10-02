@@ -73,6 +73,7 @@
     "react-helmet": "6.1.0",
     "react-transition-group": "4.4.1",
     "react-visibility-sensor": "5.1.1",
+    "react-wordcloud": "1.2.7",
     "remark": "13.0.0",
     "remark-html-katex": "3.0.0",
     "remark-math": "3.0.1",
