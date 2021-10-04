@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import ReactWordcloud, { Word } from 'react-wordcloud';
+import { t } from '@lingui/macro';
 
 import { Section, ButtonGroup } from './utils';
-
-import 'tippy.js/dist/tippy.css';
-import 'tippy.js/animations/scale.css';
 
 const getLedgistas = (): Ledgista[] =>
   useStaticQuery(graphql`
@@ -21,10 +19,9 @@ const getLedgistas = (): Ledgista[] =>
     }
   `).allContentfulLedgista.nodes;
 
-type Trait = 'languages' | 'nationalities' | 'backgrounds' | 'activities';
-type Ledgista = Record<Trait, string[]>;
+type Ledgista = Record<string, string[]>;
 
-const getWords = (ledgistas: Ledgista[], trait: Trait): Word[] => {
+const getWords = (ledgistas: Ledgista[], trait: string): Word[] => {
   const words = new Map<string, number>();
   ledgistas.forEach((ledgista) => {
     const values = ledgista[trait];
@@ -36,7 +33,12 @@ const getWords = (ledgistas: Ledgista[], trait: Trait): Word[] => {
   return Array.from(words).map(([text, value]) => ({ text, value }));
 };
 
-const TRAITS = ['Activities', 'Languages', 'Nationalities', 'Backgrounds'];
+const TRAITS = {
+  Languages: t`Discover all native languages at Ledgy`,
+  Nationalities: t`Where the Legistas come from`,
+  Backgrounds: t`What our team members learned before Ledgy`,
+  Activities: t`What the Ledgistas do in their free time`,
+};
 
 const COLORS = [
   '#e5c534',
@@ -59,27 +61,31 @@ const COLORS = [
 
 export const Ledgistats = () => {
   const ledgistas = getLedgistas();
-  const [trait, setTrait] = useState(TRAITS[0]);
+  const allTraits = Object.keys(TRAITS);
+  const [trait, setTrait] = useState(allTraits[0]);
 
-  const words = getWords(ledgistas, trait.toLowerCase() as Trait);
+  const words = getWords(ledgistas, trait.toLowerCase());
+
   return (
     <Section noPadding>
-      <div style={{ maxWidth: '720px' }} className="mx-auto">
-        <ButtonGroup buttonTexts={TRAITS} onClick={setTrait} tag={trait} />
+      <h4 className="text-center">{TRAITS[trait as keyof typeof TRAITS]}</h4>
+      <div className="my-4">
+        <ReactWordcloud
+          words={words}
+          options={{
+            fontFamily: 'Museo Sans Rounded',
+            fontSizes: [17, 25],
+            enableTooltip: false,
+            colors: COLORS,
+            padding: 3,
+            rotations: 1,
+            rotationAngles: [0, 0],
+          }}
+        />
       </div>
-      <ReactWordcloud
-        words={words}
-        minSize={[400, 300]}
-        options={{
-          fontFamily: 'Museo Sans Rounded',
-          fontSizes: [16, 40],
-          colors: COLORS,
-          padding: 5,
-          rotations: 3,
-          rotationAngles: [0, 90],
-          scale: 'log',
-        }}
-      />
+      <div style={{ maxWidth: '720px' }} className="mx-auto">
+        <ButtonGroup buttonTexts={allTraits} onClick={setTrait} tag={trait} />
+      </div>
     </Section>
   );
 };
