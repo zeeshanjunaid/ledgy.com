@@ -67,7 +67,7 @@ export const Ledgistats = () => {
   
   return (
     <Section noPadding>
-      <h4 className="text-center">{TRAITS[trait as keyof typeof TRAITS]} </h4>
+      <h4 className="text-center">{TRAITS[trait as keyof typeof TRAITS]}</h4>
       <div className="my-4">
         <ReactWordcloud
           words={words}
