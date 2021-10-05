@@ -34,10 +34,10 @@ const getWords = (ledgistas: Ledgista[], trait: string): Word[] => {
 };
 
 const TRAITS = {
+  Activities: t`What the Ledgistas do in their free time`,
+  Backgrounds: t`What our team members learned before Ledgy`,
   Languages: t`Discover all native languages at Ledgy`,
   Nationalities: t`Where the Legistas come from`,
-  Backgrounds: t`What our team members learned before Ledgy`,
-  Activities: t`What the Ledgistas do in their free time`,
 };
 
 const COLORS = [
@@ -63,23 +63,22 @@ export const Ledgistats = () => {
   const ledgistas = getLedgistas();
   const allTraits = Object.keys(TRAITS);
   const [trait, setTrait] = useState(allTraits[0]);
-
   const words = getWords(ledgistas, trait.toLowerCase());
-
+  
   return (
     <Section noPadding>
-      <h4 className="text-center">{TRAITS[trait as keyof typeof TRAITS]}</h4>
+      <h4 className="text-center">{TRAITS[trait as keyof typeof TRAITS]} </h4>
       <div className="my-4">
         <ReactWordcloud
           words={words}
           options={{
             fontFamily: 'Museo Sans Rounded',
-            fontSizes: [17, 25],
+            fontSizes: [52 - words.length, 64],
             enableTooltip: false,
             colors: COLORS,
             padding: 3,
-            rotations: 1,
-            rotationAngles: [0, 0],
+            rotations: 5,
+            rotationAngles: [-15,15],
           }}
         />
       </div>
