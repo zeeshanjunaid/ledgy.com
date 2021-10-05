@@ -1,4 +1,4 @@
-import React, { useState , useEffect} from 'react';
+import React, { useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import ReactWordcloud, { MinMaxPair, Word } from 'react-wordcloud';
 import { t } from '@lingui/macro';
@@ -34,7 +34,6 @@ const getWords = (ledgistas: Ledgista[], trait: string): Word[] => {
 };
 const windowWidth =window.innerWidth
 
-
 const TRAITS = {
   Backgrounds: t`What our team members learned before Ledgy`,
   Languages: t`Discover all native languages at Ledgy`,
@@ -61,17 +60,13 @@ const COLORS = [
   '#132f47',
 ];
 
-
-
-
-
 export const Ledgistats = () => {
   const ledgistas = getLedgistas();
   const allTraits = Object.keys(TRAITS);
   const [trait, setTrait] = useState(allTraits[0]);
   const words = getWords(ledgistas, trait.toLowerCase());
 
-  const fontSizes:MinMaxPair = windowWidth < 600 ? [Math.round(windowWidth/Math.max(50, words.length*2)) , Math.round(windowWidth/Math.min(25, words.length))] :  [Math.round(windowWidth/100),Math.round(windowWidth/40)]
+  const fontSizes:MinMaxPair = windowWidth < 600 ? [windowWidth / Math.max(50, words.length*2) , windowWidth / Math.min(25, words.length)] :  [windowWidth/100 , windowWidth/40]
   
   return (
     <Section noPadding>
