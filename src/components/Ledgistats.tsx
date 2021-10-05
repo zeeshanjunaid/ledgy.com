@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect} from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import ReactWordcloud, { Word } from 'react-wordcloud';
+import ReactWordcloud, { MinMaxPair, Word } from 'react-wordcloud';
 import { t } from '@lingui/macro';
 
 import { Section, ButtonGroup } from './utils';
@@ -32,11 +32,13 @@ const getWords = (ledgistas: Ledgista[], trait: string): Word[] => {
 
   return Array.from(words).map(([text, value]) => ({ text, value }));
 };
+const windowWidth =window.innerWidth
+
 
 const TRAITS = {
-  Activities: t`What the Ledgistas do in their free time`,
   Backgrounds: t`What our team members learned before Ledgy`,
   Languages: t`Discover all native languages at Ledgy`,
+  Activities: t`What the Ledgistas do in their free time`,
   Nationalities: t`Where the Legistas come from`,
 };
 
@@ -59,11 +61,17 @@ const COLORS = [
   '#132f47',
 ];
 
+
+
+
+
 export const Ledgistats = () => {
   const ledgistas = getLedgistas();
   const allTraits = Object.keys(TRAITS);
   const [trait, setTrait] = useState(allTraits[0]);
   const words = getWords(ledgistas, trait.toLowerCase());
+
+  const fontSizes:MinMaxPair = windowWidth < 600 ? [Math.round(windowWidth/Math.max(50, words.length*2)) , Math.round(windowWidth/Math.min(25, words.length))] :  [Math.round(windowWidth/100),Math.round(windowWidth/40)]
   
   return (
     <Section noPadding>
@@ -73,7 +81,7 @@ export const Ledgistats = () => {
           words={words}
           options={{
             fontFamily: 'Museo Sans Rounded',
-            fontSizes: [52 - words.length, 64],
+            fontSizes: fontSizes,
             enableTooltip: false,
             colors: COLORS,
             padding: 3,
