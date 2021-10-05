@@ -32,7 +32,7 @@ const getWords = (ledgistas: Ledgista[], trait: string): Word[] => {
 
   return Array.from(words).map(([text, value]) => ({ text, value }));
 };
-const windowWidth =window.innerWidth
+
 
 const TRAITS = {
   Backgrounds: t`What our team members learned before Ledgy`,
@@ -66,7 +66,16 @@ export const Ledgistats = () => {
   const [trait, setTrait] = useState(allTraits[0]);
   const words = getWords(ledgistas, trait.toLowerCase());
 
-  const fontSizes:MinMaxPair = windowWidth < 600 ? [windowWidth / Math.max(50, words.length*2) , windowWidth / Math.min(25, words.length)] :  [windowWidth/100 , windowWidth/40]
+  const fontSizes = (): MinMaxPair =>  {
+    if (typeof window !== "undefined") {
+      const windowWidth = window.innerWidth
+      return windowWidth < 600 ? [windowWidth / Math.max(50, words.length*2) , windowWidth / Math.min(25, words.length)] :  [windowWidth/100 , windowWidth/40]
+    }else{
+      return [17,25]
+    }
+  }
+    
+  
   
   return (
     <Section noPadding>
@@ -76,7 +85,7 @@ export const Ledgistats = () => {
           words={words}
           options={{
             fontFamily: 'Museo Sans Rounded',
-            fontSizes: fontSizes,
+            fontSizes: fontSizes(),
             enableTooltip: false,
             colors: COLORS,
             padding: 3,
