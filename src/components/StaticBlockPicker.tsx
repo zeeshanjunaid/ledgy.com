@@ -37,6 +37,8 @@ export const StaticBlockPicker = ({ block, prefix }: StaticBlockProps & Prefix) 
       return <Ledgistats />;
     case 'contactUs':
       return <ContactUs />;
+    case 'ledgistats':
+      return null;
     default:
       throw new Error('static block not recognized');
   }
