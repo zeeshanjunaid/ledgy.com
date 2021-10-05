@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet';
 import React from 'react';
 import { name, getLdJson, dynamicI18n } from '../helpers';
 import { langPrefix } from '../i18n-config';
+import { ClickCease } from './ClickCease';
 
 export const HelmetIndexLayout = ({
   lang,
@@ -14,33 +15,35 @@ export const HelmetIndexLayout = ({
   pathname: string;
   keywords: string[];
 }) => (
-  <Helmet>
-    <html lang={lang} />
-    <meta name="keywords" content={dynamicI18n(keywords.join(', '))} />
-    <meta name="author" content="Ledgy" />
-    <script type="application/ld+json">{getLdJson(siteUrl)}</script>
+  <>
+    <ClickCease />
+    <Helmet>
+      <html lang={lang} />
+      <meta name="keywords" content={dynamicI18n(keywords.join(', '))} />
+      <meta name="author" content="Ledgy" />
+      <script type="application/ld+json">{getLdJson(siteUrl)}</script>
 
-    {/* Facebook social card */}
-    <meta property="og:site_name" content={name} />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={`${siteUrl}${pathname}`} />
+      {/* Facebook social card */}
+      <meta property="og:site_name" content={name} />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content={`${siteUrl}${pathname}`} />
 
-    {/* Twitter social card */}
-    <meta name="twitter:site" content="@Ledgy" />
-    <meta name="twitter:card" content="summary_large_image" />
+      {/* Twitter social card */}
+      <meta name="twitter:site" content="@Ledgy" />
+      <meta name="twitter:card" content="summary_large_image" />
 
-    <meta name="facebook-domain-verification" content="taat2n50g23sb14q9tq4dycvqkvqms" />
+      <meta name="facebook-domain-verification" content="taat2n50g23sb14q9tq4dycvqkvqms" />
 
-    <link rel="alternate" href={`${siteUrl}${pathname}`} hrefLang="x-default" />
-    <link rel="alternate" href={`${siteUrl}${pathname}`} hrefLang="en" />
-    <link rel="alternate" href={`${siteUrl}/de${pathname}`} hrefLang="de" />
-    <link rel="alternate" href={`${siteUrl}/fr${pathname}`} hrefLang="fr" />
-    <link rel="canonical" href={`${siteUrl}${langPrefix(lang)}${pathname}`} />
-    <script src="https://www.googleoptimize.com/optimize.js?id=OPT-PHR22QK" />
+      <link rel="alternate" href={`${siteUrl}${pathname}`} hrefLang="x-default" />
+      <link rel="alternate" href={`${siteUrl}${pathname}`} hrefLang="en" />
+      <link rel="alternate" href={`${siteUrl}/de${pathname}`} hrefLang="de" />
+      <link rel="alternate" href={`${siteUrl}/fr${pathname}`} hrefLang="fr" />
+      <link rel="canonical" href={`${siteUrl}${langPrefix(lang)}${pathname}`} />
+      <script src="https://www.googleoptimize.com/optimize.js?id=OPT-PHR22QK" />
 
-    {/* Disable AOS for Google */}
-    <noscript>
-      {`
+      {/* Disable AOS for Google */}
+      <noscript>
+        {`
                 <style>
                   [data-aos] {
                       opacity: 1 !important;
@@ -48,6 +51,7 @@ export const HelmetIndexLayout = ({
                   }
                 </style>
               `}
-    </noscript>
-  </Helmet>
+      </noscript>
+    </Helmet>
+  </>
 );
