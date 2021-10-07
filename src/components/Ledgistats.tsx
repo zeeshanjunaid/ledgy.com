@@ -37,7 +37,7 @@ const TRAITS = {
   Backgrounds: t`What our team members learned before Ledgy`,
   Languages: t`Discover all native languages at Ledgy`,
   Activities: t`What the Ledgistas do in their free time`,
-  Nationalities: t`Where the Legistas come from`,
+  Nationalities: t`Where the Ledgistas come from`,
 };
 
 const COLORS = [
