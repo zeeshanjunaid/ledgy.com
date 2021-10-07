@@ -14,34 +14,6 @@ import { getTeamDescriptions } from './getTeamDescriptions';
 
 import { getTeamImages } from './getTeamImages';
 
-const teamMemberList = [
-  'timo',
-  'yoko',
-  'ben',
-  'oriol',
-  'jules',
-  'marius',
-  'jahlela',
-  'spela',
-  'armon',
-  'karime',
-  'ermias',
-  'mariana',
-  'xiao',
-  'marina',
-  'catarina',
-  'nicolas',
-  'tanya',
-  'sara',
-  'joe',
-  'valerie',
-  'aloys',
-  'thomas',
-  'greg',
-  'giacomo',
-  'luna',
-];
-
 const TeamMember = ({
   name,
   role,
@@ -99,10 +71,9 @@ const TeamMember = ({
   );
 };
 
-export const TeamMembers = ({ prefix }: Prefix) => {
+export const TeamMembers = () => {
   const teamImages = getTeamImages();
-  const teamDescriptions = getTeamDescriptions(prefix);
-  const teamData = teamMemberList.map((name) => [name, teamDescriptions[name], teamImages[name]]);
+  const teamData = Object.entries(getTeamDescriptions());
 
   const [team, setTeam] = useState(teamData);
   useEffect(() => {
@@ -115,8 +86,8 @@ export const TeamMembers = ({ prefix }: Prefix) => {
         <DynamicTrans>Team</DynamicTrans>
       </h2>
       <div className="row justify-content-center my-5">
-        {team.map(([name, member, img]) => (
-          <TeamMember {...member} emojiFilename={name} img={img} key={`team-${name}`} />
+        {team.map(([key, member]) => (
+          <TeamMember {...member} emojiFilename={key} img={teamImages[key]} key={`team-${key}`} />
         ))}
       </div>
       <hr />

@@ -11,7 +11,7 @@
     "build": "./build.sh",
     "serve": "npm run build && gatsby serve",
     "start": "./start.sh",
-    "test": "eslint . --ext jsx,js && tsc",
+    "test": "eslint . --ext tsx,ts && tsc",
     "clean": "gatsby clean",
     "extract": "lingui extract --clean",
     "refresh": "curl -X POST http://localhost:8000/__refresh",
