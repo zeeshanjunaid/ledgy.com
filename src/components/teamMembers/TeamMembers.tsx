@@ -99,9 +99,9 @@ const TeamMember = ({
   );
 };
 
-export const TeamMembers = ({ prefix }: Prefix) => {
+export const TeamMembers = () => {
   const teamImages = getTeamImages();
-  const teamDescriptions = getTeamDescriptions(prefix);
+  const teamDescriptions = getTeamDescriptions();
   const teamData = teamMemberList.map((name) => [name, teamDescriptions[name], teamImages[name]]);
 
   const [team, setTeam] = useState(teamData);

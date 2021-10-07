@@ -14,7 +14,7 @@ export const StaticBlockPicker = ({ block, prefix }: StaticBlockProps & Prefix) 
   if (!block) return null;
   switch (block) {
     case 'teamMembers':
-      return <TeamMembers prefix={prefix} />;
+      return <TeamMembers />;
     case 'investorsList':
       return <InvestorsList />;
     case 'companyPricing':
@@ -37,8 +37,6 @@ export const StaticBlockPicker = ({ block, prefix }: StaticBlockProps & Prefix) 
       return <Ledgistats />;
     case 'contactUs':
       return <ContactUs />;
-    case 'ledgistats':
-      return null;
     default:
       throw new Error('static block not recognized');
   }

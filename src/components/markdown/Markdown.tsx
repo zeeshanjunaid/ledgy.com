@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Img, { GatsbyImageFluidProps } from 'gatsby-image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 import { targetBlank, youtubeEmbedBaseUrl } from '../../helpers';
 import { Embed, DynamicTrans } from '../utils';
@@ -20,9 +20,6 @@ const About = ({ about, img }: { about: AuthorProps; img: GatsbyImageFluidProps 
         <small className="text-nowrap text-muted">{about.role}</small>
       </h5>
       <div>
-        <a className="social-icon" href={`mailto:${about.mail}`}>
-          <FontAwesomeIcon icon={faEnvelope} />
-        </a>
         <a className="social-icon mx-2" href={about.twitter}>
           <FontAwesomeIcon icon={faTwitter} />
         </a>
@@ -34,8 +31,8 @@ const About = ({ about, img }: { about: AuthorProps; img: GatsbyImageFluidProps 
   </div>
 );
 
-export const Author = ({ name, prefix }: Prefix & { name: string }) => {
-  const team = getTeamDescriptions(prefix);
+export const Author = ({ name }: Prefix & { name: string }) => {
+  const team = getTeamDescriptions();
   const images = getTeamImages();
   return <About about={team[name]} img={images[name]} />;
 };

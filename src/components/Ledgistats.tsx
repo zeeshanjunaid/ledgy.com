@@ -5,7 +5,7 @@ import { t } from '@lingui/macro';
 
 import { Section, ButtonGroup } from './utils';
 
-const getLedgistas = (): Ledgista[] =>
+const getLedgistats = (): Ledgistats[] =>
   useStaticQuery(graphql`
     query {
       allContentfulLedgista {
@@ -19,9 +19,9 @@ const getLedgistas = (): Ledgista[] =>
     }
   `).allContentfulLedgista.nodes;
 
-type Ledgista = Record<string, string[]>;
+type Ledgistats = Record<string, string[]>;
 
-const getWords = (ledgistas: Ledgista[], trait: string): Word[] => {
+const getWords = (ledgistas: Ledgistats[], trait: string): Word[] => {
   const words = new Map<string, number>();
   ledgistas.forEach((ledgista) => {
     const values = ledgista[trait];
@@ -32,7 +32,6 @@ const getWords = (ledgistas: Ledgista[], trait: string): Word[] => {
 
   return Array.from(words).map(([text, value]) => ({ text, value }));
 };
-
 
 const TRAITS = {
   Backgrounds: t`What our team members learned before Ledgy`,
@@ -61,22 +60,22 @@ const COLORS = [
 ];
 
 export const Ledgistats = () => {
-  const ledgistas = getLedgistas();
+  const ledgistats = getLedgistats();
   const allTraits = Object.keys(TRAITS);
   const [trait, setTrait] = useState(allTraits[0]);
-  const words = getWords(ledgistas, trait.toLowerCase());
+  const words = getWords(ledgistats, trait.toLowerCase());
 
-  const fontSizes = (): MinMaxPair =>  {
-    if (typeof window !== "undefined") {
-      const windowWidth = window.innerWidth
-      return windowWidth < 600 ? [windowWidth / Math.max(50, words.length*2) , windowWidth / Math.min(25, words.length)] :  [windowWidth/100 , windowWidth/40]
-    }else{
-      return [17,25]
+  const fontSizes = (): MinMaxPair => {
+    if (typeof window !== 'undefined') {
+      const windowWidth = window.innerWidth;
+      return windowWidth < 600
+        ? [windowWidth / Math.max(50, words.length * 2), windowWidth / Math.min(25, words.length)]
+        : [windowWidth / 100, windowWidth / 40];
+    } else {
+      return [17, 25];
     }
-  }
-    
-  
-  
+  };
+
   return (
     <Section noPadding>
       <h4 className="text-center">{TRAITS[trait as keyof typeof TRAITS]}</h4>
@@ -90,7 +89,7 @@ export const Ledgistats = () => {
             colors: COLORS,
             padding: 3,
             rotations: 5,
-            rotationAngles: [-15,15],
+            rotationAngles: [-15, 15],
           }}
         />
       </div>
