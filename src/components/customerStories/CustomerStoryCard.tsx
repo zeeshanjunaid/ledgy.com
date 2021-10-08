@@ -18,7 +18,7 @@ export const CustomerStoryCard = ({
   return (
     <Link to={pagePath}>
       <div className="card card-more-stories mb-4 mx-auto px-4 py-1">
-        <div className={`${coverImage ? 'h-50' : 'h-100'} h-50 d-table`}>
+        <div className={`${coverImage ? 'h-50' : 'h-100'} d-table`}>
           <div className="card-image-wrapper">{logoImage}</div>
         </div>
         {coverImage && (
