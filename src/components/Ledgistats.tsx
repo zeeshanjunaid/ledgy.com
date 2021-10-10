@@ -30,6 +30,11 @@ const getWords = (ledgistas: Ledgistats[], trait: string): Word[] => {
     });
   });
 
+  const total = `${words.size} ${trait}`;
+  const values = Array.from(words.values());
+  const max = Math.max(...values);
+  words.set(total, max / 2);
+
   return Array.from(words).map(([text, value]) => ({ text, value }));
 };
 
