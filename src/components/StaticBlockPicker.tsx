@@ -9,6 +9,7 @@ import { WebinarsList } from './WebinarsList';
 import { JobBoard } from './JobBoard';
 import { ContactUs } from './ContactUs';
 import { Ledgistats } from './Ledgistats';
+import { Integrations } from './marketplace/Integrations';
 
 export const StaticBlockPicker = ({ block, prefix }: StaticBlockProps & Prefix) => {
   if (!block) return null;
@@ -35,6 +36,10 @@ export const StaticBlockPicker = ({ block, prefix }: StaticBlockProps & Prefix) 
       return <JobBoard prefix={prefix} />;
     case 'ledgistats':
       return <Ledgistats />;
+    case 'integrationList':
+      return <Integrations prefix={prefix} />;
+    case 'partnershipList':
+      return <Integrations prefix={prefix} />;
     case 'contactUs':
       return <ContactUs />;
     default:
