@@ -5,9 +5,10 @@ import Img from 'gatsby-image';
 export const MarketplaceCard = ({
   integration,
   prefix,
-}: Prefix & { integration: IntegrationBaseProps }) => {
+  isPartnership = false,
+}: Prefix & { integration: IntegrationBaseProps; isPartnership?: boolean }) => {
   const { slug, title, logo } = integration;
-  const pagePath = `${prefix}/integrations/${slug}/`;
+  const pagePath = `${prefix}/${isPartnership ? 'partnerships' : 'integrations'}/${slug}/`;
   const { childImageSharp } = logo.localFile || {};
   const logoImage = childImageSharp ? <Img {...childImageSharp} /> : null;
   return (

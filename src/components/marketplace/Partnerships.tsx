@@ -33,7 +33,6 @@ const getPartnerships = () =>
 
 export const Partnerships = ({ prefix }: Prefix) => {
   const partnerships = getPartnerships();
-  console.log({ partnerships });
   const { edges } = partnerships.allContentfulPartnership;
   return (
     <ContentBody>
@@ -43,7 +42,7 @@ export const Partnerships = ({ prefix }: Prefix) => {
       <div className="row align-items-center justify-content-center mb-4">
         {edges.map(({ node }: { node: IntegrationBaseProps }) => (
           <div key={node.id} className="col-md-6 col-lg-4">
-            <MarketplaceCard prefix={prefix} integration={node} />
+            <MarketplaceCard prefix={prefix} integration={node} isPartnership />
           </div>
         ))}
       </div>
