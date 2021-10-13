@@ -1,13 +1,13 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import { ContentBody } from '../../components';
+import { ContentBody } from '..';
 import { MarketplaceCard } from './MarketplaceCard';
 import { Trans } from '@lingui/macro';
 
-const getIntegrations = () =>
+const getPartnerships = () =>
   useStaticQuery(graphql`
     query {
-      allContentfulIntegration {
+      allContentfulPartnership {
         edges {
           node {
             id
@@ -31,13 +31,14 @@ const getIntegrations = () =>
     }
   `);
 
-export const Integrations = ({ prefix }: Prefix) => {
-  const integrations = getIntegrations();
-  const { edges } = integrations.allContentfulIntegration;
+export const Partnerships = ({ prefix }: Prefix) => {
+  const partnerships = getPartnerships();
+  console.log({ partnerships });
+  const { edges } = partnerships.allContentfulPartnership;
   return (
     <ContentBody>
       <h4 className="mb-5 mt-3">
-        <Trans>Integrations</Trans>
+        <Trans>Partnerships</Trans>
       </h4>
       <div className="row align-items-center justify-content-center mb-4">
         {edges.map(({ node }: { node: IntegrationBaseProps }) => (

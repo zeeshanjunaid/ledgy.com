@@ -2,7 +2,7 @@ import { Link } from 'gatsby';
 import React from 'react';
 import Img from 'gatsby-image';
 
-export const IntegrationCard = ({
+export const MarketplaceCard = ({
   integration,
   prefix,
 }: Prefix & { integration: IntegrationBaseProps }) => {
