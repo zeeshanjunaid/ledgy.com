@@ -6,10 +6,15 @@
 }
 
 // Top Banner
-.top-banner h1 {
-  font-weight: bold;
-  @include media-breakpoint-up(lg) {
-    font-size: $huge-font-size;
+.top-banner {
+  h1 {
+    font-weight: bold;
+    @include media-breakpoint-up(lg) {
+      font-size: $huge-font-size;
+    }
+  }
+  .gatsby-image-wrapper {
+    border-radius: $border-radius-wide;
   }
 }
 
