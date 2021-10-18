@@ -2,7 +2,7 @@ import React from 'react';
 
 import { graphql } from 'gatsby';
 
-import { CustomFade, Image, LongText, PageHeader } from '../components';
+import { CustomFade, Image, LongText } from '../components';
 import { Title } from './utils';
 import { IntegrationSummary } from '../components/customerStories/IntegrationSummary';
 
@@ -21,26 +21,20 @@ const Integration = ({
   return (
     <div>
       <Title title={title || header} description={'title'} />
-      <PageHeader lang={lang} documentLang={'en'} title={header} subtitle={description} />
       <main>
-        <section className="section header-custom bg-secondary pt-6">
+        <section className="pt-6 bg-lightest">
           <div className="container container-medium">
             <div className="row">
-              <div className="col-md-8">
-                <div className="px-3">
-                  <CustomFade translate="-100px, 0">
-                    <p className="text-lg">{'description'.toUpperCase()}</p>
-                    <h1>{title}</h1>
-                    {description && <p className="text-lg">{description}</p>}
-                  </CustomFade>
-                </div>
+              <div className="col-12 col-md-8 p-4 mb-6">
+                <CustomFade translate="-100px, 0" className="px-3">
+                  <p className="text-lg">{'offical'.toUpperCase()}</p>
+                  <h1>{title}</h1>
+                  {description && <p className="text-lg">{description}</p>}
+                </CustomFade>
               </div>
-              <div className="col-md-4">
-                <div className="rounded-md bg-secondary p-2 p-sm-4 p-md-2 p-lg-4 integrations-logo">
-                  <Image
-                    image={logo}
-                    className="company-summary-logo font-weight-light fit-cover mx-auto my-4"
-                  />
+              <div className="col-12 col-md-4">
+                <div className="bg-secondary d-flex flex-column justify-content-center h-100 p-5 integrations-logo">
+                  <Image image={logo} />
                 </div>
               </div>
             </div>

@@ -178,4 +178,7 @@ $small-width: 560px;
 .card-border-style {
   border-radius: $border-radius-wide;
   box-shadow: $box-shadow-wide;
+  &-top {
+    border-radius: $border-radius-wide;
+  }
 }

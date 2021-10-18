@@ -11,7 +11,7 @@ const TestimonialCard = ({
 
   return (
     <CustomFade translate="0, 100px" delay={index * 200} className="col-12 mb-4 mb-xl-0 col-xl-6">
-      <div className="p-4 p-lg-5 card-border-style h-100 d-flex flex-column justify-content-between">
+      <div className="p-4 p-lg-5 card-border-style h-80 d-flex flex-column justify-content-between">
         <div>
           <Image image={logo} />
           <div className="my-5">
