@@ -38,17 +38,18 @@ declare type CustomerStoryBaseProps = AllContentfulCustomerStoryProps & {
 
 declare type CustomerStoryProps = CustomerStoryBaseProps & { content: Mdx; language: Language };
 
-declare type IntegrationBaseProps = Id & {
-  title: string;
+declare type MarketplaceBaseProps = Id & {
   slug: string;
+  company: string;
   description: string;
   logo: ImageProps;
+  isIntegration: boolean;
 };
 
 type SummaryField = { fieldName: string; fieldContent: string };
 declare type Summary = { contentfulfields: SummaryField[] };
 
-declare type IntegrationProps = IntegrationBaseProps & {
+declare type MarketplaceProps = MarketplaceBaseProps & {
   header: string;
   summary: Summary;
   content: Mdx;

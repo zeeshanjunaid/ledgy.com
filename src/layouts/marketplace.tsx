@@ -6,22 +6,22 @@ import { CustomFade, Image, LanguageHint, LongText } from '../components';
 import { Title } from './utils';
 import { IntegrationSummary } from '../components/customerStories/IntegrationSummary';
 
-const Integration = ({
+const Marketplace = ({
   data,
   lang,
   prefix,
 }: Props & {
   data: {
-    contentfulIntegration: IntegrationProps;
-    allContentfulIntegration: { edges: { node: AllContentfulCustomerStoryProps }[] };
+    contentfulMarketplace: MarketplaceProps;
+    allContentfulcontentfulMarketplace: { edges: { node: AllContentfulCustomerStoryProps }[] };
   };
 }) => {
-  const { title, logo, header, description, summary, content, language } =
-    data.contentfulIntegration;
+  const { company, logo, header, description, summary, content, language } =
+    data.contentfulMarketplace;
 
   return (
     <div>
-      <Title title={title || header} description={'title'} />
+      <Title title={company || header} description={'title'} />
       <main>
         <section className="pt-6 bg-lightest">
           <div className="container container-medium">
@@ -29,7 +29,7 @@ const Integration = ({
               <div className="col-12 col-md-8 p-4 mb-6">
                 <CustomFade translate="-100px, 0" className="px-3">
                   <p className="text-lg">{'offical'.toUpperCase()}</p>
-                  <h1>{title}</h1>
+                  <h1>{company}</h1>
                   {description && <p className="text-lg">{description}</p>}
                   <LanguageHint lang={lang} documentLang={language} />
                 </CustomFade>
@@ -61,13 +61,12 @@ const Integration = ({
   );
 };
 
-export default Integration;
+export default Marketplace;
 
-export const integrationQuery = graphql`
+export const marketplaceQuery = graphql`
   query ($id: String!) {
-    contentfulIntegration(id: { eq: $id }) {
+    contentfulMarketplace(id: { eq: $id }) {
       id
-      title
       logo {
         localFile {
           childImageSharp {
@@ -78,7 +77,9 @@ export const integrationQuery = graphql`
         }
       }
       header
+      company
       description
+      isIntegration
       summary {
         contentfulfields {
           fieldContent

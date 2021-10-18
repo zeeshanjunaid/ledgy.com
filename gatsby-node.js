@@ -145,26 +145,14 @@ const customerStoryQuery = `
 }
 `;
 
-const integrationQuery = `
+const marketplaceQuery = `
 {
-  allContentfulIntegration(limit: 1000) {
+  allContentfulMarketplace(limit: 1000) {
     edges {
       node {
         id
         slug
-      }
-    }
-  }
-}
-`;
-
-const partnershipQuery = `
-{
-  allContentfulPartnership(limit: 1000) {
-    edges {
-      node {
-        id
-        slug
+        isIntegration
       }
     }
   }
@@ -261,23 +249,13 @@ exports.createPages = ({ graphql, actions }) => {
     })
   );
 
-  const integrationComponent = path.resolve(`${basePath}/integration.tsx`);
-  const createIntegrations = resolvePagePromise(graphql(integrationQuery), (data) =>
-    data.allContentfulIntegration.edges.forEach(({ node }) => {
-      const { id, slug } = node;
-      const pagePath = `/integrations/${slug}/`;
+  const marketplaceComponent = path.resolve(`${basePath}/marketplace.tsx`);
+  const createMarketplaces = resolvePagePromise(graphql(marketplaceQuery), (data) =>
+    data.allContentfulMarketplace.edges.forEach(({ node }) => {
+      const { id, isIntegration, slug } = node;
+      const pagePath = `/${isIntegration ? 'integrations' : 'partnerships'}/${slug}/`;
       const context = { id };
-      createLocalizedPages(pagePath, integrationComponent, context);
-    })
-  );
-
-  const partnershipComponent = path.resolve(`${basePath}/partnership.tsx`);
-  const createPartnerships = resolvePagePromise(graphql(partnershipQuery), (data) =>
-    data.allContentfulPartnership.edges.forEach(({ node }) => {
-      const { id, slug } = node;
-      const pagePath = `/partnerships/${slug}/`;
-      const context = { id };
-      createLocalizedPages(pagePath, partnershipComponent, context);
+      createLocalizedPages(pagePath, marketplaceComponent, context);
     })
   );
 
@@ -313,8 +291,7 @@ exports.createPages = ({ graphql, actions }) => {
   const allPages = [
     createPages,
     createCustomerStories,
-    createIntegrations,
-    createPartnerships,
+    createMarketplaces,
     createFeaturePages,
     createDemoPages,
     createJobPages,

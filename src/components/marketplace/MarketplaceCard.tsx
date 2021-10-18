@@ -3,12 +3,11 @@ import React from 'react';
 import { Image } from '../utils';
 
 export const MarketplaceCard = ({
-  integration,
+  marketplace,
   prefix,
-  isPartnership = false,
-}: Prefix & { integration: IntegrationBaseProps; isPartnership?: boolean }) => {
-  const { slug, title, description, logo } = integration;
-  const pagePath = `${prefix}/${isPartnership ? 'partnerships' : 'integrations'}/${slug}/`;
+}: Prefix & { marketplace: MarketplaceBaseProps }) => {
+  const { slug, company, description, logo, isIntegration } = marketplace;
+  const pagePath = `${prefix}/${isIntegration ? 'integrations' : 'partnerships'}/${slug}/`;
   return (
     <Link to={pagePath} className="col-12 col-lg-6 col-xl-4 p-3">
       <div className="card-border-style h-100 d-flex flex-column">
@@ -16,8 +15,8 @@ export const MarketplaceCard = ({
           <Image image={logo} />
         </div>
         <div className="p-4 text-primary">
-          <div>
-            <b>{title}</b>
+          <div className="mb-1">
+            <b>{company}</b>
           </div>
           <div>{description}</div>
         </div>
