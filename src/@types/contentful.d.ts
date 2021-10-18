@@ -52,6 +52,7 @@ declare type IntegrationProps = IntegrationBaseProps & {
   header: string;
   summary: Summary;
   content: Mdx;
+  language: Language;
 };
 
 declare type FeatureGridSectionProps = { icon: IconType; title: string; description: string };

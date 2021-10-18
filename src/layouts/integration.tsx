@@ -2,7 +2,7 @@ import React from 'react';
 
 import { graphql } from 'gatsby';
 
-import { CustomFade, Image, LongText } from '../components';
+import { CustomFade, Image, LanguageHint, LongText } from '../components';
 import { Title } from './utils';
 import { IntegrationSummary } from '../components/customerStories/IntegrationSummary';
 
@@ -16,7 +16,8 @@ const Integration = ({
     allContentfulIntegration: { edges: { node: AllContentfulCustomerStoryProps }[] };
   };
 }) => {
-  const { title, logo, header, description, summary, content } = data.contentfulIntegration;
+  const { title, logo, header, description, summary, content, language } =
+    data.contentfulIntegration;
 
   return (
     <div>
@@ -30,6 +31,7 @@ const Integration = ({
                   <p className="text-lg">{'offical'.toUpperCase()}</p>
                   <h1>{title}</h1>
                   {description && <p className="text-lg">{description}</p>}
+                  <LanguageHint lang={lang} documentLang={language} />
                 </CustomFade>
               </div>
               <div className="col-12 col-md-4">
