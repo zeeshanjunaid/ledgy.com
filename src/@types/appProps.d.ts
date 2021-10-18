@@ -51,4 +51,5 @@ declare type IconType =
   | 'template'
   | 'uk'
   | 'video'
-  | 'updates';
+  | 'updates'
+  | 'handshake';

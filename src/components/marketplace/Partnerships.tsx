@@ -13,7 +13,6 @@ const getPartnerships = () =>
             id
             slug
             title
-            header
             logo {
               localFile {
                 childImageSharp {
@@ -23,8 +22,6 @@ const getPartnerships = () =>
                 }
               }
             }
-            website
-            description
           }
         }
       }

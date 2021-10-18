@@ -41,13 +41,16 @@ declare type CustomerStoryProps = CustomerStoryBaseProps & { content: Mdx; langu
 declare type IntegrationBaseProps = Id & {
   title: string;
   slug: string;
+  description: string;
   logo: ImageProps;
 };
 
+type SummaryField = { fieldName: string; fieldContent: string };
+declare type Summary = { contentfulfields: SummaryField[] };
+
 declare type IntegrationProps = IntegrationBaseProps & {
-  website: string;
   header: string;
-  description: string;
+  summary: Summary;
   content: Mdx;
 };
 

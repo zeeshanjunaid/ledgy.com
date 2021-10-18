@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { ContentBody } from '../../components';
 import { MarketplaceCard } from './MarketplaceCard';
 import { Trans } from '@lingui/macro';
+import { Section } from '../utils';
 
 const getIntegrations = () =>
   useStaticQuery(graphql`
@@ -13,7 +14,7 @@ const getIntegrations = () =>
             id
             slug
             title
-            header
+            description
             logo {
               localFile {
                 childImageSharp {
@@ -23,8 +24,6 @@ const getIntegrations = () =>
                 }
               }
             }
-            website
-            description
           }
         }
       }
@@ -36,16 +35,16 @@ export const Integrations = ({ prefix }: Prefix) => {
   const { edges } = integrations.allContentfulIntegration;
   return (
     <ContentBody>
-      <h4 className="mb-5 mt-3">
-        <Trans>Integrations</Trans>
-      </h4>
-      <div className="row align-items-center justify-content-center mb-4">
-        {edges.map(({ node }: { node: IntegrationBaseProps }) => (
-          <div key={node.id} className="col-md-6 col-lg-4">
-            <MarketplaceCard prefix={prefix} integration={node} />
-          </div>
-        ))}
-      </div>
+      <Section smallPadding>
+        <h4 className="mb-5 mt-3">
+          <Trans>Integrations</Trans>
+        </h4>
+        <div className="row">
+          {edges.map(({ node }: { node: IntegrationBaseProps }) => (
+            <MarketplaceCard key={node.id} prefix={prefix} integration={node} />
+          ))}
+        </div>
+      </Section>
     </ContentBody>
   );
 };

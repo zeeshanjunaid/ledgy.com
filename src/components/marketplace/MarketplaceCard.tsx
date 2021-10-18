@@ -1,21 +1,26 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import Img from 'gatsby-image';
+import { Image } from '../utils';
 
 export const MarketplaceCard = ({
   integration,
   prefix,
   isPartnership = false,
 }: Prefix & { integration: IntegrationBaseProps; isPartnership?: boolean }) => {
-  const { slug, title, logo } = integration;
+  const { slug, title, description, logo } = integration;
   const pagePath = `${prefix}/${isPartnership ? 'partnerships' : 'integrations'}/${slug}/`;
-  const { childImageSharp } = logo.localFile || {};
-  const logoImage = childImageSharp ? <Img {...childImageSharp} /> : null;
   return (
-    <Link to={pagePath} className="col-4">
-      <div className="card card-integration mx-auto ">
-        <div className="card-image-wrapper bg-secondary h-50 d-table p-5">{logoImage}</div>
-        <div className="h-50 d-table px-4 py-1 text-primary p-4">{title}</div>
+    <Link to={pagePath} className="col-12 col-lg-6 col-xl-4 p-2">
+      <div className="m-2 card-border-style h-100 d-flex flex-column">
+        <div className="bg-secondary p-6">
+          <Image image={logo} />
+        </div>
+        <div className="p-4 text-primary">
+          <div>
+            <b>{title}</b>
+          </div>
+          <div>{description}</div>
+        </div>
       </div>
     </Link>
   );

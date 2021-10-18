@@ -161,9 +161,9 @@ const engagement: NavbarMenuColumn = {
     },
     {
       link: 'marketplace',
-      title: 'Market place',
+      title: 'Marketplace',
       description: 'Intergrations and partnerships',
-      icon: 'investor',
+      icon: 'handshake',
     },
   ],
 };

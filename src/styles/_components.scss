@@ -247,7 +247,26 @@ input[type=number]::-webkit-outer-spin-button {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   top: calc(#{$navbar-min-height} + 15px);
   z-index: $zindex-company-summary;
+
 }
+
+.integrations, .partnerships {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  clip-path: inset(0px -14px -14px -14px);
+}
+.integrations-logo {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  clip-path: inset(-14px -14px 0px -14px);
+}
+
+.integrations-card-logo {
+  min-height:200px;
+}
+
+.integrations-card-text {
+  min-height:150px;
+}
+
 
 .company-summary-logo {
   max-width: 150px;
@@ -256,6 +275,7 @@ input[type=number]::-webkit-outer-spin-button {
 .company-summary-quote {
   font-style: italic;
 }
+
 
 // Newsletter
 .newsletter {
@@ -333,8 +353,8 @@ input[type=number]::-webkit-outer-spin-button {
     height: 350px;
   }
   &-integration, &-partnership {
-    width: 370px;
-    height: 400px;
+    width: 300px;
+    // min-height: 350px;
     border-radius:  $border-radius-wide;
     box-shadow: $box-shadow-lighter;
   }

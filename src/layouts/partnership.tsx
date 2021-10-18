@@ -15,25 +15,23 @@ const Partnership = ({
     allContentfulPartnership: { edges: { node: AllContentfulCustomerStoryProps }[] };
   };
 }) => {
-  const { title, header, content, website, logo } = data.contentfulPartnership;
-  const company = { website, logo };
+  const { title, logo, header, description, summary, content } = data.contentfulPartnership;
 
   return (
     <div>
       <Title title={title || header} description={'title'} />
-      <PageHeader lang={lang} documentLang={'en'} title={header} subtitle={'subtitle'} />
+      <PageHeader lang={lang} documentLang={'en'} title={header} subtitle={description} />
       <main>
         <section className="section ">
           <div className="container container-medium">
             <div className="row">
-              <div className="col-md-4 mb-6">
-                <IntegrationSummary company={company} />
-              </div>
               <div className="col-md-8">
                 <div className="px-3">
-                  long content stakeholder
                   <LongText content={content} prefix={prefix} />
                 </div>
+              </div>
+              <div className="col-md-4 mb-6">
+                <IntegrationSummary summary={summary} />
               </div>
             </div>
           </div>
@@ -49,20 +47,27 @@ export const partnershipQuery = graphql`
   query ($id: String!) {
     contentfulPartnership(id: { eq: $id }) {
       id
-      slug
       title
+      logo {
+        localFile {
+          childImageSharp {
+            fluid(maxWidth: 150) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
       header
+      description
+      summary {
+        contentfulfields {
+          fieldContent
+          fieldName
+        }
+      }
       content {
         childMdx {
           body
-        }
-      }
-    }
-    allContentfulPartnership {
-      edges {
-        node {
-          id
-          slug
         }
       }
     }
