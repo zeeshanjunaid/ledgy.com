@@ -39,10 +39,10 @@ declare type CustomerStoryBaseProps = AllContentfulCustomerStoryProps & {
 declare type CustomerStoryProps = CustomerStoryBaseProps & { content: Mdx; language: Language };
 
 declare type MarketplaceBaseProps = Id & {
-  slug: string;
   company: string;
   description: string;
   logo: ImageProps;
+  slug: string;
   isIntegration: boolean;
 };
 
@@ -53,7 +53,7 @@ declare type MarketplaceProps = MarketplaceBaseProps & {
   header: string;
   summary: Summary;
   content: Mdx;
-  language: Language;
+  motivationText: string;
 };
 
 declare type FeatureGridSectionProps = { icon: IconType; title: string; description: string };

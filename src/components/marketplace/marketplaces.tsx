@@ -12,7 +12,6 @@ const getMarketplaces = () =>
             id
             company
             description
-            isIntegration
             logo {
               localFile {
                 childImageSharp {
@@ -23,6 +22,7 @@ const getMarketplaces = () =>
               }
             }
             slug
+            isIntegration
           }
         }
       }
@@ -32,16 +32,17 @@ const getMarketplaces = () =>
 export const Marketplaces = ({ prefix }: Prefix) => {
   const marketplaces = getMarketplaces();
   const { edges } = marketplaces.allContentfulMarketplace;
-  const integrations = edges.filter(
-    ({ node }: { node: MarketplaceBaseProps }) => node.isIntegration
-  );
-  const partnerships = edges.filter(
-    ({ node }: { node: MarketplaceBaseProps }) => !node.isIntegration
-  );
+  const integrations = edges.filter((v: { node: MarketplaceProps }) => v.node.isIntegration);
+  const partnerships = edges.filter((v: { node: MarketplaceProps }) => !v.node.isIntegration);
+
   return (
     <ContentBody>
-      {!!integrations && <MarketplaceSection edges={integrations} prefix={prefix} isIntegration />}
-      {!!partnerships && <MarketplaceSection edges={partnerships} prefix={prefix} />}
+      <div className="mt-2 mb-4">
+        {integrations.length > 0 && (
+          <MarketplaceSection edges={integrations} prefix={prefix} isIntegration />
+        )}
+        {partnerships.length > 0 && <MarketplaceSection edges={partnerships} prefix={prefix} />}
+      </div>
     </ContentBody>
   );
 };

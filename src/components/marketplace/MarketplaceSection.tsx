@@ -14,7 +14,7 @@ export const MarketplaceSection = ({
   isIntegration?: boolean;
 }) => (
   <Section smallPadding>
-    <h4 className="mb-5 mt-3">
+    <h4 className="my-2">
       <Trans>{isIntegration ? 'Integrations' : 'Partnerships'}</Trans>
     </h4>
     <div className="row">

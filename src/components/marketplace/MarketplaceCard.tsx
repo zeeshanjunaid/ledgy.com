@@ -11,7 +11,7 @@ export const MarketplaceCard = ({
   return (
     <Link to={pagePath} className="col-12 col-lg-6 col-xl-4 p-3">
       <div className="card-border-style h-100 d-flex flex-column">
-        <div className="bg-secondary card-image-wrapper p-6">
+        <div className="bg-secondary card-image-wrapper marketplace-card p-6">
           <Image image={logo} />
         </div>
         <div className="p-4 text-primary">

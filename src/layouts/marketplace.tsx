@@ -2,40 +2,37 @@ import React from 'react';
 
 import { graphql } from 'gatsby';
 
-import { CustomFade, Image, LanguageHint, LongText } from '../components';
+import { CustomFade, Image, LongText } from '../components';
 import { Title } from './utils';
-import { IntegrationSummary } from '../components/customerStories/IntegrationSummary';
+import { MarketplaceSummary } from '../components/marketplace/MarketplaceSummary';
 
 const Marketplace = ({
   data,
-  lang,
   prefix,
 }: Props & {
   data: {
     contentfulMarketplace: MarketplaceProps;
-    allContentfulcontentfulMarketplace: { edges: { node: AllContentfulCustomerStoryProps }[] };
   };
 }) => {
-  const { company, logo, header, description, summary, content, language } =
+  const { company, logo, header, description, summary, content, motivationText } =
     data.contentfulMarketplace;
 
   return (
     <div>
-      <Title title={company || header} description={'title'} />
+      <Title title={header} description={description} />
       <main>
         <section className="pt-6 bg-lightest">
-          <div className="container container-medium">
+          <div className="container">
             <div className="row">
               <div className="col-12 col-md-8 p-4 mb-6">
                 <CustomFade translate="-100px, 0" className="px-3">
-                  <p className="text-lg">{'offical'.toUpperCase()}</p>
+                  <p className="text-lg">{motivationText.toUpperCase()}</p>
                   <h1>{company}</h1>
                   {description && <p className="text-lg">{description}</p>}
-                  <LanguageHint lang={lang} documentLang={language} />
                 </CustomFade>
               </div>
               <div className="col-12 col-md-4">
-                <div className="bg-secondary d-flex flex-column justify-content-center h-100 p-5 integrations-logo">
+                <div className="bg-secondary d-flex flex-column justify-content-center h-100 p-5 marketplace-logo">
                   <Image image={logo} />
                 </div>
               </div>
@@ -51,7 +48,7 @@ const Marketplace = ({
                 </div>
               </div>
               <div className="col-md-4 mb-6 order-1 order-md-2">
-                <IntegrationSummary summary={summary} />
+                <MarketplaceSummary summary={summary} />
               </div>
             </div>
           </div>
@@ -67,6 +64,9 @@ export const marketplaceQuery = graphql`
   query ($id: String!) {
     contentfulMarketplace(id: { eq: $id }) {
       id
+      header
+      company
+      description
       logo {
         localFile {
           childImageSharp {
@@ -76,10 +76,8 @@ export const marketplaceQuery = graphql`
           }
         }
       }
-      header
-      company
-      description
       isIntegration
+      motivationText
       summary {
         contentfulfields {
           fieldContent
