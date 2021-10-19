@@ -77,10 +77,12 @@ declare type FeaturePageProps = BaseFeatureProps & {
   slug: string;
   header: string;
   entries: EntryProps[];
+  headerWithMedia?: DisableTypeScript;
 };
 
 declare type TitleWithGraphicProps = BaseFeatureProps & {
   __typename: 'ContentfulTitleWithGraphic';
+  headerWithMedia?: DisableTypeScript;
 };
 
 declare type ContentWithChecklistProps = Id & {
