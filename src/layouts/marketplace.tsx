@@ -21,26 +21,28 @@ const Marketplace = ({
     <div>
       <Title title={header} description={description} />
       <main>
-        <div className="container pt-6 bg-lightest">
-          <div className="row">
-            <div className="col-12 col-lg-8 p-4 mb-6">
-              <CustomFade translate="-100px, 0" className="px-3">
-                <p className="text-lg">{motivationText.toUpperCase()}</p>
-                <h1>{company}</h1>
-                <p className="text-lg">{description}</p>
-              </CustomFade>
-            </div>
-            <div className="col-12 col-lg-4">
-              <div className="bg-secondary d-flex flex-column justify-content-center h-100 p-5 marketplace-logo">
-                <Image image={logo} />
+        <div className="pt-6 bg-lightest">
+          <div className="container">
+            <div className="row">
+              <div className="col-12 col-lg-8 p-4 mb-6">
+                <CustomFade translate="-100px, 0" className="px-3">
+                  <p className="text-lg">{motivationText.toUpperCase()}</p>
+                  <h1>{company}</h1>
+                  <p className="text-lg">{description}</p>
+                </CustomFade>
+              </div>
+              <div className="col-12 col-lg-4">
+                <div className="bg-secondary d-flex flex-column justify-content-center align-items-center h-100 p-5 marketplace-logo">
+                  <Image image={logo} />
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="container container-medium ">
+        <div className="container container-medium mb-6">
           <div className="row">
             <div className="col-12 col-lg-8 order-2 order-lg-1">
-              <div className="px-3 mt-6">
+              <div className="px-3 mt-lg-6">
                 <LongText content={content} prefix={prefix} />
               </div>
             </div>
@@ -66,8 +68,8 @@ export const marketplaceQuery = graphql`
       logo {
         localFile {
           childImageSharp {
-            fluid(maxWidth: 150) {
-              ...GatsbyImageSharpFluid
+            fixed(width: 200) {
+              ...GatsbyImageSharpFixed
             }
           }
         }

@@ -54,6 +54,7 @@ declare type MarketplaceProps = MarketplaceBaseProps & {
   summary: Summary;
   content: Mdx;
   motivationText: string;
+  pictures: ImageProps;
 };
 
 declare type FeatureGridSectionProps = { icon: IconType; title: string; description: string };

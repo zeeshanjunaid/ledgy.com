@@ -1,8 +1,7 @@
 import React from 'react';
 
 import { MarketplaceCard } from './MarketplaceCard';
-import { Trans } from '@lingui/macro';
-import { Section } from '../utils';
+import { Section, DynamicTrans } from '../utils';
 
 export const MarketplaceSection = ({
   edges,
@@ -15,7 +14,7 @@ export const MarketplaceSection = ({
 }) => (
   <Section smallPadding>
     <h4 className="my-2">
-      <Trans>{isIntegration ? 'Integrations' : 'Partnerships'}</Trans>
+      <DynamicTrans>{isIntegration ? 'Integrations' : 'Partnerships'}</DynamicTrans>
     </h4>
     <div className="row">
       {edges.map(({ node }) => (

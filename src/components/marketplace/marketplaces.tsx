@@ -15,14 +15,23 @@ const getMarketplaces = () =>
             logo {
               localFile {
                 childImageSharp {
-                  fluid(maxWidth: 150) {
-                    ...GatsbyImageSharpFluid
+                  fixed(width: 180) {
+                    ...GatsbyImageSharpFixed
                   }
                 }
               }
             }
             slug
             isIntegration
+            pictures {
+              localFile {
+                childImageSharp {
+                  fluid(maxWidth: 150) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+            }
           }
         }
       }
