@@ -70,10 +70,26 @@ exports.createSchemaCustomization = ({ actions }) => {
     title: String
     entries: [EntryProps] @link(by: "id", from: "entries___NODE")
   }
-  type ContentfulFeaturePage2021 implements Node {
+  type ContentfulFeaturePage2021HeaderWithMedia {
+    raw: String
+    references: [ContentfulAsset] @link(by: "id", from: "references___NODE")
+  }
+  type ContentfulFeaturePage2021 implements ContentfulReference & ContentfulEntry & Node @derivedTypes @dontInfer {
+    contentful_id: String!
+    node_locale: String!
     title: String
     entries: [EntryProps] @link(by: "id", from: "entries___NODE")
     buttons: [ContentfulButton] @link(by: "id", from: "buttons___NODE")
+    header: String
+    slug: String
+    description: String
+    motivationText: String
+    headerWithMedia: ContentfulFeaturePage2021HeaderWithMedia
+    graphic: ContentfulAsset @link(by: "id", from: "graphic___NODE")
+    spaceId: String
+    createdAt: Date @dateformat
+    updatedAt: Date @dateformat
+    sys: ContentfulFeaturePage2021Sys
   }
   type ContentfulCustomerStory implements Node {
     title: String
