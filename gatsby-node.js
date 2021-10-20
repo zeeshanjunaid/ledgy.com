@@ -74,6 +74,19 @@ exports.createSchemaCustomization = ({ actions }) => {
     raw: String
     references: [ContentfulAsset] @link(by: "id", from: "references___NODE")
   }
+  type ContentfulFeaturePage2021SysContentTypeSys {
+    type: String
+    linkType: String
+    id: String
+  }
+  type ContentfulFeaturePage2021SysContentType @derivedTypes {
+    sys: ContentfulFeaturePage2021SysContentTypeSys
+  }
+  type ContentfulFeaturePage2021Sys @derivedTypes {
+    type: String
+    contentType: ContentfulFeaturePage2021SysContentType
+    revision: Int
+  }
   type ContentfulFeaturePage2021 implements ContentfulReference & ContentfulEntry & Node @derivedTypes @dontInfer {
     contentful_id: String!
     node_locale: String!
