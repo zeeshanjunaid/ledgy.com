@@ -1,8 +1,7 @@
-import { renderRichText, RenderRichTextData } from 'gatsby-source-contentful/rich-text';
-import { BLOCKS } from '@contentful/rich-text-types';
-
 import React from 'react';
 import Img from 'gatsby-image';
+import { renderRichText, RenderRichTextData } from 'gatsby-source-contentful/rich-text';
+import { BLOCKS } from '@contentful/rich-text-types';
 
 import { dynamicI18n } from '../helpers';
 

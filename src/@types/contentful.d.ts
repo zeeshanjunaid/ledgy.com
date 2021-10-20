@@ -73,16 +73,18 @@ declare type BaseFeatureProps = Id & {
   buttons?: ButtonProps[];
 };
 
+type RichText = { raw: string; references: DisableTypeScript[] };
+
 declare type FeaturePageProps = BaseFeatureProps & {
   slug: string;
   header: string;
   entries: EntryProps[];
-  headerWithMedia?: DisableTypeScript;
+  headerWithMedia?: RichText;
 };
 
 declare type TitleWithGraphicProps = BaseFeatureProps & {
   __typename: 'ContentfulTitleWithGraphic';
-  headerWithMedia?: DisableTypeScript;
+  headerWithMedia?: RichText;
 };
 
 declare type ContentWithChecklistProps = Id & {
