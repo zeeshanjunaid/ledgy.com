@@ -8,7 +8,7 @@ export const MarketplaceSummary = ({ summary }: { summary: Summary }) => {
       {contentfulfields.map((field) => (
         <div className="my-3" key={field.fieldName}>
           <div className="row mx-auto">
-            <strong>{field.fieldName.toUpperCase()}</strong>
+            <strong>{field.fieldName}</strong>
           </div>
           <div>{field.fieldContent}</div>
         </div>

@@ -21,38 +21,34 @@ const Marketplace = ({
     <div>
       <Title title={header} description={description} />
       <main>
-        <section className="pt-6 bg-lightest">
-          <div className="container">
-            <div className="row">
-              <div className="col-12 col-md-8 p-4 mb-6">
-                <CustomFade translate="-100px, 0" className="px-3">
-                  <p className="text-lg">{motivationText.toUpperCase()}</p>
-                  <h1>{company}</h1>
-                  {description && <p className="text-lg">{description}</p>}
-                </CustomFade>
-              </div>
-              <div className="col-12 col-md-4">
-                <div className="bg-secondary d-flex flex-column justify-content-center h-100 p-5 marketplace-logo">
-                  <Image image={logo} />
-                </div>
+        <div className="container pt-6 bg-lightest">
+          <div className="row">
+            <div className="col-12 col-lg-8 p-4 mb-6">
+              <CustomFade translate="-100px, 0" className="px-3">
+                <p className="text-lg">{motivationText.toUpperCase()}</p>
+                <h1>{company}</h1>
+                {description && <p className="text-lg">{description}</p>}
+              </CustomFade>
+            </div>
+            <div className="col-12 col-lg-4">
+              <div className="bg-secondary d-flex flex-column justify-content-center h-100 p-5 marketplace-logo">
+                <Image image={logo} />
               </div>
             </div>
           </div>
-        </section>
-        <section className="section ">
-          <div className="container container-medium ">
-            <div className="row">
-              <div className="col-md-8 order-2 order-md-1">
-                <div className="px-3 mt-6">
-                  <LongText content={content} prefix={prefix} />
-                </div>
-              </div>
-              <div className="col-md-4 mb-6 order-1 order-md-2">
-                <MarketplaceSummary summary={summary} />
+        </div>
+        <div className="container container-medium ">
+          <div className="row">
+            <div className="col-12 col-lg-8 order-2 order-lg-1">
+              <div className="px-3 mt-6">
+                <LongText content={content} prefix={prefix} />
               </div>
             </div>
+            <div className="col-12 col-lg-4 mb-6 order-1 order-lg-2">
+              <MarketplaceSummary summary={summary} />
+            </div>
           </div>
-        </section>
+        </div>
       </main>
     </div>
   );
