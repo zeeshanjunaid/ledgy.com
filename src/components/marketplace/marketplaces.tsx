@@ -23,15 +23,6 @@ const getMarketplaces = () =>
             }
             slug
             isIntegration
-            pictures {
-              localFile {
-                childImageSharp {
-                  fluid(maxWidth: 150) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
-            }
           }
         }
       }
