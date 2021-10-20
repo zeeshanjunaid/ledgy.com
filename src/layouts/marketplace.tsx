@@ -27,7 +27,7 @@ const Marketplace = ({
               <CustomFade translate="-100px, 0" className="px-3">
                 <p className="text-lg">{motivationText.toUpperCase()}</p>
                 <h1>{company}</h1>
-                {description && <p className="text-lg">{description}</p>}
+                <p className="text-lg">{description}</p>
               </CustomFade>
             </div>
             <div className="col-12 col-lg-4">
