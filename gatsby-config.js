@@ -11,6 +11,8 @@ const {
 } = process.env;
 const src = `${__dirname}/src`;
 
+process.env.GATSBY_CONCURRENT_DOWNLOAD = 1;
+
 module.exports = {
   siteMetadata: {
     siteUrl:

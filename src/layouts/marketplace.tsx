@@ -1,11 +1,9 @@
 import React from 'react';
-
 import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
-
 import { CustomFade, Image, LongText } from '../components';
 import { Title } from './utils';
 import { MarketplaceSummary } from '../components/marketplace/MarketplaceSummary';
+import { MarketplacePictures } from './MarketplacePictures';
 
 const Marketplace = ({
   data,
@@ -17,7 +15,6 @@ const Marketplace = ({
 }) => {
   const { company, logo, header, description, summary, content, motivationText, pictures } =
     data.contentfulMarketplace;
-  const { childImageSharp } = pictures.localFile || {};
 
   return (
     <div>
@@ -46,13 +43,7 @@ const Marketplace = ({
             <div className="col-12 col-lg-8 order-2 order-lg-1">
               <div className="px-3 mt-lg-6">
                 <LongText content={content} prefix={prefix} />
-                <div className={`mt-2 mb-6`}>
-                  <CustomFade translate="0, 100px">
-                    <div className="screenshot">
-                      {!!childImageSharp && <Img {...childImageSharp} />}
-                    </div>
-                  </CustomFade>
-                </div>
+                <MarketplacePictures pictures={pictures} />
               </div>
             </div>
             <div className="col-12 col-lg-4 mb-6 order-1 order-lg-2">
@@ -99,7 +90,7 @@ export const marketplaceQuery = graphql`
       pictures {
         localFile {
           childImageSharp {
-            fluid(maxWidth: 1200, quality: 100) {
+            fluid(maxWidth: 200) {
               ...GatsbyImageSharpFluid
             }
           }
