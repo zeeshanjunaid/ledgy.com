@@ -145,6 +145,20 @@ const customerStoryQuery = `
 }
 `;
 
+const marketplaceQuery = `
+{
+  allContentfulMarketplace(limit: 1000) {
+    edges {
+      node {
+        id
+        slug
+        isIntegration
+      }
+    }
+  }
+}
+`;
+
 const featurePageQuery = `
 {
   allContentfulFeaturePage2021(limit: 1000) {
@@ -235,6 +249,16 @@ exports.createPages = ({ graphql, actions }) => {
     })
   );
 
+  const marketplaceComponent = path.resolve(`${basePath}/marketplace.tsx`);
+  const createMarketplaces = resolvePagePromise(graphql(marketplaceQuery), (data) =>
+    data.allContentfulMarketplace.edges.forEach(({ node }) => {
+      const { id, isIntegration, slug } = node;
+      const pagePath = `/${isIntegration ? 'integrations' : 'partnerships'}/${slug}/`;
+      const context = { id };
+      createLocalizedPages(pagePath, marketplaceComponent, context);
+    })
+  );
+
   const featurePageComponent = path.resolve(`${basePath}/featurePage.tsx`);
   const createFeaturePages = resolvePagePromise(graphql(featurePageQuery), (data) =>
     data.allContentfulFeaturePage2021.edges.forEach(({ node }) => {
@@ -267,6 +291,7 @@ exports.createPages = ({ graphql, actions }) => {
   const allPages = [
     createPages,
     createCustomerStories,
+    createMarketplaces,
     createFeaturePages,
     createDemoPages,
     createJobPages,
