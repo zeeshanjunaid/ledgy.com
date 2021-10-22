@@ -1,19 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { CustomFade, Image } from '../components';
+import { MarketplacePicturesButton } from './MarketplacePicturesButton';
+
 export const MarketplacePictures = ({ pictures }: { pictures: ImageProps[] }) => {
-  const picturesCount = pictures.length;
+  const [currentImage, setCurrentImage] = useState(0);
+  const totalImageCount = pictures.length;
+  const imageLocationText = `${currentImage + 1}/${totalImageCount}`;
   return (
-    <div className={`row align-items-center mt-2 mb-6`}>
-      {pictures.map((picture, i) => {
-        const colCount = (picturesCount === 3 && 4) || (picturesCount === 2 && 6) || 12;
-        return (
-          <div className={`col-12 col-lg-${colCount} py-2`} key={`picture-${i}`}>
-            <CustomFade translate="0, 100px" delay={i * 100}>
-              <Image image={picture} className="screenshot" />
-            </CustomFade>
-          </div>
-        );
-      })}
+    <div>
+      <div className={`row align-items-center mt-2`}>
+        <MarketplacePicturesButton
+          currentImage={currentImage}
+          setCurrentImage={setCurrentImage}
+          totalImageCount={totalImageCount}
+        />
+        <div className={`col-10 py-2`}>
+          <CustomFade translate="0, 100px" delay={100}>
+            <Image image={pictures[currentImage]} className="screenshot" />
+          </CustomFade>
+        </div>
+        <MarketplacePicturesButton
+          currentImage={currentImage}
+          setCurrentImage={setCurrentImage}
+          totalImageCount={totalImageCount}
+          isNext
+        />
+      </div>
+      <div className="row justify-content-center mb-6">
+        <div className="text-muted text-sm">{imageLocationText}</div>
+      </div>
     </div>
   );
 };

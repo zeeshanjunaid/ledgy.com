@@ -90,7 +90,7 @@ export const marketplaceQuery = graphql`
       pictures {
         localFile {
           childImageSharp {
-            fluid(maxWidth: 200, quality: 100) {
+            fluid(maxWidth: 400, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }

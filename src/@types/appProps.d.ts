@@ -52,4 +52,6 @@ declare type IconType =
   | 'uk'
   | 'video'
   | 'updates'
-  | 'handshake';
+  | 'handshake'
+  | 'previous'
+  | 'next';
