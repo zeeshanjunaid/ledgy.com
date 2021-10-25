@@ -98,6 +98,7 @@ declare type FeaturePageProps = BaseFeatureProps & {
   slug: string;
   header: string;
   entries: EntryProps[];
+  indexable: boolean;
   headerWithMedia?: RichText;
 };
 
