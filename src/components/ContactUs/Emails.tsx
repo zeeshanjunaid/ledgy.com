@@ -16,19 +16,25 @@ export const Emails = () => (
     </div>
     <div className="mb-4">
       <h6>
-        <Trans>Sales Inquiries</Trans>
+        <Trans>Sales</Trans>
       </h6>
       <a href="mailto:sales@ledgy.com">sales@ledgy.com</a>
     </div>
     <div className="mb-4">
       <h6>
-        <Trans>Career Inquiries</Trans>
+        <Trans>Partners & Integrations</Trans>
+      </h6>
+      <a href="mailto:partners@ledgy.com">partners@ledgy.com</a>
+    </div>
+    <div className="mb-4">
+      <h6>
+        <Trans>Career</Trans>
       </h6>
       <a href="mailto:work@ledgy.com">work@ledgy.com</a>
     </div>
     <div>
       <h6>
-        <Trans>General Inquiries</Trans>
+        <Trans>General</Trans>
       </h6>
       <a href="mailto:contact@ledgy.com">contact@ledgy.com</a>
     </div>
