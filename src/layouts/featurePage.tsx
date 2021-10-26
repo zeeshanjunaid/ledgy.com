@@ -14,7 +14,7 @@ const FeaturePage = ({
     allContentfulFeaturePage2021: UnknownObject;
   };
 }) => {
-  const { title, header, description, graphic, motivationText, entries, buttons } =
+  const { title, header, headerWithMedia, description, graphic, motivationText, entries, buttons } =
     data.contentfulFeaturePage2021;
 
   return (
@@ -23,6 +23,7 @@ const FeaturePage = ({
       <TitleWithGraphic
         id={header}
         title={header}
+        headerWithMedia={headerWithMedia}
         description={description}
         graphic={graphic}
         motivationText={motivationText}
@@ -47,6 +48,18 @@ export const featurePageQuery = graphql`
       slug
       title
       header
+      headerWithMedia {
+        raw
+        references {
+          ... on ContentfulAsset {
+            contentful_id
+            fixed(width: 250) {
+              ...GatsbyContentfulFixed
+            }
+            __typename
+          }
+        }
+      }
       description
       motivationText
       buttons {

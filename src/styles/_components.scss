@@ -6,10 +6,15 @@
 }
 
 // Top Banner
-.top-banner h1 {
-  font-weight: bold;
-  @include media-breakpoint-up(lg) {
-    font-size: $huge-font-size;
+.top-banner {
+  h1 {
+    font-weight: bold;
+    @include media-breakpoint-up(lg) {
+      font-size: $huge-font-size;
+    }
+  }
+  .gatsby-image-wrapper {
+    border-radius: $border-radius-wide;
   }
 }
 
@@ -252,6 +257,17 @@ input[type=number]::-webkit-outer-spin-button {
   font-style: italic;
 }
 
+// Market place
+.marketplace-logo {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25) ;
+  clip-path: inset(-14px -14px 0px -14px);
+}
+
+.marketplace-text {
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+  clip-path: inset(0px -14px -14px -14px);
+}
+
 // Newsletter
 .newsletter {
   max-width: 600px;
@@ -326,6 +342,9 @@ input[type=number]::-webkit-outer-spin-button {
   &-more-stories {
     width: 220px;
     height: 350px;
+  }
+  &-marketplace {
+    height: 220px;
   }
 }
 

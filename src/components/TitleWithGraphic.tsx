@@ -3,6 +3,7 @@ import React from 'react';
 import { dynamicI18n } from '../helpers';
 import { DynamicTrans, Section, Image, Button } from './utils';
 import { formatUrl, getUnderlineHtml } from './lib';
+import { RichTextHeader } from './RichTextHeader';
 
 const CustomButton = ({
   url,
@@ -27,6 +28,7 @@ const CustomButton = ({
 
 export const TitleWithGraphic = ({
   title,
+  headerWithMedia,
   motivationText,
   graphic,
   description,
@@ -39,6 +41,7 @@ export const TitleWithGraphic = ({
 
   const motivationTextColor = isTopBanner ? 'text-gray-dark' : 'text-secondary';
   const titleColor = isTopBanner ? 'text-primary' : 'text-secondary';
+  const titleClassName = `my-4 font-weight-bold ${titleColor}`;
   const descriptionColor = isTopBanner ? 'text-primary' : 'text-white';
 
   const rowMargin = isTopBanner ? 'my-3 my-xl-5' : 'my-5 my-xl-7';
@@ -61,10 +64,15 @@ export const TitleWithGraphic = ({
             <p className={motivationTextColor}>
               <DynamicTrans>{motivationText.toUpperCase()}</DynamicTrans>
             </p>
-            <h1
-              className={`custom-underline my-4 font-weight-bold ${titleColor}`}
-              dangerouslySetInnerHTML={{ __html: getUnderlineHtml(dynamicI18n(title)) }}
-            />
+            {headerWithMedia ? (
+              <RichTextHeader richTextData={headerWithMedia} className={titleClassName} />
+            ) : (
+              <h1
+                className={`custom-underline ${titleClassName}`}
+                dangerouslySetInnerHTML={{ __html: getUnderlineHtml(dynamicI18n(title)) }}
+              />
+            )}
+
             <p className={descriptionColor}>
               <DynamicTrans>{description}</DynamicTrans>
             </p>

@@ -38,6 +38,25 @@ declare type CustomerStoryBaseProps = AllContentfulCustomerStoryProps & {
 
 declare type CustomerStoryProps = CustomerStoryBaseProps & { content: Mdx; language: Language };
 
+declare type MarketplaceBaseProps = Id & {
+  company: string;
+  description: string;
+  logo: ImageProps;
+  slug: string;
+  isIntegration: boolean;
+};
+
+type SummaryField = { fieldName: string; fieldContent: string };
+declare type Summary = { contentfulfields: SummaryField[] };
+
+declare type MarketplaceProps = MarketplaceBaseProps & {
+  header: string;
+  summary: Summary;
+  content: Mdx;
+  motivationText: string;
+  pictures: ImageProps[];
+};
+
 declare type FeatureGridSectionProps = { icon: IconType; title: string; description: string };
 
 declare type FeatureGridContentProps = Id & {
@@ -73,14 +92,18 @@ declare type BaseFeatureProps = Id & {
   buttons?: ButtonProps[];
 };
 
+type RichText = { raw: string; references: DisableTypeScript[] };
+
 declare type FeaturePageProps = BaseFeatureProps & {
   slug: string;
   header: string;
   entries: EntryProps[];
+  headerWithMedia?: RichText;
 };
 
 declare type TitleWithGraphicProps = BaseFeatureProps & {
   __typename: 'ContentfulTitleWithGraphic';
+  headerWithMedia?: RichText;
 };
 
 declare type ContentWithChecklistProps = Id & {

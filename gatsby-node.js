@@ -70,10 +70,39 @@ exports.createSchemaCustomization = ({ actions }) => {
     title: String
     entries: [EntryProps] @link(by: "id", from: "entries___NODE")
   }
-  type ContentfulFeaturePage2021 implements Node {
+  type ContentfulFeaturePage2021HeaderWithMedia {
+    raw: String
+    references: [ContentfulAsset] @link(by: "id", from: "references___NODE")
+  }
+  type ContentfulFeaturePage2021SysContentTypeSys {
+    type: String
+    linkType: String
+    id: String
+  }
+  type ContentfulFeaturePage2021SysContentType @derivedTypes {
+    sys: ContentfulFeaturePage2021SysContentTypeSys
+  }
+  type ContentfulFeaturePage2021Sys @derivedTypes {
+    type: String
+    contentType: ContentfulFeaturePage2021SysContentType
+    revision: Int
+  }
+  type ContentfulFeaturePage2021 implements ContentfulReference & ContentfulEntry & Node @derivedTypes @dontInfer {
+    contentful_id: String!
+    node_locale: String!
     title: String
     entries: [EntryProps] @link(by: "id", from: "entries___NODE")
     buttons: [ContentfulButton] @link(by: "id", from: "buttons___NODE")
+    header: String
+    slug: String
+    description: String
+    motivationText: String
+    headerWithMedia: ContentfulFeaturePage2021HeaderWithMedia
+    graphic: ContentfulAsset @link(by: "id", from: "graphic___NODE")
+    spaceId: String
+    createdAt: Date @dateformat
+    updatedAt: Date @dateformat
+    sys: ContentfulFeaturePage2021Sys
   }
   type ContentfulCustomerStory implements Node {
     title: String
@@ -110,6 +139,20 @@ const customerStoryQuery = `
       node {
         id
         slug
+      }
+    }
+  }
+}
+`;
+
+const marketplaceQuery = `
+{
+  allContentfulMarketplace(limit: 1000) {
+    edges {
+      node {
+        id
+        slug
+        isIntegration
       }
     }
   }
@@ -206,6 +249,16 @@ exports.createPages = ({ graphql, actions }) => {
     })
   );
 
+  const marketplaceComponent = path.resolve(`${basePath}/marketplace.tsx`);
+  const createMarketplaces = resolvePagePromise(graphql(marketplaceQuery), (data) =>
+    data.allContentfulMarketplace.edges.forEach(({ node }) => {
+      const { id, isIntegration, slug } = node;
+      const pagePath = `/${isIntegration ? 'integrations' : 'partnerships'}/${slug}/`;
+      const context = { id };
+      createLocalizedPages(pagePath, marketplaceComponent, context);
+    })
+  );
+
   const featurePageComponent = path.resolve(`${basePath}/featurePage.tsx`);
   const createFeaturePages = resolvePagePromise(graphql(featurePageQuery), (data) =>
     data.allContentfulFeaturePage2021.edges.forEach(({ node }) => {
@@ -238,6 +291,7 @@ exports.createPages = ({ graphql, actions }) => {
   const allPages = [
     createPages,
     createCustomerStories,
+    createMarketplaces,
     createFeaturePages,
     createDemoPages,
     createJobPages,

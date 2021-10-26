@@ -159,6 +159,12 @@ const engagement: NavbarMenuColumn = {
       description: 'Truly understand your investments and returns',
       icon: 'investor',
     },
+    {
+      link: 'marketplace',
+      title: 'Marketplace',
+      description: 'Intergrations and partnerships',
+      icon: 'handshake',
+    },
   ],
 };
 
