@@ -90,6 +90,7 @@ exports.createSchemaCustomization = ({ actions }) => {
   type ContentfulFeaturePage2021 implements ContentfulReference & ContentfulEntry & Node @derivedTypes @dontInfer {
     contentful_id: String!
     node_locale: String!
+    indexable: Boolean
     title: String
     entries: [EntryProps] @link(by: "id", from: "entries___NODE")
     buttons: [ContentfulButton] @link(by: "id", from: "buttons___NODE")

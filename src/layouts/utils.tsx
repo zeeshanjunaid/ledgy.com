@@ -4,25 +4,52 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { name } from '../helpers';
 
-export const Title = (props: {
+const MetaTags = ({
+  indexable,
+  title,
+  description,
+  thumbnailUrl,
+}: {
+  indexable: boolean;
+  title: string;
+  description?: string;
+  thumbnailUrl?: string;
+}) => (
+  <>
+    {!indexable && <meta name="robots" content="noindex"></meta>}
+    {description && <meta name="description" content={description} />}
+    <meta property="og:title" content={title} />
+    {description && <meta property="og:description" content={description} />}
+    {thumbnailUrl && <meta property="og:image" content={thumbnailUrl} />}
+    <meta name="twitter:title" content={title} />
+    {description && <meta name="twitter:description" content={description} />}
+    {thumbnailUrl && <meta name="twitter:image" content={thumbnailUrl} />}
+  </>
+);
+
+export const Title = ({
+  title,
+  section,
+  description,
+  thumbnailUrl,
+  indexable = true,
+}: {
   title: string;
   section?: string;
   description?: string;
   thumbnailUrl?: string;
+  indexable?: boolean;
 }) => (
   <Helmet>
     <title>
-      {props.title} {props.section && `| ${props.section}`} | {name}
+      {title} {section && `| ${section}`} | {name}
     </title>
-    {props.description && <meta name="description" content={props.description} />}
-
-    <meta property="og:title" content={props.title} />
-    {props.description && <meta property="og:description" content={props.description} />}
-    {props.thumbnailUrl && <meta property="og:image" content={props.thumbnailUrl} />}
-
-    <meta name="twitter:title" content={props.title} />
-    {props.description && <meta name="twitter:description" content={props.description} />}
-    {props.thumbnailUrl && <meta name="twitter:image" content={props.thumbnailUrl} />}
+    <MetaTags
+      indexable={indexable}
+      title={title}
+      description={description}
+      thumbnailUrl={thumbnailUrl}
+    />
   </Helmet>
 );
 Title.defaultProps = { section: '', description: '', thumbnailUrl: '' };
