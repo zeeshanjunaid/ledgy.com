@@ -5,15 +5,18 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { name } from '../helpers';
 
 const MetaTags = ({
+  indexable,
   title,
   description,
   thumbnailUrl,
 }: {
+  indexable: boolean;
   title: string;
   description?: string;
   thumbnailUrl?: string;
 }) => (
   <>
+    {!indexable && <meta name="robots" content="noindex"></meta>}
     {description && <meta name="description" content={description} />}
     <meta property="og:title" content={title} />
     {description && <meta property="og:description" content={description} />}
@@ -41,7 +44,12 @@ export const Title = ({
     <title>
       {title} {section && `| ${section}`} | {name}
     </title>
-    {indexable && <MetaTags title={title} description={description} thumbnailUrl={thumbnailUrl} />}
+    <MetaTags
+      indexable={indexable}
+      title={title}
+      description={description}
+      thumbnailUrl={thumbnailUrl}
+    />
   </Helmet>
 );
 Title.defaultProps = { section: '', description: '', thumbnailUrl: '' };
