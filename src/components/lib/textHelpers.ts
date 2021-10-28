@@ -91,6 +91,7 @@ export const NAVBAR_TITLES = {
   resourcesTitle: 'Resources',
   pricingTitle: 'Pricing',
   dataProtectionTitle: 'Data protection',
+  companyTitle: 'Company',
 };
 
 export type NavbarMenuItem = { icon: IconType; title: string; description: string; link: string };
@@ -255,8 +256,32 @@ const pricingTypes: NavbarMenuColumn = {
   ],
 };
 
+const companyTypes: NavbarMenuColumn = {
+  items: [
+    {
+      link: 'company-pricing',
+      title: 'About Us',
+      description: 'Our values and our why',
+      icon: 'aboutus',
+    },
+    {
+      link: 'about-us',
+      title: 'Team',
+      description: 'Our values and our why',
+      icon: 'team',
+    },
+    {
+      link: 'jobs',
+      title: 'Carrers',
+      description: 'Join us on our mission',
+      icon: 'carrer',
+    },
+  ],
+};
+
 const solutions: NavbarMenuColumn[] = [teams, features, engagement];
 const resources: NavbarMenuColumn[] = [learn, explore, tools];
 const pricing: NavbarMenuColumn[] = [pricingTypes];
+const company: NavbarMenuColumn[] = [companyTypes];
 
-export const NAVBAR_LINKS = { solutions, resources, pricing };
+export const NAVBAR_LINKS = { solutions, resources, pricing, company };

@@ -30,7 +30,9 @@ declare type FormStatus =
   | 'submitted';
 
 declare type IconType =
+  | 'aboutus'
   | 'blog'
+  | 'carrer'
   | 'calculator'
   | 'chart'
   | 'company'
@@ -48,6 +50,7 @@ declare type IconType =
   | 'employees'
   | 'rocket'
   | 'story'
+  | 'team'
   | 'template'
   | 'uk'
   | 'video'
