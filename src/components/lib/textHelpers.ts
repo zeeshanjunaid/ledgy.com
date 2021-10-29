@@ -110,7 +110,7 @@ const teams: NavbarMenuColumn = {
       link: FINANCE_LEGAL_ACCOUNTING,
       title: FINANCE_LEGAL_ACCOUNTING_TITLE,
       description: 'Cap table, scenario modeling, investor relations',
-      icon: 'calculator',
+      icon: 'financeLegalAccounting',
     },
     {
       link: VCS_BUSINESS_ANGELS,
@@ -259,22 +259,22 @@ const pricingTypes: NavbarMenuColumn = {
 const companyTypes: NavbarMenuColumn = {
   items: [
     {
-      link: 'company-pricing',
+      link: 'our-story',
       title: 'About Us',
       description: 'Our values and our why',
-      icon: 'aboutus',
+      icon: 'aboutUs',
     },
     {
       link: 'about-us',
       title: 'Team',
-      description: 'Our values and our why',
+      description: 'Get to know the Ledgistas',
       icon: 'team',
     },
     {
       link: 'jobs',
-      title: 'Carrers',
+      title: 'Careers',
       description: 'Join us on our mission',
-      icon: 'carrer',
+      icon: 'careers',
     },
   ],
 };

@@ -27,6 +27,7 @@ declare type ContentfulPageProps = Id & {
 declare type AllContentfulCustomerStoryProps = Id & {
   company: CompanyProps;
   slug: string;
+  isOurStory: boolean;
 };
 
 declare type CustomerStoryBaseProps = AllContentfulCustomerStoryProps & {
@@ -34,6 +35,7 @@ declare type CustomerStoryBaseProps = AllContentfulCustomerStoryProps & {
   header: string;
   subtitle: string;
   date: string;
+  isOurStory: boolean;
 };
 
 declare type CustomerStoryProps = CustomerStoryBaseProps & { content: Mdx; language: Language };

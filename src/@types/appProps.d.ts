@@ -30,14 +30,15 @@ declare type FormStatus =
   | 'submitted';
 
 declare type IconType =
-  | 'aboutus'
+  | 'aboutUs'
   | 'blog'
-  | 'carrer'
+  | 'careers'
   | 'calculator'
   | 'chart'
   | 'company'
   | 'dach'
   | 'documents'
+  | 'financeLegalAccounting'
   | 'globe'
   | 'help'
   | 'hr'
