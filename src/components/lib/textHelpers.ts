@@ -149,6 +149,12 @@ const engagement: NavbarMenuColumn = {
   header: 'Engagement',
   items: [
     {
+      link: 'marketplace',
+      title: 'Marketplace',
+      description: 'Integrations and partnerships',
+      icon: 'handshake',
+    },
+    {
       link: EMPLOYEE_DASHBOARDS,
       title: EMPLOYEE_DASHBOARDS_TITLE,
       description: 'Make their ownership clear at every stage',
@@ -159,12 +165,6 @@ const engagement: NavbarMenuColumn = {
       title: INVESTOR_DASHBOARDS_TITLE,
       description: 'Truly understand your investments and returns',
       icon: 'investor',
-    },
-    {
-      link: 'marketplace',
-      title: 'Marketplace',
-      description: 'Intergrations and partnerships',
-      icon: 'handshake',
     },
   ],
 };
