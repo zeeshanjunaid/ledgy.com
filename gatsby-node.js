@@ -140,6 +140,7 @@ const customerStoryQuery = `
       node {
         id
         slug
+        isOurStory
       }
     }
   }
@@ -243,8 +244,8 @@ exports.createPages = ({ graphql, actions }) => {
   const customerStoryComponent = path.resolve(`${basePath}/customerStory.tsx`);
   const createCustomerStories = resolvePagePromise(graphql(customerStoryQuery), (data) =>
     data.allContentfulCustomerStory.edges.forEach(({ node }) => {
-      const { id, slug } = node;
-      const pagePath = `/customer-stories/${slug}/`;
+      const { id, slug, isOurStory } = node;
+      const pagePath = isOurStory ? slug : `/customer-stories/${slug}/`;
       const context = { id };
       createLocalizedPages(pagePath, customerStoryComponent, context);
     })

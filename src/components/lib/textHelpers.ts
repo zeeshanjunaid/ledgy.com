@@ -91,6 +91,7 @@ export const NAVBAR_TITLES = {
   resourcesTitle: 'Resources',
   pricingTitle: 'Pricing',
   dataProtectionTitle: 'Data protection',
+  companyTitle: 'Company',
 };
 
 export type NavbarMenuItem = { icon: IconType; title: string; description: string; link: string };
@@ -109,7 +110,7 @@ const teams: NavbarMenuColumn = {
       link: FINANCE_LEGAL_ACCOUNTING,
       title: FINANCE_LEGAL_ACCOUNTING_TITLE,
       description: 'Cap table, scenario modeling, investor relations',
-      icon: 'calculator',
+      icon: 'financeLegalAccounting',
     },
     {
       link: VCS_BUSINESS_ANGELS,
@@ -255,8 +256,32 @@ const pricingTypes: NavbarMenuColumn = {
   ],
 };
 
+const companyTypes: NavbarMenuColumn = {
+  items: [
+    {
+      link: 'our-story',
+      title: 'About Us',
+      description: 'Our values and our why',
+      icon: 'aboutUs',
+    },
+    {
+      link: 'about-us',
+      title: 'Team',
+      description: 'Get to know the Ledgistas',
+      icon: 'team',
+    },
+    {
+      link: 'jobs',
+      title: 'Careers',
+      description: 'Join us on our mission',
+      icon: 'careers',
+    },
+  ],
+};
+
 const solutions: NavbarMenuColumn[] = [teams, features, engagement];
 const resources: NavbarMenuColumn[] = [learn, explore, tools];
 const pricing: NavbarMenuColumn[] = [pricingTypes];
+const company: NavbarMenuColumn[] = [companyTypes];
 
-export const NAVBAR_LINKS = { solutions, resources, pricing };
+export const NAVBAR_LINKS = { solutions, resources, pricing, company };

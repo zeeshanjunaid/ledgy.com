@@ -15,6 +15,7 @@ const getCustomerStories = () =>
             title
             subtitle
             date
+            isOurStory
             company {
               logo {
                 localFile {
@@ -37,9 +38,13 @@ export const CustomerStoriesList = ({ prefix }: Prefix) => {
   const { edges } = customerStories.allContentfulCustomerStory;
   return (
     <ContentBody>
-      {edges.map(({ node }: { node: CustomerStoryBaseProps }) => (
-        <CustomerStoryLink key={node.id} customerStory={node} prefix={prefix} />
-      ))}
+      {edges.map(({ node }: { node: CustomerStoryBaseProps }) => {
+        return (
+          !node.isOurStory && (
+            <CustomerStoryLink key={node.id} customerStory={node} prefix={prefix} />
+          )
+        );
+      })}
     </ContentBody>
   );
 };

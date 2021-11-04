@@ -14,9 +14,10 @@ const CustomerStory = ({
     allContentfulCustomerStory: { edges: { node: AllContentfulCustomerStoryProps }[] };
   };
 }) => {
-  const { id, title, header, subtitle, language, content, company } = data.contentfulCustomerStory;
+  const { id, title, header, subtitle, language, content, company, isOurStory } =
+    data.contentfulCustomerStory;
   const otherUserStories = data.allContentfulCustomerStory.edges
-    .filter(({ node }) => node.id !== id)
+    .filter(({ node }) => node.id !== id && !node.isOurStory)
     .map(({ node }) => node);
   const hasOtherCustomerStories = otherUserStories.length > 0;
   return (
@@ -36,7 +37,7 @@ const CustomerStory = ({
                 </div>
               </div>
             </div>
-            {hasOtherCustomerStories && (
+            {hasOtherCustomerStories && !isOurStory && (
               <>
                 <Hr />
                 <div className="row pb-6">
@@ -64,6 +65,7 @@ export const customerStoryQuery = graphql`
       header
       subtitle
       language
+      isOurStory
       content {
         childMdx {
           body
@@ -99,6 +101,7 @@ export const customerStoryQuery = graphql`
         node {
           id
           slug
+          isOurStory
           company {
             logo {
               localFile {
