@@ -14,7 +14,7 @@ export const MarketplacePictures = ({ pictures }: { pictures: ImageProps[] }) =>
           setCurrentImage={setCurrentImage}
           totalImageCount={totalImageCount}
         />
-        <div className={`col-10 py-2`}>
+        <div className={`col-12 col-lg-10`}>
           <CustomFade translate="0, 100px" delay={100}>
             <Image image={pictures[currentImage]} className="screenshot" />
           </CustomFade>
@@ -26,7 +26,7 @@ export const MarketplacePictures = ({ pictures }: { pictures: ImageProps[] }) =>
           isNext
         />
       </div>
-      <div className="row justify-content-center mb-6">
+      <div className="row justify-content-center mt-lg-2 mb-6">
         <div className="text-muted text-sm">{imageLocationText}</div>
       </div>
     </div>

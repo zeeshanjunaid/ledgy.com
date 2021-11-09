@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Icon } from '../components';
+import { Icon } from '../components';
 
 export const MarketplacePicturesButton = ({
   totalImageCount,
@@ -13,16 +13,18 @@ export const MarketplacePicturesButton = ({
   isNext?: boolean;
 }) => {
   const icon = (isNext ? 'next' : 'previous') as IconType;
+  const isHidden = currentImage === (isNext ? totalImageCount - 1 : 0);
   return (
-    <Button
-      className={'col-1'}
-      inverted
-      onClick={() => {
-        setCurrentImage(currentImage + (isNext ? 1 : -1));
-      }}
-      disabled={currentImage === (isNext ? totalImageCount - 1 : 0)}
-    >
-      <Icon icon={icon} height={20} width={20} />
-    </Button>
+    <div className={'col-12 col-lg-1 d-flex justify-content-center my-4 my-lg-0  '}>
+      {!isHidden && (
+        <a
+          onClick={() => {
+            setCurrentImage(currentImage + (isNext ? 1 : -1));
+          }}
+        >
+          <Icon icon={icon} height={20} width={20} className="rotate-icon-button" />
+        </a>
+      )}
+    </div>
   );
 };
