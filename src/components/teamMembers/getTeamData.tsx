@@ -1,55 +1,48 @@
 import React, { ReactNode } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { DynamicTrans } from '../utils';
+import { GatsbyImageFluidProps } from 'gatsby-image';
 
 export type AuthorProps = {
   name: string;
   role: string;
   description: ReactNode;
-  profileImage: ProfileImageProps;
+  profileImage: GatsbyImageFluidProps;
   gif: LedgistaGif;
   linkedIn: string;
   twitter?: string;
   article?: string;
 };
-export type LedgistaGif = {
+type LedgistaGif = {
   file: FileUrl;
 };
-export type FileUrl = {
+type FileUrl = {
   url: string;
 };
-export type ProfileImageProps = {
-  gatsbyImageData: GatsbyImageData;
-};
-export type GatsbyImageData = {
-  images: GatsbyImages;
-};
-export type GatsbyImages = {
-  fallback: GatsbyImageFallback;
-};
-export type GatsbyImageFallback = {
-  src: string;
-  srcSet: string;
+type LedgistaProps = {
+  key: string;
+  name: string;
+  role: string;
+  gif: LedgistaGif;
+  profileImage: GatsbyImageFluidProps;
+  description: string;
+  linkedIn: string;
+  twitter?: string;
+  article?: string;
 };
 
 export const getTeamData = (): {
   [key: string]: AuthorProps;
 } => {
-  const ledgistas: Record<string, string>[] = useStaticQuery(graphql`
+  const ledgistas: LedgistaProps[] = useStaticQuery(graphql`
     query {
       allContentfulLedgista {
         nodes {
           key
           name
           role
-          gif {
-            file {
-              url
-            }
-          }
-          profileImage {
-            gatsbyImageData
-          }
+          ...LedgistaGif
+          ...LedgistaProfileImage
           description
           twitter
           linkedIn

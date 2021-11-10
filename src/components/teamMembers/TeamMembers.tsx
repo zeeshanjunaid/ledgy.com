@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Img, { GatsbyImageFluidProps } from 'gatsby-image';
+import Img from 'gatsby-image';
 
 import { Helmet } from 'react-helmet';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -23,16 +23,7 @@ const TeamMember = ({
   article,
 }: AuthorProps) => {
   const [showEmoji, setShowEmoji] = useState(false);
-  const emojiPath = gif ? gif.file.url : '';
-  const gatsbyImageSrc = profileImage ? profileImage.gatsbyImageData.images.fallback : null;
-  const img: GatsbyImageFluidProps = {
-    fluid: {
-      aspectRatio: 1,
-      sizes: '(min-width: 245px) 245px, 100vw',
-      srcSet: gatsbyImageSrc ? gatsbyImageSrc.srcSet : '',
-      src: gatsbyImageSrc ? gatsbyImageSrc.src : '',
-    },
-  };
+  const emojiPath = gif.file.url;
   return (
     <CustomFade className="ledgista col-12 col-md-6 col-lg-4" delay={300}>
       <div className="pb-6 h-100 d-flex flex-column align-items-center justify-content-between">
@@ -45,7 +36,11 @@ const TeamMember = ({
             onMouseOver={() => setShowEmoji(true)}
             onMouseOut={() => setShowEmoji(false)}
           >
-            {showEmoji ? <img src={emojiPath} /> : <Img {...img} className="mx-auto" alt={name} />}
+            {showEmoji ? (
+              <img src={emojiPath} />
+            ) : (
+              <Img {...profileImage} className="mx-auto" alt={name} />
+            )}
           </div>
           <div className="text-center d-flex flex-column align-items-center">
             <div>

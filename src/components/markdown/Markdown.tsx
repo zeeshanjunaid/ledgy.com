@@ -32,16 +32,7 @@ const About = ({ about, img }: { about: AuthorProps; img: GatsbyImageFluidProps 
 
 export const Author = ({ name }: Prefix & { name: string }) => {
   const team = getTeamData();
-  const gatsbyImageSrc = team[name].profileImage.gatsbyImageData.images.fallback;
-  const image: GatsbyImageFluidProps = {
-    fluid: {
-      aspectRatio: 1,
-      sizes: '(min-width: 245px) 245px, 100vw',
-      srcSet: gatsbyImageSrc ? gatsbyImageSrc.srcSet : '',
-      src: gatsbyImageSrc ? gatsbyImageSrc.src : '',
-    },
-  };
-  return <About about={team[name]} img={image} />;
+  return <About about={team[name]} img={team[name].profileImage} />;
 };
 
 const getImageParams = (
