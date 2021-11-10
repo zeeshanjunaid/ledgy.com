@@ -7,28 +7,32 @@ import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faComments } from '@fortawesome/free-solid-svg-icons';
 
 import { shuffleArray, targetBlank } from '../../helpers';
-import { AuthorProps } from './getTeamDescriptions';
+import { AuthorProps } from './getTeamData';
 import { CustomFade, DynamicTrans } from '../utils';
 
-import { getTeamDescriptions } from './getTeamDescriptions';
-
-import { getTeamImages } from './getTeamImages';
+import { getTeamData } from './getTeamData';
 
 const TeamMember = ({
   name,
   role,
   description,
-  img,
-  emojiFilename,
+  profileImage,
+  gif,
   twitter,
   linkedIn,
   article,
-}: AuthorProps & {
-  img: GatsbyImageFluidProps;
-  emojiFilename: string;
-}) => {
+}: AuthorProps) => {
   const [showEmoji, setShowEmoji] = useState(false);
-  const emojiPath = `/emojis/${emojiFilename}.gif`;
+  const emojiPath = gif ? gif.file.url : '';
+  const gatsbyImageSrc = profileImage ? profileImage.gatsbyImageData.images.fallback : null;
+  const img: GatsbyImageFluidProps = {
+    fluid: {
+      aspectRatio: 1,
+      sizes: '(min-width: 245px) 245px, 100vw',
+      srcSet: gatsbyImageSrc ? gatsbyImageSrc.srcSet : '',
+      src: gatsbyImageSrc ? gatsbyImageSrc.src : '',
+    },
+  };
   return (
     <CustomFade className="ledgista col-12 col-md-6 col-lg-4" delay={300}>
       <div className="pb-6 h-100 d-flex flex-column align-items-center justify-content-between">
@@ -72,9 +76,7 @@ const TeamMember = ({
 };
 
 export const TeamMembers = () => {
-  const teamImages = getTeamImages();
-  const teamData = Object.entries(getTeamDescriptions());
-
+  const teamData = Object.entries(getTeamData());
   const [team, setTeam] = useState(teamData);
   useEffect(() => {
     setTeam((prev) => shuffleArray(prev));
@@ -87,7 +89,7 @@ export const TeamMembers = () => {
       </h2>
       <div className="row justify-content-center my-5">
         {team.map(([key, member]) => (
-          <TeamMember {...member} emojiFilename={key} img={teamImages[key]} key={`team-${key}`} />
+          <TeamMember {...member} key={`team-${key}`} />
         ))}
       </div>
       <hr />
