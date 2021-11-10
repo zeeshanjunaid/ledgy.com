@@ -240,6 +240,29 @@ export const GreenhouseJobFragment = graphql`
   }
 `;
 
+export const LedgistaGif = graphql`
+  fragment LedgistaGif on ContentfulLedgista {
+    gif {
+      file {
+        url
+      }
+    }
+  }
+`;
+
+export const LedgistaProfileImage = graphql`
+  fragment LedgistaProfileImage on ContentfulLedgista {
+    profileImage {
+      fluid(sizes: "(max-width: 245px) 100vw, 245px") {
+        srcSet
+        src
+        sizes
+        aspectRatio
+      }
+    }
+  }
+`;
+
 export const indexPageQuery = graphql`
   query {
     page: allContentfulFrontPage2021 {

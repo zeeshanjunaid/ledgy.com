@@ -1,2 +1,2 @@
 export * from './TeamMembers';
-export * from './getTeamImages';
+export * from './getTeamData';
