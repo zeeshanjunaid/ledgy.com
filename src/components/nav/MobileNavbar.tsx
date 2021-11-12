@@ -6,8 +6,8 @@ import { NAVBAR_TITLES, NAVBAR_LINKS, formatUrl, isExternalUrl, NavbarMenuColumn
 import { targetBlank } from '../../helpers';
 import { DynamicTrans } from '../utils';
 
-const { solutionsTitle, resourcesTitle, pricingTitle } = NAVBAR_TITLES;
-const { solutions, resources, pricing } = NAVBAR_LINKS;
+const { solutionsTitle, resourcesTitle, pricingTitle, companyTitle } = NAVBAR_TITLES;
+const { solutions, resources, pricing, company } = NAVBAR_LINKS;
 
 const MobileNavbarGroup = ({
   title,
@@ -63,6 +63,7 @@ const titlesAndColumns: [string, NavbarMenuColumn[]][] = [
   [solutionsTitle, solutions],
   [resourcesTitle, resources],
   [pricingTitle, pricing],
+  [companyTitle, company],
 ];
 
 export const MobileNavbar = ({
