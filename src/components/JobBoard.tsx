@@ -25,7 +25,7 @@ const getJobs = () =>
   `);
 
 const Job = ({ title, gh_Id, prefix }: GreenhouseJobProps & Prefix) => {
-  const page = `/jobs/${gh_Id}`;
+  const page = `/careers/${gh_Id}`;
   const url = `${formatUrl(prefix, page)}${getSearchString()}`;
 
   return (

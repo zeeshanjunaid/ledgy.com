@@ -40,7 +40,7 @@ export type FooterLink = [string, string];
 const companyLinks: FooterLink[] = [
   ['Team', 'team'],
   ['Sustainability', 'sustainability'],
-  ['Career', 'jobs'],
+  ['Careers', 'careers'],
   ['Contact', 'contact'],
 ];
 
@@ -271,7 +271,7 @@ const companyTypes: NavbarMenuColumn = {
       icon: 'team',
     },
     {
-      link: 'jobs',
+      link: 'careers',
       title: 'Careers',
       description: 'Join us on our mission',
       icon: 'careers',

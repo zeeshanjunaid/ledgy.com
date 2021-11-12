@@ -109,7 +109,7 @@ console.log(`
 ==========================
 
 Looking for a job? 🤓
-https://ledgy.com/jobs
+https://ledgy.com/careers
 
 ==========================
 `);

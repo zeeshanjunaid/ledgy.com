@@ -284,7 +284,7 @@ exports.createPages = ({ graphql, actions }) => {
   const jobPageComponent = path.resolve(`${basePath}/job.tsx`);
   const createJobPages = resolvePagePromise(graphql(jobQuery), (data) =>
     data.allGreenhouseJob.nodes.forEach(({ id, gh_Id }) => {
-      const pagePath = `/jobs/${gh_Id}/`;
+      const pagePath = `/careers/${gh_Id}/`;
       const context = { id };
       createLocalizedPages(pagePath, jobPageComponent, context);
     })
