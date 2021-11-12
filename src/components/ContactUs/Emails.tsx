@@ -28,7 +28,7 @@ export const Emails = () => (
     </div>
     <div className="mb-4">
       <h6>
-        <Trans>Career</Trans>
+        <Trans>Careers</Trans>
       </h6>
       <a href="mailto:work@ledgy.com">work@ledgy.com</a>
     </div>

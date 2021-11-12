@@ -1,30 +1,10 @@
 import React from 'react';
 
 import { dynamicI18n } from '../helpers';
-import { DynamicTrans, Section, Image, Button } from './utils';
+import { DynamicTrans, Section, Image } from './utils';
 import { formatUrl, getUnderlineHtml } from './lib';
 import { RichTextHeader } from './RichTextHeader';
-
-const CustomButton = ({
-  url,
-  text,
-  isPrimary,
-  isTopBanner,
-}: {
-  url: string;
-  text: string;
-  isPrimary: boolean;
-  isTopBanner: boolean;
-}) => (
-  <Button
-    href={url}
-    className="btn-xl mr-2 my-1 align-self-center"
-    inverted={(isTopBanner && !isPrimary) || (!isTopBanner && isPrimary)}
-    outline={(isTopBanner && !isPrimary) || (!isTopBanner && !isPrimary)}
-  >
-    <DynamicTrans>{text}</DynamicTrans>
-  </Button>
-);
+import { CustomButton } from './CustomButton';
 
 export const TitleWithGraphic = ({
   title,

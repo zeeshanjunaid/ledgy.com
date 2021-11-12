@@ -38,9 +38,9 @@ export const getUnderlineHtml = (text: string): string =>
 export type FooterLink = [string, string];
 
 const companyLinks: FooterLink[] = [
-  ['About us', 'about-us'],
+  ['Team', 'team'],
   ['Sustainability', 'sustainability'],
-  ['Career', 'jobs'],
+  ['Careers', 'careers'],
   ['Contact', 'contact'],
 ];
 
@@ -259,19 +259,19 @@ const pricingTypes: NavbarMenuColumn = {
 const companyTypes: NavbarMenuColumn = {
   items: [
     {
-      link: 'our-story',
+      link: 'about-us',
       title: 'About Us',
       description: 'Our values and our why',
       icon: 'aboutUs',
     },
     {
-      link: 'about-us',
+      link: 'team',
       title: 'Team',
       description: 'Get to know the Ledgistas',
       icon: 'team',
     },
     {
-      link: 'jobs',
+      link: 'careers',
       title: 'Careers',
       description: 'Join us on our mission',
       icon: 'careers',
