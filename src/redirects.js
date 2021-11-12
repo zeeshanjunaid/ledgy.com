@@ -5,4 +5,5 @@ exports.redirects = [
   ['/esop', esopTemplates],
   ['/psop', esopTemplates],
   ['/equity-plans', esopTemplates],
+  ['/jobs', '/careers'],
 ];
