@@ -285,15 +285,15 @@ exports.createPages = ({ graphql, actions }) => {
   const createJobPages = resolvePagePromise(graphql(jobQuery), (data) =>
     data.allGreenhouseJob.nodes.forEach(({ id, gh_Id }) => {
       const pagePath = `/careers/${gh_Id}/`;
-      const fromPage = `/jobs/${gh_Id}/`;
       const context = { id };
       createLocalizedPages(pagePath, jobPageComponent, context);
-      createRedirect({ fromPage, toPath: pagePath, redirectInBrowser: true });
+      const fromPath = `/jobs/${gh_Id}/`;
+      createRedirect({ fromPath: fromPath, toPath: pagePath, redirectInBrowser: true });
       languages.forEach((lang) =>
         createRedirect({
-          fromPath: `/${lang}${fromPage}`,
+          fromPath: `/${lang}${fromPath}`,
           toPath: `/${lang}${pagePath}`,
-          redirectInBrowser,
+          redirectInBrowser: true,
         })
       );
     })
