@@ -1,9 +1,10 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { CustomFade, Image, LongText } from '../components';
+import { CustomButton, CustomFade, DynamicTrans, Image, LongText } from '../components';
 import { Title } from './utils';
 import { MarketplaceSummary } from '../components/marketplace/MarketplaceSummary';
 import { MarketplacePictures } from './MarketplacePictures';
+import { formatUrl } from '../components/lib';
 
 const Marketplace = ({
   data,
@@ -13,8 +14,17 @@ const Marketplace = ({
     contentfulMarketplace: MarketplaceProps;
   };
 }) => {
-  const { company, logo, header, description, summary, content, motivationText, pictures } =
-    data.contentfulMarketplace;
+  const {
+    company,
+    logo,
+    header,
+    buttons,
+    description,
+    summary,
+    content,
+    motivationText,
+    pictures,
+  } = data.contentfulMarketplace;
 
   return (
     <div>
@@ -23,12 +33,27 @@ const Marketplace = ({
         <div className="pt-6 bg-lightest">
           <div className="container">
             <div className="row">
-              <div className="col-12 col-lg-8 p-4 mb-6">
-                <CustomFade translate="-100px, 0" className="px-3">
-                  <p className="text-lg">{motivationText.toUpperCase()}</p>
+              <div className="col-12 col-lg-8 p-4 mb-6 px-3">
+                <CustomFade translate="-100px, 0">
+                  <p className="text-lg">
+                    <DynamicTrans>{motivationText.toUpperCase()}</DynamicTrans>
+                  </p>
                   <h1>{company}</h1>
-                  <p className="text-lg">{description}</p>
+                  <p className="text-lg">
+                    <DynamicTrans>{description}</DynamicTrans>
+                  </p>
                 </CustomFade>
+                <div className="d-flex align-items-center flex-wrap">
+                  {buttons.map(({ id, text, url }, index) => (
+                    <CustomButton
+                      key={id}
+                      text={text}
+                      url={formatUrl(prefix, url)}
+                      isPrimary={index === 0}
+                      isTopBanner={true}
+                    />
+                  ))}
+                </div>
               </div>
               <div className="col-12 col-lg-4">
                 <div className="bg-secondary d-flex flex-column justify-content-center align-items-center h-100 p-5 marketplace-logo">
@@ -65,6 +90,9 @@ export const marketplaceQuery = graphql`
       header
       company
       description
+      buttons {
+        ...ButtonFragment
+      }
       logo {
         localFile {
           childImageSharp {
