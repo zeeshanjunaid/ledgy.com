@@ -97,6 +97,29 @@ export const NAVBAR_TITLES = {
 export type NavbarMenuItem = { icon: IconType; title: string; description: string; link: string };
 export type NavbarMenuColumn = { items: NavbarMenuItem[]; header?: string };
 
+const companyTypes: NavbarMenuColumn = {
+  items: [
+    {
+      link: 'about-us',
+      title: 'About Us',
+      description: 'Our values and our why',
+      icon: 'aboutUs',
+    },
+    {
+      link: 'team',
+      title: 'Team',
+      description: 'Get to know the Ledgistas',
+      icon: 'team',
+    },
+    {
+      link: 'careers',
+      title: 'Careers',
+      description: 'Join us on our mission',
+      icon: 'careers',
+    },
+  ],
+};
+
 const teams: NavbarMenuColumn = {
   header: 'Teams',
   items: [
@@ -256,32 +279,9 @@ const pricingTypes: NavbarMenuColumn = {
   ],
 };
 
-const companyTypes: NavbarMenuColumn = {
-  items: [
-    {
-      link: 'about-us',
-      title: 'About Us',
-      description: 'Our values and our why',
-      icon: 'aboutUs',
-    },
-    {
-      link: 'team',
-      title: 'Team',
-      description: 'Get to know the Ledgistas',
-      icon: 'team',
-    },
-    {
-      link: 'careers',
-      title: 'Careers',
-      description: 'Join us on our mission',
-      icon: 'careers',
-    },
-  ],
-};
-
+const company: NavbarMenuColumn[] = [companyTypes];
 const solutions: NavbarMenuColumn[] = [teams, features, engagement];
 const resources: NavbarMenuColumn[] = [learn, explore, tools];
 const pricing: NavbarMenuColumn[] = [pricingTypes];
-const company: NavbarMenuColumn[] = [companyTypes];
 
-export const NAVBAR_LINKS = { solutions, resources, pricing, company };
+export const NAVBAR_LINKS = { company, solutions, resources, pricing };

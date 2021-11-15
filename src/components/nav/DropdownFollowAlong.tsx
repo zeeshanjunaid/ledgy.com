@@ -117,14 +117,14 @@ const DropdownItem = ({
   </li>
 );
 
-const { solutionsTitle, resourcesTitle, pricingTitle, companyTitle } = NAVBAR_TITLES;
-const { solutions, resources, pricing, company } = NAVBAR_LINKS;
+const { companyTitle, solutionsTitle, resourcesTitle, pricingTitle } = NAVBAR_TITLES;
+const { company, solutions, resources, pricing } = NAVBAR_LINKS;
 
 const dropdownItems: [string, NavbarMenuColumn[], string][] = [
+  [companyTitle, company, 'company-dd'],
   [solutionsTitle, solutions, 'solutions-dd'],
   [resourcesTitle, resources, 'resources-dd'],
   [pricingTitle, pricing, 'pricing-dd'],
-  [companyTitle, company, 'company-dd'],
 ];
 
 export const DropdownFollowAlong = (props: LayoutProps) => {
