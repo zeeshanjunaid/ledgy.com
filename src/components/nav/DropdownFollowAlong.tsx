@@ -38,7 +38,7 @@ const ListItem = ({
   onClick,
   isTextShown,
 }: NavbarMenuItem & CommonListProps & { onClick: () => void }) => {
-  const itemContent = (
+  const ItemContent = (
     <div className="d-flex">
       <Icon icon={icon} className="mt-3 mr-2" height={30} width={30} />
       <div>
@@ -59,11 +59,11 @@ const ListItem = ({
     <div className={`list-item-hover px-3 py-2 ${isTextShown ? 'show' : 'hide'}`}>
       {isExternalUrl(link) ? (
         <a href={link} onClick={onClick} {...targetBlank}>
-          {itemContent}
+          {ItemContent}
         </a>
       ) : (
         <Link to={formatUrl(prefix, link)} onClick={onClick}>
-          {itemContent}
+          {ItemContent}
         </Link>
       )}
     </div>
@@ -117,14 +117,14 @@ const DropdownItem = ({
   </li>
 );
 
-const { solutionsTitle, resourcesTitle, pricingTitle, companyTitle } = NAVBAR_TITLES;
-const { solutions, resources, pricing, company } = NAVBAR_LINKS;
+const { companyTitle, solutionsTitle, resourcesTitle, pricingTitle } = NAVBAR_TITLES;
+const { company, solutions, resources, pricing } = NAVBAR_LINKS;
 
 const dropdownItems: [string, NavbarMenuColumn[], string][] = [
+  [companyTitle, company, 'company-dd'],
   [solutionsTitle, solutions, 'solutions-dd'],
   [resourcesTitle, resources, 'resources-dd'],
   [pricingTitle, pricing, 'pricing-dd'],
-  [companyTitle, company, 'company-dd'],
 ];
 
 export const DropdownFollowAlong = (props: LayoutProps) => {
