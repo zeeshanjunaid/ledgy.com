@@ -101,6 +101,9 @@
   opacity: 0;
   transition: 200ms;
   transform: translateX(2%);
+  .list-item-hover-arrow {
+    opacity: 0;
+  }
 }
 
 .trigger-enter-active .list-item-hover {
@@ -185,7 +188,7 @@
 }
 
 .hover-list-child.solutions-dd {
-  width: 800px;
+  width: 820px;
   & .list-item-hover {
     height: 140px;
   }
@@ -198,7 +201,7 @@
 }
 
 .hover-list-child.resources-dd {
-  width: 800px;
+  width: 840px;
   & .list-item-hover {
     height: 140px;
   }
