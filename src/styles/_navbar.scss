@@ -61,7 +61,7 @@
   opacity: 0;
   position: absolute;
   overflow: hidden;
-  padding: 20px;
+  padding: 15px;
   top: 60px;
   border-radius: 2px;
   transition: opacity 700ms;
@@ -188,20 +188,14 @@
 }
 
 .hover-list-child.solutions-dd {
-  width: 820px;
-  & .list-item-hover {
-    height: 140px;
-  }
+  width: 550px;
   @include media-breakpoint-up(xl) {
-    width: 1000px;
-    & .list-item-hover {
-      height: 120px;
-    }
+    width: 800px;
   }
 }
 
 .hover-list-child.resources-dd {
-  width: 840px;
+  width: 800px;
   & .list-item-hover {
     height: 140px;
   }
