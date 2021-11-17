@@ -84,8 +84,10 @@ export const DATA_PROTECTION = 'data-protection';
 export const CAP_TABLE = 'cap-table';
 export const EQUITY_PLAN_AUTOMATION = 'equity-plan-automation';
 export const SCENARIO_MODELING = 'scenario-modeling';
-export const EMPLOYEE_DASHBOARDS = 'employee-dashboards';
-export const INVESTOR_DASHBOARDS = 'investor-dashboards';
+export const EMPLOYEE_ENGAGEMENT = 'employee-dashboards';
+export const MARKETPLACE = 'marketplace';
+export const ESOP_TEMPLATES = 'employee-participation-plan-templates';
+export const CALCULATOR = 'calculator';
 
 //titles
 export const HR_AND_COMPENSATION_TITLE = 'HR & Compensation';
@@ -94,8 +96,10 @@ export const VCS_BUSINESS_ANGELS_TITLE = 'VCs & Business Angels';
 export const CAP_TABLE_MANAGEMENT_TITLE = 'Cap Table Management';
 export const EQUITY_PLAN_AUTOMATION_TITLE = 'Equity Plan Automation';
 export const SCENARIO_MODELING_TITLE = 'Scenario & Exit Modeling';
-export const EMPLOYEE_DASHBOARDS_TITLE = 'Employee Dashboards';
-export const INVESTOR_DASHBOARDS_TITLE = 'Investor Dashboards';
+export const EMPLOYEE_ENGAGEMENT_TITLE = 'Employee Dashboards';
+export const MARKETPLACE_TITLE = 'Marketplace';
+export const ESOP_TEMPLATES_TITLE = 'ESOP Templates';
+export const CALCULATOR_TITLE = 'Financing Calculator';
 
 //tags
 export const ALL_TOPICS = 'All topics';
