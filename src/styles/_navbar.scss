@@ -188,14 +188,20 @@
 }
 
 .hover-list-child.solutions-dd {
-  width: 550px;
+  width: 525px;
+  & .list-item-hover {
+    height: 130px;
+  }
   @include media-breakpoint-up(xl) {
-    width: 800px;
+    width: 725px;
+    & .list-item-hover {
+      height: 100px;
+    }
   }
 }
 
 .hover-list-child.resources-dd {
-  width: 800px;
+  width: 750px;
   & .list-item-hover {
     height: 140px;
   }
