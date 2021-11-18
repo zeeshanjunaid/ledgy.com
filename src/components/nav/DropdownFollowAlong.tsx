@@ -42,13 +42,15 @@ const ListItem = ({
     <div className="d-flex">
       <Icon icon={icon} className="mt-3 mr-2" height={30} width={30} />
       <div>
-        <h5
-          className={`text-primary d-flex align-items-center mt-2 ${description ? 'mb-1' : 'mb-2'}`}
+        <h6
+          className={`text-primary text-lg d-flex align-items-center mt-2 ${
+            description ? 'mb-1' : 'mb-2'
+          }`}
         >
           <DynamicTrans>{title}</DynamicTrans>
           <Arrow />
-        </h5>
-        <div className="list-item-hover-text mb-3">
+        </h6>
+        <div className="list-item-hover-text mb-2">
           <DynamicTrans>{description}</DynamicTrans>
         </div>
       </div>
@@ -56,7 +58,7 @@ const ListItem = ({
   );
 
   return (
-    <div className={`list-item-hover px-3 py-2 ${isTextShown ? 'show' : 'hide'}`}>
+    <div className={`list-item-hover pr-2 py-2 ${isTextShown ? 'show' : 'hide'}`}>
       {isExternalUrl(link) ? (
         <a href={link} onClick={onClick} {...targetBlank}>
           {ItemContent}
@@ -117,14 +119,14 @@ const DropdownItem = ({
   </li>
 );
 
-const { companyTitle, solutionsTitle, resourcesTitle, pricingTitle } = NAVBAR_TITLES;
-const { company, solutions, resources, pricing } = NAVBAR_LINKS;
+const { solutionsTitle, resourcesTitle, pricingTitle, companyTitle } = NAVBAR_TITLES;
+const { solutions, resources, pricing, company } = NAVBAR_LINKS;
 
 const dropdownItems: [string, NavbarMenuColumn[], string][] = [
-  [companyTitle, company, 'company-dd'],
   [solutionsTitle, solutions, 'solutions-dd'],
   [resourcesTitle, resources, 'resources-dd'],
   [pricingTitle, pricing, 'pricing-dd'],
+  [companyTitle, company, 'company-dd'],
 ];
 
 export const DropdownFollowAlong = (props: LayoutProps) => {

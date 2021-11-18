@@ -22,14 +22,18 @@ import {
   DATA_PROTECTION,
   CAP_TABLE,
   EQUITY_PLAN_AUTOMATION,
-  INVESTOR_DASHBOARDS,
   SCENARIO_MODELING,
-  EMPLOYEE_DASHBOARDS_TITLE,
+  EMPLOYEE_ENGAGEMENT_TITLE,
   CAP_TABLE_MANAGEMENT_TITLE,
   EQUITY_PLAN_AUTOMATION_TITLE,
   SCENARIO_MODELING_TITLE,
-  EMPLOYEE_DASHBOARDS,
-  INVESTOR_DASHBOARDS_TITLE,
+  EMPLOYEE_ENGAGEMENT,
+  MARKETPLACE,
+  MARKETPLACE_TITLE,
+  ESOP_TEMPLATES_TITLE,
+  ESOP_TEMPLATES,
+  CALCULATOR_TITLE,
+  CALCULATOR,
 } from '../../helpers';
 
 export const getUnderlineHtml = (text: string): string =>
@@ -97,29 +101,6 @@ export const NAVBAR_TITLES = {
 export type NavbarMenuItem = { icon: IconType; title: string; description: string; link: string };
 export type NavbarMenuColumn = { items: NavbarMenuItem[]; header?: string };
 
-const companyTypes: NavbarMenuColumn = {
-  items: [
-    {
-      link: 'about-us',
-      title: 'About Us',
-      description: 'Our values and our why',
-      icon: 'aboutUs',
-    },
-    {
-      link: 'team',
-      title: 'Team',
-      description: 'Get to know the Ledgistas',
-      icon: 'team',
-    },
-    {
-      link: 'careers',
-      title: 'Careers',
-      description: 'Join us on our mission',
-      icon: 'careers',
-    },
-  ],
-};
-
 const teams: NavbarMenuColumn = {
   header: 'Teams',
   items: [
@@ -165,29 +146,11 @@ const features: NavbarMenuColumn = {
       description: 'Map out complex funding rounds, dilution, and exits',
       icon: 'chart',
     },
-  ],
-};
-
-const engagement: NavbarMenuColumn = {
-  header: 'Engagement',
-  items: [
     {
-      link: 'marketplace',
-      title: 'Marketplace',
-      description: 'Integrations and partnerships',
-      icon: 'handshake',
-    },
-    {
-      link: EMPLOYEE_DASHBOARDS,
-      title: EMPLOYEE_DASHBOARDS_TITLE,
+      link: EMPLOYEE_ENGAGEMENT,
+      title: EMPLOYEE_ENGAGEMENT_TITLE,
       description: 'Make their ownership clear at every stage',
       icon: 'employees',
-    },
-    {
-      link: INVESTOR_DASHBOARDS,
-      title: INVESTOR_DASHBOARDS_TITLE,
-      description: 'Truly understand your investments and returns',
-      icon: 'investor',
     },
   ],
 };
@@ -246,15 +209,21 @@ const tools: NavbarMenuColumn = {
   header: 'Tools',
   items: [
     {
-      link: 'employee-participation-plan-templates',
-      title: 'ESOP Templates',
+      link: MARKETPLACE,
+      title: MARKETPLACE_TITLE,
+      description: 'Integrations and partnerships',
+      icon: 'handshake',
+    },
+    {
+      link: ESOP_TEMPLATES,
+      title: ESOP_TEMPLATES_TITLE,
       description:
         'Access employee participation plan templates developed with leading law firms for free',
       icon: 'template',
     },
     {
-      link: 'calculator',
-      title: 'Financing Calculator',
+      link: CALCULATOR,
+      title: CALCULATOR_TITLE,
       description: 'The calculator you need if you’re raising capital, no signup required',
       icon: 'calculator',
     },
@@ -279,9 +248,32 @@ const pricingTypes: NavbarMenuColumn = {
   ],
 };
 
-const company: NavbarMenuColumn[] = [companyTypes];
-const solutions: NavbarMenuColumn[] = [teams, features, engagement];
+const companyTypes: NavbarMenuColumn = {
+  items: [
+    {
+      link: 'about-us',
+      title: 'About Us',
+      description: 'Our values and our why',
+      icon: 'aboutUs',
+    },
+    {
+      link: 'team',
+      title: 'Team',
+      description: 'Get to know the Ledgistas',
+      icon: 'team',
+    },
+    {
+      link: 'careers',
+      title: 'Careers',
+      description: 'Join us on our mission',
+      icon: 'careers',
+    },
+  ],
+};
+
+const solutions: NavbarMenuColumn[] = [teams, features];
 const resources: NavbarMenuColumn[] = [learn, explore, tools];
 const pricing: NavbarMenuColumn[] = [pricingTypes];
+const company: NavbarMenuColumn[] = [companyTypes];
 
-export const NAVBAR_LINKS = { company, solutions, resources, pricing };
+export const NAVBAR_LINKS = { solutions, resources, pricing, company };
