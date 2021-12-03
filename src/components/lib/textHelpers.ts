@@ -69,6 +69,7 @@ const productLinks: FooterLink[] = [
 
 const resourceLinks: FooterLink[] = [
   ['Help', helpUrl],
+  ['Marketplace', 'marketplace'],
   ['Webinars', 'webinars'],
   ['Blog', 'blog'],
   ['Customer stories', 'customer-stories'],
