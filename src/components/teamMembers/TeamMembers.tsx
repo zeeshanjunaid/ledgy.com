@@ -81,7 +81,7 @@ export const TeamMembers = () => {
   return (
     <div className="container text-center my-4 mb-lg-6">
       <h2>
-        <Trans>Meet the {team.length} Ledgistas</Trans>
+        <Trans>Meet the</Trans> {team.length} Ledgistas
       </h2>
       <div className="row justify-content-center my-5">
         {team.map(([key, member]) => (
