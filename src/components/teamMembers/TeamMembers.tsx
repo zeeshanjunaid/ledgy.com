@@ -5,10 +5,11 @@ import { Helmet } from 'react-helmet';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faComments } from '@fortawesome/free-solid-svg-icons';
+import { Trans } from '@lingui/macro';
 
 import { shuffleArray, targetBlank } from '../../helpers';
 import { AuthorProps } from './getTeamData';
-import { CustomFade, DynamicTrans } from '../utils';
+import { CustomFade } from '../utils';
 
 import { getTeamData } from './getTeamData';
 
@@ -80,7 +81,7 @@ export const TeamMembers = () => {
   return (
     <div className="container text-center my-4 mb-lg-6">
       <h2>
-        <DynamicTrans>Team</DynamicTrans>
+        <Trans>Meet the {team.length} Ledgistas</Trans>
       </h2>
       <div className="row justify-content-center my-5">
         {team.map(([key, member]) => (
