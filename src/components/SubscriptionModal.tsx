@@ -28,7 +28,9 @@ export const SubscriptionModal = ({ buttonClass = '' }: { buttonClass?: string }
               promotions/offers
             </Trans>
           </p>
-          <SubscriptionForm toggle={toggle} trackingEvent="newsletter" />
+          <div className="p-4 my-4">
+            <SubscriptionForm toggle={toggle} trackingEvent="newsletter" />
+          </div>
         </div>
       </Modal>
     </>
