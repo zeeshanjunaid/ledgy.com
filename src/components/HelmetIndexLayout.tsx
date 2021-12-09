@@ -21,7 +21,9 @@ export const HelmetIndexLayout = ({
       <html lang={lang} />
       <meta name="keywords" content={dynamicI18n(keywords.join(', '))} />
       <meta name="author" content="Ledgy" />
-      <script type="application/ld+json">{getLdJson(siteUrl)}</script>
+      <script defer type="application/ld+json">
+        {getLdJson(siteUrl)}
+      </script>
 
       {/* Facebook social card */}
       <meta property="og:site_name" content={name} />
@@ -39,7 +41,7 @@ export const HelmetIndexLayout = ({
       <link rel="alternate" href={`${siteUrl}/de${pathname}`} hrefLang="de" />
       <link rel="alternate" href={`${siteUrl}/fr${pathname}`} hrefLang="fr" />
       <link rel="canonical" href={`${siteUrl}${langPrefix(lang)}${pathname}`} />
-      <script src="https://www.googleoptimize.com/optimize.js?id=OPT-PHR22QK" />
+      <script defer src="https://www.googleoptimize.com/optimize.js?id=OPT-PHR22QK" />
 
       {/* Disable AOS for Google */}
       <noscript>
