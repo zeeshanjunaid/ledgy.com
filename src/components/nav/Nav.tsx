@@ -15,7 +15,7 @@ import { MobileNavbar } from './MobileNavbar';
 const Logo = (props: LayoutProps) => {
   return (
     <Link to={`${props.prefix}/#start`}>
-      <img className="navbar-logo" src={logo} alt={name} width="130" height="36" />
+      <img className="navbar-logo" src={logo} alt={name} width="141" height="42" />
     </Link>
   );
 };
