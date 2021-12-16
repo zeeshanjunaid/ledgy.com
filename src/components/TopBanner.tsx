@@ -34,6 +34,9 @@ export const TopBanner = ({
   secondButtonUrl,
   prefix,
 }: TopBannerProps & Prefix) => {
+  //disable lazy loading to decrease full contentfull paint
+  if (image.localFile) image.localFile.childImageSharp.loading = 'eager';
+
   const buttonClassName = 'my-sm-0 my-2 btn-xl d-inline mr-2';
 
   const buttonOne = firstButtonUrl.includes(demoPage) ? (
