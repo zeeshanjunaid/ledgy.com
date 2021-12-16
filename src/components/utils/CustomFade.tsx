@@ -2,6 +2,7 @@ import React, { ReactNode, useEffect, useState } from 'react';
 import Reveal from 'react-awesome-reveal';
 import { keyframes } from '@emotion/react';
 import type { RevealProps } from 'react-awesome-reveal/dist/Reveal';
+import { Keyframes } from '@emotion/serialize';
 
 export const CustomFade = ({
   children,
@@ -9,7 +10,7 @@ export const CustomFade = ({
   ...props
 }: { children: ReactNode; translate?: string } & RevealProps) => {
   const isBrowser = () => typeof window !== 'undefined';
-  const animation = keyframes`
+  const defaultAnimation = keyframes`
   from {
     opacity: 0;
     transform: translate(${translate || '0, 0'});
@@ -19,11 +20,13 @@ export const CustomFade = ({
     transform: translate(0, 0);
   }
 `;
-  const AnimatedJSXElement = (
-    <Reveal keyframes={animation} {...props}>
-      {children}
-    </Reveal>
-  );
+  const AnimatedJSXElement = (animation: Keyframes) => {
+    return (
+      <Reveal keyframes={animation} {...props}>
+        {children}
+      </Reveal>
+    );
+  };
   if (isBrowser()) {
     const [width, setWidth] = useState<number>(window.innerWidth);
 
@@ -38,8 +41,10 @@ export const CustomFade = ({
       };
     }, []);
     const isMobile = width <= 768;
-    return isMobile ? <>{children}</> : AnimatedJSXElement;
+    const noAnimation = keyframes``;
+    const animation = isMobile ? noAnimation : defaultAnimation;
+    return AnimatedJSXElement(animation);
   }
 
-  return AnimatedJSXElement;
+  return AnimatedJSXElement(defaultAnimation);
 };
