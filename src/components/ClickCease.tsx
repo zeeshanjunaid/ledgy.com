@@ -4,7 +4,7 @@ import React from 'react';
 export const ClickCease = () => (
   <>
     <Helmet>
-      <script>
+      <script defer>
         {`
          var script = document.createElement('script');
          script.async = true; script.type = 'text/javascript';

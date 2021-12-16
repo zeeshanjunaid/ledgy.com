@@ -34,7 +34,7 @@ export const TopBanner = ({
   secondButtonUrl,
   prefix,
 }: TopBannerProps & Prefix) => {
-  //disable lazy loading to decrease full contentfull paint
+  //avoid delaying the largest contentful paint by lazy loading
   if (image.localFile) image.localFile.childImageSharp.loading = 'eager';
 
   const buttonClassName = 'my-sm-0 my-2 btn-xl d-inline mr-2';
