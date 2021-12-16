@@ -11,6 +11,7 @@ export const ClickCease = () => (
          var target = 'https://www.clickcease.com/monitor/stat.js';
          script.src = target;var elem = document.head;
          elem.appendChild(script);
+         script.defer = true;
        `}
       </script>
     </Helmet>
