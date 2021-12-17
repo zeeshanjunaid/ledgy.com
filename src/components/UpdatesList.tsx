@@ -24,7 +24,9 @@ const getUpdates = () =>
             cover {
               localFile {
                 childImageSharp {
-                  ...CoverImage
+                  fixed(width: 500) {
+                    ...GatsbyImageSharpFixed
+                  }
                 }
               }
             }
@@ -46,7 +48,7 @@ export const UpdatesList = ({ prefix }: Prefix) => {
           const { node } = edge;
           const { id, slug, tags, description: postDescription } = node;
           const showUpdate = (!!tags && tags.includes(`Updates_${tag}`)) || tag === ALL_TOPICS;
-
+          console.log(node);
           return showUpdate ? (
             <PostLink
               key={id}
@@ -54,7 +56,7 @@ export const UpdatesList = ({ prefix }: Prefix) => {
               post={node}
               description={postDescription}
               prefix={prefix}
-              showImage={false}
+              // showImage={false}
             />
           ) : (
             <div />

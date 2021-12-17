@@ -24,15 +24,13 @@ export const PostLink = ({
 }) => {
   const { childImageSharp } = post.cover?.localFile || {};
   const image = childImageSharp ? <Img className="fit-cover" {...childImageSharp} /> : null;
-
+  console.log(image);
   const title = <h5>{post.title}</h5>;
-  const { date } = post;
   return (
     <CardLink
       title={title}
       type="blog"
       description={description}
-      date={date}
       to={to}
       image={image}
       isExternal={isExternal}

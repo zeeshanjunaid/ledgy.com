@@ -12,7 +12,6 @@ export const CardLink = ({
   image,
   to,
   prefix,
-  date,
   isExternal = false,
   showImage = true,
 }: Prefix & {
@@ -21,28 +20,24 @@ export const CardLink = ({
   description: string | ReactNode;
   image: ReactNode;
   to: string;
-  date?: string;
   isExternal?: boolean;
   showImage?: boolean;
 }) => (
   <Link to={formatUrl(prefix, to)} {...(isExternal ? targetBlank : {})}>
-    <div className={`card card-${type} mb-6`}>
+    <div className={`card card-${type} mb-6 col-lg-6 col-xl-4 d-inline-block`}>
       <div className="row m-0 flex-1">
         {showImage && (
-          <div className="col-md-6 col-lg-3">
-            <div className="d-table h-100 w-100">
-              <div className="card-image-wrapper">{image}</div>
-            </div>
+          <div className="col-12">
+            <div className="card-image-wrapper">{image}</div>
           </div>
         )}
-        <div className={`${showImage ? 'col-md-6 col-lg-9' : 'col-12'} px-2 py-4`}>
-          <div className="row h-100 m-0">
-            <div className="col-lg-10">
-              <div className="text-primary">{title}</div>
+        <div className="col-12' pt-4 content">
+          <div className="row h-100 m-0 ">
+            <div className="col-12">
+              <h5 className="text-primary">{title}</h5>
             </div>
-            <small className="col-lg-2 text-lg-right text-muted">{date}</small>
-            <div className="col-12 text-primary">{description}</div>
-            <div className="col-12 mt-auto">
+            <p className="col-12 text-muted font-weight-light">{description}</p>
+            <div className="col-12 content-footer py-2">
               <LinkWithChevron
                 text={isExternal ? 'Watch now' : 'Read more'}
                 to={to}

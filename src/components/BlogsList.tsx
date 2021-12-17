@@ -24,7 +24,9 @@ const getBlogs = () =>
             cover {
               localFile {
                 childImageSharp {
-                  ...CoverImage
+                  fixed(width: 700) {
+                    ...GatsbyImageSharpFixed
+                  }
                 }
               }
             }
