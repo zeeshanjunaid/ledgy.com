@@ -24,7 +24,7 @@ export const CardLink = ({
   showImage?: boolean;
 }) => (
   <Link to={formatUrl(prefix, to)} {...(isExternal ? targetBlank : {})}>
-    <div className={`card card-${type} mb-6 col-lg-6 col-xl-4 d-inline-block`}>
+    <div className={`card card-${type} mb-6 col-md-6 col-xl-4 d-inline-block`}>
       <div className="row m-0 flex-1">
         {showImage && (
           <div className="col-12">
@@ -32,12 +32,14 @@ export const CardLink = ({
           </div>
         )}
         <div className="col-12' pt-4 content">
-          <div className="row h-100 m-0 ">
+          <div className="row m-0 ">
             <div className="col-12">
-              <h5 className="text-primary">{title}</h5>
+              <h5 className="text-primary card-title">{title}</h5>
             </div>
-            <p className="col-12 text-muted font-weight-light">{description}</p>
-            <div className="col-12 content-footer py-2">
+            <p className="col-12 text-muted font-weight-light m-0">{description}</p>
+          </div>
+          <div className="row h-20 m-0">
+            <div className="col-12 py-2">
               <LinkWithChevron
                 text={isExternal ? 'Watch now' : 'Read more'}
                 to={to}
