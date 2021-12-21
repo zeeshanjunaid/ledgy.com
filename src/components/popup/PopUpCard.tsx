@@ -1,5 +1,5 @@
 import { useStaticQuery, graphql } from 'gatsby';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ClosingButton, CustomFade, SubscriptionForm } from '..';
 
 const NEWSLETTER = 'newsletter';
@@ -9,7 +9,6 @@ const MILLISECONDS_PER_SECOND = 1000;
 export const PopUp = ({ popup }: { popup: Popup }) => {
   const [show, setShow] = useState(false);
   const [isSubmited, setSubmited] = useState(false);
-
   const { type, delay } = popup;
 
   const hide = () => setShow(false);
@@ -21,9 +20,11 @@ export const PopUp = ({ popup }: { popup: Popup }) => {
     }, HIDE_MESSAGE_DELAY);
   };
 
-  setTimeout(() => {
-    setShow(true);
-  }, delay * MILLISECONDS_PER_SECOND);
+  useEffect(() => {
+    setTimeout(() => {
+      setShow(true);
+    }, delay * MILLISECONDS_PER_SECOND);
+  }, []);
 
   switch (type) {
     case NEWSLETTER:
@@ -44,9 +45,9 @@ export const PopUp = ({ popup }: { popup: Popup }) => {
               )}
               {isSubmited && (
                 <>
-                  <h4 className="m-2 text-gray-light text-center">
+                  <h5 className="m-2 text-gray-light text-center">
                     Thank you for your subscription 🎉
-                  </h4>
+                  </h5>
                 </>
               )}
             </div>
@@ -54,7 +55,7 @@ export const PopUp = ({ popup }: { popup: Popup }) => {
         </CustomFade>
       ) : null;
     default:
-      return <div></div>;
+      return null;
   }
 };
 
@@ -74,22 +75,20 @@ const popupQuery = graphql`
   }
 `;
 
+const getPagePopup = (pages: PagePopup[], pathname: string) => {
+  return pages.filter((page) => {
+    const { url, popup } = page.node;
+    const validURL = new RegExp(`^/${url}/.+`, 'g');
+    if (!validURL.test(pathname) || !popup) return false;
+    return true;
+  });
+};
+
 export const PopUpCard = ({ pathname }: { pathname: string }) => {
   const result = useStaticQuery(popupQuery);
   const pages: PagePopup[] = result.allContentfulPagePopup.edges;
-  if (!pages) return <></>;
-  return (
-    <>
-      {pages.map((page) => {
-        const { url, popup } = page.node;
-        const displayPopups = new RegExp(`^/${url}/.+`, 'g');
-        if (!displayPopups.test(pathname) || !popup) return <></>;
-        return (
-          <>
-            <PopUp popup={popup} />
-          </>
-        );
-      })}
-    </>
-  );
+  const [pagePopup] = getPagePopup(pages, pathname);
+  if (!pagePopup) return null;
+  const { popup } = pagePopup.node;
+  return popup ? <PopUp popup={popup} /> : null;
 };
