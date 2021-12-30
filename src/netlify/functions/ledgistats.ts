@@ -1,13 +1,17 @@
 import type { Handler } from '@netlify/functions';
 import fetch, { RequestInit } from 'node-fetch';
+import crypto from 'crypto';
 import get from 'lodash.get';
+
+const bobApiToken = process.env.BOB_API_TOKEN || '';
+const ledgistatsToken = crypto.createHash('sha256').update(bobApiToken).digest('hex').slice(0, 32);
 
 const bobApiUrl = 'https://api.hibob.com/v1/';
 const options: RequestInit = {
   method: 'GET',
   headers: {
     Accept: 'application/json',
-    Authorization: process.env.BOB_API_TOKEN || '',
+    Authorization: bobApiToken,
   },
 };
 
@@ -41,7 +45,10 @@ const getAggregateField =
     return words;
   };
 
-const handler: Handler = async () => {
+const handler: Handler = async (event) => {
+  if (event.headers.authorization !== ledgistatsToken)
+    return { statusCode: 401, body: 'not-authorized' };
+
   const { employees } = await fetchBob('profiles');
   const namedLists = await fetchBob('company/named-lists');
   const aggregateField = getAggregateField(employees, namedLists);
