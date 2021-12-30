@@ -3,6 +3,7 @@
 node_modules
 .cache/
 .envrc
+.netlify
 # Build directory
 public
 .DS_Store
