@@ -7,7 +7,8 @@
     transition: all 0.3s;
     transform: translateZ(10px) !important;
   }
-  &:focus, &:active {
+  &:focus,
+  &:active {
     box-shadow: none !important;
   }
   &:disabled:hover {
@@ -46,8 +47,10 @@
   @include media-breakpoint-down(xs) {
     min-width: 40vw;
   }
-  border:0;
-  &:hover, &:active, &:focus {
+  border: 0;
+  &:hover,
+  &:active,
+  &:focus {
     background-color: $energetic-blue;
   }
   &.selected {

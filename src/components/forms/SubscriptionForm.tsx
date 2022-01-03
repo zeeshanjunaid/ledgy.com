@@ -13,7 +13,7 @@ import { InvalidFieldHints } from './Fields';
 const { FETCH_ERROR, IDLE, INVALID_EMAIL, LOADING } = FORM_STATUSES;
 
 export class SubscriptionForm extends Component<
-  { toggle?: () => void; trackingEvent: string; callBack?: () => void },
+  { toggle?: () => void; trackingEvent: string; callback?: () => void },
   { email: string; status: FormStatus | string }
 > {
   state = { email: '', status: IDLE };
@@ -24,15 +24,16 @@ export class SubscriptionForm extends Component<
   handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     this.setState({ status: LOADING });
+    const { toggle, trackingEvent, callback } = this.props;
     const { email } = this.state;
     if (isValidEmail(email)) {
       try {
         const signupResponse = await signupOnMixpanel(email);
         if (signupResponse.status === 200) {
-          trackOnMixpanel(email, this.props.trackingEvent);
+          trackOnMixpanel(email, trackingEvent);
           this.setState({ email: '', status: IDLE });
-          if (this.props.toggle) this.props.toggle();
-          this.props.callBack ? this.props.callBack() : navigate('/subscribed');
+          if (toggle) toggle();
+          callback ? callback() : navigate('/subscribed');
         } else {
           this.setState({ status: FETCH_ERROR });
         }
@@ -62,9 +63,9 @@ export class SubscriptionForm extends Component<
               style={{ height: 'inherit' }}
             />
             <Button
-              inverted={!!this.props.callBack}
+              inverted={!!this.props.callback}
               type="submit"
-              className="button-embedded min-width-110px"
+              className="button-embedded min-width-110px will-change-unset"
               disabled={invalid || error || loading}
             >
               {loading ? (
