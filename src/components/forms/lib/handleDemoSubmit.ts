@@ -55,10 +55,12 @@ const redirect = (values: ParsedFormValues) => {
 export const handleDemoSubmit = async ({
   values,
   event,
+  slug,
   setFormStatus,
 }: {
   values: FormValues;
   event: React.FormEvent<HTMLFormElement>;
+  slug: string;
   setFormStatus: (arg0: string) => void;
 }): Promise<void> => {
   event.preventDefault();
@@ -94,7 +96,7 @@ export const handleDemoSubmit = async ({
   }
 
   const eventName = `getDemo.submit.${requesterType}`;
-  track(eventName, { value });
+  track(eventName, { value, slug });
   track('captureLead');
 
   redirect(parsedFormValues);
