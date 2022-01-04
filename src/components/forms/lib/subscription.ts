@@ -45,7 +45,7 @@ const generateBase64TrackingJSON = (email: string, token: string, trackingEvent:
 
 declare type EndPoint = 'engage' | 'track';
 
-const generateMixpanelUrl = (data: string, endpoint: EndPoint) => `${endpoint}/?data=${data}`;
+const generateMixpanelUrl = (data: string, endpoint: EndPoint) => `/${endpoint}/?data=${data}`;
 
 export const signupOnMixpanel = async (email: string) => {
   const mixpanelSignupJSON = generateBase64SignupJSON(email, MIXPANEL_TOKEN);

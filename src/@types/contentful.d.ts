@@ -192,3 +192,15 @@ declare type SiteMetaProps = {
   description: string;
   keywords: string[];
 };
+
+declare type PopupProps = {
+  type: string;
+  delay: number;
+};
+
+declare type PagePopupProps = {
+  node: {
+    url: string;
+    popup: PopupProps;
+  };
+};

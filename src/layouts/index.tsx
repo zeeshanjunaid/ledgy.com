@@ -17,6 +17,7 @@ import {
   Nav,
   PublicityBanner,
   CookieBanner,
+  PopUpCard,
 } from '../components';
 import { Title } from './utils';
 
@@ -74,6 +75,7 @@ const App = ({ children, ...props }: AppProps) => {
           <div className="banner-container position-fixed d-flex flex-column">
             <PublicityBanner pathname={pathname} />
             <CookieBanner segmentDestinations={segmentDestinations} />
+            <PopUpCard pathname={pathname} />
           </div>
           {React.cloneElement(children, { prefix, lang })}
           {!isDemoPage && <Footer {...props} prefix={prefix} />}

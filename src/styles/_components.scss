@@ -1,6 +1,5 @@
-
 .container {
-   @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1440px) {
     max-width: 1200px !important;
   }
 }
@@ -22,7 +21,7 @@
 .footer {
   @include media-breakpoint-up(md) {
     &--logo-section {
-     height: 100%;
+      height: 100%;
     }
   }
   .nav-link {
@@ -67,8 +66,8 @@
   color: $gray-400;
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -130,7 +129,8 @@ input[type=number]::-webkit-outer-spin-button {
 
 .pricing-plan {
   height: 210px;
-  &.Premium { // will be renamed to Scaleup
+  &.Premium {
+    // will be renamed to Scaleup
     height: 250px;
   }
   &.Enterprise {
@@ -150,7 +150,6 @@ input[type=number]::-webkit-outer-spin-button {
     border: 4px solid;
   }
 }
-
 
 // Testimonials
 .avatar {
@@ -175,7 +174,7 @@ input[type=number]::-webkit-outer-spin-button {
   }
 }
 
-.testimonial-image-wrapper{
+.testimonial-image-wrapper {
   height: 40px;
   width: auto;
 }
@@ -200,7 +199,7 @@ input[type=number]::-webkit-outer-spin-button {
 .testimonial-description::after {
   font-size: 1.5rem;
   line-height: 1;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 // Banner container
@@ -234,9 +233,18 @@ input[type=number]::-webkit-outer-spin-button {
   transition: 300ms;
   will-change: transform;
   &:hover {
-    color: $gray-800;
     transform: scale(1.2);
     transition: 300ms;
+  }
+  &-light {
+    &:hover {
+      color: $gray-100;
+    }
+  }
+  &-dark {
+    &:hover {
+      color: $gray-800;
+    }
   }
 }
 
@@ -259,7 +267,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 // Market place
 .marketplace-logo {
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25) ;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   clip-path: inset(-14px -14px 0px -14px);
 }
 
@@ -323,9 +331,10 @@ input[type=number]::-webkit-outer-spin-button {
     transition: all 0.3s;
     transform: translateZ(10px) !important;
   }
-  &-blog, &-customer-story {
+  &-blog,
+  &-customer-story {
     min-height: 250px;
-    border-radius:  $border-radius-wide;
+    border-radius: $border-radius-wide;
     box-shadow: $box-shadow-lighter;
     border-width: 0;
   }
@@ -336,7 +345,7 @@ input[type=number]::-webkit-outer-spin-button {
     display: table-cell;
     vertical-align: middle;
     img {
-      border-radius: $border-radius-wide 0 0 $border-radius-wide ;
+      border-radius: $border-radius-wide 0 0 $border-radius-wide;
     }
   }
   &-more-stories {
@@ -394,13 +403,12 @@ input[type=number]::-webkit-outer-spin-button {
   }
 }
 
-
 // Border with accent
 $border-width: 2px;
 $padding-default: 1.25rem;
 $padding-lg: 3rem;
-@mixin getLeft($padding){
- left: calc(-#{$padding} - #{$border-width});
+@mixin getLeft($padding) {
+  left: calc(-#{$padding} - #{$border-width});
 }
 
 .left-border-with-accent {
@@ -443,7 +451,6 @@ $padding-lg: 3rem;
   }
 }
 
-
 // Selectable card
 .selectable-card {
   cursor: pointer;
@@ -467,7 +474,6 @@ $padding-lg: 3rem;
   }
 }
 
-
 // Rounded screenshots
 .screenshot {
   box-shadow: $box-shadow-wide;
@@ -481,18 +487,39 @@ $padding-lg: 3rem;
 
 // Page wrappers
 @mixin gray-deco-shape() {
-  background-image: url("../img/svg/gray-deco-shape.svg");
+  background-image: url('../img/svg/gray-deco-shape.svg');
   background-repeat: no-repeat;
 }
 .main-wrapper-1 {
- @include gray-deco-shape;
+  @include gray-deco-shape;
   background-position: -10% 30%;
 }
 .main-wrapper-2 {
- @include gray-deco-shape;
+  @include gray-deco-shape;
   background-position: 50% 97%;
 }
 .top-page-wrapper {
   min-height: 85vh;
   background-color: $gray-050;
+}
+
+// popup
+.popup-cont {
+  width: 100vw;
+}
+.popup {
+  box-shadow: $box-shadow-light;
+  border-radius: $border-radius-wide;
+  p {
+    color: $gray-300;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+  .popup-close {
+    position: absolute;
+    top: 13px;
+    right: 13px;
+  }
 }
