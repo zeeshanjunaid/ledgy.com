@@ -11,9 +11,9 @@ export const Testimonial = ({
   rounded,
   minHeight = 80,
 }: {
-  img: GatsbyImageProps;
+  img: GatsbyImageProps | undefined;
   name: string;
-  description: ReactNode;
+  description: ReactNode | string;
   col: number;
   url?: string;
   rounded?: boolean;
@@ -27,12 +27,12 @@ export const Testimonial = ({
       style={minHeight ? { minHeight } : {}}
     >
       <a {...targetBlank} href={url}>
-        <Img {...img} alt={name} className={rounded ? 'avatar' : ''} />
+        {img && <Img {...img} alt={name} className={rounded ? 'avatar' : ''} />}
       </a>
     </div>
     <div className="d-flex flex-column justify-content-between mt-4 h-100">
       <div className="testimonial-description">{description}</div>
-      <small className="text-muted mt-4" style={{ minHeight: '80px' }}>
+      <small className="text-muted mt-0" style={{ minHeight: '80px' }}>
         {name}
       </small>
     </div>

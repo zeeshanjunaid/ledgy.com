@@ -81,6 +81,33 @@ export const TestimonialCardsFragment = graphql`
   }
 `;
 
+export const TestimonialFragment = graphql`
+  fragment TestimonialFragment on ContentfulTestimonials {
+    id
+    __typename
+    header
+    testimonial {
+      name
+      description {
+        childMdx {
+          body
+        }
+      }
+      url
+      image {
+        localFile {
+          childImageSharp {
+            fixed(height: 120) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+      small
+    }
+  }
+`;
+
 export const ContentWithChecklistFragment = graphql`
   fragment ContentWithChecklistFragment on ContentfulContentWithChecklist {
     id
