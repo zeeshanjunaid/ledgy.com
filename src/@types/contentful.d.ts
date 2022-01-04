@@ -118,6 +118,13 @@ declare type FeaturePageProps = BaseFeatureProps & {
   headerWithMedia?: RichText;
 };
 
+declare type CustomLandingPageProps = {
+  title: string;
+  description: string;
+  slug: string;
+  entries: EntryProps[];
+};
+
 declare type TitleWithGraphicProps = BaseFeatureProps & {
   __typename: 'ContentfulTitleWithGraphic';
   headerWithMedia?: RichText;
