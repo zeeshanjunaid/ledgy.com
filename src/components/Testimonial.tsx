@@ -26,9 +26,11 @@ export const Testimonial = ({
       className="d-flex align-items-center justify-content-center mt-4"
       style={minHeight ? { minHeight } : {}}
     >
-      <a {...targetBlank} href={url}>
-        {img && <Img {...img} alt={name} className={rounded ? 'avatar' : ''} />}
-      </a>
+      {img && (
+        <a {...targetBlank} href={url}>
+          <Img {...img} alt={name} className={rounded ? 'avatar' : ''} />
+        </a>
+      )}
     </div>
     <div className="d-flex flex-column justify-content-between mt-4 h-100">
       <div className="testimonial-description">{description}</div>
