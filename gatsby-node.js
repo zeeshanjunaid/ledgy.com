@@ -60,7 +60,7 @@ exports.createSchemaCustomization = ({ actions }) => {
   type ContentfulTitleWithGraphic implements Node {
     buttons: [ContentfulButton] @link(by: "id", from: "buttons___NODE")
   }
-  union EntryProps = ContentfulTopBanner | ContentfulLogoBanner | ContentfulSelectableCardsWithScreenshots | ContentfulFeatureGrid | ContentfulTestimonialCards | ContentfulTitleWithGraphic | ContentfulContentWithChecklist | ContentfulCallToAction2021 | ContentfulChecklistWithScreenshot | ContentfulLongText | ContentfulStaticBlock
+  union EntryProps = ContentfulTopBanner | ContentfulLogoBanner | ContentfulSelectableCardsWithScreenshots | ContentfulFeatureGrid | ContentfulTestimonialCards | ContentfulTestimonials | ContentfulTitleWithGraphic | ContentfulContentWithChecklist | ContentfulCallToAction2021 | ContentfulChecklistWithScreenshot | ContentfulLongText | ContentfulStaticBlock
   type ContentfulDemoPage2021 implements Node {
     title: String
     requesterType: String
@@ -174,6 +174,19 @@ const featurePageQuery = `
 }
 `;
 
+const customLandingPageQuery = `
+{
+  allContentfulCustomLandingPageWithBanner(limit: 1000) {
+    edges {
+      node {
+        id
+        slug
+      }
+    }
+  }
+}
+`;
+
 const demoQuery = `
 {
   allContentfulDemoPage2021(limit: 1000) {
@@ -270,6 +283,15 @@ exports.createPages = ({ graphql, actions }) => {
       createLocalizedPages(pagePath, featurePageComponent, context);
     })
   );
+  const customLandingPageComponent = path.resolve(`${basePath}/customLandingPage.tsx`);
+  const createCustomLandingPages = resolvePagePromise(graphql(customLandingPageQuery), (data) =>
+    data.allContentfulCustomLandingPageWithBanner.edges.forEach(({ node }) => {
+      const { id, slug } = node;
+      const pagePath = `/${slug}/`;
+      const context = { id };
+      createLocalizedPages(pagePath, customLandingPageComponent, context);
+    })
+  );
 
   const demoPageComponent = path.resolve(`${basePath}/demo.tsx`);
   const createDemoPages = resolvePagePromise(graphql(demoQuery), (data) =>
@@ -304,6 +326,7 @@ exports.createPages = ({ graphql, actions }) => {
     createCustomerStories,
     createMarketplaces,
     createFeaturePages,
+    createCustomLandingPages,
     createDemoPages,
     createJobPages,
   ];

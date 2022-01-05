@@ -10,7 +10,8 @@ declare type EntryProps =
   | CallToActionProps
   | ChecklistWithScreenshotProps
   | LongTextComponentProps
-  | StaticBlockProps;
+  | StaticBlockProps
+  | TestimonialsProps;
 
 declare type ContentfulPageProps = Id & {
   title: string;
@@ -76,11 +77,23 @@ declare type TestimonialCardProps = {
   linkUrl?: string;
 };
 
+declare type TestimonialProps = {
+  name: string;
+  description: Mdx;
+  url: string;
+  image: ImageProps;
+  small: boolean;
+};
+
 declare type TestimonialCardsProps = Id & {
   __typename: 'ContentfulTestimonialCards';
   cards: TestimonialCardProps[];
 };
 
+declare type TestimonialsProps = Id & {
+  __typename: 'ContentfulTestimonials';
+  testimonial: TestimonialProps[];
+};
 declare type ButtonProps = Id & {
   __typename: 'ContentfulButton';
   text: string;
@@ -103,6 +116,13 @@ declare type FeaturePageProps = BaseFeatureProps & {
   entries: EntryProps[];
   indexable: boolean;
   headerWithMedia?: RichText;
+};
+
+declare type CustomLandingPageProps = {
+  title: string;
+  description: string;
+  slug: string;
+  entries: EntryProps[];
 };
 
 declare type TitleWithGraphicProps = BaseFeatureProps & {

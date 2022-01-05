@@ -11,6 +11,7 @@ import { TopBanner } from './TopBanner';
 import { ChecklistWithScreenshot } from './ChecklistWithScreenshot';
 import { LongTextComponent } from './LongTextComponent';
 import { StaticBlockPicker } from './StaticBlockPicker';
+import { Testimonials } from './Testimonials';
 
 export const ComponentPicker = ({
   entry,
@@ -52,6 +53,9 @@ export const ComponentPicker = ({
 
     case 'ContentfulStaticBlock':
       return <StaticBlockPicker {...entry} prefix={prefix} />;
+
+    case 'ContentfulTestimonials':
+      return <Testimonials {...entry} />;
 
     default:
       throw new Error('content __typename not recognized');
