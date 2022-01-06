@@ -254,16 +254,6 @@ exports.createPages = ({ graphql, actions }) => {
     })
   );
 
-  const customerStoryComponent = path.resolve(`${basePath}/customerStory.tsx`);
-  const createCustomerStories = resolvePagePromise(graphql(customerStoryQuery), (data) =>
-    data.allContentfulCustomerStory.edges.forEach(({ node }) => {
-      const { id, slug, isOurStory } = node;
-      const pagePath = isOurStory ? slug : `/customer-stories/${slug}/`;
-      const context = { id };
-      createLocalizedPages(pagePath, customerStoryComponent, context);
-    })
-  );
-
   const marketplaceComponent = path.resolve(`${basePath}/marketplace.tsx`);
   const createMarketplaces = resolvePagePromise(graphql(marketplaceQuery), (data) =>
     data.allContentfulMarketplace.edges.forEach(({ node }) => {
@@ -283,6 +273,17 @@ exports.createPages = ({ graphql, actions }) => {
       createLocalizedPages(pagePath, featurePageComponent, context);
     })
   );
+
+  const customerStoryComponent = path.resolve(`${basePath}/customerStory.tsx`);
+  const createCustomerStories = resolvePagePromise(graphql(customerStoryQuery), (data) =>
+    data.allContentfulCustomerStory.edges.forEach(({ node }) => {
+      const { id, slug, isOurStory } = node;
+      const pagePath = isOurStory ? `/${slug}/` : `/customer-stories/${slug}/`;
+      const context = { id };
+      createLocalizedPages(pagePath, customerStoryComponent, context);
+    })
+  );
+
   const customLandingPageComponent = path.resolve(`${basePath}/customLandingPage.tsx`);
   const createCustomLandingPages = resolvePagePromise(graphql(customLandingPageQuery), (data) =>
     data.allContentfulCustomLandingPageWithBanner.edges.forEach(({ node }) => {
