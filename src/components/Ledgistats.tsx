@@ -1,41 +1,22 @@
 import React, { useState } from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
 import ReactWordcloud, { MinMaxPair, Word } from 'react-wordcloud';
 import { t } from '@lingui/macro';
 
 import { Section, ButtonGroup } from './utils';
 
-const getLedgistats = (): Ledgistats[] =>
-  useStaticQuery(graphql`
-    query {
-      allContentfulLedgista {
-        nodes {
-          backgrounds
-          languages
-          nationalities
-          activities
-        }
-      }
-    }
-  `).allContentfulLedgista.nodes;
+import ledgistats from '../helpers/ledgistats.json';
 
-type Ledgistats = Record<string, string[]>;
+type Ledgistats = typeof ledgistats;
 
-const getWords = (ledgistas: Ledgistats[], trait: string): Word[] => {
-  const words = new Map<string, number>();
-  ledgistas.forEach((ledgista) => {
-    const values = ledgista[trait];
-    values.forEach((value) => {
-      words.set(value, (words.get(value) || 0) + 1);
-    });
-  });
+const getWords = (ledgistas: Ledgistats, trait: keyof Ledgistats): Word[] => {
+  const words = ledgistats[trait];
+  const list = Object.entries(words).map(([text, value]) => ({ text, value }));
+  const total = {
+    text: `${list.length} ${trait}`,
+    value: Math.max(...Object.values(words)),
+  };
 
-  const total = `${words.size} ${trait}`;
-  const values = Array.from(words.values());
-  const max = Math.max(...values);
-  words.set(total, max / 2);
-
-  return Array.from(words).map(([text, value]) => ({ text, value }));
+  return [...list, total];
 };
 
 const TRAITS = {
@@ -65,10 +46,9 @@ const COLORS = [
 ];
 
 export const Ledgistats = () => {
-  const ledgistats = getLedgistats();
   const allTraits = Object.keys(TRAITS);
   const [trait, setTrait] = useState(allTraits[0]);
-  const words = getWords(ledgistats, trait.toLowerCase());
+  const words = getWords(ledgistats, trait.toLowerCase() as keyof Ledgistats);
 
   const fontSizes = (): MinMaxPair => {
     if (typeof window !== 'undefined') {
