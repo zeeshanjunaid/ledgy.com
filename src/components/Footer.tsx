@@ -71,7 +71,7 @@ export const Footer = ({ location, ...props }: LayoutProps) => {
             </FooterCol>
             <FooterCol order={1}>
               <div className="footer--logo-section d-flex flex-column justify-content-between mt-5 mt-md-0">
-                <div className="d-flex flex-column align-items-center p-0 px-md-4">
+                <div className="d-flex flex-column align-items-center p-0 px-md-4 z-index-base">
                   <Link to={`${prefix}/#start`} className="mb-2 mb-md-4">
                     <img src={logoInvertedCompact} width={80} alt={name} />
                   </Link>
@@ -102,7 +102,7 @@ export const Footer = ({ location, ...props }: LayoutProps) => {
                     />
                   </div>
                 </div>
-                <div className="d-flex justify-content-center flex-wrap mt-5">
+                <div className="d-flex justify-content-center flex-wrap mt-5 z-index-background">
                   {socialLinks.map(([href, icon, title]) => (
                     <a
                       href={href}
