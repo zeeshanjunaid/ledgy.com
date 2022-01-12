@@ -224,3 +224,11 @@ declare type PagePopupProps = {
     popup: PopupProps;
   };
 };
+
+declare type TopUpdateBanner = {
+  node: {
+    text: string;
+    linkTo: string;
+    visible: boolean;
+  };
+};

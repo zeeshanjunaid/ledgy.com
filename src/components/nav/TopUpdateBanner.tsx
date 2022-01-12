@@ -10,6 +10,7 @@ const topUpdateBannerQuery = graphql`
         node {
           text
           linkTo
+          visible
         }
       }
     }
@@ -19,10 +20,11 @@ const topUpdateBannerQuery = graphql`
 export const TopUpdateBanner = ({ prefix }: { prefix: string }) => {
   const result = useStaticQuery(topUpdateBannerQuery);
 
-  const [banner] = result.allContentfulTopUpdateBanner.edges;
-  if (!banner) return null;
+  const [banner]: TopUpdateBanner[] = result.allContentfulTopUpdateBanner.edges;
 
-  const { text, linkTo } = banner.node;
+  if (!banner) return null;
+  const { text, linkTo, visible } = banner.node;
+  if (!visible) return null;
   const [show, setShow] = useState(false);
 
   useEffect(() => {
@@ -44,7 +46,7 @@ export const TopUpdateBanner = ({ prefix }: { prefix: string }) => {
           text={text}
           className="d-inline-block text-blue"
           to={linkTo}
-        ></LinkWithChevron>{' '}
+        />
       </div>
     </div>
   ) : null;

@@ -4,7 +4,6 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 export const ClosingButton = ({
   hide,
-
   classNames,
 }: {
   hide: () => void;
