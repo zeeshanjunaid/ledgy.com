@@ -11,6 +11,7 @@ import { Button } from '../utils';
 import { NavbarButtons } from './NavbarButtons';
 import { DropdownFollowAlong } from './DropdownFollowAlong';
 import { MobileNavbar } from './MobileNavbar';
+import { TopUpdateBanner } from './TopUpdateBanner';
 
 const Logo = (props: LayoutProps) => {
   return (
@@ -44,9 +45,9 @@ export const Nav = (props: LayoutProps) => {
   return (
     <>
       <nav ref={navRef} className="navbar bg-lightest text-dark-gray sticky-top p-0">
+        <TopUpdateBanner prefix={props.prefix} />
         <div className="container flex-nowrap">
           <Logo {...props} />
-
           <div className="desktop-navbar">
             <DropdownFollowAlong {...props} />
             <NavbarButtons className="justify-content-end ml-2 ml-lg-4" prefix={props.prefix} />
