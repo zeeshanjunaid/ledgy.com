@@ -41,7 +41,9 @@ export const HelmetIndexLayout = ({
       <link rel="alternate" href={`${siteUrl}/de${pathname}`} hrefLang="de" />
       <link rel="alternate" href={`${siteUrl}/fr${pathname}`} hrefLang="fr" />
       <link rel="canonical" href={`${siteUrl}${langPrefix(lang)}${pathname}`} />
-      <script defer src="https://www.googleoptimize.com/optimize.js?id=OPT-NXHX8ZG" />
+      {siteUrl.includes('https://ledgy.com') && (
+        <script src="https://www.googleoptimize.com/optimize.js?id=OPT-K7Q54LK" />
+      )}
 
       {/* Disable AOS for Google */}
       <noscript>
