@@ -54,6 +54,7 @@ export const FeatureGridFragment = graphql`
       icon
       title
       description
+      url
     }
   }
 `;

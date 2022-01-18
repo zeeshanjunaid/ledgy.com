@@ -53,6 +53,9 @@ exports.createSchemaCustomization = ({ actions }) => {
     linkText: String
     linkUrl: String
   }
+  type ContentfulFeatureGridSectionBuildingBlock implements Node {
+    url: String
+  }
   type ContentfulContentWithChecklist implements Node {
     linkText: String
     linkUrl: String

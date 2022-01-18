@@ -61,7 +61,12 @@ declare type MarketplaceProps = MarketplaceBaseProps & {
   buttons: ButtonProps[];
 };
 
-declare type FeatureGridSectionProps = { icon: IconType; title: string; description: string };
+declare type FeatureGridSectionProps = {
+  icon: IconType;
+  title: string;
+  description: string;
+  url?: string;
+};
 
 declare type FeatureGridContentProps = Id & {
   __typename: 'ContentfulFeatureGrid';
