@@ -17,14 +17,15 @@ const SignupLoginButton = () => {
     setButtonType(hasAccount ? LOGIN : SIGNUP);
   });
 
+  const isLogin = buttonType === LOGIN;
   return (
     <Button
       inverted
       outline
-      href={appUrl}
+      href={isLogin ? appUrl : appUrl + '/signup'}
       className={`px-3 py-1 ${buttonType ? 'visible' : 'invisible'}`}
     >
-      {buttonType === LOGIN ? <Trans>Log In</Trans> : <Trans>Sign Up</Trans>}
+      {isLogin ? <Trans>Log In</Trans> : <Trans>Sign Up</Trans>}
     </Button>
   );
 };
