@@ -2,13 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-export const ClosingButton = ({
-  hide,
-  classNames,
-}: {
-  hide: () => void;
-  classNames: string;
-}) => (
+export const ClosingButton = ({ hide, classNames }: { hide: () => void; classNames: string }) => (
   <button
     className={`position-absolute bg-transparent border-0 bottom-banner--button ${classNames}`}
     onClick={hide}
