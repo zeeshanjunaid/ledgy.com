@@ -33,7 +33,9 @@ export const TopBannerLayout = ({
         <div className="col-xl-5 d-flex flex-column justify-content-center position-relative z-index-base">
           <CustomFade translate="-100px, 0">
             <div className="mt-md-4 mt-lg-2 text-gray-dark">
-              <h1 className="mb-2 mb-sm-3">{title}</h1>
+              <h1 className="mb-2 mb-sm-3" id="topBannerTitle">
+                {title}
+              </h1>
               <div className="pb-3 text-lg font-weight-light line-height-lg">{subtitle}</div>
             </div>
             <div className="d-flex align-items-center flex-wrap">
