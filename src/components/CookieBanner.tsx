@@ -42,7 +42,7 @@ const Banner = ({
         <ConfirmCookieButton hide={hide} acceptCookies={acceptCookies} />
       </div>
     </div>
-    <ClosingButton hide={hide} />
+    <ClosingButton classNames={'close--button-dark'} hide={hide} />
   </div>
 );
 

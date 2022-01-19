@@ -17,7 +17,7 @@ export const NewsletterPopUp = ({ hide }: { hide: () => void }) => {
       <div className="popup-cont p-4">
         <div className="popup p-4 pb-0 col-lg-5 col-sm-12 offset-lg-7 col-md-6 offset-md-3 bg-blue border border-white position-relative">
           <div className="popup-close">
-            <ClosingButton hide={hide} isLight />
+            <ClosingButton hide={hide} classNames={'close--button-light'} />
           </div>
           {!isSubmited && (
             <>
