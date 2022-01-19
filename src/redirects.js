@@ -2,7 +2,7 @@ const appUrl = 'https://app.ledgy.com';
 const esopTemplates = '/employee-participation-plan-templates/';
 const pricing = '/company-pricing/';
 const stateOfEquity = 'https://stateofequity.ledgy.com';
-const singup = appUrl + '/signup';
+const signup = appUrl + '/signup';
 
 // eslint-disable-next-line no-undef
 exports.redirects = [
@@ -12,9 +12,9 @@ exports.redirects = [
   ['/equity-plans', esopTemplates],
   ['/jobs', '/careers'],
   //external links
-  ['/signup', singup],
-  ['/sign-up', singup],
-  ['/register', singup],
+  ['/signup', signup],
+  ['/sign-up', signup],
+  ['/register', signup],
   ['/login', appUrl],
   ['/signin', appUrl],
   ['/sign-in', appUrl],
