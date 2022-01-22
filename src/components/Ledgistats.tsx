@@ -8,9 +8,20 @@ import ledgistats from '../helpers/ledgistats.json';
 
 type Ledgistats = typeof ledgistats;
 
+const isCapitalized = (word: string): boolean => word[0].toUpperCase() === word[0];
+
+const capitalize = (word: string): string => {
+  if (isCapitalized(word)) return word;
+
+  return word
+    .split(' ')
+    .map((v) => `${v[0].toUpperCase()}${v.slice(1)}`)
+    .join(' ');
+};
+
 const getWords = (ledgistas: Ledgistats, trait: keyof Ledgistats): Word[] => {
   const words = ledgistats[trait];
-  const list = Object.entries(words).map(([text, value]) => ({ text, value }));
+  const list = Object.entries(words).map(([word, value]) => ({ text: capitalize(word), value }));
   const total = {
     text: `${list.length} ${trait}`,
     value: Math.max(...Object.values(words)),
@@ -20,10 +31,11 @@ const getWords = (ledgistas: Ledgistats, trait: keyof Ledgistats): Word[] => {
 };
 
 const TRAITS = {
-  Backgrounds: t`What our team members learned before Ledgy`,
-  Languages: t`Discover all native languages at Ledgy`,
-  Activities: t`What the Ledgistas do in their free time`,
-  Nationalities: t`Where the Ledgistas come from`,
+  Hobbies: t`What the Ledgistas do in their free time 🤓`,
+  Languages: t`Discover all native languages at Ledgy 🐟`,
+  Nationalities: t`Where the Ledgistas come from 🌍`,
+  Backgrounds: t`What our team members learned before Ledgy 👩🏾‍🔬`,
+  Superpowers: t`Our hidden magic abilities 🧙‍♀️`,
 };
 
 const COLORS = [
@@ -78,7 +90,7 @@ export const Ledgistats = () => {
           }}
         />
       </div>
-      <div style={{ maxWidth: '720px' }} className="mx-auto">
+      <div style={{ maxWidth: '900px' }} className="mx-auto">
         <ButtonGroup buttonTexts={allTraits} onClick={setTrait} tag={trait} />
       </div>
     </Section>

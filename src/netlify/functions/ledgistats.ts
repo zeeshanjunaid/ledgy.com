@@ -1,7 +1,6 @@
 import type { Handler } from '@netlify/functions';
 import fetch, { RequestInit } from 'node-fetch';
 import crypto from 'crypto';
-import get from 'lodash.get';
 
 const bobApiToken = process.env.BOB_API_TOKEN || '';
 const ledgistatsToken = crypto.createHash('sha256').update(bobApiToken).digest('hex').slice(0, 32);
@@ -16,27 +15,18 @@ const options: RequestInit = {
 };
 
 const fetchBob = async (endpoint: string) => {
-  const res = await fetch(`${bobApiUrl}${endpoint}`, options);
+  const url = `${bobApiUrl}${endpoint}`;
+  const res = await fetch(url, options);
   return res.json();
 };
 
-const customField = '.custom';
-
-const getCustomList = (namedLists: UntypedObject, field: string) => {
-  if (!field.includes(customField)) return null;
-
-  const key = field.replace(customField, '');
-  const values: UntypedObject[] = get(namedLists, key).values;
-  return new Map<string, string>(values.map((v) => [v.id, v.name]));
-};
-
 const getAggregateField =
-  (employees: UntypedObject[], namedLists: UntypedObject[]) => (field: string) => {
-    const list = getCustomList(namedLists, field);
+  (employees: UntypedObject[]) =>
+  (getField: (employees: DisableTypeScript) => DisableTypeScript) => {
     const entries = employees
-      .map((employee) => get(employee, field))
-      .flat()
-      .map((v) => (list ? list.get(v) : v));
+      .map(getField)
+      .map((v) => (v ? v.split(',') : []))
+      .flat();
 
     const words: Record<string, number> = {};
     entries.forEach((v) => {
@@ -49,18 +39,18 @@ const handler: Handler = async (event) => {
   if (event.headers.authorization !== ledgistatsToken)
     return { statusCode: 401, body: 'not-authorized' };
 
-  const { employees } = await fetchBob('profiles');
-  const namedLists = await fetchBob('company/named-lists');
-  const aggregateField = getAggregateField(employees, namedLists);
+  const { employees } = await fetchBob('people?humanReadable=true');
+  const aggregateField = getAggregateField(employees);
 
-  const nationalities = aggregateField('personal.nationality');
-  const activities = aggregateField('about.custom.field_1640868745323');
-  const languages = aggregateField('personal.custom.field_1640782705253');
-  const backgrounds = aggregateField('about.custom.field_1640792007488');
+  const nationalities = aggregateField((v) => v.personal.nationality);
+  const hobbies = aggregateField((v) => v.about.hobbies);
+  const superpowers = aggregateField((v) => v.about.superpowers);
+  const languages = aggregateField((v) => v.personal.custom.field_1640782705253);
+  const backgrounds = aggregateField((v) => v.about.custom.field_1640792007488);
 
   return {
     statusCode: 200,
-    body: JSON.stringify({ nationalities, activities, languages, backgrounds }),
+    body: JSON.stringify({ nationalities, hobbies, superpowers, languages, backgrounds }),
   };
 };
 
