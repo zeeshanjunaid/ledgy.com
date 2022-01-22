@@ -9,6 +9,8 @@ if [ ! -e .cache  ]; then
   DEPRECATE_TRANSLATIONS_ON_CLEAN_BUILD="tag-absent=${DEPRECATED_TAG}"
 fi
 
+curl -H "Authorization:${LEDGISTATS_API_TOKEN}" https://deploy-preview-578--ledgy.netlify.app/.netlify/functions/ledgistats > src/helpers/ledgistats.json
+
 ./getTranslations.sh
 
 npm rebuild sharp node-sass
