@@ -10,6 +10,7 @@ type TopBannerLayoutProps = {
   buttonThree?: ReactNode;
   deco?: ReactNode;
   componentRight: ReactNode;
+  smallPadding?: boolean;
 };
 
 const DecoShapes = () => (
@@ -26,9 +27,10 @@ export const TopBannerLayout = ({
   buttonTwo,
   buttonThree,
   componentRight,
+  smallPadding,
 }: TopBannerLayoutProps) => (
   <header className="top-banner d-flex bg-lightest overflow-hidden">
-    <Section className="w-100">
+    <Section className="w-100 pb-lg-4" smallPadding={smallPadding}>
       <div className="row">
         <div className="col-xl-5 d-flex flex-column justify-content-center position-relative z-index-base">
           <CustomFade translate="-100px, 0">

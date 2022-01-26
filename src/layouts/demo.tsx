@@ -23,7 +23,7 @@ type DemoPageProps = {
   requesterType?: RequesterType;
 };
 
-const CapterraBadge = () => (
+export const CapterraBadge = () => (
   <img
     className="capterra-badge d-none d-md-block mr-4"
     src="https://assets.capterra.com/badge/4700aedd505fa5881254166d19949239.png?v=2120646&p=173939"
@@ -31,7 +31,7 @@ const CapterraBadge = () => (
   />
 );
 
-const G2Badge = () => (
+export const G2Badge = () => (
   <img
     className="g2-badge d-none d-md-block mr-4"
     alt="Ledgy is a leader in Equity Management on G2"
@@ -39,7 +39,7 @@ const G2Badge = () => (
   />
 );
 
-const SourceforgeBadge = () => (
+export const SourceforgeBadge = () => (
   <img
     className="g2-badge d-none d-md-block"
     src="https://sourceforge.net/cdn/syndication/badge_img/3084019/customers-love-us-white"

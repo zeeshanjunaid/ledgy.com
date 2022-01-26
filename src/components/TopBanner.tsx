@@ -6,6 +6,11 @@ import { RequestDemoButton } from './RequestDemoButton';
 import { TopBannerLayout } from './TopBannerLayout';
 import { formatUrl } from './lib';
 import { Button, DynamicTrans, Image } from './utils';
+import { DemoForm } from './forms';
+import { CapterraBadge, G2Badge, SourceforgeBadge } from '../layouts/demo';
+
+const DEMO_BANNER = 'demo';
+const NO_BUTTONS_BANNER = 'no-button';
 
 const CustomButton = ({ prefix, url, text }: Prefix & { url: string; text: string }) => (
   <Button
@@ -24,6 +29,66 @@ const Screenshot = ({ image }: { image: ImageProps }) => (
   </div>
 );
 
+const renderBannerFromType = ({
+  mainHeader,
+  description,
+  image,
+  buttonOne,
+  buttonTwo,
+  type = 'normal',
+}: {
+  mainHeader: string;
+  description: string;
+  image: ImageProps;
+  buttonOne: JSX.Element;
+  buttonTwo: JSX.Element;
+  type: BannerType;
+}) => {
+  const buttonDemoOne = <CapterraBadge />;
+  const buttonDemoTwo = <G2Badge />;
+  const buttonDemoThree = <SourceforgeBadge />;
+  const form = (
+    <div id="demo">
+      <DemoForm buttonText={'Schedule my demo'} contentfulRequesterType={undefined} slug={'slug'} />
+    </div>
+  );
+
+  switch (type) {
+    case NO_BUTTONS_BANNER:
+      return (
+        <TopBannerLayout
+          title={<DynamicTrans>{mainHeader}</DynamicTrans>}
+          subtitle={<DynamicTrans>{description}</DynamicTrans>}
+          buttonOne={<></>}
+          componentRight={<Screenshot image={image} />}
+          smallPadding
+        />
+      );
+    case DEMO_BANNER:
+      return (
+        <TopBannerLayout
+          title={<DynamicTrans>{mainHeader}</DynamicTrans>}
+          subtitle={<DynamicTrans>{description}</DynamicTrans>}
+          buttonOne={buttonDemoOne}
+          buttonTwo={buttonDemoTwo}
+          buttonThree={buttonDemoThree}
+          componentRight={form}
+        />
+      );
+
+    default:
+      return (
+        <TopBannerLayout
+          title={<DynamicTrans>{mainHeader}</DynamicTrans>}
+          subtitle={<DynamicTrans>{description}</DynamicTrans>}
+          buttonOne={buttonOne}
+          buttonTwo={buttonTwo}
+          componentRight={<Screenshot image={image} />}
+        />
+      );
+  }
+};
+
 export const TopBanner = ({
   mainHeader,
   description,
@@ -33,6 +98,7 @@ export const TopBanner = ({
   secondButtonText,
   secondButtonUrl,
   prefix,
+  type,
 }: TopBannerProps & Prefix) => {
   //avoid delaying the largest contentful paint by lazy loading
   if (image.localFile) image.localFile.childImageSharp.loading = 'eager';
@@ -59,15 +125,5 @@ export const TopBanner = ({
     <CustomButton prefix={prefix} url={secondButtonUrl} text={secondButtonText} />
   );
 
-  return (
-    <div>
-      <TopBannerLayout
-        title={<DynamicTrans>{mainHeader}</DynamicTrans>}
-        subtitle={<DynamicTrans>{description}</DynamicTrans>}
-        buttonOne={buttonOne}
-        buttonTwo={buttonTwo}
-        componentRight={<Screenshot image={image} />}
-      />
-    </div>
-  );
+  return renderBannerFromType({ mainHeader, description, image, buttonOne, buttonTwo, type });
 };

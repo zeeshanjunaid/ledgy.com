@@ -35,7 +35,7 @@ const toggleNav = (navRef: MutableRefObject<HTMLElement | null>) => {
   });
 };
 
-export const Nav = (props: LayoutProps) => {
+export const Nav = (props: LayoutProps & { isLandingPage?: boolean }) => {
   const [isOpen, setOpen] = useState(false);
   const navRef = useRef(null);
   useEffect(() => {
@@ -45,33 +45,37 @@ export const Nav = (props: LayoutProps) => {
   return (
     <>
       <nav ref={navRef} className="navbar bg-lightest text-dark-gray sticky-top p-0">
-        <TopUpdateBanner prefix={props.prefix} />
+        {!props.isLandingPage && <TopUpdateBanner prefix={props.prefix} />}
         <div className="container flex-nowrap">
           <Logo {...props} />
-          <div className="desktop-navbar">
-            <DropdownFollowAlong {...props} />
-            <NavbarButtons className="justify-content-end ml-2 ml-lg-4" prefix={props.prefix} />
-          </div>
-          <Button
-            id="mobile-navbar-toggler"
-            className={isOpen ? 'open' : ''}
-            onClick={() => toggleOverlay(isOpen, setOpen)}
-          >
-            <span /> <span /> <span /> <span />
-          </Button>
-          <CSSTransition
-            in={isOpen}
-            timeout={750}
-            classNames="mobile-navbar-transition"
-            unmountOnExit
-          >
-            <MobileNavbar
-              isOpen={isOpen}
-              setOpen={setOpen}
-              toggleOverlay={toggleOverlay}
-              prefix={props.prefix}
-            />
-          </CSSTransition>
+          {!props.isLandingPage && (
+            <>
+              <div className="desktop-navbar">
+                <DropdownFollowAlong {...props} />
+                <NavbarButtons className="justify-content-end ml-2 ml-lg-4" prefix={props.prefix} />
+              </div>
+              <Button
+                id="mobile-navbar-toggler"
+                className={isOpen ? 'open' : ''}
+                onClick={() => toggleOverlay(isOpen, setOpen)}
+              >
+                <span /> <span /> <span /> <span />
+              </Button>
+              <CSSTransition
+                in={isOpen}
+                timeout={750}
+                classNames="mobile-navbar-transition"
+                unmountOnExit
+              >
+                <MobileNavbar
+                  isOpen={isOpen}
+                  setOpen={setOpen}
+                  toggleOverlay={toggleOverlay}
+                  prefix={props.prefix}
+                />
+              </CSSTransition>
+            </>
+          )}
         </div>
       </nav>
     </>

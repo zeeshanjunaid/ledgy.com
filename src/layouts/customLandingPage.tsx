@@ -20,7 +20,7 @@ const CustomLandingPage = ({
     <div>
       <Title title={dynamicI18n(title)} description={dynamicI18n(description)} indexable />
       {entries.map((entry) => (
-        <ComponentPicker key={entry.id} entry={entry} prefix={prefix} />
+        <ComponentPicker key={entry.id} entry={entry} prefix={prefix} smallPadding />
       ))}
     </div>
   );
@@ -45,6 +45,7 @@ export const customLandingPageQuery = graphql`
           firstButtonUrl
           secondButtonText
           secondButtonUrl
+          type
           image {
             localFile {
               childImageSharp {
