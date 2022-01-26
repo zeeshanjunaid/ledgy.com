@@ -32,17 +32,11 @@ export const Emails = () => (
       </h6>
       <a href="mailto:work@ledgy.com">work@ledgy.com</a>
     </div>
-    <div className="mb-4">
+    <div>
       <h6>
         <Trans>General</Trans>
       </h6>
       <a href="mailto:contact@ledgy.com">contact@ledgy.com</a>
-    </div>
-    <div>
-      <h6>
-        <Trans>Legal</Trans>
-      </h6>
-      <a href="mailto:legal@ledgy.com">legal@ledgy.com</a>
     </div>
   </div>
 );
