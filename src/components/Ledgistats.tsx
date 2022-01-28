@@ -13,18 +13,18 @@ const isAllLowerCase = (word: string): boolean => word.toLowerCase() === word;
 const capitalize = (item: string): string => {
   if (!isAllLowerCase(item)) return item;
 
-  return word
+  return item
     .split(' ')
     .map((v) => `${v[0].toUpperCase()}${v.slice(1)}`)
     .join(' ');
 };
 
-const getWords = (ledgistas: Ledgistats, trait: keyof Ledgistats): Word[] => {
-  const words = ledgistats[trait];
-  const list = Object.entries(words).map(([word, value]) => ({ text: capitalize(word), value }));
+const getItems = (ledgistas: Ledgistats, trait: keyof Ledgistats): Word[] => {
+  const items = ledgistats[trait];
+  const list = Object.entries(items).map(([item, value]) => ({ text: capitalize(item), value }));
   const total = {
     text: `${list.length} ${trait}`,
-    value: Math.max(...Object.values(words)),
+    value: Math.max(...Object.values(items)),
   };
 
   return [...list, total];
@@ -60,13 +60,13 @@ const COLORS = [
 export const Ledgistats = () => {
   const allTraits = Object.keys(TRAITS);
   const [trait, setTrait] = useState(allTraits[0]);
-  const words = getWords(ledgistats, trait.toLowerCase() as keyof Ledgistats);
+  const items = getItems(ledgistats, trait.toLowerCase() as keyof Ledgistats);
 
   const fontSizes = (): MinMaxPair => {
     if (typeof window !== 'undefined') {
       const windowWidth = window.innerWidth;
       return windowWidth < 600
-        ? [windowWidth / Math.max(50, words.length * 2), windowWidth / Math.min(25, words.length)]
+        ? [windowWidth / Math.max(50, items.length * 2), windowWidth / Math.min(25, items.length)]
         : [windowWidth / 100, windowWidth / 40];
     } else {
       return [17, 25];
@@ -78,7 +78,7 @@ export const Ledgistats = () => {
       <h2 className="text-center">{TRAITS[trait as keyof typeof TRAITS]}</h2>
       <div className="my-4">
         <ReactWordcloud
-          words={words}
+          words={items}
           options={{
             fontFamily: 'Museo Sans Rounded',
             fontSizes: fontSizes(),
