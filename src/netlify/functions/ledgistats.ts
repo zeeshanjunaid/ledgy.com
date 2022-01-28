@@ -16,8 +16,12 @@ const options: RequestInit = {
 
 const fetchBob = async (endpoint: string) => {
   const url = `${bobApiUrl}${endpoint}`;
-  const res = await fetch(url, options);
-  return res.json();
+  try {
+    const res = await fetch(url, options);
+    return await res.json();
+  } catch (error) {
+    return null;
+  }
 };
 
 const getAggregateField =
@@ -39,7 +43,10 @@ const handler: Handler = async (event) => {
   if (event.headers.authorization !== ledgistatsToken)
     return { statusCode: 401, body: 'not-authorized' };
 
-  const { employees } = await fetchBob('people?humanReadable=true');
+  const data = await fetchBob('people?humanReadable=true');
+  if (!data) return { statusCode: 503, body: 'service-unavailable' };
+
+  const { employees } = data;
   const aggregateField = getAggregateField(employees);
 
   const nationalities = aggregateField((v) => v.personal.nationality);
