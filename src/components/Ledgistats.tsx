@@ -1,48 +1,41 @@
 import React, { useState } from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
 import ReactWordcloud, { MinMaxPair, Word } from 'react-wordcloud';
 import { t } from '@lingui/macro';
 
 import { Section, ButtonGroup } from './utils';
 
-const getLedgistats = (): Ledgistats[] =>
-  useStaticQuery(graphql`
-    query {
-      allContentfulLedgista {
-        nodes {
-          backgrounds
-          languages
-          nationalities
-          activities
-        }
-      }
-    }
-  `).allContentfulLedgista.nodes;
+import ledgistats from '../helpers/ledgistats.json';
 
-type Ledgistats = Record<string, string[]>;
+type Ledgistats = typeof ledgistats;
 
-const getWords = (ledgistas: Ledgistats[], trait: string): Word[] => {
-  const words = new Map<string, number>();
-  ledgistas.forEach((ledgista) => {
-    const values = ledgista[trait];
-    values.forEach((value) => {
-      words.set(value, (words.get(value) || 0) + 1);
-    });
-  });
+const isAllLowerCase = (word: string): boolean => word.toLowerCase() === word;
 
-  const total = `${words.size} ${trait}`;
-  const values = Array.from(words.values());
-  const max = Math.max(...values);
-  words.set(total, max / 2);
+const capitalize = (item: string): string => {
+  if (!isAllLowerCase(item)) return item;
 
-  return Array.from(words).map(([text, value]) => ({ text, value }));
+  return item
+    .split(' ')
+    .map((v) => `${v[0].toUpperCase()}${v.slice(1)}`)
+    .join(' ');
+};
+
+const getItems = (ledgistas: Ledgistats, trait: keyof Ledgistats): Word[] => {
+  const items = ledgistats[trait];
+  const list = Object.entries(items).map(([item, value]) => ({ text: capitalize(item), value }));
+  const total = {
+    text: `${list.length} ${trait}`,
+    value: Math.max(...Object.values(items)),
+  };
+
+  return [...list, total];
 };
 
 const TRAITS = {
-  Backgrounds: t`What our team members learned before Ledgy`,
-  Languages: t`Discover all native languages at Ledgy`,
-  Activities: t`What the Ledgistas do in their free time`,
-  Nationalities: t`Where the Ledgistas come from`,
+  Hobbies: t`What the Ledgistas do in their free time 🤓`,
+  Languages: t`Discover all native languages at Ledgy 🐟`,
+  Nationalities: t`Where the Ledgistas come from 🌍`,
+  Backgrounds: t`What our team members learned before Ledgy 👩🏾‍🔬`,
+  Superpowers: t`Our hidden magic abilities 🧙‍♀️`,
 };
 
 const COLORS = [
@@ -65,16 +58,15 @@ const COLORS = [
 ];
 
 export const Ledgistats = () => {
-  const ledgistats = getLedgistats();
   const allTraits = Object.keys(TRAITS);
   const [trait, setTrait] = useState(allTraits[0]);
-  const words = getWords(ledgistats, trait.toLowerCase());
+  const items = getItems(ledgistats, trait.toLowerCase() as keyof Ledgistats);
 
   const fontSizes = (): MinMaxPair => {
     if (typeof window !== 'undefined') {
       const windowWidth = window.innerWidth;
       return windowWidth < 600
-        ? [windowWidth / Math.max(50, words.length * 2), windowWidth / Math.min(25, words.length)]
+        ? [windowWidth / Math.max(50, items.length * 2), windowWidth / Math.min(25, items.length)]
         : [windowWidth / 100, windowWidth / 40];
     } else {
       return [17, 25];
@@ -86,7 +78,7 @@ export const Ledgistats = () => {
       <h2 className="text-center">{TRAITS[trait as keyof typeof TRAITS]}</h2>
       <div className="my-4">
         <ReactWordcloud
-          words={words}
+          words={items}
           options={{
             fontFamily: 'Museo Sans Rounded',
             fontSizes: fontSizes(),
@@ -98,7 +90,7 @@ export const Ledgistats = () => {
           }}
         />
       </div>
-      <div style={{ maxWidth: '720px' }} className="mx-auto">
+      <div style={{ maxWidth: '900px' }} className="mx-auto">
         <ButtonGroup buttonTexts={allTraits} onClick={setTrait} tag={trait} />
       </div>
     </Section>
