@@ -8,10 +8,10 @@ import ledgistats from '../helpers/ledgistats.json';
 
 type Ledgistats = typeof ledgistats;
 
-const isCapitalized = (word: string): boolean => word[0].toUpperCase() === word[0];
+const isAllLowerCase = (word: string): boolean => word.toLowerCase() === word;
 
-const capitalize = (word: string): string => {
-  if (isCapitalized(word)) return word;
+const capitalize = (item: string): string => {
+  if (!isAllLowerCase(item)) return item;
 
   return word
     .split(' ')
