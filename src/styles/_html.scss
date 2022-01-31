@@ -1,12 +1,15 @@
 @import 'variables';
 
-html, body {
-  hyphens: auto;
+html,
+body {
+  hyphens: none;
   font-family: 'Open Sans';
   scroll-behavior: smooth;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
@@ -14,12 +17,18 @@ body.overlay {
   overflow: hidden;
 }
 
-html, body {
+html,
+body {
   font-size: $ledgy-font-size;
   line-height: $line-height-base;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Museo Sans Rounded';
   font-weight: normal;
   hyphens: auto;
