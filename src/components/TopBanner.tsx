@@ -4,25 +4,79 @@ import { t } from '@lingui/macro';
 import { demoPage } from '../helpers';
 import { RequestDemoButton } from './RequestDemoButton';
 import { TopBannerLayout } from './TopBannerLayout';
-import { formatUrl } from './lib';
-import { Button, DynamicTrans, Image } from './utils';
 
-const CustomButton = ({ prefix, url, text }: Prefix & { url: string; text: string }) => (
-  <Button
-    href={formatUrl(prefix, url)}
-    className="btn-xl mr-2 my-1 align-self-center"
-    inverted
-    outline
-  >
-    <DynamicTrans>{text}</DynamicTrans>
-  </Button>
-);
+import { DynamicTrans, Image } from './utils';
+
+import { DemoTopBanner } from './DemoTopBanner';
+import { CustomButton } from './CustomButton';
+
+const DEMO_BANNER = 'demo';
+const NO_BUTTONS_BANNER = 'no-button';
+const ONE_BUTTON_BANNER = 'one-button';
 
 const Screenshot = ({ image }: { image: ImageProps }) => (
   <div className="mt-sm-4 mt-xl-0 p-0 screenshot">
     <Image image={image} alt={t`Screenshot of the Ledgy app`} />
   </div>
 );
+
+const renderBannerFromType = ({
+  mainHeader,
+  description,
+  image,
+  buttonOne,
+  buttonTwo,
+  type = 'normal',
+}: {
+  mainHeader: string;
+  description: string;
+  image: ImageProps;
+  buttonOne: JSX.Element;
+  buttonTwo: JSX.Element;
+  type: BannerType;
+}) => {
+  const title = <DynamicTrans>{mainHeader}</DynamicTrans>;
+  const subtitle = <DynamicTrans>{description}</DynamicTrans>;
+  const imageRight = <Screenshot image={image} />;
+
+  switch (type) {
+    case NO_BUTTONS_BANNER:
+      return (
+        <TopBannerLayout
+          title={title}
+          subtitle={subtitle}
+          buttonOne={<></>}
+          componentRight={imageRight}
+          smallPadding
+        />
+      );
+
+    case ONE_BUTTON_BANNER:
+      return (
+        <TopBannerLayout
+          title={title}
+          subtitle={subtitle}
+          buttonOne={buttonOne}
+          componentRight={imageRight}
+          smallPadding
+        />
+      );
+
+    case DEMO_BANNER:
+      return <DemoTopBanner title={title} subtitle={subtitle} />;
+
+    default:
+      return (
+        <TopBannerLayout
+          title={title}
+          subtitle={subtitle}
+          buttonOne={buttonOne}
+          buttonTwo={buttonTwo}
+          componentRight={imageRight}
+        />
+      );
+  }
+};
 
 export const TopBanner = ({
   mainHeader,
@@ -33,9 +87,11 @@ export const TopBanner = ({
   secondButtonText,
   secondButtonUrl,
   prefix,
+  type,
 }: TopBannerProps & Prefix) => {
   //avoid delaying the largest contentful paint by lazy loading
   if (image.localFile) image.localFile.childImageSharp.loading = 'eager';
+  const isPrimary = firstButtonUrl === '#demo';
 
   const buttonClassName = 'my-sm-0 my-2 btn-xl d-inline mr-2';
 
@@ -46,7 +102,7 @@ export const TopBanner = ({
       buttonClassName={buttonClassName}
     />
   ) : (
-    <CustomButton prefix={prefix} url={firstButtonUrl} text={firstButtonText} />
+    <CustomButton url={firstButtonUrl} text={firstButtonText} isTopBanner isPrimary={isPrimary} />
   );
 
   const buttonTwo = secondButtonUrl.includes(demoPage) ? (
@@ -56,18 +112,8 @@ export const TopBanner = ({
       buttonClassName={buttonClassName}
     />
   ) : (
-    <CustomButton prefix={prefix} url={secondButtonUrl} text={secondButtonText} />
+    <CustomButton url={secondButtonUrl} text={secondButtonText} isTopBanner isPrimary={isPrimary} />
   );
 
-  return (
-    <div>
-      <TopBannerLayout
-        title={<DynamicTrans>{mainHeader}</DynamicTrans>}
-        subtitle={<DynamicTrans>{description}</DynamicTrans>}
-        buttonOne={buttonOne}
-        buttonTwo={buttonTwo}
-        componentRight={<Screenshot image={image} />}
-      />
-    </div>
-  );
+  return renderBannerFromType({ mainHeader, description, image, buttonOne, buttonTwo, type });
 };

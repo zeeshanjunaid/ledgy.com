@@ -1,4 +1,4 @@
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import { Trans } from '@lingui/macro';
 import React from 'react';
 
@@ -23,27 +23,33 @@ type DemoPageProps = {
   requesterType?: RequesterType;
 };
 
-const CapterraBadge = () => (
-  <img
-    className="capterra-badge d-none d-md-block mr-4"
-    src="https://assets.capterra.com/badge/4700aedd505fa5881254166d19949239.png?v=2120646&p=173939"
-    alt="Ledgy high Capterra rating"
-  />
+export const CapterraBadge = () => (
+  <Link to="https://www.capterra.com/p/173939/Ledgy/reviews/" target="_blank">
+    <img
+      className="capterra-badge d-none d-md-block mr-4"
+      src="https://assets.capterra.com/badge/4700aedd505fa5881254166d19949239.png?v=2120646&p=173939"
+      alt="Ledgy high Capterra rating"
+    />
+  </Link>
 );
 
-const G2Badge = () => (
-  <img
-    className="g2-badge d-none d-md-block mr-4"
-    alt="Ledgy is a leader in Equity Management on G2"
-    src="https://images.g2crowd.com/uploads/report_medal/image/1335/medal.svg"
-  />
+export const G2Badge = () => (
+  <Link to="https://www.g2.com/products/ledgy/reviews" target="_blank">
+    <img
+      className="g2-badge d-none d-md-block mr-4"
+      alt="Ledgy is a leader in Equity Management on G2"
+      src="https://images.g2crowd.com/uploads/report_medal/image/1335/medal.svg"
+    />
+  </Link>
 );
 
-const SourceforgeBadge = () => (
-  <img
-    className="g2-badge d-none d-md-block"
-    src="https://sourceforge.net/cdn/syndication/badge_img/3084019/customers-love-us-white"
-  />
+export const SourceforgeBadge = () => (
+  <Link to="https://sourceforge.net/software/product/Ledgy/" target="_blank">
+    <img
+      className="g2-badge d-none d-md-block"
+      src="https://sourceforge.net/cdn/syndication/badge_img/3084019/customers-love-us-white"
+    />
+  </Link>
 );
 
 const DemoPage = (props: Props) => {
