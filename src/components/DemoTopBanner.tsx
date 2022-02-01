@@ -13,19 +13,19 @@ export const DemoTopBanner = ({
   subtitle: JSX.Element;
 }) => {
   const form = (
-    <div id="demo">
-      <DemoForm buttonText={'Schedule my demo'} contentfulRequesterType={undefined} slug={'slug'} />
-    </div>
+    <DemoForm buttonText={'Schedule my demo'} contentfulRequesterType={undefined} slug={'slug'} />
   );
 
   return (
-    <TopBannerLayout
-      title={title}
-      subtitle={subtitle}
-      buttonOne={<CapterraBadge />}
-      buttonTwo={<G2Badge />}
-      buttonThree={<SourceforgeBadge />}
-      componentRight={form}
-    />
+    <div id="demo">
+      <TopBannerLayout
+        title={title}
+        subtitle={subtitle}
+        buttonOne={<CapterraBadge />}
+        buttonTwo={<G2Badge />}
+        buttonThree={<SourceforgeBadge />}
+        componentRight={form}
+      />
+    </div>
   );
 };
