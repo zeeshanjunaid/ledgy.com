@@ -66,7 +66,7 @@ export const Ledgistats = () => {
     if (typeof window !== 'undefined') {
       const windowWidth = window.innerWidth;
       return windowWidth < 600
-        ? [windowWidth / Math.max(50, items.length * 2), windowWidth / Math.min(25, items.length)]
+        ? [windowWidth / Math.min(50, items.length * 2), windowWidth / Math.min(25, items.length)]
         : [windowWidth / 100, windowWidth / 40];
     } else {
       return [17, 25];
