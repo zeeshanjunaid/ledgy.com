@@ -1,4 +1,4 @@
-import { isFieldMissing, isValidEmail, track, setDomainCookie } from '../../../helpers';
+import { isFieldMissing, isValidEmail, track, identify, setDomainCookie } from '../../../helpers';
 
 import { FormValues, ParsedFormValues } from './formTypes';
 import { submitToHubspot } from './hubspot';
@@ -96,7 +96,8 @@ export const handleDemoSubmit = async ({
   }
 
   const eventName = `getDemo.submit.${requesterType}`;
-  track(eventName, { value, slug });
+  identify(email, { size });
+  track(eventName, { value, slug, size });
   track('captureLead');
 
   redirect(parsedFormValues);
