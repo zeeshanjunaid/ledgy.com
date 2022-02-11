@@ -26,7 +26,7 @@
     "@fortawesome/free-brands-svg-icons": "5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "0.1.14",
-    "@ledgy/pricing": "^2.0.9",
+    "@ledgy/pricing": "2.0.9",
     "@lingui/core": "3.13.0",
     "@lingui/macro": "3.13.0",
     "@lingui/react": "3.13.0",
