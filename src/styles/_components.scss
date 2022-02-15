@@ -209,6 +209,15 @@ input[type='number']::-webkit-outer-spin-button {
   transform: translate(-50%);
   z-index: 1010;
 }
+@media (min-width: 1200px) {
+  .banner-container {
+    bottom: 18px;
+    right: 18px;
+    left: unset;
+    transform: none;
+    z-index: 1010;
+  }
+}
 
 // Publicity banner
 .bottom-banner {
