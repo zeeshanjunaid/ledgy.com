@@ -7,12 +7,14 @@ import { TopBannerLayout } from './TopBannerLayout';
 
 import { DynamicTrans, Image } from './utils';
 
-import { DemoTopBanner } from './DemoTopBanner';
+import { DemoTopBanner } from './topBanners/DemoTopBanner';
+import { ExtraLinkTopBanner } from './topBanners/ExtraLinkTopBanner';
 import { CustomButton } from './CustomButton';
 
 const DEMO_BANNER = 'demo';
 const NO_BUTTONS_BANNER = 'no-button';
 const ONE_BUTTON_BANNER = 'one-button';
+const EXTRA_LINK_BANNER = 'extra-link';
 
 const Screenshot = ({ image }: { image: ImageProps }) => (
   <div className="mt-sm-4 mt-xl-0 p-0 screenshot">
@@ -65,6 +67,16 @@ const renderBannerFromType = ({
     case DEMO_BANNER:
       return <DemoTopBanner title={title} subtitle={subtitle} />;
 
+    case EXTRA_LINK_BANNER:
+      return (
+        <ExtraLinkTopBanner
+          title={title}
+          subtitle={subtitle}
+          buttonOne={buttonOne}
+          buttonTwo={buttonTwo}
+          componentRight={imageRight}
+        />
+      );
     default:
       return (
         <TopBannerLayout

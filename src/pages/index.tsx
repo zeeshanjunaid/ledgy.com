@@ -306,6 +306,7 @@ export const indexPageQuery = graphql`
               firstButtonUrl
               secondButtonText
               secondButtonUrl
+              type
               image {
                 localFile {
                   childImageSharp {
