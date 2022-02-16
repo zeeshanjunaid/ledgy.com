@@ -5,6 +5,14 @@ export const identify = (event: string, properties?: UnknownObject): void => {
   if (window.analytics) window.analytics.identify(event, properties);
 };
 
+type clickOptions = {
+  text: string;
+  url: string;
+};
+export const trackClick = (value: string, options?: clickOptions) => {
+  track(`click.${value}`, options);
+};
+
 export const isFieldMissing = (object: UnknownObject) =>
   Object.values(object).some((field) => !field);
 
