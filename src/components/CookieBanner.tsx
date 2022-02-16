@@ -33,12 +33,12 @@ const Banner = ({
   hide: () => void;
   acceptCookies: () => void;
 }) => (
-  <div className={bannerClassName}>
+  <div className={`${bannerClassName} offset-xl-8 col-xl-4 `}>
     <div className="m-4 row">
-      <div className="col-12 col-md-10 pl-xl-6 pl-2">
+      <div className="col-12 pb-2 pl-2">
         <MDXRenderer>{content.childMdx.body}</MDXRenderer>
       </div>
-      <div className="col-12 col-md-2 d-flex align-items-center justify-content-center">
+      <div className="col-12 d-flex align-items-center justify-content-center">
         <ConfirmCookieButton hide={hide} acceptCookies={acceptCookies} />
       </div>
     </div>
