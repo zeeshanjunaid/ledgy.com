@@ -21,7 +21,7 @@ export const ExtraLinkTopBanner = ({
   const redirectTo = appUrl + '/signup';
 
   const link = (
-    <div className="pt-4 d-block w-100">
+    <div className="pt-2 d-block w-100">
       <LinkWithChevron text={'Get Started for Free'} to={redirectTo} prefix={''}></LinkWithChevron>
     </div>
   );
@@ -34,6 +34,7 @@ export const ExtraLinkTopBanner = ({
       buttonTwo={buttonTwo}
       buttonThree={link}
       componentRight={componentRight}
+      smallPadding
     />
   );
 };
