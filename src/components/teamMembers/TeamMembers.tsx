@@ -73,7 +73,8 @@ const TeamMember = ({
 
 export const TeamMembers = () => {
   const teamData = Object.entries(getTeamData());
-  const [team, setTeam] = useState(teamData);
+  const teamStillAtLedgy = teamData.filter((member) => !member[1].alumni);
+  const [team, setTeam] = useState(teamStillAtLedgy);
   useEffect(() => {
     setTeam((prev) => shuffleArray(prev));
   }, []);

@@ -12,6 +12,7 @@ export type AuthorProps = {
   linkedIn: string;
   twitter?: string;
   article?: string;
+  alumni?: boolean;
 };
 type LedgistaGif = {
   file: FileUrl;
@@ -29,6 +30,7 @@ type LedgistaProps = {
   linkedIn: string;
   twitter?: string;
   article?: string;
+  alumni?: boolean;
 };
 
 export const getTeamData = (): {
@@ -47,6 +49,7 @@ export const getTeamData = (): {
           twitter
           linkedIn
           article
+          alumni
         }
       }
     }
@@ -54,7 +57,7 @@ export const getTeamData = (): {
 
   const team = Object.fromEntries(
     ledgistas.map(
-      ({ key, name, description, article, role, linkedIn, twitter, profileImage, gif }) => [
+      ({ key, name, description, article, role, linkedIn, twitter, profileImage, alumni, gif }) => [
         key,
         {
           name,
@@ -63,6 +66,7 @@ export const getTeamData = (): {
           article,
           profileImage,
           gif,
+          alumni,
           linkedIn: `https://linkedin.com/in/${linkedIn}/`,
           ...(twitter ? { twitter: `https://twitter.com/${twitter}` } : {}),
         },
