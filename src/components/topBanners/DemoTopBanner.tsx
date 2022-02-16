@@ -25,6 +25,7 @@ export const DemoTopBanner = ({
         buttonTwo={<G2Badge />}
         buttonThree={<SourceforgeBadge />}
         componentRight={form}
+        smallPadding
       />
     </div>
   );

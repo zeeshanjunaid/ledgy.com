@@ -85,6 +85,7 @@ const renderBannerFromType = ({
           buttonOne={buttonOne}
           buttonTwo={buttonTwo}
           componentRight={imageRight}
+          smallPadding
         />
       );
   }
