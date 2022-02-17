@@ -30,21 +30,13 @@ export const getLdJson = (url: string): string => `{
 
 // external URLs
 export const appUrl = 'https://app.ledgy.com';
-
 export const demoUrl = 'https://demo.ledgy.com';
-
 export const helpUrl = 'https://support.ledgy.com';
-
 export const calculatorUrl = 'https://calculator.ledgy.com';
-
 export const githubUrl = 'https://github.com/morloy/ledgy.com/';
-
 export const scheduleDemoUrl = 'https://resources.ledgy.com/schedule-demo';
-
 export const youtubeEmbedBaseUrl = 'https://www.youtube.com/embed';
-
 export const ledgyUrl = 'https://ledgy.com';
-
 export const demoPage = 'demo/ledgy';
 
 // netlify & mixpanel

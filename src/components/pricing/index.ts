@@ -1,3 +1,3 @@
 export * from './CompanyPricing';
-export * from './CompanyPricingCtas';
+export * from './CompanyPricingCTAs';
 export * from './InvestorPricing';

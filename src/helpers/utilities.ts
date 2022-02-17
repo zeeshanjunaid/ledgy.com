@@ -5,11 +5,9 @@ export const identify = (event: string, properties?: UnknownObject): void => {
   if (window.analytics) window.analytics.identify(event, properties);
 };
 
-type clickOptions = {
-  text: string;
-  url: string;
-};
-export const trackClick = (value: string, options?: clickOptions) => {
+type ClickOptions = { text: string; url: string };
+
+export const trackClick = (value: string, options?: ClickOptions) => {
   track(`click.${value}`, options);
 };
 
