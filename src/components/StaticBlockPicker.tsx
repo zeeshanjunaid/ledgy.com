@@ -20,7 +20,7 @@ export const StaticBlockPicker = ({ block, prefix }: StaticBlockProps & Prefix) 
       return <InvestorsList />;
     case 'companyPricing':
       return <CompanyPricing prefix={prefix} />;
-    case 'companyPricingCTAs':
+    case 'companyPricingCtas':
       return <CompanyPricingCTAs />;
     case 'investorPricing':
       return <InvestorPricing prefix={prefix} />;
