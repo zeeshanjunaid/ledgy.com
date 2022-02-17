@@ -30,21 +30,13 @@ export const getLdJson = (url: string): string => `{
 
 // external URLs
 export const appUrl = 'https://app.ledgy.com';
-
 export const demoUrl = 'https://demo.ledgy.com';
-
 export const helpUrl = 'https://support.ledgy.com';
-
 export const calculatorUrl = 'https://calculator.ledgy.com';
-
 export const githubUrl = 'https://github.com/morloy/ledgy.com/';
-
 export const scheduleDemoUrl = 'https://resources.ledgy.com/schedule-demo';
-
 export const youtubeEmbedBaseUrl = 'https://www.youtube.com/embed';
-
 export const ledgyUrl = 'https://ledgy.com';
-
 export const demoPage = 'demo/ledgy';
 
 // netlify & mixpanel
@@ -105,3 +97,11 @@ export const CALCULATOR_TITLE = 'Financing Calculator';
 export const ALL_TOPICS = 'All topics';
 export const BLOG_TAGS = [ALL_TOPICS, 'Companies', 'Investors', 'Equity', 'Funding'];
 export const UPDATE_TAGS = [ALL_TOPICS, 'Product', 'Company', 'Team', 'News'];
+
+//segment track actions
+export const DEMO_BUTTON = 'demoButton';
+export const CUSTOM_BUTTON = 'customButton';
+export const SIGNUP_LOGIN_BUTTON = 'SignupLoginButton';
+export const DEMO_NAVBAR = 'demoNavBar';
+export const GET_STARTED_LINK = 'getStartedLink';
+export const TOP_UPDATE_BANNER = 'topUpdateBanner';

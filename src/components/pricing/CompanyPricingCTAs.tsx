@@ -1,8 +1,9 @@
 import React, { ReactNode } from 'react';
 import { DynamicTrans } from '../utils';
 
-type companyPricingCtaProps = { title: React.ReactNode; description: React.ReactNode };
-const companyPricingCtas: companyPricingCtaProps[] = [
+type CompanyPricingCTAProps = { title: React.ReactNode; description: React.ReactNode };
+
+const companyPricingCTAs: CompanyPricingCTAProps[] = [
   {
     title: (
       <>
@@ -65,7 +66,7 @@ const companyPricingCtas: companyPricingCtaProps[] = [
   },
 ];
 
-const CompanyPricingCta = ({
+const CompanyPricingCTA = ({
   title,
   description,
 }: {
@@ -78,13 +79,13 @@ const CompanyPricingCta = ({
   </div>
 );
 
-export const CompanyPricingCtas = () => (
+export const CompanyPricingCTAs = () => (
   <div className="container my-4 mb-lg-6">
     <div className="row text-center justify-content-center my-7">
-      {companyPricingCtas.map((v) => {
+      {companyPricingCTAs.map((v) => {
         const { title, description } = v;
         return (
-          <CompanyPricingCta
+          <CompanyPricingCTA
             title={title}
             description={description}
             key={`company-pricing-cta-${title}`}

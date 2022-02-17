@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { appUrl } from '../../helpers';
+import { appUrl, GET_STARTED_LINK, trackClick } from '../../helpers';
 
 import { TopBannerLayout } from '../TopBannerLayout';
 
@@ -19,10 +19,14 @@ export const ExtraLinkTopBanner = ({
   componentRight: ReactNode;
 }) => {
   const redirectTo = appUrl + '/signup';
+  const text = 'Get Started for Free';
 
   const link = (
-    <div className="pt-2 d-block w-100">
-      <LinkWithChevron text={'Get Started for Free'} to={redirectTo} prefix={''}></LinkWithChevron>
+    <div
+      className="pt-2 d-block w-100"
+      onClick={() => trackClick(GET_STARTED_LINK, { text, url: redirectTo })}
+    >
+      <LinkWithChevron text={text} to={redirectTo} prefix={''}></LinkWithChevron>
     </div>
   );
 
