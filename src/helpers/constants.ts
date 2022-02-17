@@ -105,3 +105,11 @@ export const CALCULATOR_TITLE = 'Financing Calculator';
 export const ALL_TOPICS = 'All topics';
 export const BLOG_TAGS = [ALL_TOPICS, 'Companies', 'Investors', 'Equity', 'Funding'];
 export const UPDATE_TAGS = [ALL_TOPICS, 'Product', 'Company', 'Team', 'News'];
+
+//segment track actions
+export const DEMO_BUTTON = 'demoButton';
+export const CUSTOM_BUTTON = 'customButton';
+export const SIGNUP_LOGIN_BUTTON = 'SignupLoginButton';
+export const DEMO_NAVBAR = 'demoNavBar';
+export const GET_STARTED_LINK = 'getStartedLink';
+export const TOP_UPDATE_BANNER = 'topUpdateBanner';

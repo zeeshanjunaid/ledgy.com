@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Button, DynamicTrans } from './utils';
 import { formatUrl } from './lib';
-import { demoPage, trackClick } from '../helpers';
+import { demoPage, DEMO_BUTTON, trackClick } from '../helpers';
 
 const DEMO_BUTTON_TEXT = 'Book a Demo';
 
@@ -15,7 +15,7 @@ export const RequestDemoButton = ({
     <Button
       href={formatUrl(prefix, demoPage)}
       className={buttonClassName}
-      onClick={() => trackClick('demoButton')}
+      onClick={() => trackClick(DEMO_BUTTON)}
     >
       <DynamicTrans>{buttonText}</DynamicTrans>
     </Button>

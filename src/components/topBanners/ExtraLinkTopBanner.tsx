@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { appUrl, trackClick } from '../../helpers';
+import { appUrl, GET_STARTED_LINK, trackClick } from '../../helpers';
 
 import { TopBannerLayout } from '../TopBannerLayout';
 
@@ -23,8 +23,8 @@ export const ExtraLinkTopBanner = ({
 
   const link = (
     <div
-      className="pt-2 d-block w-100"
-      onClick={() => trackClick('getStartedLink', { text, url: redirectTo })}
+      className="pt-4 d-block w-100"
+      onClick={() => trackClick(GET_STARTED_LINK, { text, url: redirectTo })}
     >
       <LinkWithChevron text={text} to={redirectTo} prefix={''}></LinkWithChevron>
     </div>

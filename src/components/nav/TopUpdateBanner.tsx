@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { LinkWithChevron } from '../utils';
 import { ClosingButton } from '../PublicityBanner';
-import { trackClick } from '../../helpers';
+import { TOP_UPDATE_BANNER, trackClick } from '../../helpers';
 
 const topUpdateBannerQuery = graphql`
   {
@@ -43,7 +43,7 @@ export const TopUpdateBanner = ({ prefix }: { prefix: string }) => {
       </div>
       <div
         className="d-inline-block"
-        onClick={() => trackClick('topUpdateBanner', { text, url: linkTo })}
+        onClick={() => trackClick(TOP_UPDATE_BANNER, { text, url: linkTo })}
       >
         <LinkWithChevron
           prefix={prefix}
