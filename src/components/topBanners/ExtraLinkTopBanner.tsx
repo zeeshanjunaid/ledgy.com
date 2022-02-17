@@ -23,7 +23,7 @@ export const ExtraLinkTopBanner = ({
 
   const link = (
     <div
-      className="pt-4 d-block w-100"
+      className="pt-2 d-block w-100"
       onClick={() => trackClick(GET_STARTED_LINK, { text, url: redirectTo })}
     >
       <LinkWithChevron text={text} to={redirectTo} prefix={''}></LinkWithChevron>
