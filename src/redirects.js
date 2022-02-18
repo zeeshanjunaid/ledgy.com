@@ -11,6 +11,9 @@ exports.redirects = [
   ['/vsop', esopTemplates],
   ['/equity-plans', esopTemplates],
   ['/jobs', '/careers'],
+  ['/pricing', pricing],
+  ['/features', '/'],
+
   //external links
   ['/signup', signup],
   ['/sign-up', signup],
@@ -18,7 +21,7 @@ exports.redirects = [
   ['/login', appUrl],
   ['/signin', appUrl],
   ['/sign-in', appUrl],
-  ['/pricing', pricing],
+
   ['/stateofequity', stateOfEquity],
   ['/state-of-equity', stateOfEquity],
 ];
