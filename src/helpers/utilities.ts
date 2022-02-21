@@ -1,16 +1,3 @@
-export const track = (event: string, properties?: UnknownObject): void => {
-  if (window.analytics) window.analytics.track(event, properties);
-};
-export const identify = (event: string, properties?: UnknownObject): void => {
-  if (window.analytics) window.analytics.identify(event, properties);
-};
-
-type ClickOptions = { text: string; url: string };
-
-export const trackClick = (value: string, options?: ClickOptions) => {
-  track(`click.${value}`, options);
-};
-
 export const isFieldMissing = (object: UnknownObject) =>
   Object.values(object).some((field) => !field);
 

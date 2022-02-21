@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
-import { appUrl, GET_STARTED_LINK, trackClick } from '../../helpers';
+import { appUrl, GET_STARTED_LINK } from '../../helpers';
+import { trackClick } from '../../helpers/tracking/utilities';
 
 import { TopBannerLayout } from '../TopBannerLayout';
 
