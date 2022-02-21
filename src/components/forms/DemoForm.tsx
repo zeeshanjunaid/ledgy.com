@@ -12,11 +12,9 @@ const REQUESTER_TYPES = [COMPANY, INVESTOR];
 export const DemoForm = ({
   buttonText,
   contentfulRequesterType,
-  slug,
 }: {
   buttonText: string;
   contentfulRequesterType: RequesterType | void;
-  slug: string;
 }) => {
   const [requesterType, setRequesterType] = useState(contentfulRequesterType || COMPANY);
   const [email, setEmail] = useState('');
@@ -30,7 +28,7 @@ export const DemoForm = ({
     <div className="card-border-style bg-white mx-md-7 mx-xl-6">
       <form
         method="post"
-        onSubmit={(event) => handleDemoSubmit({ values, event, slug, setFormStatus })}
+        onSubmit={(event) => handleDemoSubmit({ values, event, setFormStatus })}
         noValidate
         className="w-100 p-2 px-md-4 py-md-4 p-lg-6 d-flex flex-column align-items-center justify-content-between"
       >

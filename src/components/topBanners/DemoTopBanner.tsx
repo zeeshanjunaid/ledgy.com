@@ -12,9 +12,7 @@ export const DemoTopBanner = ({
   title: JSX.Element;
   subtitle: JSX.Element;
 }) => {
-  const form = (
-    <DemoForm buttonText={'Schedule my demo'} contentfulRequesterType={undefined} slug={'slug'} />
-  );
+  const form = <DemoForm buttonText={'Schedule my demo'} contentfulRequesterType={undefined} />;
 
   return (
     <div id="demo">

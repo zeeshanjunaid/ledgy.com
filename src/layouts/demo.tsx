@@ -54,26 +54,15 @@ export const SourceforgeBadge = () => (
 
 const DemoPage = (props: Props) => {
   const { data, prefix } = props;
-  const {
-    content,
-    title,
-    header,
-    description,
-    formButtonText,
-    requesterType,
-    slug,
-  }: DemoPageProps = data.contentfulDemoPage2021;
+  const { content, title, header, description, formButtonText, requesterType }: DemoPageProps =
+    data.contentfulDemoPage2021;
 
   const buttonOne = <CapterraBadge />;
   const buttonTwo = <G2Badge />;
   const buttonThree = <SourceforgeBadge />;
 
   const form = (
-    <DemoForm
-      buttonText={dynamicI18n(formButtonText)}
-      contentfulRequesterType={requesterType}
-      slug={slug}
-    />
+    <DemoForm buttonText={dynamicI18n(formButtonText)} contentfulRequesterType={requesterType} />
   );
 
   return (
