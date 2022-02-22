@@ -4,6 +4,14 @@ const pricing = '/company-pricing/';
 const stateOfEquity = 'https://stateofequity.ledgy.com';
 const signup = appUrl + '/signup';
 
+const getPartnershipsRedirect = (url) => {
+  const baseUrl = `/${url}`;
+  return [baseUrl, `${baseUrl}/?utm_source=${url}`];
+};
+
+const partnerships = ['20vc', 'sifted', 'startup-cfo', 'antler', 'techstars', 'embedded-capital'];
+const parnershipsRedirects = partnerships.map(getPartnershipsRedirect);
+
 // eslint-disable-next-line no-undef
 exports.redirects = [
   ['/esop', esopTemplates],
@@ -14,6 +22,7 @@ exports.redirects = [
   ['/pricing', pricing],
   ['/features', '/'],
   ['/g2', '/?utm_source=g2'],
+  ...parnershipsRedirects,
 
   //external links
   ['/signup', signup],
