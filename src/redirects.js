@@ -13,6 +13,7 @@ exports.redirects = [
   ['/jobs', '/careers'],
   ['/pricing', pricing],
   ['/features', '/'],
+  ['/g2', '/?utm_source=g2'],
 
   //external links
   ['/signup', signup],
