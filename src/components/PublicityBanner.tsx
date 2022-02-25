@@ -12,7 +12,7 @@ export const ClosingButton = ({ hide, classNames }: { hide: () => void; classNam
 );
 
 export const bannerClassName =
-  'bottom-banner position-relative my-1 bg-white rounded font-weight-light text-center';
+  'bottom-banner position-relative bg-white rounded font-weight-light text-center';
 
 const Banner = ({ content, hide }: { content: Mdx; hide: () => void }) => (
   <div className={bannerClassName}>

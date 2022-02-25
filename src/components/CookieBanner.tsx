@@ -12,17 +12,24 @@ const ConfirmCookieButton = ({
 }: {
   hide: () => void;
   acceptCookies: () => void;
-}) => (
-  <Button
-    className={'my-sm-0 my-2 mr-2 btn-md'}
-    onClick={() => {
-      hide();
-      acceptCookies();
-    }}
-  >
-    Ok
-  </Button>
-);
+}) => {
+  const baseClasses = 'my-sm-0 my-2 mr-2 btn-md';
+  const smallScreenClasses = 'btn-sm';
+  if (!window) return <></>;
+  const { innerWidth: screenWidth } = window;
+
+  return (
+    <Button
+      className={screenWidth < 576 ? smallScreenClasses : baseClasses}
+      onClick={() => {
+        hide();
+        acceptCookies();
+      }}
+    >
+      Ok
+    </Button>
+  );
+};
 
 const Banner = ({
   content,
