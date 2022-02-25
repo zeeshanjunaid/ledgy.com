@@ -79,6 +79,7 @@ export const MobileNavbar = ({
   <div id="mobile-navbar" className="position-fixed text-primary">
     <div className="mobile-inner">
       <div className="d-flex flex-column align-items-center justify-content-center p-2 p-sm-4 mt-3 mt-sm-4">
+        <NavbarButtons className="mt-2 mt-sm-4 mb-4" prefix={prefix} />
         <div className="text-left ml-n2 ml-sm-n4">
           {titlesAndColumns.map(([title, menuColumns], i) => (
             <MobileNavbarGroup
@@ -92,7 +93,6 @@ export const MobileNavbar = ({
             />
           ))}
         </div>
-        <NavbarButtons className="mt-2 mt-sm-4 mb-4" prefix={prefix} />
       </div>
     </div>
   </div>
