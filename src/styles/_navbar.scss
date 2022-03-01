@@ -259,6 +259,18 @@
   transform: translateX(-100%);
   transition: 750ms;
 }
+.nav-mobile-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+  a {
+    display: flex;
+    color: $energetic-blue !important;
+  }
+}
 
 #mobile-navbar-toggler {
   display: block;

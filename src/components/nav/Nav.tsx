@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState, MutableRefObject } from 'react';
 import { Link } from 'gatsby';
 import { CSSTransition } from 'react-transition-group';
 
-import { name } from '../../helpers';
+import { appUrl, name } from '../../helpers';
 import logo from '../../img/logo.png';
 
 import { toggleOverlay } from '../lib';
@@ -54,13 +54,16 @@ export const Nav = (props: LayoutProps & { isLandingPage?: boolean }) => {
                 <DropdownFollowAlong {...props} />
                 <NavbarButtons className="justify-content-end ml-2 ml-lg-4" prefix={props.prefix} />
               </div>
-              <Button
-                id="mobile-navbar-toggler"
-                className={isOpen ? 'open' : ''}
-                onClick={() => toggleOverlay(isOpen, setOpen)}
-              >
-                <span /> <span /> <span /> <span />
-              </Button>
+              <div className="nav-mobile-left">
+                <a href={appUrl}>Log in</a>
+                <Button
+                  id="mobile-navbar-toggler"
+                  className={isOpen ? 'open' : ''}
+                  onClick={() => toggleOverlay(isOpen, setOpen)}
+                >
+                  <span /> <span /> <span /> <span />
+                </Button>
+              </div>
               <CSSTransition
                 in={isOpen}
                 timeout={750}
