@@ -10,7 +10,7 @@ const getPartnershipsRedirect = (url) => {
 };
 
 const partnerships = ['20vc', 'sifted', 'startup-cfo', 'antler', 'techstars', 'embedded-capital'];
-const parnershipsRedirects = partnerships.map(getPartnershipsRedirect);
+const parnershipsRedirects = partnerships.map(getKeyValueRedirectRoutes);
 
 // eslint-disable-next-line no-undef
 exports.redirects = [
