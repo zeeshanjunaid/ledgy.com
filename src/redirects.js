@@ -4,9 +4,9 @@ const pricing = '/company-pricing/';
 const stateOfEquity = 'https://stateofequity.ledgy.com';
 const signup = appUrl + '/signup';
 
-const getPartnershipsRedirect = (url) => {
-  const baseUrl = `/${url}`;
-  return [baseUrl, `${baseUrl}/?utm_source=${url}`];
+const getKeyValueRedirectRoutes = (utmParam) => {
+  const route = `/${utmParam}`;
+  return [route, `${route}/?utm_source=${utmParam}`];
 };
 
 const partnerships = ['20vc', 'sifted', 'startup-cfo', 'antler', 'techstars', 'embedded-capital'];
