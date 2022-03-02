@@ -55,7 +55,7 @@ export const Nav = (props: LayoutProps & { isLandingPage?: boolean }) => {
                 <NavbarButtons className="justify-content-end ml-2 ml-lg-4" prefix={props.prefix} />
               </div>
               <div className="nav-mobile-left">
-                <a href={appUrl}>Log in</a>
+                <a href={appUrl}>Log In</a>
                 <Button
                   id="mobile-navbar-toggler"
                   className={isOpen ? 'open' : ''}
