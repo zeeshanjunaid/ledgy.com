@@ -104,7 +104,7 @@ export const TopBanner = ({
 }: TopBannerProps & Prefix) => {
   //avoid delaying the largest contentful paint by lazy loading
   if (image.localFile) image.localFile.childImageSharp.loading = 'eager';
-  const isPrimary = firstButtonUrl === '#demo';
+  const isPrimary = firstButtonUrl.includes('#demo');
 
   const buttonClassName = 'my-sm-0 my-2 btn-xl d-inline mr-2';
 
