@@ -73,6 +73,12 @@ export const CookieBanner = ({ segmentDestinations }: { segmentDestinations: str
   const [show, setShow] = useState(false);
 
   useEffect(() => {
+    // launch google optimize
+    if (window) {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'optimize.activate' });
+    }
+
     if (hasAcceptedCookies()) {
       setTimeout(() => {
         loadMarketingTools(segmentDestinations);
