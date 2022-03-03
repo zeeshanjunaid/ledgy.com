@@ -204,10 +204,14 @@ input[type='number']::-webkit-outer-spin-button {
 
 // Banner container
 .banner-container {
-  bottom: 18px;
+  bottom: 0px;
+  @include media-breakpoint-up(md) {
+    bottom: 18px;
+  }
   left: 50%;
   transform: translate(-50%);
   z-index: 1010;
+  pointer-events: none;
 }
 @media (min-width: 1200px) {
   .banner-container {
@@ -216,18 +220,37 @@ input[type='number']::-webkit-outer-spin-button {
     left: unset;
     transform: none;
     z-index: 1010;
+    pointer-events: none;
   }
 }
 
 // Publicity banner
 .bottom-banner {
-  width: 90vw;
+  width: 80vw;
   box-shadow: $box-shadow-wide;
-  @include media-breakpoint-up(md) {
-    width: 80vw;
-  }
+  pointer-events: fill;
   p {
     margin-bottom: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .bottom-banner {
+    width: 100vw;
+    box-shadow: $box-shadow-wide;
+    pointer-events: fill;
+    div {
+      padding: 6px 12px;
+      font-size: smaller;
+      margin: 0 !important;
+    }
+    .btn {
+      font-size: 13px;
+      padding: 4px 16px;
+    }
+    p {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -526,6 +549,7 @@ $padding-lg: 3rem;
 .popup {
   box-shadow: $box-shadow-light;
   border-radius: $border-radius-wide;
+  pointer-events: fill;
   p {
     color: $gray-300;
     -webkit-hyphens: none;

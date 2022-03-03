@@ -5,6 +5,7 @@ import { Button } from './utils';
 import { ClosingButton, bannerClassName } from './PublicityBanner';
 
 import { hasAcceptedCookies, loadMarketingTools } from '../helpers';
+import { isSmallScreen } from './lib';
 
 const ConfirmCookieButton = ({
   hide,
@@ -12,17 +13,22 @@ const ConfirmCookieButton = ({
 }: {
   hide: () => void;
   acceptCookies: () => void;
-}) => (
-  <Button
-    className={'my-sm-0 my-2 mr-2 btn-md'}
-    onClick={() => {
-      hide();
-      acceptCookies();
-    }}
-  >
-    Ok
-  </Button>
-);
+}) => {
+  const baseClasses = 'my-sm-0 my-2 mr-2 btn-md';
+  const smallScreenClasses = 'btn-sm';
+
+  return (
+    <Button
+      className={isSmallScreen() ? smallScreenClasses : baseClasses}
+      onClick={() => {
+        hide();
+        acceptCookies();
+      }}
+    >
+      Ok
+    </Button>
+  );
+};
 
 const Banner = ({
   content,

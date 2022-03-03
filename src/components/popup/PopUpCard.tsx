@@ -1,5 +1,6 @@
 import { useStaticQuery, graphql } from 'gatsby';
 import React, { useEffect, useState } from 'react';
+import { hasAcceptedCookies } from '../../helpers';
 import { NewsletterPopUp } from './NewsletterPopUp';
 
 const NEWSLETTER = 'newsletter';
@@ -13,9 +14,11 @@ export const PopUp = ({ popup }: { popup: PopupProps }) => {
   const hide = () => setShow(false);
 
   useEffect(() => {
-    setTimeout(() => {
-      setShow(true);
-    }, delay * MILLISECONDS_PER_SECOND);
+    if (hasAcceptedCookies()) {
+      setTimeout(() => {
+        setShow(true);
+      }, delay * MILLISECONDS_PER_SECOND);
+    }
   }, []);
 
   switch (type) {
