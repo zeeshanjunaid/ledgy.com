@@ -1,5 +1,5 @@
 import React from 'react';
-import { LedgyPricing } from '@ledgy/pricing/dist/LedgyPricing';
+import { LedgyPricing } from '@ledgy/library-pricing/dist/LedgyPricing';
 import { appUrl } from '../../helpers';
 import { DynamicTrans, Button } from '../utils';
 import { RequestDemoButton } from '../RequestDemoButton';
