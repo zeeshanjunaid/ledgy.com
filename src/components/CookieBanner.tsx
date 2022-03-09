@@ -75,7 +75,7 @@ export const CookieBanner = ({ segmentDestinations }: { segmentDestinations: str
   useEffect(() => {
     // launch google optimize
     if (window) {
-if (!window.dataLayer) {
+      if (!window.dataLayer) {
         window.dataLayer = [];
       }
       window.dataLayer.push({ event: 'optimize.activate' });
