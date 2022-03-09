@@ -20,5 +20,6 @@ export const FORM_STATUSES = Object.freeze({
   SUBMITTED: 'submitted',
   INVALID_EMAIL: 'invalid-email',
   INVALID_FIELDS: 'invalid-fields',
+  INVALID_SIZE: 'invalid-size',
   INVALID_REQUIRED_FIELDS: 'invalid-required-fields',
 });

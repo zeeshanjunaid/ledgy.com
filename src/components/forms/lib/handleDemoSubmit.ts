@@ -14,7 +14,8 @@ import {
   FORM_STATUSES,
 } from './constants';
 
-const { INVALID_EMAIL, INVALID_FIELDS, LOADING, SUBMITTED, FETCH_ERROR } = FORM_STATUSES;
+const { INVALID_EMAIL, INVALID_FIELDS, INVALID_SIZE, LOADING, SUBMITTED, FETCH_ERROR } =
+  FORM_STATUSES;
 
 const LEAD_STATUS = 'leadStatus';
 const IDENTIFIED = 'identified';
@@ -66,7 +67,7 @@ export const handleDemoSubmit = async ({
   event.preventDefault();
   setFormStatus(LOADING);
   const { requesterType, email, size: sizeString } = values;
-
+  const size = Number(sizeString);
   if (isFieldMissing({ requesterType, sizeString })) {
     setFormStatus(INVALID_FIELDS);
     return;
@@ -77,8 +78,12 @@ export const handleDemoSubmit = async ({
     return;
   }
 
+  if (size < 1) {
+    setFormStatus(INVALID_SIZE);
+    return;
+  }
   const isCompany = requesterType === COMPANY;
-  const size = Number(sizeString);
+
   const value = getPipelineValue(size, isCompany);
   const parsedFormValues = { isCompany, email, size, value };
 

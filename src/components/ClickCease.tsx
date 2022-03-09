@@ -4,15 +4,15 @@ import React from 'react';
 export const ClickCease = () => (
   <>
     <Helmet>
-      <script defer>
+      <script>
         {`
-         var script = document.createElement('script');
-         script.async = true; script.type = 'text/javascript';
-         var target = 'https://www.clickcease.com/monitor/stat.js';
-         script.src = target;var elem = document.head;
-         elem.appendChild(script);
-         script.defer = true;
-       `}
+             var script = document.createElement('script');
+             script.async = true; script.type = 'text/javascript';
+             var target = 'https://www.clickcease.com/monitor/stat.js';
+             script.src = target;var elem = document.head;
+             elem.appendChild(script);
+             script.defer = true;
+           `}
       </script>
     </Helmet>
     <noscript>
