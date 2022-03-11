@@ -80,14 +80,11 @@ export const CookieBanner = ({ segmentDestinations }: { segmentDestinations: str
       }
       window.dataLayer.push({ event: 'optimize.activate' });
     }
+    if (!hasAcceptedCookies()) setShow(true);
 
-    if (hasAcceptedCookies()) {
-      setTimeout(() => {
-        loadMarketingTools(segmentDestinations);
-      }, 1414);
-    } else {
-      setShow(true);
-    }
+    setTimeout(() => {
+      loadMarketingTools(segmentDestinations);
+    }, 1414);
   }, []);
 
   const [banner] = result.allContentfulCookieBanner.edges;
@@ -95,7 +92,6 @@ export const CookieBanner = ({ segmentDestinations }: { segmentDestinations: str
 
   const { content } = banner.node;
   const acceptCookies = () => {
-    loadMarketingTools(segmentDestinations);
     setShow(false);
   };
 
