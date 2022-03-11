@@ -29,7 +29,7 @@ export const loadSegment = (integrations: Record<string, boolean>): void => {
           'addSourceMiddleware',
           'addIntegrationMiddleware',
           'setAnonymousId',
-          'addDestinationMiddleware',
+          'addDestinationMiddleware'
         ];
         analytics.factory = function (t) {
           return function () {
@@ -53,7 +53,7 @@ export const loadSegment = (integrations: Record<string, boolean>): void => {
           analytics._loadOptions = e;
         };
         analytics.SNIPPET_VERSION = '4.1.0';
-        analytics.load('mfLUo1gAa0xfzIR2xANV10NG8qN1IZnu', { integrations });
+        analytics.load('u8Q321coZrcphCphcRbcWskoM0HIOwPM', { integrations });
         analytics.page();
       }
   })();
@@ -96,5 +96,23 @@ export const loadCapterra = () => {
 };
 
 export const loadBing = () => {
-  (function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"134488177"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
-}
+  (function (w, d, t, r, u) {
+    var f, n, i;
+    (w[u] = w[u] || []),
+      (f = function () {
+        var o = { ti: '134488177' };
+        (o.q = w[u]), (w[u] = new UET(o)), w[u].push('pageLoad');
+      }),
+      (n = d.createElement(t)),
+      (n.src = r),
+      (n.async = 1),
+      (n.onload = n.onreadystatechange =
+        function () {
+          var s = this.readyState;
+          (s && s !== 'loaded' && s !== 'complete') ||
+            (f(), (n.onload = n.onreadystatechange = null));
+        }),
+      (i = d.getElementsByTagName(t)[0]),
+      i.parentNode.insertBefore(n, i);
+  })(window, document, 'script', '//bat.bing.com/bat.js', 'uetq');
+};
