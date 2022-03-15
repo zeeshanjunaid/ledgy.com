@@ -11,7 +11,8 @@ declare type EntryProps =
   | ChecklistWithScreenshotProps
   | LongTextComponentProps
   | StaticBlockProps
-  | TestimonialsProps;
+  | TestimonialsProps
+  | LargeTestimonialProps;
 
 declare type ContentfulPageProps = Id & {
   title: string;
@@ -83,6 +84,15 @@ declare type TestimonialProps = {
   url: string;
   image: ImageProps;
   small: boolean;
+};
+
+declare type LargeTestimonialProps = Id & {
+  __typename: 'ContentfulLargeTestimonial';
+  name: string;
+  quote: Mdx;
+  company: string;
+  image: ImageProps;
+  showInfo: boolean;
 };
 
 declare type TestimonialCardsProps = Id & {

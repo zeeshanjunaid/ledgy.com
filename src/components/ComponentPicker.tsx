@@ -12,6 +12,7 @@ import { ChecklistWithScreenshot } from './ChecklistWithScreenshot';
 import { LongTextComponent } from './LongTextComponent';
 import { StaticBlockPicker } from './StaticBlockPicker';
 import { Testimonials } from './Testimonials';
+import { LargeTestimonial } from './LargeTestimonial';
 
 export const ComponentPicker = ({
   entry,
@@ -56,6 +57,9 @@ export const ComponentPicker = ({
 
     case 'ContentfulTestimonials':
       return <Testimonials {...entry} />;
+
+    case 'ContentfulLargeTestimonial':
+      return <LargeTestimonial {...entry} prefix={prefix} />;
 
     default:
       throw new Error('content __typename not recognized');

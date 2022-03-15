@@ -120,6 +120,30 @@ export const ContentWithChecklistFragment = graphql`
   }
 `;
 
+export const LargeTestimonialFragment = graphql`
+  fragment LargeTestimonialFragment on ContentfulLargeTestimonial {
+    id
+    __typename
+    name
+    company
+    showInfo
+    quote {
+      childMdx {
+        body
+      }
+    }
+    image {
+      localFile {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  }
+`;
+
 export const TitleWithGraphicFragment = graphql`
   fragment TitleWithGraphicFragment on ContentfulTitleWithGraphic {
     id
@@ -325,6 +349,7 @@ export const indexPageQuery = graphql`
             ...SelectableCardsWithScreenshotsFragment
             ...CallToAction2021Fragment
             ...ChecklistWithScreenshotFragment
+            ...LargeTestimonialFragment
           }
         }
       }
