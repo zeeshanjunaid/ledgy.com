@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ReactWordcloud, { MinMaxPair, Word } from 'react-wordcloud';
+import ReactWordcloud, { Word } from 'react-wordcloud';
 import { t } from '@lingui/macro';
 
 import { Section, ButtonGroup } from './utils';
@@ -62,35 +62,28 @@ export const Ledgistats = () => {
   const [trait, setTrait] = useState(allTraits[0]);
   const items = getItems(ledgistats, trait.toLowerCase() as keyof Ledgistats);
 
-  const fontSizes = (): MinMaxPair => {
-    if (typeof window !== 'undefined') {
-      const windowWidth = window.innerWidth;
-      return windowWidth < 600
-        ? [windowWidth / Math.min(50, items.length * 2), windowWidth / Math.min(25, items.length)]
-        : [windowWidth / 100, windowWidth / 40];
-    } else {
-      return [17, 25];
-    }
-  };
+  const minFontSize = window.innerWidth > 992 ? 15 : 10;
 
   return (
     <Section noPadding>
-      <h2 className="text-center">{TRAITS[trait as keyof typeof TRAITS]}</h2>
-      <div className="my-4">
+      <h2 className="text-center mb-0">{TRAITS[trait as keyof typeof TRAITS]}</h2>
+      <div className="my-0">
         <ReactWordcloud
           words={items}
+          maxWords={items.length}
+          minSize={[400, 500]}
           options={{
             fontFamily: 'Museo Sans Rounded',
-            fontSizes: fontSizes(),
+            fontSizes: [minFontSize, 40],
             enableTooltip: false,
             colors: COLORS,
-            padding: 3,
-            rotations: 5,
-            rotationAngles: [-15, 15],
+            padding: 2,
+            rotations: 0,
+            rotationAngles: [0,0],
           }}
         />
       </div>
-      <div style={{ maxWidth: '900px' }} className="mx-auto">
+      <div style={{ maxWidth: '800px' }} className="mx-auto">
         <ButtonGroup buttonTexts={allTraits} onClick={setTrait} tag={trait} />
       </div>
     </Section>
