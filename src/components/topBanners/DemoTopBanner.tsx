@@ -13,7 +13,7 @@ export const DemoTopBanner = ({
   subtitle: JSX.Element;
 }) => {
   const form = (
-    <DemoForm buttonText={'Schedule my demo'} contentfulRequesterType={undefined} slug={'slug'} />
+    <DemoForm buttonText={'Show me a demo'} contentfulRequesterType={undefined} slug={'slug'} />
   );
 
   return (
