@@ -1,4 +1,4 @@
-import { ParsedFormValues } from './formTypes';
+import { LeadFormType, ParsedFormValues } from './formTypes';
 import { getCookie, reportError, getGoogleAdsClickId } from '../../../helpers';
 import { FORM_STATUSES } from './constants';
 
@@ -8,8 +8,6 @@ const GOOGLE_CID = '_ga';
 
 const getHubspotUserToken = () => getCookie(HUBSPOT_UTK) || undefined;
 const getGoogleAnalyticsClientId = () => getCookie(GOOGLE_CID).slice(6);
-
-const DEMO_REQUEST = 'demoRequest';
 
 type ErrorResponse = {
   errorType: string;
@@ -27,7 +25,7 @@ type EncodeBodyData = {
   google_ads_click_id?: string;
   numberofemployees?: number;
   numberofinvestments?: number;
-  lead_form_source: typeof DEMO_REQUEST;
+  lead_form_source: LeadFormType;
 };
 
 const isInvalidEmailError = (errors: ErrorResponse[]): boolean =>
@@ -41,14 +39,20 @@ const encodeBody = (data: EncodeBodyData) =>
 
 export const INVALID_EMAIL = 'invalidEmail';
 
-export const submitToHubspot = async ({ isCompany, email, size, value }: ParsedFormValues) => {
+export const submitToHubspot = async ({
+  isCompany,
+  email,
+  size,
+  value,
+  lead_form_source,
+}: ParsedFormValues) => {
   const body = encodeBody({
     ...(isCompany ? { numberofemployees: size } : { numberofinvestments: size }),
     pipelinevalue: value,
     email,
     google_analytics_client_id: getGoogleAnalyticsClientId(),
     google_ads_click_id: getGoogleAdsClickId(),
-    lead_form_source: DEMO_REQUEST,
+    lead_form_source,
   });
   const response = await fetch(`/submit/6881367/${DEMO_FORM_ID}`, {
     method: 'POST',
