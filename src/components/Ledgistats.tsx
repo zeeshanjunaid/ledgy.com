@@ -62,7 +62,7 @@ export const Ledgistats = () => {
   const [trait, setTrait] = useState(allTraits[0]);
   const items = getItems(ledgistats, trait.toLowerCase() as keyof Ledgistats);
 
-  const minFontSize = window.innerWidth > 992 ? 15 : 10;
+  const minFontSize = typeof window !== 'undefined' && window.innerWidth > 992 ? 15 : 10;
 
   return (
     <Section noPadding>
