@@ -14,7 +14,7 @@ const getAnchorComponent =
       </Anchor>
     );
 
-const getProviderComponents = (prefix: string) => ({
+export const getProviderComponents = (prefix: string) => ({
   a: getAnchorComponent(prefix),
   img: MarkdownImage,
   Lead,
