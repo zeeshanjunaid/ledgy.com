@@ -1,5 +1,7 @@
 export type RequesterType = 'company' | 'investor';
 
+export type LeadFormType = 'demoRequest' | 'newsletter';
+
 export type FormValues = {
   requesterType: RequesterType;
   email: string;
@@ -11,4 +13,5 @@ export type ParsedFormValues = {
   email: string;
   size: number;
   value: number;
+  lead_form_source: LeadFormType;
 };

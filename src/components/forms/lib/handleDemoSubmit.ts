@@ -11,6 +11,7 @@ import {
   FUND_INVESTMENT_THRESHOLD,
   smallCompanyUrl,
   FORM_STATUSES,
+  DEMO_REQUEST,
 } from './constants';
 import { getUrlFromCountryCode } from './getUrlFromCountryCode';
 
@@ -104,7 +105,7 @@ export const handleDemoSubmit = async ({
   const isCompany = requesterType === COMPANY;
 
   const value = getPipelineValue(size, isCompany);
-  const parsedFormValues = { isCompany, email, size, value };
+  const parsedFormValues = { isCompany, email, size, value, lead_form_source: DEMO_REQUEST };
 
   try {
     await submitToHubspot(parsedFormValues);

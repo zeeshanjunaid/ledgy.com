@@ -5,10 +5,11 @@ import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { navigate } from 'gatsby';
 
-import { isValidEmail } from '../../helpers';
 import { Button } from '../utils';
-import { signupOnMixpanel, trackOnMixpanel, FORM_STATUSES } from './lib';
+import { trackOnMixpanel, FORM_STATUSES, submitToHubspot } from './lib';
 import { InvalidFieldHints } from './Fields';
+import { NEWSLETTER } from './lib/constants';
+import { ParsedFormValues } from './lib/formTypes';
 
 const { FETCH_ERROR, IDLE, INVALID_EMAIL, LOADING } = FORM_STATUSES;
 
@@ -26,22 +27,32 @@ export class SubscriptionForm extends Component<
     this.setState({ status: LOADING });
     const { toggle, trackingEvent, callback } = this.props;
     const { email } = this.state;
-    if (isValidEmail(email)) {
-      try {
-        const signupResponse = await signupOnMixpanel(email);
-        if (signupResponse.status === 200) {
-          trackOnMixpanel(email, trackingEvent);
-          this.setState({ email: '', status: IDLE });
-          if (toggle) toggle();
-          callback ? callback() : navigate('/subscribed');
-        } else {
-          this.setState({ status: FETCH_ERROR });
-        }
-      } catch (error) {
-        this.setState({ status: FETCH_ERROR });
+
+    const parsedFormValues: ParsedFormValues = {
+      isCompany: true,
+      email,
+      size: 0,
+      value: 0,
+      lead_form_source: NEWSLETTER,
+    };
+
+    try {
+      const signupResponse = await submitToHubspot(parsedFormValues);
+      if (signupResponse.status === 200) {
+        trackOnMixpanel(email, trackingEvent);
+        this.setState({ email: '', status: IDLE });
+        if (toggle) toggle();
+        callback ? callback() : navigate('/subscribed');
       }
-    } else {
-      this.setState({ status: INVALID_EMAIL });
+    } catch (error) {
+      if (error.message === INVALID_EMAIL) {
+        this.setState({ status: INVALID_EMAIL });
+      } else {
+        setTimeout(() => {
+          this.setState({ status: FETCH_ERROR });
+        }, 1000);
+      }
+      return;
     }
   };
   render = () => {
