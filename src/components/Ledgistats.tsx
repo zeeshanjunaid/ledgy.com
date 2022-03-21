@@ -79,7 +79,7 @@ export const Ledgistats = () => {
             colors: COLORS,
             padding: 2,
             rotations: 0,
-            rotationAngles: [0,0],
+            rotationAngles: [0, 0],
           }}
         />
       </div>
