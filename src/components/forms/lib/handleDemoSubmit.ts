@@ -4,7 +4,6 @@ import { FormValues, ParsedFormValues } from './formTypes';
 import { submitToHubspot } from './hubspot';
 import {
   investorUrl,
-  meetingRequestUrl,
   COMPANY,
   EMPLOYEE_VALUE,
   INVESTMENT_VALUE,
@@ -13,6 +12,7 @@ import {
   smallCompanyUrl,
   FORM_STATUSES,
 } from './constants';
+import { getUrlFromCountryCode } from './getUrlFromCountryCode';
 
 const { INVALID_EMAIL, INVALID_FIELDS, INVALID_SIZE, LOADING, SUBMITTED, FETCH_ERROR } =
   FORM_STATUSES;
@@ -35,8 +35,27 @@ const getInvestmentValue = (size: number) => {
 const getPipelineValue = (size: number, isCompany: boolean) =>
   isCompany ? getEmployeeValue(size) : getInvestmentValue(size);
 
-const getUrl = ({ isCompany, size, email }: ParsedFormValues) => {
-  const meetingRequestUrlWithEmail = `${meetingRequestUrl}?email=${email}`;
+const getLocation = async <T extends { country: string }>(): Promise<T> => {
+  const ipData: T = await (await fetch('https://ipapi.co/json/')).json();
+  return ipData;
+};
+
+const getRegionalMarketingUrl = async () => {
+  let countryCode = 'CH';
+  try {
+    const { country } = await getLocation();
+    if (country) {
+      countryCode = country;
+    }
+  } catch (e) {
+    // ignore
+  }
+
+  return getUrlFromCountryCode(countryCode);
+};
+
+const getUrl = async ({ isCompany, size, email }: ParsedFormValues) => {
+  const meetingRequestUrlWithEmail = `${await getRegionalMarketingUrl()}?email=${email}`;
 
   const alwaysBook = window.location.hash.includes('#book');
   if (alwaysBook) return meetingRequestUrlWithEmail;
@@ -47,9 +66,9 @@ const getUrl = ({ isCompany, size, email }: ParsedFormValues) => {
   return isDeerCompany(size) ? meetingRequestUrlWithEmail : smallCompanyUrl;
 };
 
-const redirect = (values: ParsedFormValues) => {
+const redirect = async (values: ParsedFormValues) => {
   if (window) {
-    (window as DisableTypeScript).location = getUrl(values);
+    (window as DisableTypeScript).location = await getUrl(values);
   }
 };
 
@@ -110,7 +129,7 @@ export const handleDemoSubmit = async ({
   track(eventName, { value, slug, size, email });
   track('captureLead');
 
-  redirect(parsedFormValues);
+  await redirect(parsedFormValues);
   setFormStatus(SUBMITTED);
   setDomainCookie(LEAD_STATUS, IDENTIFIED);
 };
