@@ -56,6 +56,7 @@ export const customLandingPageQuery = graphql`
             }
           }
         }
+        ...LargeTestimonialFragment
         ...ContentWithChecklistFragment
         ...TitleWithGraphicFragment
         ...FeatureGridFragment

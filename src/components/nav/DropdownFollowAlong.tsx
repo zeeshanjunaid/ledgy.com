@@ -86,38 +86,56 @@ const DropdownItem = ({
   disappear,
   isTextShown,
   className,
-}: ParentListItemProps) => (
-  <li {...eventHandlingProps} className="dropdown-item-hover">
-    <p>
-      <DynamicTrans>{parentTitle}</DynamicTrans>
-    </p>
-    <div className={`hover-list-child ${className}`}>
-      {menuColumns.map((column, i) => {
-        const { items, header } = column;
-        const formattedHeader = dynamicI18n(header || '').toUpperCase();
-        return (
-          <div key={`${header}-${i}`} className="flex-1 px-2">
-            {!!header && (
-              <h6
-                className="column-header text-gray-neutral my-2"
-                dangerouslySetInnerHTML={{ __html: decorateHeader(formattedHeader) }}
-              />
-            )}
-            {items.map((item) => (
-              <ListItem
-                {...item}
-                prefix={prefix}
-                key={item.link}
-                onClick={disappear}
-                isTextShown={isTextShown}
-              />
-            ))}
-          </div>
-        );
-      })}
-    </div>
-  </li>
-);
+}: ParentListItemProps) => {
+  const columns = menuColumns.length;
+  const { items: firstColItems } = menuColumns[0];
+
+  const isSingleLink = columns === 1 && firstColItems.length === 1;
+  const { link: firstLink } = firstColItems[0];
+
+  return isSingleLink ? (
+    <li {...eventHandlingProps} className="dropdown-item-hover">
+      <p>
+        <Link to={formatUrl(prefix, firstLink)} onClick={disappear}>
+          <DynamicTrans>{parentTitle}</DynamicTrans>
+        </Link>
+      </p>
+    </li>
+  ) : (
+    // </Link>
+    <li {...eventHandlingProps} className="dropdown-item-hover">
+      <p>
+        <DynamicTrans>{parentTitle}</DynamicTrans>
+      </p>
+
+      <div className={`hover-list-child ${className}`}>
+        {menuColumns.map((column, i) => {
+          const { items, header } = column;
+          const formattedHeader = dynamicI18n(header || '').toUpperCase();
+          return (
+            <div key={`${header}-${i}`} className="flex-1 px-2">
+              {!!header && (
+                <h6
+                  className="column-header text-gray-neutral my-2"
+                  dangerouslySetInnerHTML={{ __html: decorateHeader(formattedHeader) }}
+                />
+              )}
+              {items.map((item) => (
+                <ListItem
+                  {...item}
+                  prefix={prefix}
+                  key={item.link}
+                  onClick={disappear}
+                  isTextShown={isTextShown}
+                />
+              ))}
+            </div>
+          );
+        })}
+      </div>
+    </li>
+  );
+};
 
 const { solutionsTitle, resourcesTitle, pricingTitle, companyTitle } = NAVBAR_TITLES;
 const { solutions, resources, pricing, company } = NAVBAR_LINKS;

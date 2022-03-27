@@ -61,9 +61,9 @@ const ContentfulPage = ({
         <LongText content={content} prefix={prefix} />
         <PublishDate date={date} />
         {author && <Author prefix={prefix} name={author} />}
-        {!!entries &&
-          entries.map((entry) => <ComponentPicker key={entry.id} entry={entry} prefix={prefix} />)}
       </div>
+      {!!entries &&
+        entries.map((entry) => <ComponentPicker key={entry.id} entry={entry} prefix={prefix} />)}
     </div>
   );
 };
@@ -95,6 +95,27 @@ export const contentfulPageQuery = graphql`
         }
       }
       entries {
+        ... on ContentfulTopBanner {
+          id
+          __typename
+          mainHeader
+          description
+          firstButtonText
+          firstButtonUrl
+          secondButtonText
+          secondButtonUrl
+          type
+          image {
+            localFile {
+              childImageSharp {
+                fluid(maxWidth: 1200, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+        ...LargeTestimonialFragment
         ...FeatureGridFragment
         ...TestimonialCardsFragment
         ...ContentWithChecklistFragment

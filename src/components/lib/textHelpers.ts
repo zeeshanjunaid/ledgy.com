@@ -14,10 +14,8 @@ import {
   angelUrl,
   facebookUrl,
   HR_AND_COMPENSATION,
-  FINANCE_LEGAL_ACCOUNTING,
   VCS_BUSINESS_ANGELS,
   HR_AND_COMPENSATION_TITLE,
-  FINANCE_LEGAL_ACCOUNTING_TITLE,
   VCS_BUSINESS_ANGELS_TITLE,
   DATA_PROTECTION,
   CAP_TABLE,
@@ -34,6 +32,12 @@ import {
   ESOP_TEMPLATES,
   CALCULATOR_TITLE,
   CALCULATOR,
+  SECONDARIES,
+  SECONDARIES_TITLE,
+  LEGAL_ACCOUNTING_TITLE,
+  FINANCE_TITLE,
+  FINANCE,
+  LEGAL_ACCOUNTING,
 } from '../../helpers';
 
 export const getUnderlineHtml = (text: string): string =>
@@ -58,7 +62,7 @@ const legalLinks: FooterLink[] = [
 
 const productLinks: FooterLink[] = [
   ['For human resources', HR_AND_COMPENSATION],
-  ['For finance', FINANCE_LEGAL_ACCOUNTING],
+  ['For finance', FINANCE],
   ['For investors', VCS_BUSINESS_ANGELS],
   ['Cap table management', CAP_TABLE],
   ['Equity plan automation', EQUITY_PLAN_AUTOMATION],
@@ -112,10 +116,16 @@ const teams: NavbarMenuColumn = {
       icon: 'hr',
     },
     {
-      link: FINANCE_LEGAL_ACCOUNTING,
-      title: FINANCE_LEGAL_ACCOUNTING_TITLE,
+      link: FINANCE,
+      title: FINANCE_TITLE,
       description: 'Cap table, scenario modeling, investor relations',
       icon: 'financeLegalAccounting',
+    },
+    {
+      link: LEGAL_ACCOUNTING,
+      title: LEGAL_ACCOUNTING_TITLE,
+      description: 'Cap table, scenario modeling, investor relations',
+      icon: 'company',
     },
     {
       link: VCS_BUSINESS_ANGELS,
@@ -152,6 +162,12 @@ const features: NavbarMenuColumn = {
       title: EMPLOYEE_ENGAGEMENT_TITLE,
       description: 'Make their ownership clear at every stage',
       icon: 'employees',
+    },
+    {
+      link: SECONDARIES,
+      title: SECONDARIES_TITLE,
+      description: 'Liquidity events for your team',
+      icon: 'handshake',
     },
   ],
 };
@@ -240,12 +256,6 @@ const pricingTypes: NavbarMenuColumn = {
         'Free for early-stage startups and powerful for scaling companies, choose the plan that suits your company',
       icon: 'company',
     },
-    {
-      link: 'investor-pricing',
-      title: 'For Investors',
-      description: 'Free for business angels, powerful for professional investors',
-      icon: 'investor',
-    },
   ],
 };
 
@@ -268,6 +278,12 @@ const companyTypes: NavbarMenuColumn = {
       title: 'Careers',
       description: 'Join us on our mission',
       icon: 'careers',
+    },
+    {
+      link: 'sustainability',
+      title: 'Sustainability',
+      description: 'Our commitments to the world',
+      icon: 'investor',
     },
   ],
 };
