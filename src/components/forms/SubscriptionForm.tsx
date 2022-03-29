@@ -6,10 +6,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { navigate } from 'gatsby';
 
 import { Button } from '../utils';
-import { trackOnMixpanel, FORM_STATUSES, submitToHubspot } from './lib';
+import { trackOnMixpanel, FORM_STATUSES, submitToHubspotNewsletter } from './lib';
 import { InvalidFieldHints } from './Fields';
 import { NEWSLETTER } from './lib/constants';
-import { ParsedFormValues } from './lib/formTypes';
 
 const { FETCH_ERROR, IDLE, INVALID_EMAIL, LOADING } = FORM_STATUSES;
 
@@ -28,16 +27,13 @@ export class SubscriptionForm extends Component<
     const { toggle, trackingEvent, callback } = this.props;
     const { email } = this.state;
 
-    const parsedFormValues: ParsedFormValues = {
-      isCompany: true,
+    const parsedFormValues = {
       email,
-      size: 0,
-      value: 0,
       lead_form_source: NEWSLETTER,
     };
 
     try {
-      const signupResponse = await submitToHubspot(parsedFormValues);
+      const signupResponse = await submitToHubspotNewsletter(parsedFormValues);
       if (signupResponse.status === 200) {
         trackOnMixpanel(email, trackingEvent);
         this.setState({ email: '', status: IDLE });
