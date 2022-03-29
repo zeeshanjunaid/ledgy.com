@@ -70,8 +70,8 @@ export const targetBlank = { target: '_blank', rel: 'noopener noreferrer' };
 
 // links
 export const HR_AND_COMPENSATION = 'hr-and-compensation';
-export const FINANCE = 'finance';
-export const LEGAL_ACCOUNTING = 'legal-accounting';
+export const FINANCE_ACCOUNTING = 'finance-accounting';
+export const LEGAL_OPERATIONS = 'legal-operations';
 export const VCS_BUSINESS_ANGELS = 'vcs-business-angels';
 export const DATA_PROTECTION = 'data-protection';
 export const CAP_TABLE = 'cap-table';
@@ -85,8 +85,8 @@ export const CALCULATOR = 'calculator';
 
 //titles
 export const HR_AND_COMPENSATION_TITLE = 'HR & Compensation';
-export const FINANCE_TITLE = 'Finance';
-export const LEGAL_ACCOUNTING_TITLE = 'Legal & Accounting';
+export const FINANCE_ACCOUNTING_TITLE = 'Finance & Accounting';
+export const LEGAL_OPERATIONS_TITLE = 'Legal & Operations';
 export const VCS_BUSINESS_ANGELS_TITLE = 'VCs & Business Angels';
 export const CAP_TABLE_MANAGEMENT_TITLE = 'Cap Table Management';
 export const EQUITY_PLAN_AUTOMATION_TITLE = 'Equity Plan Automation';

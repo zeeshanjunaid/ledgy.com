@@ -34,10 +34,10 @@ import {
   CALCULATOR,
   SECONDARIES,
   SECONDARIES_TITLE,
-  LEGAL_ACCOUNTING_TITLE,
-  FINANCE_TITLE,
-  FINANCE,
-  LEGAL_ACCOUNTING,
+  LEGAL_OPERATIONS_TITLE,
+  FINANCE_ACCOUNTING_TITLE,
+  FINANCE_ACCOUNTING,
+  LEGAL_OPERATIONS,
 } from '../../helpers';
 
 export const getUnderlineHtml = (text: string): string =>
@@ -62,7 +62,7 @@ const legalLinks: FooterLink[] = [
 
 const productLinks: FooterLink[] = [
   ['For human resources', HR_AND_COMPENSATION],
-  ['For finance', FINANCE],
+  ['For finance', FINANCE_ACCOUNTING],
   ['For investors', VCS_BUSINESS_ANGELS],
   ['Cap table management', CAP_TABLE],
   ['Equity plan automation', EQUITY_PLAN_AUTOMATION],
@@ -116,15 +116,15 @@ const teams: NavbarMenuColumn = {
       icon: 'hr',
     },
     {
-      link: FINANCE,
-      title: FINANCE_TITLE,
-      description: 'Cap table, scenario modeling, investor relations',
+      link: FINANCE_ACCOUNTING,
+      title: FINANCE_ACCOUNTING_TITLE,
+      description: 'Cap table, scenario modeling, funding rounds',
       icon: 'financeLegalAccounting',
     },
     {
-      link: LEGAL_ACCOUNTING,
-      title: LEGAL_ACCOUNTING_TITLE,
-      description: 'Cap table, scenario modeling, investor relations',
+      link: LEGAL_OPERATIONS,
+      title: LEGAL_OPERATIONS_TITLE,
+      description: 'Compliant contracts, reporting and e-signatures',
       icon: 'company',
     },
     {

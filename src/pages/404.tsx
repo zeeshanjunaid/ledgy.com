@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import {
-  FINANCE,
-  FINANCE_TITLE,
+  FINANCE_ACCOUNTING,
+  FINANCE_ACCOUNTING_TITLE,
   helpUrl,
-  LEGAL_ACCOUNTING,
-  LEGAL_ACCOUNTING_TITLE,
+  LEGAL_OPERATIONS,
+  LEGAL_OPERATIONS_TITLE,
   targetBlank,
 } from '../helpers';
 import {
@@ -27,8 +27,8 @@ const NotFoundPage = () => (
         <p className="lead">
           Were you looking for features for{' '}
           <Link to={`/${HR_AND_COMPENSATION}/`}> {HR_AND_COMPENSATION_TITLE}</Link>,{' '}
-          <Link to={`/${FINANCE}/`}>{FINANCE_TITLE}</Link>, or{' '}
-          <Link to={`/${LEGAL_ACCOUNTING}/`}>{LEGAL_ACCOUNTING_TITLE}</Link>, or{' '}
+          <Link to={`/${FINANCE_ACCOUNTING}/`}>{FINANCE_ACCOUNTING_TITLE}</Link>, or{' '}
+          <Link to={`/${LEGAL_OPERATIONS}/`}>{LEGAL_OPERATIONS_TITLE}</Link>, or{' '}
           <Link to={`/${VCS_BUSINESS_ANGELS}/`}>{VCS_BUSINESS_ANGELS_TITLE}</Link>? Maybe need some{' '}
           <a href={helpUrl} {...targetBlank}>
             help
