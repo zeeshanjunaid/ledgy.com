@@ -36,26 +36,7 @@ export const customLandingPageQuery = graphql`
       title
       description
       entries {
-        ... on ContentfulTopBanner {
-          id
-          __typename
-          mainHeader
-          description
-          firstButtonText
-          firstButtonUrl
-          secondButtonText
-          secondButtonUrl
-          type
-          image {
-            localFile {
-              childImageSharp {
-                fluid(maxWidth: 1200, quality: 100) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-        }
+        ...ContentfulTopBannerFragment
         ...LargeTestimonialFragment
         ...ContentWithChecklistFragment
         ...TitleWithGraphicFragment
