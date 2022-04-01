@@ -3,4 +3,4 @@ export { RequesterType } from './formTypes';
 export * from './handleDemoSubmit';
 export * from './subscription';
 
-export { submitToHubspot } from './hubspot';
+export { submitToHubspot, submitToHubspotNewsletter } from './hubspot';
