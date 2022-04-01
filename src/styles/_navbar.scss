@@ -54,6 +54,9 @@
   position: relative;
   display: flex;
   justify-content: center;
+  a {
+    color: unset;
+  }
 }
 
 .hover-list-child {

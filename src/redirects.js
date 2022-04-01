@@ -14,6 +14,7 @@ exports.redirects = [
   ['/pricing', pricing],
   ['/features', '/'],
   ['/g2', '/?utm_source=g2'],
+  ['/finance-legal-accounting', '/finance-accounting'],
 
   //external links
   ['/signup', signup],
