@@ -46,6 +46,7 @@ const getFunFacts = (employees: UntypedObject[]) => {
       return facts ? facts.split('\n') : [];
     })
     .flat()
+    .filter(Boolean)
     .map((v) => [v, 1]);
   return Object.fromEntries(funFacts);
 };
