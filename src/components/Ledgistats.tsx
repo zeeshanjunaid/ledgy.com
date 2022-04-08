@@ -16,7 +16,6 @@ const isAllLowerCase = (word: string): boolean => word.toLowerCase() === word;
 const capitalize = (item: string): string => {
   if (!isAllLowerCase(item)) return item;
 
-
   return item
     .split(' ')
     .map((v) => `${v[0].toUpperCase()}${v.slice(1)}`)
