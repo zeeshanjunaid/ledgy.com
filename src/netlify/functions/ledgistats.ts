@@ -60,7 +60,6 @@ const handler: Handler = async (event) => {
 
   const { employees } = data;
   const aggregateField = getAggregateField(employees);
-  console.log(getFunFacts(employees));
 
   const nationalities = aggregateField((v) => v.personal.nationality);
   const hobbies = aggregateField((v) => v.about.hobbies);
