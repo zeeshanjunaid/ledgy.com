@@ -3,8 +3,11 @@ import ReactWordcloud, { Word } from 'react-wordcloud';
 import { t } from '@lingui/macro';
 
 import { Section, ButtonGroup } from './utils';
+import { shuffleArray } from '../helpers';
 
 import ledgistats from '../helpers/ledgistats.json';
+
+const VISIBLE_ENTRIES = 50;
 
 type Ledgistats = typeof ledgistats;
 
@@ -19,15 +22,18 @@ const capitalize = (item: string): string => {
     .join(' ');
 };
 
-const getItems = (ledgistas: Ledgistats, trait: keyof Ledgistats): Word[] => {
-  const items = ledgistats[trait];
+const getItems = (ledgistas: Ledgistats, trait: string): Word[] => {
+  const key = trait.toLowerCase().replace(/ /, '') as keyof Ledgistats;
+  const items = ledgistats[key];
   const list = Object.entries(items).map(([item, value]) => ({ text: capitalize(item), value }));
   const total = {
     text: `${list.length} ${trait}`,
-    value: Math.max(...Object.values(items)),
+    value: Math.max(...Object.values(items)) * 2,
   };
 
-  return [...list, total];
+  const randomList = shuffleArray(list).slice(0, VISIBLE_ENTRIES);
+
+  return [...randomList, total];
 };
 
 const TRAITS = {
@@ -36,6 +42,7 @@ const TRAITS = {
   Nationalities: t`Where the Ledgistas come from 🌍`,
   Backgrounds: t`What our team members learned before Ledgy 👩🏾‍🔬`,
   Superpowers: t`Our hidden magic abilities 🧙‍♀️`,
+  'Fun Facts': t`The unique elements of our team 🦥`,
 };
 
 const COLORS = [
@@ -60,7 +67,7 @@ const COLORS = [
 export const Ledgistats = () => {
   const allTraits = Object.keys(TRAITS);
   const [trait, setTrait] = useState(allTraits[0]);
-  const items = getItems(ledgistats, trait.toLowerCase() as keyof Ledgistats);
+  const items = getItems(ledgistats, trait);
 
   const minFontSize = typeof window !== 'undefined' && window.innerWidth > 992 ? 15 : 10;
 
@@ -70,7 +77,6 @@ export const Ledgistats = () => {
       <div className="my-0">
         <ReactWordcloud
           words={items}
-          maxWords={items.length}
           minSize={[400, 500]}
           options={{
             fontFamily: 'Museo Sans Rounded',

@@ -39,6 +39,18 @@ const getAggregateField =
     return words;
   };
 
+const getFunFacts = (employees: UntypedObject[]) => {
+  const funFacts = employees
+    .map((v) => {
+      const facts = v.about.custom.field_1649271427667;
+      return facts ? facts.split('\n') : [];
+    })
+    .flat()
+    .filter(Boolean)
+    .map((v) => [v, 1]);
+  return Object.fromEntries(funFacts);
+};
+
 const handler: Handler = async (event) => {
   if (event.headers.authorization !== ledgistatsToken)
     return { statusCode: 401, body: 'not-authorized' };
@@ -54,10 +66,11 @@ const handler: Handler = async (event) => {
   const superpowers = aggregateField((v) => v.about.superpowers);
   const languages = aggregateField((v) => v.personal.custom.field_1640782705253);
   const backgrounds = aggregateField((v) => v.about.custom.field_1640792007488);
+  const funfacts = getFunFacts(employees);
 
   return {
     statusCode: 200,
-    body: JSON.stringify({ nationalities, hobbies, superpowers, languages, backgrounds }),
+    body: JSON.stringify({ nationalities, hobbies, superpowers, languages, backgrounds, funfacts }),
   };
 };
 
