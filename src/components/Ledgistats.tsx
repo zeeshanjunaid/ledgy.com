@@ -31,7 +31,7 @@ const getItems = (ledgistas: Ledgistats, trait: string): Word[] => {
     value: Math.max(...Object.values(items)) * 2,
   };
 
-  const randomList = shuffleArray(list.slice(0, VISIBLE_ENTRIES));
+  const randomList = shuffleArray(list).slice(0, VISIBLE_ENTRIES);
 
   return [...randomList, total];
 };
