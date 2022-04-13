@@ -9,7 +9,7 @@ if [ ! -e .cache  ]; then
   DEPRECATE_TRANSLATIONS_ON_CLEAN_BUILD="tag-absent=${DEPRECATED_TAG}"
 fi
 
-curl -H "Authorization:${LEDGISTATS_API_TOKEN}" ${DEPLOY_PRIME_URL}/.netlify/functions/ledgistats > src/helpers/ledgistats.json
+ledgistats=$(curl --fail --header "Authorization:${LEDGISTATS_API_TOKEN}" ${DEPLOY_PRIME_URL}/.netlify/functions/ledgistats) && echo "${ledgistats}" > src/helpers/ledgistats.json
 
 ./getTranslations.sh
 
