@@ -37,10 +37,10 @@ const getItems = (ledgistas: Ledgistats, trait: string): Word[] => {
 };
 
 const TRAITS = {
-  Hobbies: t`What the Ledgistas do in their free time 🤓`,
   Languages: t`Discover all native languages at Ledgy 🐟`,
   Nationalities: t`Where the Ledgistas come from 🌍`,
   Backgrounds: t`What our team members learned before Ledgy 👩🏾‍🔬`,
+  Hobbies: t`What the Ledgistas do in their free time 🤓`,
   Superpowers: t`Our hidden magic abilities 🧙‍♀️`,
   'Fun Facts': t`The unique elements of our team 🦥`,
 };
