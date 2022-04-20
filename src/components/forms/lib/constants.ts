@@ -16,14 +16,11 @@ export const smallCompanyUrl = '/company-demo';
 export const investorUrl = '/investor-demo';
 export const meetingRequestUrl = 'https://meetings.hubspot.com/ledgy/salesteam';
 
-export const meetingRequestUrlDACH = 'https://meetings.hubspot.com/ledgy/dach-salesteam?embed=true';
-export const meetingRequestUrlUKIE = 'https://meetings.hubspot.com/ledgy/uki-salesteam?embed=true';
-export const meetingRequestUrlNordics =
-  'https://meetings.hubspot.com/ledgy/nordbalt-salesteam?embed=true';
-export const meetingRequestUrlRestOfEurope =
-  'https://meetings.hubspot.com/ledgy/roe-salesteam?embed=true';
-export const meetingRequestUrlRestOfWorld =
-  'https://meetings.hubspot.com/ledgy/row-salesteam?embed=true';
+export const meetingRequestUrlDACH = 'https://meetings.hubspot.com/ledgy/dach-salesteam';
+export const meetingRequestUrlUKIE = 'https://meetings.hubspot.com/ledgy/uki-salesteam';
+export const meetingRequestUrlNordics = 'https://meetings.hubspot.com/ledgy/nordbalt-salesteam';
+export const meetingRequestUrlRestOfEurope = 'https://meetings.hubspot.com/ledgy/roe-salesteam';
+export const meetingRequestUrlRestOfWorld = 'https://meetings.hubspot.com/ledgy/row-salesteam';
 
 export const FORM_STATUSES = Object.freeze({
   IDLE: 'idle',
