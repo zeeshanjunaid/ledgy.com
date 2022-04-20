@@ -86,7 +86,7 @@ export const handleDemoSubmit = async ({
 }): Promise<void> => {
   event.preventDefault();
   setFormStatus(LOADING);
-  const { requesterType, email, size: sizeString } = values;
+  const { requesterType, email, size: sizeString, partner } = values;
   const size = Number(sizeString);
   if (isFieldMissing({ requesterType, sizeString })) {
     setFormStatus(INVALID_FIELDS);
@@ -105,7 +105,14 @@ export const handleDemoSubmit = async ({
   const isCompany = requesterType === COMPANY;
 
   const value = getPipelineValue(size, isCompany);
-  const parsedFormValues = { isCompany, email, size, value, lead_form_source: DEMO_REQUEST };
+  const parsedFormValues = {
+    isCompany,
+    email,
+    size,
+    value,
+    lead_form_source: DEMO_REQUEST,
+    partner,
+  };
 
   try {
     await submitToHubspot(parsedFormValues);
