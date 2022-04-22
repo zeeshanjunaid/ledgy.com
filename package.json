@@ -8,7 +8,7 @@
   "main": "n/a",
   "scripts": {
     "compile": "lingui compile",
-    "build": "./build.sh",
+    "build": "zip -s0 public.zip --out all.zip && unzip -x all.zip",
     "serve": "npm run build && gatsby serve",
     "start": "./start.sh",
     "test": "eslint . --ext jsx,js && tsc",
