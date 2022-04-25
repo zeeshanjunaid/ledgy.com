@@ -64,7 +64,7 @@ export const submitToHubspot = async ({
     google_analytics_client_id: getGoogleAnalyticsClientId(),
     google_ads_click_id: getGoogleAdsClickId(),
     lead_form_source,
-    ...(partner && partner != ''
+    ...(partner && partner !== ''
       ? { referred_from: partner.toLowerCase(), source: 'Partnerships' }
       : {}),
   });
