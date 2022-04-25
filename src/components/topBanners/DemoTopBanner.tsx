@@ -4,6 +4,11 @@ import { TopBannerLayout } from '../TopBannerLayout';
 
 import { DemoForm } from '../forms';
 import { CapterraBadge, G2Badge, SourceforgeBadge } from '../../layouts/demo';
+import { isBrowser } from '../../helpers';
+
+const getSlug = () => {
+  return isBrowser ? window.location.pathname : '';
+};
 
 export const DemoTopBanner = ({
   title,
@@ -12,8 +17,9 @@ export const DemoTopBanner = ({
   title: JSX.Element;
   subtitle: JSX.Element;
 }) => {
+  const slug = getSlug();
   const form = (
-    <DemoForm buttonText={'Show me a demo'} contentfulRequesterType={undefined} slug={'slug'} />
+    <DemoForm buttonText={'Show me a demo'} contentfulRequesterType={undefined} slug={slug} />
   );
 
   return (

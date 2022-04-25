@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import { t } from '@lingui/macro';
 
 import { Button } from '../utils';
-import { Input, InvalidFieldHints } from './Fields';
-import { handleDemoSubmit, RequesterType, COMPANY, INVESTOR, FORM_STATUSES } from './lib';
+import { Input, InvalidFieldHints, InputWithOptions } from './Fields';
+import { handleDemoSubmit, RequesterType, COMPANY, INVESTOR, FORM_STATUSES, PARTNERS } from './lib';
 
 const { IDLE, FETCH_ERROR } = FORM_STATUSES;
 
 const REQUESTER_TYPES = [COMPANY, INVESTOR];
+const PARTNERSHIP = 'partnership';
 
 export const DemoForm = ({
   buttonText,
@@ -21,9 +22,12 @@ export const DemoForm = ({
   const [requesterType, setRequesterType] = useState(contentfulRequesterType || COMPANY);
   const [email, setEmail] = useState('');
   const [size, setSize] = useState('');
+  const [partner, setPartner] = useState('');
+
   const [formStatus, setFormStatus] = useState(IDLE);
+  const isPartnershipPage = slug.includes(PARTNERSHIP);
   const inputClassName = 'height-42px bg-transparent text-dark border border-light-energetic-blue';
-  const values = { requesterType, email, size };
+  const values = { requesterType, email, size, partner };
   const isButtonDisabled = formStatus !== IDLE && formStatus !== FETCH_ERROR;
 
   return (
@@ -77,6 +81,18 @@ export const DemoForm = ({
           className={inputClassName}
           type="number"
         />
+        {isPartnershipPage && (
+          <InputWithOptions
+            state={partner}
+            listOfOptions={PARTNERS}
+            placeholder={'Select the partner'}
+            setState={setPartner}
+            setFormStatus={setFormStatus}
+            name="referrer"
+            wrapperClassName="mb-4"
+            className={inputClassName}
+          />
+        )}
         <Button
           disabled={isButtonDisabled}
           type="submit"

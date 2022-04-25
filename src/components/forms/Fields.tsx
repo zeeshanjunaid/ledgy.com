@@ -58,3 +58,47 @@ export const InvalidFieldHints = ({
     </small>
   );
 };
+
+export const InputWithOptions = ({
+  state,
+  setState,
+  setFormStatus,
+  name,
+  placeholder,
+  wrapperClassName,
+  listOfOptions,
+  className = '',
+  ...props
+}: {
+  state: string;
+  setState: (state: string) => void;
+  setFormStatus: (status: FormStatus) => void;
+  name: string;
+  placeholder: string;
+  wrapperClassName: string;
+  listOfOptions: string[];
+  className?: string;
+}) => (
+  <div className={`input-group ${wrapperClassName}`}>
+    <input
+      type="text"
+      list="list"
+      placeholder={placeholder}
+      required
+      {...props}
+      className={`form-control ${className}`}
+      onChange={(e) => {
+        setState(e.target.value);
+        setFormStatus(FORM_STATUSES.IDLE as FormStatus);
+      }}
+      value={state}
+      name={name}
+    />
+
+    <datalist id="list">
+      {listOfOptions.map((option, ind) => (
+        <option key={`option ${ind}`} value={option} />
+      ))}
+    </datalist>
+  </div>
+);

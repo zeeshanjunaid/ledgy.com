@@ -6,6 +6,7 @@ export type FormValues = {
   requesterType: RequesterType;
   email: string;
   size: string;
+  partner?: string;
 };
 
 export type ParsedFormValues = {
@@ -14,4 +15,5 @@ export type ParsedFormValues = {
   size: number;
   value: number;
   lead_form_source: LeadFormType;
+  partner?: string;
 };

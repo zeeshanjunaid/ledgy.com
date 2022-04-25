@@ -27,6 +27,8 @@ type EncodeBodyData = {
   numberofemployees?: number;
   numberofinvestments?: number;
   lead_form_source: LeadFormType;
+  referred_from?: string;
+  source?: string;
 };
 
 type NewsLetterBodyData = {
@@ -53,6 +55,7 @@ export const submitToHubspot = async ({
   size,
   value,
   lead_form_source,
+  partner,
 }: ParsedFormValues) => {
   const body = encodeBody({
     ...(isCompany ? { numberofemployees: size } : { numberofinvestments: size }),
@@ -61,6 +64,9 @@ export const submitToHubspot = async ({
     google_analytics_client_id: getGoogleAnalyticsClientId(),
     google_ads_click_id: getGoogleAdsClickId(),
     lead_form_source,
+    ...(partner && partner !== ''
+      ? { referred_from: partner.toLowerCase(), source: 'Partnerships' }
+      : {}),
   });
   const response = await fetch(`/submit/6881367/${DEMO_FORM_ID}`, {
     method: 'POST',
