@@ -1,3 +1,5 @@
+import { isBrowser } from './constants';
+
 export const track = (event: string, properties?: UnknownObject): void => {
   if (window.analytics) window.analytics.track(event, properties);
 };
@@ -44,3 +46,8 @@ export const loadScript = (src: string): Promise<void> =>
     script.onload = () => resolve();
     return (document.body && document.body.appendChild(script)) || reject();
   });
+
+export const isMobile = () => {
+  if (isBrowser) return window.innerWidth <= 768;
+  return false;
+};
