@@ -12,6 +12,7 @@ declare type EntryProps =
   | LongTextComponentProps
   | StaticBlockProps
   | TestimonialsProps
+  | CompetitorTableProps
   | LargeTestimonialProps;
 
 declare type ContentfulPageProps = Id & {
@@ -243,4 +244,23 @@ declare type TopUpdateBanner = {
     linkTo: string;
     visible: boolean;
   };
+};
+
+declare type CompetitorTableRowProps = {
+  text: string;
+  ledgyStatus: boolean;
+  competitorStatus: boolean;
+  isComingSoonOnLedgy: boolean | null;
+};
+
+declare type CompetitorTableSectionProps = {
+  title: string;
+  rows: CompetitorTableRowProps[];
+};
+
+declare type CompetitorTableProps = Id & {
+  __typename: 'ContentfulCompetitorTable';
+  header: string;
+  competitorName: string;
+  tableSection: CompetitorTableSectionProps[];
 };

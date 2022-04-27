@@ -246,6 +246,29 @@ export const CallToAction2021Fragment = graphql`
   }
 `;
 
+export const CompetitorTableFragment = graphql`
+  fragment CompetitorTableFragment on ContentfulCompetitorTable {
+    id
+    header
+    competitorName
+    __typename
+    tableSection {
+      id
+      __typename
+      name
+      title
+      rows {
+        id
+        __typename
+        text
+        ledgyStatus
+        competitorStatus
+        isComingSoonOnLedgy
+      }
+    }
+  }
+`;
+
 export const ChecklistWithScreenshotFragment = graphql`
   fragment ChecklistWithScreenshotFragment on ContentfulChecklistWithScreenshot {
     id
@@ -352,6 +375,7 @@ export const indexPageQuery = graphql`
             ...LogoBannerFragment
             ...SelectableCardsWithScreenshotsFragment
             ...CallToAction2021Fragment
+            ...CompetitorTableFragment
             ...ChecklistWithScreenshotFragment
             ...LargeTestimonialFragment
           }
