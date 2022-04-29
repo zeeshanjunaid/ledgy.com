@@ -8,7 +8,12 @@ import { handleDemoSubmit, RequesterType, COMPANY, INVESTOR, FORM_STATUSES, PART
 const { IDLE, FETCH_ERROR } = FORM_STATUSES;
 
 const REQUESTER_TYPES = [COMPANY, INVESTOR];
-const PARTNERSHIP = 'partnership';
+const PARTNER = 'partner';
+
+const getReferrer = (slug: string) => {
+  const slugChunks = slug.split('/');
+  return slugChunks[slugChunks.length - 1];
+};
 
 export const DemoForm = ({
   buttonText,
@@ -22,10 +27,14 @@ export const DemoForm = ({
   const [requesterType, setRequesterType] = useState(contentfulRequesterType || COMPANY);
   const [email, setEmail] = useState('');
   const [size, setSize] = useState('');
-  const [partner, setPartner] = useState('');
+
+  const isPartnershipPage = slug.includes(PARTNER);
+  const referrer = isPartnershipPage ? getReferrer(slug) : '';
+
+  const [partner, setPartner] = useState(referrer);
 
   const [formStatus, setFormStatus] = useState(IDLE);
-  const isPartnershipPage = slug.includes(PARTNERSHIP);
+
   const inputClassName = 'height-42px bg-transparent text-dark border border-light-energetic-blue';
   const values = { requesterType, email, size, partner };
   const isButtonDisabled = formStatus !== IDLE && formStatus !== FETCH_ERROR;
@@ -84,7 +93,7 @@ export const DemoForm = ({
         {isPartnershipPage && (
           <InputWithOptions
             state={partner}
-            listOfOptions={PARTNERS}
+            listOfOptions={PARTNERS.sort()}
             placeholder={'Select the partner'}
             setState={setPartner}
             setFormStatus={setFormStatus}

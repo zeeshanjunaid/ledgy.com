@@ -41,6 +41,7 @@ export const PARTNERS = [
   'ETH Entrepreneur Club',
   'Eurazeo',
   'Spicehaus',
+  'Speedinvest',
   'EquityPitcher',
   '10x Founders',
   '20VC',
