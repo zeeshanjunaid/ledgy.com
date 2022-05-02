@@ -10,26 +10,26 @@ const { IDLE, FETCH_ERROR } = FORM_STATUSES;
 const REQUESTER_TYPES = [COMPANY, INVESTOR];
 const PARTNER = 'partner';
 
-const getReferrer = (slug: string) => {
-  const slugChunks = slug.split('/');
-  return slugChunks[slugChunks.length - 1];
+const getReferrer = (pathname: string) => {
+  const slugs = pathname.split('/');
+  return slugs[slugs.length - 1];
 };
 
 export const DemoForm = ({
   buttonText,
   contentfulRequesterType,
-  slug,
+  pathname,
 }: {
   buttonText: string;
   contentfulRequesterType: RequesterType | void;
-  slug: string;
+  pathname: string;
 }) => {
   const [requesterType, setRequesterType] = useState(contentfulRequesterType || COMPANY);
   const [email, setEmail] = useState('');
   const [size, setSize] = useState('');
 
-  const isPartnershipPage = slug.includes(PARTNER);
-  const referrer = isPartnershipPage ? getReferrer(slug) : '';
+  const isPartnershipPage = pathname.includes(PARTNER);
+  const referrer = isPartnershipPage ? getReferrer(pathname) : '';
 
   const [partner, setPartner] = useState(referrer);
 
@@ -43,7 +43,7 @@ export const DemoForm = ({
     <div className="card-border-style bg-white mx-md-7 mx-xl-6">
       <form
         method="post"
-        onSubmit={(event) => handleDemoSubmit({ values, event, slug, setFormStatus })}
+        onSubmit={(event) => handleDemoSubmit({ values, event, pathname, setFormStatus })}
         noValidate
         className="w-100 p-2 px-md-4 py-md-4 p-lg-6 d-flex flex-column align-items-center justify-content-between"
       >
@@ -93,7 +93,7 @@ export const DemoForm = ({
         {isPartnershipPage && (
           <InputWithOptions
             state={partner}
-            listOfOptions={PARTNERS.sort()}
+            listOfOptions={PARTNERS}
             placeholder={'Select the partner'}
             setState={setPartner}
             setFormStatus={setFormStatus}

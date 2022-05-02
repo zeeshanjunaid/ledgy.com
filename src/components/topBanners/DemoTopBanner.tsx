@@ -6,7 +6,7 @@ import { DemoForm } from '../forms';
 import { CapterraBadge, G2Badge, SourceforgeBadge } from '../../layouts/demo';
 import { isBrowser } from '../../helpers';
 
-const getSlug = () => {
+const getPathName = () => {
   return isBrowser ? window.location.pathname : '';
 };
 
@@ -17,9 +17,13 @@ export const DemoTopBanner = ({
   title: JSX.Element;
   subtitle: JSX.Element;
 }) => {
-  const slug = getSlug();
+  const pathname = getPathName();
   const form = (
-    <DemoForm buttonText={'Show me a demo'} contentfulRequesterType={undefined} slug={slug} />
+    <DemoForm
+      buttonText={'Show me a demo'}
+      contentfulRequesterType={undefined}
+      pathname={pathname}
+    />
   );
 
   return (

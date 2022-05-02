@@ -65,4 +65,4 @@ export const PARTNERS = [
   'Figures',
   'Semper',
   'Pave',
-];
+].sort();
