@@ -5,9 +5,9 @@ export const AddressAndVat = () => (
   <>
     <h6>Ledgy AG</h6>
     <p>
-      Fraumünsterstrasse 16
+      Förrlibuckstrasse 190
       <br />
-      8001 Zürich
+      8005 Zürich
       <br />
       <DynamicTrans>Switzerland</DynamicTrans>
     </p>
