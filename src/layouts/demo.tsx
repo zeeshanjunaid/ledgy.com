@@ -61,7 +61,7 @@ const DemoPage = (props: Props) => {
     description,
     formButtonText,
     requesterType,
-    slug,
+    slug: pathname,
   }: DemoPageProps = data.contentfulDemoPage2021;
 
   const buttonOne = <CapterraBadge />;
@@ -72,7 +72,7 @@ const DemoPage = (props: Props) => {
     <DemoForm
       buttonText={dynamicI18n(formButtonText)}
       contentfulRequesterType={requesterType}
-      slug={slug}
+      pathname={pathname}
     />
   );
 

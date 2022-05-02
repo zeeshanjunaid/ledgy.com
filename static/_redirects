@@ -10,3 +10,4 @@ https://ledgy.netlify.com/* https://ledgy.com/:splat 301!
 /track/* https://api.mixpanel.com/:splat 200
 /signup/* /demo/:splat 301
 /career/ /jobs/ 301
+/partner/* /partnership/ 200

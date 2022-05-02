@@ -8,24 +8,33 @@ import { handleDemoSubmit, RequesterType, COMPANY, INVESTOR, FORM_STATUSES, PART
 const { IDLE, FETCH_ERROR } = FORM_STATUSES;
 
 const REQUESTER_TYPES = [COMPANY, INVESTOR];
-const PARTNERSHIP = 'partnership';
+const PARTNER = 'partner';
+
+const getReferrer = (pathname: string) => {
+  const slugs = pathname.split('/');
+  return slugs[slugs.length - 1];
+};
 
 export const DemoForm = ({
   buttonText,
   contentfulRequesterType,
-  slug,
+  pathname,
 }: {
   buttonText: string;
   contentfulRequesterType: RequesterType | void;
-  slug: string;
+  pathname: string;
 }) => {
   const [requesterType, setRequesterType] = useState(contentfulRequesterType || COMPANY);
   const [email, setEmail] = useState('');
   const [size, setSize] = useState('');
-  const [partner, setPartner] = useState('');
+
+  const isPartnershipPage = pathname.includes(PARTNER);
+  const referrer = isPartnershipPage ? getReferrer(pathname) : '';
+
+  const [partner, setPartner] = useState(referrer);
 
   const [formStatus, setFormStatus] = useState(IDLE);
-  const isPartnershipPage = slug.includes(PARTNERSHIP);
+
   const inputClassName = 'height-42px bg-transparent text-dark border border-light-energetic-blue';
   const values = { requesterType, email, size, partner };
   const isButtonDisabled = formStatus !== IDLE && formStatus !== FETCH_ERROR;
@@ -34,7 +43,7 @@ export const DemoForm = ({
     <div className="card-border-style bg-white mx-md-7 mx-xl-6">
       <form
         method="post"
-        onSubmit={(event) => handleDemoSubmit({ values, event, slug, setFormStatus })}
+        onSubmit={(event) => handleDemoSubmit({ values, event, pathname, setFormStatus })}
         noValidate
         className="w-100 p-2 px-md-4 py-md-4 p-lg-6 d-flex flex-column align-items-center justify-content-between"
       >

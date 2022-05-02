@@ -76,12 +76,12 @@ const redirect = async (values: ParsedFormValues) => {
 export const handleDemoSubmit = async ({
   values,
   event,
-  slug,
+  pathname,
   setFormStatus,
 }: {
   values: FormValues;
   event: React.FormEvent<HTMLFormElement>;
-  slug: string;
+  pathname: string;
   setFormStatus: (arg0: string) => void;
 }): Promise<void> => {
   event.preventDefault();
@@ -134,7 +134,7 @@ export const handleDemoSubmit = async ({
     track('TagManagerSmallCompany');
   }
 
-  track(eventName, { value, slug, size, email });
+  track(eventName, { value, pathname, size, email });
   track('captureLead');
 
   await redirect(parsedFormValues);
