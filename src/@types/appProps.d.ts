@@ -1,9 +1,11 @@
 declare type Language = 'en' | 'de' | 'fr';
+declare type Region = 'global' | 'uk';
 
 declare type Prefix = { prefix: string };
 
 declare type Props = Prefix & {
   lang: Language;
+  region: Region;
   data: UntypedObject;
 };
 

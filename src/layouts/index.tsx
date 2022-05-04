@@ -1,4 +1,4 @@
-import React, { ReactElement, useMemo } from 'react';
+import React, { ReactElement, useEffect, useMemo, useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { i18n } from '@lingui/core';
 import { I18nProvider } from '@lingui/react';
@@ -8,7 +8,13 @@ import 'katex/dist/katex.min.css';
 import 'prism-themes/themes/prism-ghcolors.css';
 import '../styles/_index.scss';
 
-import { dynamicI18n, loadLocales, saveGoogleAdsClickId } from '../helpers';
+import {
+  dynamicI18n,
+  getCookie,
+  loadLocales,
+  saveGoogleAdsClickId,
+  setDomainCookie,
+} from '../helpers';
 import { langFromPath, langPrefix, deprefix } from '../i18n-config';
 import {
   HelmetIndexLayout,
@@ -47,7 +53,7 @@ const metaDataQuery = graphql`
 
 const App = ({ children, ...props }: AppProps) => {
   const data = useStaticQuery(metaDataQuery);
-  const { lang, location } = props;
+  const { lang, location, region } = props;
   const { site, allContentfulSiteMetadata } = data;
   const { siteUrl, segmentDestinations } = site.siteMetadata;
   const thumbnailUrl = `${siteUrl}/thumbnail-874d5c.png`;
@@ -78,7 +84,7 @@ const App = ({ children, ...props }: AppProps) => {
             <CookieBanner segmentDestinations={segmentDestinations} />
             <PopUpCard pathname={pathname} />
           </div>
-          {React.cloneElement(children, { prefix, lang })}
+          {React.cloneElement(children, { prefix, lang, region })}
           {!isLandingPage && !isDemoPage && <Footer {...props} prefix={prefix} />}
         </>
       )}
@@ -88,12 +94,25 @@ const App = ({ children, ...props }: AppProps) => {
 
 const Main = (props: AppProps) => {
   const lang = langFromPath(props.location.pathname);
+
+  const [region, setRegion] = useState((getCookie('region') || 'global') as Region);
+  const updateRegion = async () => {
+    const { region: newRegion } = await (await fetch('/region.json')).json();
+    if (!newRegion) return;
+
+    setDomainCookie('region', newRegion);
+    setRegion(newRegion);
+  };
+  useEffect(() => {
+    updateRegion();
+  });
+
   useMemo(loadLocales, []);
   useMemo(() => i18n.activate(lang), [lang]);
   useMemo(saveGoogleAdsClickId, []);
   return (
     <I18nProvider i18n={i18n}>
-      <App {...props} lang={lang} />
+      <App {...props} lang={lang} region={region} />
     </I18nProvider>
   );
 };
