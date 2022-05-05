@@ -14,7 +14,6 @@ export const CompetitorsTable = (table: CompetitorTableProps) => {
     <Section className="bg-white">
       <h2 className="text-center p-4 pb-8">{header}</h2>
       <div className={`d-flex flex-row competitor-table-row`}>
-        <div></div>
         <div className={`pb-4 ${COMPARISON_CELL_CSS}`}>
           <img className="navbar-logo" src={logo} width={logoWidth} />
         </div>
