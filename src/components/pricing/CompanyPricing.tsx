@@ -8,23 +8,27 @@ export const CompanyPricing = ({ prefix }: Prefix) => (
   <div className="container my-4 my-lg-6">
     <LedgyPricing
       launchPlanButton={
-        <Button outline inverted className="my-4" href={`${appUrl}/signup`}>
-          <DynamicTrans>Sign up</DynamicTrans>
+        <Button secondary className="my-4" href={`${appUrl}/signup`}>
+          <DynamicTrans>Sign Up</DynamicTrans>
         </Button>
       }
       growthPlanButton={
-        <Button outline inverted className="mt-4 mb-1" href={`${appUrl}/signup`}>
-          <DynamicTrans>Sign up</DynamicTrans>
+        <Button className="mt-4 mb-1" href={`${appUrl}/signup`}>
+          <DynamicTrans>Start Trial</DynamicTrans>
+        </Button>
+      }
+      scalePlanButton={
+        <Button className="mt-4 mb-1" href={`${appUrl}/signup`}>
+          <DynamicTrans>Contact Sales</DynamicTrans>
         </Button>
       }
       enterprisePlanButton={
-        <Button outline inverted className="mt-4 mb-1" href={`${appUrl}/signup`}>
-          <DynamicTrans>Sign up</DynamicTrans>
-        </Button>
+        <RequestDemoButton
+          prefix={prefix}
+          buttonText="Contact Sales"
+          buttonClassName="my-4 mb-1 w-100"
+        />
       }
-      freeTrialText="7-day free trial"
-      scalePlanButton={<RequestDemoButton prefix={prefix} buttonClassName="my-4 btn-red" />}
-      highlightScalePlan
       DynamicTrans={DynamicTrans}
     />
     <hr className="my-8" />

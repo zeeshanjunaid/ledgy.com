@@ -12,6 +12,7 @@ export const Button = ({
   cta = false,
   energetic = false,
   inverted = false,
+  secondary = false,
   className = '',
   onClick,
   href,
@@ -25,6 +26,7 @@ export const Button = ({
   cta?: boolean;
   energetic?: boolean;
   inverted?: boolean;
+  secondary?: boolean;
   className?: string;
   onClick?: () => void;
   href?: string;
@@ -35,6 +37,7 @@ export const Button = ({
   const color =
     (cta && 'btn-red') ||
     (energetic && 'btn-info text-white hover-brigthen') ||
+    (secondary && 'btn-secondary border border-gray-light-neutral') ||
     (inverted && outline && 'btn-white border border-primary') ||
     (outline && 'btn-primary border border-white') ||
     (inverted && 'btn-light') ||
