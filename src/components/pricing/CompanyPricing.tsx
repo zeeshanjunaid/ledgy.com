@@ -18,9 +18,11 @@ export const CompanyPricing = ({ prefix }: Prefix) => (
         </Button>
       }
       scalePlanButton={
-        <Button className="mt-4 mb-1" href={`${appUrl}/signup`}>
-          <DynamicTrans>Contact Sales</DynamicTrans>
-        </Button>
+        <RequestDemoButton
+          prefix={prefix}
+          buttonText="Contact Sales"
+          buttonClassName="my-4 mb-1 w-100"
+        />
       }
       enterprisePlanButton={
         <RequestDemoButton
