@@ -58,7 +58,9 @@ const App = ({ children, ...props }: AppProps) => {
   const pathname = deprefix(location.pathname);
   const isAppShell = pathname.includes('offline-plugin-app-shell-fallback');
   const isDemoPage = pathname.includes('demo');
-  const isLandingPage = pathname.includes('lp-');
+  const showInternalNavigation =
+    (!pathname.includes('lp-') && !pathname.includes('partner')) ||
+    pathname.includes('partnerships');
 
   return (
     <div>
@@ -68,7 +70,7 @@ const App = ({ children, ...props }: AppProps) => {
         thumbnailUrl={thumbnailUrl}
       />
       <HelmetIndexLayout lang={lang} siteUrl={siteUrl} pathname={pathname} keywords={keywords} />
-      <Nav {...props} prefix={prefix} isLandingPage={isLandingPage} />
+      <Nav {...props} prefix={prefix} showInternalNavigation={showInternalNavigation} />
       {isAppShell ? (
         <Loader />
       ) : (
@@ -79,7 +81,7 @@ const App = ({ children, ...props }: AppProps) => {
             <PopUpCard pathname={pathname} />
           </div>
           {React.cloneElement(children, { prefix, lang })}
-          {!isLandingPage && !isDemoPage && <Footer {...props} prefix={prefix} />}
+          {showInternalNavigation && !isDemoPage && <Footer {...props} prefix={prefix} />}
         </>
       )}
     </div>
