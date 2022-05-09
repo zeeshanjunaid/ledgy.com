@@ -95,7 +95,7 @@ const App = ({ children, ...props }: AppProps) => {
 const Main = (props: AppProps) => {
   const lang = langFromPath(props.location.pathname);
 
-  const [region, setRegion] = useState((getCookie('region') || 'global') as Region);
+  const [region, setRegion] = useState((getCookie('region') || null) as Region);
   const updateRegion = async () => {
     const { region: newRegion } = await (await fetch('/region.json')).json();
     if (!newRegion) return;
@@ -110,6 +110,7 @@ const Main = (props: AppProps) => {
   useMemo(loadLocales, []);
   useMemo(() => i18n.activate(lang), [lang]);
   useMemo(saveGoogleAdsClickId, []);
+
   return (
     <I18nProvider i18n={i18n}>
       <App {...props} lang={lang} region={region} />

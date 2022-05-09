@@ -1,5 +1,5 @@
 declare type Language = 'en' | 'de' | 'fr';
-declare type Region = 'global' | 'uk';
+declare type Region = 'global' | 'uk' | null;
 
 declare type Prefix = { prefix: string };
 
