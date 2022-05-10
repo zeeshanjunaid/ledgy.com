@@ -3,8 +3,15 @@ import { t } from '@lingui/macro';
 
 import { Button } from '../utils';
 import { Input, InvalidFieldHints, InputWithOptions } from './Fields';
-import { handleDemoSubmit, RequesterType, COMPANY, INVESTOR, FORM_STATUSES } from './lib';
-import { graphql, useStaticQuery } from 'gatsby';
+import {
+  handleDemoSubmit,
+  RequesterType,
+  COMPANY,
+  INVESTOR,
+  FORM_STATUSES,
+  getPartners,
+} from './lib';
+
 const { IDLE, FETCH_ERROR } = FORM_STATUSES;
 
 const REQUESTER_TYPES = [COMPANY, INVESTOR];
@@ -14,14 +21,6 @@ const getReferrer = (pathname: string) => {
   const slugs = pathname.split('/');
   return slugs[slugs.length - 1];
 };
-
-const partnersQuery = graphql`
-  query {
-    contentfulSimpleList(title: { eq: "partnership" }) {
-      list
-    }
-  }
-`;
 
 export const DemoForm = ({
   buttonText,
@@ -36,8 +35,7 @@ export const DemoForm = ({
   const [email, setEmail] = useState('');
   const [size, setSize] = useState('');
 
-  const result = useStaticQuery(partnersQuery);
-  const partners: string[] = result.contentfulSimpleList.list.sort();
+  const partners: string[] = getPartners();
   const isPartnershipPage = pathname.includes(PARTNER);
   const referrer = isPartnershipPage ? getReferrer(pathname) : '';
 
