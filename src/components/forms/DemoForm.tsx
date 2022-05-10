@@ -35,7 +35,7 @@ export const DemoForm = ({
   const [email, setEmail] = useState('');
   const [size, setSize] = useState('');
 
-  const partners: string[] = getPartners();
+  const partners = getPartners();
   const isPartnershipPage = pathname.includes(PARTNER);
   const referrer = isPartnershipPage ? getReferrer(pathname) : '';
 
