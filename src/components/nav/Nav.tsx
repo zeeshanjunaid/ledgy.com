@@ -35,7 +35,7 @@ const toggleNav = (navRef: MutableRefObject<HTMLElement | null>) => {
   });
 };
 
-export const Nav = (props: LayoutProps & { isLandingPage?: boolean }) => {
+export const Nav = (props: LayoutProps & { showInternalNavigation?: boolean }) => {
   const [isOpen, setOpen] = useState(false);
   const navRef = useRef(null);
   useEffect(() => {
@@ -45,10 +45,10 @@ export const Nav = (props: LayoutProps & { isLandingPage?: boolean }) => {
   return (
     <>
       <nav ref={navRef} className="navbar bg-lightest text-dark-gray sticky-top p-0">
-        {!props.isLandingPage && <TopUpdateBanner prefix={props.prefix} />}
+        {props.showInternalNavigation && <TopUpdateBanner prefix={props.prefix} />}
         <div className="container flex-nowrap">
           <Logo {...props} />
-          {!props.isLandingPage && (
+          {props.showInternalNavigation && (
             <>
               <div className="desktop-navbar">
                 <DropdownFollowAlong {...props} />

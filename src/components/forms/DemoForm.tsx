@@ -3,7 +3,14 @@ import { t } from '@lingui/macro';
 
 import { Button } from '../utils';
 import { Input, InvalidFieldHints, InputWithOptions } from './Fields';
-import { handleDemoSubmit, RequesterType, COMPANY, INVESTOR, FORM_STATUSES, PARTNERS } from './lib';
+import {
+  handleDemoSubmit,
+  RequesterType,
+  COMPANY,
+  INVESTOR,
+  FORM_STATUSES,
+  getPartners,
+} from './lib';
 
 const { IDLE, FETCH_ERROR } = FORM_STATUSES;
 
@@ -28,6 +35,7 @@ export const DemoForm = ({
   const [email, setEmail] = useState('');
   const [size, setSize] = useState('');
 
+  const partners = getPartners();
   const isPartnershipPage = pathname.includes(PARTNER);
   const referrer = isPartnershipPage ? getReferrer(pathname) : '';
 
@@ -93,7 +101,7 @@ export const DemoForm = ({
         {isPartnershipPage && (
           <InputWithOptions
             state={partner}
-            listOfOptions={PARTNERS}
+            listOfOptions={partners}
             placeholder={'Select the partner'}
             setState={setPartner}
             setFormStatus={setFormStatus}
