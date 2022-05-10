@@ -46,8 +46,4 @@ export const loadScript = (src: string): Promise<void> =>
     script.onload = () => resolve();
     return (document.body && document.body.appendChild(script)) || reject();
   });
-
-export const isMobile = () => {
-  if (isBrowser) return window.innerWidth <= 768;
-  return false;
-};
+export const isMobile = isBrowser && window.innerWidth <= 768;
