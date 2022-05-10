@@ -29,7 +29,7 @@ export const CustomFade = ({
   };
   if (isBrowser) {
     const noAnimation = keyframes``;
-    const animation = isMobile() ? noAnimation : defaultAnimation;
+    const animation = isMobile ? noAnimation : defaultAnimation;
     return AnimatedJSXElement(animation);
   }
 

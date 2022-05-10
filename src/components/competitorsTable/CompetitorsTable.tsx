@@ -8,7 +8,7 @@ import { isMobile } from '../../helpers';
 
 export const CompetitorsTable = (table: CompetitorTableProps) => {
   const { header, tableSection: tableSections, competitorName } = table;
-  const logoWidth = isMobile() ? 90 : 141;
+  const logoWidth = isMobile ? 90 : 141;
 
   return (
     <Section className="bg-white">

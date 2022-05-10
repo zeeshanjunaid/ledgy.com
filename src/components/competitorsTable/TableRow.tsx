@@ -19,10 +19,10 @@ export const TableRow = ({ row }: { row: CompetitorTableRowProps }) => {
           <DynamicTrans>{text}</DynamicTrans>
         </p>
       </div>
-      <div className={COMPARISON_CELL_CSS}>
+      <div className="comparison-cell">
         {ledgyStatus ? <p className="check">&#10004;</p> : isComingSoon}
       </div>
-      <div className={COMPARISON_CELL_CSS}>
+      <div className="comparison-cell">
         {competitorStatus ? <p className="check">&#10004;</p> : <p className="cross">&#10006;</p>}
       </div>
     </div>

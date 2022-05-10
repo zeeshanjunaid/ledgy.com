@@ -632,9 +632,15 @@ $padding-lg: 3rem;
 .competitor-table-row {
   div h4 {
     margin: 0px;
+    @media screen and (max-width: 720px) {
+      font-size: 21px !important;
+    }
   }
   p {
     margin: 4px 0px;
+    @media screen and (max-width: 720px) {
+      font-size: small;
+    }
   }
   // box-shadow: 0 4px 2px -2px $gray-300;
   div:nth-of-type(1) {
@@ -648,10 +654,11 @@ $padding-lg: 3rem;
     font-size: 21px;
     color: #af1010;
   }
-}
-
-@media screen and (max-width: 720px) {
-  .competitor-table-row div h4 {
-    font-size: 21px !important;
+  .comparison-cell {
+    @extend .flex-1;
+    @extend .d-flex;
+    @extend .align-items-center;
+    @extend .justify-content-center;
+    @extend .text-center;
   }
 }
