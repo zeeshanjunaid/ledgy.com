@@ -1,4 +1,10 @@
-import { isFieldMissing, isValidEmail, track, setDomainCookie } from '../../../helpers';
+import {
+  isFieldMissing,
+  isValidEmail,
+  track,
+  setDomainCookie,
+  identifyOrAlias,
+} from '../../../helpers';
 
 import { FormValues, ParsedFormValues } from './formTypes';
 import { submitToHubspot } from './hubspot';
@@ -133,6 +139,7 @@ export const handleDemoSubmit = async ({
   } else {
     track('TagManagerSmallCompany');
   }
+  identifyOrAlias(email);
 
   track(eventName, { value, pathname, size, email });
   track('captureLead');
