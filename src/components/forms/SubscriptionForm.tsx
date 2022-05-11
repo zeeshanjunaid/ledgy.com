@@ -9,6 +9,7 @@ import { Button } from '../utils';
 import { trackOnMixpanel, FORM_STATUSES, submitToHubspotNewsletter } from './lib';
 import { InvalidFieldHints } from './Fields';
 import { NEWSLETTER } from './lib/constants';
+import { identifyOrAlias } from '../../helpers';
 
 const { FETCH_ERROR, IDLE, INVALID_EMAIL, LOADING } = FORM_STATUSES;
 
@@ -34,6 +35,7 @@ export class SubscriptionForm extends Component<
 
     try {
       const signupResponse = await submitToHubspotNewsletter(parsedFormValues);
+      identifyOrAlias(email);
       if (signupResponse.status === 200) {
         trackOnMixpanel(email, trackingEvent);
         this.setState({ email: '', status: IDLE });
