@@ -2,7 +2,7 @@ import React, { MouseEvent } from 'react';
 import { Link } from 'gatsby';
 
 import { formatUrl, NavbarMenuColumn } from '../lib';
-import { dynamicI18n } from '../../helpers';
+import { dynamicI18n, track } from '../../helpers';
 import { DynamicTrans } from '../utils';
 import { ListItem } from './ListItem';
 
@@ -65,15 +65,22 @@ export const DropdownItem = ({
                   dangerouslySetInnerHTML={{ __html: decorateHeader(formattedHeader) }}
                 />
               )}
-              {items.map((item) => (
-                <ListItem
-                  {...item}
-                  prefix={prefix}
-                  key={item.link}
-                  onClick={disappear}
-                  isTextShown={isTextShown}
-                />
-              ))}
+              {items.map((item) => {
+                const { link } = item;
+                const onClick = () => {
+                  track('menuLink', { link });
+                  disappear();
+                };
+                return (
+                  <ListItem
+                    {...item}
+                    prefix={prefix}
+                    key={link}
+                    onClick={onClick}
+                    isTextShown={isTextShown}
+                  />
+                );
+              })}
             </div>
           );
         })}
