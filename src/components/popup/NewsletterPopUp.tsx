@@ -34,6 +34,16 @@ export const NewsletterPopUp = ({ hide }: { hide: () => void }) => {
               <h5 className="m-2 text-gray-light text-center">
                 Thank you for your subscription 🎉
               </h5>
+              <p>
+                We might from time to time send you newsletters or other types of marketing
+                material.
+                <br />
+                You can at any time opt out of these communications by clicking{' '}
+                <a href="http://hs-6881367.s.hubspotemail.net/hs/manage-preferences/unsubscribe-simple?via_redirect=true">
+                  {' '}
+                  here
+                </a>
+              </p>
             </>
           )}
         </div>

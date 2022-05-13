@@ -16,7 +16,15 @@ const Subscribed = () => (
                 🚀
               </span>
             </p>
-            <p>You can cancel your subscription through any of our newsletter emails.</p>
+            <p>
+              We might from time to time send you newsletters or other types of marketing material.
+              <br />
+              You can at any time opt out of these communications by clicking{' '}
+              <a href="http://hs-6881367.s.hubspotemail.net/hs/manage-preferences/unsubscribe-simple?via_redirect=true">
+                {' '}
+                here
+              </a>
+            </p>
             <div className="d-flex flex-column flex-md-row mt-2">
               <Button outline inverted className="btn-xl mr-md-1 mb-3 mb-md-0" href={helpUrl}>
                 Continue exploring
