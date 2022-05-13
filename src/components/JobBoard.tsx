@@ -39,6 +39,8 @@ const byTitle = (a: GreenhouseJobProps, b: GreenhouseJobProps) =>
   a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1;
 
 const Department = ({ name, jobs: allJobs, prefix }: GreenhouseDepartmentProps & Prefix) => {
+  if (!allJobs) return null;
+
   const jobs = allJobs.filter((v) => v.location.name.includes(JOB_BOARD_LOCATION));
   if (!jobs.length) return null;
 
