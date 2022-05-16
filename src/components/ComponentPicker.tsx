@@ -13,6 +13,7 @@ import { LongTextComponent } from './LongTextComponent';
 import { StaticBlockPicker } from './StaticBlockPicker';
 import { Testimonials } from './Testimonials';
 import { LargeTestimonial } from './LargeTestimonial';
+import { CompetitorsTable } from './competitorsTable';
 
 export const ComponentPicker = ({
   entry,
@@ -60,6 +61,9 @@ export const ComponentPicker = ({
 
     case 'ContentfulLargeTestimonial':
       return <LargeTestimonial {...entry} prefix={prefix} />;
+
+    case 'ContentfulCompetitorTable':
+      return <CompetitorsTable {...entry} />;
 
     default:
       throw new Error('content __typename not recognized');

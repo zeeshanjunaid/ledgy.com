@@ -38,6 +38,7 @@ export const customLandingPageQuery = graphql`
       entries {
         ...ContentfulTopBannerFragment
         ...LargeTestimonialFragment
+        ...CompetitorTableFragment
         ...ContentWithChecklistFragment
         ...TitleWithGraphicFragment
         ...FeatureGridFragment
