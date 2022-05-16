@@ -1,11 +1,7 @@
 https://ledgy.netlify.com/* https://ledgy.com/:splat 301!
 /  /uk     200!  Country=gb
-/  /de     200!  Country=de,at,ch
-/  /fr     200!  Country=fr
 
 /*/company-pricing  /uk/company-pricing     200!  Country=gb
-/*/company-pricing  /de/company-pricing     200!  Country=de,at,ch
-/*/company-pricing  /fr/company-pricing     200!  Country=fr
 
 /verify-signature https://support.ledgy.com/how-to-verify-the-validity-of-a-signature
 
