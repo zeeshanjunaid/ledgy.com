@@ -20,9 +20,9 @@ const FooterCol = ({ order, children }: { order: number; children: ReactNode }) 
   <div className={`col-6 col-md-3 order-md-${order}`}>{children}</div>
 );
 
-const LanguageLink = ({ language, to }: { language: string; to: string }) => (
+const RegionLink = ({ region, to }: { region: string; to: string }) => (
   <Link className="d-flex justify-content-center text-primary" to={to}>
-    {language}
+    {region}
   </Link>
 );
 
@@ -78,24 +78,29 @@ export const Footer = ({ location, ...props }: LayoutProps) => {
                   <div className="py-lg-4">
                     <SubscriptionModal buttonClass="w-100" />
                     <Dropdown
-                      toggleText={<Trans>Language</Trans>}
+                      toggleText={<Trans>Region</Trans>}
                       toggleIcon={faGlobeEurope}
                       toggleClass="w-100"
                       toggleProps={{ outline: true }}
                       items={[
-                        <LanguageLink
-                          key="locale-en"
-                          language="English"
+                        <RegionLink
+                          key="region-global"
+                          region="Global"
                           to={deprefix(location.pathname)}
                         />,
-                        <LanguageLink
-                          key="locale-de"
-                          language="Deutsch"
+                        <RegionLink
+                          key="region-uk"
+                          region="UK"
+                          to={`/uk${deprefix(location.pathname)}`}
+                        />,
+                        <RegionLink
+                          key="region-de"
+                          region="DACH"
                           to={`/de${deprefix(location.pathname)}`}
                         />,
-                        <LanguageLink
-                          key="locale-fr"
-                          language="Français"
+                        <RegionLink
+                          key="region-fr"
+                          region="France"
                           to={`/fr${deprefix(location.pathname)}`}
                         />,
                       ]}

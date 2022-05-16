@@ -17,7 +17,6 @@ const CALCULATOR_SLUG = 'calculator';
 
 const ContentfulPage = ({
   data,
-  lang,
   prefix,
 }: Props & {
   data: {
@@ -28,8 +27,7 @@ const ContentfulPage = ({
 }) => {
   if (!data) return null;
 
-  const { slug, title, description, language, content, author, date, cover, entries } =
-    data.contentfulPage;
+  const { slug, title, description, content, author, date, cover, entries } = data.contentfulPage;
   const { siteUrl } = data.site.siteMetadata;
   const showCalculatorHeader = slug === CALCULATOR_SLUG;
   const { childImageSharp } = cover?.localFile || {};
@@ -49,13 +47,7 @@ const ContentfulPage = ({
       {showCalculatorHeader ? (
         <CalculatorHeader data={data} />
       ) : (
-        <PageHeader
-          lang={lang}
-          documentLang={language}
-          title={dynamicI18n(title)}
-          subtitle={dynamicI18n(description)}
-          textCenter
-        />
+        <PageHeader title={dynamicI18n(title)} subtitle={dynamicI18n(description)} textCenter />
       )}
       <div className="container container-small">
         <LongText content={content} prefix={prefix} />

@@ -6,7 +6,6 @@ import { Title, Hr } from '../layouts/utils';
 
 const CustomerStory = ({
   data,
-  lang,
   prefix,
 }: Props & {
   data: {
@@ -14,7 +13,7 @@ const CustomerStory = ({
     allContentfulCustomerStory: { edges: { node: AllContentfulCustomerStoryProps }[] };
   };
 }) => {
-  const { id, title, header, subtitle, language, content, company, isOurStory } =
+  const { id, title, header, subtitle, content, company, isOurStory } =
     data.contentfulCustomerStory;
   const otherUserStories = data.allContentfulCustomerStory.edges
     .filter(({ node }) => node.id !== id && !node.isOurStory)
@@ -23,7 +22,7 @@ const CustomerStory = ({
   return (
     <div>
       <Title title={title || header} description={subtitle} />
-      <PageHeader lang={lang} documentLang={language} title={header} subtitle={subtitle} />
+      <PageHeader title={header} subtitle={subtitle} />
       <main>
         <section className="section ">
           <div className="container container-medium">
