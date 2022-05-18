@@ -4,7 +4,7 @@ import { appUrl } from '../../helpers';
 import { DynamicTrans, Button } from '../utils';
 import { RequestDemoButton } from '../RequestDemoButton';
 
-export const CompanyPricing = ({ prefix }: Prefix) => (
+export const CompanyPricing = ({ prefix, region }: Prefix & Region) => (
   <div className="container my-4 my-lg-6">
     <LedgyPricing
       launchPlanButton={
@@ -31,6 +31,7 @@ export const CompanyPricing = ({ prefix }: Prefix) => (
           buttonClassName="my-2 w-100"
         />
       }
+      region={region === 'uk' ? 'uk' : 'global'}
       DynamicTrans={DynamicTrans}
     />
     <hr className="my-8" />

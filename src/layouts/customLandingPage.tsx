@@ -7,7 +7,7 @@ import { Title } from '../layouts/utils';
 
 const CustomLandingPage = ({
   data,
-  prefix,
+  ...baseProps
 }: Props & {
   data: {
     contentfulCustomLandingPageWithBanner: CustomLandingPageProps;
@@ -20,7 +20,7 @@ const CustomLandingPage = ({
     <div>
       <Title title={dynamicI18n(title)} description={dynamicI18n(description)} indexable />
       {entries.map((entry) => (
-        <ComponentPicker key={entry.id} entry={entry} prefix={prefix} smallPadding />
+        <ComponentPicker {...baseProps} key={entry.id} entry={entry} smallPadding />
       ))}
     </div>
   );

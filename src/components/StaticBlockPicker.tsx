@@ -11,7 +11,11 @@ import { ContactUs } from './ContactUs';
 import { Ledgistats } from './Ledgistats';
 import { Marketplaces } from './marketplace/marketplaces';
 
-export const StaticBlockPicker = ({ block, prefix }: StaticBlockProps & Prefix) => {
+export const StaticBlockPicker = ({
+  block,
+  prefix,
+  region,
+}: StaticBlockProps & Prefix & Region) => {
   if (!block) return null;
   switch (block) {
     case 'teamMembers':
@@ -19,7 +23,7 @@ export const StaticBlockPicker = ({ block, prefix }: StaticBlockProps & Prefix) 
     case 'investorsList':
       return <InvestorsList />;
     case 'companyPricing':
-      return <CompanyPricing prefix={prefix} />;
+      return <CompanyPricing prefix={prefix} region={region} />;
     case 'companyPricingCtas':
       return <CompanyPricingCTAs />;
     case 'investorPricing':

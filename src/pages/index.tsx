@@ -12,7 +12,7 @@ const isTopPageComponent = (entry: MainPageEntryProps) =>
   isTopBanner(entry) || entry.__typename === 'ContentfulLogoBanner';
 
 const IndexPage = (props: Props) => {
-  const { data, prefix } = props;
+  const { data, ...baseProps } = props;
   const [content] = data.page.edges;
   const { entries, title }: { entries: MainPageEntryProps[]; title: string } = content.node;
 
@@ -32,11 +32,11 @@ const IndexPage = (props: Props) => {
         <div className="top-page-wrapper d-flex flex-column justify-content-between">
           <span />
           {topPageComponents.map((entry, i) => (
-            <ComponentPicker entry={entry} prefix={prefix} key={`${entry.id}-${i}`} smallPadding />
+            <ComponentPicker entry={entry} {...baseProps} key={`${entry.id}-${i}`} smallPadding />
           ))}
         </div>
         {restOfComponents.map((entry, i) => (
-          <ComponentPicker entry={entry} prefix={prefix} key={`${entry.id}-${i}`} />
+          <ComponentPicker {...baseProps} entry={entry} key={`${entry.id}-${i}`} />
         ))}
       </div>
     </main>

@@ -17,53 +17,53 @@ import { CompetitorsTable } from './competitorsTable';
 
 export const ComponentPicker = ({
   entry,
-  prefix,
   smallPadding = false,
-}: Prefix & { entry: MainPageEntryProps; smallPadding?: boolean }) => {
+  ...baseProps
+}: Prefix & Region & { entry: MainPageEntryProps; smallPadding?: boolean }) => {
   if (!entry.id) return null;
 
   switch (entry.__typename) {
     case 'ContentfulTopBanner':
-      return <TopBanner {...entry} prefix={prefix} />;
+      return <TopBanner {...baseProps} {...entry} />;
 
     case 'ContentfulLogoBanner':
-      return <LogoBanner {...entry} smallPadding={smallPadding} />;
+      return <LogoBanner {...baseProps} {...entry} smallPadding={smallPadding} />;
 
     case 'ContentfulSelectableCardsWithScreenshots':
-      return <SelectableCardsWithScreenshots {...entry} />;
+      return <SelectableCardsWithScreenshots {...baseProps} {...entry} />;
 
     case 'ContentfulFeatureGrid':
-      return <FeatureGrid {...entry} />;
+      return <FeatureGrid {...baseProps} {...entry} />;
 
     case 'ContentfulTestimonialCards':
-      return <TestimonialCards {...entry} prefix={prefix} />;
+      return <TestimonialCards {...baseProps} {...entry} />;
 
     case 'ContentfulTitleWithGraphic':
-      return <TitleWithGraphic {...entry} prefix={prefix} />;
+      return <TitleWithGraphic {...baseProps} {...entry} />;
 
     case 'ContentfulContentWithChecklist':
-      return <ContentWithChecklist {...entry} prefix={prefix} />;
+      return <ContentWithChecklist {...baseProps} {...entry} />;
 
     case 'ContentfulChecklistWithScreenshot':
-      return <ChecklistWithScreenshot {...entry} />;
+      return <ChecklistWithScreenshot {...baseProps} {...entry} />;
 
     case 'ContentfulCallToAction2021':
-      return <CallToAction {...entry} prefix={prefix} />;
+      return <CallToAction {...baseProps} {...entry} />;
 
     case 'ContentfulLongText':
-      return <LongTextComponent {...entry} prefix={prefix} />;
+      return <LongTextComponent {...baseProps} {...entry} />;
 
     case 'ContentfulStaticBlock':
-      return <StaticBlockPicker {...entry} prefix={prefix} />;
+      return <StaticBlockPicker {...baseProps} {...entry} />;
 
     case 'ContentfulTestimonials':
-      return <Testimonials {...entry} />;
+      return <Testimonials {...baseProps} {...entry} />;
 
     case 'ContentfulLargeTestimonial':
-      return <LargeTestimonial {...entry} prefix={prefix} />;
+      return <LargeTestimonial {...baseProps} {...entry} />;
 
     case 'ContentfulCompetitorTable':
-      return <CompetitorsTable {...entry} />;
+      return <CompetitorsTable {...baseProps} {...entry} />;
 
     default:
       throw new Error('content __typename not recognized');

@@ -17,7 +17,7 @@ const CALCULATOR_SLUG = 'calculator';
 
 const ContentfulPage = ({
   data,
-  prefix,
+  ...baseProps
 }: Props & {
   data: {
     contentfulPage: ContentfulPageProps;
@@ -50,12 +50,12 @@ const ContentfulPage = ({
         <PageHeader title={dynamicI18n(title)} subtitle={dynamicI18n(description)} textCenter />
       )}
       <div className="container container-small">
-        <LongText content={content} prefix={prefix} />
+        <LongText {...baseProps} content={content} />
         <PublishDate date={date} />
-        {author && <Author prefix={prefix} name={author} />}
+        {author && <Author {...baseProps} name={author} />}
       </div>
       {!!entries &&
-        entries.map((entry) => <ComponentPicker key={entry.id} entry={entry} prefix={prefix} />)}
+        entries.map((entry) => <ComponentPicker {...baseProps} key={entry.id} entry={entry} />)}
     </div>
   );
 };

@@ -46,9 +46,8 @@ const FeaturePage = ({
         __typename={'ContentfulTitleWithGraphic'}
         isTopBanner
       />
-      <h1>Region: {region}</h1>
       {entries.map((entry) => (
-        <ComponentPicker key={entry.id} entry={entry} prefix={prefix} />
+        <ComponentPicker key={entry.id} entry={entry} prefix={prefix} region={region} />
       ))}
     </div>
   );
