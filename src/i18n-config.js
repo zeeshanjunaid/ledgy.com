@@ -11,7 +11,6 @@ const regionFromPath = (pathname) => {
   return regions.includes(region) ? region : defaultRegion;
 };
 
-exports.defaultRegion = defaultRegion;
 exports.regions = regions;
 exports.regionPrefix = regionPrefix;
 exports.deprefix = deprefix;
