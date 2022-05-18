@@ -3,7 +3,7 @@
 const path = require('path');
 const { redirects } = require('./src/redirects.js');
 
-const { languages, langPrefix } = require('./src/i18n-config.js');
+const { regions, regionPrefix } = require('./src/i18n-config.js');
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
@@ -19,11 +19,11 @@ exports.onCreatePage = async ({ page, actions }) => {
   return new Promise((resolve) => {
     if (!page.component.endsWith('.mdx')) {
       deletePage(page);
-      languages.forEach((language) => {
+      regions.forEach((region) => {
         const newPage = Object.assign({}, page, {
           originalPath: page.path,
-          path: `${langPrefix(language)}${page.path}`,
-          context: { lang: language },
+          path: `${regionPrefix(region)}${page.path}`,
+          context: { region },
         });
         createPage(newPage);
       });
@@ -225,8 +225,8 @@ const resolvePagePromise = (query, createPageWithData) =>
 exports.createPages = ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions;
   const createLocalizedPages = (pagePath, component, context) => {
-    languages.forEach((language) =>
-      createPage({ path: `${langPrefix(language)}${pagePath}`, component, context })
+    regions.forEach((region) =>
+      createPage({ path: `${regionPrefix(region)}${pagePath}`, component, context })
     );
   };
 
@@ -234,10 +234,10 @@ exports.createPages = ({ graphql, actions }) => {
     const redirectInBrowser = true;
     [from, `${from}/`].forEach((fromPath) => {
       createRedirect({ fromPath, toPath, redirectInBrowser });
-      languages.forEach((lang) =>
+      regions.forEach((region) =>
         createRedirect({
-          fromPath: `/${lang}${fromPath}`,
-          toPath: `/${lang}${toPath}`,
+          fromPath: `/${region}${fromPath}`,
+          toPath: `/${region}${toPath}`,
           redirectInBrowser,
         })
       );
@@ -312,10 +312,10 @@ exports.createPages = ({ graphql, actions }) => {
       createLocalizedPages(pagePath, jobPageComponent, context);
       const fromPath = `/jobs/${gh_Id}/`;
       createRedirect({ fromPath: fromPath, toPath: pagePath, redirectInBrowser: true });
-      languages.forEach((lang) =>
+      regions.forEach((region) =>
         createRedirect({
-          fromPath: `/${lang}${fromPath}`,
-          toPath: `/${lang}${pagePath}`,
+          fromPath: `/${region}${fromPath}`,
+          toPath: `/${region}${pagePath}`,
           redirectInBrowser: true,
         })
       );

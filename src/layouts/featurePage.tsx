@@ -8,6 +8,7 @@ import { Title } from '../layouts/utils';
 const FeaturePage = ({
   data,
   prefix,
+  region,
 }: Props & {
   data: {
     contentfulFeaturePage2021: FeaturePageProps;
@@ -46,7 +47,7 @@ const FeaturePage = ({
         isTopBanner
       />
       {entries.map((entry) => (
-        <ComponentPicker key={entry.id} entry={entry} prefix={prefix} />
+        <ComponentPicker key={entry.id} entry={entry} prefix={prefix} region={region} />
       ))}
     </div>
   );

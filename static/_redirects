@@ -1,6 +1,7 @@
 https://ledgy.netlify.com/* https://ledgy.com/:splat 301!
-/  /de/  302  Language=de
-/  /fr/  302  Language=fr
+/  /uk     200!  Country=gb
+
+/*/company-pricing  /uk/company-pricing     200!  Country=gb
 
 /verify-signature https://support.ledgy.com/how-to-verify-the-validity-of-a-signature
 

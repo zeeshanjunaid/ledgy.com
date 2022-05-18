@@ -22,7 +22,7 @@ declare type ContentfulPageProps = Id & {
   author?: string;
   content: Mdx;
   slug: string;
-  language: Language;
+  region: Region;
   cover?: ImageProps;
   entries?: EntryProps[];
 };
@@ -41,7 +41,7 @@ declare type CustomerStoryBaseProps = AllContentfulCustomerStoryProps & {
   isOurStory: boolean;
 };
 
-declare type CustomerStoryProps = CustomerStoryBaseProps & { content: Mdx; language: Language };
+declare type CustomerStoryProps = CustomerStoryBaseProps & { content: Mdx; region: Region };
 
 declare type MarketplaceBaseProps = Id & {
   company: string;

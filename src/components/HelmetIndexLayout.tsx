@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet';
 import React from 'react';
 import { name, getLdJson, dynamicI18n } from '../helpers';
-import { langPrefix } from '../i18n-config';
+import { regionPrefix } from '../i18n-config';
 import { ClickCease } from './ClickCease';
 
 export const HelmetIndexLayout = ({
@@ -37,10 +37,10 @@ export const HelmetIndexLayout = ({
       <meta name="facebook-domain-verification" content="taat2n50g23sb14q9tq4dycvqkvqms" />
 
       <link rel="alternate" href={`${siteUrl}${pathname}`} hrefLang="x-default" />
-      <link rel="alternate" href={`${siteUrl}${pathname}`} hrefLang="en" />
+      <link rel="alternate" href={`${siteUrl}/uk${pathname}`} hrefLang="en-gb" />
       <link rel="alternate" href={`${siteUrl}/de${pathname}`} hrefLang="de" />
       <link rel="alternate" href={`${siteUrl}/fr${pathname}`} hrefLang="fr" />
-      <link rel="canonical" href={`${siteUrl}${langPrefix(lang)}${pathname}`} />
+      <link rel="canonical" href={`${siteUrl}${regionPrefix(lang)}${pathname}`} />
 
       {/* Disable AOS for Google */}
       <noscript>

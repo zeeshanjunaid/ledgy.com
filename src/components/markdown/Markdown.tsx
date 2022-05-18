@@ -6,7 +6,7 @@ import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 import { targetBlank, youtubeEmbedBaseUrl } from '../../helpers';
-import { Embed, DynamicTrans } from '../utils';
+import { Embed } from '../utils';
 import { isExternalUrl, formatUrl } from '../lib';
 import { AuthorProps, getTeamData } from '../teamMembers';
 
@@ -98,14 +98,6 @@ export const MarkdownImage = ({
       )}
     </figure>
   ) : null;
-};
-
-const languages = { en: 'English', de: 'German', fr: 'French' };
-
-export const LanguageHint = ({ lang, documentLang }: { lang: string; documentLang: Language }) => {
-  if (lang === documentLang) return null;
-  const hint = `This page is only available in ${languages[documentLang]}`;
-  return <DynamicTrans>{hint}</DynamicTrans>;
 };
 
 export const Lead = ({ children }: { children: Node }) => <div className="lead">{children}</div>;

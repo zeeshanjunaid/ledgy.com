@@ -53,7 +53,8 @@ export const SourceforgeBadge = () => (
 );
 
 const DemoPage = (props: Props) => {
-  const { data, prefix } = props;
+  const { data, ...baseProps } = props;
+  const { prefix } = baseProps;
   const {
     content,
     title,
@@ -89,7 +90,7 @@ const DemoPage = (props: Props) => {
       />
       <div className="position-relative bg-white z-index-base">
         {content.map((v, i) => (
-          <ComponentPicker entry={v} prefix={prefix} key={`${v.id}-${i}`} />
+          <ComponentPicker {...baseProps} entry={v} key={`${v.id}-${i}`} />
         ))}
       </div>
       <footer className="footer d-flex align-items-center justify-content-center text-white bg-primary p-2">

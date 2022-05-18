@@ -9,7 +9,7 @@ import 'prism-themes/themes/prism-ghcolors.css';
 import '../styles/_index.scss';
 
 import { dynamicI18n, loadLocales, saveGoogleAdsClickId } from '../helpers';
-import { langFromPath, langPrefix, deprefix } from '../i18n-config';
+import { regionFromPath, regionPrefix, deprefix } from '../i18n-config';
 import {
   HelmetIndexLayout,
   Footer,
@@ -47,14 +47,14 @@ const metaDataQuery = graphql`
 
 const App = ({ children, ...props }: AppProps) => {
   const data = useStaticQuery(metaDataQuery);
-  const { lang, location } = props;
+  const { region, location } = props;
   const { site, allContentfulSiteMetadata } = data;
   const { siteUrl, segmentDestinations } = site.siteMetadata;
   const thumbnailUrl = `${siteUrl}/thumbnail-874d5c.png`;
   const { node }: { node: SiteMetaProps } = allContentfulSiteMetadata.edges[0];
   const { title, description, keywords } = node;
 
-  const prefix = langPrefix(lang);
+  const prefix = regionPrefix(region);
   const pathname = deprefix(location.pathname);
   const isAppShell = pathname.includes('offline-plugin-app-shell-fallback');
   const isDemoPage = pathname.includes('demo');
@@ -69,7 +69,7 @@ const App = ({ children, ...props }: AppProps) => {
         description={dynamicI18n(description)}
         thumbnailUrl={thumbnailUrl}
       />
-      <HelmetIndexLayout lang={lang} siteUrl={siteUrl} pathname={pathname} keywords={keywords} />
+      <HelmetIndexLayout lang={region} siteUrl={siteUrl} pathname={pathname} keywords={keywords} />
       <Nav {...props} prefix={prefix} showInternalNavigation={showInternalNavigation} />
       {isAppShell ? (
         <Loader />
@@ -80,7 +80,7 @@ const App = ({ children, ...props }: AppProps) => {
             <CookieBanner segmentDestinations={segmentDestinations} />
             <PopUpCard pathname={pathname} />
           </div>
-          {React.cloneElement(children, { prefix, lang })}
+          {React.cloneElement(children, { prefix, region })}
           {showInternalNavigation && !isDemoPage && <Footer {...props} prefix={prefix} />}
         </>
       )}
@@ -89,13 +89,13 @@ const App = ({ children, ...props }: AppProps) => {
 };
 
 const Main = (props: AppProps) => {
-  const lang = langFromPath(props.location.pathname);
+  const region = regionFromPath(props.location.pathname);
   useMemo(loadLocales, []);
-  useMemo(() => i18n.activate(lang), [lang]);
+  useMemo(() => i18n.activate(region), [region]);
   useMemo(saveGoogleAdsClickId, []);
   return (
     <I18nProvider i18n={i18n}>
-      <App {...props} lang={lang} />
+      <App {...props} region={region} />
     </I18nProvider>
   );
 };

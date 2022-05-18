@@ -20,11 +20,11 @@ import {
 } from '../components';
 
 const esopTemplates = (props: Props) => {
-  const { data, lang } = props;
+  const { data, region } = props;
   const title = t`Employee Participation Plan Templates`;
   const description = t`Get free templates from top Swiss and German law firms for your employee participation plans. Use the Ledgy term sheet guide to easily draft a document with the conditions of your participation plans.`;
   const { siteUrl } = data.site.siteMetadata;
-  const isGerman = lang === 'de';
+  const isGerman = region === 'de';
 
   const buttonOne = (
     <Button

@@ -26,7 +26,7 @@ const decodeContent = (content: string): string =>
     .replace(/&quot;/g, '"')
     .replace(/&amp;/g, '&');
 
-const JobPage = ({ data, lang }: Props & { data: { greenhouseJob: GreenhouseJobProps } }) => {
+const JobPage = ({ data }: Props & { data: { greenhouseJob: GreenhouseJobProps } }) => {
   const { title, content, gh_Id, location } = data.greenhouseJob;
   if (!data) return null;
 
@@ -42,13 +42,7 @@ const JobPage = ({ data, lang }: Props & { data: { greenhouseJob: GreenhouseJobP
         section={i18n._('Career')}
         description={dynamicI18n(location.name)}
       />
-      <PageHeader
-        lang={lang}
-        documentLang="en"
-        title={dynamicI18n(title)}
-        subtitle={dynamicI18n(location.name)}
-        textCenter
-      />
+      <PageHeader title={dynamicI18n(title)} subtitle={dynamicI18n(location.name)} textCenter />
       <div className="container container-small">
         <div className="d-flex justify-content-center mb-4 mb-lg-5">
           <div dangerouslySetInnerHTML={{ __html: decodeContent(content) }} className="markdown" />

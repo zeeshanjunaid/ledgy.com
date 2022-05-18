@@ -1,11 +1,11 @@
-declare type Language = 'en' | 'de' | 'fr';
+declare type Region = { region: 'global' | 'uk' | 'de' | 'fr' };
 
 declare type Prefix = { prefix: string };
 
-declare type Props = Prefix & {
-  lang: Language;
-  data: UntypedObject;
-};
+declare type Props = Prefix &
+  Region & {
+    data: UntypedObject;
+  };
 
 declare type LocationProps = {
   pathname: string;
