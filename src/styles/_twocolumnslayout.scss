@@ -1,0 +1,227 @@
+.twocolumns__layout {
+  @media (max-width: 767px) {
+    padding: 0 20px;
+  }
+  .container {
+    .row {
+      &:first-child {
+        margin-top: -12rem;
+      }
+    }
+  }
+}
+
+.twocolumnsrow__wrapper {
+  width: 100%;
+  margin: 0 0 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+}
+.twocolumnstabs {
+  order: 2;
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+
+  @media (max-width: 992px) {
+    justify-content: center;
+  }
+  @media (max-width: 767px) {
+    order: -1;
+  }
+
+  &__left {
+    justify-content: flex-start;
+    @media (max-width: 992px) {
+      justify-content: center;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    max-width: 36.5rem;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    position: relative;
+    mask-image: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 1) 100%,
+      rgba(0, 0, 0, 0) 100%
+    );
+
+    &::after {
+      background-color: rgba(168, 156, 180, 0.3);
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      z-index: 5;
+    }
+    &::-webkit-scrollbar {
+      width: 0;
+      opacity: 0;
+      display: none;
+    }
+  }
+}
+.twocolumnstabs__item {
+  font-size: 1rem;
+  cursor: pointer;
+  padding-bottom: 0.625rem;
+  position: relative;
+  font-weight: 600;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  color: #b1a8bc;
+
+  @media (max-width: 767px) {
+    font-size: 0.85rem;
+  }
+
+  &.activeTab {
+    color: #6156bb;
+  }
+  &:not(:last-child) {
+    margin-right: 1.25rem;
+  }
+  .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #6156bb;
+    z-index: 10;
+  }
+}
+.twocolumnsrow__data {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 32rem;
+  @media (max-width: 992px) {
+    height: 20rem;
+  }
+  @media (max-width: 767px) {
+    flex-direction: column;
+    height: 100%;
+  }
+}
+
+.textcolumn {
+  max-width: 25rem;
+  @media (max-width: 992px) {
+    max-width: 20rem;
+  }
+  @media (max-width: 767px) {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 1.25rem;
+  }
+
+  &__right {
+    order: 2;
+  }
+  &__title {
+    font-size: 2.5rem;
+    color: #1c0732;
+    margin-bottom: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    @media (max-width: 992px) {
+      font-size: 1.85rem;
+    }
+  }
+  &__subtitle {
+    font-size: 1.125rem;
+    color: #6156bb;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    @media (max-width: 992px) {
+      font-size: 1rem;
+    }
+  }
+  &__text {
+    font-size: 1.125rem;
+    color: #92889d;
+    margin-bottom: 1.25rem;
+    line-height: 1.4;
+    @media (max-width: 992px) {
+      font-size: 1rem;
+    }
+  }
+  &__link {
+    a {
+      color: #52bd94;
+      font-size: 1.125rem;
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
+      overflow: hidden;
+      span {
+        margin-left: 0.625rem;
+        font-size: 0.85rem;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        left: 0;
+        background-color: #52bd94;
+        height: 2px;
+        bottom: 0;
+        transform-origin: bottom right;
+        transform: scaleX(0);
+        transition: transform 0.35s ease-out;
+      }
+
+      &:hover::before,
+      &:focus::before {
+        transform-origin: bottom left;
+        transform: scaleX(1);
+      }
+
+      @media (max-width: 992px) {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+.imagecolumn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 35.5rem;
+
+  @media (max-width: 767px) {
+    order: -1;
+    width: 100%;
+  }
+
+  &.image-right {
+    padding-left: 4rem;
+
+    @media (max-width: 767px) {
+      padding: 0;
+    }
+  }
+  &.image-left {
+    padding-right: 4rem;
+    @media (max-width: 767px) {
+      padding: 0;
+    }
+  }
+  img {
+    width: 100%;
+    filter: drop-shadow(16px 80px 48px rgba(38, 46, 79, 0.2));
+  }
+}
