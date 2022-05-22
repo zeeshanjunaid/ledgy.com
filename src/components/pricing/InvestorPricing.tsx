@@ -58,7 +58,7 @@ export const InvestorPricing = ({ prefix }: Prefix) => (
         type={<DynamicTrans>Fund</DynamicTrans>}
         price={<DynamicTrans>Contact us</DynamicTrans>}
         features={fundFeatures}
-        button={<RequestDemoButton buttonClassName="" prefix={prefix} />}
+        button={<RequestDemoButton buttonClassName="" prefix={prefix} utm={'investoPricing'} />}
       />
     </div>
   </div>

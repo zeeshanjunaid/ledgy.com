@@ -1,5 +1,5 @@
 import React from 'react';
-import { Testimonial } from '.';
+import { Testimonial } from './Testimonial';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 export const Testimonials = (data: TestimonialsProps) => {

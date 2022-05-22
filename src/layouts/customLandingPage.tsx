@@ -2,8 +2,8 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import { dynamicI18n } from '../helpers';
-import { ComponentPicker } from '../components';
 import { Title } from '../layouts/utils';
+import { EntryPicker } from '../components';
 
 const CustomLandingPage = ({
   data,
@@ -19,9 +19,7 @@ const CustomLandingPage = ({
   return (
     <div>
       <Title title={dynamicI18n(title)} description={dynamicI18n(description)} indexable />
-      {entries.map((entry) => (
-        <ComponentPicker {...baseProps} key={entry.id} entry={entry} smallPadding />
-      ))}
+      <EntryPicker {...baseProps} entries={entries} />
     </div>
   );
 };
@@ -42,11 +40,13 @@ export const customLandingPageQuery = graphql`
         ...ContentWithChecklistFragment
         ...TitleWithGraphicFragment
         ...FeatureGridFragment
-        ...TestimonialFragment
         ...LogoBannerFragment
         ...SelectableCardsWithScreenshotsFragment
         ...CallToAction2021Fragment
         ...ChecklistWithScreenshotFragment
+        ...ExploreFragment
+        ...TestimonialsCarousel
+        ...RegionalComponentPickerFragment
       }
     }
   }

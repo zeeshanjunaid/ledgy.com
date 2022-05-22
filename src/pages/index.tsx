@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import { dynamicI18n } from '../helpers';
-import { ComponentPicker } from '../components';
+import { EntryPicker } from '../components';
 import { Helmet } from 'react-helmet';
 
 const isTopBanner = (entry: MainPageEntryProps): entry is TopBannerProps =>
@@ -31,13 +31,9 @@ const IndexPage = (props: Props) => {
       <div className="main-wrapper-2">
         <div className="top-page-wrapper d-flex flex-column justify-content-between">
           <span />
-          {topPageComponents.map((entry, i) => (
-            <ComponentPicker entry={entry} {...baseProps} key={`${entry.id}-${i}`} smallPadding />
-          ))}
+          <EntryPicker entries={topPageComponents} {...baseProps}></EntryPicker>
         </div>
-        {restOfComponents.map((entry, i) => (
-          <ComponentPicker {...baseProps} entry={entry} key={`${entry.id}-${i}`} />
-        ))}
+        <EntryPicker entries={restOfComponents} {...baseProps}></EntryPicker>
       </div>
     </main>
   );
@@ -77,33 +73,6 @@ export const TestimonialCardsFragment = graphql`
           }
         }
       }
-    }
-  }
-`;
-
-export const TestimonialFragment = graphql`
-  fragment TestimonialFragment on ContentfulTestimonials {
-    id
-    __typename
-    header
-    testimonial {
-      name
-      description {
-        childMdx {
-          body
-        }
-      }
-      url
-      image {
-        localFile {
-          childImageSharp {
-            fixed(height: 120) {
-              ...GatsbyImageSharpFixed
-            }
-          }
-        }
-      }
-      small
     }
   }
 `;
@@ -162,6 +131,31 @@ export const ContentfulTopBannerFragment = graphql`
             ...GatsbyImageSharpFluid
           }
         }
+      }
+    }
+  }
+`;
+
+export const RegionalComponentPickerFragment = graphql`
+  fragment RegionalComponentPickerFragment on ContentfulRegionalComponentPicker {
+    id
+    __typename
+    entries {
+      global {
+        ...LogoBannerFragment
+        ...FeatureGridFragment
+      }
+      uk {
+        ...LogoBannerFragment
+        ...FeatureGridFragment
+      }
+      de {
+        ...LogoBannerFragment
+        ...FeatureGridFragment
+      }
+      fr {
+        ...LogoBannerFragment
+        ...FeatureGridFragment
       }
     }
   }
@@ -264,6 +258,65 @@ export const CompetitorTableFragment = graphql`
         ledgyStatus
         competitorStatus
         isComingSoonOnLedgy
+      }
+    }
+  }
+`;
+
+export const ExploreFragment = graphql`
+  fragment ExploreFragment on ContentfulExplore {
+    id
+    __typename
+    title
+    textRight
+    sections {
+      id
+      columnName
+      title
+      text
+      image {
+        localFile {
+          childImageSharp {
+            fluid(maxHeight: 1200, maxWidth: 1200, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+      link {
+        text
+        url
+      }
+    }
+  }
+`;
+
+export const TestimonialsCarousel = graphql`
+  fragment TestimonialsCarousel on ContentfulTestimonialCarousel {
+    id
+    __typename
+    title
+    testimonials {
+      id
+      logo {
+        localFile {
+          childImageSharp {
+            fixed(width: 130) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+      quote
+      customerName
+      customerRole
+      primaryColor
+      secondaryColor
+      outcomeNumber
+      outcomeText
+      link {
+        text
+        url
       }
     }
   }
@@ -378,6 +431,8 @@ export const indexPageQuery = graphql`
             ...CompetitorTableFragment
             ...ChecklistWithScreenshotFragment
             ...LargeTestimonialFragment
+            ...ExploreFragment
+            ...TestimonialsCarousel
           }
         }
       }

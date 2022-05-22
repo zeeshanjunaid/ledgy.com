@@ -1,5 +1,10 @@
 type Id = { id: string };
 
+type Link = {
+  url: string;
+  text: string;
+};
+
 declare type EntryProps =
   | LogoBannerProps
   | SelectableCardsWithScreenshotsProps
@@ -11,9 +16,11 @@ declare type EntryProps =
   | ChecklistWithScreenshotProps
   | LongTextComponentProps
   | StaticBlockProps
-  | TestimonialsProps
   | CompetitorTableProps
-  | LargeTestimonialProps;
+  | LargeTestimonialProps
+  | ExploreProps
+  | TestimonialCarouselProps
+  | RegionalComponentPickerProps;
 
 declare type ContentfulPageProps = Id & {
   title: string;
@@ -79,6 +86,11 @@ declare type TestimonialCardProps = {
   linkUrl?: string;
 };
 
+declare type TestimonialsProps = Id & {
+  __typename: 'ContentfulTestimonials';
+  testimonial: TestimonialProps[];
+};
+
 declare type TestimonialProps = {
   name: string;
   description: Mdx;
@@ -101,10 +113,6 @@ declare type TestimonialCardsProps = Id & {
   cards: TestimonialCardProps[];
 };
 
-declare type TestimonialsProps = Id & {
-  __typename: 'ContentfulTestimonials';
-  testimonial: TestimonialProps[];
-};
 declare type ButtonProps = Id & {
   __typename: 'ContentfulButton';
   text: string;
@@ -263,4 +271,51 @@ declare type CompetitorTableProps = Id & {
   header: string;
   competitorName: string;
   tableSection: CompetitorTableSectionProps[];
+};
+
+declare type ExploreSectionProps = Id & {
+  id: number;
+  columnName: string;
+  title: string;
+  text: string;
+  image: ImageProps;
+  link: Link;
+};
+
+declare type ExploreProps = Id & {
+  __typename: 'ContentfulExplore';
+  textRight: boolean;
+  title: string;
+  sections: ExploreSectionProps[];
+};
+
+declare type TestimonialCarouselSectionProps = Id & {
+  logo: ImageProps;
+  quote: string;
+  customerName: string;
+  customerRole: string;
+  primaryColor: string;
+  secondaryColor: string;
+  outcomeNumber: string;
+  outcomeText: string;
+  link: Link;
+};
+
+declare type TestimonialCarouselProps = Id & {
+  __typename: 'ContentfulTestimonialCarousel';
+  title: string;
+  testimonials: TestimonialCarouselSectionProps[];
+};
+
+declare type RegionalComponentPickerEntriesProps = Id & {
+  __typename: 'ContentfulRegionalComponentPickerEntries';
+  global: EntryProps;
+  uk: EntryProps;
+  de: EntryProps;
+  fr: EntryProps;
+};
+
+declare type RegionalComponentPickerProps = Id & {
+  __typename: 'ContentfulRegionalComponentPicker';
+  entries: RegionalComponentPickerEntriesProps;
 };

@@ -11,5 +11,6 @@ export const Image = ({
   className?: string;
 }) => {
   const { childImageSharp } = image?.localFile || {};
+  console.log({ childImageSharp });
   return childImageSharp ? <Img alt={alt} className={className} {...childImageSharp} /> : null;
 };
