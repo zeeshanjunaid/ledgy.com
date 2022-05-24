@@ -113,6 +113,7 @@ export const TopBanner = ({
       prefix={prefix}
       buttonText={firstButtonText}
       buttonClassName={buttonClassName}
+      utm={'topBanner'}
     />
   ) : (
     <CustomButton url={firstButtonUrl} text={firstButtonText} isTopBanner isPrimary={isPrimary} />
@@ -123,6 +124,7 @@ export const TopBanner = ({
       prefix={prefix}
       buttonText={secondButtonText}
       buttonClassName={buttonClassName}
+      utm={'topBanner'}
     />
   ) : (
     <CustomButton url={secondButtonUrl} text={secondButtonText} isTopBanner isPrimary={isPrimary} />

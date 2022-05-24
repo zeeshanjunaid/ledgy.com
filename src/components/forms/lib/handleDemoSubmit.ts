@@ -18,8 +18,8 @@ import {
   smallCompanyUrl,
   FORM_STATUSES,
   DEMO_REQUEST,
+  meetingRequestUrl,
 } from './constants';
-import { getUrlFromCountryCode } from './getUrlFromCountryCode';
 
 const { INVALID_EMAIL, INVALID_FIELDS, INVALID_SIZE, LOADING, SUBMITTED, FETCH_ERROR } =
   FORM_STATUSES;
@@ -42,27 +42,8 @@ const getInvestmentValue = (size: number) => {
 const getPipelineValue = (size: number, isCompany: boolean) =>
   isCompany ? getEmployeeValue(size) : getInvestmentValue(size);
 
-const getLocation = async <T extends { country: string }>(): Promise<T> => {
-  const ipData: T = await (await fetch('https://ipapi.co/json/')).json();
-  return ipData;
-};
-
-const getRegionalMarketingUrl = async () => {
-  let countryCode = 'CH';
-  try {
-    const { country } = await getLocation();
-    if (country) {
-      countryCode = country;
-    }
-  } catch (e) {
-    // ignore
-  }
-
-  return getUrlFromCountryCode(countryCode);
-};
-
 const getUrl = async ({ isCompany, size, email }: ParsedFormValues) => {
-  const meetingRequestUrlWithEmail = `${await getRegionalMarketingUrl()}?email=${email}`;
+  const meetingRequestUrlWithEmail = `${meetingRequestUrl}?email=${email}`;
 
   const alwaysBook = window.location.hash.includes('#book');
   if (alwaysBook) return meetingRequestUrlWithEmail;
