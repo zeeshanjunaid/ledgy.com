@@ -1,21 +1,20 @@
 /* eslint-disable prettier/prettier */
-import { DynamicTrans, Image } from "./utils";
+import { DynamicTrans, Image } from './utils';
 
-import { CustomButton } from "./CustomButton";
-import { DemoTopBanner } from "./topBanners/DemoTopBanner";
-import { ExtraLinkTopBanner } from "./topBanners/ExtraLinkTopBanner";
-import { LogosSection } from "./LogosSection";
-import React from "react";
-import { RequestDemoButton } from "./RequestDemoButton";
-import { TopBannerLayout } from "./TopBannerLayout";
-import { TwoColumnsSection } from "./TwoColumnsSection";
-import { demoPage } from "../helpers";
-import { t } from "@lingui/macro";
+import { CustomButton } from './CustomButton';
+import { DemoTopBanner } from './topBanners/DemoTopBanner';
+import { ExtraLinkTopBanner } from './topBanners/ExtraLinkTopBanner';
+import { LogosSection } from './LogosSection';
+import React from 'react';
+import { RequestDemoButton } from './RequestDemoButton';
+import { TopBannerLayout } from './TopBannerLayout';
+import { demoPage } from '../helpers';
+import { t } from '@lingui/macro';
 
-const DEMO_BANNER = "demo";
-const NO_BUTTONS_BANNER = "no-button";
-const ONE_BUTTON_BANNER = "one-button";
-const EXTRA_LINK_BANNER = "extra-link";
+const DEMO_BANNER = 'demo';
+const NO_BUTTONS_BANNER = 'no-button';
+const ONE_BUTTON_BANNER = 'one-button';
+const EXTRA_LINK_BANNER = 'extra-link';
 
 const Screenshot = ({ image }: { image: ImageProps }) => (
   <div className="mt-sm-4 mt-xl-0 p-0 screenshot">
@@ -29,7 +28,7 @@ const renderBannerFromType = ({
   image,
   buttonOne,
   buttonTwo,
-  type = "normal",
+  type = 'normal'
 }: {
   mainHeader: string;
   description: string;
@@ -53,8 +52,7 @@ const renderBannerFromType = ({
             componentRight={imageRight}
             smallPadding
           />
-          <LogosSection />
-          <TwoColumnsSection />
+          {/* <LogosSection /> */}
         </>
       );
 
@@ -68,17 +66,17 @@ const renderBannerFromType = ({
             componentRight={imageRight}
             smallPadding
           />
-          <LogosSection />
-          <TwoColumnsSection />
+          {/* <LogosSection /> */}
         </>
       );
 
     case DEMO_BANNER:
-      return;
-      <>
-        <DemoTopBanner title={title} subtitle={subtitle} />
-        <LogosSection />
-      </>;
+      return (
+        <>
+          <DemoTopBanner title={title} subtitle={subtitle} />
+          {/* <LogosSection /> */}
+        </>
+      );
 
     case EXTRA_LINK_BANNER:
       return (
@@ -90,8 +88,7 @@ const renderBannerFromType = ({
             buttonTwo={buttonTwo}
             componentRight={imageRight}
           />
-          <LogosSection />
-          <TwoColumnsSection />
+          {/* <LogosSection /> */}
         </>
       );
     default:
@@ -105,8 +102,7 @@ const renderBannerFromType = ({
             componentRight={imageRight}
             smallPadding
           />
-          <LogosSection />
-          <TwoColumnsSection />
+          {/* <LogosSection /> */}
         </>
       );
   }
@@ -121,13 +117,13 @@ export const TopBanner = ({
   secondButtonText,
   secondButtonUrl,
   prefix,
-  type,
+  type
 }: TopBannerProps & Prefix) => {
   //avoid delaying the largest contentful paint by lazy loading
-  if (image.localFile) image.localFile.childImageSharp.loading = "eager";
-  const isPrimary = firstButtonUrl.includes("#demo");
+  if (image.localFile) image.localFile.childImageSharp.loading = 'eager';
+  const isPrimary = firstButtonUrl.includes('#demo');
 
-  const buttonClassName = "my-sm-0 my-2 btn-xl d-inline mr-2";
+  const buttonClassName = 'my-sm-0 my-2 btn-xl d-inline mr-2';
 
   const buttonOne = firstButtonUrl.includes(demoPage) ? (
     <RequestDemoButton
@@ -137,12 +133,7 @@ export const TopBanner = ({
       utm={'topBanner'}
     />
   ) : (
-    <CustomButton
-      url={firstButtonUrl}
-      text={firstButtonText}
-      isTopBanner
-      isPrimary={isPrimary}
-    />
+    <CustomButton url={firstButtonUrl} text={firstButtonText} isTopBanner isPrimary={isPrimary} />
   );
 
   const buttonTwo = secondButtonUrl.includes(demoPage) ? (
@@ -153,12 +144,7 @@ export const TopBanner = ({
       utm={'topBanner'}
     />
   ) : (
-    <CustomButton
-      url={secondButtonUrl}
-      text={secondButtonText}
-      isTopBanner
-      isPrimary={isPrimary}
-    />
+    <CustomButton url={secondButtonUrl} text={secondButtonText} isTopBanner isPrimary={isPrimary} />
   );
 
   return renderBannerFromType({
@@ -167,6 +153,6 @@ export const TopBanner = ({
     image,
     buttonOne,
     buttonTwo,
-    type,
+    type
   });
 };

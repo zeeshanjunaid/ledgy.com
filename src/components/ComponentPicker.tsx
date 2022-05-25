@@ -14,6 +14,7 @@ import { StaticBlockPicker } from './StaticBlockPicker';
 import { Testimonials } from './Testimonials';
 import { LargeTestimonial } from './LargeTestimonial';
 import { CompetitorsTable } from './competitorsTable';
+import { Explore } from './Explore';
 
 export const ComponentPicker = ({
   entry,
@@ -64,6 +65,9 @@ export const ComponentPicker = ({
 
     case 'ContentfulCompetitorTable':
       return <CompetitorsTable {...baseProps} {...entry} />;
+
+    case 'ContentfulExplore':
+      return <Explore {...baseProps} {...entry} />;
 
     default:
       throw new Error('content __typename not recognized');

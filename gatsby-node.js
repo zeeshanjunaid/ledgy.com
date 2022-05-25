@@ -60,7 +60,7 @@ exports.createSchemaCustomization = ({ actions }) => {
   type ContentfulTitleWithGraphic implements Node {
     buttons: [ContentfulButton] @link(by: "id", from: "buttons___NODE")
   }
-  union EntryProps = ContentfulTopBanner | ContentfulLogoBanner | ContentfulSelectableCardsWithScreenshots | ContentfulFeatureGrid | ContentfulTestimonialCards | ContentfulTestimonials | ContentfulTitleWithGraphic | ContentfulContentWithChecklist | ContentfulCallToAction2021 | ContentfulChecklistWithScreenshot | ContentfulLongText | ContentfulStaticBlock | ContentfulLargeTestimonial | ContentfulCompetitorTable
+  union EntryProps = ContentfulTopBanner | ContentfulLogoBanner | ContentfulSelectableCardsWithScreenshots | ContentfulFeatureGrid | ContentfulTestimonialCards | ContentfulTestimonials | ContentfulTitleWithGraphic | ContentfulContentWithChecklist | ContentfulCallToAction2021 | ContentfulChecklistWithScreenshot | ContentfulLongText | ContentfulStaticBlock | ContentfulLargeTestimonial | ContentfulCompetitorTable | ContentfulExplore
   type ContentfulDemoPage2021 implements Node {
     title: String
     requesterType: String

@@ -13,7 +13,8 @@ declare type EntryProps =
   | StaticBlockProps
   | TestimonialsProps
   | CompetitorTableProps
-  | LargeTestimonialProps;
+  | LargeTestimonialProps
+  | ExploreProps;
 
 declare type ContentfulPageProps = Id & {
   title: string;
@@ -263,4 +264,23 @@ declare type CompetitorTableProps = Id & {
   header: string;
   competitorName: string;
   tableSection: CompetitorTableSectionProps[];
+};
+
+declare type ExploreSectionProps = Id & {
+  id: number;
+  columnName: string;
+  title: string;
+  text: string;
+  image: ImageProps;
+  link: {
+    url: string;
+    text: string;
+  };
+};
+
+declare type ExploreProps = Id & {
+  __typename: 'ContentfulExplore';
+  textRight: boolean;
+  title: boolean;
+  sections: ExploreSectionProps[];
 };
