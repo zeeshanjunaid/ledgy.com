@@ -13,3 +13,5 @@ yarn-error.log
 
 *.mo
 src/locale/
+gatsby-config.js
+.gitignore
