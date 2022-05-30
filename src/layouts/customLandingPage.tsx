@@ -47,6 +47,8 @@ export const customLandingPageQuery = graphql`
         ...SelectableCardsWithScreenshotsFragment
         ...CallToAction2021Fragment
         ...ChecklistWithScreenshotFragment
+        ...ExploreFragment
+        ...TestimonialsCarousel
       }
     }
   }

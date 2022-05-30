@@ -1,10 +1,8 @@
-/* eslint-disable prettier/prettier */
 import { DynamicTrans, Image } from './utils';
 
 import { CustomButton } from './CustomButton';
 import { DemoTopBanner } from './topBanners/DemoTopBanner';
 import { ExtraLinkTopBanner } from './topBanners/ExtraLinkTopBanner';
-import { LogosSection } from './LogosSection';
 import React from 'react';
 import { RequestDemoButton } from './RequestDemoButton';
 import { TopBannerLayout } from './TopBannerLayout';
@@ -28,7 +26,7 @@ const renderBannerFromType = ({
   image,
   buttonOne,
   buttonTwo,
-  type = 'normal'
+  type = 'normal',
 }: {
   mainHeader: string;
   description: string;
@@ -52,7 +50,6 @@ const renderBannerFromType = ({
             componentRight={imageRight}
             smallPadding
           />
-          {/* <LogosSection /> */}
         </>
       );
 
@@ -66,7 +63,6 @@ const renderBannerFromType = ({
             componentRight={imageRight}
             smallPadding
           />
-          {/* <LogosSection /> */}
         </>
       );
 
@@ -74,7 +70,6 @@ const renderBannerFromType = ({
       return (
         <>
           <DemoTopBanner title={title} subtitle={subtitle} />
-          {/* <LogosSection /> */}
         </>
       );
 
@@ -88,7 +83,6 @@ const renderBannerFromType = ({
             buttonTwo={buttonTwo}
             componentRight={imageRight}
           />
-          {/* <LogosSection /> */}
         </>
       );
     default:
@@ -102,7 +96,6 @@ const renderBannerFromType = ({
             componentRight={imageRight}
             smallPadding
           />
-          {/* <LogosSection /> */}
         </>
       );
   }
@@ -117,7 +110,7 @@ export const TopBanner = ({
   secondButtonText,
   secondButtonUrl,
   prefix,
-  type
+  type,
 }: TopBannerProps & Prefix) => {
   //avoid delaying the largest contentful paint by lazy loading
   if (image.localFile) image.localFile.childImageSharp.loading = 'eager';
@@ -153,6 +146,6 @@ export const TopBanner = ({
     image,
     buttonOne,
     buttonTwo,
-    type
+    type,
   });
 };

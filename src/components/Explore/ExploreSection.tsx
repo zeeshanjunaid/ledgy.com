@@ -1,23 +1,23 @@
-import { AnimatePresence, motion } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import { AnimatePresence, motion } from 'framer-motion';
+import React, { useEffect, useState } from 'react';
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Image } from "../utils";
-import { Link } from "gatsby";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import { scroller } from "react-scroll";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Image } from '../utils';
+import { Link } from 'gatsby';
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { scroller } from 'react-scroll';
 
 export const ExploreSection = ({ explore }: { explore: ExploreProps }) => {
   const { textRight, title, sections } = explore;
   const [activeData, setActiveData] = useState(sections[0]);
 
   useEffect(() => {
-    scroller.scrollTo("activeTab", {
+    scroller.scrollTo('activeTab', {
       duration: 500,
       delay: 0,
       smooth: true,
       horizontal: true,
-      containerId: "scrollableContainer",
+      containerId: 'scrollableContainer',
       offset: 0,
       isDynamic: true,
     });
@@ -30,16 +30,14 @@ export const ExploreSection = ({ explore }: { explore: ExploreProps }) => {
     <div className="twocolumnsrow__wrapper">
       <AnimatePresence exitBeforeEnter>
         <motion.div
-          key={activeData ? activeData.id : "empty"}
+          key={activeData ? activeData.id : 'empty'}
           className="twocolumnsrow__data twocolumnsrow__data--hide-on-bd"
           animate={{ opacity: 1, y: 20 }}
           initial={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.25, easeing: "anticipate" }}
+          transition={{ duration: 0.25, easeing: 'anticipate' }}
         >
-          <div
-            className={`textcolumn ${textRight ? "textcolumn__right" : null}`}
-          >
+          <div className={`textcolumn ${textRight ? 'textcolumn__right' : null}`}>
             <p className="textcolumn__subtitle">{title}</p>
 
             <h2 className="textcolumn__title">{activeData.title}</h2>
@@ -55,17 +53,11 @@ export const ExploreSection = ({ explore }: { explore: ExploreProps }) => {
           </div>
         </motion.div>
       </AnimatePresence>
-      <div
-        className={`twocolumnstabs ${
-          textRight ? "twocolumnstabs__left" : null
-        }`}
-      >
+      <div className={`twocolumnstabs ${textRight ? 'twocolumnstabs__left' : null}`}>
         <div className="twocolumnstabs__wrapper" id="scrollableContainer">
           {sections.map((section, index) => (
             <div
-              className={`twocolumnstabs__item ${
-                section === activeData ? "activeTab" : ""
-              }`}
+              className={`twocolumnstabs__item ${section === activeData ? 'activeTab' : ''}`}
               key={index}
               onClick={() => handleActiveData(section)}
             >
@@ -79,16 +71,16 @@ export const ExploreSection = ({ explore }: { explore: ExploreProps }) => {
       </div>
       <AnimatePresence exitBeforeEnter>
         <motion.div
-          key={activeData ? activeData.id : "empty"}
+          key={activeData ? activeData.id : 'empty'}
           className="twocolumnsrow__data"
           animate={{ opacity: 1, y: 20 }}
           initial={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.25, easeing: "anticipate" }}
+          transition={{ duration: 0.25, easeing: 'anticipate' }}
         >
           <div
             className={`textcolumn textcolumn--hide-on-sd ${
-              textRight ? "textcolumn__right" : null
+              textRight ? 'textcolumn__right' : null
             }`}
           >
             <p className="textcolumn__subtitle">{title}</p>
@@ -104,16 +96,8 @@ export const ExploreSection = ({ explore }: { explore: ExploreProps }) => {
               </Link>
             </div>
           </div>
-          <div
-            className={`imagecolumn ${
-              textRight ? "image-left" : "image-right"
-            }`}
-          >
-            <Image
-              image={activeData.image}
-              alt={activeData.title}
-              className="flex-1"
-            />
+          <div className={`imagecolumn ${textRight ? 'image-left' : 'image-right'}`}>
+            <Image image={activeData.image} alt={activeData.title} className="flex-1" />
           </div>
         </motion.div>
       </AnimatePresence>
