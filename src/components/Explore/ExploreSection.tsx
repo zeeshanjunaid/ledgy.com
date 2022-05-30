@@ -9,7 +9,10 @@ import { scroller } from 'react-scroll';
 
 export const ExploreSection = ({ explore }: { explore: ExploreProps }) => {
   const { textRight, title, sections } = explore;
-  const [activeData, setActiveData] = useState(sections[0]);
+  const [activeindex, setActiveIndex] = useState(0);
+  const activeData = sections[activeindex];
+
+  const { id, title: sectionTitle, text, link, image } = activeData;
 
   useEffect(() => {
     scroller.scrollTo('activeTab', {
@@ -23,14 +26,11 @@ export const ExploreSection = ({ explore }: { explore: ExploreProps }) => {
     });
   }, [activeData]);
 
-  const handleActiveData = (column: ExploreSectionProps) => {
-    setActiveData(column);
-  };
   return (
     <div className="twocolumnsrow__wrapper">
       <AnimatePresence exitBeforeEnter>
         <motion.div
-          key={activeData ? activeData.id : 'empty'}
+          key={id}
           className="twocolumnsrow__data twocolumnsrow__data--hide-on-bd"
           animate={{ opacity: 1, y: 20 }}
           initial={{ opacity: 1, y: 0 }}
@@ -40,11 +40,11 @@ export const ExploreSection = ({ explore }: { explore: ExploreProps }) => {
           <div className={`textcolumn ${textRight ? 'textcolumn__right' : null}`}>
             <p className="textcolumn__subtitle">{title}</p>
 
-            <h2 className="textcolumn__title">{activeData.title}</h2>
-            <p className="textcolumn__text">{activeData.text}</p>
+            <h2 className="textcolumn__title">{sectionTitle}</h2>
+            <p className="textcolumn__text">{text}</p>
             <div className="textcolumn__link">
-              <Link to={activeData.link.url}>
-                {activeData.link.text}
+              <Link to={link.url}>
+                {link.text}
                 <span>
                   <FontAwesomeIcon icon={faChevronRight} />
                 </span>
@@ -55,23 +55,21 @@ export const ExploreSection = ({ explore }: { explore: ExploreProps }) => {
       </AnimatePresence>
       <div className={`twocolumnstabs ${textRight ? 'twocolumnstabs__left' : null}`}>
         <div className="twocolumnstabs__wrapper" id="scrollableContainer">
-          {sections.map((section, index) => (
+          {sections.map(({ columnName }, index) => (
             <div
-              className={`twocolumnstabs__item ${section === activeData ? 'activeTab' : ''}`}
+              className={`twocolumnstabs__item ${index === activeindex ? 'activeTab' : ''}`}
               key={index}
-              onClick={() => handleActiveData(section)}
+              onClick={() => setActiveIndex(index)}
             >
-              {section.columnName}
-              {section === activeData ? (
-                <motion.div className="underline" layoutId="underline" />
-              ) : null}
+              {columnName}
+              {index === activeindex && <motion.div className="underline" layoutId="underline" />}
             </div>
           ))}
         </div>
       </div>
       <AnimatePresence exitBeforeEnter>
         <motion.div
-          key={activeData ? activeData.id : 'empty'}
+          key={id}
           className="twocolumnsrow__data"
           animate={{ opacity: 1, y: 20 }}
           initial={{ opacity: 1, y: 0 }}
@@ -85,11 +83,11 @@ export const ExploreSection = ({ explore }: { explore: ExploreProps }) => {
           >
             <p className="textcolumn__subtitle">{title}</p>
 
-            <h2 className="textcolumn__title">{activeData.title}</h2>
-            <p className="textcolumn__text">{activeData.text}</p>
+            <h2 className="textcolumn__title">{sectionTitle}</h2>
+            <p className="textcolumn__text">{text}</p>
             <div className="textcolumn__link">
-              <Link to={activeData.link.url}>
-                {activeData.link.text}
+              <Link to={link.url}>
+                {link.text}
                 <span>
                   <FontAwesomeIcon icon={faChevronRight} />
                 </span>
@@ -97,7 +95,7 @@ export const ExploreSection = ({ explore }: { explore: ExploreProps }) => {
             </div>
           </div>
           <div className={`imagecolumn ${textRight ? 'image-left' : 'image-right'}`}>
-            <Image image={activeData.image} alt={activeData.title} className="flex-1" />
+            <Image image={image} alt={sectionTitle} className="flex-1" />
           </div>
         </motion.div>
       </AnimatePresence>

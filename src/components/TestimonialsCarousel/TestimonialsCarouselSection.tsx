@@ -56,7 +56,9 @@ export const TestimonialsCarouselSection = ({
             {' '}
             <Image image={logo} alt={logo.title} className="flex-1" />
           </div>
-          <div className="fullheighttestimonial__item-testimonial--text">{`"${quote}"`}</div>
+          <div className="fullheighttestimonial__item-testimonial--text">
+            <p>{`"${quote}"`}</p>
+          </div>
         </div>
         <div className="fullheighttestimonial__item-client">
           <div className="fullheighttestimonial__item-client--name">{customerName}</div>
