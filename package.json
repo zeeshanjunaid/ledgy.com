@@ -26,7 +26,11 @@
     "@fortawesome/free-brands-svg-icons": "5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "0.1.14",
+<<<<<<< HEAD
     "@ledgy/library-pricing": "4.1.10",
+=======
+    "@ledgy/library-pricing": "4.1.8",
+>>>>>>> udpate pricing package
     "@lingui/core": "3.13.0",
     "@lingui/macro": "3.13.0",
     "@lingui/react": "3.13.0",
