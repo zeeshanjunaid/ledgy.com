@@ -1,0 +1,1 @@
+export { getIntegrationLogos } from './getIntegrationLogos';

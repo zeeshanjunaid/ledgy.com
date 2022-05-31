@@ -1,0 +1,74 @@
+.logos_grid_section {
+  padding: 4rem 0;
+  &__info {
+    margin: 60px auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    @media (max-width: 767px) {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+  }
+
+  .logos_grid {
+    margin-top: 1.75rem;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    @media (max-width: 992px) {
+      width: 100%;
+    }
+    @media (min-width: 1440px) {
+      width: 60%;
+    }
+
+    &__grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    a {
+      margin-bottom: 1rem;
+      margin-right: 1rem;
+    }
+
+    &__item {
+      position: relative;
+      width: 5.86rem;
+      height: 5.86rem;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 3px;
+      transition: all 0.25s;
+      display: flex;
+      margin: 5px;
+      align-items: center;
+      justify-content: center;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background: rgba(0, 0, 0, 0.03);
+      }
+
+      #logoName {
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 12px;
+        text-transform: capitalize;
+        font-weight: 600;
+        line-height: 1.25;
+        letter-spacing: 1px;
+        width: max-content;
+        padding: 4px 8px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+}

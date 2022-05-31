@@ -41,6 +41,7 @@ export const customLandingPageQuery = graphql`
         ...CompetitorTableFragment
         ...ContentWithChecklistFragment
         ...TitleWithGraphicFragment
+        ...StaticBlockFragment
         ...FeatureGridFragment
         ...TestimonialFragment
         ...LogoBannerFragment
