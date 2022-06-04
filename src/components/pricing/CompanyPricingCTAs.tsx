@@ -16,7 +16,8 @@ const companyPricingCTAs: CompanyPricingCTAProps[] = [
     description: (
       <>
         <DynamicTrans>
-          You get a 20% discount if your startup helps reduce carbon emissions with its core business.
+          You get a 20% discount if your startup helps reduce carbon emissions with its core
+          business.
         </DynamicTrans>{' '}
         <a href="https://ble2zo3huer.typeform.com/to/g8yJMvoM">
           <DynamicTrans>Apply here!</DynamicTrans>
