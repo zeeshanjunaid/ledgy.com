@@ -118,15 +118,18 @@ export const handleDemoSubmit = async ({
   }
 
   const eventName = `getDemo.submit.${requesterType}`;
-  if (isDeerCompany(size)) {
-    track('TagManagerBigCompany');
-  } else {
-    track('TagManagerSmallCompany');
+  if (isCompany) {
+    if (isDeerCompany(size)) {
+      track('TagManagerBigCompany');
+    } else {
+      track('TagManagerSmallCompany');
+    }
+    track('captureLead');
   }
+
   identifyOrAlias(email);
 
   track(eventName, { value, pathname, size, email });
-  track('captureLead');
 
   await redirect(parsedFormValues);
   setFormStatus(SUBMITTED);
