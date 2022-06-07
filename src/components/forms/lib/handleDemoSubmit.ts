@@ -11,7 +11,6 @@ import { submitToHubspot } from './hubspot';
 import {
   investorUrl,
   COMPANY,
-  EMPLOYEE_VALUE,
   INVESTMENT_VALUE,
   DEER_COMPANY_THRESHOLD,
   FUND_INVESTMENT_THRESHOLD,
@@ -19,6 +18,9 @@ import {
   FORM_STATUSES,
   DEMO_REQUEST,
   meetingRequestUrl,
+  LARGE_COMPANY_EMPLOYEE_VALUE,
+  MEDIUM_COMPANY_EMPLOYEE_VALUE,
+  SMALL_COMPANY_EMPLOYEE_VALUE,
 } from './constants';
 
 const { INVALID_EMAIL, INVALID_FIELDS, INVALID_SIZE, LOADING, SUBMITTED, FETCH_ERROR } =
@@ -31,8 +33,9 @@ const isDeerCompany = (size: number) => size >= DEER_COMPANY_THRESHOLD;
 const isFund = (size: number) => size >= FUND_INVESTMENT_THRESHOLD;
 
 const getEmployeeValue = (size: number) => {
-  if (isDeerCompany(size)) return size * EMPLOYEE_VALUE;
-  return 0;
+  if (size >= 150) return size * LARGE_COMPANY_EMPLOYEE_VALUE;
+  if (size >= 50) return size * MEDIUM_COMPANY_EMPLOYEE_VALUE;
+  return size * SMALL_COMPANY_EMPLOYEE_VALUE;
 };
 const getInvestmentValue = (size: number) => {
   if (isFund(size)) return size * INVESTMENT_VALUE;
@@ -49,7 +52,7 @@ const getUrl = async ({ isCompany, size, email }: ParsedFormValues) => {
   if (alwaysBook) return meetingRequestUrlWithEmail;
 
   if (!isCompany) {
-    return isFund(size) ? meetingRequestUrlWithEmail : investorUrl;
+    return investorUrl;
   }
   return isDeerCompany(size) ? meetingRequestUrlWithEmail : smallCompanyUrl;
 };

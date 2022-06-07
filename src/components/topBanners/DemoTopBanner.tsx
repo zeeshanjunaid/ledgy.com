@@ -20,7 +20,7 @@ export const DemoTopBanner = ({
   const pathname = getPathName();
   const form = (
     <DemoForm
-      buttonText={'Show me a demo'}
+      defaultButtonText={'Show me a demo'}
       contentfulRequesterType={undefined}
       pathname={pathname}
     />
