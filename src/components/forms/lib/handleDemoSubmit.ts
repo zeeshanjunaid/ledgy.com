@@ -9,16 +9,18 @@ import {
 import { FormValues, ParsedFormValues } from './formTypes';
 import { submitToHubspot } from './hubspot';
 import {
-  investorUrl,
+  INVESTOR_URL,
   COMPANY,
-  EMPLOYEE_VALUE,
   INVESTMENT_VALUE,
   DEER_COMPANY_THRESHOLD,
   FUND_INVESTMENT_THRESHOLD,
-  smallCompanyUrl,
+  SMALL_COMPANY_URL,
   FORM_STATUSES,
   DEMO_REQUEST,
   meetingRequestUrl,
+  LARGE_COMPANY_STAKEHOLDER_VALUE,
+  MEDIUM_COMPANY_STAKEHOLDER_VALUE,
+  SMALL_COMPANY_STAKEHOLDER_VALUE,
 } from './constants';
 
 const { INVALID_EMAIL, INVALID_FIELDS, INVALID_SIZE, LOADING, SUBMITTED, FETCH_ERROR } =
@@ -26,13 +28,17 @@ const { INVALID_EMAIL, INVALID_FIELDS, INVALID_SIZE, LOADING, SUBMITTED, FETCH_E
 
 const LEAD_STATUS = 'leadStatus';
 const IDENTIFIED = 'identified';
+const TAG_MANAGER_BIG_COMPANY = 'TagManagerBigCompany';
+const TAG_MANAGER_SMALL_COMPANY = 'TagManagerSmallCompany';
+const CAPTURE_LEAD = 'captureLead';
 
 const isDeerCompany = (size: number) => size >= DEER_COMPANY_THRESHOLD;
 const isFund = (size: number) => size >= FUND_INVESTMENT_THRESHOLD;
 
 const getEmployeeValue = (size: number) => {
-  if (isDeerCompany(size)) return size * EMPLOYEE_VALUE;
-  return 0;
+  if (size >= 150) return size * LARGE_COMPANY_STAKEHOLDER_VALUE;
+  if (size >= 50) return size * MEDIUM_COMPANY_STAKEHOLDER_VALUE;
+  return size * SMALL_COMPANY_STAKEHOLDER_VALUE;
 };
 const getInvestmentValue = (size: number) => {
   if (isFund(size)) return size * INVESTMENT_VALUE;
@@ -49,9 +55,9 @@ const getUrl = async ({ isCompany, size, email }: ParsedFormValues) => {
   if (alwaysBook) return meetingRequestUrlWithEmail;
 
   if (!isCompany) {
-    return isFund(size) ? meetingRequestUrlWithEmail : investorUrl;
+    return INVESTOR_URL;
   }
-  return isDeerCompany(size) ? meetingRequestUrlWithEmail : smallCompanyUrl;
+  return isDeerCompany(size) ? meetingRequestUrlWithEmail : SMALL_COMPANY_URL;
 };
 
 const redirect = async (values: ParsedFormValues) => {
@@ -115,15 +121,18 @@ export const handleDemoSubmit = async ({
   }
 
   const eventName = `getDemo.submit.${requesterType}`;
-  if (isDeerCompany(size)) {
-    track('TagManagerBigCompany');
-  } else {
-    track('TagManagerSmallCompany');
+  if (isCompany) {
+    if (isDeerCompany(size)) {
+      track(TAG_MANAGER_BIG_COMPANY);
+    } else {
+      track(TAG_MANAGER_SMALL_COMPANY);
+    }
+    track(CAPTURE_LEAD);
   }
+
   identifyOrAlias(email);
 
   track(eventName, { value, pathname, size, email });
-  track('captureLead');
 
   await redirect(parsedFormValues);
   setFormStatus(SUBMITTED);

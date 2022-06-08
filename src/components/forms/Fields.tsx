@@ -2,7 +2,6 @@ import React, { ReactNode } from 'react';
 import { Trans } from '@lingui/macro';
 
 import { FORM_STATUSES } from './lib';
-import { StakeholderDefinition } from '../StakeholderDefinition';
 
 export const Label = ({ text }: { text: ReactNode }) => <span>{text}</span>;
 
@@ -37,7 +36,6 @@ export const Input = ({
       value={state}
       name={name}
     />
-    {props.type === 'number' && <StakeholderDefinition />}
   </div>
 );
 

@@ -71,7 +71,7 @@ const DemoPage = (props: Props) => {
 
   const form = (
     <DemoForm
-      buttonText={dynamicI18n(formButtonText)}
+      defaultButtonText={dynamicI18n(formButtonText)}
       contentfulRequesterType={requesterType}
       pathname={pathname}
     />
