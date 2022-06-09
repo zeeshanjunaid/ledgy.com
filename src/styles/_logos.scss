@@ -1,6 +1,6 @@
 .fullHeightTestimonial {
   width: 100%;
-  // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+  @extend .bg-lightest;
 }
 
 .fullHeightTestimonial__wrapper {
@@ -14,7 +14,6 @@
   max-width: 33.75rem;
   overflow: hidden;
   h2 {
-    color: #fff !important;
     font-size: 2.5rem;
     @media (max-width: 992px) {
       font-size: 1.85rem;
@@ -38,6 +37,7 @@
   border-radius: 1.75rem;
   background-color: #fff;
   overflow: hidden;
+  box-shadow: $box-shadow-light;
   @media (max-width: 992px) {
     grid-template-columns: 1fr;
   }
@@ -105,6 +105,7 @@
       font-size: 4rem;
       font-weight: 900;
       line-height: 1;
+      display: inline-block;
       @media (max-width: 610px) {
         font-size: 2.75rem;
       }
@@ -223,9 +224,6 @@
 
     &.activeLogo {
       opacity: 1;
-    }
-    img {
-      filter:  brightness(0) invert(1);
     }
   }
 }

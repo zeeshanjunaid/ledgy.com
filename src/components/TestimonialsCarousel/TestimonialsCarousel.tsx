@@ -16,15 +16,12 @@ export const TestimonialsCarousel = (testimonialsCarousel: TestimonialCarouselPr
         key={id}
         className="fullHeightTestimonial"
         transition={{ duration: 0.35, easeing: 'anticipate' }}
-        animate={{ backgroundColor: secondaryColor, opacity: 1 }}
-        initial={{ backgroundColor: secondaryColor, opacity: 1 }}
-        exit={{ backgroundColor: secondaryColor }}
       >
         <div className="container">
           <div className="fullHeightTestimonial__wrapper">
             <div className="fullheighttestimonial__title">
               {' '}
-              <h2>{title}</h2>
+              <h2 style={{ color: secondaryColor }}>{title}</h2>
             </div>
             <div className="fullheighttestimonial__slider">
               <div className="fullheighttestimonial__slider-wrapper">

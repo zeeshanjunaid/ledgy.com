@@ -25,7 +25,6 @@ export const LogosBar = ({
             initial={{ opacity: 0.4 }}
             transition={{ duration: 0.35, easeing: 'anticipate' }}
           >
-            {/* <span>{testimonial.logo}</span> */}
             <Image image={logo} alt={logo.title} className="flex-1" />
           </motion.div>
         ))}
