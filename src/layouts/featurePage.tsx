@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import { dynamicI18n } from '../helpers';
-import { ComponentPicker, TitleWithGraphic } from '../components';
+import { EntryPicker, TitleWithGraphic } from '../components';
 import { Title } from '../layouts/utils';
 
 const FeaturePage = ({
@@ -46,9 +46,7 @@ const FeaturePage = ({
         __typename={'ContentfulTitleWithGraphic'}
         isTopBanner
       />
-      {entries.map((entry) => (
-        <ComponentPicker key={entry.id} entry={entry} prefix={prefix} region={region} />
-      ))}
+      <EntryPicker entries={entries} prefix={prefix} region={region} />
     </div>
   );
 };
@@ -91,6 +89,7 @@ export const featurePageQuery = graphql`
       }
       entries {
         ...FeatureGridFragment
+        ...RegionalComponentPickerFragment
         ...TestimonialCardsFragment
         ...ContentWithChecklistFragment
         ...TitleWithGraphicFragment

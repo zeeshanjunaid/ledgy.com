@@ -11,7 +11,6 @@ import { TopBanner } from './TopBanner';
 import { ChecklistWithScreenshot } from './ChecklistWithScreenshot';
 import { LongTextComponent } from './LongTextComponent';
 import { StaticBlockPicker } from './StaticBlockPicker';
-import { Testimonials } from './Testimonials';
 import { LargeTestimonial } from './LargeTestimonial';
 import { CompetitorsTable } from './competitorsTable';
 
@@ -21,7 +20,6 @@ export const ComponentPicker = ({
   ...baseProps
 }: Prefix & Region & { entry: MainPageEntryProps; smallPadding?: boolean }) => {
   if (!entry.id) return null;
-
   switch (entry.__typename) {
     case 'ContentfulTopBanner':
       return <TopBanner {...baseProps} {...entry} />;
@@ -55,9 +53,6 @@ export const ComponentPicker = ({
 
     case 'ContentfulStaticBlock':
       return <StaticBlockPicker {...baseProps} {...entry} />;
-
-    case 'ContentfulTestimonials':
-      return <Testimonials {...baseProps} {...entry} />;
 
     case 'ContentfulLargeTestimonial':
       return <LargeTestimonial {...baseProps} {...entry} />;
