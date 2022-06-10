@@ -9,7 +9,7 @@ import {
   LongText,
   PageHeader,
   CalculatorHeader,
-  ComponentPicker,
+  EntryPicker,
 } from '../components';
 import { Title } from '../layouts/utils';
 
@@ -54,8 +54,7 @@ const ContentfulPage = ({
         <PublishDate date={date} />
         {author && <Author {...baseProps} name={author} />}
       </div>
-      {!!entries &&
-        entries.map((entry) => <ComponentPicker {...baseProps} key={entry.id} entry={entry} />)}
+      {!!entries && <EntryPicker entries={entries} {...baseProps} />}
     </div>
   );
 };
@@ -90,6 +89,7 @@ export const contentfulPageQuery = graphql`
         ...ContentfulTopBannerFragment
         ...LargeTestimonialFragment
         ...FeatureGridFragment
+        ...RegionalComponentPickerFragment
         ...TestimonialCardsFragment
         ...ContentWithChecklistFragment
         ...TitleWithGraphicFragment

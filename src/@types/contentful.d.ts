@@ -11,9 +11,9 @@ declare type EntryProps =
   | ChecklistWithScreenshotProps
   | LongTextComponentProps
   | StaticBlockProps
-  | TestimonialsProps
   | CompetitorTableProps
-  | LargeTestimonialProps;
+  | LargeTestimonialProps
+  | RegionalComponentPickerProps;
 
 declare type ContentfulPageProps = Id & {
   title: string;
@@ -79,6 +79,11 @@ declare type TestimonialCardProps = {
   linkUrl?: string;
 };
 
+declare type TestimonialsProps = Id & {
+  __typename: 'ContentfulTestimonials';
+  testimonial: TestimonialProps[];
+};
+
 declare type TestimonialProps = {
   name: string;
   description: Mdx;
@@ -101,10 +106,6 @@ declare type TestimonialCardsProps = Id & {
   cards: TestimonialCardProps[];
 };
 
-declare type TestimonialsProps = Id & {
-  __typename: 'ContentfulTestimonials';
-  testimonial: TestimonialProps[];
-};
 declare type ButtonProps = Id & {
   __typename: 'ContentfulButton';
   text: string;
@@ -263,4 +264,17 @@ declare type CompetitorTableProps = Id & {
   header: string;
   competitorName: string;
   tableSection: CompetitorTableSectionProps[];
+};
+
+declare type RegionalComponentPickerEntriesProps = Id & {
+  __typename: 'ContentfulRegionalComponentPickerEntries';
+  global: EntryProps;
+  uk: EntryProps;
+  de: EntryProps;
+  fr: EntryProps;
+};
+
+declare type RegionalComponentPickerProps = Id & {
+  __typename: 'ContentfulRegionalComponentPicker';
+  entries: RegionalComponentPickerEntriesProps;
 };
