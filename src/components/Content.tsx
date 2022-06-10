@@ -1,12 +1,14 @@
-import React, { ReactNode } from 'react';
-import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
+import React, { ReactNode } from "react";
 
-import { CardLink } from './CardLink';
+import { BlogCard } from "./BlogCard";
+import Img from "gatsby-image";
+import { graphql } from "gatsby";
 
-export const ContentBody = ({ children }: { children: ReactNode | ReactNode[] }) => (
-  <div className="container">{children}</div>
-);
+export const ContentBody = ({
+  children,
+}: {
+  children: ReactNode | ReactNode[];
+}) => <div className="container">{children}</div>;
 
 export const PostLink = ({
   post,
@@ -23,12 +25,14 @@ export const PostLink = ({
   showImage?: boolean;
 }) => {
   const { childImageSharp } = post.cover?.localFile || {};
-  const image = childImageSharp ? <Img className="fit-cover" {...childImageSharp} /> : null;
+  const image = childImageSharp ? (
+    <Img className="fit-cover" {...childImageSharp} />
+  ) : null;
 
   const title = <h5>{post.title}</h5>;
   const { date } = post;
   return (
-    <CardLink
+    <BlogCard
       title={title}
       type="blog"
       description={description}
@@ -44,7 +48,7 @@ export const PostLink = ({
 
 export const CoverImageFragment = graphql`
   fragment CoverImage on ImageSharp {
-    fluid(maxWidth: 200, maxHeight: 200, cropFocus: CENTER) {
+    fluid(maxWidth: 375, maxHeight: 240, cropFocus: CENTER) {
       ...GatsbyImageSharpFluid
     }
   }

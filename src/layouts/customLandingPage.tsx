@@ -1,9 +1,8 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-
-import { dynamicI18n } from '../helpers';
 import { ComponentPicker } from '../components';
+import React from 'react';
 import { Title } from '../layouts/utils';
+import { dynamicI18n } from '../helpers';
+import { graphql } from 'gatsby';
 
 const CustomLandingPage = ({
   data,
@@ -42,7 +41,7 @@ export const customLandingPageQuery = graphql`
         ...ContentWithChecklistFragment
         ...TitleWithGraphicFragment
         ...FeatureGridFragment
-        ...TestimonialFragment
+        # ...TestimonialFragment
         ...LogoBannerFragment
         ...SelectableCardsWithScreenshotsFragment
         ...CallToAction2021Fragment

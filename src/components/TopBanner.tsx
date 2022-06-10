@@ -5,6 +5,7 @@ import { CustomButton } from './CustomButton';
 import { DemoTopBanner } from './topBanners/DemoTopBanner';
 import { ExtraLinkTopBanner } from './topBanners/ExtraLinkTopBanner';
 import { LogosSection } from './LogosSection';
+import { MarqueeSlider } from './MarqueeSlider';
 import React from 'react';
 import { RequestDemoButton } from './RequestDemoButton';
 import { TopBannerLayout } from './TopBannerLayout';
@@ -52,7 +53,7 @@ const renderBannerFromType = ({
             componentRight={imageRight}
             smallPadding
           />
-          {/* <LogosSection /> */}
+          <MarqueeSlider />
         </>
       );
 
@@ -66,7 +67,7 @@ const renderBannerFromType = ({
             componentRight={imageRight}
             smallPadding
           />
-          {/* <LogosSection /> */}
+          <MarqueeSlider />
         </>
       );
 
@@ -74,7 +75,7 @@ const renderBannerFromType = ({
       return (
         <>
           <DemoTopBanner title={title} subtitle={subtitle} />
-          {/* <LogosSection /> */}
+          <MarqueeSlider />
         </>
       );
 
@@ -88,7 +89,7 @@ const renderBannerFromType = ({
             buttonTwo={buttonTwo}
             componentRight={imageRight}
           />
-          {/* <LogosSection /> */}
+          <MarqueeSlider />
         </>
       );
     default:
@@ -102,7 +103,7 @@ const renderBannerFromType = ({
             componentRight={imageRight}
             smallPadding
           />
-          {/* <LogosSection /> */}
+          <MarqueeSlider />
         </>
       );
   }

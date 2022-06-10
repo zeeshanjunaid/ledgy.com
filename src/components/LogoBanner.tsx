@@ -1,6 +1,6 @@
-import React from 'react';
+import { CustomFade, DynamicTrans, Image, Section } from './utils';
 
-import { CustomFade, Section, Image, DynamicTrans } from './utils';
+import React from 'react';
 
 const Logo = ({ logo, index }: { logo: ImageProps; index: number }) => (
   <CustomFade delay={index * 100} className="col-12 col-sm-6 col-md-4 col-xl-2 my-2">

@@ -1,0 +1,15 @@
+.marqueeslider__wrapper {
+  margin: 2rem 0;
+  .marquee {
+  }
+}
+.marqueeslider__img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  margin-right: 6rem;
+  img {
+    width: 100%;
+  }
+}
