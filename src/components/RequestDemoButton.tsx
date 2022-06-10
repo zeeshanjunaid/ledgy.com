@@ -10,12 +10,14 @@ export const RequestDemoButton = ({
   buttonClassName,
   prefix,
   buttonText = DEMO_BUTTON_TEXT,
-}: Prefix & { buttonClassName: string; buttonText?: string }) => {
+  utm,
+}: Prefix & { buttonClassName: string; buttonText?: string; utm?: string }) => {
+  const href = formatUrl(prefix, demoPage + (utm ? `?utm_btn=${utm}` : ''));
   return (
     <Button
-      href={formatUrl(prefix, demoPage)}
+      href={href}
       className={buttonClassName}
-      onClick={() => trackClick(DEMO_BUTTON)}
+      onClick={() => trackClick(DEMO_BUTTON, { text: buttonText, url: href })}
     >
       <DynamicTrans>{buttonText}</DynamicTrans>
     </Button>

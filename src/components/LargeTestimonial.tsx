@@ -15,7 +15,7 @@ export const LargeTestimonial = ({
   const components = getProviderComponents(prefix);
 
   return (
-    <div className="overflow-hidden py-8 mb-n5 text-white">
+    <div className="overflow-hidden pb-8 mb-n5 text-white">
       <Section className="position-relative" noPadding={true}>
         <div className="my-5 my-xl-7 position-absolute z-index-background bg-primary tilted-background" />
         <div className="row  py-5 py-lg-7 my-5 my-xl-7">

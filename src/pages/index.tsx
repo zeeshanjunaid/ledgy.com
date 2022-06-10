@@ -296,6 +296,40 @@ export const ExploreFragment = graphql`
   }
 `;
 
+<<<<<<< HEAD
+=======
+export const TestimonialsCarousel = graphql`
+  fragment TestimonialsCarousel on ContentfulTestimonialCarousel {
+    id
+    __typename
+    title
+    testimonials {
+      id
+      logo {
+        localFile {
+          childImageSharp {
+            fixed(width: 130) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+      quote
+      customerName
+      customerRole
+      primaryColor
+      secondaryColor
+      outcomeNumber
+      outcomeText
+      link {
+        text
+        url
+      }
+    }
+  }
+`;
+
+>>>>>>> 6a7421e28a411a5b386ee94fe0e9bba057745854
 export const ChecklistWithScreenshotFragment = graphql`
   fragment ChecklistWithScreenshotFragment on ContentfulChecklistWithScreenshot {
     id
@@ -406,6 +440,10 @@ export const indexPageQuery = graphql`
             ...ChecklistWithScreenshotFragment
             ...LargeTestimonialFragment
             ...ExploreFragment
+<<<<<<< HEAD
+=======
+            ...TestimonialsCarousel
+>>>>>>> 6a7421e28a411a5b386ee94fe0e9bba057745854
           }
         }
       }

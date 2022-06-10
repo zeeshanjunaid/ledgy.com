@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { t } from '@lingui/macro';
 
 import { Button } from '../utils';
@@ -11,6 +11,8 @@ import {
   FORM_STATUSES,
   getPartners,
 } from './lib';
+import { StakeholderDefinition } from '../StakeholderDefinition';
+import { DEER_COMPANY_BUTTON_TEXT, DEER_COMPANY_THRESHOLD } from './lib/constants';
 
 const { IDLE, FETCH_ERROR } = FORM_STATUSES;
 
@@ -23,17 +25,18 @@ const getReferrer = (pathname: string) => {
 };
 
 export const DemoForm = ({
-  buttonText,
+  defaultButtonText,
   contentfulRequesterType,
   pathname,
 }: {
-  buttonText: string;
+  defaultButtonText: string;
   contentfulRequesterType: RequesterType | void;
   pathname: string;
 }) => {
   const [requesterType, setRequesterType] = useState(contentfulRequesterType || COMPANY);
   const [email, setEmail] = useState('');
   const [size, setSize] = useState('');
+  const [buttonText, setButtonText] = useState(defaultButtonText);
 
   const partners = getPartners();
   const isPartnershipPage = pathname.includes(PARTNER);
@@ -46,6 +49,16 @@ export const DemoForm = ({
   const inputClassName = 'height-42px bg-transparent text-dark border border-light-energetic-blue';
   const values = { requesterType, email, size, partner };
   const isButtonDisabled = formStatus !== IDLE && formStatus !== FETCH_ERROR;
+
+  useEffect(() => {
+    if (requesterType === COMPANY) {
+      if (Number(size) > DEER_COMPANY_THRESHOLD) {
+        setButtonText(DEER_COMPANY_BUTTON_TEXT);
+      } else {
+        setButtonText(defaultButtonText);
+      }
+    }
+  });
 
   return (
     <div className="card-border-style bg-white mx-md-7 mx-xl-6">
@@ -89,7 +102,7 @@ export const DemoForm = ({
           setState={setSize}
           placeholder={
             requesterType === COMPANY
-              ? t`Number of stakeholders / security holders`
+              ? t`Number of stakeholders *`
               : t`Number of portfolio companies`
           }
           setFormStatus={setFormStatus}
@@ -98,6 +111,7 @@ export const DemoForm = ({
           className={inputClassName}
           type="number"
         />
+        {requesterType === COMPANY && <StakeholderDefinition />}
         {isPartnershipPage && (
           <InputWithOptions
             state={partner}

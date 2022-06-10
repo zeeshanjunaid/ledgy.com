@@ -1,5 +1,10 @@
 type Id = { id: string };
 
+type Link = {
+  url: string;
+  text: string;
+};
+
 declare type EntryProps =
   | LogoBannerProps
   | SelectableCardsWithScreenshotsProps
@@ -14,7 +19,12 @@ declare type EntryProps =
   | TestimonialsProps
   | CompetitorTableProps
   | LargeTestimonialProps
+<<<<<<< HEAD
   | ExploreProps;
+=======
+  | ExploreProps
+  | TestimonialCarouselProps;
+>>>>>>> 6a7421e28a411a5b386ee94fe0e9bba057745854
 
 declare type ContentfulPageProps = Id & {
   title: string;
@@ -272,15 +282,43 @@ declare type ExploreSectionProps = Id & {
   title: string;
   text: string;
   image: ImageProps;
+<<<<<<< HEAD
   link: {
     url: string;
     text: string;
   };
+=======
+  link: Link;
+>>>>>>> 6a7421e28a411a5b386ee94fe0e9bba057745854
 };
 
 declare type ExploreProps = Id & {
   __typename: 'ContentfulExplore';
   textRight: boolean;
+<<<<<<< HEAD
   title: boolean;
   sections: ExploreSectionProps[];
 };
+=======
+  title: string;
+  sections: ExploreSectionProps[];
+};
+
+declare type TestimonialCarouselSectionProps = Id & {
+  logo: ImageProps;
+  quote: string;
+  customerName: string;
+  customerRole: string;
+  primaryColor: string;
+  secondaryColor: string;
+  outcomeNumber: string;
+  outcomeText: string;
+  link: Link;
+};
+
+declare type TestimonialCarouselProps = Id & {
+  __typename: 'ContentfulTestimonialCarousel';
+  title: string;
+  testimonials: TestimonialCarouselSectionProps[];
+};
+>>>>>>> 6a7421e28a411a5b386ee94fe0e9bba057745854

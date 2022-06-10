@@ -12,8 +12,15 @@ import { SelectableCardsWithScreenshots } from './cardsWithScreenshots';
 import { StaticBlockPicker } from './StaticBlockPicker';
 import { TestimonialCards } from './TestimonialCards';
 import { Testimonials } from './Testimonials';
+<<<<<<< HEAD
 import { TitleWithGraphic } from './TitleWithGraphic';
 import { TopBanner } from './TopBanner';
+=======
+import { LargeTestimonial } from './LargeTestimonial';
+import { CompetitorsTable } from './competitorsTable';
+import { Explore } from './Explore';
+import { TestimonialsCarousel } from './TestimonialsCarousel';
+>>>>>>> 6a7421e28a411a5b386ee94fe0e9bba057745854
 
 export const ComponentPicker = ({
   entry,
@@ -68,6 +75,12 @@ export const ComponentPicker = ({
     case 'ContentfulExplore':
       return <Explore {...baseProps} {...entry} />;
 
+<<<<<<< HEAD
+=======
+    case 'ContentfulTestimonialCarousel':
+      return <TestimonialsCarousel {...baseProps} {...entry} />;
+
+>>>>>>> 6a7421e28a411a5b386ee94fe0e9bba057745854
     default:
       throw new Error('content __typename not recognized');
   }
