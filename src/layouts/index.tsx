@@ -91,7 +91,8 @@ const App = ({ children, ...props }: AppProps) => {
 const Main = (props: AppProps) => {
   const region = regionFromPath(props.location.pathname);
   useMemo(loadLocales, []);
-  useMemo(() => i18n.activate(region), [region]);
+  // useMemo(() => i18n.activate(region), [region]);
+  i18n.activate('global');
   useMemo(saveGoogleAdsClickId, []);
   return (
     <I18nProvider i18n={i18n}>
