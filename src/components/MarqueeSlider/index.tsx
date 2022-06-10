@@ -1,6 +1,6 @@
-import Marquee from "react-fast-marquee";
-import React from "react";
-import logos from "./data";
+import Marquee from 'react-fast-marquee';
+import React from 'react';
+import logos from './data';
 
 export const MarqueeSlider = () => {
   return (

@@ -1,17 +1,9 @@
-<<<<<<< HEAD
-/* eslint-disable prettier/prettier */
-=======
->>>>>>> 6a7421e28a411a5b386ee94fe0e9bba057745854
 import { DynamicTrans, Image } from './utils';
 
 import { CustomButton } from './CustomButton';
 import { DemoTopBanner } from './topBanners/DemoTopBanner';
 import { ExtraLinkTopBanner } from './topBanners/ExtraLinkTopBanner';
-<<<<<<< HEAD
-import { LogosSection } from './LogosSection';
 import { MarqueeSlider } from './MarqueeSlider';
-=======
->>>>>>> 6a7421e28a411a5b386ee94fe0e9bba057745854
 import React from 'react';
 import { RequestDemoButton } from './RequestDemoButton';
 import { TopBannerLayout } from './TopBannerLayout';
@@ -35,7 +27,7 @@ const renderBannerFromType = ({
   image,
   buttonOne,
   buttonTwo,
-  type = 'normal'
+  type = 'normal',
 }: {
   mainHeader: string;
   description: string;
@@ -59,10 +51,7 @@ const renderBannerFromType = ({
             componentRight={imageRight}
             smallPadding
           />
-<<<<<<< HEAD
           <MarqueeSlider />
-=======
->>>>>>> 6a7421e28a411a5b386ee94fe0e9bba057745854
         </>
       );
 
@@ -76,10 +65,7 @@ const renderBannerFromType = ({
             componentRight={imageRight}
             smallPadding
           />
-<<<<<<< HEAD
           <MarqueeSlider />
-=======
->>>>>>> 6a7421e28a411a5b386ee94fe0e9bba057745854
         </>
       );
 
@@ -87,10 +73,7 @@ const renderBannerFromType = ({
       return (
         <>
           <DemoTopBanner title={title} subtitle={subtitle} />
-<<<<<<< HEAD
           <MarqueeSlider />
-=======
->>>>>>> 6a7421e28a411a5b386ee94fe0e9bba057745854
         </>
       );
 
@@ -104,10 +87,7 @@ const renderBannerFromType = ({
             buttonTwo={buttonTwo}
             componentRight={imageRight}
           />
-<<<<<<< HEAD
           <MarqueeSlider />
-=======
->>>>>>> 6a7421e28a411a5b386ee94fe0e9bba057745854
         </>
       );
     default:
@@ -121,10 +101,7 @@ const renderBannerFromType = ({
             componentRight={imageRight}
             smallPadding
           />
-<<<<<<< HEAD
           <MarqueeSlider />
-=======
->>>>>>> 6a7421e28a411a5b386ee94fe0e9bba057745854
         </>
       );
   }
@@ -139,7 +116,7 @@ export const TopBanner = ({
   secondButtonText,
   secondButtonUrl,
   prefix,
-  type
+  type,
 }: TopBannerProps & Prefix) => {
   //avoid delaying the largest contentful paint by lazy loading
   if (image.localFile) image.localFile.childImageSharp.loading = 'eager';
@@ -175,10 +152,6 @@ export const TopBanner = ({
     image,
     buttonOne,
     buttonTwo,
-<<<<<<< HEAD
-    type
-=======
     type,
->>>>>>> 6a7421e28a411a5b386ee94fe0e9bba057745854
   });
 };

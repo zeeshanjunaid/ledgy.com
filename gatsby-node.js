@@ -60,11 +60,7 @@ exports.createSchemaCustomization = ({ actions }) => {
   type ContentfulTitleWithGraphic implements Node {
     buttons: [ContentfulButton] @link(by: "id", from: "buttons___NODE")
   }
-<<<<<<< HEAD
-  union EntryProps = ContentfulTopBanner | ContentfulLogoBanner | ContentfulSelectableCardsWithScreenshots | ContentfulFeatureGrid | ContentfulTestimonialCards | ContentfulTestimonials | ContentfulTitleWithGraphic | ContentfulContentWithChecklist | ContentfulCallToAction2021 | ContentfulChecklistWithScreenshot | ContentfulLongText | ContentfulStaticBlock | ContentfulLargeTestimonial | ContentfulCompetitorTable | ContentfulExplore
-=======
-  union EntryProps = ContentfulTopBanner | ContentfulLogoBanner | ContentfulSelectableCardsWithScreenshots | ContentfulFeatureGrid | ContentfulTestimonialCards | ContentfulTestimonials | ContentfulTitleWithGraphic | ContentfulContentWithChecklist | ContentfulCallToAction2021 | ContentfulChecklistWithScreenshot | ContentfulLongText | ContentfulStaticBlock | ContentfulLargeTestimonial | ContentfulCompetitorTable | ContentfulExplore | ContentfulTestimonialCarousel
->>>>>>> 6a7421e28a411a5b386ee94fe0e9bba057745854
+  union EntryProps = ContentfulTopBanner | ContentfulLogoBanner | ContentfulSelectableCardsWithScreenshots | ContentfulFeatureGrid | ContentfulTestimonialCards | ContentfulTitleWithGraphic | ContentfulContentWithChecklist | ContentfulCallToAction2021 | ContentfulChecklistWithScreenshot | ContentfulLongText | ContentfulStaticBlock | ContentfulLargeTestimonial | ContentfulCompetitorTable | ContentfulExplore | ContentfulTestimonialCarousel
   type ContentfulDemoPage2021 implements Node {
     title: String
     requesterType: String
