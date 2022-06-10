@@ -15,17 +15,29 @@ declare type EntryProps =
   | CompetitorTableProps
   | LargeTestimonialProps;
 
-declare type ContentfulPageProps = Id & {
+declare type BlogProps = {
+  id: string;
+  tags: string[];
+  slug: string;
   title: string;
   description: string;
-  date?: string;
-  author?: string;
-  content: Mdx;
-  slug: string;
-  region: Region;
-  cover?: ImageProps;
-  entries?: EntryProps[];
+  author: string;
+  cover: ImageProps;
 };
+
+declare type ContentfulPageProps =
+  | (Id & {
+      title: string;
+      description: string;
+      date?: string;
+      author?: string;
+      content: Mdx;
+      slug: string;
+      region: Region;
+      cover?: ImageProps;
+      entries?: EntryProps[];
+    })
+  | BlogProps;
 
 declare type AllContentfulCustomerStoryProps = Id & {
   company: CompanyProps;

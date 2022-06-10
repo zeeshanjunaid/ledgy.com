@@ -1,9 +1,8 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-
-import { dynamicI18n } from '../helpers';
 import { ComponentPicker } from '../components';
 import { Helmet } from 'react-helmet';
+import React from 'react';
+import { dynamicI18n } from '../helpers';
+import { graphql } from 'gatsby';
 
 const isTopBanner = (entry: MainPageEntryProps): entry is TopBannerProps =>
   entry.__typename === 'ContentfulTopBanner';
@@ -77,33 +76,6 @@ export const TestimonialCardsFragment = graphql`
           }
         }
       }
-    }
-  }
-`;
-
-export const TestimonialFragment = graphql`
-  fragment TestimonialFragment on ContentfulTestimonials {
-    id
-    __typename
-    header
-    testimonial {
-      name
-      description {
-        childMdx {
-          body
-        }
-      }
-      url
-      image {
-        localFile {
-          childImageSharp {
-            fixed(height: 120) {
-              ...GatsbyImageSharpFixed
-            }
-          }
-        }
-      }
-      small
     }
   }
 `;

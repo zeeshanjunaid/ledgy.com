@@ -32,7 +32,7 @@ $theme-colors: (
   "success": $vibrant-green,
   "danger": $highlight-red,
   "gray-light":$gray-100,
-  "gray-light-neural":$gray-300,
+  "gray-light-neutral":$gray-300,
   "gray-neutral": $gray-500,
   "black": black,
   "lightest": $gray-050,
@@ -42,6 +42,7 @@ $theme-colors: (
 $box-shadow:                        0 8px 16px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
 $box-shadow-light:                  0 2px 4px 1px rgba(30, 43, 70, 0.25), 0 1px 1px rgba(30, 43, 70, 0.15);
 $box-shadow-lighter:                0 0 10px rgba(0,0,0,0.3);
+$box-shadow-lightest:                0 0 10px rgba(0,0,0,0.1);
 $box-shadow-wide:                   0px 0px 20px 5px  rgba(30,43,70,0.04), 0px 4px 10px 0px rgba(30,43,70,0.08), 0px 5px 70px 20px rgba(30,43,70,0.1);
 $navbar-min-height:                 70px !default;
 
