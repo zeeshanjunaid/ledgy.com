@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { TopBannerLayout } from '../TopBannerLayout';
+import { TopBannerLayout } from './TopBannerLayout';
 
 import { DemoForm } from '../forms';
 import { CapterraBadge, G2Badge, SourceforgeBadge } from '../../layouts/demo';

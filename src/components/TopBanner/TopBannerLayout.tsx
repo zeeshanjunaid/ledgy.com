@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 
-import { CustomFade, Section } from './utils';
+import { CustomFade, Section } from '../utils';
 
 type TopBannerLayoutProps = {
   title: ReactNode | string;

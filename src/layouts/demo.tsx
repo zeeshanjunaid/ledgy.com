@@ -10,7 +10,7 @@ import { targetBlank } from '../helpers';
 
 import { Title } from './utils';
 import { RequesterType } from '../components/forms/lib';
-import { TopBannerLayout } from '../components/TopBannerLayout';
+import { TopBannerLayout } from '../components';
 import { DATA_PROTECTION } from '../helpers';
 
 type DemoPageProps = {
