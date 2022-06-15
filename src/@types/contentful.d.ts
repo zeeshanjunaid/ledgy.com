@@ -183,7 +183,13 @@ declare type SelectableCardsWithScreenshotsProps = Id & {
   header: string;
   content: SelectableCardWithScreenshotProps[];
 };
-declare type BannerType = 'normal' | 'demo' | 'no-button' | 'one-button' | 'extra-link';
+declare type BannerType =
+  | 'normal'
+  | 'demo'
+  | 'no-button'
+  | 'one-button'
+  | 'extra-link'
+  | 'product-hunt';
 
 declare type TopBannerProps = Id & {
   __typename: 'ContentfulTopBanner';

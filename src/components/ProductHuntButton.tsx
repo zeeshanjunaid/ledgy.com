@@ -15,7 +15,7 @@ export const ProductHuntButton = ({
 }) => (
   <Button
     href={productHuntLink}
-    className="d-flex align-items-start p-0 mb-2"
+    className="d-flex align-items-start p-0"
     onClick={() => track(trackSignupKey)}
     inverted
   >
@@ -23,7 +23,6 @@ export const ProductHuntButton = ({
       src={`https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=${postId}&theme=light`}
       alt={altText}
       className="product-hunt-logo"
-      height="39.6px"
     />
   </Button>
 );

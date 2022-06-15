@@ -2,10 +2,10 @@ import React from 'react';
 import Img, { GatsbyImageFluidProps } from 'gatsby-image';
 
 import { calculatorUrl, track } from '../helpers';
-import { ProductHuntButton } from './ProductHuntButton';
 
 import { Button, DynamicTrans } from './utils';
-import { TopBannerLayout } from './TopBannerLayout';
+import { TopBannerLayout } from './TopBanner';
+import { PHFundraisingCalculatorButton } from './productHuntButtons';
 
 const title = <DynamicTrans>The calculator you need if you’re raising capital</DynamicTrans>;
 
@@ -39,12 +39,9 @@ const buttonOne = (
 );
 
 const productHuntLaunchButton = (
-  <ProductHuntButton
-    productHuntLink="https://www.producthunt.com/posts/startup-fundraising-calculator?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-startup-fundraising-calculator"
-    trackSignupKey="clickProductHunt"
-    postId="169181"
-    altText="Startup Fundraising Calculator - The calculator you need if you're raising money. | Product Hunt Embed"
-  />
+  <div className="pb-2">
+    <PHFundraisingCalculatorButton />
+  </div>
 );
 
 export const CalculatorHeader = ({

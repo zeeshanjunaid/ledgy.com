@@ -29,7 +29,7 @@ export * from './SubscriptionModal';
 export * from './templates';
 export * from './TestimonialCards';
 export * from './TitleWithGraphic';
-export * from './TopBannerLayout';
+export { TopBannerLayout } from './TopBanner';
 export * from './utils';
 export * from './CustomButton';
 export * from './popup';

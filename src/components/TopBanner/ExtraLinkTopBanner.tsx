@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import { appUrl, GET_STARTED_LINK, trackClick } from '../../helpers';
 
-import { TopBannerLayout } from '../TopBannerLayout';
+import { TopBannerLayout } from './TopBannerLayout';
 
 import { LinkWithChevron } from '../utils';
 

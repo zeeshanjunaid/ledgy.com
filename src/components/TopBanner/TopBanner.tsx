@@ -1,20 +1,22 @@
+import { DemoTopBanner } from './DemoTopBanner';
+import { ExtraLinkTopBanner } from './ExtraLinkTopBanner';
 import React from 'react';
-import { t } from '@lingui/macro';
 
-import { demoPage } from '../helpers';
-import { RequestDemoButton } from './RequestDemoButton';
 import { TopBannerLayout } from './TopBannerLayout';
 
-import { DynamicTrans, Image } from './utils';
-
-import { DemoTopBanner } from './topBanners/DemoTopBanner';
-import { ExtraLinkTopBanner } from './topBanners/ExtraLinkTopBanner';
-import { CustomButton } from './CustomButton';
-
-const DEMO_BANNER = 'demo';
-const NO_BUTTONS_BANNER = 'no-button';
-const ONE_BUTTON_BANNER = 'one-button';
-const EXTRA_LINK_BANNER = 'extra-link';
+import { t } from '@lingui/macro';
+import { ProductHuntTopBanner } from './ProductHuntTopBanner';
+import { DynamicTrans, Image } from '../utils';
+import { RequestDemoButton } from '../RequestDemoButton';
+import { demoPage } from '../../helpers';
+import { CustomButton } from '../CustomButton';
+import {
+  DEMO_BANNER,
+  EXTRA_LINK_BANNER,
+  NO_BUTTONS_BANNER,
+  ONE_BUTTON_BANNER,
+  PRODUCT_HUNT_BANNER,
+} from './lib';
 
 const Screenshot = ({ image }: { image: ImageProps }) => (
   <div className="mt-sm-4 mt-xl-0 p-0 screenshot">
@@ -77,6 +79,15 @@ const renderBannerFromType = ({
           componentRight={imageRight}
         />
       );
+    case PRODUCT_HUNT_BANNER:
+      return (
+        <ProductHuntTopBanner
+          title={title}
+          subtitle={subtitle}
+          buttonOne={buttonOne}
+          componentRight={imageRight}
+        />
+      );
     default:
       return (
         <TopBannerLayout
@@ -130,5 +141,12 @@ export const TopBanner = ({
     <CustomButton url={secondButtonUrl} text={secondButtonText} isTopBanner isPrimary={isPrimary} />
   );
 
-  return renderBannerFromType({ mainHeader, description, image, buttonOne, buttonTwo, type });
+  return renderBannerFromType({
+    mainHeader,
+    description,
+    image,
+    buttonOne,
+    buttonTwo,
+    type,
+  });
 };
