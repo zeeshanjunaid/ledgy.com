@@ -1,5 +1,10 @@
 type Id = { id: string };
 
+type Link = {
+  url: string;
+  text: string;
+};
+
 declare type EntryProps =
   | LogoBannerProps
   | SelectableCardsWithScreenshotsProps
@@ -13,6 +18,8 @@ declare type EntryProps =
   | StaticBlockProps
   | CompetitorTableProps
   | LargeTestimonialProps
+  | ExploreProps
+  | TestimonialCarouselProps
   | RegionalComponentPickerProps;
 
 declare type ContentfulPageProps = Id & {
@@ -270,6 +277,40 @@ declare type CompetitorTableProps = Id & {
   header: string;
   competitorName: string;
   tableSection: CompetitorTableSectionProps[];
+};
+
+declare type ExploreSectionProps = Id & {
+  id: number;
+  columnName: string;
+  title: string;
+  text: string;
+  image: ImageProps;
+  link: Link;
+};
+
+declare type ExploreProps = Id & {
+  __typename: 'ContentfulExplore';
+  textRight: boolean;
+  title: string;
+  sections: ExploreSectionProps[];
+};
+
+declare type TestimonialCarouselSectionProps = Id & {
+  logo: ImageProps;
+  quote: string;
+  customerName: string;
+  customerRole: string;
+  primaryColor: string;
+  secondaryColor: string;
+  outcomeNumber: string;
+  outcomeText: string;
+  link: Link;
+};
+
+declare type TestimonialCarouselProps = Id & {
+  __typename: 'ContentfulTestimonialCarousel';
+  title: string;
+  testimonials: TestimonialCarouselSectionProps[];
 };
 
 declare type RegionalComponentPickerEntriesProps = Id & {

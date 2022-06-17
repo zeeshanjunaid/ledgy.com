@@ -263,6 +263,65 @@ export const CompetitorTableFragment = graphql`
   }
 `;
 
+export const ExploreFragment = graphql`
+  fragment ExploreFragment on ContentfulExplore {
+    id
+    __typename
+    title
+    textRight
+    sections {
+      id
+      columnName
+      title
+      text
+      image {
+        localFile {
+          childImageSharp {
+            fluid(maxHeight: 1200, maxWidth: 1200, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+      link {
+        text
+        url
+      }
+    }
+  }
+`;
+
+export const TestimonialsCarousel = graphql`
+  fragment TestimonialsCarousel on ContentfulTestimonialCarousel {
+    id
+    __typename
+    title
+    testimonials {
+      id
+      logo {
+        localFile {
+          childImageSharp {
+            fixed(width: 130) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+      quote
+      customerName
+      customerRole
+      primaryColor
+      secondaryColor
+      outcomeNumber
+      outcomeText
+      link {
+        text
+        url
+      }
+    }
+  }
+`;
+
 export const ChecklistWithScreenshotFragment = graphql`
   fragment ChecklistWithScreenshotFragment on ContentfulChecklistWithScreenshot {
     id
@@ -372,6 +431,8 @@ export const indexPageQuery = graphql`
             ...CompetitorTableFragment
             ...ChecklistWithScreenshotFragment
             ...LargeTestimonialFragment
+            ...ExploreFragment
+            ...TestimonialsCarousel
           }
         }
       }
