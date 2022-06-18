@@ -10,17 +10,23 @@ import { LongTextComponent } from './LongTextComponent';
 import React from 'react';
 import { SelectableCardsWithScreenshots } from './cardsWithScreenshots';
 import { StaticBlockPicker } from './StaticBlockPicker';
+<<<<<<< HEAD
 import { TestimonialCards } from './TestimonialCards';
 import { Testimonials } from './Testimonials';
 <<<<<<< HEAD
 import { TitleWithGraphic } from './TitleWithGraphic';
 import { TopBanner } from './TopBanner';
 =======
+=======
+>>>>>>> 5ab8cd542b59d1981d1bc5ebef7164c40d8078c3
 import { LargeTestimonial } from './LargeTestimonial';
 import { CompetitorsTable } from './competitorsTable';
 import { Explore } from './Explore';
 import { TestimonialsCarousel } from './TestimonialsCarousel';
+<<<<<<< HEAD
 >>>>>>> 6a7421e28a411a5b386ee94fe0e9bba057745854
+=======
+>>>>>>> 5ab8cd542b59d1981d1bc5ebef7164c40d8078c3
 
 export const ComponentPicker = ({
   entry,
@@ -28,7 +34,6 @@ export const ComponentPicker = ({
   ...baseProps
 }: Prefix & Region & { entry: MainPageEntryProps; smallPadding?: boolean }) => {
   if (!entry.id) return null;
-
   switch (entry.__typename) {
     case 'ContentfulTopBanner':
       return <TopBanner {...baseProps} {...entry} />;
@@ -63,9 +68,6 @@ export const ComponentPicker = ({
     case 'ContentfulStaticBlock':
       return <StaticBlockPicker {...baseProps} {...entry} />;
 
-    case 'ContentfulTestimonials':
-      return <Testimonials {...baseProps} {...entry} />;
-
     case 'ContentfulLargeTestimonial':
       return <LargeTestimonial {...baseProps} {...entry} />;
 
@@ -76,11 +78,17 @@ export const ComponentPicker = ({
       return <Explore {...baseProps} {...entry} />;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     case 'ContentfulTestimonialCarousel':
       return <TestimonialsCarousel {...baseProps} {...entry} />;
 
 >>>>>>> 6a7421e28a411a5b386ee94fe0e9bba057745854
+=======
+    case 'ContentfulTestimonialCarousel':
+      return <TestimonialsCarousel {...baseProps} {...entry} />;
+
+>>>>>>> 5ab8cd542b59d1981d1bc5ebef7164c40d8078c3
     default:
       throw new Error('content __typename not recognized');
   }

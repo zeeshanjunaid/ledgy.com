@@ -16,15 +16,20 @@ declare type EntryProps =
   | ChecklistWithScreenshotProps
   | LongTextComponentProps
   | StaticBlockProps
-  | TestimonialsProps
   | CompetitorTableProps
   | LargeTestimonialProps
+<<<<<<< HEAD
 <<<<<<< HEAD
   | ExploreProps;
 =======
   | ExploreProps
   | TestimonialCarouselProps;
 >>>>>>> 6a7421e28a411a5b386ee94fe0e9bba057745854
+=======
+  | ExploreProps
+  | TestimonialCarouselProps
+  | RegionalComponentPickerProps;
+>>>>>>> 5ab8cd542b59d1981d1bc5ebef7164c40d8078c3
 
 declare type ContentfulPageProps = Id & {
   title: string;
@@ -90,6 +95,11 @@ declare type TestimonialCardProps = {
   linkUrl?: string;
 };
 
+declare type TestimonialsProps = Id & {
+  __typename: 'ContentfulTestimonials';
+  testimonial: TestimonialProps[];
+};
+
 declare type TestimonialProps = {
   name: string;
   description: Mdx;
@@ -112,10 +122,6 @@ declare type TestimonialCardsProps = Id & {
   cards: TestimonialCardProps[];
 };
 
-declare type TestimonialsProps = Id & {
-  __typename: 'ContentfulTestimonials';
-  testimonial: TestimonialProps[];
-};
 declare type ButtonProps = Id & {
   __typename: 'ContentfulButton';
   text: string;
@@ -283,6 +289,7 @@ declare type ExploreSectionProps = Id & {
   text: string;
   image: ImageProps;
 <<<<<<< HEAD
+<<<<<<< HEAD
   link: {
     url: string;
     text: string;
@@ -290,16 +297,22 @@ declare type ExploreSectionProps = Id & {
 =======
   link: Link;
 >>>>>>> 6a7421e28a411a5b386ee94fe0e9bba057745854
+=======
+  link: Link;
+>>>>>>> 5ab8cd542b59d1981d1bc5ebef7164c40d8078c3
 };
 
 declare type ExploreProps = Id & {
   __typename: 'ContentfulExplore';
   textRight: boolean;
 <<<<<<< HEAD
+<<<<<<< HEAD
   title: boolean;
   sections: ExploreSectionProps[];
 };
 =======
+=======
+>>>>>>> 5ab8cd542b59d1981d1bc5ebef7164c40d8078c3
   title: string;
   sections: ExploreSectionProps[];
 };
@@ -321,4 +334,20 @@ declare type TestimonialCarouselProps = Id & {
   title: string;
   testimonials: TestimonialCarouselSectionProps[];
 };
+<<<<<<< HEAD
 >>>>>>> 6a7421e28a411a5b386ee94fe0e9bba057745854
+=======
+
+declare type RegionalComponentPickerEntriesProps = Id & {
+  __typename: 'ContentfulRegionalComponentPickerEntries';
+  global: EntryProps;
+  uk: EntryProps;
+  de: EntryProps;
+  fr: EntryProps;
+};
+
+declare type RegionalComponentPickerProps = Id & {
+  __typename: 'ContentfulRegionalComponentPicker';
+  entries: RegionalComponentPickerEntriesProps;
+};
+>>>>>>> 5ab8cd542b59d1981d1bc5ebef7164c40d8078c3

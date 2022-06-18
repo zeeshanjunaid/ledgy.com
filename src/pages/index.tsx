@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 import { ComponentPicker } from '../components';
+=======
+import React from 'react';
+import { graphql } from 'gatsby';
+
+import { dynamicI18n } from '../helpers';
+import { EntryPicker } from '../components';
+>>>>>>> 5ab8cd542b59d1981d1bc5ebef7164c40d8078c3
 import { Helmet } from 'react-helmet';
 import React from 'react';
 import { dynamicI18n } from '../helpers';
@@ -30,13 +38,9 @@ const IndexPage = (props: Props) => {
       <div className="main-wrapper-2">
         <div className="top-page-wrapper d-flex flex-column justify-content-between">
           <span />
-          {topPageComponents.map((entry, i) => (
-            <ComponentPicker entry={entry} {...baseProps} key={`${entry.id}-${i}`} smallPadding />
-          ))}
+          <EntryPicker entries={topPageComponents} {...baseProps}></EntryPicker>
         </div>
-        {restOfComponents.map((entry, i) => (
-          <ComponentPicker {...baseProps} entry={entry} key={`${entry.id}-${i}`} />
-        ))}
+        <EntryPicker entries={restOfComponents} {...baseProps}></EntryPicker>
       </div>
     </main>
   );
@@ -76,33 +80,6 @@ export const TestimonialCardsFragment = graphql`
           }
         }
       }
-    }
-  }
-`;
-
-export const TestimonialFragment = graphql`
-  fragment TestimonialFragment on ContentfulTestimonials {
-    id
-    __typename
-    header
-    testimonial {
-      name
-      description {
-        childMdx {
-          body
-        }
-      }
-      url
-      image {
-        localFile {
-          childImageSharp {
-            fixed(height: 120) {
-              ...GatsbyImageSharpFixed
-            }
-          }
-        }
-      }
-      small
     }
   }
 `;
@@ -161,6 +138,31 @@ export const ContentfulTopBannerFragment = graphql`
             ...GatsbyImageSharpFluid
           }
         }
+      }
+    }
+  }
+`;
+
+export const RegionalComponentPickerFragment = graphql`
+  fragment RegionalComponentPickerFragment on ContentfulRegionalComponentPicker {
+    id
+    __typename
+    entries {
+      global {
+        ...LogoBannerFragment
+        ...FeatureGridFragment
+      }
+      uk {
+        ...LogoBannerFragment
+        ...FeatureGridFragment
+      }
+      de {
+        ...LogoBannerFragment
+        ...FeatureGridFragment
+      }
+      fr {
+        ...LogoBannerFragment
+        ...FeatureGridFragment
       }
     }
   }
@@ -297,7 +299,10 @@ export const ExploreFragment = graphql`
 `;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 5ab8cd542b59d1981d1bc5ebef7164c40d8078c3
 export const TestimonialsCarousel = graphql`
   fragment TestimonialsCarousel on ContentfulTestimonialCarousel {
     id
@@ -329,7 +334,10 @@ export const TestimonialsCarousel = graphql`
   }
 `;
 
+<<<<<<< HEAD
 >>>>>>> 6a7421e28a411a5b386ee94fe0e9bba057745854
+=======
+>>>>>>> 5ab8cd542b59d1981d1bc5ebef7164c40d8078c3
 export const ChecklistWithScreenshotFragment = graphql`
   fragment ChecklistWithScreenshotFragment on ContentfulChecklistWithScreenshot {
     id
@@ -441,9 +449,13 @@ export const indexPageQuery = graphql`
             ...LargeTestimonialFragment
             ...ExploreFragment
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             ...TestimonialsCarousel
 >>>>>>> 6a7421e28a411a5b386ee94fe0e9bba057745854
+=======
+            ...TestimonialsCarousel
+>>>>>>> 5ab8cd542b59d1981d1bc5ebef7164c40d8078c3
           }
         }
       }

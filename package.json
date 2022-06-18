@@ -75,10 +75,14 @@
     "react-fast-marquee": "^1.3.2",
     "react-helmet": "6.1.0",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "react-scroll": "^1.8.7",
 =======
     "react-scroll": "1.8.7",
 >>>>>>> 6a7421e28a411a5b386ee94fe0e9bba057745854
+=======
+    "react-scroll": "1.8.7",
+>>>>>>> 5ab8cd542b59d1981d1bc5ebef7164c40d8078c3
     "react-transition-group": "4.4.2",
     "react-visibility-sensor": "5.1.1",
     "react-wordcloud": "1.2.7",

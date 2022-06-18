@@ -4,7 +4,7 @@ import React from 'react';
 
 import { dynamicI18n } from '../helpers';
 import { formatUrl } from '../components/lib';
-import { ComponentPicker, DemoForm, DynamicTrans } from '../components';
+import { DemoForm, DynamicTrans, EntryPicker } from '../components';
 
 import { targetBlank } from '../helpers';
 
@@ -89,9 +89,7 @@ const DemoPage = (props: Props) => {
         componentRight={form}
       />
       <div className="position-relative bg-white z-index-base">
-        {content.map((v, i) => (
-          <ComponentPicker {...baseProps} entry={v} key={`${v.id}-${i}`} />
-        ))}
+        <EntryPicker {...baseProps} entries={content} />
       </div>
       <footer className="footer d-flex align-items-center justify-content-center text-white bg-primary p-2">
         <a
@@ -127,6 +125,7 @@ export const demoQuery = graphql`
       requesterType
       content {
         ...FeatureGridFragment
+        ...RegionalComponentPickerFragment
         ...TestimonialCardsFragment
         ...ContentWithChecklistFragment
         ...TitleWithGraphicFragment

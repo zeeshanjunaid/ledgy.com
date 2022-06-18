@@ -1,17 +1,23 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* eslint-disable prettier/prettier */
 =======
 >>>>>>> 6a7421e28a411a5b386ee94fe0e9bba057745854
+=======
+>>>>>>> 5ab8cd542b59d1981d1bc5ebef7164c40d8078c3
 import { DynamicTrans, Image } from './utils';
 
 import { CustomButton } from './CustomButton';
 import { DemoTopBanner } from './topBanners/DemoTopBanner';
 import { ExtraLinkTopBanner } from './topBanners/ExtraLinkTopBanner';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { LogosSection } from './LogosSection';
 import { MarqueeSlider } from './MarqueeSlider';
 =======
 >>>>>>> 6a7421e28a411a5b386ee94fe0e9bba057745854
+=======
+>>>>>>> 5ab8cd542b59d1981d1bc5ebef7164c40d8078c3
 import React from 'react';
 import { RequestDemoButton } from './RequestDemoButton';
 import { TopBannerLayout } from './TopBannerLayout';
@@ -60,9 +66,12 @@ const renderBannerFromType = ({
             smallPadding
           />
 <<<<<<< HEAD
+<<<<<<< HEAD
           <MarqueeSlider />
 =======
 >>>>>>> 6a7421e28a411a5b386ee94fe0e9bba057745854
+=======
+>>>>>>> 5ab8cd542b59d1981d1bc5ebef7164c40d8078c3
         </>
       );
 
@@ -77,9 +86,12 @@ const renderBannerFromType = ({
             smallPadding
           />
 <<<<<<< HEAD
+<<<<<<< HEAD
           <MarqueeSlider />
 =======
 >>>>>>> 6a7421e28a411a5b386ee94fe0e9bba057745854
+=======
+>>>>>>> 5ab8cd542b59d1981d1bc5ebef7164c40d8078c3
         </>
       );
 
@@ -88,9 +100,12 @@ const renderBannerFromType = ({
         <>
           <DemoTopBanner title={title} subtitle={subtitle} />
 <<<<<<< HEAD
+<<<<<<< HEAD
           <MarqueeSlider />
 =======
 >>>>>>> 6a7421e28a411a5b386ee94fe0e9bba057745854
+=======
+>>>>>>> 5ab8cd542b59d1981d1bc5ebef7164c40d8078c3
         </>
       );
 
@@ -105,9 +120,12 @@ const renderBannerFromType = ({
             componentRight={imageRight}
           />
 <<<<<<< HEAD
+<<<<<<< HEAD
           <MarqueeSlider />
 =======
 >>>>>>> 6a7421e28a411a5b386ee94fe0e9bba057745854
+=======
+>>>>>>> 5ab8cd542b59d1981d1bc5ebef7164c40d8078c3
         </>
       );
     default:
@@ -122,9 +140,12 @@ const renderBannerFromType = ({
             smallPadding
           />
 <<<<<<< HEAD
+<<<<<<< HEAD
           <MarqueeSlider />
 =======
 >>>>>>> 6a7421e28a411a5b386ee94fe0e9bba057745854
+=======
+>>>>>>> 5ab8cd542b59d1981d1bc5ebef7164c40d8078c3
         </>
       );
   }
@@ -176,9 +197,13 @@ export const TopBanner = ({
     buttonOne,
     buttonTwo,
 <<<<<<< HEAD
+<<<<<<< HEAD
     type
 =======
     type,
 >>>>>>> 6a7421e28a411a5b386ee94fe0e9bba057745854
+=======
+    type,
+>>>>>>> 5ab8cd542b59d1981d1bc5ebef7164c40d8078c3
   });
 };
