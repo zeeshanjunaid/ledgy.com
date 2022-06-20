@@ -15,12 +15,12 @@ export const ExploreSection = ({ explore }: { explore: ExploreProps }) => {
   const { id, title: sectionTitle, text, link, image } = activeData;
 
   useEffect(() => {
-    scroller.scrollTo('activeTab', {
+    scroller.scrollTo(`activeTab-${id}`, {
       duration: 500,
       delay: 0,
       smooth: true,
       horizontal: true,
-      containerId: 'scrollableContainer',
+      containerId: `scrollableContainer-${id}`,
       offset: 0,
       isDynamic: true,
     });
@@ -54,10 +54,12 @@ export const ExploreSection = ({ explore }: { explore: ExploreProps }) => {
         </motion.div>
       </AnimatePresence>
       <div className={`twocolumnstabs ${textRight ? 'twocolumnstabs-left' : null}`}>
-        <div className="twocolumnstabs-wrapper" id="scrollableContainer">
+        <div className="twocolumnstabs-wrapper" id={`scrollableContainer-${id}`}>
           {sections.map(({ columnName }, index) => (
             <div
-              className={`twocolumnstabs-item ${index === activeindex ? 'activeTab' : ''}`}
+              className={`twocolumnstabs-item ${
+                index === activeindex ? `activeTab-${id} activeTab` : ''
+              }`}
               key={index}
               onClick={() => setActiveIndex(index)}
             >

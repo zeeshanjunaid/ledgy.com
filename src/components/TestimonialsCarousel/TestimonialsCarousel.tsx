@@ -11,35 +11,36 @@ export const TestimonialsCarousel = (testimonialsCarousel: TestimonialCarouselPr
   const { id, secondaryColor } = activeTestimonial;
 
   return (
-    <AnimatePresence exitBeforeEnter>
-      <motion.div
-        key={id}
-        className="fullHeightTestimonial"
-        transition={{ duration: 0.35, easeing: 'anticipate' }}
-      >
-        <div className="container">
-          <div className="fullHeightTestimonial-wrapper">
-            <div className="fullheighttestimonial-title">
-              {' '}
-              <h2 style={{ color: secondaryColor }}>{title}</h2>
-            </div>
-            <div className="fullheighttestimonial-slider">
-              <div className="fullheighttestimonial-slider-wrapper">
+    <section className="fullHeightTestimonial-section fullHeightTestimonial">
+      <AnimatePresence exitBeforeEnter>
+        <motion.div key={id} transition={{ duration: 0.35, easeing: 'anticipate' }}>
+          <div className="container">
+            <div className="fullHeightTestimonial-wrapper">
+              <div className="fullheighttestimonial-title">
+                {' '}
+                <h2 style={{ color: secondaryColor }}>{title}</h2>
+              </div>
+              <div className="fullheighttestimonial-slider">
                 <TestimonialsCarouselSection
                   testimonials={testimonials}
                   activeIndex={activeIndex}
                   setActiveIndex={setActiveIndex}
                 />
               </div>
-              <LogosBar
-                testimonials={testimonials}
-                activeIndex={activeIndex}
-                setActiveIndex={setActiveIndex}
-              />
             </div>
           </div>
+        </motion.div>
+      </AnimatePresence>
+
+      <div className="container">
+        <div className="fullHeightTestimonial-wrapper">
+          <LogosBar
+            testimonials={testimonials}
+            activeIndex={activeIndex}
+            setActiveIndex={setActiveIndex}
+          />
         </div>
-      </motion.div>
-    </AnimatePresence>
+      </div>
+    </section>
   );
 };
