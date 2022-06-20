@@ -1,12 +1,18 @@
 .fullHeightTestimonial {
   width: 100%;
   @extend .bg-lightest;
+  &-section {
+      padding: 3rem 3rem ;
+      @media (max-width: 992px) {
+        padding: 7.5rem 0 14rem 0;
+      }
+  }
 }
 
 .fullHeightTestimonial-wrapper {
-  padding: 3rem 3rem ;
+  padding: 0rem 3rem ;
   @media (max-width: 992px) {
-    padding: 7.5rem 0 14rem 0;
+    padding: 0rem;
   }
 }
 .fullheighttestimonial-title {
@@ -203,8 +209,14 @@
   }
   &-wrapper {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
+    overflow-y: hidden;
+    position: relative;
+    &::-webkit-scrollbar {
+      width: 0;
+      display: none;
+      opacity: 0;
+    }
   }
   &-item {
     cursor: pointer;
