@@ -1,0 +1,1 @@
+export { getPartnerLogos } from './getPartnerLogos';
