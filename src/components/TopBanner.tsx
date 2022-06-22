@@ -1,15 +1,12 @@
-import React from 'react';
-import { t } from '@lingui/macro';
-
-import { demoPage } from '../helpers';
-import { RequestDemoButton } from './RequestDemoButton';
-import { TopBannerLayout } from './TopBannerLayout';
-
 import { DynamicTrans, Image } from './utils';
-
+import { CustomButton } from './CustomButton';
 import { DemoTopBanner } from './topBanners/DemoTopBanner';
 import { ExtraLinkTopBanner } from './topBanners/ExtraLinkTopBanner';
-import { CustomButton } from './CustomButton';
+import React from 'react';
+import { RequestDemoButton } from './RequestDemoButton';
+import { TopBannerLayout } from './TopBannerLayout';
+import { demoPage } from '../helpers';
+import { t } from '@lingui/macro';
 
 const DEMO_BANNER = 'demo';
 const NO_BUTTONS_BANNER = 'no-button';
@@ -44,24 +41,28 @@ const renderBannerFromType = ({
   switch (type) {
     case NO_BUTTONS_BANNER:
       return (
-        <TopBannerLayout
-          title={title}
-          subtitle={subtitle}
-          buttonOne={<></>}
-          componentRight={imageRight}
-          smallPadding
-        />
+        <>
+          <TopBannerLayout
+            title={title}
+            subtitle={subtitle}
+            buttonOne={<></>}
+            componentRight={imageRight}
+            smallPadding
+          />
+        </>
       );
 
     case ONE_BUTTON_BANNER:
       return (
-        <TopBannerLayout
-          title={title}
-          subtitle={subtitle}
-          buttonOne={buttonOne}
-          componentRight={imageRight}
-          smallPadding
-        />
+        <>
+          <TopBannerLayout
+            title={title}
+            subtitle={subtitle}
+            buttonOne={buttonOne}
+            componentRight={imageRight}
+            smallPadding
+          />
+        </>
       );
 
     case DEMO_BANNER:
@@ -69,24 +70,28 @@ const renderBannerFromType = ({
 
     case EXTRA_LINK_BANNER:
       return (
-        <ExtraLinkTopBanner
-          title={title}
-          subtitle={subtitle}
-          buttonOne={buttonOne}
-          buttonTwo={buttonTwo}
-          componentRight={imageRight}
-        />
+        <>
+          <ExtraLinkTopBanner
+            title={title}
+            subtitle={subtitle}
+            buttonOne={buttonOne}
+            buttonTwo={buttonTwo}
+            componentRight={imageRight}
+          />
+        </>
       );
     default:
       return (
-        <TopBannerLayout
-          title={title}
-          subtitle={subtitle}
-          buttonOne={buttonOne}
-          buttonTwo={buttonTwo}
-          componentRight={imageRight}
-          smallPadding
-        />
+        <>
+          <TopBannerLayout
+            title={title}
+            subtitle={subtitle}
+            buttonOne={buttonOne}
+            buttonTwo={buttonTwo}
+            componentRight={imageRight}
+            smallPadding
+          />
+        </>
       );
   }
 };
@@ -128,5 +133,12 @@ export const TopBanner = ({
     <CustomButton url={secondButtonUrl} text={secondButtonText} isTopBanner isPrimary={isPrimary} />
   );
 
-  return renderBannerFromType({ mainHeader, description, image, buttonOne, buttonTwo, type });
+  return renderBannerFromType({
+    mainHeader,
+    description,
+    image,
+    buttonOne,
+    buttonTwo,
+    type,
+  });
 };

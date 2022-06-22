@@ -10,6 +10,7 @@ import { JobBoard } from './JobBoard';
 import { ContactUs } from './ContactUs';
 import { Ledgistats } from './Ledgistats';
 import { Marketplaces } from './marketplace/marketplaces';
+import { PartnershipLogos } from './PartnershipLogos';
 
 export const StaticBlockPicker = ({
   block,
@@ -44,6 +45,9 @@ export const StaticBlockPicker = ({
       return <Marketplaces prefix={prefix} />;
     case 'contactUs':
       return <ContactUs />;
+    case 'partnershipCta':
+      return <PartnershipLogos />;
+
     default:
       throw new Error('static block not recognized');
   }
