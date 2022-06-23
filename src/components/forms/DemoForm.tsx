@@ -19,11 +19,6 @@ const { IDLE, FETCH_ERROR } = FORM_STATUSES;
 const REQUESTER_TYPES = [COMPANY, INVESTOR];
 const PARTNER = 'partner';
 
-const getReferrer = (pathname: string) => {
-  const slugs = pathname.split('/');
-  return slugs[slugs.length - 1];
-};
-
 export const DemoForm = ({
   defaultButtonText,
   contentfulRequesterType,
@@ -40,9 +35,8 @@ export const DemoForm = ({
 
   const partners = getPartners();
   const isPartnershipPage = pathname.includes(PARTNER);
-  const referrer = isPartnershipPage ? getReferrer(pathname) : '';
 
-  const [partner, setPartner] = useState(referrer);
+  const [partner, setPartner] = useState('');
 
   const [formStatus, setFormStatus] = useState(IDLE);
 
