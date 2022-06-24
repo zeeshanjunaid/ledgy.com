@@ -1,20 +1,19 @@
-import React from 'react';
-import { t } from '@lingui/macro';
+import { DynamicTrans, Image } from "./utils";
 
-import { demoPage } from '../helpers';
-import { RequestDemoButton } from './RequestDemoButton';
-import { TopBannerLayout } from './TopBannerLayout';
+import { CustomButton } from "./CustomButton";
+import { DemoTopBanner } from "./topBanners/DemoTopBanner";
+import { ExtraLinkTopBanner } from "./topBanners/ExtraLinkTopBanner";
+import LedgyHero from "./LedgyHero";
+import React from "react";
+import { RequestDemoButton } from "./RequestDemoButton";
+import { TopBannerLayout } from "./TopBannerLayout";
+import { demoPage } from "../helpers";
+import { t } from "@lingui/macro";
 
-import { DynamicTrans, Image } from './utils';
-
-import { DemoTopBanner } from './topBanners/DemoTopBanner';
-import { ExtraLinkTopBanner } from './topBanners/ExtraLinkTopBanner';
-import { CustomButton } from './CustomButton';
-
-const DEMO_BANNER = 'demo';
-const NO_BUTTONS_BANNER = 'no-button';
-const ONE_BUTTON_BANNER = 'one-button';
-const EXTRA_LINK_BANNER = 'extra-link';
+const DEMO_BANNER = "demo";
+const NO_BUTTONS_BANNER = "no-button";
+const ONE_BUTTON_BANNER = "one-button";
+const EXTRA_LINK_BANNER = "extra-link";
 
 const Screenshot = ({ image }: { image: ImageProps }) => (
   <div className="mt-sm-4 mt-xl-0 p-0 screenshot">
@@ -28,7 +27,7 @@ const renderBannerFromType = ({
   image,
   buttonOne,
   buttonTwo,
-  type = 'normal',
+  type = "normal",
 }: {
   mainHeader: string;
   description: string;
@@ -69,13 +68,16 @@ const renderBannerFromType = ({
 
     case EXTRA_LINK_BANNER:
       return (
-        <ExtraLinkTopBanner
-          title={title}
-          subtitle={subtitle}
-          buttonOne={buttonOne}
-          buttonTwo={buttonTwo}
-          componentRight={imageRight}
-        />
+        <>
+          <ExtraLinkTopBanner
+            title={title}
+            subtitle={subtitle}
+            buttonOne={buttonOne}
+            buttonTwo={buttonTwo}
+            componentRight={imageRight}
+          />
+          <LedgyHero />
+        </>
       );
     default:
       return (
@@ -103,10 +105,10 @@ export const TopBanner = ({
   type,
 }: TopBannerProps & Prefix) => {
   //avoid delaying the largest contentful paint by lazy loading
-  if (image.localFile) image.localFile.childImageSharp.loading = 'eager';
-  const isPrimary = firstButtonUrl.includes('#demo');
+  if (image.localFile) image.localFile.childImageSharp.loading = "eager";
+  const isPrimary = firstButtonUrl.includes("#demo");
 
-  const buttonClassName = 'my-sm-0 my-2 btn-xl d-inline mr-2';
+  const buttonClassName = "my-sm-0 my-2 btn-xl d-inline mr-2";
 
   const buttonOne = firstButtonUrl.includes(demoPage) ? (
     <RequestDemoButton
@@ -115,7 +117,12 @@ export const TopBanner = ({
       buttonClassName={buttonClassName}
     />
   ) : (
-    <CustomButton url={firstButtonUrl} text={firstButtonText} isTopBanner isPrimary={isPrimary} />
+    <CustomButton
+      url={firstButtonUrl}
+      text={firstButtonText}
+      isTopBanner
+      isPrimary={isPrimary}
+    />
   );
 
   const buttonTwo = secondButtonUrl.includes(demoPage) ? (
@@ -125,8 +132,20 @@ export const TopBanner = ({
       buttonClassName={buttonClassName}
     />
   ) : (
-    <CustomButton url={secondButtonUrl} text={secondButtonText} isTopBanner isPrimary={isPrimary} />
+    <CustomButton
+      url={secondButtonUrl}
+      text={secondButtonText}
+      isTopBanner
+      isPrimary={isPrimary}
+    />
   );
 
-  return renderBannerFromType({ mainHeader, description, image, buttonOne, buttonTwo, type });
+  return renderBannerFromType({
+    mainHeader,
+    description,
+    image,
+    buttonOne,
+    buttonTwo,
+    type,
+  });
 };
