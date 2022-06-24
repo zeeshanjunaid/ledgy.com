@@ -3,10 +3,11 @@ https://ledgy.com/* https://de.ledgy.com/de/:splat 302! Country=de
 https://ledgy.com/* https://uk.ledgy.com/uk/:splat 302! Country=gb
 https://ledgy.com/* https://fr.ledgy.com/fr/:splat 302! Country=fr
 
-https://deploy-preview-700--ledgy.netlify.app/partnership/* https://de.ledgy.com/de/:splat 302! Country=de
-https://deploy-preview-700--ledgy.netlify.app/partnership/* https://uk.ledgy.com/uk/:splat 302! Country=gb
-https://deploy-preview-700--ledgy.netlify.app/partnership/* https://fr.ledgy.com/fr/:splat 302! Country=fr
+https://deploy-preview-700--ledgy.netlify.app/* https://de.ledgy.com/:splat 302! Country=de
+https://deploy-preview-700--ledgy.netlify.app/* https://uk.ledgy.com/:splat 302! Country=gb
+https://deploy-preview-700--ledgy.netlify.app/* https://fr.ledgy.com/:splat 302! Country=fr
 
+https://de.ledgy.com/* https://ledgy.com/de/:splat 200!
 
 /*/company-pricing  /uk/company-pricing     200!  Country=gb
 
