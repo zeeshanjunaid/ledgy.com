@@ -69,6 +69,6 @@ export const ComponentPicker = ({
       return <TestimonialsCarousel {...baseProps} {...entry} />;
 
     default:
-      throw new Error('content __typename not recognized');
+      return <></>;
   }
 };

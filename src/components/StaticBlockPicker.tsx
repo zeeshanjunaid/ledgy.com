@@ -49,6 +49,6 @@ export const StaticBlockPicker = ({
       return <PartnershipLogos />;
 
     default:
-      throw new Error('static block not recognized');
+      return <> </>;
   }
 };
