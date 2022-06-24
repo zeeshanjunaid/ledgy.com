@@ -1,23 +1,16 @@
 https://ledgy.netlify.com/* https://ledgy.com/:splat 301!
-https://ledgy.com/* https://de.ledgy.com/de/:splat 302! Country=de
-https://ledgy.com/* https://uk.ledgy.com/uk/:splat 302! Country=gb
-https://ledgy.com/* https://fr.ledgy.com/fr/:splat 302! Country=fr
-
-https://deploy-preview-700--ledgy.netlify.app/* https://de.ledgy.com/:splat 302! Country=de
-https://deploy-preview-700--ledgy.netlify.app/* https://uk.ledgy.com/:splat 302! Country=gb
-https://deploy-preview-700--ledgy.netlify.app/* https://fr.ledgy.com/:splat 302! Country=fr
-
-https://de.ledgy.com/* https://ledgy.com/de/:splat 200!
+/  /uk     200!  Country=gb
+/  /de     200!  Country=de
+/  /fr     200!  Country=fr
 
 /*/company-pricing  /uk/company-pricing     200!  Country=gb
 
 /verify-signature https://support.ledgy.com/how-to-verify-the-validity-of-a-signature
 
 /psop/ utm_source=:utm_source /employee-participation-plan-templates/?utm_source=:utm_source 301
-/partner/:name /partnership/?utm_partner=:name&utm_source=:name  301
 /submit/6881367/* https://api.hsforms.com/submissions/v3/integration/submit/6881367/:splat 200
 /engage/* https://api.mixpanel.com/:splat 200
 /track/* https://api.mixpanel.com/:splat 200
 /signup/* /demo/:splat 301
 /career/ /jobs/ 301
-
+/partner/* /partnership/ 200

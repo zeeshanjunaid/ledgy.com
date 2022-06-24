@@ -433,6 +433,7 @@ export const indexPageQuery = graphql`
             ...LargeTestimonialFragment
             ...ExploreFragment
             ...TestimonialsCarousel
+            ...RegionalComponentPickerFragment
           }
         }
       }
