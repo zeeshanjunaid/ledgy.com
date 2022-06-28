@@ -1,8 +1,20 @@
 import React, { ReactNode } from 'react';
 import { graphql } from 'gatsby';
+import { BlogCard } from './blog';
 import Img from 'gatsby-image';
 
-import { CardLink } from './CardLink';
+export const CoverImageFragment = graphql`
+  fragment CoverImage on ImageSharp {
+    fluid(maxWidth: 375, maxHeight: 240, cropFocus: CENTER) {
+      ...GatsbyImageSharpFluid
+    }
+  }
+  fragment DefaultCover on Query {
+    ledgy: imageSharp(fluid: { originalName: { regex: "/ledgy.png/" } }) {
+      ...CoverImage
+    }
+  }
+`;
 
 export const ContentBody = ({ children }: { children: ReactNode | ReactNode[] }) => (
   <div className="container">{children}</div>
@@ -15,45 +27,36 @@ export const PostLink = ({
   prefix,
   isExternal = false,
   showImage = true,
+  author,
+  tags,
 }: Prefix & {
-  post: ContentfulPageProps;
+  post: ContentfulPageProps | BlogProps;
   to: string;
   description: string | ReactNode;
   isExternal?: boolean;
   showImage?: boolean;
+  author?: string;
+  tags?: string[];
 }) => {
   const { childImageSharp } = post.cover?.localFile || {};
   const image = childImageSharp ? <Img className="fit-cover" {...childImageSharp} /> : null;
 
   const title = <h5>{post.title}</h5>;
-  const { date } = post;
+
   return (
-    <CardLink
+    <BlogCard
       title={title}
-      type="blog"
       description={description}
-      date={date}
       to={to}
       image={image}
       isExternal={isExternal}
       prefix={prefix}
       showImage={showImage}
+      author={author}
+      tags={tags}
     />
   );
 };
-
-export const CoverImageFragment = graphql`
-  fragment CoverImage on ImageSharp {
-    fluid(maxWidth: 200, maxHeight: 200, cropFocus: CENTER) {
-      ...GatsbyImageSharpFluid
-    }
-  }
-  fragment DefaultCover on Query {
-    ledgy: imageSharp(fluid: { originalName: { regex: "/ledgy.png/" } }) {
-      ...CoverImage
-    }
-  }
-`;
 
 export const PublishDate = ({ date }: { date?: string }) =>
   date ? (

@@ -2,7 +2,6 @@ import React from 'react';
 import { TeamMembers } from './teamMembers';
 import { InvestorsList } from './investorsList';
 import { CompanyPricing, CompanyPricingCTAs, InvestorPricing } from './pricing';
-import { BlogsList } from './BlogsList';
 import { UpdatesList } from './UpdatesList';
 import { CustomerStoriesList } from './customerStories';
 import { WebinarsList } from './WebinarsList';
@@ -11,6 +10,7 @@ import { ContactUs } from './ContactUs';
 import { Ledgistats } from './Ledgistats';
 import { Marketplaces } from './marketplace/marketplaces';
 import { PartnershipLogos } from './PartnershipLogos';
+import { BlogsList } from './blog';
 
 export const StaticBlockPicker = ({
   block,

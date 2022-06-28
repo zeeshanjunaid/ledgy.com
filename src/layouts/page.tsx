@@ -52,7 +52,7 @@ const ContentfulPage = ({
       <div className="container container-small">
         <LongText {...baseProps} content={content} />
         <PublishDate date={date} />
-        {author && <Author {...baseProps} name={author} />}
+        {author && <Author name={author} />}
       </div>
       {!!entries && <EntryPicker entries={entries} {...baseProps} />}
     </div>

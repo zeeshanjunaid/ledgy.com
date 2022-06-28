@@ -48,14 +48,16 @@ export const UpdatesList = ({ prefix }: Prefix) => {
           const showUpdate = (!!tags && tags.includes(`Updates_${tag}`)) || tag === ALL_TOPICS;
 
           return showUpdate ? (
-            <PostLink
-              key={id}
-              to={`updates/${slug}`}
-              post={node}
-              description={postDescription}
-              prefix={prefix}
-              showImage={false}
-            />
+            <div className="my-4">
+              <PostLink
+                key={id}
+                to={`updates/${slug}`}
+                post={node}
+                description={postDescription}
+                prefix={prefix}
+                showImage={false}
+              />
+            </div>
           ) : (
             <div />
           );

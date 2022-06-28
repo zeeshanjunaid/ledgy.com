@@ -52,6 +52,7 @@ export const customLandingPageQuery = graphql`
         ...ExploreFragment
         ...TestimonialsCarousel
         ...RegionalComponentPickerFragment
+        ...StaticBlockFragment
       }
     }
   }

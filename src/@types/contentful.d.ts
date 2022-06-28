@@ -22,6 +22,16 @@ declare type EntryProps =
   | TestimonialCarouselProps
   | RegionalComponentPickerProps;
 
+declare type BlogProps = {
+  id: string;
+  tags: string[];
+  slug: string;
+  title: string;
+  description: string;
+  author: string;
+  cover: ImageProps;
+};
+
 declare type ContentfulPageProps = Id & {
   title: string;
   description: string;
