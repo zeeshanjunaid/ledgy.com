@@ -3,8 +3,6 @@ https://ledgy.netlify.com/* https://ledgy.com/:splat 301!
 /  /de     200!  Country=de
 /  /fr     200!  Country=fr
 
-/*/company-pricing  /uk/company-pricing     200!  Country=gb
-
 /verify-signature https://support.ledgy.com/how-to-verify-the-validity-of-a-signature
 
 /psop/ utm_source=:utm_source /employee-participation-plan-templates/?utm_source=:utm_source 301

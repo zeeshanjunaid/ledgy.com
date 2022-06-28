@@ -229,7 +229,7 @@ const addRegionRedirect = (pagePath, region, redirectFile) => {
   if (!isNetilfyBuild) return;
 
   const country = gatsbyCountry(region);
-  const entry = `${pagePath}  ${regionPrefix(region)}${pagePath} 200!  Country=${country}\n`;
+  const entry = `/*${pagePath}  ${regionPrefix(region)}${pagePath} 200!  Country=${country}\n`;
   redirectFile.write(entry);
 };
 
