@@ -5,11 +5,14 @@ const {
   DEPLOY_PRIME_URL,
   NODE_ENV,
   BRANCH,
+  CI,
   CONTENTFUL_SPACE_ID,
   CONTENTFUL_ACCESS_TOKEN,
   SEGMENT_DESTINATIONS,
 } = process.env;
 const src = `${__dirname}/src`;
+
+const isNetilfyBuild = !!CI;
 
 module.exports = {
   siteMetadata: {
@@ -42,7 +45,7 @@ module.exports = {
       options: {
         spaceId: CONTENTFUL_SPACE_ID,
         accessToken: CONTENTFUL_ACCESS_TOKEN,
-        host: BRANCH ? 'cdn.contentful.com' : 'preview.contentful.com',
+        host: isNetilfyBuild ? 'cdn.contentful.com' : 'preview.contentful.com',
         downloadLocal: true,
       },
     },

@@ -2,20 +2,22 @@ import React, { ReactNode } from 'react';
 import { Helmet } from 'react-helmet';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
-import { name } from '../helpers';
+import { dynamicI18n, name } from '../helpers';
 
 const MetaTags = ({
   indexable,
   title,
   description,
   thumbnailUrl,
+  keywords,
 }: {
   indexable: boolean;
   title: string;
   description?: string;
   thumbnailUrl?: string;
+  keywords?: string[];
 }) => (
-  <>
+  <Helmet>
     {!indexable && <meta name="robots" content="noindex"></meta>}
     {description && <meta name="description" content={description} />}
     <meta property="og:title" content={title} />
@@ -24,7 +26,8 @@ const MetaTags = ({
     <meta name="twitter:title" content={title} />
     {description && <meta name="twitter:description" content={description} />}
     {thumbnailUrl && <meta name="twitter:image" content={thumbnailUrl} />}
-  </>
+    {keywords && <meta name="keywords" content={dynamicI18n(keywords.join(', '))} />}
+  </Helmet>
 );
 
 export const Title = ({
@@ -33,24 +36,29 @@ export const Title = ({
   description,
   thumbnailUrl,
   indexable = true,
+  keywords,
 }: {
   title: string;
   section?: string;
   description?: string;
   thumbnailUrl?: string;
   indexable?: boolean;
+  keywords?: string[];
 }) => (
-  <Helmet>
-    <title>
-      {title} {section && `| ${section}`} | {name}
-    </title>
+  <>
+    <Helmet>
+      <title>
+        {title} {section && `| ${section}`} | {name}
+      </title>
+    </Helmet>
     <MetaTags
       indexable={indexable}
       title={title}
       description={description}
       thumbnailUrl={thumbnailUrl}
+      keywords={keywords}
     />
-  </Helmet>
+  </>
 );
 Title.defaultProps = { section: '', description: '', thumbnailUrl: '' };
 

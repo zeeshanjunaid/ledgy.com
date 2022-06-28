@@ -68,8 +68,9 @@ const App = ({ children, ...props }: AppProps) => {
         title={dynamicI18n(title)}
         description={dynamicI18n(description)}
         thumbnailUrl={thumbnailUrl}
+        keywords={keywords}
       />
-      <HelmetIndexLayout lang={region} siteUrl={siteUrl} pathname={pathname} keywords={keywords} />
+      <HelmetIndexLayout lang={region} siteUrl={siteUrl} pathname={pathname} />
       <Nav {...props} prefix={prefix} showInternalNavigation={showInternalNavigation} />
       {isAppShell ? (
         <Loader />

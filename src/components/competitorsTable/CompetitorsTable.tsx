@@ -11,7 +11,7 @@ export const CompetitorsTable = (table: CompetitorTableProps) => {
   const logoWidth = isMobile ? 90 : 141;
 
   return (
-    <Section className="bg-white">
+    <Section className="bg-white" noPadding>
       <h2 className="text-center p-4 pb-8">{header}</h2>
       <div className={`d-flex flex-row competitor-table-row`}>
         <div></div>

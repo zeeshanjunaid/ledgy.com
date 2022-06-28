@@ -1,9 +1,12 @@
 /* eslint-disable no-undef */
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
+const fs = require('fs');
 const { redirects } = require('./src/redirects.js');
 
-const { regions, regionPrefix } = require('./src/i18n-config.js');
+const { regions, regionPrefix, defaultRegion, gatsbyCountry } = require('./src/i18n-config.js');
+
+const isNetilfyBuild = !!process.env.CI;
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
@@ -222,16 +225,28 @@ const resolvePagePromise = (query, createPageWithData) =>
     });
   });
 
+const addRegionRedirect = (pagePath, region, redirectFile) => {
+  if (!isNetilfyBuild) return;
+
+  const country = gatsbyCountry(region);
+  const entry = `/*${pagePath}  ${regionPrefix(region)}${pagePath} 200!  Country=${country}\n`;
+  redirectFile.write(entry);
+};
+
 exports.createPages = ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions;
+  const redirectInBrowser = true;
+  const redirectFile = fs.createWriteStream('static/_redirects', { flags: 'a' });
+
   const createLocalizedPages = (pagePath, component, context) => {
-    regions.forEach((region) =>
-      createPage({ path: `${regionPrefix(region)}${pagePath}`, component, context })
-    );
+    regions.forEach((region) => {
+      createPage({ path: `${regionPrefix(region)}${pagePath}`, component, context });
+
+      if (region != defaultRegion) addRegionRedirect(pagePath, region, redirectFile);
+    });
   };
 
   redirects.forEach(([from, toPath]) => {
-    const redirectInBrowser = true;
     [from, `${from}/`].forEach((fromPath) => {
       createRedirect({ fromPath, toPath, redirectInBrowser });
       regions.forEach((region) =>
@@ -311,12 +326,12 @@ exports.createPages = ({ graphql, actions }) => {
       const context = { id };
       createLocalizedPages(pagePath, jobPageComponent, context);
       const fromPath = `/jobs/${gh_Id}/`;
-      createRedirect({ fromPath: fromPath, toPath: pagePath, redirectInBrowser: true });
+      createRedirect({ fromPath: fromPath, toPath: pagePath, redirectInBrowser });
       regions.forEach((region) =>
         createRedirect({
           fromPath: `/${region}${fromPath}`,
           toPath: `/${region}${pagePath}`,
-          redirectInBrowser: true,
+          redirectInBrowser,
         })
       );
     })
