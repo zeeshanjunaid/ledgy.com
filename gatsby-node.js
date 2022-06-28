@@ -6,6 +6,8 @@ const { redirects } = require('./src/redirects.js');
 
 const { regions, regionPrefix, defaultRegion, gatsbyCountry } = require('./src/i18n-config.js');
 
+const isNetilfyBuild = !!process.env.CI;
+
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {
@@ -223,6 +225,14 @@ const resolvePagePromise = (query, createPageWithData) =>
     });
   });
 
+const addRegionRedirect = (pagePath, region, redirectFile) => {
+  if (!isNetilfyBuild) return;
+
+  const country = gatsbyCountry(region);
+  const entry = `/*${pagePath}  ${regionPrefix(region)}${pagePath} 200!  Country=${country}\n`;
+  redirectFile.write(entry);
+};
+
 exports.createPages = ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions;
   const redirectInBrowser = true;
@@ -231,12 +241,8 @@ exports.createPages = ({ graphql, actions }) => {
   const createLocalizedPages = (pagePath, component, context) => {
     regions.forEach((region) => {
       createPage({ path: `${regionPrefix(region)}${pagePath}`, component, context });
-      if (region != defaultRegion) {
-        redirectFile.write(
-          `${pagePath}  ${regionPrefix(region)}${pagePath} 200!  Country=${gatsbyCountry(region)}` +
-            '\n'
-        );
-      }
+
+      if (region != defaultRegion) addRegionRedirect(pagePath, region, redirectFile);
     });
   };
 
