@@ -4,7 +4,6 @@ import React from 'react';
 
 import { TopBannerLayout } from './TopBannerLayout';
 
-import { t } from '@lingui/macro';
 import { ProductHuntTopBanner } from './ProductHuntTopBanner';
 import { DynamicTrans, Image } from '../utils';
 import { RequestDemoButton } from '../RequestDemoButton';
@@ -20,7 +19,7 @@ import {
 
 const Screenshot = ({ image }: { image: ImageProps }) => (
   <div className="mt-sm-4 mt-xl-0 p-0 screenshot">
-    <Image image={image} alt={t`Screenshot of the Ledgy app`} />
+    <Image image={image} alt={image.title} />
   </div>
 );
 

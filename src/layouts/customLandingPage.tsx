@@ -14,11 +14,15 @@ const CustomLandingPage = ({
     allContentfulCustomLandingPageWithBanner: UnknownObject;
   };
 }) => {
-  const { title, description, entries } = data.contentfulCustomLandingPageWithBanner;
-
+  const { title, description, entries, keywords } = data.contentfulCustomLandingPageWithBanner;
   return (
     <div>
-      <Title title={dynamicI18n(title)} description={dynamicI18n(description)} indexable />
+      <Title
+        title={dynamicI18n(title)}
+        description={dynamicI18n(description)}
+        indexable
+        keywords={keywords}
+      />
       <EntryPicker {...baseProps} entries={entries} />
     </div>
   );
@@ -33,6 +37,7 @@ export const customLandingPageQuery = graphql`
       slug
       title
       description
+      keywords
       entries {
         ...ContentfulTopBannerFragment
         ...LargeTestimonialFragment

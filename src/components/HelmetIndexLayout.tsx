@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet';
 import React from 'react';
-import { name, getLdJson, dynamicI18n } from '../helpers';
+import { name, getLdJson } from '../helpers';
 import { regionPrefix } from '../i18n-config';
 import { ClickCease } from './ClickCease';
 
@@ -8,18 +8,15 @@ export const HelmetIndexLayout = ({
   lang,
   siteUrl,
   pathname,
-  keywords,
 }: {
   lang: string;
   siteUrl: string;
   pathname: string;
-  keywords: string[];
 }) => (
   <>
     <ClickCease />
     <Helmet>
       <html lang={lang} />
-      <meta name="keywords" content={dynamicI18n(keywords.join(', '))} />
       <meta name="author" content="Ledgy" />
       <script defer type="application/ld+json">
         {getLdJson(siteUrl)}

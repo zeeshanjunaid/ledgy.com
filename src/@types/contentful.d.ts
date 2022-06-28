@@ -140,6 +140,7 @@ declare type FeaturePageProps = BaseFeatureProps & {
 declare type CustomLandingPageProps = {
   title: string;
   description: string;
+  keywords?: string[];
   slug: string;
   entries: EntryProps[];
 };
