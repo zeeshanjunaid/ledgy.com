@@ -3,7 +3,6 @@ import { LedgyPricing } from '@ledgy/library-pricing/dist/LedgyPricing';
 import { appUrl } from '../../helpers';
 import { DynamicTrans, Button } from '../utils';
 import { RequestDemoButton } from '../RequestDemoButton';
-import { StakeholderDefinition } from '../StakeholderDefinition';
 
 export const CompanyPricing = ({ prefix, region }: Prefix & Region) => (
   <div className="container my-4 my-lg-6">
@@ -37,7 +36,6 @@ export const CompanyPricing = ({ prefix, region }: Prefix & Region) => (
       region={region === 'uk' ? 'uk' : 'global'}
       DynamicTrans={DynamicTrans}
     />
-    <StakeholderDefinition />
     <hr className="my-8" />
   </div>
 );
