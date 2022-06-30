@@ -151,6 +151,12 @@ input[type='number']::-webkit-outer-spin-button {
 
 .pricing-cell {
   -webkit-font-smoothing: antialiased;
+  &-normal {
+    .ml-2.mt-1 {
+      margin: 0;
+      display: flex;
+    }
+  }
 }
 
 .pricing-plan-name {
