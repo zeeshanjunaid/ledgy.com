@@ -26,11 +26,7 @@
     "@fortawesome/free-brands-svg-icons": "5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "0.1.14",
-<<<<<<< HEAD
     "@ledgy/library-pricing": "4.1.10",
-=======
-    "@ledgy/library-pricing": "4.1.8",
->>>>>>> udpate pricing package
     "@lingui/core": "3.13.0",
     "@lingui/macro": "3.13.0",
     "@lingui/react": "3.13.0",
@@ -41,7 +37,7 @@
     "babel-plugin-macros": "3.1.0",
     "babel-plugin-remove-graphql-queries": "3.5.0",
     "bootstrap": "4.6.0",
-    "framer-motion": "^6.3.3",
+    "framer-motion": "^6.3.16",
     "gatsby": "3.5.0",
     "gatsby-image": "3.11.0",
     "gatsby-plugin-catch-links": "3.5.0",
@@ -77,7 +73,8 @@
     "react-awesome-reveal": "3.8.1",
     "react-dom": "17.0.2",
     "react-helmet": "6.1.0",
-    "react-scroll": "1.8.7",
+    "react-scroll": "^1.8.7",
+    "react-tooltip": "^4.2.21",
     "react-transition-group": "4.4.2",
     "react-visibility-sensor": "5.1.1",
     "react-wordcloud": "1.2.7",
