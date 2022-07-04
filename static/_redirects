@@ -2,6 +2,7 @@ https://ledgy.netlify.com/* https://ledgy.com/:splat 301!
 /  /uk     200!  Country=gb
 /  /de     200!  Country=de
 /  /fr     200!  Country=fr
+/  /us     200!  Country=us
 
 /verify-signature https://support.ledgy.com/how-to-verify-the-validity-of-a-signature
 

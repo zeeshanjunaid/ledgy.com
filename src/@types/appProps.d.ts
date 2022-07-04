@@ -1,4 +1,4 @@
-declare type Region = { region: 'global' | 'uk' | 'de' | 'fr' };
+declare type Region = { region: 'global' | 'uk' | 'de' | 'fr' | 'us' };
 
 declare type Prefix = { prefix: string };
 

@@ -37,6 +37,7 @@ export const HelmetIndexLayout = ({
       <link rel="alternate" href={`${siteUrl}/uk${pathname}`} hrefLang="en-gb" />
       <link rel="alternate" href={`${siteUrl}/de${pathname}`} hrefLang="de" />
       <link rel="alternate" href={`${siteUrl}/fr${pathname}`} hrefLang="fr" />
+      <link rel="alternate" href={`${siteUrl}/us${pathname}`} hrefLang="en-us" />
       <link rel="canonical" href={`${siteUrl}${regionPrefix(lang)}${pathname}`} />
 
       {/* Disable AOS for Google */}

@@ -3,6 +3,7 @@ import { LedgyPricing } from '@ledgy/library-pricing/dist/LedgyPricing';
 import { appUrl } from '../../helpers';
 import { DynamicTrans, Button } from '../utils';
 import { RequestDemoButton } from '../RequestDemoButton';
+import { getPricingRegion } from './lib';
 
 export const CompanyPricing = ({ prefix, region }: Prefix & Region) => (
   <div className="container my-4 my-lg-6">
@@ -33,7 +34,7 @@ export const CompanyPricing = ({ prefix, region }: Prefix & Region) => (
           utm={'enterprisePricing'}
         />
       }
-      region={region === 'uk' ? 'uk' : 'global'}
+      region={getPricingRegion({ region })}
       DynamicTrans={DynamicTrans}
     />
     <hr className="my-8" />
