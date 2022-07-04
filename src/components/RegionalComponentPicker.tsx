@@ -7,6 +7,6 @@ export const RegionalComponentPicker = ({
 }: Prefix & Region & { regionalPicker: RegionalComponentPickerProps }) => {
   const { region } = baseProps;
   const { entries } = regionalPicker;
-  const regionalEntry = entries[region] || entries['global'];
-  return <ComponentPicker {...baseProps} entry={regionalEntry} smallPadding />;
+  const regionalEntry = region !== 'us' && entries[region];
+  return <ComponentPicker {...baseProps} entry={regionalEntry || entries['global']} smallPadding />;
 };

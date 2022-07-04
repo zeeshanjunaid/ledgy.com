@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 
 const defaultRegion = 'global';
-const regions = [defaultRegion, 'uk', 'de', 'fr'];
+const regions = [defaultRegion, 'uk', 'de', 'fr', 'us'];
 
 const regionPrefix = (region) => (region === defaultRegion ? '' : `/${region}`);
 const gatsbyCountry = (region) => (region === 'uk' ? 'gb' : region);
