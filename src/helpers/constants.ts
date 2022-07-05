@@ -99,7 +99,13 @@ export const CALCULATOR_TITLE = 'Financing Calculator';
 
 //tags
 export const ALL_TOPICS = 'All topics';
-export const BLOG_TAGS = [ALL_TOPICS, 'Companies', 'Investors', 'Equity', 'Funding'];
+export const BLOG_TAGS = [
+  ALL_TOPICS,
+  'Guides and deep dives',
+  'Equity and culture',
+  'Inside Ledgy',
+  'Tips from the experts',
+];
 export const UPDATE_TAGS = [ALL_TOPICS, 'Product', 'Company', 'Team', 'News'];
 
 //segment track actions

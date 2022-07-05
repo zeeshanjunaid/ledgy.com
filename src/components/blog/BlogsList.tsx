@@ -5,6 +5,7 @@ import { BlogFeatured } from './BlogFeatured';
 import { ContentBody, PostLink } from '../Content';
 import { ALL_TOPICS, BLOG_TAGS } from '../../helpers';
 import { getBlogs } from './lib';
+import { replaceAll } from '../lib';
 
 export const BlogsList = ({ prefix }: Prefix) => {
   const blogs = getBlogs();
@@ -24,7 +25,9 @@ export const BlogsList = ({ prefix }: Prefix) => {
           <AnimatePresence>
             {remainigBlogs.map(({ node: blog }) => {
               const { id, slug, tags, description: postDescription, author } = blog;
-              const showBlog = (!!tags && tags.includes(`Blog_${tag}`)) || tag === ALL_TOPICS;
+              const showBlog =
+                (!!tags && tags.includes(`Blog_${replaceAll(tag, ' ', '_')}`)) ||
+                tag === ALL_TOPICS;
               return (
                 showBlog && (
                   <PostLink

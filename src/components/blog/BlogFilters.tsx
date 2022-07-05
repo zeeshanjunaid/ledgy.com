@@ -9,7 +9,7 @@ export const BlogFilters = ({
   tag: string;
 }) => (
   <div className="blogfilters__wrapper">
-    <div className="blogfilters__title">Browse the Ledgy</div>
+    <div className="blogfilters__title">Browse the Ledgy Blog</div>
     <div className="blogfilters__subtitle">
       Want to go deeper? Click on a category below for more from the Ledgy.
     </div>
