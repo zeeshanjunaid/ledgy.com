@@ -1,24 +1,21 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import { LongText, PageHeader, CompanySummary, OtherCustomerStories } from '../components';
-import { Title, Hr } from '../layouts/utils';
+import { LongText, PageHeader, CompanySummary, EntryPicker } from '../components';
+import { Title } from '../layouts/utils';
 
 const CustomerStory = ({
   data,
   prefix,
+  region,
 }: Props & {
   data: {
     contentfulCustomerStory: CustomerStoryProps;
-    allContentfulCustomerStory: { edges: { node: AllContentfulCustomerStoryProps }[] };
   };
 }) => {
-  const { id, title, header, subtitle, content, company, isOurStory } =
+  const { title, header, subtitle, content, company, isOurStory, entries } =
     data.contentfulCustomerStory;
-  const otherUserStories = data.allContentfulCustomerStory.edges
-    .filter(({ node }) => node.id !== id && !node.isOurStory)
-    .map(({ node }) => node);
-  const hasOtherCustomerStories = otherUserStories.length > 0;
+
   return (
     <div>
       <Title title={title || header} description={subtitle} />
@@ -36,17 +33,8 @@ const CustomerStory = ({
                 </div>
               </div>
             </div>
-            {hasOtherCustomerStories && !isOurStory && (
-              <>
-                <Hr />
-                <div className="row pb-6">
-                  <div className="col-md-12">
-                    <OtherCustomerStories customerStories={otherUserStories} prefix={prefix} />
-                  </div>
-                </div>
-              </>
-            )}
           </div>
+          {!isOurStory && <EntryPicker {...{ region, prefix }} entries={entries} />}
         </section>
       </main>
     </div>
@@ -69,6 +57,9 @@ export const customerStoryQuery = graphql`
         childMdx {
           body
         }
+      }
+      entries {
+        ...TestimonialsCarousel
       }
       company {
         name
@@ -93,35 +84,6 @@ export const customerStoryQuery = graphql`
         sector
         location
         stage
-      }
-    }
-    allContentfulCustomerStory(sort: { order: DESC, fields: [date] }) {
-      edges {
-        node {
-          id
-          slug
-          isOurStory
-          company {
-            logo {
-              localFile {
-                childImageSharp {
-                  fluid(maxWidth: 150) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
-            }
-            cover {
-              localFile {
-                childImageSharp {
-                  fluid(maxWidth: 150) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
-            }
-          }
-        }
       }
     }
   }

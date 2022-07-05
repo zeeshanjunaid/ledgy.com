@@ -8,8 +8,14 @@ import { Helmet } from 'react-helmet';
 const isTopBanner = (entry: MainPageEntryProps): entry is TopBannerProps =>
   entry.__typename === 'ContentfulTopBanner';
 
+const isLogoBanner = (entry: MainPageEntryProps): entry is LogoBannerProps =>
+  entry.__typename === 'ContentfulLogoBanner';
+
+const isRegionalComponentPicker = (entry: MainPageEntryProps): entry is LogoBannerProps =>
+  entry.__typename === 'ContentfulRegionalComponentPicker';
+
 const isTopPageComponent = (entry: MainPageEntryProps) =>
-  isTopBanner(entry) || entry.__typename === 'ContentfulLogoBanner';
+  isTopBanner(entry) || isLogoBanner(entry) || isRegionalComponentPicker(entry);
 
 const IndexPage = (props: Props) => {
   const { data, ...baseProps } = props;
