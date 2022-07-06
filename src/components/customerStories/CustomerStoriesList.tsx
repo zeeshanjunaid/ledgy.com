@@ -1,7 +1,8 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import { CustomerStoryLink } from './CustomerStoryLink';
-import { ContentBody } from '../../components';
+
+import { ContentBody, PostLink } from '../../components';
+import { AnimatePresence, motion } from 'framer-motion';
 
 const getCustomerStories = () =>
   useStaticQuery(graphql`
@@ -20,7 +21,7 @@ const getCustomerStories = () =>
               logo {
                 localFile {
                   childImageSharp {
-                    fluid(maxWidth: 200) {
+                    fluid(maxHeight: 200) {
                       ...GatsbyImageSharpFluid
                     }
                   }
@@ -36,15 +37,30 @@ const getCustomerStories = () =>
 export const CustomerStoriesList = ({ prefix }: Prefix) => {
   const customerStories = getCustomerStories();
   const { edges } = customerStories.allContentfulCustomerStory;
+
   return (
     <ContentBody>
-      {edges.map(({ node }: { node: CustomerStoryBaseProps }) => {
-        return (
-          !node.isOurStory && (
-            <CustomerStoryLink key={node.id} customerStory={node} prefix={prefix} />
-          )
-        );
-      })}
+      <motion.div className="post-grid">
+        <AnimatePresence>
+          {edges.map((edge: { node: CustomerStoryProps }, index: number) => {
+            const { node: post } = edge;
+            const { subtitle, slug } = post;
+            const to = `customer-stories/${slug}`;
+            if (!post.isOurStory) {
+              return (
+                <PostLink
+                  to={to}
+                  post={post}
+                  description={subtitle}
+                  prefix={prefix}
+                  showImage
+                  key={index}
+                />
+              );
+            }
+          })}
+        </AnimatePresence>
+      </motion.div>
     </ContentBody>
   );
 };

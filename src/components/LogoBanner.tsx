@@ -26,7 +26,7 @@ export const LogoBanner = ({
   logos,
   description,
   smallPadding = false,
-}: LogoBannerProps & { smallPadding?: boolean; scroll?: boolean }) => {
+}: LogoBannerProps & { smallPadding?: boolean }) => {
   const scroll = logos.length != 5;
   const Logos = () => (
     <>

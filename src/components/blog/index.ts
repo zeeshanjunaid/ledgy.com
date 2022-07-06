@@ -1,3 +1,3 @@
-export { BlogsList } from './BlogsList';
-export { BlogCard } from './BlogCard';
-export { BlogFilters } from './BlogFilters';
+export * from './BlogsList';
+export * from './BlogCard';
+export * from './BlogFilters';

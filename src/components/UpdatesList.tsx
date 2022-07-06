@@ -42,7 +42,7 @@ export const UpdatesList = ({ prefix }: Prefix) => {
     <div>
       <ContentBody>
         <ButtonGroup buttonTexts={UPDATE_TAGS} onClick={setTag} tag={tag} />
-        {edges.map((edge: UntypedObject) => {
+        {edges.map((edge: { node: UpdateProps }) => {
           const { node } = edge;
           const { id, slug, tags, description: postDescription } = node;
           const showUpdate = (!!tags && tags.includes(`Updates_${tag}`)) || tag === ALL_TOPICS;

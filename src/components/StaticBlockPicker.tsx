@@ -1,5 +1,5 @@
 import React from 'react';
-import { TeamMembers } from './teamMembers';
+import { getTeamData, TeamMembers } from './teamMembers';
 import { InvestorsList } from './investorsList';
 import { CompanyPricing, CompanyPricingCTAs, InvestorPricing } from './pricing';
 import { UpdatesList } from './UpdatesList';
@@ -17,10 +17,11 @@ export const StaticBlockPicker = ({
   prefix,
   region,
 }: StaticBlockProps & Prefix & Region) => {
+  const team = getTeamData();
   if (!block) return null;
   switch (block) {
     case 'teamMembers':
-      return <TeamMembers />;
+      return <TeamMembers team={team} />;
     case 'investorsList':
       return <InvestorsList />;
     case 'companyPricing':
@@ -30,7 +31,7 @@ export const StaticBlockPicker = ({
     case 'investorPricing':
       return <InvestorPricing prefix={prefix} />;
     case 'blogsList':
-      return <BlogsList prefix={prefix} />;
+      return <BlogsList prefix={prefix} team={team} />;
     case 'updatesList':
       return <UpdatesList prefix={prefix} />;
     case 'customerStoriesList':

@@ -5,11 +5,18 @@ import Img from 'gatsby-image';
 import { formatUrl } from '../lib';
 import { motion } from 'framer-motion';
 import { targetBlank } from '../../helpers';
-import { getTeamData } from '../teamMembers';
+import { AuthorProps } from '../teamMembers';
 import { getMainTag } from './lib';
 
-const BlogPreviewAuthor = ({ name }: { name: string }) => {
-  const team = getTeamData();
+const BlogPreviewAuthor = ({
+  name,
+  team,
+}: {
+  name: string;
+  team: {
+    [key: string]: AuthorProps;
+  };
+}) => {
   const author = team[name];
   return (
     <div className="blog-card-author">
@@ -28,6 +35,7 @@ export const BlogCard = ({
   title,
   description,
   image,
+  team,
   to,
   prefix,
   isExternal = false,
@@ -39,12 +47,16 @@ export const BlogCard = ({
   description: string | ReactNode;
   image: ReactNode;
   to: string;
+  team?: {
+    [key: string]: AuthorProps;
+  };
   isExternal?: boolean;
   showImage?: boolean;
   author?: string;
   tags?: string[];
 }) => {
   const tag = getMainTag(tags);
+
   return (
     <motion.div
       layout
@@ -63,7 +75,7 @@ export const BlogCard = ({
               </div>
               <div className="blog-card-title">{title}</div>
               <div className="blog-card-description">{description}</div>
-              {author && <BlogPreviewAuthor name={author} />}
+              {author && team && <BlogPreviewAuthor name={author} team={team} />}
             </div>
           </div>
         </div>

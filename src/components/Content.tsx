@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react';
 import { graphql } from 'gatsby';
 import { BlogCard } from './blog';
 import Img from 'gatsby-image';
+import { AuthorProps } from './teamMembers';
 
 export const CoverImageFragment = graphql`
   fragment CoverImage on ImageSharp {
@@ -16,6 +17,8 @@ export const CoverImageFragment = graphql`
   }
 `;
 
+const isCustomerStory = (post: PostProps): post is CustomerStoryProps => 'company' in post;
+
 export const ContentBody = ({ children }: { children: ReactNode | ReactNode[] }) => (
   <div className="container">{children}</div>
 );
@@ -24,22 +27,27 @@ export const PostLink = ({
   post,
   to,
   description,
+  team,
   prefix,
   isExternal = false,
   showImage = true,
   author,
   tags,
 }: Prefix & {
-  post: ContentfulPageProps | BlogProps;
+  post: PostProps;
   to: string;
   description: string | ReactNode;
+  team?: {
+    [key: string]: AuthorProps;
+  };
   isExternal?: boolean;
   showImage?: boolean;
   author?: string;
   tags?: string[];
 }) => {
-  const { childImageSharp } = post.cover?.localFile || {};
-  const image = childImageSharp ? <Img className="fit-cover" {...childImageSharp} /> : null;
+  const localFile = isCustomerStory(post) ? post.company.logo.localFile : post.cover?.localFile;
+  const { childImageSharp } = localFile || {};
+  const image = childImageSharp ? <Img className="fit-cover flex-1" {...childImageSharp} /> : null;
 
   const title = <h5>{post.title}</h5>;
 
@@ -54,6 +62,7 @@ export const PostLink = ({
       showImage={showImage}
       author={author}
       tags={tags}
+      team={team}
     />
   );
 };

@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { ContentBody, PostLink } from '../components';
+import { AnimatePresence, motion } from 'framer-motion';
 
 const getWebinars = () =>
   useStaticQuery(graphql`
@@ -37,20 +38,24 @@ export const WebinarsList = ({ prefix }: Prefix) => {
   const { edges } = webinars.allContentfulWebinar;
   return (
     <ContentBody>
-      {edges.map((edge: UntypedObject) => {
-        const { node } = edge;
-        const { id, youtube, description } = node;
-        return (
-          <PostLink
-            key={id}
-            to={youtube}
-            post={node}
-            description={<MDXRenderer>{description.childMdx.body}</MDXRenderer>}
-            prefix={prefix}
-            isExternal
-          />
-        );
-      })}
+      <motion.div className="post-grid">
+        <AnimatePresence>
+          {edges.map((edge: { node: WebinarProps }) => {
+            const { node } = edge;
+            const { id, youtube, description } = node;
+            return (
+              <PostLink
+                key={id}
+                to={youtube}
+                post={node}
+                description={<MDXRenderer>{description.childMdx.body}</MDXRenderer>}
+                prefix={prefix}
+                isExternal
+              />
+            );
+          })}
+        </AnimatePresence>
+      </motion.div>
     </ContentBody>
   );
 };

@@ -6,8 +6,16 @@ import { ContentBody, PostLink } from '../Content';
 import { ALL_TOPICS, BLOG_TAGS } from '../../helpers';
 import { getBlogs } from './lib';
 import { replaceAll } from '../lib';
+import { AuthorProps } from '../teamMembers';
 
-export const BlogsList = ({ prefix }: Prefix) => {
+export const BlogsList = ({
+  prefix,
+  team,
+}: Prefix & {
+  team: {
+    [key: string]: AuthorProps;
+  };
+}) => {
   const blogs = getBlogs();
 
   const { edges }: { edges: { node: BlogProps }[] } = blogs.allContentfulPage;
@@ -19,14 +27,17 @@ export const BlogsList = ({ prefix }: Prefix) => {
   return (
     <div className="bg-gray-light">
       <ContentBody>
-        <BlogFeatured blog={firstBlog} />
+        <BlogFeatured blog={firstBlog} team={team} />
         <BlogFilters buttonTexts={BLOG_TAGS} onClick={setTag} tag={tag} />
-        <motion.div className="blog-grid">
+        <motion.div className="post-grid">
           <AnimatePresence>
             {remainigBlogs.map(({ node: blog }) => {
-              const { id, slug, tags, description: postDescription, author } = blog;
+              const { id, slug, tags, description, author } = blog;
               const showBlog =
-                (!!tags && tags.includes(`Blog_${replaceAll(tag, ' ', '_')}`)) ||
+                (!!tags &&
+                  tags.includes(
+                    `Blog_${replaceAll({ string: tag, search: ' ', replacement: '_' })}`
+                  )) ||
                 tag === ALL_TOPICS;
               return (
                 showBlog && (
@@ -34,10 +45,11 @@ export const BlogsList = ({ prefix }: Prefix) => {
                     key={id}
                     to={`blog/${slug}`}
                     post={blog}
-                    description={postDescription}
+                    description={description}
                     prefix={prefix}
                     author={author}
                     tags={tags}
+                    team={team}
                   />
                 )
               );
