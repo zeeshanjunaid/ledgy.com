@@ -46,6 +46,7 @@ declare type CustomerStoryBaseProps = AllContentfulCustomerStoryProps & {
   subtitle: string;
   date: string;
   isOurStory: boolean;
+  entries: EntryProps[];
 };
 
 declare type CustomerStoryProps = CustomerStoryBaseProps & { content: Mdx; region: Region };
