@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { BlogFilters } from './BlogFilters';
+import { PostFilters } from './PostFilters';
 import { BlogFeatured } from './BlogFeatured';
 import { ContentBody, PostLink } from '../Content';
 import { ALL_TOPICS, BLOG_TAGS } from '../../helpers';
@@ -26,7 +26,7 @@ export const BlogsList = ({
     <div className="bg-gray-light">
       <ContentBody>
         <BlogFeatured blog={firstBlog} team={team} />
-        <BlogFilters buttonTexts={BLOG_TAGS} onClick={setTag} tag={tag} />
+        <PostFilters buttonTexts={BLOG_TAGS} onClick={setTag} tag={tag} />
         <motion.div className="post-grid">
           <AnimatePresence>
             {remainigBlogs.map(({ node: blog }) => {

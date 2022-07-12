@@ -1,3 +1,3 @@
 export * from './BlogsList';
 export * from './BlogCard';
-export * from './BlogFilters';
+export * from './PostFilters';
