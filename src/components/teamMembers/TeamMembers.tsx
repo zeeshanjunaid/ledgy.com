@@ -8,7 +8,7 @@ import { faComments } from '@fortawesome/free-solid-svg-icons';
 import { Trans } from '@lingui/macro';
 
 import { shuffleArray, targetBlank } from '../../helpers';
-import { AuthorProps } from './getTeamData';
+import { AuthorProps, TeamProps } from './getTeamData';
 import { CustomFade } from '../utils';
 
 const TeamMember = ({
@@ -69,13 +69,7 @@ const TeamMember = ({
   );
 };
 
-export const TeamMembers = ({
-  team,
-}: {
-  team: {
-    [key: string]: AuthorProps;
-  };
-}) => {
+export const TeamMembers = ({ team }: { team: TeamProps }) => {
   const teamData = Object.entries(team);
   const teamStillAtLedgy = teamData.filter((member) => !member[1].alumni);
   const [currentTeam, setCurrentTeam] = useState(teamStillAtLedgy);

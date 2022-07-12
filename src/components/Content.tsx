@@ -27,22 +27,19 @@ export const PostLink = ({
   post,
   to,
   description,
-  team,
+  author,
   prefix,
   isExternal = false,
   showImage = true,
-  author,
+
   tags,
 }: Prefix & {
   post: PostProps;
   to: string;
   description: string | ReactNode;
-  team?: {
-    [key: string]: AuthorProps;
-  };
+  author?: AuthorProps;
   isExternal?: boolean;
   showImage?: boolean;
-  author?: string;
   tags?: string[];
 }) => {
   const localFile = isCustomerStory(post) ? post.company.logo.localFile : post.cover?.localFile;
@@ -62,7 +59,6 @@ export const PostLink = ({
       showImage={showImage}
       author={author}
       tags={tags}
-      team={team}
     />
   );
 };

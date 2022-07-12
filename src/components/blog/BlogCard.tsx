@@ -8,16 +8,7 @@ import { targetBlank } from '../../helpers';
 import { AuthorProps } from '../teamMembers';
 import { getMainTag } from './lib';
 
-const BlogPreviewAuthor = ({
-  name,
-  team,
-}: {
-  name: string;
-  team: {
-    [key: string]: AuthorProps;
-  };
-}) => {
-  const author = team[name];
+const BlogPreviewAuthor = ({ author }: { author: AuthorProps }) => {
   return (
     <div className="blog-card-author">
       <div className="blog-card-author--img-wrapper">
@@ -35,7 +26,6 @@ export const BlogCard = ({
   title,
   description,
   image,
-  team,
   to,
   prefix,
   isExternal = false,
@@ -47,12 +37,10 @@ export const BlogCard = ({
   description: string | ReactNode;
   image: ReactNode;
   to: string;
-  team?: {
-    [key: string]: AuthorProps;
-  };
+  author?: AuthorProps;
   isExternal?: boolean;
   showImage?: boolean;
-  author?: string;
+
   tags?: string[];
 }) => {
   const tag = getMainTag(tags);
@@ -75,7 +63,7 @@ export const BlogCard = ({
               </div>
               <div className="blog-card-title">{title}</div>
               <div className="blog-card-description">{description}</div>
-              {author && team && <BlogPreviewAuthor name={author} team={team} />}
+              {author && <BlogPreviewAuthor author={author} />}
             </div>
           </div>
         </div>

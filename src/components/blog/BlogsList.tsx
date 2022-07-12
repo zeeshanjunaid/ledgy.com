@@ -6,15 +6,13 @@ import { ContentBody, PostLink } from '../Content';
 import { ALL_TOPICS, BLOG_TAGS } from '../../helpers';
 import { getBlogs } from './lib';
 import { replaceAll } from '../lib';
-import { AuthorProps } from '../teamMembers';
+import { TeamProps } from '../teamMembers';
 
 export const BlogsList = ({
   prefix,
   team,
 }: Prefix & {
-  team: {
-    [key: string]: AuthorProps;
-  };
+  team: TeamProps;
 }) => {
   const blogs = getBlogs();
 
@@ -32,7 +30,8 @@ export const BlogsList = ({
         <motion.div className="post-grid">
           <AnimatePresence>
             {remainigBlogs.map(({ node: blog }) => {
-              const { id, slug, tags, description, author } = blog;
+              const { id, slug, tags, description, author: authorName } = blog;
+              const author = team[authorName];
               const showBlog =
                 (!!tags &&
                   tags.includes(
@@ -49,7 +48,6 @@ export const BlogsList = ({
                     prefix={prefix}
                     author={author}
                     tags={tags}
-                    team={team}
                   />
                 )
               );

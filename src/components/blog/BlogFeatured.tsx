@@ -1,19 +1,10 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import Img from 'gatsby-image';
-import { AuthorProps } from '../teamMembers';
+import { AuthorProps, TeamProps } from '../teamMembers';
 import { getMainTag } from './lib';
 
-const FeaturedAuthor = ({
-  name,
-  team,
-}: {
-  name: string;
-  team: {
-    [key: string]: AuthorProps;
-  };
-}) => {
-  const author = team[name];
+const FeaturedAuthor = ({ author }: { author: AuthorProps }) => {
   return (
     <div className="featured-post-author">
       <div className="featured-post-author--img">
@@ -27,20 +18,12 @@ const FeaturedAuthor = ({
   );
 };
 
-export const BlogFeatured = ({
-  blog,
-  team,
-}: {
-  blog: BlogProps;
-  team: {
-    [key: string]: AuthorProps;
-  };
-}) => {
+export const BlogFeatured = ({ blog, team }: { blog: BlogProps; team: TeamProps }) => {
   if (!blog) return <></>;
-  const { description: postDescription, title, author, cover, slug, tags } = blog;
+  const { description: postDescription, title, author: authorName, cover, slug, tags } = blog;
   const { childImageSharp } = cover?.localFile || {};
   const image = childImageSharp ? <Img className="fit-cover" {...childImageSharp} /> : null;
-
+  const author = team[authorName];
   const tag = getMainTag(tags);
 
   return (
@@ -56,7 +39,7 @@ export const BlogFeatured = ({
               <h5>{title}</h5>
             </div>
             <div className="featured-post-description">{postDescription}</div>
-            {author && <FeaturedAuthor name={author} team={team} />}
+            {author && <FeaturedAuthor author={author} />}
           </div>
         </div>
       </div>
