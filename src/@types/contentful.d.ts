@@ -22,6 +22,35 @@ declare type EntryProps =
   | TestimonialCarouselProps
   | RegionalComponentPickerProps;
 
+declare type BlogProps = {
+  id: string;
+  tags: string[];
+  slug: string;
+  title: string;
+  description: string;
+  author: string;
+  cover: ImageProps;
+};
+declare type UpdateProps = {
+  id: string;
+  tags: string[];
+  slug: string;
+  title: string;
+  description: string;
+  date: Date;
+  language: string;
+  author: string;
+  cover: ImageProps;
+};
+declare type WebinarProps = {
+  id: string;
+  title: string;
+  description: Mdx;
+  date: Date;
+  youtube: string;
+  cover: ImageProps;
+};
+
 declare type ContentfulPageProps = Id & {
   title: string;
   description: string;
@@ -50,6 +79,8 @@ declare type CustomerStoryBaseProps = AllContentfulCustomerStoryProps & {
 };
 
 declare type CustomerStoryProps = CustomerStoryBaseProps & { content: Mdx; region: Region };
+
+declare type PostProps = BlogProps | CustomerStoryProps | UpdateProps | WebinarProps;
 
 declare type MarketplaceBaseProps = Id & {
   company: string;

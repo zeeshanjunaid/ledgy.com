@@ -1,20 +1,19 @@
 import React from 'react';
-
 import { CallToAction } from './CallToAction';
-import { ContentWithChecklist } from './ContentWithChecklist';
-import { FeatureGrid } from './FeatureGrid';
-import { TitleWithGraphic } from './TitleWithGraphic';
-import { TestimonialCards } from './TestimonialCards';
-import { LogoBanner } from './LogoBanner';
-import { SelectableCardsWithScreenshots } from './cardsWithScreenshots';
-import { TopBanner } from './TopBanner';
 import { ChecklistWithScreenshot } from './ChecklistWithScreenshot';
-import { LongTextComponent } from './LongTextComponent';
-import { StaticBlockPicker } from './StaticBlockPicker';
-import { LargeTestimonial } from './LargeTestimonial';
 import { CompetitorsTable } from './competitorsTable';
+import { ContentWithChecklist } from './ContentWithChecklist';
 import { Explore } from './Explore';
+import { FeatureGrid } from './FeatureGrid';
+import { LargeTestimonial } from './LargeTestimonial';
+import { LogoBanner } from './LogoBanner';
+import { LongTextComponent } from './LongTextComponent';
+import { SelectableCardsWithScreenshots } from './cardsWithScreenshots';
+import { StaticBlockPicker } from './StaticBlockPicker';
 import { TestimonialsCarousel } from './TestimonialsCarousel';
+import { TestimonialCards } from './TestimonialCards';
+import { TitleWithGraphic } from './TitleWithGraphic';
+import { TopBanner } from './TopBanner';
 
 export const ComponentPicker = ({
   entry,

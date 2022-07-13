@@ -14,6 +14,10 @@ export type AuthorProps = {
   article?: string;
   alumni?: boolean;
 };
+
+export type TeamProps = {
+  [key: string]: AuthorProps;
+};
 type LedgistaGif = {
   file: FileUrl;
 };

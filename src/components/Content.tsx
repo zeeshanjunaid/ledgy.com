@@ -1,50 +1,12 @@
 import React, { ReactNode } from 'react';
 import { graphql } from 'gatsby';
+import { BlogCard } from './blog';
 import Img from 'gatsby-image';
-
-import { CardLink } from './CardLink';
-
-export const ContentBody = ({ children }: { children: ReactNode | ReactNode[] }) => (
-  <div className="container">{children}</div>
-);
-
-export const PostLink = ({
-  post,
-  to,
-  description,
-  prefix,
-  isExternal = false,
-  showImage = true,
-}: Prefix & {
-  post: ContentfulPageProps;
-  to: string;
-  description: string | ReactNode;
-  isExternal?: boolean;
-  showImage?: boolean;
-}) => {
-  const { childImageSharp } = post.cover?.localFile || {};
-  const image = childImageSharp ? <Img className="fit-cover" {...childImageSharp} /> : null;
-
-  const title = <h5>{post.title}</h5>;
-  const { date } = post;
-  return (
-    <CardLink
-      title={title}
-      type="blog"
-      description={description}
-      date={date}
-      to={to}
-      image={image}
-      isExternal={isExternal}
-      prefix={prefix}
-      showImage={showImage}
-    />
-  );
-};
+import { AuthorProps } from './teamMembers';
 
 export const CoverImageFragment = graphql`
   fragment CoverImage on ImageSharp {
-    fluid(maxWidth: 200, maxHeight: 200, cropFocus: CENTER) {
+    fluid(maxWidth: 375, maxHeight: 240, cropFocus: CENTER) {
       ...GatsbyImageSharpFluid
     }
   }
@@ -54,6 +16,52 @@ export const CoverImageFragment = graphql`
     }
   }
 `;
+
+const isCustomerStory = (post: PostProps): post is CustomerStoryProps => 'company' in post;
+
+export const ContentBody = ({ children }: { children: ReactNode | ReactNode[] }) => (
+  <div className="container">{children}</div>
+);
+
+export const PostLink = ({
+  post,
+  to,
+  description,
+  author,
+  prefix,
+  isExternal = false,
+  showImage = true,
+
+  tags,
+}: Prefix & {
+  post: PostProps;
+  to: string;
+  description: string | ReactNode;
+  author?: AuthorProps;
+  isExternal?: boolean;
+  showImage?: boolean;
+  tags?: string[];
+}) => {
+  const localFile = isCustomerStory(post) ? post.company.logo.localFile : post.cover?.localFile;
+  const { childImageSharp } = localFile || {};
+  const image = childImageSharp ? <Img className="fit-cover flex-1" {...childImageSharp} /> : null;
+
+  const title = <h5>{post.title}</h5>;
+
+  return (
+    <BlogCard
+      title={title}
+      description={description}
+      to={to}
+      image={image}
+      isExternal={isExternal}
+      prefix={prefix}
+      showImage={showImage}
+      author={author}
+      tags={tags}
+    />
+  );
+};
 
 export const PublishDate = ({ date }: { date?: string }) =>
   date ? (

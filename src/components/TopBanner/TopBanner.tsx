@@ -1,9 +1,8 @@
-import { DemoTopBanner } from './DemoTopBanner';
-import { ExtraLinkTopBanner } from './ExtraLinkTopBanner';
 import React from 'react';
 
 import { TopBannerLayout } from './TopBannerLayout';
-
+import { DemoTopBanner } from './DemoTopBanner';
+import { ExtraLinkTopBanner } from './ExtraLinkTopBanner';
 import { ProductHuntTopBanner } from './ProductHuntTopBanner';
 import { DynamicTrans, Image } from '../utils';
 import { RequestDemoButton } from '../RequestDemoButton';

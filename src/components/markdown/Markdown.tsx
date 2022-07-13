@@ -30,7 +30,7 @@ const About = ({ about, img }: { about: AuthorProps; img: GatsbyImageFluidProps 
   </div>
 );
 
-export const Author = ({ name }: Prefix & { name: string }) => {
+export const Author = ({ name }: { name: string }) => {
   const team = getTeamData();
   return <About about={team[name]} img={team[name].profileImage} />;
 };

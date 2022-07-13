@@ -1,6 +1,5 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-
 import { dynamicI18n } from '../helpers';
 import { EntryPicker } from '../components';
 import { Helmet } from 'react-helmet';

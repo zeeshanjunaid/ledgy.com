@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { ContentBody, PostLink } from '../components';
-import { ButtonGroup } from './utils';
 import { ALL_TOPICS, UPDATE_TAGS } from '../helpers';
+import { PostFilters } from './blog';
 
 const getUpdates = () =>
   useStaticQuery(graphql`
@@ -41,21 +41,24 @@ export const UpdatesList = ({ prefix }: Prefix) => {
   return (
     <div>
       <ContentBody>
-        <ButtonGroup buttonTexts={UPDATE_TAGS} onClick={setTag} tag={tag} />
-        {edges.map((edge: UntypedObject) => {
+        <PostFilters buttonTexts={UPDATE_TAGS} onClick={setTag} tag={tag} />
+        {edges.map((edge: { node: UpdateProps }) => {
           const { node } = edge;
           const { id, slug, tags, description: postDescription } = node;
           const showUpdate = (!!tags && tags.includes(`Updates_${tag}`)) || tag === ALL_TOPICS;
 
           return showUpdate ? (
-            <PostLink
-              key={id}
-              to={`updates/${slug}`}
-              post={node}
-              description={postDescription}
-              prefix={prefix}
-              showImage={false}
-            />
+            <div className="my-4">
+              <PostLink
+                key={id}
+                to={`updates/${slug}`}
+                post={node}
+                description={postDescription}
+                prefix={prefix}
+                showImage={false}
+                tags={tags}
+              />
+            </div>
           ) : (
             <div />
           );

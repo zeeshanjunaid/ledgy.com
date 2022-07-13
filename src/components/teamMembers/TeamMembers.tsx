@@ -8,10 +8,8 @@ import { faComments } from '@fortawesome/free-solid-svg-icons';
 import { Trans } from '@lingui/macro';
 
 import { shuffleArray, targetBlank } from '../../helpers';
-import { AuthorProps } from './getTeamData';
+import { AuthorProps, TeamProps } from './getTeamData';
 import { CustomFade } from '../utils';
-
-import { getTeamData } from './getTeamData';
 
 const TeamMember = ({
   name,
@@ -71,12 +69,12 @@ const TeamMember = ({
   );
 };
 
-export const TeamMembers = () => {
-  const teamData = Object.entries(getTeamData());
+export const TeamMembers = ({ team }: { team: TeamProps }) => {
+  const teamData = Object.entries(team);
   const teamStillAtLedgy = teamData.filter((member) => !member[1].alumni);
-  const [team, setTeam] = useState(teamStillAtLedgy);
+  const [currentTeam, setCurrentTeam] = useState(teamStillAtLedgy);
   useEffect(() => {
-    setTeam((prev) => shuffleArray(prev));
+    setCurrentTeam((prev) => shuffleArray(prev));
   }, []);
 
   return (
@@ -85,7 +83,7 @@ export const TeamMembers = () => {
         <Trans>Meet the</Trans> {team.length} Ledgistas
       </h2>
       <div className="row justify-content-center my-5">
-        {team.map(([key, member]) => (
+        {currentTeam.map(([key, member]) => (
           <TeamMember {...member} key={`team-${key}`} />
         ))}
       </div>
