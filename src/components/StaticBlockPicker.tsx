@@ -11,6 +11,7 @@ import { ContactUs } from './ContactUs';
 import { Ledgistats } from './Ledgistats';
 import { Marketplaces } from './marketplace/marketplaces';
 import { PartnershipLogos } from './PartnershipLogos';
+import { LogosGridSection } from './LogosGridSection';
 
 export const StaticBlockPicker = ({
   block,
@@ -47,6 +48,8 @@ export const StaticBlockPicker = ({
       return <ContactUs />;
     case 'partnershipCta':
       return <PartnershipLogos />;
+    case 'integrationsLogos':
+      return <LogosGridSection />;
 
     default:
       return <> </>;
