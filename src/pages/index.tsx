@@ -149,18 +149,22 @@ export const RegionalComponentPickerFragment = graphql`
       global {
         ...LogoBannerFragment
         ...FeatureGridFragment
+        ...ContentfulTopBannerFragment
       }
       uk {
         ...LogoBannerFragment
         ...FeatureGridFragment
+        ...ContentfulTopBannerFragment
       }
       de {
         ...LogoBannerFragment
         ...FeatureGridFragment
+        ...ContentfulTopBannerFragment
       }
       fr {
         ...LogoBannerFragment
         ...FeatureGridFragment
+        ...ContentfulTopBannerFragment
       }
     }
   }
