@@ -49,7 +49,7 @@ const companyLinks: FooterLink[] = [
   ['Team', 'team'],
   ['Sustainability', 'sustainability'],
   ['Careers', 'careers'],
-  ['Contact', 'contact'],
+  ['Contact / Imprint', 'contact'],
 ];
 
 const legalLinks: FooterLink[] = [
