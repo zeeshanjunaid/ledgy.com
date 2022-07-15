@@ -11,7 +11,7 @@ export const PostFilters = ({
   <div className="blogfilters__wrapper">
     <div className="blogfilters__title">Browse Ledgy’s posts!</div>
     <div className="blogfilters__subtitle">
-      Want to go deeper? Click on a category below to lear more about a specific subject.
+      Want to go deeper? Click on a category below to learn more about a specific subject.
     </div>
     <div className="blogfilters__row">
       <div className="blogfilters__tags">
