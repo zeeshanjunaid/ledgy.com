@@ -80,7 +80,7 @@ export const TeamMembers = ({ team }: { team: TeamProps }) => {
   return (
     <div className="container text-center my-4 mb-lg-6">
       <h2>
-        <Trans>Meet the</Trans> {team.length} Ledgistas
+        <Trans>Meet the</Trans> {teamStillAtLedgy.length} Ledgistas
       </h2>
       <div className="row justify-content-center my-5">
         {currentTeam.map(([key, member]) => (
