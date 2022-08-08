@@ -58,4 +58,14 @@ declare type IconType =
   | 'updates'
   | 'handshake'
   | 'previous'
-  | 'next';
+  | 'next'
+  | 'freelancer'
+  | 'desk'
+  | 'baby'
+  | 'salary'
+  | 'international'
+  | 'freelancer'
+  | 'yoga'
+  | 'medal'
+  | 'audioBook'
+  | 'mountain';

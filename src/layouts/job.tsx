@@ -42,12 +42,18 @@ const JobPage = ({ data }: Props & { data: { greenhouseJob: GreenhouseJobProps }
         section={i18n._('Career')}
         description={dynamicI18n(location.name)}
       />
-      <PageHeader title={dynamicI18n(title)} subtitle={dynamicI18n(location.name)} textCenter />
+      <PageHeader
+        title={dynamicI18n(title)}
+        subtitle={dynamicI18n(location.name)}
+        textCenter
+        buttonText="Apply for this job"
+        buttonUrl={`${window.location.pathname}#apply`}
+      />
       <div className="container container-small">
         <div className="d-flex justify-content-center mb-4 mb-lg-5">
           <div dangerouslySetInnerHTML={{ __html: decodeContent(content) }} className="markdown" />
         </div>
-        <div className="d-flex justify-content-center mb-4 mb-lg-5">
+        <div className="d-flex justify-content-center mb-4 mb-lg-5" id="apply">
           <div id="grnhse_app" className="w-100 markdown" />
         </div>
       </div>

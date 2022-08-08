@@ -11,6 +11,8 @@ import { Ledgistats } from './Ledgistats';
 import { Marketplaces } from './marketplace/marketplaces';
 import { PartnershipLogos } from './PartnershipLogos';
 import { BlogsList } from './blog';
+import { InterviewSteps, WorkBenefits, CareerFAQs } from './careers';
+import { GlassDoor } from './GlassDoor';
 
 export const StaticBlockPicker = ({
   block,
@@ -48,6 +50,14 @@ export const StaticBlockPicker = ({
       return <ContactUs />;
     case 'partnershipCta':
       return <PartnershipLogos />;
+    case 'workBenefits':
+      return <WorkBenefits />;
+    case 'interviewSteps':
+      return <InterviewSteps />;
+    case 'careerFAQs':
+      return <CareerFAQs />;
+    case 'glassDoor':
+      return <GlassDoor />;
 
     default:
       return <> </>;
