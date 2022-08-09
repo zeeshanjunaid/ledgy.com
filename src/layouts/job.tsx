@@ -29,7 +29,7 @@ const decodeContent = (content: string): string =>
 const JobPage = ({ data }: Props & { data: { greenhouseJob: GreenhouseJobProps } }) => {
   const { title, content, gh_Id, location } = data.greenhouseJob;
   if (!data) return null;
-
+  const buttonUrl = typeof window === 'object' ? `${window.location.pathname}#apply` : undefined;
   useEffect(() => {
     loadApplicationForm(gh_Id);
     return unloadApplicationForm;
@@ -47,7 +47,7 @@ const JobPage = ({ data }: Props & { data: { greenhouseJob: GreenhouseJobProps }
         subtitle={dynamicI18n(location.name)}
         textCenter
         buttonText="Apply for this job"
-        buttonUrl={`${window.location.pathname}#apply`}
+        buttonUrl={buttonUrl}
       />
       <div className="container container-small">
         <div className="d-flex justify-content-center mb-4 mb-lg-5">
