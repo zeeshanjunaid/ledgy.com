@@ -48,6 +48,7 @@ const JobPage = ({ data }: Props & { data: { greenhouseJob: GreenhouseJobProps }
         textCenter
         buttonText="Apply for this job"
         buttonUrl={buttonUrl}
+        showShareSection
       />
       <div className="container container-small">
         <div className="d-flex justify-content-center mb-4 mb-lg-5">
