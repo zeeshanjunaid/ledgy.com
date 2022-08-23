@@ -3,9 +3,9 @@ import { Trans } from '@lingui/macro';
 
 import { Accordion, AccordionItem } from './Accordion';
 
-type FAQQuestion = { slug: string; question: JSX.Element; answer: JSX.Element };
+type FaqQuestion = { slug: string; question: JSX.Element; answer: JSX.Element };
 
-export const FAQs = ({ questions }: { questions: FAQQuestion[] }) => (
+export const FAQs = ({ questions }: { questions: FaqQuestion[] }) => (
   <div className="row-small mx-auto my-6">
     <h2 className="text-center">
       <Trans>FAQs</Trans>

@@ -3,7 +3,7 @@ import { graphql, useStaticQuery, Link } from 'gatsby';
 
 import { Section } from './utils';
 import { formatUrl } from './lib';
-import locationPing from '../img/svg/gray-location-ping.svg';
+import { locationPin } from '../img';
 
 const JOB_BOARD_LOCATION = 'Zurich';
 const getSearchString = () => (typeof window === 'object' ? window.location.search : '');
@@ -33,7 +33,7 @@ const Job = ({ title, gh_Id, prefix, location }: GreenhouseJobProps & Prefix) =>
       <Link to={url} className="flex-1 open-position my-2 justify-content-between">
         <div className="open-position-title">{title}</div>
         <div className="d-flex flex-row justify-content-around align-items-center">
-          <img src={locationPing} alt="location" />
+          <img src={locationPin} alt="location" />
           <p className="open-position-location ml-2 mr-4">{location.name}</p>
           <div>
             <p className="open-position-apply mx-2">Apply</p>

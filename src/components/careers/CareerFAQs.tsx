@@ -31,7 +31,7 @@ const CAREER_QUESTIONS = [
     answer: (
       <>
         <Trans>
-          All interviews are hosted via zoom. However, if within close proximity, there could be the
+          All interviews are hosted via Zoom. However, if within close proximity, there could be the
           chance to meet with a member of the hiring team in person.
         </Trans>
       </>

@@ -79,7 +79,7 @@ const TAKE_HOME_ASSESSMENT: InterviewStepsProps = {
 const ONE_ON_ONE_INTERVIEWS: InterviewStepsProps = {
   stepNumber: '04',
   title: '1-on-1 Interviews',
-  body: 'You will meet several future colleagues, managers and founders for up to 1 hour each. At this stage of the process, the interviews will be mostly conversational. ',
+  body: 'You will meet several future colleagues, managers and founders for up to 1 hour each. At this stage of the process, the interviews will be mostly conversational.',
 };
 
 const REFERENCE_CHECK: InterviewStepsProps = {

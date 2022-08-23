@@ -1,13 +1,14 @@
 import React from 'react';
 
 import { Button, CustomFade } from './utils';
-import facebookIcon from '../img/svg/facebook-icon.svg';
-import twitterIcon from '../img/svg/twitter-icon.svg';
-import linkedInIcon from '../img/svg/linkedin-icon.svg';
+import { linkedInIcon, twitterIcon, facebookIcon } from '../img';
 import { FACEBOOK, getSocialShareUrl, LINKEDIN, TWITTER } from './lib';
 
-type socialIconProps = { name: string; icon: string };
-const socials: socialIconProps[] = [
+type SocialIconProps = {
+  name: string;
+  icon: string;
+};
+const socialNetworks: SocialIconProps[] = [
   { name: LINKEDIN, icon: linkedInIcon },
   { name: FACEBOOK, icon: facebookIcon },
   { name: TWITTER, icon: twitterIcon },
@@ -37,7 +38,7 @@ export const PageHeader = ({
           {buttonText && buttonUrl && <Button href={buttonUrl}>{buttonText}</Button>}
           <div>
             {showShareSection &&
-              socials.map(({ name, icon }, ind) => {
+              socialNetworks.map(({ name, icon }, ind) => {
                 return (
                   <a
                     key={ind}
