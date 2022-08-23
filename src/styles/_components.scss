@@ -673,3 +673,158 @@ $padding-lg: 3rem;
   font-size: 11px;
     color: #888;
 }
+
+// Carrers
+.benefit{
+  color: $deep-blue;
+  &-title{
+    font-family: 'Museo Sans Rounded';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21.25px;
+    line-height: 27px;
+  }
+  &-subtitle{
+    font-family: 'Museo Sans Rounded';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12.5px;
+    line-height: 27px;
+    color: #73818F;
+  }
+}
+#openpositions{
+  padding: 60px;
+  @media screen and (max-width: 768px) {
+    padding: 0px;
+  }
+
+}
+.open-position:hover{
+  background: $gray-100 !important;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.24);
+  .open-position-apply{
+    visibility: visible  !important;
+  }
+}
+
+.open-position{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  width: 978px;
+  height: 54px;
+  background: white;
+  border: 1px solid #DDE6EB;
+  border-radius: 4px;
+
+  &-title{
+    font-family: 'Museo Sans Rounded';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 32px;
+    color: #343A40;
+  }
+  &-left-cont{
+    @media screen and (max-width: 768px) {
+      display: none !important;
+    }
+  }
+
+  p{
+    margin-bottom: 0px  !important;
+  }
+
+  &-location{
+    font-family: 'Museo Sans Rounded';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 32px;
+    color:$gray-600;
+
+  }
+
+  &-apply{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #515B65;
+    visibility: hidden;
+  }
+}
+
+.interview-step {
+  &-title{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 21.25px;
+  line-height: 27px;
+  color: #73818F;
+  }
+  &-body{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 27px;
+  }
+  &-border-l{
+    border-left: 1px solid #C2CFD6;
+  }
+  &-border-b{
+    border-bottom: 1px solid #C2CFD6;
+  }
+}
+
+.interview-step-border-0 {
+  border-bottom: 1px solid #C2CFD6;
+}
+.interview-step-border-1 {
+  border-bottom: 1px solid #C2CFD6;
+  @media screen and (min-width: 768px) {
+    border-left: 1px solid #C2CFD6;
+  }
+}
+.interview-step-border-2 {
+  border-bottom: 1px solid #C2CFD6;
+  @media screen and (min-width: 992px) {
+    border-left: 1px solid #C2CFD6;
+  }
+}
+.interview-step-border-3 {
+  border-bottom: 1px solid #C2CFD6;
+  @media screen and (min-width: 768px) {
+    border-left: 1px solid #C2CFD6;
+  }
+  @media screen and (min-width: 992px) {
+    border-left: 0px;
+    border-bottom: 0px;
+  }
+}
+.interview-step-border-4{
+  border-bottom: 1px solid #C2CFD6;
+  @media screen and (min-width: 768px) {
+    border-bottom: 0px;
+  }
+  @media screen and (min-width: 992px) {
+    border-left: 1px solid #C2CFD6;
+  }
+
+}
+.interview-step-border-5{
+  @media screen and (min-width: 768px) {
+    border-left: 1px solid #C2CFD6;
+  }
+  @media screen and (min-width: 992px) {
+    border-left: 1px solid #C2CFD6;
+  }
+}
+

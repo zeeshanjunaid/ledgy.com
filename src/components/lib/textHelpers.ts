@@ -78,7 +78,6 @@ const resourceLinks: FooterLink[] = [
   ['Blog', 'blog'],
   ['Customer stories', 'customer-stories'],
   ['Updates', 'updates'],
-  ['Lawyer partners', 'partners'],
   ['Financing calculator', 'calculator'],
   ['ESOP templates', 'employee-participation-plan-templates'],
 ];
