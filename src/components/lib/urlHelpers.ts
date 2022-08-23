@@ -3,4 +3,4 @@ export const isExternalUrl = (url: string): boolean =>
 
 const stripDoubleSlashes = (url: string): string => url.replace(/\/\//g, '/');
 export const formatUrl = (prefix: string, url: string): string =>
-  isExternalUrl(url) ? url : stripDoubleSlashes(`${prefix}/${url}/`);
+  isExternalUrl(url) ? url : stripDoubleSlashes(`${prefix}/${url}`);
