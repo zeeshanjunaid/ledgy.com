@@ -32,7 +32,7 @@ const Job = ({ title, gh_Id, prefix, location }: GreenhouseJobProps & Prefix) =>
     <li key={gh_Id} className="list-style-none d-flex">
       <Link to={url} className="flex-1 open-position my-2 justify-content-between">
         <div className="open-position-title">{title}</div>
-        <div className="d-flex flex-row justify-content-around align-items-center">
+        <div className="d-flex flex-row justify-content-around align-items-center open-position-left-cont">
           <img src={locationPin} alt="location" />
           <p className="open-position-location ml-2 mr-4">{location.name}</p>
           <div>
@@ -69,8 +69,8 @@ export const JobBoard = ({ prefix }: Prefix) => {
   const blogs = getJobs();
   const { nodes: departments } = blogs.allGreenhouseDepartment;
   return (
-    <div id="openpositions" className="bg-gray-light px-8">
-      <Section className="px-8">
+    <div id="openpositions" className="bg-gray-light">
+      <Section>
         <h2 className="mb-5">Open Positions</h2>
         <div className="justify-content-center mb-9">
           {departments.map((department: GreenhouseDepartmentProps) => (

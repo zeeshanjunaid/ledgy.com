@@ -693,8 +693,12 @@ $padding-lg: 3rem;
     color: #73818F;
   }
 }
-#open-positions{
-padding-top: 85px;
+#openpositions{
+  padding: 60px;
+  @media screen and (max-width: 768px) {
+    padding: 0px;
+  }
+
 }
 .open-position:hover{
   background: $gray-100 !important;
@@ -723,6 +727,11 @@ padding-top: 85px;
     font-size: 17px;
     line-height: 32px;
     color: #343A40;
+  }
+  &-left-cont{
+    @media screen and (max-width: 768px) {
+      display: none !important;
+    }
   }
 
   p{
