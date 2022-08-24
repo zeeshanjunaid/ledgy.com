@@ -89,7 +89,7 @@ const REFERENCE_CHECK: InterviewStepsProps = {
 };
 const OFFER: InterviewStepsProps = {
   stepNumber: '06 🏁',
-  title: 'Reference Check',
+  title: 'Offer',
 };
 
 export const INTERVIEW_STEPS: InterviewStepsProps[] = [
