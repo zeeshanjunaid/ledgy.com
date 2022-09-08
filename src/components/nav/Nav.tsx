@@ -12,13 +12,11 @@ import { NavbarButtons } from './NavbarButtons';
 import { DropdownFollowAlong } from './DropdownFollowAlong';
 import { MobileNavbar } from './MobileNavbar';
 import { TopUpdateBanner } from './TopUpdateBanner';
+import { hideHomePageUrl } from './lib';
 
 const Logo = (props: LayoutProps) => {
-  return (
-    <Link to={`${props.prefix}/#start`}>
-      <img className="navbar-logo" src={logo} alt={name} width="141" />
-    </Link>
-  );
+  const logoImage = <img className="navbar-logo" src={logo} alt={name} width="141" />;
+  return hideHomePageUrl() ? logoImage : <Link to={`${props.prefix}/#start`}>{logoImage}</Link>;
 };
 
 const toggleNav = (navRef: MutableRefObject<HTMLElement | null>) => {
