@@ -27,6 +27,7 @@ declare type FormStatus =
   | 'invalid-fields'
   | 'invalid-required-fields'
   | 'fetch-error'
+  | 'invalid-size'
   | 'submitted';
 
 declare type IconType =

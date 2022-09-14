@@ -1,24 +1,20 @@
 // BLOG FILTERS CSS
-.blogfilters__wrapper {
+.blog-filters-wrapper {
   margin-bottom: 1.5rem;
 }
-.blogfilters__title {
-  font-size: 1.5rem;
+.blog-filters-title {
   font-weight: bold;
   color: #37383c;
-  line-height: 1.54;
+
 }
-.blogfilters__subtitle {
-  font-size: 1rem;
-  color: #6b7c93;
-  letter-spacing: 0.5px;
-  line-height: 1.7;
+.blog-filters-subtitle {
+  color: $gray-600;
   margin-top: 6px;
 }
-.blogfilters__row {
+.blog-filters-row {
   margin-top: 1.5rem;
 }
-.blogfilters__tags {
+.blog-filters-tags {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -151,7 +147,7 @@
     }
   }
   &-description {
-    color: #6b7c93;
+    color: $gray-600;
     font-size: 0.85rem;
     line-height: 1.6 !important;
     margin-bottom: 1.25rem;
@@ -200,7 +196,7 @@
         }
       }
       span {
-        color: #6b7c93;
+        color: $gray-600;
         font-size: 0.75rem;
         font-weight: 600;
         line-height: 1;
@@ -272,7 +268,7 @@
     }
   }
   &-description {
-    color: #6b7c93;
+    color: $gray-600;
     font-size: 1rem;
     line-height: 1.6 !important;
     margin-bottom: 1.25rem;
@@ -320,7 +316,7 @@
         }
       }
       span {
-        color: #6b7c93;
+        color: $gray-600;
         font-size: 0.95rem;
         font-weight: 600;
         line-height: 1;

@@ -2,12 +2,12 @@ import { AnimatePresence, motion } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Image } from '../utils';
+import { Image, LinkWithChevron } from '../utils';
 import { Link } from 'gatsby';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { scroller } from 'react-scroll';
 
-export const ExploreSection = ({ explore }: { explore: ExploreProps }) => {
+export const ExploreSection = ({ prefix, explore }: Prefix & { explore: ExploreProps }) => {
   const { textRight, title, sections } = explore;
   const [activeindex, setActiveIndex] = useState(0);
   const activeData = sections[activeindex];
@@ -41,7 +41,7 @@ export const ExploreSection = ({ explore }: { explore: ExploreProps }) => {
             <p className="textcolumn-subtitle">{title}</p>
 
             <h2 className="textcolumn-title">{sectionTitle}</h2>
-            <p className="textcolumn-text">{text}</p>
+            <p className="textcolumn-text font-weight-light">{text}</p>
             <div className="textcolumn-link">
               <Link to={link.url}>
                 {link.text}
@@ -82,17 +82,9 @@ export const ExploreSection = ({ explore }: { explore: ExploreProps }) => {
             className={`textcolumn textcolumn--hide-on-sd ${textRight ? 'textcolumn-right' : null}`}
           >
             <p className="textcolumn-subtitle">{title}</p>
-
             <h2 className="textcolumn-title">{sectionTitle}</h2>
             <p className="textcolumn-text">{text}</p>
-            <div className="textcolumn-link">
-              <Link to={link.url}>
-                {link.text}
-                <span>
-                  <FontAwesomeIcon icon={faChevronRight} />
-                </span>
-              </Link>
-            </div>
+            <LinkWithChevron text={link.text} to={link.url} prefix={prefix} />
           </div>
           <div className={`imagecolumn ${textRight ? 'image-left' : 'image-right'}`}>
             <Image image={image} alt={sectionTitle} className="flex-1" />

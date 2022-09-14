@@ -15,9 +15,9 @@ const { FETCH_ERROR, IDLE, INVALID_EMAIL, LOADING } = FORM_STATUSES;
 
 export class SubscriptionForm extends Component<
   { toggle?: () => void; trackingEvent: string; callback?: () => void },
-  { email: string; status: FormStatus | string }
+  { email: string; status: FormStatus }
 > {
-  state = { email: '', status: IDLE };
+  state = { email: '', status: IDLE as FormStatus };
   handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
     this.setState({ email: e.target.value, status: IDLE });

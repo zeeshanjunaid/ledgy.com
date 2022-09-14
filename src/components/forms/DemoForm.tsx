@@ -38,7 +38,7 @@ export const DemoForm = ({
 
   const [partner, setPartner] = useState('');
 
-  const [formStatus, setFormStatus] = useState(IDLE);
+  const [formStatus, setFormStatus] = useState(IDLE as FormStatus);
 
   const inputClassName = 'height-42px bg-transparent text-dark border border-light-energetic-blue';
   const values = { requesterType, email, size, partner };
@@ -105,7 +105,6 @@ export const DemoForm = ({
           className={inputClassName}
           type="number"
         />
-        {requesterType === COMPANY && <StakeholderDefinition />}
         {isPartnershipPage && (
           <InputWithOptions
             state={partner}
@@ -118,6 +117,7 @@ export const DemoForm = ({
             className={inputClassName}
           />
         )}
+        {requesterType === COMPANY && <StakeholderDefinition />}
         <Button
           disabled={isButtonDisabled}
           type="submit"

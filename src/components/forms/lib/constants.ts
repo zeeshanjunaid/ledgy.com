@@ -27,7 +27,7 @@ export const meetingRequestUrlNordics = 'https://meetings.hubspot.com/ledgy/nord
 export const meetingRequestUrlRestOfEurope = 'https://meetings.hubspot.com/ledgy/roe-salesteam';
 export const meetingRequestUrlRestOfWorld = 'https://meetings.hubspot.com/ledgy/row-salesteam';
 
-export const FORM_STATUSES = Object.freeze({
+export const FORM_STATUSES = Object.freeze<{ [x: string]: FormStatus }>({
   IDLE: 'idle',
   LOADING: 'loading',
   FETCH_ERROR: 'fetch-error',
