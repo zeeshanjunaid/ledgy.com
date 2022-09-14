@@ -19,7 +19,7 @@ const companyPricingCTAs: CompanyPricingCTAProps[] = [
           You get a 20% discount if your startup helps reduce carbon emissions with its core
           business.
         </DynamicTrans>{' '}
-        <a href="https://ble2zo3huer.typeform.com/to/g8yJMvoM">
+        <a href="https://submit.ledgy.com/greendiscount">
           <DynamicTrans>Apply here!</DynamicTrans>
         </a>
       </>
