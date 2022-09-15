@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import ReactTooltip from 'react-tooltip';
+import React from 'react';
+
 import { BUTTON_LINK, BUTTON_TEXT, DESCRIPTION, getIntegrationLogos, TITLE } from './lib';
-import { Image } from '../utils';
+
 import { CustomButton } from '../CustomButton';
+import { Logo } from './Logo';
 
 export const LogosGridSection = () => {
-  const [activeLogoIndex, setActiveLogoIndex] = useState(null as number | null);
   const logos = getIntegrationLogos();
 
   return (
@@ -19,29 +19,7 @@ export const LogosGridSection = () => {
           <div className="logos_grid">
             <div className="logos_grid__grid">
               {logos.map((logo, index) => (
-                <div
-                  className="logos_grid__item"
-                  onMouseEnter={() => setActiveLogoIndex(index)}
-                  onMouseLeave={() => setActiveLogoIndex(null)}
-                  data-tip
-                  data-for="logoName"
-                  key={index}
-                >
-                  <Image image={logo} />
-
-                  {activeLogoIndex === index && (
-                    <ReactTooltip
-                      id="logoName"
-                      place="right"
-                      type="dark"
-                      effect="float"
-                      offset={{ top: 8, right: 8 }}
-                      arrowColor="rgba(0,0,0,0)"
-                    >
-                      <span>{logo.title}</span>
-                    </ReactTooltip>
-                  )}
-                </div>
+                <Logo logo={logo} key={index} />
               ))}
             </div>
           </div>
