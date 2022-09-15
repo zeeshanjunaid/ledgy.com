@@ -13,6 +13,7 @@ import { PartnershipLogos } from './PartnershipLogos';
 import { BlogsList } from './blog';
 import { InterviewSteps, WorkBenefits, CareerFAQs } from './careers';
 import { GlassDoor } from './GlassDoor';
+import { LogosGridSection } from './LogosGridSection';
 
 export const StaticBlockPicker = ({
   block,
@@ -58,6 +59,8 @@ export const StaticBlockPicker = ({
       return <CareerFAQs />;
     case 'glassDoor':
       return <GlassDoor />;
+    case 'integrationsLogos':
+      return <LogosGridSection />;
 
     default:
       return <> </>;

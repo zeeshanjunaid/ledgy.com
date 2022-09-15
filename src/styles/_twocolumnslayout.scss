@@ -6,7 +6,7 @@
 }
 .twocolumnstabs {
   order: 2;
-  margin-top: 1.5rem;
+  padding-top: 1.5rem;
   display: flex;
   justify-content: flex-end;
 
@@ -65,7 +65,7 @@
   display: flex;
   flex-wrap: nowrap;
   flex-shrink: 0;
-  color: #b1a8bc;
+  color:$gray-800;
 
   @media (max-width: 767px) {
     font-size: 0.85rem;
@@ -133,8 +133,8 @@
   }
   &-title {
     font-size: 2.5rem;
-    color: #1c0732;
     margin-bottom: 1.25rem;
+    color: $deep-blue;
     font-weight: 700;
     line-height: 1.2;
     @media (max-width: 992px) {
@@ -142,36 +142,19 @@
     }
   }
   &-subtitle {
-    font-size: 1.125rem;
-    color: $deep-blue;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    line-height: 1.2;
-    @media (max-width: 992px) {
-      font-size: 1rem;
-    }
+    text-transform: uppercase;
+    @extend .text-gray-dark;
   }
   &-text {
-    font-size: 1.125rem;
-    color: #92889d;
+    color: $gray-800;
     margin-bottom: 1.25rem;
-    line-height: 1.4;
-    @media (max-width: 992px) {
-      font-size: 1rem;
-    }
   }
   &-link {
     a {
       color: $energetic-blue;
-      font-size: 1.125rem;
-      font-weight: 700;
       position: relative;
       display: inline-block;
       overflow: hidden;
-      span {
-        margin-left: 0.625rem;
-        font-size: 0.85rem;
-      }
 
       &::before {
         content: "";

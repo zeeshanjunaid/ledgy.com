@@ -47,7 +47,12 @@ export const CallToAction = ({
             <div className="d-flex align-items-center flex-wrap">
               <CTAButton buttonText={buttonText} buttonUrl={prefixedButtonUrl} />
               {!!(linkText && linkUrl) && (
-                <LinkWithChevron to={linkUrl} text={linkText} className="mb-4" prefix={prefix} />
+                <LinkWithChevron
+                  to={linkUrl}
+                  text={linkText}
+                  className="mb-4 py-2"
+                  prefix={prefix}
+                />
               )}
             </div>
           </CustomFade>

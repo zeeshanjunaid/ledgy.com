@@ -75,7 +75,7 @@ export const handleDemoSubmit = async ({
   values: FormValues;
   event: React.FormEvent<HTMLFormElement>;
   pathname: string;
-  setFormStatus: (arg0: string) => void;
+  setFormStatus: (arg0: FormStatus) => void;
 }): Promise<void> => {
   event.preventDefault();
   setFormStatus(LOADING);
